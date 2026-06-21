@@ -57,23 +57,40 @@
       font-weight: 400;
     }
 
-    /* Nav */
-    .site-nav {
+    /* 全站统一顶部导航 */
+    .topbar {
       background: var(--card-bg);
       border-bottom: 1px solid var(--border);
+      box-shadow: 0 1px 4px rgba(15, 23, 42, 0.05);
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 50;
     }
 
-    .site-nav ul {
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+    }
+
+    .topbar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--accent-dark);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .topbar-links {
       list-style: none;
       display: flex;
-      gap: 1.5rem;
-      padding: 0.85rem 0;
+      gap: 1.4rem;
+      margin: 0;
+      padding: 0;
     }
 
-    .site-nav a {
+    .topbar-links a {
       color: var(--text);
       text-decoration: none;
       font-weight: 500;
@@ -81,8 +98,14 @@
       transition: color 0.15s ease;
     }
 
-    .site-nav a:hover {
+    .topbar-links a:hover {
       color: var(--accent);
+    }
+
+    @media (max-width: 600px) {
+      .topbar .brand { font-size: 0.95rem; }
+      .topbar-links { gap: 0.9rem; }
+      .topbar-links a { font-size: 0.88rem; }
     }
 
     /* Main */
@@ -194,22 +217,23 @@
   </style>
 </head>
 <body>
+  <nav class="topbar" aria-label="主导航">
+    <div class="topbar-inner container">
+      <a class="brand" href="index.html">江楠的学习日志</a>
+      <ul class="topbar-links">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="index.html#entries">学习日志</a></li>
+        <li><a href="index.html#intro">关于</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <header class="site-header">
     <div class="container">
       <h1>江楠的学习日志</h1>
       <p class="subtitle">记录每一次学习的脚步与收获</p>
     </div>
   </header>
-
-  <nav class="site-nav" aria-label="主导航">
-    <div class="container">
-      <ul>
-        <li><a href="index.html">首页</a></li>
-        <li><a href="#entries">学习日志</a></li>
-        <li><a href="#intro">关于</a></li>
-      </ul>
-    </div>
-  </nav>
 
   <main>
     <div class="container">
