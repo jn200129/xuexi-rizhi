@@ -1,0 +1,1656 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="江楠">
+  <meta name="description" content="《万用表使用入门到精通》完整学习笔记：62 集 A~G 全章节整理，含自绘 SVG 示意图。江楠的学习日志。">
+  <meta name="keywords" content="万用表,数字万用表,指针表MF47,钳形表,电压,电流,电阻,二极管,三极管,电容,电位器">
+  <title>万用表使用入门到精通（完整版） — 江楠的学习日志</title>
+  <style>
+    :root{
+      --accent:#2563eb; --accent-dark:#1d4ed8; --bg:#f7f8fa; --card:#fff;
+      --border:#e2e5ea; --text:#1f2329; --muted:#64748b;
+    }
+    *{box-sizing:border-box;}
+    body{margin:0;font-family:-apple-system,"Segoe UI","Microsoft YaHei","PingFang SC",sans-serif;
+      line-height:1.75;color:var(--text);background:var(--bg);}
+    .skip-link{position:absolute;left:-999px;top:0;background:#fff;color:var(--accent);padding:.5rem 1rem;z-index:100;}
+    .skip-link:focus{left:0;}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;}
+    header.site{background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff;
+      padding:2.8rem 1.5rem 2.2rem;text-align:center;}
+    header.site h1{margin:0 0 .5rem;font-size:2.1rem;}
+    header.site p{margin:.2rem 0;opacity:.92;}
+    .meta-list{list-style:none;padding:0;margin:.9rem 0 0;display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;}
+    .meta-list li{background:rgba(255,255,255,.18);padding:.25rem .7rem;border-radius:999px;font-size:.85rem;}
+    nav.toc{position:sticky;top:0;background:var(--card);border-bottom:1px solid var(--border);
+      padding:.6rem 1rem;z-index:10;box-shadow:0 1px 4px rgba(0,0,0,.05);}
+    nav.toc ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;justify-content:center;}
+    nav.toc a{color:var(--accent);text-decoration:none;font-size:.9rem;}
+    nav.toc a:hover{text-decoration:underline;}
+    main{max-width:900px;margin:0 auto;padding:1.5rem;}
+    article>section{background:var(--card);border:1px solid var(--border);border-radius:14px;
+      padding:1.5rem 1.8rem;margin-bottom:1.6rem;scroll-margin-top:64px;}
+    h2{color:var(--accent-dark);border-bottom:2px solid var(--border);padding-bottom:.45rem;margin-top:.2rem;}
+    h3{margin-top:1.6rem;color:var(--text);}
+    h4{margin-top:1rem;color:var(--muted);}
+    p{margin:.7rem 0;}
+    dl dt{font-weight:600;margin-top:.8rem;}
+    dl dd{margin:0 0 .4rem 1.2rem;}
+    table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:.93rem;}
+    caption{caption-side:top;text-align:left;color:var(--muted);font-size:.9rem;margin-bottom:.4rem;}
+    th,td{border:1px solid var(--border);padding:.55rem .7rem;text-align:left;vertical-align:top;}
+    thead{background:#eef2ff;}
+    tbody tr:nth-child(even){background:#fafbfc;}
+    th[scope=row]{background:#f3f6ff;white-space:nowrap;}
+    aside.tip{border-left:4px solid #f59e0b;background:#fff8eb;padding:.8rem 1rem;border-radius:6px;margin:1rem 0;}
+    aside.tip strong{color:#b45309;}
+    figure{margin:1.2rem 0;text-align:center;}
+    figure svg{max-width:100%;height:auto;}
+    figcaption{color:var(--muted);font-size:.88rem;margin-top:.45rem;}
+    details{border:1px solid var(--border);border-radius:8px;padding:.6rem 1rem;margin:.7rem 0;background:#fcfcfd;}
+    summary{cursor:pointer;font-weight:600;}
+    code{background:#eef0f3;padding:.1rem .35rem;border-radius:4px;font-size:.9em;}
+    mark{background:#fde68a;}
+    ul,ol{padding-left:1.4rem;}
+    footer.site{text-align:center;color:var(--muted);padding:2rem 1rem;font-size:.9rem;}
+    footer.site a{color:var(--accent);}
+    .backtop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;
+      text-decoration:none;padding:.55rem .8rem;border-radius:50%;box-shadow:0 4px 12px rgba(37,99,235,.4);font-size:1.1rem;}
+    @media(max-width:600px){header.site h1{font-size:1.7rem;}article>section{padding:1.2rem 1rem;}}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="site">
+    <h1>万用表使用入门到精通</h1>
+    <p>江楠的学习日志 · 62 集完整笔记（A~G）· 自绘示意图</p>
+    <ul class="meta-list">
+      <li>#数字万用表</li><li>#指针表 MF47</li><li>#元件检测</li>
+      <li>#电压电流电阻</li><li>#零基础</li>
+    </ul>
+  </header>
+
+  <nav class="toc" aria-label="章节目录">
+    <ul>
+      <li><a href="#overview">课程概述</a></li>
+      <li><a href="#sec-a">A 快速入门</a></li>
+      <li><a href="#sec-b">B 基础概念</a></li>
+      <li><a href="#sec-c">C 数字表精讲</a></li>
+      <li><a href="#sec-d">D 指针表MF47</a></li>
+      <li><a href="#sec-e">E 品牌实操</a></li>
+      <li><a href="#sec-f">F 元件检测</a></li>
+      <li><a href="#sec-g">G 指针表进阶</a></li>
+      <li><a href="#source">来源</a></li>
+    </ul>
+  </nav>
+
+  <main id="main" tabindex="-1">
+    <article>
+
+      <section id="overview">
+        <h2>课程概述</h2>
+        <p>本页是 B 站「工控圈」<cite>《万用表使用入门到精通》</cite>系列（共 62 集）的完整学习整理，
+        采用语义化 HTML 编写，按原课程的 <strong>A~G 七个章节</strong>组织，逐集列出标题与要点，
+        并对关键知识点配以<strong>自绘的干净 SVG 示意图</strong>（非视频截图、无字幕水印）。</p>
+        <p>章节速览：</p>
+        <ul>
+          <li><a href="#sec-a">A、快速上手</a>——9 集，最常用测量项目速通</li>
+          <li><a href="#sec-b">B、零基础概念</a>——6 集，入门与烧表原因</li>
+          <li><a href="#sec-c">C、数字万用表精讲</a>——12 集，功能全解</li>
+          <li><a href="#sec-d">D、MF47 指针式万用表</a>——13 集，指针表系统讲解</li>
+          <li><a href="#sec-e">E、品牌表实操</a>——2 集，胜利 / 福禄克</li>
+          <li><a href="#sec-f">F、元件检测专题</a>——10 集，电阻电容二极管三极管电位器</li>
+          <li><a href="#sec-g">G、指针表进阶技巧</a>——10 集，调零/漏电/电容等</li>
+        </ul>
+        <aside class="tip"><strong>安全提示：</strong>测量前牢记三件事——<strong>测什么、量程多大、表笔插哪个孔</strong>。
+        电流必须串联、电压必须并联，切勿用电流档去并接电压（会短路烧表）。</aside>
+      </section>
+
+<section id="sec-a">
+  <h2>A、快速上手（9 集）</h2>
+
+  <p>本章是整套课程的“开胃菜”，用 9 集快速演示万用表最常见、最实用的测量项目：从判断开关好坏、电线通断，到测电阻、电池、二极管、电流、电容，再到温度、频率、占空比和三极管。学完本章，你就能拿起一台普通数字万用表，完成日常电工排故的八成工作。</p>
+
+  <aside class="tip"><strong>提示：</strong>万用表就是“一表多用”——同一台仪表通过旋转<abbr title="量程/功能选择旋钮">挡位开关</abbr>，分别充当电压表（<code>V</code>）、电流表（<code>A</code>）、电阻表（<code>Ω</code>）等。测量前先确认“测什么、量程多大、表笔插哪个孔”这三件事，是不烧表、不读错数的前提。</p></aside>
+
+  <h3>本章逐集索引</h3>
+  <table>
+    <caption>A 章各集标题与一句话要点</caption>
+    <thead>
+      <tr>
+        <th scope="col">集数</th>
+        <th scope="col">标题</th>
+        <th scope="col">一句话要点</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">A01</th>
+        <td>一招教你测量开关好坏以及电线的短路和断路</td>
+        <td>用<mark>通断挡（蜂鸣挡）</mark>判断电路是否导通：响=通，不响=断。</td>
+      </tr>
+      <tr>
+        <th scope="row">A02</th>
+        <td>测量电阻避免新手常犯的错误</td>
+        <td>必须<strong>断电、脱开元件</strong>再测，手不要同时捏住两根表笔。</td>
+      </tr>
+      <tr>
+        <th scope="row">A03</th>
+        <td>判断电池电量、电池极性以及零火线区分</td>
+        <td>直流电压挡测电量与正负极；交流电压挡配合验电区分零火线。</td>
+      </tr>
+      <tr>
+        <th scope="row">A04</th>
+        <td>测量发光二极管 LED 好坏</td>
+        <td>用二极管挡：正向有压降并微亮，反向不通即为正常。</td>
+      </tr>
+      <tr>
+        <th scope="row">A05</th>
+        <td>如何测量电流、选择档位的技巧</td>
+        <td>电流要<strong>串联</strong>接入，先估大小再选 mA 或 10A 挡。</td>
+      </tr>
+      <tr>
+        <th scope="row">A06</th>
+        <td>测量电流实战演示与违规操作风险</td>
+        <td>实测演示；电流挡<mark>并联</mark>在电源两端会短路、烧保险甚至炸表。</td>
+      </tr>
+      <tr>
+        <th scope="row">A07</th>
+        <td>测电容的故事（避坑）</td>
+        <td>测前先放电，选合适容量挡，电解电容注意极性与漏电。</td>
+      </tr>
+      <tr>
+        <th scope="row">A08</th>
+        <td>万用表测温度、频率和占空比</td>
+        <td>温度需热电偶，频率/占空比用于检测脉冲（PWM）信号。</td>
+      </tr>
+      <tr>
+        <th scope="row">A09</th>
+        <td>判断三极管类型及引脚定义</td>
+        <td>用 hFE 座或二极管挡判定 NPN/PNP 与 B、C、E 三脚。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>先认识表笔与表笔孔</h3>
+  <p>几乎所有测量的第一步都是“把表笔插对孔”。一支表笔不变（黑笔进 <code>COM</code>），另一支红笔根据测量项目换孔，这是新手最容易出错也最容易烧表的地方。</p>
+  <dl>
+    <dt><code>COM</code>（黑表笔）</dt>
+    <dd>公共端，对应电路的“低电位/参考点”。无论测什么，黑笔几乎都插这里。</dd>
+    <dt><code>VΩ</code>（红表笔）</dt>
+    <dd>测电压（V）、电阻（Ω）、通断、二极管、电容、频率时，红笔插这个孔。</dd>
+    <dt><code>mA / μA</code></dt>
+    <dd>测小电流时红笔插此孔，内部串一个较大量程的保险丝保护。</dd>
+    <dt><code>10A</code>（或 20A）</dt>
+    <dd>测大电流时红笔插此孔，通常配独立的大电流保险丝，且只能短时间通电。</dd>
+  </dl>
+
+  <figure>
+    <svg viewBox="0 0 420 260" width="100%" role="img" aria-label="万用表挡位与表笔孔示意图">
+      <rect x="20" y="20" width="380" height="220" rx="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <!-- 显示屏 -->
+      <rect x="50" y="40" width="180" height="50" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+      <text x="215" y="78" text-anchor="end" font-family="monospace" font-size="30" fill="#1e3a8a">0.00</text>
+      <!-- 旋钮 -->
+      <circle cx="140" cy="165" r="55" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+      <circle cx="140" cy="165" r="10" fill="#2563eb"/>
+      <line x1="140" y1="165" x2="140" y2="120" stroke="#1e3a8a" stroke-width="4" stroke-linecap="round"/>
+      <text x="140" y="112" text-anchor="middle" font-size="13" fill="#1e3a8a">V</text>
+      <text x="200" y="170" text-anchor="middle" font-size="13" fill="#1e3a8a">Ω</text>
+      <text x="140" y="232" text-anchor="middle" font-size="13" fill="#1e3a8a">A</text>
+      <text x="80" y="170" text-anchor="middle" font-size="13" fill="#1e3a8a">⎓</text>
+      <!-- 表笔孔 -->
+      <circle cx="300" cy="130" r="11" fill="#dc2626"/>
+      <text x="322" y="135" font-size="13" fill="#1e3a8a">VΩ（红）</text>
+      <circle cx="300" cy="170" r="11" fill="#334155"/>
+      <text x="322" y="175" font-size="13" fill="#1e3a8a">COM（黑）</text>
+      <circle cx="300" cy="210" r="11" fill="#dc2626"/>
+      <text x="322" y="215" font-size="13" fill="#1e3a8a">10A</text>
+    </svg>
+    <figcaption>一台数字万用表的典型布局：显示屏、挡位旋钮（V/Ω/A）与三个表笔插孔。</figcaption>
+  </figure>
+
+  <h3>A01 通断判断：测开关好坏与短路、断路</h3>
+  <p>把旋钮拨到<strong>通断挡（带蜂鸣器符号）</strong>，两根表笔接触被测导体两端：</p>
+  <ul>
+    <li><strong>蜂鸣器响、读数接近 0Ω</strong>：电路<mark>导通</mark>。例如按下开关时应当响。</li>
+    <li><strong>不响、显示 <code>OL</code>（溢出/开路）</strong>：电路<mark>断路</mark>。例如断线、开关触点烧坏。</li>
+    <li><strong>本应断开却一直响</strong>：说明<mark>短路</mark>或开关粘连。</li>
+  </ul>
+  <p>排查一段电线时，把表笔分别搭在两头：响=电线完好；不响=中间断了。判断开关时，先测“断开状态”应不通、再测“闭合状态”应通，两种状态都对才算好开关。</p>
+  <aside class="tip"><strong>提示：</strong>通断挡内部带电，<strong>务必在断电的电路上测量</strong>。给带电电路用电阻/通断挡，会读数错乱甚至损坏表。</p></aside>
+
+  <h3>A02 测电阻的常见坑</h3>
+  <p>电阻挡（<code>Ω</code>）的原理是：万用表向被测对象送出一个微小已知电流，再测两端电压换算出电阻。新手常犯的错误集中在这几点：</p>
+  <ol>
+    <li><strong>带电测量</strong>：电路里若有电压，会叠加到测量上导致读数完全失真，甚至损表。先断电再测。</li>
+    <li><strong>不脱开元件</strong>：被测电阻若仍焊在电路里，会和旁边的元件“并联”，测出的是一堆元件的合阻值，比真实值偏小。精确测量要至少断开一只脚。</li>
+    <li><strong>双手捏住两根表笔金属端</strong>：人体电阻（约几十万到上百万欧）会并入测量，测大阻值时尤其失真。只捏绝缘手柄。</li>
+    <li><strong>量程不当</strong>：自动量程表可省心；手动量程要选比预估值稍大的挡，显示 <code>OL</code> 说明量程太小需上调。</li>
+  </ol>
+
+  <h3>A03 电池电量、极性与零火线</h3>
+  <p>测<strong>直流电压挡（<code>V⎓</code> 或 <code>DCV</code>）</strong>判断电池：</p>
+  <ul>
+    <li><strong>电量</strong>：把红笔接正极、黑笔接负极，读出电压。如 1.5V 干电池实测低于约 1.2V 多半已没电；锂电单节满电约 4.2V、亏电约 3.0V。</li>
+    <li><strong>极性</strong>：若读数为<mark>正值</mark>，红笔所接即为正极；若读数带<mark>负号</mark>，说明表笔接反了，红笔实际接的是负极。这正是判断不明标识电池极性的妙招。</li>
+  </ul>
+  <p>区分市电<strong>零线（N）与火线（L）</strong>用<strong>交流电压挡（<code>V~</code> 或 <code>ACV</code>）</strong>：把黑笔接可靠的接地点或人手轻触（或用验电方式），红笔分别试两个插孔——对地电压接近 220V 的是火线，接近 0V 的是零线。更安全的做法是配合<abbr title="测电笔">验电笔</abbr>：氖管亮的是火线。</p>
+  <aside class="tip"><strong>提示：</strong>测市电属于高压操作，务必单手操作、表笔绝缘良好，先确认挡位在交流电压且量程足够（≥750V 挡）。切勿用电流挡或电阻挡去碰市电。</p></aside>
+
+  <h3>A04 测发光二极管 LED 与普通二极管</h3>
+  <p>用<strong>二极管挡（符号 ▷|）</strong>：红笔为内部电源正极。二极管具有“单向导电”特性：</p>
+  <ul>
+    <li><strong>正向</strong>（红笔接阳极 A、黑笔接阴极 K）：显示一个正向压降。普通硅二极管约 <code>0.5～0.7V</code>；LED 因材料不同约 <code>1.6～3.2V</code>，且此时 LED 会<mark>微微发光</mark>，这是判断 LED 好坏与找正负极的直观方法。</li>
+    <li><strong>反向</strong>（表笔对调）：显示 <code>OL</code>（不导通）。</li>
+  </ul>
+  <p>正反都通=已击穿短路（坏）；正反都不通=内部开路（坏）。只有“一通一不通”才正常。亮起来那一次，红笔所接就是 LED 的正极（长脚）。</p>
+
+  <h3>A05 / A06 测电流：串联接入与违规并联的危险</h3>
+  <p>电流测量与电压测量最大的不同：<strong>电压表并联、电流表串联</strong>。要测某条支路的电流，必须<mark>断开该支路</mark>，把万用表“串”进去，让被测电流全部从表内流过。</p>
+  <h4 class="visually-hidden"></h4>
+  <ol>
+    <li>先估计电流大小：小于 200mA 用 <code>mA</code> 孔，可能达到安培级用 <code>10A</code> 孔。拿不准时先用大挡试探，再换合适挡读数。</li>
+    <li>断电后断开电路一点，把红黑表笔接到断点两端，使表成为电路的一部分。</li>
+    <li>通电读数。注意 <code>10A</code> 挡通常只允许短时间测量（如 10～15 秒），以免发热。</li>
+  </ol>
+  <p><strong>致命的违规操作</strong>：把处于电流挡的万用表像测电压那样直接<mark>并联</mark>到电源两端。因为电流挡内阻极小（近乎短路），这相当于把电源正负极用导线直接短接，瞬间产生大电流，轻则烧断保险丝，重则烧表、打火甚至引发危险。养成习惯：测完电流立刻把旋钮拨回电压挡、红笔插回 <code>VΩ</code> 孔。</p>
+
+  <figure>
+    <svg viewBox="0 0 440 220" width="100%" role="img" aria-label="电流表串联接入电路示意图">
+      <!-- 电源 -->
+      <line x1="40" y1="70" x2="40" y2="150" stroke="#1e3a8a" stroke-width="2"/>
+      <line x1="30" y1="95" x2="50" y2="95" stroke="#1e3a8a" stroke-width="4"/>
+      <line x1="34" y1="125" x2="46" y2="125" stroke="#1e3a8a" stroke-width="2"/>
+      <line x1="28" y1="113" x2="52" y2="113" stroke="#1e3a8a" stroke-width="4"/>
+      <text x="20" y="80" font-size="13" fill="#1e3a8a">+</text>
+      <text x="20" y="150" font-size="13" fill="#1e3a8a">−</text>
+      <!-- 上导线到电流表 -->
+      <line x1="40" y1="70" x2="150" y2="70" stroke="#2563eb" stroke-width="2"/>
+      <!-- 电流表 A -->
+      <circle cx="190" cy="70" r="26" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+      <text x="190" y="77" text-anchor="middle" font-size="20" fill="#dc2626" font-weight="bold">A</text>
+      <line x1="216" y1="70" x2="320" y2="70" stroke="#2563eb" stroke-width="2"/>
+      <text x="150" y="40" font-size="12" fill="#1e3a8a">串联接入</text>
+      <!-- 负载电阻 -->
+      <line x1="320" y1="70" x2="320" y2="92" stroke="#2563eb" stroke-width="2"/>
+      <rect x="300" y="92" width="40" height="46" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+      <text x="350" y="120" font-size="13" fill="#1e3a8a">负载</text>
+      <line x1="320" y1="138" x2="320" y2="150" stroke="#2563eb" stroke-width="2"/>
+      <!-- 回路下导线 -->
+      <line x1="40" y1="150" x2="320" y2="150" stroke="#2563eb" stroke-width="2"/>
+      <!-- 电流方向箭头 -->
+      <polygon points="110,70 100,65 100,75" fill="#dc2626"/>
+      <polygon points="270,70 260,65 260,75" fill="#dc2626"/>
+    </svg>
+    <figcaption>测电流时万用表必须断开电路后“串联”接入，让被测电流全部流经电流表。</figcaption>
+  </figure>
+
+  <h3>A07 测电容的避坑</h3>
+  <p>电容挡（<code>F</code>，单位法拉，常用 μF、nF、pF）测的是容量。实操要点：</p>
+  <ul>
+    <li><strong>先放电</strong>：大容量或电解电容可能存有残余电荷，直接测会冲击表、读数乱。先用电阻短接两脚放电（大电容要带限流），再测。</li>
+    <li><strong>脱离电路</strong>：和电阻一样，最好脱开至少一脚，避免周围元件影响。</li>
+    <li><strong>极性</strong>：电解电容有正负极，长脚为正；测容量时数字表通常不挑极性，但安装回电路必须接对，否则会鼓包甚至爆裂。</li>
+    <li><strong>读数稳定需要时间</strong>：大容量电容充电慢，读数会缓慢爬升到稳定值，耐心等待。</li>
+    <li><strong>漏电/损坏判断</strong>：实测容量远小于标称、或一直跳变不稳，多为容量衰减或漏电损坏。</li>
+  </ul>
+
+  <h3>A08 温度、频率与占空比</h3>
+  <dl>
+    <dt>温度（<code>℃ / TEMP</code>）</dt>
+    <dd>需配专用<abbr title="K 型热电偶探头">热电偶</abbr>插入对应插孔，把探头贴在被测物表面即可读温度，常用于检查发热元件、电机、散热片。</dd>
+    <dt>频率（<code>Hz</code>）</dt>
+    <dd>测量周期信号每秒振荡的次数，可用来检测晶振、市电 50Hz、PWM 信号等。</dd>
+    <dt>占空比（<code>%</code>，Duty）</dt>
+    <dd>一个周期里高电平所占的时间比例。调速、调光、电机驱动等<abbr title="脉冲宽度调制">PWM</abbr>电路常靠改变占空比来调节输出，用万用表读占空比能快速判断 PWM 是否在工作。</dd>
+  </dl>
+
+  <h3>A09 判断三极管类型与引脚</h3>
+  <p>三极管有三只脚：基极 <code>B</code>、集电极 <code>C</code>、发射极 <code>E</code>，分 <mark>NPN</mark> 与 <mark>PNP</mark> 两类。判别方法有两种：</p>
+  <ul>
+    <li><strong>hFE 测试座</strong>：有些表带 hFE 插孔，按 NPN/PNP 分别把三脚插入对应的 B、C、E 位置，能读出放大倍数（β值），读数正常说明插对了类型与引脚。</li>
+    <li><strong>二极管挡判别</strong>：三极管内部相当于两个二极管。找出与另两脚都能“正向导通”的那只脚即为基极 B；若红笔（内部正极）接 B 时另两脚导通，则为 <strong>NPN</strong>；若黑笔接 B 时导通，则为 <strong>PNP</strong>。再依据两个 PN 结压降略有差异，区分出 C、E。</li>
+  </ul>
+
+  <details>
+    <summary>本章一句话总结</summary>
+    <p>记住三句口诀就能上手：<strong>测什么先选对挡（V/A/Ω）</strong>、<strong>黑笔守 COM、红笔随项目换孔</strong>、<strong>电压并联、电流串联，电阻电容先断电再测</strong>。把这九集的项目都动手做一遍，常见电路排故就不在话下了。</p>
+  </details>
+</section>
+
+<section id="sec-b">
+  <h2>B、零基础概念（6 集）</h2>
+
+  <p>本章面向完全没有接触过<abbr title="一种集电压、电流、电阻等多种测量功能于一体的便携仪表">万用表</abbr>的同学，目标是先认清表的各个部件、再学会最常用的两件事：<mark>测通断</mark>和<mark>测电压</mark>，同时把新手最容易犯的「烧表」错误一次讲清楚。把这一章吃透，后面的电阻、电流、电容等测量就都是同一套操作逻辑的延伸。</p>
+
+  <h3>本章逐集索引</h3>
+  <table>
+    <caption>B 章各集标题与一句话要点</caption>
+    <thead>
+      <tr>
+        <th scope="col">集数</th>
+        <th scope="col">标题</th>
+        <th scope="col">一句话要点</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">B01</th>
+        <td>万用表使用入门（零基础）</td>
+        <td>认识表盘、旋钮、表笔与插孔，建立整体操作概念。</td>
+      </tr>
+      <tr>
+        <th scope="row">B02</th>
+        <td>测线路通断</td>
+        <td>用电阻档/蜂鸣档判断导线、开关是否连通。</td>
+      </tr>
+      <tr>
+        <th scope="row">B03</th>
+        <td>万用表烧坏的原因</td>
+        <td>电流档误测电压、量程选错、表笔孔位插错是三大杀手。</td>
+      </tr>
+      <tr>
+        <th scope="row">B04</th>
+        <td>怎么测电压</td>
+        <td>选电压档、红黑表笔并联接到被测两端读数。</td>
+      </tr>
+      <tr>
+        <th scope="row">B05</th>
+        <td>蜂鸣档怎么使用</td>
+        <td>导通即响，盲操作快速找通断。</td>
+      </tr>
+      <tr>
+        <th scope="row">B06</th>
+        <td>蜂鸣档声音调节</td>
+        <td>部分型号可调蜂鸣音量/灵敏度，按需设置。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>B01 先认识这块表</h3>
+  <p>一块数字万用表通常由四部分组成，先把它们认全，后面所有操作都是「选档位 + 插表笔 + 搭被测点」三步走。</p>
+  <dl>
+    <dt>显示屏</dt>
+    <dd>读取测量数值的地方，会显示数字、单位（V/A/Ω）以及负号、过量程符号（通常显示 <code>1</code> 或 <code>OL</code>）。</dd>
+    <dt>旋钮（档位选择）</dt>
+    <dd>用来选择要测什么：电压 <code>V</code>、电流 <code>A</code>、电阻 <code>Ω</code>、二极管/蜂鸣等。<strong>测量前必须先把旋钮拨到正确档位。</strong></dd>
+    <dt>表笔</dt>
+    <dd>一红一黑两支笔，是把仪表接到电路上的「手指」。红笔一般代表正极/高电位，黑笔代表负极/参考点。</dd>
+    <dt>插孔（接线柱）</dt>
+    <dd>表笔插入的地方，决定了电流从哪条内部线路流过，<strong>插错孔是烧表的常见原因之一</strong>，下面专门讲。</dd>
+  </dl>
+
+  <figure>
+    <svg viewBox="0 0 360 240" role="img" aria-label="万用表四个表笔插孔示意：10A、mAμA、COM、VΩ" xmlns="http://www.w3.org/2000/svg">
+      <rect x="8" y="8" width="344" height="224" rx="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="180" y="34" text-anchor="middle" font-size="15" fill="#1e3a8a" font-weight="bold">表笔插孔</text>
+      <!-- 10A 孔 -->
+      <circle cx="80" cy="100" r="22" fill="#ffffff" stroke="#2563eb" stroke-width="3"/>
+      <circle cx="80" cy="100" r="7" fill="#2563eb"/>
+      <text x="80" y="148" text-anchor="middle" font-size="14" fill="#1e3a8a" font-weight="bold">10A</text>
+      <text x="80" y="166" text-anchor="middle" font-size="11" fill="#475569">大电流红笔</text>
+      <!-- mA 孔 -->
+      <circle cx="160" cy="100" r="22" fill="#ffffff" stroke="#2563eb" stroke-width="3"/>
+      <circle cx="160" cy="100" r="7" fill="#2563eb"/>
+      <text x="160" y="148" text-anchor="middle" font-size="14" fill="#1e3a8a" font-weight="bold">mA·μA</text>
+      <text x="160" y="166" text-anchor="middle" font-size="11" fill="#475569">小电流红笔</text>
+      <!-- COM 孔 -->
+      <circle cx="240" cy="100" r="22" fill="#1f2937" stroke="#111827" stroke-width="3"/>
+      <circle cx="240" cy="100" r="7" fill="#ffffff"/>
+      <text x="240" y="148" text-anchor="middle" font-size="14" fill="#111827" font-weight="bold">COM</text>
+      <text x="240" y="166" text-anchor="middle" font-size="11" fill="#475569">黑笔·公共端</text>
+      <!-- VΩ 孔 -->
+      <circle cx="320" cy="100" r="22" fill="#ffffff" stroke="#2563eb" stroke-width="3"/>
+      <circle cx="320" cy="100" r="7" fill="#2563eb"/>
+      <text x="320" y="148" text-anchor="middle" font-size="14" fill="#1e3a8a" font-weight="bold">VΩ</text>
+      <text x="320" y="166" text-anchor="middle" font-size="11" fill="#475569">红笔·电压电阻</text>
+      <!-- 提示 -->
+      <text x="180" y="206" text-anchor="middle" font-size="12" fill="#475569">黑笔永远插 COM，红笔按测量项目换孔</text>
+    </svg>
+    <figcaption>常见四插孔布局：黑笔固定插 COM，红笔测电压/电阻插 VΩ、测电流才换到 mA 或 10A。</figcaption>
+  </figure>
+
+  <aside class="tip"><strong>提示：</strong>记住一句口诀——「黑笔不动，红笔挪窝」。绝大多数日常测量（电压、电阻、通断）红笔都待在 <code>VΩ</code> 孔，只有真正测电流时才把红笔移到 <code>mA</code> 或 <code>10A</code>。</aside>
+
+  <h3>B02 测线路通断</h3>
+  <p>「通断」就是判断两点之间是不是连通的：一根线有没有断、一个开关闭合后通不通、一段铜箔有没有裂开。原理是给被测两点加一个很小的测试电流，看电阻大小：</p>
+  <ul>
+    <li><strong>电阻接近 0Ω</strong>（几乎不挡电）→ 线路<mark>导通</mark>，是好的。</li>
+    <li><strong>电阻很大或显示 <code>OL</code>/<code>1</code></strong>（挡住了电）→ 线路<mark>断开</mark>，中间断了。</li>
+  </ul>
+  <p>测通断有两种做法：用电阻档看数字，或用蜂鸣档听声音（见 B05）。关键前提是——<strong>被测线路必须断电</strong>。带电去测通断不仅读数不准，还可能把表打坏。</p>
+
+  <h3>B03 万用表为什么会烧坏</h3>
+  <p>万用表本身很结实，「烧表」几乎都是误操作造成的。新手务必牢记下面三个原因，它们也是 B 章最重要的安全知识。</p>
+
+  <figure>
+    <svg viewBox="0 0 360 230" role="img" aria-label="烧表三大原因因果示意图" xmlns="http://www.w3.org/2000/svg">
+      <rect x="8" y="8" width="344" height="214" rx="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <!-- 原因1 -->
+      <rect x="24" y="40" width="140" height="40" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+      <text x="94" y="58" text-anchor="middle" font-size="12" fill="#1e3a8a" font-weight="bold">电流档去测电压</text>
+      <text x="94" y="73" text-anchor="middle" font-size="10" fill="#475569">表内近乎短路</text>
+      <!-- 原因2 -->
+      <rect x="24" y="95" width="140" height="40" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+      <text x="94" y="113" text-anchor="middle" font-size="12" fill="#1e3a8a" font-weight="bold">量程选得太小</text>
+      <text x="94" y="128" text-anchor="middle" font-size="10" fill="#475569">超出测量上限</text>
+      <!-- 原因3 -->
+      <rect x="24" y="150" width="140" height="40" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+      <text x="94" y="168" text-anchor="middle" font-size="12" fill="#1e3a8a" font-weight="bold">表笔插错孔</text>
+      <text x="94" y="183" text-anchor="middle" font-size="10" fill="#475569">如红笔留在10A测电压</text>
+      <!-- 箭头 -->
+      <line x1="164" y1="60" x2="220" y2="105" stroke="#2563eb" stroke-width="2" marker-end="url(#ar)"/>
+      <line x1="164" y1="115" x2="220" y2="115" stroke="#2563eb" stroke-width="2" marker-end="url(#ar)"/>
+      <line x1="164" y1="170" x2="220" y2="125" stroke="#2563eb" stroke-width="2" marker-end="url(#ar)"/>
+      <defs>
+        <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+          <path d="M0,0 L7,3 L0,6 Z" fill="#2563eb"/>
+        </marker>
+      </defs>
+      <!-- 结果 -->
+      <rect x="224" y="92" width="112" height="46" rx="10" fill="#1e3a8a"/>
+      <text x="280" y="113" text-anchor="middle" font-size="13" fill="#ffffff" font-weight="bold">大电流冲击</text>
+      <text x="280" y="129" text-anchor="middle" font-size="11" fill="#dbeafe">保险丝熔断/烧表</text>
+    </svg>
+    <figcaption>三类误操作都会让过大的电流灌入仪表，最终烧断保险丝甚至损坏内部元件。</figcaption>
+  </figure>
+
+  <dl>
+    <dt>① 电流档误测电压（最常见、最致命）</dt>
+    <dd>电流档内部电阻极小（接近导线）。如果在电流档下把两支表笔直接搭到电压两端（比如插座、电池），相当于用一根细导线把电源正负极短接，瞬间大电流会烧断保险丝甚至损坏仪表。<strong>测电压一定要先确认旋钮在 <code>V</code> 档。</strong></dd>
+    <dt>② 量程选得太小</dt>
+    <dd>对于非自动量程的表，若用 2V 档去测 220V，输入远超档位上限，可能损坏。规则是：<mark>不确定大小时，先从最大量程往下试</mark>。</dd>
+    <dt>③ 表笔孔位插错</dt>
+    <dd>测完大电流忘了把红笔从 <code>10A</code> 孔移回 <code>VΩ</code> 孔，接着去测电压，等于又回到了「电流回路测电压」的危险状态。每次测量前都扫一眼：红笔插对孔了吗？</dd>
+  </dl>
+
+  <aside class="tip"><strong>提示：</strong>养成「用完归位」的习惯：测量结束把旋钮拨回 <code>OFF</code> 或电压档、红笔放回 <code>VΩ</code> 孔。这样下次随手一测也不会出大事。</aside>
+
+  <h3>B04 怎么测电压</h3>
+  <p>电压是「两点之间的电位差」，所以测电压一定是<strong>并联</strong>——把两支表笔分别搭在被测元件/电源的两端，不需要断开电路。操作四步：</p>
+  <ol>
+    <li>判断是直流（电池、电路板，选 <code>V⎓</code> / DCV）还是交流（市电插座，选 <code>V～</code> / ACV）。</li>
+    <li>旋钮拨到对应电压档；非自动量程则选一个比预估值大的量程。</li>
+    <li>黑笔插 <code>COM</code>，红笔插 <code>VΩ</code>。</li>
+    <li>红笔接高电位端、黑笔接低电位端，读屏幕数值。直流时若数字带负号，说明红黑笔接反了，调换即可。</li>
+  </ol>
+
+  <figure>
+    <svg viewBox="0 0 360 200" role="img" aria-label="万用表并联测量电池电压示意" xmlns="http://www.w3.org/2000/svg">
+      <rect x="8" y="8" width="344" height="184" rx="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <!-- 电池 -->
+      <rect x="60" y="70" width="90" height="60" rx="6" fill="#ffffff" stroke="#1e3a8a" stroke-width="2"/>
+      <text x="105" y="105" text-anchor="middle" font-size="13" fill="#1e3a8a" font-weight="bold">电池</text>
+      <text x="60" y="62" text-anchor="middle" font-size="13" fill="#dc2626" font-weight="bold">+</text>
+      <text x="150" y="62" text-anchor="middle" font-size="13" fill="#111827" font-weight="bold">−</text>
+      <!-- 表 -->
+      <rect x="225" y="60" width="100" height="80" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+      <rect x="237" y="74" width="76" height="26" rx="4" fill="#1e3a8a"/>
+      <text x="275" y="92" text-anchor="middle" font-size="13" fill="#ffffff" font-weight="bold">1.5 V</text>
+      <text x="275" y="124" text-anchor="middle" font-size="11" fill="#475569">电压档 V⎓</text>
+      <!-- 红线 -->
+      <path d="M60 70 L60 40 L249 40 L249 60" fill="none" stroke="#dc2626" stroke-width="3"/>
+      <text x="150" y="34" text-anchor="middle" font-size="11" fill="#dc2626">红笔→正极</text>
+      <!-- 黑线 -->
+      <path d="M150 130 L150 165 L301 165 L301 140" fill="none" stroke="#111827" stroke-width="3"/>
+      <text x="225" y="180" text-anchor="middle" font-size="11" fill="#111827">黑笔→负极(COM)</text>
+    </svg>
+    <figcaption>测电压时两支表笔像「叉子」一样并联搭在被测两端，红正黑负，电路保持接通。</figcaption>
+  </figure>
+
+  <aside class="tip"><strong>提示：</strong>电压并联、电流串联，是两类测量最根本的区别。电压测量不会断开电路，所以相对安全；而电流测量需要把表串进回路，操作更讲究，等后面章节再练。</aside>
+
+  <h3>B05 蜂鸣档怎么使用</h3>
+  <p>蜂鸣档（图标通常是 <code>•))</code> 声波符号，常和二极管档共用一个位置）是测通断的「升级版」：仪表检测到两表笔之间电阻足够小（一般低于约 30～50Ω）时会发出「嘀——」的连续响声。好处是<strong>不用盯屏幕也能判断</strong>，特别适合一手拿笔、一手翻线的盲操作。</p>
+  <ul>
+    <li>旋钮拨到蜂鸣档，黑笔 <code>COM</code>、红笔 <code>VΩ</code>。</li>
+    <li>先两笔互碰自测一下：会响，说明功能正常。</li>
+    <li>搭到被测两点：<mark>响 = 通</mark>，<mark>不响 = 断</mark>。</li>
+    <li>同样要求被测电路<strong>断电</strong>，否则可能误判甚至损坏。</li>
+  </ul>
+  <details>
+    <summary>为什么有时候接通了却不响？</summary>
+    <p>常见原因：被测对象本身有一定电阻（如绕组、灯丝），阻值超过蜂鸣门限就不会响，这时改用电阻档看具体数值更可靠；另外电池电量过低、表笔接触不良、笔尖氧化也会导致该响不响，先互碰自测排除仪表问题。</p>
+  </details>
+
+  <h3>B06 蜂鸣档声音调节</h3>
+  <p>部分中高端或带设置功能的万用表，允许调整蜂鸣档的<strong>音量大小</strong>或<strong>触发灵敏度（响应电阻门限）</strong>，以适应嘈杂车间或安静实验室等不同环境。</p>
+  <dl>
+    <dt>音量调节</dt>
+    <dd>通过菜单键/长按某功能键进入设置，选择蜂鸣音量大、小或关闭。嘈杂环境调大，夜间或办公室调小。</dd>
+    <dt>灵敏度/门限</dt>
+    <dd>有的型号可设定多少欧姆以下才算「导通」。门限调低会更严格（只有接近 0Ω 才响），适合精细排查；门限调高更宽松，快速找大致通断。</dd>
+    <dt>没有调节功能怎么办</dt>
+    <dd>多数入门表的蜂鸣音量是固定的。若环境太吵听不清，可改看显示屏的电阻数值来判断通断，效果一样。</dd>
+  </dl>
+  <aside class="tip"><strong>提示：</strong>不同品牌的设置入口差异较大，具体按键和菜单请以你手中那块表的说明书为准；本节讲的是「能调什么、为什么调」，而不是某一款表的固定按法。</aside>
+</section>
+
+<section id="sec-c">
+  <h2>C、数字万用表精讲（12 集）</h2>
+
+  <p>数字万用表（<abbr title="Digital Multi-Meter">DMM</abbr>）用液晶屏直接显示数字读数，避免了指针式的视差与机械误差，是当下电工、电子维修的主力工具。本章 12 集围绕「认识面板与各档位 → 正确接线测电压/电阻/电流 → 进阶应用（测电机、分零火线）→ 安全防烧」展开，循序渐进地把数字表用熟、用对、用安全。</p>
+
+  <h3>本章逐集目录</h3>
+  <table>
+    <caption>C 章·数字万用表精讲（共 12 集）逐集要点</caption>
+    <thead>
+      <tr>
+        <th scope="col">集数</th>
+        <th scope="col">标题</th>
+        <th scope="col">一句话要点</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">C01</th><td>数字万用表详细使用方法</td><td>开机、选档、插孔、读数的完整操作流程。</td></tr>
+      <tr><th scope="row">C02</th><td>各功能逐一介绍</td><td>认全 V、A、Ω、二极管、蜂鸣、电容、温度等档位含义。</td></tr>
+      <tr><th scope="row">C03</th><td>测电池电量</td><td>带载与空载电压都要看，单看空载电压会误判。</td></tr>
+      <tr><th scope="row">C04</th><td>蜂鸣档进阶用法</td><td>查通断、找短路、判断线序，响=导通。</td></tr>
+      <tr><th scope="row">C05</th><td>欧姆档测电阻、读数要看量程</td><td>手动量程下读数需结合量程倍率正确理解。</td></tr>
+      <tr><th scope="row">C06</th><td>检测三相电机好坏</td><td>测三相绕组通断对称性 + 对地绝缘电阻。</td></tr>
+      <tr><th scope="row">C07</th><td>用万用表区分零火线</td><td>交流电压档对地测，火线≈相电压，零线≈0。</td></tr>
+      <tr><th scope="row">C08</th><td>测直流电压注意红黑表笔正负</td><td>红正黑负；接反读数为负，不会损坏表。</td></tr>
+      <tr><th scope="row">C09</th><td>交流电压电流注意孔位、用完恢复</td><td>电流插孔与电压插孔不同，用完务必拨回电压档。</td></tr>
+      <tr><th scope="row">C10</th><td>测交流电流表笔串联</td><td>电流必须串入回路，绝不能并接在电压两端。</td></tr>
+      <tr><th scope="row">C11</th><td>测直流电流（临时用）</td><td>同样串联接入，短时测量，注意量程上限。</td></tr>
+      <tr><th scope="row">C12</th><td>数字表防烧、全电路保护</td><td>保险丝、PTC、压敏电阻共同构成防烧保护。</td></tr>
+    </tbody>
+  </table>
+
+  <h3>C01–C02：认识面板与各档位</h3>
+  <p>数字表面板由<strong>液晶屏</strong>、<strong>旋钮（量程选择开关）</strong>和<strong>表笔插孔</strong>三部分组成。先看懂旋钮上各区域代表什么，是用好万用表的第一步。</p>
+
+  <figure>
+    <svg viewBox="0 0 460 300" width="100%" role="img" aria-label="数字万用表面板各档位示意图">
+      <rect x="20" y="20" width="420" height="260" rx="16" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <!-- 显示屏 -->
+      <rect x="55" y="40" width="350" height="55" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+      <text x="380" y="80" font-size="30" text-anchor="end" fill="#1e3a8a" font-family="monospace">0.000</text>
+      <!-- 中央旋钮 -->
+      <circle cx="230" cy="180" r="55" fill="#fff" stroke="#2563eb" stroke-width="2.5"/>
+      <circle cx="230" cy="180" r="10" fill="#2563eb"/>
+      <line x1="230" y1="180" x2="230" y2="135" stroke="#1e3a8a" stroke-width="5" stroke-linecap="round"/>
+      <!-- 档位标签环 -->
+      <text x="230" y="115" font-size="15" text-anchor="middle" fill="#2563eb">V⎓</text>
+      <text x="300" y="135" font-size="15" text-anchor="middle" fill="#2563eb">V~</text>
+      <text x="320" y="185" font-size="16" text-anchor="middle" fill="#2563eb">Ω</text>
+      <text x="300" y="232" font-size="15" text-anchor="middle" fill="#2563eb">A</text>
+      <text x="230" y="252" font-size="15" text-anchor="middle" fill="#2563eb">OFF</text>
+      <text x="160" y="232" font-size="16" text-anchor="middle" fill="#2563eb">))) </text>
+      <text x="140" y="185" font-size="15" text-anchor="middle" fill="#2563eb">⏚</text>
+      <text x="160" y="135" font-size="14" text-anchor="middle" fill="#2563eb">CAP</text>
+      <!-- 插孔 -->
+      <circle cx="110" cy="250" r="9" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+      <text x="110" y="278" font-size="12" text-anchor="middle" fill="#dc2626">VΩmA</text>
+      <circle cx="230" cy="250" r="9" fill="#1f2937" stroke="#111" stroke-width="2"/>
+      <text x="230" y="278" font-size="12" text-anchor="middle" fill="#374151">COM</text>
+      <circle cx="350" cy="250" r="9" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+      <text x="350" y="278" font-size="12" text-anchor="middle" fill="#dc2626">10A</text>
+    </svg>
+    <figcaption>数字万用表面板：上方液晶屏、中央量程旋钮（V⎓ 直流电压、V~ 交流电压、Ω 电阻、A 电流、))) 蜂鸣、CAP 电容、⏚ 二极管）与下方三个表笔插孔。</figcaption>
+  </figure>
+
+  <dl>
+    <dt>V⎓（直流电压）</dt><dd>测电池、稳压电源、电路板供电等直流电压。符号为一横加三个点（或一横加虚线）。</dd>
+    <dt>V~（交流电压）</dt><dd>测市电、变压器输出等交流电压。符号为波浪线 ~。</dd>
+    <dt>Ω（电阻）</dt><dd>测电阻值、判断元件好坏；与蜂鸣、二极管常共用一个区域。</dd>
+    <dt>))) 蜂鸣 / ⏚ 二极管</dt><dd>蜂鸣档查通断（导通即响）；二极管档测 PN 结正向压降。</dd>
+    <dt>A（电流）</dt><dd>分 mA 档与 10A 大电流档，需配合对应插孔使用。</dd>
+    <dt>CAP / Temp / hFE</dt><dd>部分型号附带电容、温度、三极管放大倍数等测量功能。</dd>
+  </dl>
+
+  <aside class="tip"><strong>提示：</strong>很多数字表带「自动量程（Auto）」，会自动选择合适档位；手动量程表则需自己估算被测值并选稍大一级的量程，<mark>读数永远要结合所选量程理解</mark>。</aside>
+
+  <h3>C03–C05：测电池、蜂鸣通断与电阻读数</h3>
+  <p><strong>测电池电量（C03）：</strong>单看「空载电压」容易被骗——一节看似 1.5V 的旧电池，接上负载后电压可能瞬间塌到 1.1V。正确做法是<strong>带载测量</strong>，或观察接负载前后的电压跌落幅度，跌得越多说明内阻越大、电量越差。</p>
+  <p><strong>蜂鸣档进阶（C04）：</strong>蜂鸣档本质是「低阻即导通」检测。除了查线路通断，还能用来：找短路点、核对插头线序、判断开关/保险丝是否完好。要注意必须在<strong>断电</strong>状态下使用。</p>
+  <p><strong>欧姆档读数（C05）：</strong>手动量程的表，屏幕数字必须配合量程倍率理解。例如选在 <code>2k</code> 档显示 <code>1.50</code> 表示 1.50 kΩ；选在 <code>200</code> 档显示 <code>1</code>（最高位为 1、其余熄灭）通常代表<strong>超量程</strong>，应换更大量程。测电阻前确保电路断电、电容已放电，否则读数失真甚至损表。</p>
+
+  <h3>C06：检测三相电机好坏</h3>
+  <p>三相异步电动机内部有 U、V、W 三组绕组。用数字表判断电机好坏，主要看两点：</p>
+  <ol>
+    <li><strong>绕组通断与对称性（Ω 档）：</strong>分别测 U-V、V-W、W-U 三相绕组电阻，三个值应<strong>基本相等</strong>。某相阻值异常偏大或显示开路，说明该绕组断线；偏小则可能匝间短路。</li>
+    <li><strong>对地绝缘（高阻/兆欧）：</strong>测任一绕组接线端与电机外壳（机座）之间的电阻，应为<strong>极大（接近无穷）</strong>。若阻值很小，说明绕组对地绝缘损坏、漏电，电机不可用。绝缘测量更严谨时应使用兆欧表（摇表）。</li>
+  </ol>
+  <aside class="tip"><strong>提示：</strong>万用表只能做初步判断。绕组对称、对地绝缘良好≠电机一定正常，还需结合空转、电流平衡等进一步检查。</aside>
+
+  <h3>C07–C08：区分零火线与直流电压极性</h3>
+  <p><strong>区分零火线（C07）：</strong>把档位拨到<strong>交流电压档（V~，量程≥250V）</strong>，黑表笔接可靠的接地点（或保持悬空由人体参考），红表笔分别触碰待测线：对地电压接近相电压（约 220V）的是<strong>火线（L）</strong>，接近 0 的是<strong>零线（N）</strong>。务必单手操作、注意人身安全。</p>
+  <p><strong>直流电压极性（C08）：</strong>测直流时红表笔接高电位（正极）、黑表笔接低电位（负极）。<mark>若接反，数字表只是读数前面多一个负号，不会损坏</mark>——这正是数字表相比指针表的便利之处（指针表接反会打表）。</p>
+
+  <h3>C09–C11：交直流电流的串联测量与孔位</h3>
+  <p>测电流是初学者最容易出错、也最容易烧表的环节。核心原则只有一句：<strong>电压并联测、电流串联测</strong>。</p>
+
+  <figure>
+    <svg viewBox="0 0 480 230" width="100%" role="img" aria-label="测电压并联与测电流串联接法对比图">
+      <!-- 左：测电压（并联） -->
+      <text x="115" y="28" font-size="15" text-anchor="middle" fill="#1e3a8a">测电压 · 并联</text>
+      <line x1="40" y1="60" x2="190" y2="60" stroke="#2563eb" stroke-width="2.5"/>
+      <line x1="40" y1="160" x2="190" y2="160" stroke="#2563eb" stroke-width="2.5"/>
+      <rect x="95" y="50" width="40" height="20" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+      <text x="115" y="65" font-size="11" text-anchor="middle" fill="#1e3a8a">负载</text>
+      <line x1="40" y1="60" x2="40" y2="160" stroke="#2563eb" stroke-width="2.5"/>
+      <!-- 表跨接两端 -->
+      <line x1="115" y1="70" x2="115" y2="120" stroke="#dc2626" stroke-width="2"/>
+      <line x1="160" y1="160" x2="160" y2="120" stroke="#111" stroke-width="2"/>
+      <circle cx="137" cy="120" r="22" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="137" y="126" font-size="16" text-anchor="middle" fill="#2563eb">V</text>
+      <!-- 右：测电流（串联） -->
+      <text x="365" y="28" font-size="15" text-anchor="middle" fill="#1e3a8a">测电流 · 串联</text>
+      <line x1="290" y1="60" x2="440" y2="60" stroke="#2563eb" stroke-width="2.5"/>
+      <line x1="290" y1="160" x2="440" y2="160" stroke="#2563eb" stroke-width="2.5"/>
+      <rect x="345" y="50" width="40" height="20" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+      <text x="365" y="65" font-size="11" text-anchor="middle" fill="#1e3a8a">负载</text>
+      <line x1="440" y1="60" x2="440" y2="160" stroke="#2563eb" stroke-width="2.5"/>
+      <line x1="290" y1="160" x2="343" y2="160" stroke="#2563eb" stroke-width="2.5"/>
+      <line x1="387" y1="160" x2="440" y2="160" stroke="#2563eb" stroke-width="2.5"/>
+      <!-- 表串入回路：断开左竖线接入表 -->
+      <line x1="290" y1="60" x2="290" y2="115" stroke="#dc2626" stroke-width="2"/>
+      <line x1="290" y1="145" x2="290" y2="160" stroke="#111" stroke-width="2"/>
+      <circle cx="290" cy="130" r="22" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="290" y="136" font-size="16" text-anchor="middle" fill="#2563eb">A</text>
+      <text x="248" y="118" font-size="11" fill="#dc2626">红</text>
+      <text x="248" y="156" font-size="11" fill="#374151">黑</text>
+    </svg>
+    <figcaption>左：电压表跨接在负载两端（并联）；右：电流表断开回路后串入其中（串联）。把电流表当电压表那样并接在电源两端，会形成短路烧表。</figcaption>
+  </figure>
+
+  <ul>
+    <li><strong>C09 交流电压/电流·孔位与恢复：</strong>测电流要把红表笔插到专用电流孔（小电流用 mA 孔、大电流用 10A 孔），与测电压的 VΩ 孔不同。<mark>测完务必把旋钮拨回电压档、表笔插回电压孔</mark>，否则下次随手去量电压就会因低内阻短路而烧保险/烧表。</li>
+    <li><strong>C10 交流电流·串联：</strong>必须断开回路、把电流表串接进去，使被测电流全部流经表内。绝不能并接在电压两端。</li>
+    <li><strong>C11 直流电流（临时用）：</strong>同样串联接入。注意电流档内阻极低，只宜<strong>短时测量</strong>，且被测电流不得超过所选量程（尤其别超过 10A 孔上限），否则迅速烧保险或损表。</li>
+  </ul>
+
+  <details>
+    <summary>为什么电流表不能并接在电源两端？</summary>
+    <p>电流档内部是一个极小的取样电阻（毫欧级），近似一根导线。若把它直接并接到电源两端，相当于用导线把电源正负极短路，瞬间产生极大电流，轻则熔断保险丝，重则烧毁表头甚至引发危险。这就是「电流串联、电压并联」铁律的物理原因。</p>
+  </details>
+
+  <h3>C12：数字表防烧与全电路保护</h3>
+  <p>正规数字万用表内置多重保护，构成「全电路保护」体系，目的是在误操作时保护使用者与仪表：</p>
+  <dl>
+    <dt>保险丝（Fuse）</dt><dd>电流回路串接保险丝，过流时熔断切断电路，是电流档最关键的防烧元件；烧断后需更换同规格保险丝。</dd>
+    <dt>PTC 自恢复元件</dt><dd>温度升高时电阻骤增、自动限流，故障排除后可恢复，常用于电压/电阻档输入保护。</dd>
+    <dt>压敏电阻（MOV）</dt><dd>吸收瞬时高压冲击，箝制过电压，保护内部测量电路。</dd>
+    <dt>高阻分压网络</dt><dd>电压档前端串入大阻值电阻分压，限制流入表内的电流。</dd>
+  </dl>
+  <aside class="tip"><strong>提示：</strong>保护电路是「最后防线」，不是「随便乱测的底气」。养成习惯：先选档、再接线、量完即把旋钮拨回电压档，远比依赖保险丝靠谱。</aside>
+</section>
+
+<section id="sec-d">
+  <h2>D、MF47 指针式万用表（13 集）</h2>
+
+  <p>MF47 是国产最经典的<strong>磁电式指针万用表</strong>，靠表头里的线圈在永久磁场中偏转带动指针。它没有电池就能测电压、电流（这些是"被测电路自己出力"），只有测电阻和检测元件时才需要内部电池。本章从档位盘讲起，带你把读数、调零、色环识读，到二极管、三极管、整流桥、电容、火零线的判别全部走一遍。</p>
+
+  <aside class="tip"><strong>提示：</strong>指针表读数的核心口诀是<mark>"看刻度 × 倍率"</mark>。同一根指针，落在哪条刻度弧上、当前旋到哪个量程，决定了你该怎么乘。先搞懂这一句，后面每一集都通了。</aside>
+
+  <h3>本章逐集索引</h3>
+  <table>
+    <caption>D 章 MF47 指针式万用表 13 集一览</caption>
+    <thead>
+      <tr>
+        <th scope="col">集数</th>
+        <th scope="col">标题</th>
+        <th scope="col">一句话要点</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">D01</th>
+        <td>MF47 的 10 个档位介绍</td>
+        <td>认全档位盘：直流电压、交流电压、直流电流、欧姆、BATT、hFE 等分区。</td>
+      </tr>
+      <tr>
+        <th scope="row">D02</th>
+        <td>测电压（220V 与 9V）</td>
+        <td>交流挡测 220V、直流挡测 9V，量程要大于被测值并就近选。</td>
+      </tr>
+      <tr>
+        <th scope="row">D03</th>
+        <td>色环电阻识读口诀（第 3 环金色）</td>
+        <td>前两环数字、第三环倍率（金=×0.1）、第四环误差。</td>
+      </tr>
+      <tr>
+        <th scope="row">D04</th>
+        <td>测电阻（2 兆欧）</td>
+        <td>选 ×10k 倍率挡，先短接调零，再读刻度乘倍率。</td>
+      </tr>
+      <tr>
+        <th scope="row">D05</th>
+        <td>测二极管分辨正负极</td>
+        <td>欧姆挡红黑笔互换两次，导通那次黑笔接的是正极。</td>
+      </tr>
+      <tr>
+        <th scope="row">D06</th>
+        <td>测三极管分辨 NPN/PNP</td>
+        <td>找基极、判管型，再用 hFE 插孔读放大倍数。</td>
+      </tr>
+      <tr>
+        <th scope="row">D07</th>
+        <td>用 4 个整流二极管做整流桥（口诀）</td>
+        <td>"交流进两腰、直流出两尖"，记牢四脚连接方式。</td>
+      </tr>
+      <tr>
+        <th scope="row">D08</th>
+        <td>测直流电压（量程与极性）</td>
+        <td>红进正、黑进负；指针反偏说明表笔接反。</td>
+      </tr>
+      <tr>
+        <th scope="row">D09</th>
+        <td>BATT 档是什么</td>
+        <td>带负载的电池电量档，比空载电压更能反映真实容量。</td>
+      </tr>
+      <tr>
+        <th scope="row">D10</th>
+        <td>测电流（档位与极性）</td>
+        <td>表笔串入电路，量程从大到小，注意极性与最大量程。</td>
+      </tr>
+      <tr>
+        <th scope="row">D11</th>
+        <td>测整流桥好坏</td>
+        <td>用二极管/欧姆挡逐个测四个内部二极管的单向导通。</td>
+      </tr>
+      <tr>
+        <th scope="row">D12</th>
+        <td>测电容（好坏与容量）</td>
+        <td>看充电时指针摆起再回落，判断短路、断路与漏电。</td>
+      </tr>
+      <tr>
+        <th scope="row">D13</th>
+        <td>分辨火零线</td>
+        <td>交流电压挡与试电方法配合，区分火线（L）与零线（N）。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>D01｜认识 MF47 的档位盘</h3>
+  <p>MF47 的中央是一个可旋转的<strong>量程选择开关</strong>，四周按功能分成几个扇区，逆时针/顺时针拨到对应位置即可。常见分区如下：</p>
+  <dl>
+    <dt><abbr title="Direct Current Voltage">DCV</abbr>（直流电压，<code>V&#x2D;</code>）</dt>
+    <dd>测电池、稳压电源等直流电压，如 0.25V / 1V / 2.5V / 10V / 50V / 250V / 500V 等多挡。</dd>
+    <dt><abbr title="Alternating Current Voltage">ACV</abbr>（交流电压，<code>V~</code>）</dt>
+    <dd>测市电、变压器输出等交流电压，常用 10V / 50V / 250V / 500V / 1000V。</dd>
+    <dt><abbr title="Direct Current">DCmA / DCA</abbr>（直流电流）</dt>
+    <dd>测回路电流，需把表笔<strong>串联</strong>接入电路，如 50μA / 0.5mA / 5mA / 50mA / 500mA。</dd>
+    <dt>Ω（电阻挡）</dt>
+    <dd>倍率分 ×1、×10、×100、×1k、×10k，需内部电池供电。</dd>
+    <dt>BATT（电池档）</dt>
+    <dd>带固定负载电阻测 1.5V / 9V 等电池，反映带载电压。</dd>
+    <dt>hFE（三极管放大倍数）</dt>
+    <dd>配合表盘上的专用插孔与刻度，读三极管直流放大系数。</dd>
+  </dl>
+  <p>三个表笔插孔：<mark>COM</mark>（公共/黑表笔）、<mark>+</mark>（红表笔，多数测量用）、以及高电压/大电流专用插孔（如 2500V、10A）。<strong>测量前先看清：黑表笔永远插 COM。</strong></p>
+
+  <figure>
+    <svg viewBox="0 0 420 300" width="100%" role="img" aria-label="MF47 指针表盘面与刻度弧示意图" xmlns="http://www.w3.org/2000/svg">
+      <rect x="6" y="6" width="408" height="288" rx="14" fill="#eff4ff" stroke="#2563eb" stroke-width="2"/>
+      <!-- 刻度弧区域 -->
+      <path d="M70 150 A 140 140 0 0 1 350 150" fill="none" stroke="#2563eb" stroke-width="2"/>
+      <path d="M88 150 A 122 122 0 0 1 332 150" fill="none" stroke="#60a5fa" stroke-width="1.5"/>
+      <path d="M106 150 A 104 104 0 0 1 314 150" fill="none" stroke="#93c5fd" stroke-width="1.5"/>
+      <!-- 刻度短线 -->
+      <g stroke="#2563eb" stroke-width="1.5">
+        <line x1="70" y1="150" x2="82" y2="150"/>
+        <line x1="86" y1="106" x2="96" y2="111"/>
+        <line x1="120" y1="74" x2="127" y2="82"/>
+        <line x1="168" y1="56" x2="171" y2="66"/>
+        <line x1="210" y1="50" x2="210" y2="62"/>
+        <line x1="252" y1="56" x2="249" y2="66"/>
+        <line x1="300" y1="74" x2="293" y2="82"/>
+        <line x1="334" y1="106" x2="324" y2="111"/>
+        <line x1="350" y1="150" x2="338" y2="150"/>
+      </g>
+      <!-- 刻度标签：欧姆从右往左 -->
+      <text x="64" y="166" font-size="11" fill="#1e3a8a">∞</text>
+      <text x="346" y="166" font-size="11" fill="#1e3a8a">0Ω</text>
+      <text x="200" y="44" font-size="11" fill="#1e3a8a">V / A</text>
+      <!-- 指针 -->
+      <line x1="210" y1="150" x2="150" y2="86" stroke="#dc2626" stroke-width="2.5"/>
+      <circle cx="210" cy="150" r="7" fill="#2563eb"/>
+      <!-- 反射镜带 -->
+      <path d="M120 148 A 95 95 0 0 1 300 148" fill="none" stroke="#cbd5e1" stroke-width="4" stroke-dasharray="2 4"/>
+      <!-- 量程开关 -->
+      <circle cx="210" cy="226" r="40" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+      <circle cx="210" cy="226" r="6" fill="#2563eb"/>
+      <line x1="210" y1="226" x2="240" y2="206" stroke="#2563eb" stroke-width="3"/>
+      <text x="150" y="214" font-size="10" fill="#1e3a8a">V&#x2D;</text>
+      <text x="262" y="214" font-size="10" fill="#1e3a8a">V~</text>
+      <text x="150" y="252" font-size="10" fill="#1e3a8a">Ω</text>
+      <text x="262" y="252" font-size="10" fill="#1e3a8a">mA</text>
+      <!-- 表笔插孔 -->
+      <circle cx="120" cy="270" r="8" fill="#1f2937"/>
+      <text x="100" y="290" font-size="10" fill="#1e3a8a">COM 黑</text>
+      <circle cx="300" cy="270" r="8" fill="#dc2626"/>
+      <text x="292" y="290" font-size="10" fill="#dc2626">+ 红</text>
+    </svg>
+    <figcaption>MF47 盘面示意：上方多条刻度弧（含反射镜带防视差），下方量程旋钮分区与红黑表笔插孔。</figcaption>
+  </figure>
+
+  <h3>D02 / D08 / D10｜读数原理：刻度 × 倍率，与极性</h3>
+  <p>指针表盘上同时印着<strong>多条刻度弧</strong>：最上一条通常是<strong>欧姆刻度</strong>（从右向左、不均匀、右端为 0），下面几条是<strong>电压/电流刻度</strong>（均匀、左端为 0）。读数三步：</p>
+  <ol>
+    <li>看当前旋到的量程（如 DCV 50V）。</li>
+    <li>在对应那条<strong>均匀刻度</strong>上读指针位置（如满刻度 250，指针在 125）。</li>
+    <li>按量程换算：读数 = 指针格值 ÷ 满刻度 × 量程。例如 125/250 × 50V = <mark>25V</mark>。</li>
+  </ol>
+  <p><strong>量程选择口诀：</strong>"量程要大于被测值，并尽量靠近它"。不知道大小时先用最大挡，再逐步往小挡换，让指针停在表盘<strong>中间偏右</strong>区域，读数最准。</p>
+  <aside class="tip"><strong>提示：</strong>测<strong>直流</strong>电压/电流时有极性：红表笔接高电位（正）、黑表笔接低电位（负）。若指针向左<strong>反打（撞到左端零位）</strong>，说明表笔接反了，立刻调换，别让指针长时间硬顶。测交流（如 220V）则不分正负。</aside>
+  <p>测电流（D10）时务必把万用表<strong>串联</strong>进回路——断开电路，让电流"穿过"表，再选合适的 mA/A 挡；电压测量则是<strong>并联</strong>跨接在被测两端。两者千万别用错，<strong>用电流挡去并联测电压会近似短路、烧保险丝</strong>。</p>
+
+  <h3>D03｜色环电阻识读与口诀</h3>
+  <p>色环电阻用不同颜色的环表示阻值。先记<strong>颜色数字表</strong>（口诀："黑棕红橙黄、绿蓝紫灰白"对应 0~9），再分清四环与五环：</p>
+  <table>
+    <caption>色环对应数字 / 倍率 / 误差</caption>
+    <thead>
+      <tr>
+        <th scope="col">颜色</th>
+        <th scope="col">有效数字</th>
+        <th scope="col">倍率(×10ⁿ)</th>
+        <th scope="col">误差</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">黑</th><td>0</td><td>×1</td><td>—</td></tr>
+      <tr><th scope="row">棕</th><td>1</td><td>×10</td><td>±1%</td></tr>
+      <tr><th scope="row">红</th><td>2</td><td>×100</td><td>±2%</td></tr>
+      <tr><th scope="row">橙</th><td>3</td><td>×1k</td><td>—</td></tr>
+      <tr><th scope="row">黄</th><td>4</td><td>×10k</td><td>—</td></tr>
+      <tr><th scope="row">绿</th><td>5</td><td>×100k</td><td>±0.5%</td></tr>
+      <tr><th scope="row">蓝</th><td>6</td><td>×1M</td><td>±0.25%</td></tr>
+      <tr><th scope="row">紫</th><td>7</td><td>×10M</td><td>±0.1%</td></tr>
+      <tr><th scope="row">灰</th><td>8</td><td>—</td><td>—</td></tr>
+      <tr><th scope="row">白</th><td>9</td><td>—</td><td>—</td></tr>
+      <tr><th scope="row">金</th><td>—</td><td>×0.1</td><td>±5%</td></tr>
+      <tr><th scope="row">银</th><td>—</td><td>×0.01</td><td>±10%</td></tr>
+    </tbody>
+  </table>
+  <p><strong>四环口诀：</strong>前两环是<strong>有效数字</strong>，第三环是<strong>倍率</strong>，第四环（多为金/银，离得稍远）是<strong>误差</strong>。本集示例第 3 环为<strong>金色</strong>：金作倍率代表 ×0.1。例如"红 紫 金 金"= 2、7、×0.1、±5% → 27 × 0.1 = <mark>2.7Ω ±5%</mark>。<strong>五环</strong>（精密电阻）则前三环为有效数字，第四环倍率、第五环误差。</p>
+
+  <figure>
+    <svg viewBox="0 0 420 150" width="100%" role="img" aria-label="四色环电阻示意图" xmlns="http://www.w3.org/2000/svg">
+      <line x1="20" y1="75" x2="120" y2="75" stroke="#1f2937" stroke-width="3"/>
+      <line x1="300" y1="75" x2="400" y2="75" stroke="#1f2937" stroke-width="3"/>
+      <rect x="120" y="48" width="180" height="54" rx="22" fill="#e8d3a8" stroke="#2563eb" stroke-width="1.5"/>
+      <!-- 四个色环 -->
+      <rect x="150" y="48" width="12" height="54" fill="#dc2626"/>
+      <rect x="180" y="48" width="12" height="54" fill="#7c3aed"/>
+      <rect x="210" y="48" width="12" height="54" fill="#d4a017"/>
+      <rect x="262" y="48" width="12" height="54" fill="#d4a017"/>
+      <text x="146" y="122" font-size="11" fill="#1e3a8a">红2</text>
+      <text x="176" y="122" font-size="11" fill="#1e3a8a">紫7</text>
+      <text x="200" y="122" font-size="11" fill="#1e3a8a">金×0.1</text>
+      <text x="252" y="38" font-size="11" fill="#1e3a8a">金±5%</text>
+      <text x="150" y="22" font-size="12" fill="#2563eb" font-weight="bold">= 2.7Ω ±5%</text>
+    </svg>
+    <figcaption>四色环电阻：前两环读数字、第三环金色作 ×0.1 倍率、第四环金色为 ±5% 误差。</figcaption>
+  </figure>
+
+  <h3>D04｜测电阻与欧姆档调零</h3>
+  <p>欧姆档靠表内电池供电，所以测前必须<strong>调零</strong>：</p>
+  <ol>
+    <li>选倍率挡。测 2 兆欧这种大电阻要用高倍率，如 <strong>×10k</strong>。</li>
+    <li><strong>把红黑表笔短接（碰在一起）</strong>，转动"欧姆调零旋钮"，让指针正好指到右端 <strong>0Ω</strong>。</li>
+    <li>分开表笔测电阻。读欧姆刻度（右 0 左 ∞）的数值，<strong>再乘以倍率</strong>。如指针指 20，×10k 倍率 → 20 × 10000 = <mark>200kΩ</mark>；指 200 则为 2MΩ。</li>
+  </ol>
+  <aside class="tip"><strong>提示：</strong>每次换倍率挡都要<strong>重新短接调零</strong>。测大电阻指针偏转小（靠左），测小电阻偏转大（靠右）；让指针落在刻度中段最准。测电阻时手不要同时捏住两端引脚，否则人体电阻会并入造成偏差。</aside>
+
+  <h3>D05｜二极管判别正负极</h3>
+  <p>二极管单向导通。用欧姆档（×100 或 ×1k）：</p>
+  <ul>
+    <li>注意指针表的<strong>内部电池正极接的是黑表笔</strong>（红表笔是负）——这点和"红正黑负"相反，是指针表测元件最易错的地方。</li>
+    <li>两次互换表笔各测一次：<strong>读数小（指针偏转大、导通）</strong>的那一次，黑表笔接的就是二极管<strong>正极（阳极）</strong>，红表笔那端是负极（阴极，常有色环标记）。</li>
+    <li>若两次都不通（∞）→ 内部断路；两次都通（接近 0）→ 已击穿短路，均为坏管。</li>
+  </ul>
+
+  <h3>D06｜三极管判别 NPN / PNP 与 hFE</h3>
+  <p>三极管有 b（基极）、c（集电极）、e（发射极）三脚。用欧姆档先找基极：用一支表笔固定某脚，另一支分别碰另两脚，<strong>当对两脚都呈低阻（导通）时，固定那脚就是基极 b</strong>。</p>
+  <ul>
+    <li>若此时<strong>黑表笔在基极</strong>都导通 → 基极是两个 PN 结的公共阳极 → <mark>NPN</mark> 管。</li>
+    <li>若<strong>红表笔在基极</strong>都导通 → <mark>PNP</mark> 管。</li>
+    <li>判好管型后，把三脚按表盘标注插入 <strong>hFE 插孔（区分 N/P 区）</strong>，直接在 hFE 刻度上读直流放大倍数。</li>
+  </ul>
+
+  <h3>D07 / D11｜整流桥：组桥口诀与好坏判别</h3>
+  <p>整流桥用 4 个二极管把交流变直流，四个引脚标着 <strong>~、~（交流输入）</strong> 和 <strong>+、-（直流输出）</strong>。组桥口诀：<mark>"交流进两腰、直流出两尖"</mark>——把桥画成菱形，左右两个尖是直流 + 与 -，上下两腰接交流。每个二极管都指向 + 端（箭头朝 +）。</p>
+  <p><strong>判好坏（D11）：</strong>用二极管/欧姆档逐一测内部四个二极管。最简单的方法：测 <strong>+ 与两个 ~ 之间</strong>、<strong>- 与两个 ~ 之间</strong>，每对都应<strong>单向导通</strong>（一个方向通、反向不通）；+ 与 - 之间正常不应直接导通。任何一路双向都通（短路）或双向都不通（断路），整流桥即损坏。</p>
+
+  <figure>
+    <svg viewBox="0 0 360 240" width="100%" role="img" aria-label="整流桥四脚连接示意图" xmlns="http://www.w3.org/2000/svg">
+      <!-- 菱形四节点 -->
+      <circle cx="180" cy="40" r="6" fill="#2563eb"/>
+      <circle cx="180" cy="200" r="6" fill="#2563eb"/>
+      <circle cx="60" cy="120" r="6" fill="#dc2626"/>
+      <circle cx="300" cy="120" r="6" fill="#16a34a"/>
+      <!-- 四条边（二极管） -->
+      <g stroke="#2563eb" stroke-width="2" fill="none">
+        <line x1="180" y1="40" x2="300" y2="120"/>
+        <line x1="300" y1="120" x2="180" y2="200"/>
+        <line x1="180" y1="200" x2="60" y2="120"/>
+        <line x1="60" y1="120" x2="180" y2="40"/>
+      </g>
+      <!-- 二极管箭头(指向+，右侧绿点) -->
+      <g fill="#1e3a8a">
+        <polygon points="232,72 246,82 230,90"/>
+        <polygon points="232,168 246,158 230,150"/>
+        <polygon points="128,90 112,82 126,72"/>
+        <polygon points="128,150 112,158 126,168"/>
+      </g>
+      <!-- 标注 -->
+      <text x="170" y="30" font-size="13" fill="#1e3a8a">~</text>
+      <text x="170" y="222" font-size="13" fill="#1e3a8a">~</text>
+      <text x="34" y="125" font-size="14" fill="#dc2626" font-weight="bold">&#x2212;</text>
+      <text x="312" y="125" font-size="14" fill="#16a34a" font-weight="bold">+</text>
+      <text x="120" y="30" font-size="11" fill="#64748b">交流入</text>
+      <text x="240" y="138" font-size="11" fill="#64748b">直流出</text>
+    </svg>
+    <figcaption>整流桥菱形接法：上下两腰接交流（~），左右两尖输出直流（+/-），四个二极管箭头一致指向 + 端。</figcaption>
+  </figure>
+
+  <h3>D09｜BATT 电池档</h3>
+  <p>BATT（Battery）是专门测电池电量的档位。它和普通直流电压档的区别在于：<strong>测量时表内会接入一个固定负载电阻</strong>，让电池在<strong>带电流</strong>的状态下读电压。这一点很重要——一节快没电的电池<strong>空载电压可能仍接近正常</strong>，但一接负载就明显跌落。BATT 档正是模拟带载，因此读到的"带载电压"更能反映电池真实容量。表盘上常有标好的 1.5V 和 9V 专用刻度区（如 BATT 的 1.5V 挡有"好/换"色块），指针落在彩色区即代表电量好坏。</p>
+
+  <h3>D12｜测电容好坏与容量估计</h3>
+  <p>指针表用欧姆档（电容大用低倍率如 ×100，电容小用高倍率如 ×10k）给电容<strong>充电</strong>，靠观察指针动作判断：</p>
+  <ul>
+    <li><strong>正常：</strong>表笔一接，指针先<strong>快速向右摆起</strong>（充电电流大、电阻读数小），随后<strong>慢慢回落到 ∞</strong>（充满后无电流）。摆幅越大、回落越慢，说明电容量越大。</li>
+    <li><strong>短路（击穿）：</strong>指针冲到 0Ω 不再回。</li>
+    <li><strong>断路（开路/失容）：</strong>指针完全不动。</li>
+    <li><strong>漏电：</strong>指针摆起后回不到 ∞，停在某个中间阻值，阻值越小漏电越严重。</li>
+  </ul>
+  <aside class="tip"><strong>提示：</strong>测电解电容要注意极性（黑笔接正极充电），且测前先把电容两脚短接<strong>放电</strong>，避免残余电荷打偏指针或误判。同一电容反复测前都要先放电。</aside>
+
+  <h3>D13｜分辨火线与零线</h3>
+  <p>市电插座有<strong>火线 L</strong>（相线，对地约 220V）和<strong>零线 N</strong>（中性线，对地约 0V）。用指针表分辨：</p>
+  <ol>
+    <li>万用表拨到 <strong>交流电压 250V 以上量程</strong>。</li>
+    <li>一支表笔接<strong>可靠接地点</strong>（如地线、潮湿地面金属），另一支分别接两孔：<strong>指针明显偏转（约 220V）的那孔是火线 L</strong>；几乎不动（接近 0）的是零线 N。</li>
+    <li>家用更常用<strong>验电笔</strong>辅助：氖管发亮的是火线。两法互相印证更稳妥。</li>
+  </ol>
+  <aside class="tip"><strong>提示：</strong>带电操作 220V 极其危险，务必单手操作、表笔握在绝缘部位、确认量程为交流高压挡后再接触。不确定时先断电用其他方法判别。</aside>
+
+  <details>
+    <summary>指针表使用小结（点开速记）</summary>
+    <ul>
+      <li>黑表笔永远插 <code>COM</code>；测电压并联、测电流串联。</li>
+      <li>欧姆/测元件时<strong>黑表笔接内部电池正极</strong>，与红正黑负相反。</li>
+      <li>读数 = 对应刻度值 × 量程比例（或欧姆 × 倍率）。</li>
+      <li>欧姆档换挡必先短接调零；电容测前先放电。</li>
+      <li>直流测量看极性，指针反打立即换笔，别硬顶左端。</li>
+    </ul>
+  </details>
+</section>
+
+<section id="sec-e">
+  <h2>E、品牌表实操（2 集）</h2>
+
+  <p>前面的章节讲的是万用表的通用原理与操作方法，本章把这些知识落到两款常见的手持<abbr title="Digital Multimeter，数字万用表">DMM</abbr>上：国产高性价比的<strong>胜利（VICTOR）</strong>系列，以及全球工业现场广受信赖的<strong>福禄克（FLUKE）15B+</strong>。两者操作逻辑相同，但在量程划分、读数方式、安全等级与手感细节上有明显差异。学会对照阅读不同品牌表的面板，是从“会用一只表”过渡到“会用任何一只表”的关键一步。</p>
+
+  <h3>本章逐集速览</h3>
+  <table>
+    <caption>E 章各集标题与一句话要点</caption>
+    <thead>
+      <tr>
+        <th scope="col">集数</th>
+        <th scope="col">标题</th>
+        <th scope="col">一句话要点</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>E01</td>
+        <td>胜利（VICTOR）数字万用表使用方法</td>
+        <td>以手动量程国产表为例，掌握旋钮分挡、表笔插孔与读数估算。</td>
+      </tr>
+      <tr>
+        <td>E02</td>
+        <td>福禄克（FLUKE）15B+ 使用方法</td>
+        <td>了解工业级真有效值表的自动/手动量程切换、CAT 安全等级与按键功能。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>一、读懂任意一只手持数字表的面板</h3>
+  <p>不论是哪个品牌，手持数字万用表的面板几乎都由四部分组成。先认面板，再谈差异，能少走很多弯路。</p>
+  <dl>
+    <dt>显示屏（LCD）</dt>
+    <dd>显示数值、单位、负号以及功能符号（如交流 <code>AC～</code>、直流 <code>DC═</code>、电池电量、自动量程 <code>Auto</code>、保持 <code>HOLD</code> 等）。常见为 <mark>2000 字</mark>（计数到 1999）或 <mark>6000 字</mark>（计数到 5999）的表。</dd>
+    <dt>功能旋钮</dt>
+    <dd>选择测量类型与（在手动量程表上）量程大小。旋钮中央的 <code>OFF</code> 用于关机。</dd>
+    <dt>按键</dt>
+    <dd>常见有 <code>SELECT</code>（在共用挡位上切换交直流/二极管/通断）、<code>RANGE</code>（手动切换量程）、<code>HOLD</code>（数据保持）、<code>背光</code> 等。</dd>
+    <dt>表笔插孔</dt>
+    <dd>通常三或四个：<code>COM</code>（黑表笔公共端）、<code>VΩ</code>（电压/电阻/通断）、<code>mA</code>（小电流）、<code>10A/20A</code>（大电流，独立熔断保护）。<strong>红表笔插哪个孔，决定了这只表当前能安全测什么。</strong></dd>
+  </dl>
+
+  <figure>
+    <svg viewBox="0 0 360 440" width="300" role="img" aria-label="典型手持数字万用表外形与按键旋钮示意图" xmlns="http://www.w3.org/2000/svg">
+      <!-- 表体外壳 -->
+      <rect x="40" y="20" width="280" height="400" rx="26" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+      <!-- 显示屏 -->
+      <rect x="70" y="48" width="220" height="78" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+      <text x="278" y="108" text-anchor="end" font-family="monospace" font-size="40" fill="#1e3a8a">8.8.8.8</text>
+      <text x="80" y="68" font-family="sans-serif" font-size="12" fill="#2563eb">AC～</text>
+      <text x="160" y="68" font-family="sans-serif" font-size="12" fill="#93c5fd">Auto</text>
+      <text x="245" y="68" font-family="sans-serif" font-size="12" fill="#93c5fd">HOLD</text>
+      <!-- 按键 -->
+      <rect x="78" y="142" width="70" height="26" rx="13" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+      <text x="113" y="160" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#1e3a8a">SELECT</text>
+      <rect x="158" y="142" width="60" height="26" rx="13" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+      <text x="188" y="160" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#1e3a8a">RANGE</text>
+      <rect x="228" y="142" width="60" height="26" rx="13" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+      <text x="258" y="160" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#1e3a8a">HOLD</text>
+      <!-- 旋钮 -->
+      <circle cx="180" cy="262" r="62" fill="#fff" stroke="#2563eb" stroke-width="3"/>
+      <circle cx="180" cy="262" r="46" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+      <!-- 指针 -->
+      <line x1="180" y1="262" x2="180" y2="212" stroke="#1e3a8a" stroke-width="6" stroke-linecap="round"/>
+      <!-- 挡位标签 -->
+      <text x="180" y="208" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#2563eb">OFF</text>
+      <text x="246" y="240" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#1e3a8a">V</text>
+      <text x="256" y="288" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#1e3a8a">Ω</text>
+      <text x="226" y="328" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#1e3a8a">A</text>
+      <text x="180" y="332" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#1e3a8a">═┤├</text>
+      <text x="112" y="240" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#1e3a8a">℃</text>
+      <!-- 表笔插孔 -->
+      <circle cx="100" cy="384" r="13" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+      <text x="100" y="416" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#dc2626">10A</text>
+      <circle cx="160" cy="384" r="13" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+      <text x="160" y="416" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#dc2626">VΩmA</text>
+      <circle cx="240" cy="384" r="13" fill="#1e3a8a" stroke="#1e3a8a" stroke-width="2"/>
+      <text x="240" y="416" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#1e3a8a">COM</text>
+    </svg>
+    <figcaption>典型手持数字万用表面板：显示屏、按键、中央功能旋钮与底部三个表笔插孔（红进 VΩmA，黑进 COM）。</figcaption>
+  </figure>
+
+  <h3>二、E01 胜利（VICTOR）：手动量程表的量程选择与读数</h3>
+  <p>多数经典型号的胜利数字表（如 VC890C+、VC9205 这类）属于<strong>手动量程</strong>表：旋钮上同一种测量类型会细分成几个量程档，需要你自己估计被测值大小、把旋钮拨到合适档位。这一过程恰好能把“量程”的概念练扎实。</p>
+
+  <h4 class="sr-only"></h4>
+  <ul>
+    <li><strong>选大类</strong>：先把旋钮拨到对应测量大类——直流电压 <code>DCV</code>（标 <code>V═</code>）、交流电压 <code>ACV</code>（标 <code>V～</code>）、电阻 <code>Ω</code>、直流电流 <code>A</code> 等。</li>
+    <li><strong>选量程</strong>：在该大类里选一个<em>略大于</em>被测值的档。例如量家用 220 V 市电，应选 <code>ACV</code> 的 <code>750V</code> 档；量一节 1.5 V 干电池，选 <code>DCV</code> 的 <code>2V</code> 档读数最准。</li>
+    <li><strong>看溢出</strong>：若显示屏只显示最高位 <code>1</code> 或 <code>OL</code>（其余位空白），说明<mark>量程太小、超量程</mark>，应往大一档拨。</li>
+    <li><strong>求精度</strong>：在不溢出的前提下，选<em>尽量小</em>的量程，有效数字最多、读数最准。</li>
+  </ul>
+
+  <h4>读数与小数点</h4>
+  <p>手动量程表的读数要结合所选档位看小数点和单位：</p>
+  <table>
+    <caption>胜利手动量程表读数示例</caption>
+    <thead>
+      <tr>
+        <th scope="col">所选档位</th>
+        <th scope="col">屏显</th>
+        <th scope="col">实际值</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>DCV 2V</td><td>1.523</td><td>1.523 V</td></tr>
+      <tr><td>DCV 20V</td><td>12.40</td><td>12.40 V</td></tr>
+      <tr><td>Ω 20k</td><td>4.70</td><td>4.70 kΩ</td></tr>
+      <tr><td>Ω 2M</td><td>1.000</td><td>1.000 MΩ</td></tr>
+    </tbody>
+  </table>
+
+  <aside class="tip"><strong>提示：</strong>测电流时务必先把红表笔插到电流孔（小电流用 <code>mA</code> 孔，大电流用 <code>10A/20A</code> 孔），且电流表要<em>串联</em>进电路。最常见的烧表事故，就是表笔留在电流孔却去并联测电压——相当于用一根细导线短路电源。</aside>
+
+  <h3>三、E02 福禄克（FLUKE）15B+：工业级表的特点</h3>
+  <p>FLUKE 15B+ 是面向工业与维修现场的入门工业表，操作哲学和胜利表略有不同，几个特点尤其值得记住。</p>
+  <dl>
+    <dt>自动量程为主，可切手动</dt>
+    <dd>开机默认<strong>自动量程（Auto Range）</strong>，无需自己分档，表会自动选合适量程，屏上显示 <code>Auto</code>。按一下 <code>RANGE</code> 键即进入手动量程并锁定当前档，连续按可逐档切换；长按 <code>RANGE</code> 退回自动。手动量程在读数跳动、需要固定档位时很有用。</dd>
+    <dt>共用挡位靠黄色 SELECT 键切换</dt>
+    <dd>15B+ 把交流/直流电压并到同一旋钮位置，把电阻、通断、二极管并到另一位置，靠黄色按键在这些功能间循环切换，旋钮位更少、更不易拨错。</dd>
+    <dt>较高的安全等级（CAT）</dt>
+    <dd>15B+ 通常标称 <abbr title="测量类别 III，600V">CAT III 600V</abbr>，意味着可用于建筑配电等存在较高瞬态过电压的场合。<strong>测量类别（CAT）数字越大、电压越高，代表能承受的瞬态冲击越强</strong>，这是工业表区别于廉价表最重要的安全指标。</dd>
+    <dt>真有效值（视型号）与稳定读数</dt>
+    <dd>福禄克表以读数稳定、抗干扰、防摔耐用著称，配合 <code>HOLD</code> 保持键，便于在不便观察的位置先测后看。</dd>
+  </dl>
+
+  <figure>
+    <svg viewBox="0 0 420 220" width="340" role="img" aria-label="自动量程与手动量程切换示意图" xmlns="http://www.w3.org/2000/svg">
+      <!-- 自动量程框 -->
+      <rect x="20" y="40" width="150" height="120" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2.5"/>
+      <text x="95" y="32" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#2563eb">自动量程 Auto</text>
+      <rect x="38" y="70" width="114" height="46" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+      <text x="146" y="104" text-anchor="end" font-family="monospace" font-size="26" fill="#1e3a8a">230.1</text>
+      <text x="44" y="86" font-family="sans-serif" font-size="10" fill="#2563eb">Auto</text>
+      <text x="95" y="146" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#1e3a8a">表自动选档</text>
+      <!-- 箭头与按键 -->
+      <line x1="178" y1="100" x2="242" y2="100" stroke="#2563eb" stroke-width="2.5"/>
+      <polygon points="242,100 232,95 232,105" fill="#2563eb"/>
+      <rect x="186" y="108" width="48" height="22" rx="11" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+      <text x="210" y="124" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#1e3a8a">RANGE</text>
+      <!-- 手动量程框 -->
+      <rect x="250" y="40" width="150" height="120" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2.5"/>
+      <text x="325" y="32" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#2563eb">手动量程 Manual</text>
+      <rect x="268" y="70" width="114" height="46" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+      <text x="376" y="104" text-anchor="end" font-family="monospace" font-size="26" fill="#1e3a8a">230.1</text>
+      <text x="274" y="86" font-family="sans-serif" font-size="10" fill="#1e3a8a">600V</text>
+      <text x="325" y="146" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#1e3a8a">锁定 600V 档</text>
+    </svg>
+    <figcaption>FLUKE 15B+ 默认自动量程，按 RANGE 键即可锁定为手动量程并逐档切换。</figcaption>
+  </figure>
+
+  <h3>四、两款表的对照与选购</h3>
+  <table>
+    <caption>VICTOR 与 FLUKE 15B+ 操作差异速查</caption>
+    <thead>
+      <tr>
+        <th scope="col">对比项</th>
+        <th scope="col">胜利 VICTOR（典型手动量程款）</th>
+        <th scope="col">福禄克 FLUKE 15B+</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">量程方式</th><td>手动分档，需自己估值选档</td><td>自动量程为主，可按键转手动</td></tr>
+      <tr><th scope="row">挡位数量</th><td>较多，交直流/各量程分开</td><td>较少，靠 SELECT 共用切换</td></tr>
+      <tr><th scope="row">安全等级</th><td>视型号，常见 CAT II / III</td><td>CAT III 600V，工业现场更稳妥</td></tr>
+      <tr><th scope="row">适用人群</th><td>学习入门、家用维修、预算有限</td><td>电工、工业维护、追求耐用可靠</td></tr>
+    </tbody>
+  </table>
+
+  <details>
+    <summary>动手练习：用任意一只表完成这三件事</summary>
+    <ol>
+      <li>测一节干电池电压：黑笔 <code>COM</code>、红笔 <code>VΩ</code>，旋钮到 <code>DCV</code>（手动量程选 2V，自动量程直接读），观察是否约 1.5 V。</li>
+      <li>测一个电阻：旋钮到 <code>Ω</code>，读出阻值并与色环标称值对照，注意单位是 Ω / kΩ / MΩ。</li>
+      <li>测墙插市电：务必选 <code>ACV</code> 且量程足够大（手动选 750V），双手避开金属笔尖，读数应约 220 V。</li>
+    </ol>
+  </details>
+
+  <aside class="tip"><strong>提示：</strong>换品牌、换型号时，养成“先看屏幕符号、再看红笔插孔、最后看旋钮档位”的三步检查习惯，可以避免绝大多数误操作和烧表风险。</aside>
+</section>
+
+<section id="sec-f">
+  <h2>F、元件检测专题（10 集）</h2>
+
+  <p>本章把万用表的功能落到具体元件上，建立一套<strong>系统化的元件检测流程</strong>：从指针式万用表的认识开始，依次讲解电阻、电容、二极管、三极管、可调电阻器（电位器）的好坏判断与读数方法，并补充直流电压、直流电流的测量规范。掌握这些技能后，遇到任何一块电路板，你都能逐个元件做"望、闻、问、切"式的快速诊断。</p>
+
+  <h3>本章逐集目录</h3>
+  <table>
+    <caption>F 章「元件检测专题」分集索引</caption>
+    <thead>
+      <tr>
+        <th scope="col">集数</th>
+        <th scope="col">标题</th>
+        <th scope="col">一句话要点</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">F01</th>
+        <td>指针式万用表介绍</td>
+        <td>认识表头、欧姆刻度反读、机械调零与欧姆调零的区别</td>
+      </tr>
+      <tr>
+        <th scope="row">F02</th>
+        <td>电阻的检测</td>
+        <td>选挡、读数=指针读数×倍率，与色环标称值对比判好坏</td>
+      </tr>
+      <tr>
+        <th scope="row">F03</th>
+        <td>电容的检测</td>
+        <td>看充放电摆针，区分良好、漏电、击穿与开路</td>
+      </tr>
+      <tr>
+        <th scope="row">F04</th>
+        <td>二极管的检测</td>
+        <td>正向导通、反向截止；单向导电是判别核心</td>
+      </tr>
+      <tr>
+        <th scope="row">F05</th>
+        <td>三极管的检测</td>
+        <td>由两个 PN 结判 NPN/PNP、找基极、估测放大能力</td>
+      </tr>
+      <tr>
+        <th scope="row">F06</th>
+        <td>测量直流电压</td>
+        <td>红正黑负、并联接入、量程要大于被测值</td>
+      </tr>
+      <tr>
+        <th scope="row">F07</th>
+        <td>测量直流电流</td>
+        <td>断开电路、串联接入、严禁并联在电源两端</td>
+      </tr>
+      <tr>
+        <th scope="row">F08</th>
+        <td>可调电阻器的检测</td>
+        <td>测两固定端读总阻值，测中间端看阻值是否平滑变化</td>
+      </tr>
+      <tr>
+        <th scope="row">F09</th>
+        <td>可调电阻器检测（任务一）</td>
+        <td>实操：测量标称值、判断三端通断是否正常</td>
+      </tr>
+      <tr>
+        <th scope="row">F10</th>
+        <td>可调电阻器检测（任务二）</td>
+        <td>实操：旋动转轴，观察动臂阻值连续变化、无跳动断点</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>指针式万用表与"欧姆调零"（F01）</h3>
+  <p>指针式（模拟式）万用表用一只灵敏的<abbr title="磁电式表头，又称动圈表头">磁电式表头</abbr>把被测量转换成指针偏转角度。它有两类"调零"需要分清：</p>
+  <dl>
+    <dt>机械调零</dt>
+    <dd>未通电时，用螺丝刀微调表头下方的调零螺钉，让指针停在表盘最左端的"0"位（电压/电流刻度的零）。</dd>
+    <dt>欧姆调零（电气调零）</dt>
+    <dd>每换一次电阻倍率挡，都要把红黑表笔短接，旋动"欧姆调零旋钮"使指针打到<strong>右端</strong>的"0Ω"。这是因为电阻挡靠内部电池供电，电池电压会随使用下降。</dd>
+  </dl>
+  <aside class="tip"><strong>提示：</strong>欧姆刻度是<mark>反向且非线性</mark>的——左边为 ∞（无穷大、断路），右边为 0Ω（短路），中间刻度越往左越密。所以测电阻时应让指针尽量落在表盘<strong>中间段</strong>读数最准，偏左或偏右都要换挡重测。</p>
+
+  <h3>电阻的检测与读数（F02）</h3>
+  <ol>
+    <li>选挡：把功能开关拨到电阻挡（×1、×10、×100、×1k、×10k 之一）。</li>
+    <li>欧姆调零：短接表笔，调指针到 0Ω。</li>
+    <li>测量：两支表笔分别接电阻两端（电阻无极性，不分红黑）。</li>
+    <li>读数：<strong>实际阻值 = 指针在欧姆刻度上的读数 × 挡位倍率</strong>。例如指针指 22，挡位 ×100，则为 2.2kΩ。</li>
+  </ol>
+  <p>把测得值与色环/标称值比较：在标称值±误差范围内为良好；读数为 0（短路）或 ∞（开路、烧断）则损坏。</p>
+  <aside class="tip"><strong>提示：</strong>在路（焊在板上）测电阻会受周围元件并联影响，读数往往偏小。怀疑某只电阻时，最好<strong>断开一端</strong>再测。测量时手指不要同时捏住两支笔尖，否则人体电阻会并入造成误差。</p>
+
+  <h3>电容的检测（F03）</h3>
+  <p>用电阻挡测电容，看的是<strong>充放电过程</strong>而非稳定阻值。对较大容量电解电容，选 ×1k 或 ×10k 挡，表笔接通瞬间：</p>
+  <ul>
+    <li><strong>良好</strong>：指针先快速向右（小电阻方向）摆一下，再慢慢退回 ∞ 附近——这就是充电使电流由大变小的过程。</li>
+    <li><strong>漏电</strong>：指针退回后停在某个较小阻值（如几十 kΩ）不到 ∞，说明漏电流偏大。</li>
+    <li><strong>击穿短路</strong>：指针直接打到 0Ω 不回。</li>
+    <li><strong>开路失效</strong>：指针完全不动，无充放电摆幅（小容量电容摆幅本就很小，需用高倍率挡观察）。</li>
+  </ul>
+  <aside class="tip"><strong>提示：</strong>测电解电容要<strong>红笔接负、黑笔接正</strong>（指针表内部电池正极接黑笔），并先对电容放电后再测；容量越大，摆针幅度越大、回落越慢。</p>
+
+  <h3>二极管的检测（F04）</h3>
+  <p>二极管的本质是一个 PN 结，核心特性是<strong>单向导电</strong>。用电阻挡（一般 ×100 或 ×1k）正反各测一次：</p>
+  <ul>
+    <li><strong>正向</strong>（黑笔接正极/阳极，红笔接负极/阴极）：阻值较小，普通硅管约几百 Ω 到几 kΩ。</li>
+    <li><strong>反向</strong>（表笔对调）：阻值很大，接近 ∞。</li>
+  </ul>
+  <p>判别口诀：<mark>正向小、反向大，差别越悬殊越好</mark>。若正反都很小→击穿短路；正反都为 ∞→内部开路；正反相近→失去单向性，已损坏。测得正向阻值较小的那次，<strong>黑表笔所接即为正极</strong>，可用来识别未知二极管的引脚极性。</p>
+
+  <figure>
+    <svg viewBox="0 0 460 200" width="100%" role="img" aria-label="二极管正向与反向测量示意图">
+      <defs>
+        <marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 Z" fill="#2563eb"/>
+        </marker>
+      </defs>
+      <!-- 正向 -->
+      <text x="100" y="22" text-anchor="middle" fill="#1e3a8a" font-size="14" font-weight="bold">正向：导通（阻值小）</text>
+      <!-- diode symbol -->
+      <line x1="60" y1="80" x2="100" y2="80" stroke="#2563eb" stroke-width="2"/>
+      <polygon points="100,68 100,92 124,80" fill="#2563eb"/>
+      <line x1="124" y1="66" x2="124" y2="94" stroke="#2563eb" stroke-width="3"/>
+      <line x1="124" y1="80" x2="160" y2="80" stroke="#2563eb" stroke-width="2"/>
+      <!-- probes -->
+      <circle cx="60" cy="80" r="6" fill="#111"/>
+      <text x="50" y="112" text-anchor="middle" fill="#111" font-size="12">黑(+)</text>
+      <circle cx="160" cy="80" r="6" fill="#dc2626"/>
+      <text x="170" y="112" text-anchor="middle" fill="#dc2626" font-size="12">红(-)</text>
+      <path d="M70,140 H150" stroke="#16a34a" stroke-width="2" marker-end="url(#ar)"/>
+      <text x="110" y="158" text-anchor="middle" fill="#16a34a" font-size="12">电流通过</text>
+
+      <!-- 分隔 -->
+      <line x1="230" y1="35" x2="230" y2="175" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4"/>
+
+      <!-- 反向 -->
+      <text x="350" y="22" text-anchor="middle" fill="#1e3a8a" font-size="14" font-weight="bold">反向：截止（阻值≈∞）</text>
+      <line x1="300" y1="80" x2="324" y2="80" stroke="#2563eb" stroke-width="2"/>
+      <line x1="324" y1="66" x2="324" y2="94" stroke="#2563eb" stroke-width="3"/>
+      <polygon points="324,80 348,68 348,92" fill="#2563eb"/>
+      <line x1="348" y1="80" x2="400" y2="80" stroke="#2563eb" stroke-width="2"/>
+      <circle cx="300" cy="80" r="6" fill="#dc2626"/>
+      <text x="290" y="112" text-anchor="middle" fill="#dc2626" font-size="12">红(-)</text>
+      <circle cx="400" cy="80" r="6" fill="#111"/>
+      <text x="410" y="112" text-anchor="middle" fill="#111" font-size="12">黑(+)</text>
+      <line x1="320" y1="140" x2="380" y2="140" stroke="#dc2626" stroke-width="2"/>
+      <line x1="345" y1="130" x2="355" y2="150" stroke="#dc2626" stroke-width="2"/>
+      <text x="350" y="166" text-anchor="middle" fill="#dc2626" font-size="12">几乎无电流</text>
+    </svg>
+    <figcaption>二极管正反向测量：黑笔接正极时导通显小阻值，表笔对调后截止显大阻值。</figcaption>
+  </figure>
+
+  <h3>三极管的检测（F05）</h3>
+  <p>三极管（BJT）可看作<strong>两个背靠背的 PN 结</strong>，有 NPN 与 PNP 两种结构，三个引脚为基极 B、集电极 C、发射极 E。用电阻挡检测的思路：</p>
+  <ol>
+    <li><strong>找基极、定类型</strong>：用一支表笔固定接某脚，另一支分别碰另外两脚。当固定脚对另两脚都呈<strong>小阻值</strong>时，该脚即基极 B；此时若固定的是<strong>黑笔</strong>，则为 NPN，若固定的是<strong>红笔</strong>，则为 PNP。</li>
+    <li><strong>查 PN 结好坏</strong>：B-E 结与 B-C 结都应"正向小、反向大"，类似两只二极管。</li>
+    <li><strong>估放大能力</strong>：有 h<sub>FE</sub> 插孔的表可直接读电流放大倍数；无插孔时可通过在 B、C 间并一只大电阻引入基极电流，看指针偏转幅度估测。</li>
+  </ol>
+  <aside class="tip"><strong>提示：</strong>记住"<mark>NPN 黑接基，PNP 红接基</mark>"——这是因为指针表电阻挡内部电池正极接在黑表笔，要让 PN 结正向导通就得让 P 区接正电位。</p>
+
+  <h3>测量直流电压（F06）与直流电流（F07）</h3>
+  <p>这两项最容易出错，关键在于<strong>接入方式不同</strong>：</p>
+  <table>
+    <caption>直流电压 vs 直流电流测量规范对比</caption>
+    <thead>
+      <tr>
+        <th scope="col">项目</th>
+        <th scope="col">直流电压 (DCV)</th>
+        <th scope="col">直流电流 (DCA)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">接入方式</th>
+        <td><strong>并联</strong>在被测两端</td>
+        <td><strong>串联</strong>进电路（需先断开）</td>
+      </tr>
+      <tr>
+        <th scope="row">表笔极性</th>
+        <td>红笔接高电位、黑笔接低电位</td>
+        <td>红笔接电流流入端、黑笔接流出端</td>
+      </tr>
+      <tr>
+        <th scope="row">量程选择</th>
+        <td colspan="2">先选大量程，使指针落在满刻度 1/2~2/3 处再细选；不确定时从最大挡起</td>
+      </tr>
+      <tr>
+        <th scope="row">致命错误</th>
+        <td>量程过小会打表/烧表头</td>
+        <td><strong>切勿并接在电源两端</strong>，会因近似短路烧表/烧保险</td>
+      </tr>
+    </tbody>
+  </table>
+  <aside class="tip"><strong>提示：</strong>电压表内阻很大（近似断路），故并联；电流表内阻极小（近似短路），故必须串联。若指针反偏，说明红黑笔接反，对调即可。</p>
+
+  <h3>可调电阻器（电位器）的检测（F08–F10）</h3>
+  <p>可调电阻器即电位器，有三个引脚：两端为固定端（对应电阻体两头），中间为<strong>活动端（动臂/滑片）</strong>。检测分两步：</p>
+  <dl>
+    <dt>① 测两固定端（总阻值）</dt>
+    <dd>表笔接两端固定脚，读数应等于其标称值（如 10kΩ），且旋动转轴时此值<strong>基本不变</strong>。若为 0 或 ∞，则电阻体损坏。</dd>
+    <dt>② 测中间端与任一固定端（分压值）</dt>
+    <dd>一支表笔接中间脚，另一支接某固定脚，缓慢旋动转轴：阻值应从接近 0 平滑连续地变到总阻值（或反之）。<strong>过程必须连续、无跳变、无瞬间断路</strong>。</dd>
+  </dl>
+  <p>F09、F10 为对应实操任务：任务一侧重确认标称值与三端基本通断；任务二侧重旋动观察动臂阻值的<mark>连续平滑变化</mark>，若旋动中指针出现跳针、瞬断（指针突然弹到 ∞），说明碳膜磨损、接触不良，电位器已劣化。</p>
+
+  <figure>
+    <svg viewBox="0 0 440 220" width="100%" role="img" aria-label="电位器三端测量示意图">
+      <!-- 电阻体矩形 -->
+      <rect x="120" y="70" width="200" height="34" fill="none" stroke="#2563eb" stroke-width="2" rx="4"/>
+      <text x="220" y="92" text-anchor="middle" fill="#1e3a8a" font-size="13">电阻体（碳膜）</text>
+      <!-- 固定端 1 -->
+      <line x1="120" y1="87" x2="70" y2="87" stroke="#2563eb" stroke-width="2"/>
+      <circle cx="70" cy="87" r="5" fill="#2563eb"/>
+      <text x="55" y="92" text-anchor="end" fill="#111" font-size="12">固定端1</text>
+      <!-- 固定端 2 -->
+      <line x1="320" y1="87" x2="370" y2="87" stroke="#2563eb" stroke-width="2"/>
+      <circle cx="370" cy="87" r="5" fill="#2563eb"/>
+      <text x="385" y="92" fill="#111" font-size="12">固定端2</text>
+      <!-- 滑片箭头 -->
+      <line x1="220" y1="40" x2="220" y2="70" stroke="#dc2626" stroke-width="2"/>
+      <polygon points="214,64 226,64 220,74" fill="#dc2626"/>
+      <line x1="220" y1="40" x2="220" y2="22" stroke="#dc2626" stroke-width="2"/>
+      <circle cx="220" cy="22" r="5" fill="#dc2626"/>
+      <text x="232" y="26" fill="#dc2626" font-size="12">中间端(动臂)</text>
+      <!-- 旋转指示 -->
+      <path d="M250,40 a30,30 0 0 1 40,18" fill="none" stroke="#16a34a" stroke-width="2"/>
+      <polygon points="286,52 294,60 282,62" fill="#16a34a"/>
+      <text x="305" y="48" fill="#16a34a" font-size="12">旋动转轴</text>
+      <!-- 测量说明 -->
+      <text x="220" y="150" text-anchor="middle" fill="#334155" font-size="13">①固定端1—固定端2 = 总阻值(标称，旋动不变)</text>
+      <text x="220" y="172" text-anchor="middle" fill="#334155" font-size="13">②中间端—任一固定端 = 旋动时平滑变化</text>
+      <text x="220" y="196" text-anchor="middle" fill="#dc2626" font-size="13">变化连续无跳针 → 良好</text>
+    </svg>
+    <figcaption>电位器三端测量：两固定端读总阻值，中间端与固定端间应随转轴平滑变化。</figcaption>
+  </figure>
+
+  <details>
+    <summary>小结：一张表记住"好坏"判据</summary>
+    <ul>
+      <li><strong>电阻</strong>：等于标称值=好；0Ω 或 ∞=坏。</li>
+      <li><strong>电容</strong>：有充放电摆针并回到 ∞=好；不回、为 0 或全程不动=坏。</li>
+      <li><strong>二极管</strong>：正向小、反向大=好；双向通或双向断=坏。</li>
+      <li><strong>三极管</strong>：两 PN 结均"正小反大"=好；可借此定 B 极与 NPN/PNP。</li>
+      <li><strong>电位器</strong>：总阻值对、中间端旋动平滑无跳针=好。</li>
+    </ul>
+  </details>
+</section>
+
+<section id="sec-g">
+  <h2>G、指针表进阶技巧（10 集）</h2>
+
+  <p>本章聚焦<strong>指针式万用表</strong>（以经典的 <abbr title="一款经典国产指针万用表型号">MF47</abbr> 为代表）的进阶用法。指针表没有液晶屏，靠表头里的线圈带动指针偏转读数，理解它的<mark>内部供电、欧姆调零、量程换算</mark>等机理，才能测得准、用得久。下面先逐集列出本章内容，再分主题深入讲解。</p>
+
+  <h3>本章分集索引</h3>
+  <table>
+    <caption>G 章各集标题与一句话要点</caption>
+    <thead>
+      <tr>
+        <th scope="col">集数</th>
+        <th scope="col">标题</th>
+        <th scope="col">一句话要点</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">G01</th>
+        <td>MF47 指针表使用方法（零基础）</td>
+        <td>认识表头、量程旋钮、红黑表笔与机械零位，建立整体操作流程。</td>
+      </tr>
+      <tr>
+        <th scope="row">G02</th>
+        <td>交流电压档可不装电池使用</td>
+        <td>测交流/直流电压、电流靠被测电路供电，不耗内部电池。</td>
+      </tr>
+      <tr>
+        <th scope="row">G03</th>
+        <td>为啥用两种不同电池</td>
+        <td>欧姆低量程用 1.5V，高阻量程（×10k）用 9V 叠层电池。</td>
+      </tr>
+      <tr>
+        <th scope="row">G04</th>
+        <td>测电阻要换量程＋欧姆调零＋读数乘量程</td>
+        <td>每换一档先两表笔短接调零，读数再乘量程倍率。</td>
+      </tr>
+      <tr>
+        <th scope="row">G05</th>
+        <td>指针表测电容</td>
+        <td>用欧姆档看指针“先偏后回”的充放电过程判断电容好坏。</td>
+      </tr>
+      <tr>
+        <th scope="row">G06</th>
+        <td>指针表测漏电的方法</td>
+        <td>高阻档测两点间绝缘电阻，指针稍偏即存在漏电通路。</td>
+      </tr>
+      <tr>
+        <th scope="row">G07</th>
+        <td>蜂鸣档测通断的条件</td>
+        <td>电阻低于约几十欧才响，理解阈值避免误判通断。</td>
+      </tr>
+      <tr>
+        <th scope="row">G08</th>
+        <td>指针表测电池电量</td>
+        <td>带负载电压才反映真实电量，空载电压会偏高。</td>
+      </tr>
+      <tr>
+        <th scope="row">G09</th>
+        <td>指针表测交流电流（串联，临时用）</td>
+        <td>表笔串入电路，仅作临时小电流测量，注意量程与安全。</td>
+      </tr>
+      <tr>
+        <th scope="row">G10</th>
+        <td>指针表测直流电压（极性）</td>
+        <td>红进高电位、黑进低电位，接反指针向左打不能读数。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>一、交流电压档为什么“可以不装电池”（G02）</h3>
+  <p>很多人以为万用表所有功能都靠内部电池，其实不然。判断标准很简单：<strong>看能量从哪来</strong>。</p>
+  <dl>
+    <dt>测电压、测电流（交流/直流）</dt>
+    <dd>能量来自<mark>被测电路本身</mark>。指针靠流过表头的微小电流偏转，这点电流由被测对象提供，所以即便取出内部电池，电压档照样能读数。</dd>
+    <dt>测电阻、测通断（欧姆/蜂鸣）</dt>
+    <dd>被测电阻是“死”的、不带电，必须由<strong>内部电池</strong>向它送出一个已知电流，再由指针反映其阻值。所以欧姆类功能离不开电池。</dd>
+  </dl>
+  <aside class="tip"><strong>提示：</strong>如果你的指针表电压档正常、欧姆档却怎么都调不到零，多半是内部电池没电了，先换电池再排查。</aside>
+
+  <h3>二、为什么需要两种不同电池（G03）</h3>
+  <p>MF47 内部常配<strong>两节电池</strong>：一节 1.5V（普通 5 号）和一节 9V（叠层电池）。原因在于不同欧姆量程需要不同的内部电压来把指针推到合适位置。</p>
+  <table>
+    <caption>欧姆档量程与所用内部电池</caption>
+    <thead>
+      <tr>
+        <th scope="col">欧姆量程</th>
+        <th scope="col">供电电池</th>
+        <th scope="col">适测阻值范围</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">×1 / ×10 / ×100 / ×1k</th><td>1.5V</td><td>几欧 ~ 几百千欧</td></tr>
+      <tr><th scope="row">×10k</th><td>9V（叠层）</td><td>几十千欧 ~ 几兆欧</td></tr>
+    </tbody>
+  </table>
+  <p>测<strong>高阻值</strong>（如绝缘、漏电）时，电流极其微弱，1.5V 推不动指针，必须靠 9V 才能产生可读的偏转，这正是 ×10k 档专用 9V 的原因。</p>
+
+  <h3>三、欧姆档黄金三步：换量程、调零、乘倍率（G04）</h3>
+  <p>指针表测电阻最容易出错的地方，是忘了<strong>每换一次量程都要重新欧姆调零</strong>。这是因为欧姆刻度是非线性的，且电池会随使用而老化，调零相当于每次测量前的“校准”。</p>
+  <figure>
+    <svg viewBox="0 0 460 230" width="100%" role="img" aria-labelledby="g-zero-title" style="max-width:460px">
+      <title id="g-zero-title">欧姆调零三步示意</title>
+      <!-- 表盘弧 -->
+      <path d="M40 150 A120 120 0 0 1 280 150" fill="none" stroke="#2563eb" stroke-width="3"/>
+      <!-- 刻度：右端0，左端无穷 -->
+      <line x1="40" y1="150" x2="52" y2="140" stroke="#2563eb" stroke-width="2"/>
+      <line x1="280" y1="150" x2="268" y2="140" stroke="#2563eb" stroke-width="2"/>
+      <text x="276" y="170" font-size="13" fill="#1e3a8a">0</text>
+      <text x="30" y="170" font-size="16" fill="#1e3a8a">&#8734;</text>
+      <!-- 指针指向0 -->
+      <line x1="160" y1="150" x2="262" y2="118" stroke="#dc2626" stroke-width="2.5"/>
+      <circle cx="160" cy="150" r="5" fill="#2563eb"/>
+      <!-- 调零旋钮 -->
+      <circle cx="160" cy="200" r="16" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+      <line x1="160" y1="200" x2="172" y2="190" stroke="#2563eb" stroke-width="2.5"/>
+      <text x="138" y="225" font-size="11" fill="#1e3a8a">调零旋钮</text>
+      <!-- 表笔短接 -->
+      <line x1="330" y1="60" x2="370" y2="100" stroke="#dc2626" stroke-width="3"/>
+      <line x1="370" y1="100" x2="410" y2="60" stroke="#111827" stroke-width="3"/>
+      <circle cx="370" cy="100" r="4" fill="#2563eb"/>
+      <text x="318" y="55" font-size="11" fill="#dc2626">红</text>
+      <text x="404" y="55" font-size="11" fill="#111827">黑</text>
+      <text x="332" y="125" font-size="11" fill="#1e3a8a">两表笔短接</text>
+      <!-- 箭头 -->
+      <path d="M300 150 q20 0 24 20" fill="none" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4 3"/>
+    </svg>
+    <figcaption>欧姆调零：换好量程后短接两表笔，旋调零旋钮使指针正好压住右端“0Ω”。</figcaption>
+  </figure>
+  <ol>
+    <li><strong>选量程：</strong>估测被测电阻大小，选一个能让指针落在表盘<mark>中段</mark>（读数最准的区域）的倍率档。</li>
+    <li><strong>欧姆调零：</strong>红黑表笔直接短接，转动“调零（0Ω ADJ）”旋钮，让指针稳稳指向右端的 0Ω。</li>
+    <li><strong>读数×倍率：</strong>分开表笔测电阻，读出欧姆刻度上的数值，再<strong>乘以量程倍率</strong>。例如 ×100 档读到 22，则实际阻值 = 22 × 100 = 2.2kΩ。</li>
+  </ol>
+  <aside class="tip"><strong>提示：</strong>指针表欧姆档读数“右边是 0、左边是无穷大”，与电压电流刻度方向相反，是因为电阻越小、内部电流越大、指针偏得越靠右。</aside>
+
+  <h3>四、用欧姆档测电容好坏（G05）</h3>
+  <p>指针表没有专门电容档，但可以借欧姆档观察电容的<strong>充电过程</strong>来判断。接通瞬间电容像短路，指针快速向右偏（小电阻方向）；随着电容被充满，电流减小，指针又<strong>缓慢回摆</strong>向左（无穷大方向）。</p>
+  <ul>
+    <li><strong>偏后能回：</strong>电容基本正常，容量越大回摆越慢。</li>
+    <li><strong>偏后不回（停在低阻）：</strong>电容<mark>漏电或击穿短路</mark>。</li>
+    <li><strong>完全不偏：</strong>电容内部断路（开路）或容量太小看不出。</li>
+  </ul>
+  <p>测前务必先给电容<strong>放电</strong>（用电阻或螺丝刀短接两脚），并选合适倍率：电容越大用越低的倍率，电容越小用 ×10k 高倍率才看得出动作。</p>
+
+  <h3>五、测漏电：本质是测“绝缘电阻”（G06）</h3>
+  <p>“漏电”就是本不该导通的两点之间出现了不该有的电流通路。用指针表 <strong>×10k 高阻档</strong>（9V 供电）去测这两点间的电阻：理想绝缘应为无穷大、指针纹丝不动；若指针明显向右偏，说明存在漏电电阻，<mark>偏得越多漏电越严重</mark>。</p>
+  <figure>
+    <svg viewBox="0 0 440 220" width="100%" role="img" aria-labelledby="g-leak-title" style="max-width:440px">
+      <title id="g-leak-title">漏电（绝缘电阻）测量示意</title>
+      <!-- 表本体 -->
+      <rect x="20" y="40" width="120" height="140" rx="8" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+      <path d="M40 110 A40 40 0 0 1 120 110" fill="none" stroke="#2563eb" stroke-width="2"/>
+      <line x1="80" y1="110" x2="108" y2="86" stroke="#dc2626" stroke-width="2"/>
+      <circle cx="80" cy="110" r="3" fill="#2563eb"/>
+      <text x="46" y="150" font-size="12" fill="#1e3a8a">&#937; ×10k</text>
+      <text x="46" y="170" font-size="11" fill="#1e3a8a">9V</text>
+      <!-- 红黑表笔接线 -->
+      <line x1="40" y1="60" x2="40" y2="20" stroke="#dc2626" stroke-width="2.5"/>
+      <line x1="120" y1="60" x2="120" y2="20" stroke="#111827" stroke-width="2.5"/>
+      <text x="32" y="16" font-size="11" fill="#dc2626">红</text>
+      <text x="112" y="16" font-size="11" fill="#111827">黑/COM</text>
+      <!-- 被测设备：导线与外壳 -->
+      <rect x="240" y="60" width="160" height="100" rx="6" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+      <text x="300" y="50" font-size="11" fill="#1e3a8a">被测设备外壳</text>
+      <line x1="280" y1="100" x2="360" y2="100" stroke="#2563eb" stroke-width="6"/>
+      <text x="288" y="92" font-size="10" fill="#1e3a8a">带电导线</text>
+      <!-- 探测点 -->
+      <line x1="40" y1="20" x2="280" y2="100" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="5 3"/>
+      <line x1="120" y1="20" x2="240" y2="150" stroke="#111827" stroke-width="1.5" stroke-dasharray="5 3"/>
+      <circle cx="280" cy="100" r="4" fill="#dc2626"/>
+      <circle cx="240" cy="150" r="4" fill="#111827"/>
+      <text x="300" y="180" font-size="11" fill="#1e3a8a">测“导线↔外壳”绝缘</text>
+    </svg>
+    <figcaption>漏电测量：一表笔接带电导体、一表笔接外壳（地），高阻档读出两者间的绝缘电阻。</figcaption>
+  </figure>
+  <aside class="tip"><strong>提示：</strong>测漏电时一定要先<strong>断电</strong>，确保被测部位不带市电，否则会损坏表头甚至危及人身安全。专业绝缘测量应使用兆欧表（摇表），万用表只能做粗略判断。</aside>
+
+  <h3>六、蜂鸣档的“响”是有条件的（G07）</h3>
+  <p>蜂鸣（通断）档并不是“只要有电阻就响”。表内设有一个<strong>阈值</strong>：只有当两表笔间电阻<mark>低于大约几十欧</mark>（不同型号略有差异）时电路才驱动蜂鸣器发声。</p>
+  <ul>
+    <li><strong>会响：</strong>导线连通、焊点良好、开关闭合等近乎短路的情况。</li>
+    <li><strong>不响：</strong>断路，或虽然导通但电阻较大（如带几百欧的元件、接触不良的虚焊）。</li>
+  </ul>
+  <p>所以蜂鸣档适合快速查“通不通”，但不能据此判断“电阻是大是小”；遇到不响又怀疑半通的情况，应切回欧姆档看具体数值。</p>
+
+  <h3>七、测电池电量：要看“带负载电压”（G08）</h3>
+  <p>电池的<strong>空载（开路）电压</strong>往往偏高，不能真实反映电量。一节快用完的 5 号电池空载也可能显示 1.4V，但一接负载电压立刻塌下来。原因是电池有<strong>内阻</strong>，电量越低内阻越大。</p>
+  <dl>
+    <dt>正确判断法</dt>
+    <dd>在电池接上正常负载（或表内电流档串入小电流）的同时测端电压，电压能维持在额定值附近才说明电量充足。</dd>
+    <dt>经验参考（1.5V 干电池）</dt>
+    <dd>带载约 1.3V 以上较好；掉到 1.1V 左右基本耗尽。</dd>
+  </dl>
+
+  <h3>八、测交流电流：串联、且仅作临时用（G09）</h3>
+  <p>电流必须<strong>串联</strong>测量——把表笔串进电路，让被测电流全部流过万用表。这与电压档的“并联”完全不同。</p>
+  <ul>
+    <li><strong>先断开电路</strong>，把表串入断点，再通电，切勿像测电压那样直接并在两端（会造成短路烧表）。</li>
+    <li>指针表电流档量程有限、表内分流电阻发热，<mark>只适合临时、小电流</mark>测量，长时间或大电流请用钳形表。</li>
+    <li>测完务必把量程旋钮拨回，避免下次误用电流档去并接电压而烧表。</li>
+  </ul>
+
+  <h3>九、测直流电压必须看极性（G10）</h3>
+  <p>直流有正负之分，指针表的偏转方向也是固定的：电流必须从<strong>红表笔（＋）流入、黑表笔（COM，−）流出</strong>，指针才会正常向右偏。</p>
+  <ul>
+    <li><strong>红表笔接高电位、黑表笔接低电位</strong>，读数正常。</li>
+    <li>若<strong>接反</strong>，指针会向左“顶”到头（打表），既读不出数，长期还可能损伤表头——此时把红黑表笔对调即可。</li>
+  </ul>
+  <aside class="tip"><strong>提示：</strong>不确定极性时，先选<strong>较大量程</strong>轻触试一下，看指针往哪偏，再决定是否对调表笔和缩小量程，这样最安全。</aside>
+
+  <details>
+    <summary>小结：指针表进阶要记住的几条</summary>
+    <ul>
+      <li>电压电流靠外部供电，欧姆/通断靠内部电池（1.5V 与 9V 各司其职）。</li>
+      <li>欧姆档：<strong>换量程必调零，读数要乘倍率</strong>，刻度右端为 0。</li>
+      <li>高阻档（9V）可测漏电、绝缘和小电容的充放电。</li>
+      <li>蜂鸣档有阈值，电流档要串联，直流电压要分清极性。</li>
+    </ul>
+  </details>
+</section>
+
+
+      <section id="source">
+        <h2>学习来源</h2>
+        <p>视频：<cite>万用表使用入门到精通</cite>（UP 主：工控圈）<br>
+        链接：<a href="https://www.bilibili.com/video/BV1HJ4m1J7Vy/" target="_blank" rel="noopener">bilibili.com/video/BV1HJ4m1J7Vy</a></p>
+        <p>HTML 语义元素参考：<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Reference/Elements" target="_blank" rel="noopener">MDN HTML 元素参考</a></p>
+        <p>所有插图均为本页自绘 SVG，便于离线查看，不含视频字幕或第三方图片。</p>
+        <p><a href="index.html">&larr; 返回「江楠的学习日志」首页</a></p>
+      </section>
+
+    </article>
+  </main>
+
+  <a class="backtop" href="#main" aria-label="回到顶部">&uarr;</a>
+
+  <footer class="site">
+    <p>江楠的学习日志 · <time datetime="2026-06-21">2026 年 6 月 21 日</time> 整理</p>
+    <p>语义化 HTML（header / nav / main / article / section / figure / table / dl / aside / footer）。</p>
+  </footer>
+</body>
+</html>
