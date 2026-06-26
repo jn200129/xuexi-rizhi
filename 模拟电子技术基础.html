@@ -154,6 +154,47 @@
           </tbody>
         </table>
 
+        <details>
+          <summary>完整课程目录（45 讲）与本笔记章节对应</summary>
+          <table>
+            <caption>表 0-2&nbsp;&nbsp;上海交通大学《模拟电子技术基础》45 讲逐讲索引</caption>
+            <thead>
+              <tr><th scope="col">讲次</th><th scope="col">课程标题</th><th scope="col">对应章节</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>01</td><td>绪论</td><td>课程概述</td></tr>
+              <tr><td>02</td><td>PN 结的形成</td><td>一、1.3</td></tr>
+              <tr><td>03</td><td>PN 与二极管的特性</td><td>二、2.1</td></tr>
+              <tr><td>04</td><td>二极管的直流等效电路</td><td>二、2.2</td></tr>
+              <tr><td>05</td><td>二极管的微变等效和稳压二极管</td><td>二、2.2 / 2.4</td></tr>
+              <tr><td>06</td><td>双极晶体管的结构与放大原理</td><td>三、3.1</td></tr>
+              <tr><td>07</td><td>BJT 特性曲线（共射）</td><td>三、3.2 / 3.3</td></tr>
+              <tr><td>08</td><td>MOS 管的工作原理</td><td>四、4.2</td></tr>
+              <tr><td>09</td><td>结型场效应管和特性</td><td>四、4.1</td></tr>
+              <tr><td>10</td><td>基本放大电路的构成</td><td>五、5.1</td></tr>
+              <tr><td>11</td><td>放大电路的性能指标</td><td>五、5.2'</td></tr>
+              <tr><td>12</td><td>放大电路的分析方法（图解法）</td><td>五、5.3</td></tr>
+              <tr><td>13</td><td>H 参数等效模型</td><td>五、5.4</td></tr>
+              <tr><td>14</td><td>基本共射放大电路的动态分析</td><td>五、5.4</td></tr>
+              <tr><td>15</td><td>Q 点稳定的放大电路、基本共集放大电路</td><td>五、5.5 / 5.6</td></tr>
+              <tr><td>16</td><td>共基放大电路、场效应管放大电路构成原则</td><td>五、5.6</td></tr>
+              <tr><td>17</td><td>派生电路、场效应管放大电路分析原则</td><td>五、5.7</td></tr>
+              <tr><td>18</td><td>多级放大电路的构成与动态分析</td><td>五、5.8</td></tr>
+              <tr><td>19~20</td><td>差分放大电路的构成与分析</td><td>七、7.1</td></tr>
+              <tr><td>21~22</td><td>互补输出级、功率放大电路</td><td>十、10.3</td></tr>
+              <tr><td>23~27</td><td>频率响应、波特图、混合 Π 模型、各级频响</td><td>六</td></tr>
+              <tr><td>27~29</td><td>集成运放的电流源电路、反馈概述</td><td>七、7.3</td></tr>
+              <tr><td>30~32</td><td>反馈判断方法、负反馈方块图</td><td>八、8.1</td></tr>
+              <tr><td>33~35</td><td>深度负反馈、对性能的影响、稳定性</td><td>八、8.2 / 8.3</td></tr>
+              <tr><td>36~38</td><td>基本运算电路、模拟乘法器应用</td><td>九</td></tr>
+              <tr><td>39</td><td>仪表用放大器</td><td>九、9.3</td></tr>
+              <tr><td>40~41</td><td>RC / LC 正弦波振荡电路</td><td>十、10.1</td></tr>
+              <tr><td>42~43</td><td>电压比较器</td><td>十、10.2</td></tr>
+              <tr><td>44~45</td><td>锯齿波发生、波形转换与信号转换电路</td><td>十、10.4</td></tr>
+            </tbody>
+          </table>
+        </details>
+
         <aside class="note">
           <strong>学习建议：</strong>模电的难点不在公式多，而在<strong>「物理图像 + 工程近似」</strong>。
           每个器件都要先理解它的伏安特性曲线，再学会用「等效模型」把它替换成简单电路来计算。
@@ -473,7 +514,59 @@
         </p>
         <p>这组数值 (I<sub>B</sub>, I<sub>C</sub>, U<sub>CE</sub>) 就是<strong>静态工作点 Q</strong>。Q 必须设在放大区中央，否则信号会被「削顶（饱和失真）」或「削底（截止失真）」。</p>
 
-        <h3>5.3 动态分析（微变等效电路法）</h3>
+        <h3>5.3 性能指标与图解分析法</h3>
+        <p>分析一个放大电路，先要明确用哪些<strong>性能指标</strong>来衡量它（第 11 讲）：</p>
+        <dl>
+          <dt>放大倍数（增益）</dt>
+          <dd>电压增益 <var>A</var><sub>u</sub>=<var>u</var><sub>o</sub>/<var>u</var><sub>i</sub>、电流增益 <var>A</var><sub>i</sub>、功率增益 <var>A</var><sub>p</sub>，是放大能力的直接度量。</dd>
+          <dt>输入电阻 R<sub>i</sub> / 输出电阻 R<sub>o</sub></dt>
+          <dd>R<sub>i</sub> 决定本级从信号源「吸取」信号的能力（越大越不衰减源信号）；R<sub>o</sub> 决定带负载能力（越小越接近恒压源）。</dd>
+          <dt>通频带 BW</dt>
+          <dd>增益基本不变的频率范围，决定能不失真放大的信号频段（详见第六章）。</dd>
+          <dt>最大不失真输出幅度 U<sub>om</sub></dt>
+          <dd>输出在不出现饱和/截止失真前提下能达到的最大幅度，由 Q 点位置和负载线共同决定。</dd>
+        </dl>
+        <p>
+          <strong>图解分析法（第 12 讲）</strong>直接在三极管输出特性曲线上作图求解，物理图像最清晰：
+          在直流通路上作<strong>直流负载线</strong> <var>U</var><sub>CE</sub>=<var>V</var><sub>CC</sub>&minus;<var>I</var><sub>C</sub><var>R</var><sub>c</sub>，
+          它与 <var>i</var><sub>B</sub>=<var>I</var><sub>BQ</sub> 那条特性曲线的交点即 <strong>Q 点</strong>；
+          带上交流负载 R<sub>L</sub> 后，斜率变陡的<strong>交流负载线</strong>过 Q 点，输入信号使工作点沿交流负载线上下移动，
+          其在纵轴/横轴的摆幅就是输出电流/电压的变化。
+        </p>
+        <figure>
+          <svg width="560" height="320" viewBox="0 0 560 320" role="img" aria-label="图解法：在输出特性曲线上作直流负载线，交点为 Q 点，信号沿负载线摆动">
+            <line x1="70" y1="260" x2="520" y2="260" stroke="#888" stroke-width="1.5" marker-end="url(#a6)"/>
+            <line x1="70" y1="260" x2="70" y2="30" stroke="#888" stroke-width="1.5" marker-end="url(#a6)"/>
+            <text x="515" y="280" font-size="12" fill="#555">U<tspan baseline-shift="sub">CE</tspan>/V</text>
+            <text x="30" y="40" font-size="12" fill="#555">I<tspan baseline-shift="sub">C</tspan></text>
+            <!-- output curves -->
+            <path d="M70,260 Q95,95 130,86 L500,76" fill="none" stroke="#9db8e0" stroke-width="1.6"/>
+            <path d="M70,260 Q95,150 130,142 L500,134" fill="none" stroke="#2563eb" stroke-width="2"/>
+            <path d="M70,260 Q95,205 130,198 L500,193" fill="none" stroke="#9db8e0" stroke-width="1.6"/>
+            <text x="505" y="78" font-size="11" fill="#9db8e0">I_B+ΔI</text>
+            <text x="505" y="137" font-size="11" fill="#2563eb">I_BQ</text>
+            <text x="505" y="196" font-size="11" fill="#9db8e0">I_B&minus;ΔI</text>
+            <!-- DC load line: from (Vcc,0) to (0, Vcc/Rc) -->
+            <line x1="470" y1="260" x2="110" y2="60" stroke="#d97706" stroke-width="2"/>
+            <text x="430" y="252" font-size="11" fill="#b45309">直流负载线</text>
+            <text x="120" y="58" font-size="11" fill="#b45309">V_CC/R_c</text>
+            <text x="468" y="278" font-size="11" fill="#b45309">V_CC</text>
+            <!-- Q point -->
+            <circle cx="290" cy="138" r="5" fill="#b03a3a"/>
+            <text x="298" y="133" font-size="13" fill="#b03a3a">Q</text>
+            <line x1="290" y1="138" x2="290" y2="260" stroke="#bbb" stroke-dasharray="4 4"/>
+            <text x="272" y="276" font-size="11" fill="#666">U_CEQ</text>
+            <!-- swing -->
+            <line x1="230" y1="172" x2="350" y2="104" stroke="#b03a3a" stroke-width="1" stroke-dasharray="3 3"/>
+            <text x="200" y="180" font-size="10" fill="#b03a3a">摆动范围</text>
+            <defs><marker id="a6" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#888"/></marker></defs>
+          </svg>
+          <figcaption>图 5-2&nbsp;&nbsp;图解法：直流负载线与 I<sub>BQ</sub> 曲线交点定 Q；信号使工作点沿负载线摆动，摆幅即输出。Q 偏高易饱和失真，偏低易截止失真</figcaption>
+        </figure>
+        <aside class="tip"><strong>图解法 vs 等效电路法：</strong>图解法看大信号、失真和动态范围最直观，但读图误差大；下面的微变等效（解析）法算小信号增益、电阻最精确。两者配合使用。</aside>
+
+        <h3>5.4 动态分析：微变等效电路法（H 参数模型）</h3>
+        <aside class="note"><strong>命名说明：</strong>这里把三极管线性化得到的小信号模型，正式名称叫 <strong>H 参数（混合参数）等效模型</strong>（第 13 讲）——以 <var>r</var><sub>be</sub>（即 h<sub>ie</sub>）和电流放大系数 <var>β</var>（即 h<sub>fe</sub>）为核心参数，故又称「<var>r</var><sub>be</sub>-β 模型」。</aside>
         <p>在小信号下，把三极管在 Q 点附近线性化为一个受控源模型：基极-发射极间等效为 <var>r</var><sub>be</sub>，集电极等效为受控电流源 <var>βi</var><sub>b</sub>。</p>
         <p class="eq"><var>r</var><sub>be</sub> ≈ 200&nbsp;Ω + (1+<var>β</var>) · 26&nbsp;mV / <var>I</var><sub>E</sub>(mA)</p>
         <p>由此求得共射放大电路的核心指标：</p>
@@ -486,14 +579,14 @@
           输出电阻&nbsp;<var>R</var><sub>o</sub> ≈ <var>R</var><sub>c</sub>
         </p>
 
-        <h3>5.4 静态工作点的稳定——分压式偏置电路</h3>
+        <h3>5.5 静态工作点的稳定——分压式偏置电路</h3>
         <p>
           温度变化会使 Q 点漂移。<strong>分压式偏置（射极偏置）电路</strong>用 R<sub>b1</sub>、R<sub>b2</sub> 分压固定基极电位 U<sub>B</sub>，
           再用射极电阻 R<sub>e</sub> 引入<strong>直流负反馈</strong>：温度↑→I<sub>C</sub>↑→U<sub>E</sub>↑→U<sub>BE</sub>↓→I<sub>B</sub>↓→抑制 I<sub>C</sub> 上升，从而稳住 Q 点。
           R<sub>e</sub> 并联旁路电容 C<sub>e</sub>，保证交流增益不受损。
         </p>
 
-        <h3>5.5 三种基本组态对比</h3>
+        <h3>5.6 三种基本组态对比</h3>
         <table>
           <caption>表 5&nbsp;&nbsp;共射、共集、共基组态特点</caption>
           <thead><tr><th scope="col">组态</th><th scope="col">电压增益</th><th scope="col">相位</th><th scope="col">输入电阻</th><th scope="col">输出电阻</th><th scope="col">用途</th></tr></thead>
@@ -503,6 +596,28 @@
             <tr><th scope="row">共基 CB</th><td>大</td><td>同相</td><td>低</td><td>中</td><td>高频放大</td></tr>
           </tbody>
         </table>
+        <aside class="tip"><strong>场效应管放大电路</strong>（第 16 讲）与 BJT 一一对应：共源（≈共射，电压放大）、共漏（≈共集，源极跟随器，高输入阻抗缓冲）、共栅（≈共基，高频）。分析方法相同：先用 <var>u</var><sub>GS</sub> 定 Q，再用跨导 <var>g</var><sub>m</sub> 建小信号模型，共源增益 <var>A</var><sub>u</sub>=&minus;<var>g</var><sub>m</sub>(R<sub>d</sub>∥R<sub>L</sub>)。</aside>
+
+        <h3>5.7 派生电路（组合放大电路）</h3>
+        <p>把两种组态级联，可取长补短，是高性能放大与集成电路里的常见结构（第 17 讲）：</p>
+        <ul>
+          <li><strong>共射-共基（Cascode）</strong>：共射提供电压增益，共基把共射的集电极电压钳住，<strong>大幅削弱密勒效应</strong>，显著展宽<strong>高频带宽</strong>。</li>
+          <li><strong>共集-共射 / 共集-共集（达林顿）</strong>：用共集的高输入阻抗、低输出阻抗做缓冲；达林顿管把两管 β 相乘，得到极大电流放大系数。</li>
+        </ul>
+
+        <h3>5.8 多级放大电路</h3>
+        <p>单级增益有限，实际放大器由多级级联（第 18 讲）。级间<strong>耦合方式</strong>有三种：</p>
+        <table>
+          <caption>表 5-2&nbsp;&nbsp;多级放大电路的三种耦合方式</caption>
+          <thead><tr><th scope="col">耦合方式</th><th scope="col">特点</th><th scope="col">能否放大直流</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">阻容耦合</th><td>电容隔直，各级 Q 点独立、互不影响</td><td>否（不能放大缓变信号）</td></tr>
+            <tr><th scope="row">变压器耦合</th><td>可阻抗变换、传输功率</td><td>否</td></tr>
+            <tr><th scope="row">直接耦合</th><td>能放大直流/缓变信号，便于集成</td><td>能，但有<strong>零点漂移</strong>（第七章解决）</td></tr>
+          </tbody>
+        </table>
+        <p class="eq">总电压增益 <var>A</var><sub>u</sub> = <var>A</var><sub>u1</sub> · <var>A</var><sub>u2</sub> · … · <var>A</var><sub>un</sub>&nbsp;&nbsp;（各级增益相乘，dB 则相加）</p>
+        <aside class="note"><strong>关键近似：</strong>计算某一级增益时，<strong>下一级的输入电阻就是本级的负载电阻</strong>。所以级间存在「增益分配」与阻抗匹配的权衡——这也是为什么常用共集级做输出缓冲。</aside>
       </section>
 
       <!-- ============ 第六章 ============ -->
@@ -519,6 +634,20 @@
           <dt>通频带</dt>
           <dd><var>BW</var> = <var>f</var><sub>H</sub> &minus; <var>f</var><sub>L</sub>，即增益下降到中频值 0.707 倍（&minus;3&nbsp;dB）之间的频率范围。</dd>
         </dl>
+
+        <h3>6.1 高频分析工具：混合 Π 模型</h3>
+        <p>
+          研究高频特性要用<strong>混合 Π（hybrid-π）模型</strong>（第 24 讲）替代低频的 H 参数模型：在 b'-e 间加入<strong>结电容 C<sub>π</sub></strong>、b'-c 间加入<strong>结电容 C<sub>μ</sub></strong>。
+          其中 C<sub>μ</sub> 跨接在输入与输出之间，因<strong>密勒效应</strong>被等效放大 (1+|<var>A</var><sub>u</sub>|) 倍折算到输入端，成为限制高频的主因。
+        </p>
+        <dl>
+          <dt>β 的频率响应</dt>
+          <dd>电流放大系数 β 本身随频率下降，定义 <strong>β 截止频率 f<sub>β</sub></strong>（β 降到 0.707 倍处）。</dd>
+          <dt>特征频率 f<sub>T</sub></dt>
+          <dd>β 下降到 <strong>1</strong>（0&nbsp;dB）时的频率，是三极管高频性能的核心指标，近似有 <var>f</var><sub>T</sub> ≈ <var>β</var><sub>0</sub>·<var>f</var><sub>β</sub>。</dd>
+        </dl>
+        <p>把增益幅值（dB）与相位随频率（对数横轴）的关系用折线近似画出，就是<strong>波特图</strong>（第 24 讲）：每个极点使幅频以 &minus;20&nbsp;dB/十倍频下降、相位滚降 90°。多级电路的波特图由各级叠加。</p>
+
         <aside class="tip"><strong>增益带宽积近似恒定：</strong>放大倍数越高，带宽往往越窄。多级放大时，总下限频率升高、总上限频率降低，<strong>总带宽变窄</strong>。</aside>
       </section>
 
@@ -533,6 +662,19 @@
         </p>
         <p class="eq">共模抑制比&nbsp;<var>K</var><sub>CMR</sub> = | <var>A</var><sub>d</sub> / <var>A</var><sub>c</sub> |&nbsp;（越大越好）</p>
         <p>射极接<strong>恒流源</strong>可大幅提高对共模信号的抑制能力，是集成运放输入级的标准结构。</p>
+
+        <p>按<strong>输入</strong>（信号从两管基极都加 = 双端输入；只从一管加、另一管接地 = 单端输入）与<strong>输出</strong>（从两管集电极之间取 = 双端输出；只从一管集电极对地取 = 单端输出）的组合，差分电路有四种接法（第 20 讲）：</p>
+        <table>
+          <caption>表 7-1&nbsp;&nbsp;差分放大电路的四种接法</caption>
+          <thead><tr><th scope="col">接法</th><th scope="col">差模增益 A<sub>d</sub></th><th scope="col">是否反相</th><th scope="col">特点与用途</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">双入双出</th><td>最大（=单管增益）</td><td>—</td><td>抑制零漂最好，K<sub>CMR</sub> 最高；要求负载两端浮空</td></tr>
+            <tr><th scope="row">双入单出</th><td>约为双出的一半</td><td>取决于取哪管</td><td>把双端信号转单端输出，便于接后级/接地负载</td></tr>
+            <tr><th scope="row">单入双出</th><td>≈双出（满增益）</td><td>—</td><td>单端信号转双端；常作多级间过渡</td></tr>
+            <tr><th scope="row">单入单出</th><td>约为双出的一半</td><td>同相端→同相、反相端→反相</td><td>最常用：单端进、单端出，可灵活选相位</td></tr>
+          </tbody>
+        </table>
+        <aside class="tip"><strong>记忆：</strong>增益只看<strong>输出</strong>——<strong>双端输出</strong>得满增益，<strong>单端输出</strong>增益减半；零漂抑制也只看输出——双端输出两管漂移相减、抑制最好，单端输出靠射极恒流源/R<sub>e</sub> 来压共模。<strong>输入</strong>方式只影响信号怎么加，不改变差模增益大小。</aside>
 
         <h3>7.2 集成运放的组成与理想化</h3>
         <p>集成运放内部一般为：<strong>输入级（差分）→ 中间级（高增益共射）→ 输出级（互补射极跟随器）→ 偏置电路（电流源）</strong>。对外可视为一个高增益直流放大器，有同相端(+)、反相端(&minus;)和输出端。</p>
@@ -553,7 +695,48 @@
           <figcaption>图 6&nbsp;&nbsp;集成运放电路符号（∞ 表示理想开环增益无穷大）</figcaption>
         </figure>
 
-        <h3>7.3 理想运放与「虚短、虚断」</h3>
+        <h3>7.3 电流源电路与有源负载（镜像电流源）</h3>
+        <p>
+          集成电路里电阻又大又不精确、还占面积，因此<strong>偏置</strong>和<strong>负载</strong>大量改用<strong>电流源电路</strong>（第 27~29 讲）。
+          最基本的是<strong>镜像电流源</strong>：两个特性一致的管子，基极相连、一管接成二极管形式作「参考」，
+          另一管便「复制」出与参考电流近似相等的输出电流（<var>I</var><sub>C2</sub> ≈ <var>I</var><sub>REF</sub>），故名「镜像」。
+        </p>
+        <figure>
+          <svg width="440" height="220" viewBox="0 0 440 220" role="img" aria-label="镜像电流源：参考管与输出管基极相连，复制参考电流">
+            <line x1="60" y1="30" x2="380" y2="30" stroke="#444" stroke-width="2"/>
+            <text x="385" y="34" font-size="11" fill="#b03a3a">+V_CC</text>
+            <rect x="90" y="45" width="18" height="40" fill="#fff" stroke="#444"/>
+            <text x="60" y="70" font-size="11" fill="#444">R_REF</text>
+            <line x1="99" y1="30" x2="99" y2="45" stroke="#444" stroke-width="2"/>
+            <line x1="99" y1="85" x2="99" y2="120" stroke="#444" stroke-width="2"/>
+            <!-- ref transistor -->
+            <line x1="99" y1="120" x2="99" y2="175" stroke="#444" stroke-width="3"/>
+            <line x1="99" y1="148" x2="150" y2="148" stroke="#444" stroke-width="2"/>
+            <!-- output transistor -->
+            <line x1="250" y1="120" x2="250" y2="175" stroke="#444" stroke-width="3"/>
+            <line x1="250" y1="148" x2="201" y2="148" stroke="#444" stroke-width="2"/>
+            <line x1="150" y1="148" x2="201" y2="148" stroke="#444" stroke-width="2"/>
+            <line x1="99" y1="120" x2="99" y2="148" stroke="#444" stroke-width="2"/>
+            <text x="86" y="105" font-size="11" fill="#444">参考管 T1</text>
+            <text x="240" y="105" font-size="11" fill="#444">输出管 T2</text>
+            <line x1="250" y1="30" x2="250" y2="120" stroke="#444" stroke-width="2"/>
+            <line x1="99" y1="175" x2="250" y2="175" stroke="#444" stroke-width="2"/>
+            <line x1="60" y1="195" x2="300" y2="195" stroke="#444" stroke-width="2"/>
+            <line x1="175" y1="175" x2="175" y2="195" stroke="#444" stroke-width="2"/>
+            <line x1="250" y1="30" x2="250" y2="20" stroke="#444" stroke-width="2"/>
+            <text x="258" y="50" font-size="11" fill="#b03a3a">I_C2≈I_REF</text>
+            <text x="30" y="150" font-size="11" fill="#2563eb">I_REF</text>
+            <text x="120" y="215" font-size="10" fill="#666">基极相连 → 复制电流</text>
+          </svg>
+          <figcaption>图 6-2&nbsp;&nbsp;镜像电流源：T2「镜像」复制 T1 的参考电流，作恒流偏置或有源负载</figcaption>
+        </figure>
+        <dl>
+          <dt>作恒流偏置</dt><dd>给差分对管尾部提供稳定的恒定电流，大幅提高共模抑制比 K<sub>CMR</sub>。</dd>
+          <dt>作有源负载</dt><dd>用电流源代替集电极电阻 R<sub>c</sub>，因其<strong>动态电阻极大</strong>，单级电压增益可提高几个数量级——这是集成运放中间级实现高增益的关键。</dd>
+        </dl>
+        <p>常见改进型：比例电流源、微电流源、威尔逊（Wilson）电流源、多路电流源，目的都是提高复制精度与输出电阻。</p>
+
+        <h3>7.4 理想运放与「虚短、虚断」</h3>
         <p>分析含运放电路时，做两条理想化假设（开环增益 A<sub>od</sub>→∞、输入电阻→∞、输出电阻→0）：</p>
         <dl>
           <dt>虚短（线性区，有负反馈时）</dt>
@@ -615,6 +798,19 @@
           比较——反馈信号与输入信号接在<strong>同一节点</strong>是「并联」，接在<strong>不同节点</strong>是「串联」。正负反馈用<strong>瞬时极性法</strong>判断。
         </aside>
 
+        <details>
+          <summary>例题：用瞬时极性法判断正/负反馈（四步法）</summary>
+          <p><strong>方法：</strong>① 假设输入信号某瞬时为「+」（电位升高）；② 沿放大电路逐级推各点的瞬时极性（共射/反相端 → 反相记「&minus;」，共集/同相端 → 同相记「+」）；③ 推出反馈网络送回输入端的反馈信号极性；④ 看反馈信号是<strong>削弱</strong>净输入 → <strong>负反馈</strong>；<strong>增强</strong> → 正反馈。</p>
+          <p><strong>示例（同相比例运放，R<sub>f</sub> 从输出接回反相端）：</strong></p>
+          <ol>
+            <li>设同相端输入瞬时为「+」。</li>
+            <li>运放同相放大 → 输出端 u<sub>o</sub> 也为「+」。</li>
+            <li>u<sub>o</sub> 经 R<sub>f</sub>、R<sub>1</sub> 分压，把「+」送回<strong>反相端</strong>。</li>
+            <li>净输入 = u<sub>+</sub> &minus; u<sub>&minus;</sub>，反相端电位被抬高使净输入<strong>减小</strong> → <mark>负反馈</mark>。</li>
+          </ol>
+          <p><strong>再判组态：</strong>反馈取自输出电压节点 → <strong>电压</strong>取样；反馈信号（反相端）与输入信号（同相端）接在<strong>不同节点</strong> → <strong>串联</strong>比较。故为<strong>电压串联负反馈</strong>，对应稳定输出电压、提高 R<sub>i</sub>、降低 R<sub>o</sub>。</p>
+        </details>
+
         <h3>8.2 负反馈对性能的改善</h3>
         <ul>
           <li>提高增益<strong>稳定性</strong>（增益变化被压缩 1+AF 倍）；</li>
@@ -647,6 +843,24 @@
           (u<sub>i</sub>&minus;0)/R<sub>1</sub> = (0&minus;u<sub>o</sub>)/R<sub>f</sub>，整理即得 <var>u</var><sub>o</sub> = &minus;(R<sub>f</sub>/R<sub>1</sub>)·u<sub>i</sub>。</p>
         </details>
         <p>此外，运放配 RC 网络还能构成<strong>有源滤波器</strong>（低通/高通/带通），相比无源滤波具有增益且不受负载影响。</p>
+
+        <h3>9.2 仪表放大器（高精度差分放大）</h3>
+        <p>
+          单运放差分电路输入电阻低、且要求电阻严格匹配。<strong>仪表放大器</strong>（第 39 讲）用<strong>三个运放</strong>改进：
+          前级两个同相放大器分别缓冲两路输入（输入电阻极高、不衰减传感器信号），后级一个差分放大器做相减。
+          只需调一个增益电阻即可整体调增益，<strong>共模抑制比高、增益可调、输入阻抗大</strong>，是测量、传感器信号调理的标准电路。
+        </p>
+
+        <h3>9.3 模拟乘法器及其应用</h3>
+        <p>
+          <strong>模拟乘法器</strong>（第 38 讲）输出与两路输入之积成正比 <var>u</var><sub>o</sub>=<var>K</var>·<var>u</var><sub>X</sub>·<var>u</var><sub>Y</sub>，是一种重要的非线性运算单元。配合运放可实现：
+        </p>
+        <ul>
+          <li><strong>乘方 / 开方</strong>：两输入接同一信号得平方；置于反馈回路得开方。</li>
+          <li><strong>除法</strong>：把乘法器放进负反馈环实现相除。</li>
+          <li><strong>调制 / 解调、混频</strong>：通信中把信号搬移到不同频段。</li>
+          <li><strong>有效值（RMS）检测、功率运算</strong>：电压乘电流得瞬时功率。</li>
+        </ul>
       </section>
 
       <!-- ============ 第十章 ============ -->
@@ -688,6 +902,20 @@
           乙类存在<strong>交越失真</strong>（信号过零附近两管都不导通），实际采用<strong>甲乙类</strong>——给两管一点微导通偏置（如二极管/U<sub>BE</sub> 倍增电路）即可消除。
         </p>
         <aside class="tip"><strong>功放安全：</strong>功率管发热严重，必须考虑散热（散热片）与二次击穿，并核算 P<sub>CM</sub>、I<sub>CM</sub>、U<sub>(BR)CEO</sub> 三个极限参数。</aside>
+
+        <h3>10.4 波形产生与信号转换电路</h3>
+        <p>把比较器、积分器、运算电路组合起来，可产生各种波形并在不同物理量间转换（第 44~45 讲）。</p>
+        <dl>
+          <dt>方波 → 三角波 → 正弦波</dt>
+          <dd><strong>迟滞比较器</strong>产生方波，送入<strong>积分器</strong>得三角波，再经折线/差分对网络整形可逼近正弦波——这是函数发生器的基本链路。</dd>
+          <dt>锯齿波发生电路</dt>
+          <dd>让积分电容的<strong>充电与放电时间常数不同</strong>（一快一慢），即得上升缓、下降陡的<strong>锯齿波</strong>，用于扫描、PWM 调制的载波。</dd>
+          <dt>电压-电流 / 电流-电压转换（V-I、I-V）</dt>
+          <dd>利用「虚短虚断」让流过负载的电流只由输入电压与一个电阻决定，与负载无关（恒流源）；反之把电流转成电压（如光电二极管取信号）。</dd>
+          <dt>电压-频率转换（V-F）</dt>
+          <dd>把输入电压转换成频率与之成正比的脉冲，用于模数转换、远距离抗干扰传输。</dd>
+        </dl>
+        <aside class="note"><strong>呼应全局：</strong>信号转换电路把前面所有单元（放大、反馈、运算、比较、积分、振荡）综合起来，是模电从「器件 → 单元 → 系统」的收口，也直接通向后续的「数模/模数转换」与数字电路。</aside>
       </section>
 
       <!-- ============ 小结 ============ -->
@@ -706,8 +934,8 @@
 
       <section id="source">
         <h2>来源</h2>
-        <p>本笔记内容整理自 B 站「工控圈」搬运的《模拟电子技术基础》（上海交通大学）课程，共 45 讲：</p>
-        <p><a href="https://www.bilibili.com/video/BV1SKVo6kEuT/" target="_blank" rel="noopener">bilibili.com/video/BV1SKVo6kEuT</a></p>
+        <p>本笔记内容整理自 B 站搬运的《模拟电子技术基础》（上海交通大学）课程，共 45 讲，并已<strong>逐讲对照课程大纲</strong>补充图解分析法、H 参数模型、混合 Π 模型与特征频率、镜像电流源与有源负载、派生/多级放大、仪表放大器、模拟乘法器、波形与信号转换等专题（逐讲索引见「课程概述」中的 45 讲对应表）：</p>
+        <p><a href="https://www.bilibili.com/video/BV1SKVo6kEuT/" target="_blank" rel="noopener">bilibili.com/video/BV1SKVo6kEuT</a>（共 45 个分 P）</p>
         <p class="lead">文中所有插图均为配合知识点自绘的 SVG 示意图（非视频截图），公式与结论按通用模电教材体系整理，仅供个人学习交流使用。</p>
       </section>
 
