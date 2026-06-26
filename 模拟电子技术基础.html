@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="江楠">
+  <meta name="description" content="《模拟电子技术基础》(上海交通大学) 完整学习笔记：从半导体器件、放大电路、集成运放、负反馈到信号发生与功率放大的系统整理，含自绘 SVG 示意图。江楠的学习日志。">
+  <meta name="keywords" content="模拟电子技术,模电,PN结,二极管,三极管,BJT,场效应管,MOSFET,放大电路,共射,微变等效,频率响应,差分放大,集成运放,虚短虚断,负反馈,运算电路,正弦振荡,功率放大,OCL">
+  <title>模拟电子技术基础（上交大）完整笔记 — 江楠的学习日志</title>
+  <style>
+    :root{
+      --accent:#2563eb; --accent-dark:#1d4ed8; --bg:#f7f8fa; --card:#fff;
+      --border:#e2e5ea; --text:#1f2329; --muted:#64748b;
+    }
+    *{box-sizing:border-box;}
+    body{margin:0;font-family:-apple-system,"Segoe UI","Microsoft YaHei","PingFang SC",sans-serif;
+      line-height:1.75;color:var(--text);background:var(--bg);}
+    .skip-link{position:absolute;left:-999px;top:0;background:#fff;color:var(--accent);padding:.5rem 1rem;z-index:100;}
+    .skip-link:focus{left:0;}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;}
+    header.site{background:linear-gradient(135deg,#3b82f6 0%,var(--accent) 45%,var(--accent-dark) 100%);
+      color:#fff;padding:3rem 1.5rem 2.4rem;text-align:center;
+      box-shadow:0 6px 24px rgba(37,99,235,.18);}
+    header.site h1{margin:0 0 .5rem;font-size:2.1rem;}
+    header.site p{margin:.2rem 0;opacity:.92;}
+    .meta-list{list-style:none;padding:0;margin:.9rem 0 0;display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;}
+    .meta-list li{background:rgba(255,255,255,.18);padding:.25rem .7rem;border-radius:999px;font-size:.85rem;}
+    .layout{max-width:1180px;margin:0 auto;padding:1.6rem 1.5rem;display:grid;
+      grid-template-columns:248px 1fr;gap:1.9rem;align-items:start;}
+    .sidebar{position:sticky;top:1.4rem;background:var(--card);border:1px solid var(--border);
+      border-radius:16px;padding:1.1rem 1rem;box-shadow:0 4px 18px rgba(15,23,42,.06);max-height:calc(100vh - 2.8rem);overflow:auto;}
+    .sidebar .home-link{display:flex;align-items:center;gap:.45rem;font-weight:600;color:#fff;
+      text-decoration:none;padding:.6rem .8rem;border-radius:11px;
+      background:linear-gradient(135deg,var(--accent),var(--accent-dark));
+      box-shadow:0 4px 12px rgba(37,99,235,.28);margin-bottom:1rem;transition:transform .15s,box-shadow .15s;}
+    .sidebar .home-link:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(37,99,235,.38);}
+    .sidebar .toc-title{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;
+      color:var(--muted);margin:.2rem .35rem .55rem;font-weight:700;}
+    .sidebar nav ul{list-style:none;margin:0;padding:0;}
+    .sidebar nav li{margin:.12rem 0;}
+    .sidebar a.toc-link{display:block;color:var(--text);text-decoration:none;font-size:.92rem;
+      padding:.46rem .7rem;border-radius:9px;border-left:3px solid transparent;transition:all .15s;}
+    .sidebar a.toc-link:hover{background:#eef4ff;color:var(--accent-dark);border-left-color:var(--accent);
+      transform:translateX(2px);}
+    main{min-width:0;}
+    article>section{background:var(--card);border:1px solid var(--border);border-radius:14px;
+      padding:1.5rem 1.8rem;margin-bottom:1.6rem;scroll-margin-top:20px;}
+    h2{color:var(--accent-dark);border-bottom:2px solid var(--border);padding-bottom:.45rem;margin-top:.2rem;}
+    h3{margin-top:1.6rem;color:var(--text);}
+    h4{margin-top:1rem;color:var(--muted);}
+    p{margin:.7rem 0;}
+    dl dt{font-weight:600;margin-top:.8rem;}
+    dl dd{margin:0 0 .4rem 1.2rem;}
+    table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:.93rem;}
+    caption{caption-side:top;text-align:left;color:var(--muted);font-size:.9rem;margin-bottom:.4rem;}
+    th,td{border:1px solid var(--border);padding:.55rem .7rem;text-align:left;vertical-align:top;}
+    thead{background:#eef2ff;}
+    tbody tr:nth-child(even){background:#fafbfc;}
+    th[scope=row]{background:#f3f6ff;white-space:nowrap;}
+    aside.tip{border-left:4px solid #f59e0b;background:#fff8eb;padding:.8rem 1rem;border-radius:6px;margin:1rem 0;}
+    aside.tip strong{color:#b45309;}
+    aside.note{border-left:4px solid var(--accent);background:#eff6ff;padding:.8rem 1rem;border-radius:6px;margin:1rem 0;}
+    aside.note strong{color:var(--accent-dark);}
+    figure{margin:1.2rem 0;text-align:center;}
+    figure svg{max-width:100%;height:auto;background:#fff;border:1px solid var(--border);border-radius:10px;}
+    figcaption{color:var(--muted);font-size:.88rem;margin-top:.45rem;}
+    details{border:1px solid var(--border);border-radius:8px;padding:.6rem 1rem;margin:.7rem 0;background:#fcfcfd;}
+    summary{cursor:pointer;font-weight:600;}
+    code{background:#eef0f3;padding:.1rem .35rem;border-radius:4px;font-size:.9em;}
+    .eq{display:block;background:#f6f8fc;border:1px dashed #c7d2fe;border-radius:8px;
+      padding:.7rem 1rem;margin:.9rem 0;font-family:"Cambria Math","Times New Roman",serif;
+      font-size:1.05rem;text-align:center;overflow-x:auto;}
+    var{font-style:italic;font-family:"Cambria Math","Times New Roman",serif;}
+    mark{background:#fde68a;}
+    ul,ol{padding-left:1.4rem;}
+    .lead{font-size:1.02rem;color:var(--muted);}
+    footer.site{text-align:center;color:var(--muted);padding:2rem 1rem;font-size:.9rem;}
+    footer.site a{color:var(--accent);}
+    .backtop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;
+      text-decoration:none;padding:.55rem .85rem;border-radius:50%;box-shadow:0 4px 12px rgba(37,99,235,.4);font-size:1.1rem;}
+    @media(max-width:820px){
+      .layout{grid-template-columns:1fr;gap:1.1rem;padding:1.1rem;}
+      .sidebar{position:static;top:auto;max-height:none;}
+      .sidebar nav ul{display:flex;flex-wrap:wrap;gap:.4rem;}
+      .sidebar a.toc-link{border-left:none;border:1px solid var(--border);font-size:.85rem;padding:.34rem .7rem;}
+      .sidebar a.toc-link:hover{transform:none;}
+    }
+    @media(max-width:600px){header.site h1{font-size:1.7rem;}article>section{padding:1.2rem 1rem;}}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="site">
+    <h1>模拟电子技术基础</h1>
+    <p>江楠的学习日志 · 上海交通大学课程系统笔记（45 讲）· 自绘示意图</p>
+    <ul class="meta-list">
+      <li>#半导体器件</li><li>#放大电路</li><li>#集成运放</li>
+      <li>#负反馈</li><li>#信号发生</li><li>#功率放大</li>
+    </ul>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <a class="home-link" href="index.html">&larr; 返回首页</a>
+      <p class="toc-title">本文目录</p>
+      <nav aria-label="章节目录">
+        <ul>
+          <li><a class="toc-link" href="#overview">课程概述</a></li>
+          <li><a class="toc-link" href="#ch1">一、半导体与 PN 结</a></li>
+          <li><a class="toc-link" href="#ch2">二、二极管及其电路</a></li>
+          <li><a class="toc-link" href="#ch3">三、双极型三极管 BJT</a></li>
+          <li><a class="toc-link" href="#ch4">四、场效应管 FET</a></li>
+          <li><a class="toc-link" href="#ch5">五、基本放大电路</a></li>
+          <li><a class="toc-link" href="#ch6">六、放大电路频率响应</a></li>
+          <li><a class="toc-link" href="#ch7">七、差分与集成运放</a></li>
+          <li><a class="toc-link" href="#ch8">八、负反馈放大电路</a></li>
+          <li><a class="toc-link" href="#ch9">九、运算电路</a></li>
+          <li><a class="toc-link" href="#ch10">十、信号发生与功率放大</a></li>
+          <li><a class="toc-link" href="#summary">学习路线小结</a></li>
+          <li><a class="toc-link" href="#source">来源</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="main" tabindex="-1">
+    <article>
+
+      <section id="overview">
+        <h2>课程概述</h2>
+        <p class="lead">
+          模拟电子技术（简称「模电」）研究的是<strong>连续变化的电信号</strong>的产生、放大、运算与变换。
+          它是从「电路分析」走向「数字电路」「电力电子」「通信电子」的必经桥梁，也是公认的「电类四大名补」之一。
+          本笔记按上海交通大学课程主线，把 45 讲内容重组为十大主题，配自绘 SVG 示意图，便于建立完整的知识脉络。
+        </p>
+
+        <h3>这门课到底在解决什么问题？</h3>
+        <p>
+          一句话：<mark>把微弱的电信号不失真地放大，并对其进行运算和变换</mark>。麦克风拾取的声音是几毫伏的微弱电压，
+          扬声器需要的是几瓦的功率；传感器输出的是微小电流，单片机需要的是 0~3.3&nbsp;V 的标准电压。
+          模电就是设计中间这一段「放大 + 处理」的电路，核心是三件事：<strong>器件（二极管、三极管、运放）→ 单元电路（放大、反馈、运算）→ 系统（信号发生、功率输出）</strong>。
+        </p>
+
+        <h3>知识地图</h3>
+        <table>
+          <caption>表 0&nbsp;&nbsp;模电课程主线与本笔记章节对应</caption>
+          <thead>
+            <tr><th scope="col">阶段</th><th scope="col">核心内容</th><th scope="col">本笔记章节</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">器件</th><td>半导体、PN 结、二极管、BJT、FET</td><td>一 ~ 四</td></tr>
+            <tr><th scope="row">单元</th><td>基本放大电路、频率响应、差分放大</td><td>五 ~ 七</td></tr>
+            <tr><th scope="row">系统</th><td>负反馈、运算电路、振荡与功放</td><td>八 ~ 十</td></tr>
+          </tbody>
+        </table>
+
+        <aside class="note">
+          <strong>学习建议：</strong>模电的难点不在公式多，而在<strong>「物理图像 + 工程近似」</strong>。
+          每个器件都要先理解它的伏安特性曲线，再学会用「等效模型」把它替换成简单电路来计算。
+          建议配合视频边看边画电路、边推 Q 点，切忌只背结论。
+        </aside>
+      </section>
+
+      <!-- ============ 第一章 ============ -->
+      <section id="ch1">
+        <h2>一、半导体与 PN 结</h2>
+
+        <h3>1.1 本征半导体</h3>
+        <p>
+          硅（Si）、锗（Ge）是最常用的半导体材料，导电能力介于导体与绝缘体之间。纯净的半导体称为
+          <strong>本征半导体</strong>，其原子按共价键规则排列。在常温下，热运动会使少量共价键断裂，产生一对
+          <strong>自由电子</strong>与<strong>空穴</strong>（电子-空穴对）。空穴带正电，可被邻近电子填补，从而像正电荷一样移动。
+        </p>
+        <dl>
+          <dt>两种载流子</dt>
+          <dd><strong>自由电子</strong>：带负电，是导体导电的唯一载流子，也是半导体载流子之一。</dd>
+          <dd><strong>空穴</strong>：半导体特有，带正电；它的「移动」本质是邻近价电子的接力填补。</dd>
+          <dt>温度的影响</dt>
+          <dd>温度升高 → 电子-空穴对增多 → 导电能力增强。这正是半导体器件<strong>受温度影响大</strong>的根源。</dd>
+        </dl>
+
+        <h3>1.2 杂质半导体：N 型与 P 型</h3>
+        <p>掺入微量杂质可以大幅改变导电性，并决定多数载流子的类型，这是制造一切半导体器件的基础。</p>
+        <table>
+          <caption>表 1&nbsp;&nbsp;两种杂质半导体对比</caption>
+          <thead>
+            <tr><th scope="col">类型</th><th scope="col">掺入元素</th><th scope="col">多子</th><th scope="col">少子</th><th scope="col">名称由来</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">N 型</th><td>五价（磷 P、砷 As）</td><td>自由电子</td><td>空穴</td><td>Negative，多子带负电</td></tr>
+            <tr><th scope="row">P 型</th><td>三价（硼 B、镓 Ga）</td><td>空穴</td><td>自由电子</td><td>Positive，多子带正电</td></tr>
+          </tbody>
+        </table>
+        <aside class="tip">
+          <strong>关键：</strong>无论 N 型还是 P 型，整体仍然<strong>电中性</strong>——杂质提供的多子被其原子核固定电荷平衡。
+          多子浓度由掺杂决定（基本不随温度变），少子浓度由温度决定（对温度极敏感）。
+        </aside>
+
+        <h3>1.3 PN 结的形成与单向导电性</h3>
+        <p>
+          把 P 型和 N 型半导体制作在一起，交界面附近会发生<strong>多子扩散</strong>：N 区电子向 P 区扩散、P 区空穴向 N 区扩散，
+          复合后在交界处留下不能移动的离子，形成<strong>空间电荷区（耗尽层 / 阻挡层）</strong>，并建立一个由 N 指向 P 的<strong>内电场</strong>。
+          内电场会阻止多子继续扩散、同时推动少子漂移，最终达到动态平衡。
+        </p>
+
+        <figure>
+          <svg width="640" height="240" viewBox="0 0 640 240" role="img" aria-label="PN 结结构示意图：P 区、N 区、中间的耗尽层与内电场方向">
+            <rect x="40" y="60" width="240" height="100" fill="#fde8e8" stroke="#d97777"/>
+            <rect x="360" y="60" width="240" height="100" fill="#e3effd" stroke="#5b8fd6"/>
+            <rect x="260" y="60" width="120" height="100" fill="#f3f0d9" stroke="#b9a94a"/>
+            <text x="150" y="115" text-anchor="middle" font-size="22" fill="#b03a3a">P 区</text>
+            <text x="150" y="140" text-anchor="middle" font-size="13" fill="#b03a3a">空穴(多子)⊕⊕⊕</text>
+            <text x="480" y="115" text-anchor="middle" font-size="22" fill="#2659a8">N 区</text>
+            <text x="480" y="140" text-anchor="middle" font-size="13" fill="#2659a8">电子(多子)⊖⊖⊖</text>
+            <text x="320" y="50" text-anchor="middle" font-size="13" fill="#7a6f1f">耗尽层(空间电荷区)</text>
+            <text x="290" y="115" text-anchor="middle" font-size="16" fill="#7a6f1f">⊖⊖</text>
+            <text x="350" y="115" text-anchor="middle" font-size="16" fill="#7a6f1f">⊕⊕</text>
+            <line x1="360" y1="185" x2="260" y2="185" stroke="#444" stroke-width="2" marker-end="url(#arr)"/>
+            <text x="310" y="205" text-anchor="middle" font-size="13" fill="#444">内电场 E（N→P）</text>
+            <defs>
+              <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+                <path d="M0,0 L8,3 L0,6 Z" fill="#444"/>
+              </marker>
+            </defs>
+          </svg>
+          <figcaption>图 1&nbsp;&nbsp;PN 结的形成：耗尽层中留下固定离子，建立由 N 指向 P 的内电场</figcaption>
+        </figure>
+
+        <dl>
+          <dt>正向偏置（P 接正、N 接负）</dt>
+          <dd>外电场削弱内电场 → 耗尽层变窄 → 多子大量扩散 → <strong>导通</strong>，电流大。硅管导通压降约 0.7&nbsp;V，锗管约 0.2&nbsp;V。</dd>
+          <dt>反向偏置（P 接负、N 接正）</dt>
+          <dd>外电场加强内电场 → 耗尽层变宽 → 仅少子形成微弱<strong>反向饱和电流</strong>，近似截止。</dd>
+        </dl>
+        <p><strong>结论——单向导电性：</strong>PN 结正向导通、反向截止，这是二极管一切应用的根基。</p>
+      </section>
+
+      <!-- ============ 第二章 ============ -->
+      <section id="ch2">
+        <h2>二、二极管及其基本电路</h2>
+
+        <h3>2.1 伏安特性与方程</h3>
+        <p>把 PN 结封装并引出两极，就是<strong>二极管</strong>（P 端为阳极 A，N 端为阴极 K）。其电流-电压关系为：</p>
+        <p class="eq"><var>i</var><sub>D</sub> = <var>I</var><sub>S</sub> (e<sup><var>u</var><sub>D</sub>/<var>U</var><sub>T</sub></sup> &minus; 1)</p>
+        <p>其中 <var>U</var><sub>T</sub> 为温度的电压当量（常温约 26&nbsp;mV）。曲线分四段：死区、正向导通区、反向截止区、反向击穿区。</p>
+
+        <figure>
+          <svg width="560" height="320" viewBox="0 0 560 320" role="img" aria-label="二极管伏安特性曲线，含死区、正向导通、反向截止与反向击穿四个区域">
+            <line x1="60" y1="170" x2="520" y2="170" stroke="#888" stroke-width="1.5" marker-end="url(#a2)"/>
+            <line x1="300" y1="300" x2="300" y2="30" stroke="#888" stroke-width="1.5" marker-end="url(#a2)"/>
+            <text x="525" y="186" font-size="13" fill="#555">u<tspan baseline-shift="sub">D</tspan>/V</text>
+            <text x="308" y="40" font-size="13" fill="#555">i<tspan baseline-shift="sub">D</tspan></text>
+            <path d="M300,170 Q345,168 360,150 Q372,120 382,60" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+            <path d="M300,170 L120,172 L100,172" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+            <path d="M100,172 L100,290" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+            <line x1="350" y1="170" x2="350" y2="180" stroke="#888"/>
+            <text x="345" y="198" font-size="12" fill="#b03a3a">0.7</text>
+            <text x="395" y="80" font-size="12" fill="#2563eb">正向导通</text>
+            <text x="305" y="160" font-size="11" fill="#888">死区</text>
+            <text x="150" y="160" font-size="12" fill="#2659a8">反向截止</text>
+            <text x="40" y="250" font-size="12" fill="#b03a3a">反向击穿</text>
+            <text x="120" y="250" font-size="11" fill="#888">U(BR)</text>
+            <defs>
+              <marker id="a2" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#888"/></marker>
+            </defs>
+          </svg>
+          <figcaption>图 2&nbsp;&nbsp;二极管伏安特性曲线（硅管死区电压约 0.5&nbsp;V，导通压降约 0.7&nbsp;V）</figcaption>
+        </figure>
+
+        <h3>2.2 三种等效模型（分析的关键工具）</h3>
+        <p>实际计算中，把二极管这条非线性曲线替换成简单的「直线段电路」，由简到繁分三档：</p>
+        <table>
+          <caption>表 2&nbsp;&nbsp;二极管等效模型对比</caption>
+          <thead><tr><th scope="col">模型</th><th scope="col">导通条件</th><th scope="col">导通时等效</th><th scope="col">适用场合</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">理想模型</th><td>u&gt;0</td><td>短路（压降 0）</td><td>信号幅度远大于 0.7&nbsp;V</td></tr>
+            <tr><th scope="row">恒压降模型</th><td>u&ge;0.7&nbsp;V</td><td>0.7&nbsp;V 电压源</td><td><mark>工程估算最常用</mark></td></tr>
+            <tr><th scope="row">折线模型</th><td>u&ge;U<sub>th</sub></td><td>0.5&nbsp;V 电压源 + 串联电阻 r<sub>D</sub></td><td>要求较精确</td></tr>
+          </tbody>
+        </table>
+
+        <h3>2.3 典型应用</h3>
+        <dl>
+          <dt>整流</dt><dd>利用单向导电把交流变脉动直流，半波整流（1 管）、桥式全波整流（4 管）是开关电源、充电器的入口电路。</dd>
+          <dt>限幅 / 钳位</dt><dd>把信号幅度限制在某范围内，或把波形某一电平「钳」到固定值，保护后级电路。</dd>
+          <dt>检波 / 开关</dt><dd>高频信号取包络（检波），或在数字电路中作为单向通路。</dd>
+        </dl>
+
+        <h3>2.4 稳压二极管与特殊二极管</h3>
+        <aside class="note">
+          <strong>稳压管（齐纳二极管）</strong>工作在<strong>反向击穿区</strong>：只要不超过额定功率，反向击穿是可逆的，
+          且击穿后电流大幅变化时端电压几乎不变——利用这一点实现稳压。使用时必须<strong>串联限流电阻</strong>，否则会热击穿损坏。
+        </aside>
+        <ul>
+          <li><strong>发光二极管 LED</strong>：正向导通时发光，压降约 1.8~3&nbsp;V，需串限流电阻。</li>
+          <li><strong>光电二极管</strong>：反偏，受光照产生光电流，用于光检测。</li>
+          <li><strong>变容二极管</strong>：利用反偏时结电容随电压变化，用于调谐与压控振荡。</li>
+        </ul>
+      </section>
+
+      <!-- ============ 第三章 ============ -->
+      <section id="ch3">
+        <h2>三、双极型三极管（BJT）</h2>
+        <p>三极管是模电的「核心放大器件」，用小电流控制大电流，实现电流放大，进而实现电压、功率放大。</p>
+
+        <h3>3.1 结构与电流分配</h3>
+        <p>
+          BJT 由两个 PN 结、三个区构成：<strong>发射区(E)、基区(B)、集电区(C)</strong>，分 NPN、PNP 两类。
+          实现放大的内部条件：发射区<strong>掺杂浓度高</strong>、基区<strong>很薄且掺杂低</strong>、集电结<strong>面积大</strong>。
+          外部条件：<mark>发射结正偏、集电结反偏</mark>。
+        </p>
+
+        <figure>
+          <svg width="600" height="250" viewBox="0 0 600 250" role="img" aria-label="NPN 三极管电流分配示意：发射极电流分为基极与集电极电流">
+            <rect x="60" y="90" width="90" height="70" fill="#e3effd" stroke="#5b8fd6"/>
+            <rect x="150" y="90" width="40" height="70" fill="#fde8e8" stroke="#d97777"/>
+            <rect x="190" y="90" width="160" height="70" fill="#e3effd" stroke="#5b8fd6"/>
+            <text x="105" y="130" text-anchor="middle" font-size="14" fill="#2659a8">N (E)</text>
+            <text x="170" y="130" text-anchor="middle" font-size="12" fill="#b03a3a">P(B)</text>
+            <text x="270" y="130" text-anchor="middle" font-size="14" fill="#2659a8">N (C)</text>
+            <line x1="60" y1="125" x2="20" y2="125" stroke="#444" stroke-width="2" marker-start="url(#a3)"/>
+            <text x="20" y="115" font-size="13" fill="#444">I<tspan baseline-shift="sub">E</tspan></text>
+            <line x1="170" y1="160" x2="170" y2="210" stroke="#444" stroke-width="2" marker-end="url(#a3e)"/>
+            <text x="178" y="205" font-size="13" fill="#444">I<tspan baseline-shift="sub">B</tspan> (小)</text>
+            <line x1="350" y1="125" x2="400" y2="125" stroke="#444" stroke-width="2" marker-end="url(#a3e)"/>
+            <text x="405" y="120" font-size="13" fill="#444">I<tspan baseline-shift="sub">C</tspan> (大)</text>
+            <text x="300" y="40" text-anchor="middle" font-size="14" fill="#1d4ed8">I_E = I_B + I_C，&nbsp;&nbsp;I_C = β·I_B</text>
+            <text x="300" y="235" text-anchor="middle" font-size="12" fill="#666">基区薄 → 大部分电子越过基区被集电极收集</text>
+            <defs>
+              <marker id="a3" markerWidth="9" markerHeight="9" refX="2" refY="3" orient="auto"><path d="M7,0 L0,3 L7,6 Z" fill="#444"/></marker>
+              <marker id="a3e" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#444"/></marker>
+            </defs>
+          </svg>
+          <figcaption>图 3&nbsp;&nbsp;NPN 三极管电流分配：<var>I</var><sub>E</sub> = <var>I</var><sub>B</sub> + <var>I</var><sub>C</sub></figcaption>
+        </figure>
+
+        <p>电流放大系数：</p>
+        <p class="eq">直流：<var>β̄</var> = <var>I</var><sub>C</sub> / <var>I</var><sub>B</sub>&nbsp;&nbsp;&nbsp;&nbsp;交流：<var>β</var> = Δ<var>I</var><sub>C</sub> / Δ<var>I</var><sub>B</sub></p>
+
+        <h3>3.2 三个工作区</h3>
+        <table>
+          <caption>表 3&nbsp;&nbsp;三极管三种工作状态（NPN）</caption>
+          <thead><tr><th scope="col">状态</th><th scope="col">发射结</th><th scope="col">集电结</th><th scope="col">特征</th><th scope="col">用途</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">放大区</th><td>正偏</td><td>反偏</td><td>I<sub>C</sub>=βI<sub>B</sub>，恒流</td><td>线性放大</td></tr>
+            <tr><th scope="row">饱和区</th><td>正偏</td><td>正偏</td><td>U<sub>CE</sub>≈0.3&nbsp;V，I<sub>C</sub>不再受 I<sub>B</sub>控制</td><td>开关「开」</td></tr>
+            <tr><th scope="row">截止区</th><td>反偏</td><td>反偏</td><td>I<sub>C</sub>≈0</td><td>开关「关」</td></tr>
+          </tbody>
+        </table>
+
+        <h3>3.3 特性曲线与主要参数</h3>
+        <figure>
+          <svg width="560" height="300" viewBox="0 0 560 300" role="img" aria-label="三极管输出特性曲线，含截止、放大、饱和三个区">
+            <line x1="70" y1="250" x2="520" y2="250" stroke="#888" stroke-width="1.5" marker-end="url(#a4)"/>
+            <line x1="70" y1="250" x2="70" y2="30" stroke="#888" stroke-width="1.5" marker-end="url(#a4)"/>
+            <text x="515" y="270" font-size="12" fill="#555">U<tspan baseline-shift="sub">CE</tspan>/V</text>
+            <text x="30" y="40" font-size="12" fill="#555">I<tspan baseline-shift="sub">C</tspan></text>
+            <path d="M70,250 Q95,90 130,80 L510,68" fill="none" stroke="#2563eb" stroke-width="2"/>
+            <path d="M70,250 Q95,150 130,142 L510,132" fill="none" stroke="#2563eb" stroke-width="2"/>
+            <path d="M70,250 Q95,205 130,198 L510,192" fill="none" stroke="#2563eb" stroke-width="2"/>
+            <text x="515" y="70" font-size="11" fill="#2563eb">I_B3</text>
+            <text x="515" y="134" font-size="11" fill="#2563eb">I_B2</text>
+            <text x="515" y="194" font-size="11" fill="#2563eb">I_B1</text>
+            <line x1="130" y1="40" x2="130" y2="250" stroke="#bbb" stroke-dasharray="4 4"/>
+            <text x="95" y="285" font-size="11" fill="#b45309">饱和区</text>
+            <text x="300" y="285" font-size="11" fill="#1d4ed8">放大区</text>
+            <text x="300" y="245" font-size="11" fill="#888">I_B=0 截止区</text>
+            <defs><marker id="a4" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#888"/></marker></defs>
+          </svg>
+          <figcaption>图 4&nbsp;&nbsp;输出特性曲线：放大区内 <var>I</var><sub>C</sub> 几乎只受 <var>I</var><sub>B</sub> 控制（恒流特性）</figcaption>
+        </figure>
+        <dl>
+          <dt>主要参数</dt>
+          <dd><strong>电流放大系数 β</strong>（几十~几百）、<strong>极间反向电流 I<sub>CBO</sub>/I<sub>CEO</sub></strong>（穿透电流，受温度影响大）。</dd>
+          <dd><strong>极限参数</strong>：集电极最大电流 I<sub>CM</sub>、最大反向电压 U<sub>(BR)CEO</sub>、最大功耗 P<sub>CM</sub>，三者围成「安全工作区」。</dd>
+          <dt>温度的影响</dt>
+          <dd>温度升高 → β 增大、I<sub>CBO</sub> 增大、U<sub>BE</sub> 减小（约 &minus;2&nbsp;mV/℃）→ 静态工作点漂移，这是放大电路必须「稳定 Q 点」的原因。</dd>
+        </dl>
+      </section>
+
+      <!-- ============ 第四章 ============ -->
+      <section id="ch4">
+        <h2>四、场效应管（FET）</h2>
+        <p>
+          场效应管是<strong>电压控制</strong>器件——用栅源电压 <var>u</var><sub>GS</sub> 控制漏极电流，几乎不取栅极电流，
+          因此<strong>输入电阻极高</strong>（可达 10<sup>9</sup>&nbsp;Ω 以上）。它是 MOS 集成电路、CPU、功率开关（MOSFET）的基础。
+        </p>
+
+        <h3>4.1 分类</h3>
+        <ul>
+          <li><strong>结型场效应管 JFET</strong>：靠反偏 PN 结的耗尽层宽度控制沟道。</li>
+          <li><strong>绝缘栅型 MOSFET</strong>：栅极用 SiO₂ 绝缘，分增强型（需 U<sub>GS</sub> 才形成沟道）与耗尽型（零偏即有沟道），又各分 N 沟道、P 沟道。</li>
+        </ul>
+
+        <h3>4.2 N 沟道增强型 MOSFET（最常用）</h3>
+        <p>
+          当 <var>u</var><sub>GS</sub> 超过<strong>开启电压 U<sub>GS(th)</sub></strong> 时，栅极正电压在衬底感应出 N 型反型层（导电沟道），漏极才有电流。
+          其工作区分为：可变电阻区（深三极管区）、<strong>恒流区（放大用）</strong>、夹断/截止区。
+        </p>
+
+        <h3>4.3 FET 与 BJT 对比</h3>
+        <table>
+          <caption>表 4&nbsp;&nbsp;场效应管 vs 双极型三极管</caption>
+          <thead><tr><th scope="col">对比项</th><th scope="col">BJT（三极管）</th><th scope="col">FET（场效应管）</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">控制方式</th><td>电流控制（I<sub>B</sub>）</td><td>电压控制（U<sub>GS</sub>）</td></tr>
+            <tr><th scope="row">输入电阻</th><td>较低（几百 Ω~几 kΩ）</td><td>极高</td></tr>
+            <tr><th scope="row">载流子</th><td>多子+少子（双极）</td><td>仅多子（单极）</td></tr>
+            <tr><th scope="row">噪声/温度</th><td>噪声稍大</td><td>噪声小、热稳定好</td></tr>
+            <tr><th scope="row">对应电极</th><td>B / E / C</td><td>G / S / D</td></tr>
+          </tbody>
+        </table>
+        <aside class="tip"><strong>记忆：</strong>G(栅)↔B(基)、S(源)↔E(射)、D(漏)↔C(集)，三种放大组态也一一对应（共源↔共射、共漏↔共集、共栅↔共基）。</aside>
+      </section>
+
+      <!-- ============ 第五章 ============ -->
+      <section id="ch5">
+        <h2>五、基本放大电路</h2>
+        <p class="lead">这是模电的<strong>重中之重</strong>。核心套路：先算<strong>静态（直流）</strong>定工作点 Q，再算<strong>动态（交流）</strong>求增益、输入/输出电阻。</p>
+
+        <h3>5.1 共射放大电路的组成</h3>
+        <figure>
+          <svg width="520" height="320" viewBox="0 0 520 320" role="img" aria-label="共射放大电路原理图：含基极偏置电阻、集电极电阻、耦合电容和三极管">
+            <line x1="80" y1="40" x2="440" y2="40" stroke="#444" stroke-width="2"/>
+            <text x="448" y="44" font-size="12" fill="#b03a3a">+V_CC</text>
+            <line x1="150" y1="40" x2="150" y2="90" stroke="#444" stroke-width="2"/>
+            <rect x="140" y="90" width="20" height="45" fill="#fff" stroke="#444"/>
+            <text x="120" y="118" font-size="12" fill="#444">R_b</text>
+            <line x1="150" y1="135" x2="150" y2="165" stroke="#444" stroke-width="2"/>
+            <line x1="360" y1="40" x2="360" y2="90" stroke="#444" stroke-width="2"/>
+            <rect x="350" y="90" width="20" height="45" fill="#fff" stroke="#444"/>
+            <text x="375" y="118" font-size="12" fill="#444">R_c</text>
+            <line x1="360" y1="135" x2="360" y2="165" stroke="#444" stroke-width="2"/>
+            <!-- transistor -->
+            <line x1="150" y1="165" x2="230" y2="165" stroke="#444" stroke-width="2"/>
+            <line x1="250" y1="120" x2="250" y2="210" stroke="#444" stroke-width="3"/>
+            <line x1="230" y1="165" x2="250" y2="165" stroke="#444" stroke-width="2"/>
+            <line x1="250" y1="140" x2="360" y2="165" stroke="#444" stroke-width="2"/>
+            <line x1="250" y1="190" x2="250" y2="260" stroke="#444" stroke-width="2"/>
+            <polygon points="250,250 245,238 256,242" fill="#444"/>
+            <text x="262" y="135" font-size="12" fill="#444">C</text>
+            <text x="262" y="205" font-size="12" fill="#444">E</text>
+            <text x="215" y="158" font-size="12" fill="#444">B</text>
+            <!-- input cap -->
+            <line x1="60" y1="165" x2="95" y2="165" stroke="#444" stroke-width="2"/>
+            <line x1="105" y1="150" x2="105" y2="180" stroke="#444" stroke-width="2"/>
+            <line x1="113" y1="150" x2="113" y2="180" stroke="#444" stroke-width="2"/>
+            <line x1="113" y1="165" x2="150" y2="165" stroke="#444" stroke-width="2"/>
+            <text x="92" y="143" font-size="12" fill="#444">C1</text>
+            <text x="40" y="170" font-size="12" fill="#2563eb">u_i</text>
+            <!-- output cap -->
+            <line x1="360" y1="165" x2="395" y2="165" stroke="#444" stroke-width="2"/>
+            <line x1="405" y1="150" x2="405" y2="180" stroke="#444" stroke-width="2"/>
+            <line x1="413" y1="150" x2="413" y2="180" stroke="#444" stroke-width="2"/>
+            <line x1="413" y1="165" x2="450" y2="165" stroke="#444" stroke-width="2"/>
+            <text x="398" y="143" font-size="12" fill="#444">C2</text>
+            <text x="455" y="170" font-size="12" fill="#b03a3a">u_o</text>
+            <!-- ground -->
+            <line x1="80" y1="290" x2="450" y2="290" stroke="#444" stroke-width="2"/>
+            <line x1="250" y1="260" x2="250" y2="290" stroke="#444" stroke-width="2"/>
+            <line x1="60" y1="165" x2="60" y2="290" stroke="#444" stroke-width="2"/>
+            <line x1="450" y1="165" x2="450" y2="290" stroke="#444" stroke-width="2"/>
+            <text x="255" y="305" font-size="11" fill="#666">公共地</text>
+          </svg>
+          <figcaption>图 5&nbsp;&nbsp;基本共射放大电路：C1、C2 为耦合电容（隔直流通交流），Rb 设偏置，Rc 把电流变化转成电压输出</figcaption>
+        </figure>
+
+        <h3>5.2 静态分析（直流通路，电容开路）</h3>
+        <p class="eq">
+          <var>I</var><sub>B</sub> = (<var>V</var><sub>CC</sub> &minus; <var>U</var><sub>BE</sub>) / <var>R</var><sub>b</sub>&nbsp;,&nbsp;&nbsp;
+          <var>I</var><sub>C</sub> = <var>β</var><var>I</var><sub>B</sub>&nbsp;,&nbsp;&nbsp;
+          <var>U</var><sub>CE</sub> = <var>V</var><sub>CC</sub> &minus; <var>I</var><sub>C</sub><var>R</var><sub>c</sub>
+        </p>
+        <p>这组数值 (I<sub>B</sub>, I<sub>C</sub>, U<sub>CE</sub>) 就是<strong>静态工作点 Q</strong>。Q 必须设在放大区中央，否则信号会被「削顶（饱和失真）」或「削底（截止失真）」。</p>
+
+        <h3>5.3 动态分析（微变等效电路法）</h3>
+        <p>在小信号下，把三极管在 Q 点附近线性化为一个受控源模型：基极-发射极间等效为 <var>r</var><sub>be</sub>，集电极等效为受控电流源 <var>βi</var><sub>b</sub>。</p>
+        <p class="eq"><var>r</var><sub>be</sub> ≈ 200&nbsp;Ω + (1+<var>β</var>) · 26&nbsp;mV / <var>I</var><sub>E</sub>(mA)</p>
+        <p>由此求得共射放大电路的核心指标：</p>
+        <p class="eq">
+          电压增益&nbsp;<var>A</var><sub>u</sub> = &minus;<var>β</var>(<var>R</var><sub>c</sub>∥<var>R</var><sub>L</sub>) / <var>r</var><sub>be</sub>
+        </p>
+        <aside class="note"><strong>负号</strong>表示共射电路<strong>输出与输入反相</strong>（180°）。这是共射组态的标志性特征。</aside>
+        <p class="eq">
+          输入电阻&nbsp;<var>R</var><sub>i</sub> = <var>R</var><sub>b</sub> ∥ <var>r</var><sub>be</sub>&nbsp;&nbsp;&nbsp;&nbsp;
+          输出电阻&nbsp;<var>R</var><sub>o</sub> ≈ <var>R</var><sub>c</sub>
+        </p>
+
+        <h3>5.4 静态工作点的稳定——分压式偏置电路</h3>
+        <p>
+          温度变化会使 Q 点漂移。<strong>分压式偏置（射极偏置）电路</strong>用 R<sub>b1</sub>、R<sub>b2</sub> 分压固定基极电位 U<sub>B</sub>，
+          再用射极电阻 R<sub>e</sub> 引入<strong>直流负反馈</strong>：温度↑→I<sub>C</sub>↑→U<sub>E</sub>↑→U<sub>BE</sub>↓→I<sub>B</sub>↓→抑制 I<sub>C</sub> 上升，从而稳住 Q 点。
+          R<sub>e</sub> 并联旁路电容 C<sub>e</sub>，保证交流增益不受损。
+        </p>
+
+        <h3>5.5 三种基本组态对比</h3>
+        <table>
+          <caption>表 5&nbsp;&nbsp;共射、共集、共基组态特点</caption>
+          <thead><tr><th scope="col">组态</th><th scope="col">电压增益</th><th scope="col">相位</th><th scope="col">输入电阻</th><th scope="col">输出电阻</th><th scope="col">用途</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">共射 CE</th><td>大</td><td>反相</td><td>中</td><td>中</td><td>电压放大主力</td></tr>
+            <tr><th scope="row">共集 CC（射极跟随器）</th><td>≈1</td><td>同相</td><td>高</td><td>低</td><td>缓冲/阻抗变换/输出级</td></tr>
+            <tr><th scope="row">共基 CB</th><td>大</td><td>同相</td><td>低</td><td>中</td><td>高频放大</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ============ 第六章 ============ -->
+      <section id="ch6">
+        <h2>六、放大电路的频率响应</h2>
+        <p>
+          放大倍数并非对所有频率都相同。由于电容的存在，增益在高、低频两端都会下降。把增益（dB）与相位随频率（对数）变化画出来，就是<strong>波特图</strong>。
+        </p>
+        <dl>
+          <dt>低频段下降的原因</dt>
+          <dd><strong>耦合电容、旁路电容</strong>的容抗随频率降低而增大，分压使增益下降，决定<strong>下限频率 f<sub>L</sub></strong>。</dd>
+          <dt>高频段下降的原因</dt>
+          <dd>三极管<strong>极间电容（结电容）、密勒效应</strong>使高频信号被旁路，决定<strong>上限频率 f<sub>H</sub></strong>。</dd>
+          <dt>通频带</dt>
+          <dd><var>BW</var> = <var>f</var><sub>H</sub> &minus; <var>f</var><sub>L</sub>，即增益下降到中频值 0.707 倍（&minus;3&nbsp;dB）之间的频率范围。</dd>
+        </dl>
+        <aside class="tip"><strong>增益带宽积近似恒定：</strong>放大倍数越高，带宽往往越窄。多级放大时，总下限频率升高、总上限频率降低，<strong>总带宽变窄</strong>。</aside>
+      </section>
+
+      <!-- ============ 第七章 ============ -->
+      <section id="ch7">
+        <h2>七、差分放大与集成运算放大器</h2>
+
+        <h3>7.1 差分放大电路——直接耦合的基石</h3>
+        <p>
+          集成电路内部无法做大电容，多级间采用<strong>直接耦合</strong>，由此带来<strong>零点漂移</strong>问题。
+          差分放大电路用<strong>两个对称的管子</strong>，对<strong>差模信号（两输入之差）放大</strong>、对<strong>共模信号（两输入相同部分，含漂移、干扰）抑制</strong>，巧妙解决了零漂。
+        </p>
+        <p class="eq">共模抑制比&nbsp;<var>K</var><sub>CMR</sub> = | <var>A</var><sub>d</sub> / <var>A</var><sub>c</sub> |&nbsp;（越大越好）</p>
+        <p>射极接<strong>恒流源</strong>可大幅提高对共模信号的抑制能力，是集成运放输入级的标准结构。</p>
+
+        <h3>7.2 集成运放的组成与理想化</h3>
+        <p>集成运放内部一般为：<strong>输入级（差分）→ 中间级（高增益共射）→ 输出级（互补射极跟随器）→ 偏置电路（电流源）</strong>。对外可视为一个高增益直流放大器，有同相端(+)、反相端(&minus;)和输出端。</p>
+
+        <figure>
+          <svg width="420" height="200" viewBox="0 0 420 200" role="img" aria-label="集成运放符号，含同相输入、反相输入和输出">
+            <polygon points="120,40 120,160 300,100" fill="#eef4ff" stroke="#2563eb" stroke-width="2"/>
+            <line x1="70" y1="70" x2="120" y2="70" stroke="#444" stroke-width="2"/>
+            <line x1="70" y1="130" x2="120" y2="130" stroke="#444" stroke-width="2"/>
+            <line x1="300" y1="100" x2="360" y2="100" stroke="#444" stroke-width="2"/>
+            <text x="130" y="76" font-size="18" fill="#b03a3a">&minus;</text>
+            <text x="130" y="138" font-size="18" fill="#2563eb">+</text>
+            <text x="45" y="74" font-size="13" fill="#444">u<tspan baseline-shift="sub">-</tspan></text>
+            <text x="45" y="134" font-size="13" fill="#444">u<tspan baseline-shift="sub">+</tspan></text>
+            <text x="365" y="105" font-size="13" fill="#444">u<tspan baseline-shift="sub">o</tspan></text>
+            <text x="180" y="105" font-size="22" fill="#2563eb">&#8734;</text>
+          </svg>
+          <figcaption>图 6&nbsp;&nbsp;集成运放电路符号（∞ 表示理想开环增益无穷大）</figcaption>
+        </figure>
+
+        <h3>7.3 理想运放与「虚短、虚断」</h3>
+        <p>分析含运放电路时，做两条理想化假设（开环增益 A<sub>od</sub>→∞、输入电阻→∞、输出电阻→0）：</p>
+        <dl>
+          <dt>虚短（线性区，有负反馈时）</dt>
+          <dd>因增益无穷大而输出有限，故两输入端电压几乎相等：<var>u</var><sub>+</sub> ≈ <var>u</var><sub>-</sub>。若同相端接地，则反相端为「<strong>虚地</strong>」。</dd>
+          <dt>虚断</dt>
+          <dd>因输入电阻无穷大，两输入端电流几乎为零：<var>i</var><sub>+</sub> = <var>i</var><sub>-</sub> ≈ 0。</dd>
+        </dl>
+        <aside class="note"><strong>这两条是分析一切运放运算电路的「万能钥匙」</strong>——绝大多数运算电路的公式都由「虚短+虚断」两步推出。注意：虚短只在<strong>负反馈、工作于线性区</strong>时成立；开环或正反馈（如比较器）时不成立。</aside>
+      </section>
+
+      <!-- ============ 第八章 ============ -->
+      <section id="ch8">
+        <h2>八、负反馈放大电路</h2>
+        <p>把输出量的一部分送回输入端，与输入反向叠加，就是<strong>负反馈</strong>。它以牺牲增益为代价，换取放大器各项性能的全面改善，是几乎所有实用放大器的核心。</p>
+
+        <figure>
+          <svg width="520" height="180" viewBox="0 0 520 180" role="img" aria-label="负反馈方框图：输入经比较环节进入基本放大A，输出经反馈网络F返回">
+            <circle cx="110" cy="80" r="22" fill="#fff" stroke="#444" stroke-width="2"/>
+            <text x="110" y="86" text-anchor="middle" font-size="16" fill="#444">&#931;</text>
+            <text x="92" y="68" font-size="13" fill="#2563eb">+</text>
+            <text x="92" y="110" font-size="13" fill="#b03a3a">&minus;</text>
+            <rect x="200" y="55" width="90" height="50" fill="#eef4ff" stroke="#2563eb" stroke-width="2"/>
+            <text x="245" y="86" text-anchor="middle" font-size="16" fill="#1d4ed8">A</text>
+            <rect x="200" y="125" width="90" height="40" fill="#fef3e8" stroke="#d97706" stroke-width="2"/>
+            <text x="245" y="150" text-anchor="middle" font-size="16" fill="#b45309">F</text>
+            <line x1="30" y1="80" x2="88" y2="80" stroke="#444" stroke-width="2" marker-end="url(#a5)"/>
+            <text x="40" y="70" font-size="12" fill="#444">x_i</text>
+            <line x1="132" y1="80" x2="200" y2="80" stroke="#444" stroke-width="2" marker-end="url(#a5)"/>
+            <text x="160" y="70" font-size="12" fill="#444">x_id</text>
+            <line x1="290" y1="80" x2="470" y2="80" stroke="#444" stroke-width="2" marker-end="url(#a5)"/>
+            <text x="450" y="70" font-size="12" fill="#444">x_o</text>
+            <line x1="400" y1="80" x2="400" y2="145" stroke="#444" stroke-width="2"/>
+            <line x1="400" y1="145" x2="290" y2="145" stroke="#444" stroke-width="2" marker-end="url(#a5)"/>
+            <line x1="200" y1="145" x2="110" y2="145" stroke="#444" stroke-width="2"/>
+            <line x1="110" y1="145" x2="110" y2="102" stroke="#444" stroke-width="2" marker-end="url(#a5)"/>
+            <text x="150" y="140" font-size="12" fill="#b45309">x_f</text>
+            <defs><marker id="a5" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#444"/></marker></defs>
+          </svg>
+          <figcaption>图 7&nbsp;&nbsp;负反馈方框图，闭环增益 <var>A</var><sub>f</sub> = <var>A</var> / (1 + <var>AF</var>)</figcaption>
+        </figure>
+
+        <p class="eq">闭环增益&nbsp;<var>A</var><sub>f</sub> = <var>A</var> / (1 + <var>A</var><var>F</var>)&nbsp;&nbsp;&nbsp;其中 (1+<var>AF</var>) 称为反馈深度</p>
+        <p>当 <var>AF</var> &gt;&gt; 1（深度负反馈）时，<var>A</var><sub>f</sub> ≈ 1/<var>F</var>，<strong>增益几乎只由反馈网络（无源元件）决定，与器件参数无关</strong>——这正是运算电路精度高、稳定的根本。</p>
+
+        <h3>8.1 四种反馈组态</h3>
+        <p>按<strong>输出端取样方式</strong>（电压/电流）和<strong>输入端比较方式</strong>（串联/并联）组合成四类：</p>
+        <table>
+          <caption>表 6&nbsp;&nbsp;四种负反馈组态及其作用</caption>
+          <thead><tr><th scope="col">组态</th><th scope="col">取样</th><th scope="col">比较</th><th scope="col">稳定量</th><th scope="col">对电阻影响</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">电压串联</th><td>电压</td><td>串联</td><td>稳定输出电压</td><td>R<sub>i</sub>↑，R<sub>o</sub>↓</td></tr>
+            <tr><th scope="row">电流串联</th><td>电流</td><td>串联</td><td>稳定输出电流</td><td>R<sub>i</sub>↑，R<sub>o</sub>↑</td></tr>
+            <tr><th scope="row">电压并联</th><td>电压</td><td>并联</td><td>稳定输出电压</td><td>R<sub>i</sub>↓，R<sub>o</sub>↓</td></tr>
+            <tr><th scope="row">电流并联</th><td>电流</td><td>并联</td><td>稳定输出电流</td><td>R<sub>i</sub>↓，R<sub>o</sub>↑</td></tr>
+          </tbody>
+        </table>
+        <aside class="tip">
+          <strong>判别口诀：</strong>取样——反馈取自输出端节点是「电压」，取自输出回路电流是「电流」（看反馈线是否与负载并联）；
+          比较——反馈信号与输入信号接在<strong>同一节点</strong>是「并联」，接在<strong>不同节点</strong>是「串联」。正负反馈用<strong>瞬时极性法</strong>判断。
+        </aside>
+
+        <h3>8.2 负反馈对性能的改善</h3>
+        <ul>
+          <li>提高增益<strong>稳定性</strong>（增益变化被压缩 1+AF 倍）；</li>
+          <li><strong>展宽通频带</strong>、减小<strong>非线性失真</strong>与噪声（同样被压缩 1+AF 倍）；</li>
+          <li>按组态<strong>改变输入/输出电阻</strong>（串联升 R<sub>i</sub>、电压降 R<sub>o</sub>……）。</li>
+        </ul>
+        <aside class="note"><strong>代价与风险：</strong>增益下降；且在深度负反馈下，若附加相移在某频率达 180°，负反馈可能变成正反馈而<strong>自激振荡</strong>。需用相位裕度判断稳定性，必要时加「相位补偿」电容。</aside>
+      </section>
+
+      <!-- ============ 第九章 ============ -->
+      <section id="ch9">
+        <h2>九、运算电路（运放的线性应用）</h2>
+        <p>在运放外接电阻、电容构成深度负反馈，利用「虚短+虚断」即可实现各种数学运算。下表的公式都可由两步推出，建议自己动手验证。</p>
+        <table>
+          <caption>表 7&nbsp;&nbsp;常用运算电路一览</caption>
+          <thead><tr><th scope="col">电路</th><th scope="col">输出表达式</th><th scope="col">要点</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">反相比例</th><td><var>u</var><sub>o</sub> = &minus;(R<sub>f</sub>/R<sub>1</sub>)·u<sub>i</sub></td><td>反相端虚地，R<sub>i</sub>=R<sub>1</sub></td></tr>
+            <tr><th scope="row">同相比例</th><td><var>u</var><sub>o</sub> = (1+R<sub>f</sub>/R<sub>1</sub>)·u<sub>i</sub></td><td>R<sub>i</sub> 极高，同相不反号</td></tr>
+            <tr><th scope="row">电压跟随器</th><td><var>u</var><sub>o</sub> = u<sub>i</sub></td><td>同相比例的特例，做缓冲</td></tr>
+            <tr><th scope="row">反相加法</th><td><var>u</var><sub>o</sub> = &minus;(R<sub>f</sub>/R<sub>1</sub>·u<sub>1</sub> + R<sub>f</sub>/R<sub>2</sub>·u<sub>2</sub>)</td><td>多路信号求和</td></tr>
+            <tr><th scope="row">减法（差分）</th><td><var>u</var><sub>o</sub> ∝ (u<sub>2</sub> &minus; u<sub>1</sub>)</td><td>测量、仪表放大器</td></tr>
+            <tr><th scope="row">积分器</th><td><var>u</var><sub>o</sub> = &minus;(1/RC)∫u<sub>i</sub>&nbsp;dt</td><td>反馈用电容，波形发生</td></tr>
+            <tr><th scope="row">微分器</th><td><var>u</var><sub>o</sub> = &minus;RC·du<sub>i</sub>/dt</td><td>输入端用电容，对突变敏感</td></tr>
+          </tbody>
+        </table>
+        <details>
+          <summary>示例：用虚短+虚断推导反相比例电路</summary>
+          <p>同相端接地 → 虚短得反相端电位 u<sub>-</sub>=0（虚地）。虚断 → 流入运放电流为零，故 R<sub>1</sub> 电流全部流过 R<sub>f</sub>：
+          (u<sub>i</sub>&minus;0)/R<sub>1</sub> = (0&minus;u<sub>o</sub>)/R<sub>f</sub>，整理即得 <var>u</var><sub>o</sub> = &minus;(R<sub>f</sub>/R<sub>1</sub>)·u<sub>i</sub>。</p>
+        </details>
+        <p>此外，运放配 RC 网络还能构成<strong>有源滤波器</strong>（低通/高通/带通），相比无源滤波具有增益且不受负载影响。</p>
+      </section>
+
+      <!-- ============ 第十章 ============ -->
+      <section id="ch10">
+        <h2>十、信号发生与功率放大</h2>
+
+        <h3>10.1 正弦波振荡电路</h3>
+        <p>振荡器是「不加输入也能自己产生周期信号」的电路，本质是<strong>带正反馈的放大器</strong>。维持等幅正弦振荡需同时满足：</p>
+        <dl>
+          <dt>幅值条件</dt><dd>|<var>AF</var>| = 1（起振时需略大于 1，靠非线性自动稳幅）。</dd>
+          <dt>相位条件</dt><dd>∠<var>AF</var> = 2nπ，即反馈必须是<strong>正反馈</strong>（总相移为 0 或 360°的整数倍）。</dd>
+        </dl>
+        <p>组成上需有：放大电路、正反馈网络、<strong>选频网络</strong>（决定频率）、稳幅环节。常见类型：</p>
+        <ul>
+          <li><strong>RC 桥式（文氏桥）振荡器</strong>：用 RC 串并联选频，适合低频（几 Hz~几百 kHz），波形好。</li>
+          <li><strong>LC 振荡器</strong>（变压器反馈、电感三点式、电容三点式）：适合高频。</li>
+          <li><strong>石英晶体振荡器</strong>：频率极稳定，用于时钟、通信。</li>
+        </ul>
+
+        <h3>10.2 非正弦波 / 电压比较器</h3>
+        <p>
+          运放<strong>开环或正反馈</strong>时工作于非线性区（虚短不再成立），输出只在正、负饱和之间跳变，构成<strong>电压比较器</strong>。
+          加正反馈的<strong>迟滞比较器（施密特触发器）</strong>有两个门限，抗干扰强；配合积分器可产生<strong>方波-三角波</strong>。
+        </p>
+
+        <h3>10.3 功率放大电路</h3>
+        <p>功放的任务是向负载（扬声器、电机）输出<strong>足够大的功率</strong>，关注的是效率、最大输出功率和失真，而非电压增益。</p>
+        <table>
+          <caption>表 8&nbsp;&nbsp;功放工作类别</caption>
+          <thead><tr><th scope="col">类别</th><th scope="col">导通角</th><th scope="col">效率（理论）</th><th scope="col">失真</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">甲类(A)</th><td>360°</td><td>≤25%（阻容）/50%（变压器）</td><td>小</td></tr>
+            <tr><th scope="row">乙类(B)</th><td>180°</td><td>≤78.5%</td><td>有交越失真</td></tr>
+            <tr><th scope="row">甲乙类(AB)</th><td>略&gt;180°</td><td>接近乙类</td><td><mark>小，工程首选</mark></td></tr>
+          </tbody>
+        </table>
+        <p>
+          <strong>互补对称功放（OCL/OTL）</strong>用 NPN+PNP 两管轮流推挽工作：OCL 为双电源、无输出电容；OTL 为单电源、靠大电容耦合输出。
+          乙类存在<strong>交越失真</strong>（信号过零附近两管都不导通），实际采用<strong>甲乙类</strong>——给两管一点微导通偏置（如二极管/U<sub>BE</sub> 倍增电路）即可消除。
+        </p>
+        <aside class="tip"><strong>功放安全：</strong>功率管发热严重，必须考虑散热（散热片）与二次击穿，并核算 P<sub>CM</sub>、I<sub>CM</sub>、U<sub>(BR)CEO</sub> 三个极限参数。</aside>
+      </section>
+
+      <!-- ============ 小结 ============ -->
+      <section id="summary">
+        <h2>学习路线小结</h2>
+        <ol>
+          <li><strong>打地基</strong>：理解 PN 结单向导电 → 二极管 → 三极管/场效应管的伏安特性与三个工作区。器件是后续一切的物理基础。</li>
+          <li><strong>练核心</strong>：吃透共射放大电路的「先静态定 Q、再动态求增益」两步法，掌握微变等效电路。这是全课程的计算主线。</li>
+          <li><strong>上台阶</strong>：差分放大 → 集成运放 → 牢记「虚短虚断」，从此分立器件思维升级为系统思维。</li>
+          <li><strong>串全局</strong>：负反馈贯穿始终（稳定 Q 点、改善性能、构成运算电路），振荡是正反馈，功放是大信号——它们都是放大与反馈思想的延伸。</li>
+        </ol>
+        <aside class="note">
+          <strong>一句话总览：</strong>模电就是围绕「<strong>放大</strong>」展开——用器件实现放大，用反馈驯服放大，用运放标准化放大，最后让放大去做运算、产生信号、输出功率。
+        </aside>
+      </section>
+
+      <section id="source">
+        <h2>来源</h2>
+        <p>本笔记内容整理自 B 站「工控圈」搬运的《模拟电子技术基础》（上海交通大学）课程，共 45 讲：</p>
+        <p><a href="https://www.bilibili.com/video/BV1SKVo6kEuT/" target="_blank" rel="noopener">bilibili.com/video/BV1SKVo6kEuT</a></p>
+        <p class="lead">文中所有插图均为配合知识点自绘的 SVG 示意图（非视频截图），公式与结论按通用模电教材体系整理，仅供个人学习交流使用。</p>
+      </section>
+
+    </article>
+    </main>
+  </div>
+
+  <a class="backtop" href="#main" aria-label="回到顶部">&uarr;</a>
+
+  <footer class="site">
+    <p>&copy; 2026 江楠的学习日志 · 用语义化 HTML 构建 · <a href="index.html">返回首页</a></p>
+  </footer>
+</body>
+</html>
