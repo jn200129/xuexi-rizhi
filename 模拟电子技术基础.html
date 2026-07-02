@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="江楠">
   <meta name="description" content="《模拟电子技术基础》(上海交通大学) 完整学习笔记：从半导体器件、放大电路、集成运放、负反馈到信号发生与功率放大的系统整理，含自绘 SVG 示意图。江楠的学习日志。">
-  <meta name="keywords" content="模拟电子技术,模电,PN结,二极管,三极管,BJT,场效应管,MOSFET,放大电路,共射,微变等效,频率响应,差分放大,集成运放,虚短虚断,负反馈,运算电路,正弦振荡,功率放大,OCL">
+  <meta name="keywords" content="模拟电子技术,模电,PN结,二极管,雪崩击穿,齐纳击穿,稳压二极管,温度特性,三极管,BJT,场效应管,MOSFET,放大电路,共射,微变等效,频率响应,差分放大,集成运放,虚短虚断,负反馈,运算电路,正弦振荡,功率放大,OCL">
   <title>模拟电子技术基础（上交大）完整笔记 — 江楠的学习日志</title>
   <style>
     :root{
@@ -164,7 +164,7 @@
             <tbody>
               <tr><td>01</td><td>绪论</td><td>课程概述</td></tr>
               <tr><td>02</td><td>PN 结的形成</td><td>一、1.3</td></tr>
-              <tr><td>03</td><td>PN 与二极管的特性</td><td>二、2.1</td></tr>
+              <tr><td>03</td><td>PN 与二极管的特性</td><td>一、1.4 / 二、2.1</td></tr>
               <tr><td>04</td><td>二极管的直流等效电路</td><td>二、2.2</td></tr>
               <tr><td>05</td><td>二极管的微变等效和稳压二极管</td><td>二、2.2 / 2.4</td></tr>
               <tr><td>06</td><td>双极晶体管的结构与放大原理</td><td>三、3.1</td></tr>
@@ -187,7 +187,7 @@
               <tr><td>30~32</td><td>反馈判断方法、负反馈方块图</td><td>八、8.1</td></tr>
               <tr><td>33~35</td><td>深度负反馈、对性能的影响、稳定性</td><td>八、8.2 / 8.3</td></tr>
               <tr><td>36~38</td><td>基本运算电路、模拟乘法器应用</td><td>九</td></tr>
-              <tr><td>39</td><td>仪表用放大器</td><td>九、9.3</td></tr>
+              <tr><td>39</td><td>仪表用放大器</td><td>九、9.2</td></tr>
               <tr><td>40~41</td><td>RC / LC 正弦波振荡电路</td><td>十、10.1</td></tr>
               <tr><td>42~43</td><td>电压比较器</td><td>十、10.2</td></tr>
               <tr><td>44~45</td><td>锯齿波发生、波形转换与信号转换电路</td><td>十、10.4</td></tr>
@@ -274,6 +274,17 @@
           <dd>外电场加强内电场 → 耗尽层变宽 → 仅少子形成微弱<strong>反向饱和电流</strong>，近似截止。</dd>
         </dl>
         <p><strong>结论——单向导电性：</strong>PN 结正向导通、反向截止，这是二极管一切应用的根基。</p>
+
+        <h3>1.4 PN 结的电容效应</h3>
+        <p>PN 结上存储的电荷会随外加电压变化，表现出电容效应，这是限制器件<strong>高频性能</strong>的根源：</p>
+        <dl>
+          <dt>势垒电容 C<sub>b</sub></dt>
+          <dd>耗尽层像平行板电容的介质：反向电压增大 → 耗尽层变宽 → C<sub>b</sub> 减小。<strong>反偏时起主导</strong>，且随电压可调——<strong>变容二极管</strong>（2.4 节）正是利用这一点做电调谐。</dd>
+          <dt>扩散电容 C<sub>d</sub></dt>
+          <dd>正向导通时，扩散到对方区域的非平衡少子形成电荷积累，其数量随正向电压变化。<strong>正偏时起主导</strong>，且随电流增大而增大。</dd>
+        </dl>
+        <p class="eq">结电容&nbsp;<var>C</var><sub>j</sub> = <var>C</var><sub>b</sub> + <var>C</var><sub>d</sub></p>
+        <aside class="note"><strong>为什么重要：</strong>高频时结电容的容抗变小，把信号「旁路」掉，单向导电性变差——这正是第六章三极管混合 Π 模型中 C<sub>π</sub>、C<sub>μ</sub> 限制放大电路上限频率 f<sub>H</sub> 的物理来源；开关电路中它也决定了二极管的<strong>反向恢复时间</strong>。</aside>
       </section>
 
       <!-- ============ 第二章 ============ -->
@@ -308,7 +319,38 @@
           <figcaption>图 2&nbsp;&nbsp;二极管伏安特性曲线（硅管死区电压约 0.5&nbsp;V，导通压降约 0.7&nbsp;V）</figcaption>
         </figure>
 
-        <h3>2.2 三种等效模型（分析的关键工具）</h3>
+        <h4>反向击穿的两种机理：雪崩击穿与齐纳击穿</h4>
+        <p>
+          反向电压增大到击穿电压 <var>U</var><sub>(BR)</sub> 时，反向电流急剧增大，称为<strong>反向击穿</strong>。
+          按物理机理分为两种，二者都属于<strong>电击穿</strong>——只要外电路限制了电流、不超过额定功耗，撤去电压后 PN 结即可恢复，是<strong>可逆</strong>的；
+          若电流过大导致结温过高把 PN 结烧毁，则是不可逆的<strong>热击穿</strong>。
+        </p>
+        <table>
+          <caption>表 2-1&nbsp;&nbsp;雪崩击穿与齐纳击穿对比</caption>
+          <thead>
+            <tr><th scope="col">对比项</th><th scope="col">雪崩击穿（Avalanche）</th><th scope="col">齐纳击穿（Zener）</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">发生条件</th><td>掺杂浓度较<strong>低</strong>，耗尽层<strong>宽</strong></td><td>掺杂浓度<strong>高</strong>，耗尽层<strong>很薄</strong></td></tr>
+            <tr><th scope="row">物理机理</th><td>少子在宽耗尽层内被强电场加速，获得足够动能<strong>碰撞</strong>共价键电子，产生新的电子-空穴对，新载流子再被加速再碰撞——<strong>倍增效应</strong>如雪崩般连锁放大</td><td>耗尽层极薄，不大的反压即可形成极强电场（&gt;2&times;10<sup>7</sup>&nbsp;V/m），直接把共价键中的价电子<strong>「场致拉出」</strong>产生大量电子-空穴对（场致激发/隧道效应）</td></tr>
+            <tr><th scope="row">击穿电压</th><td>较高（一般 &gt;7&nbsp;V）</td><td>较低（一般 &lt;4&nbsp;V）</td></tr>
+            <tr><th scope="row">温度系数</th><td><strong>正</strong>：温度↑→晶格振动加剧→载流子自由程变短、不易积累动能→需更高电压才击穿</td><td><strong>负</strong>：温度↑→价电子能量升高→更易被电场拉出→击穿电压降低</td></tr>
+          </tbody>
+        </table>
+        <aside class="tip">
+          <strong>记忆：</strong>4&nbsp;V 以下齐纳、7&nbsp;V 以上雪崩，<strong>4~7&nbsp;V 之间两种机理并存</strong>——正负温度系数相互抵消，
+          所以稳压值在 5~6&nbsp;V 附近的稳压管温度稳定性最好（这正是 6&nbsp;V 左右基准源常见的原因）。
+        </aside>
+
+        <h4>二极管的温度特性</h4>
+        <p>二极管对温度敏感，本质是<strong>少子浓度随温度指数增长</strong>（见 1.1/1.2）。工程上记住三条：</p>
+        <ul>
+          <li><strong>正向压降</strong>：温度每升高 1&nbsp;℃，正向导通压降<strong>减小约 2~2.5&nbsp;mV</strong>（负温度系数）——即同一电流下曲线左移；这一特性也被反过来用作温度传感器。</li>
+          <li><strong>反向饱和电流 I<sub>S</sub></strong>：温度每升高 <strong>10&nbsp;℃约增大一倍</strong>，故高温下「反向截止」会明显漏电（硅管远好于锗管）。</li>
+          <li><strong>击穿电压</strong>：随温度的变化取决于击穿机理——雪崩击穿正温度系数、齐纳击穿负温度系数（见上表）。</li>
+        </ul>
+
+        <h3>2.2 四种等效模型（分析的关键工具）</h3>
         <p>实际计算中，把二极管这条非线性曲线替换成简单的「直线段电路」，由简到繁分三档：</p>
         <table>
           <caption>表 2&nbsp;&nbsp;二极管等效模型对比</caption>
@@ -317,8 +359,22 @@
             <tr><th scope="row">理想模型</th><td>u&gt;0</td><td>短路（压降 0）</td><td>信号幅度远大于 0.7&nbsp;V</td></tr>
             <tr><th scope="row">恒压降模型</th><td>u&ge;0.7&nbsp;V</td><td>0.7&nbsp;V 电压源</td><td><mark>工程估算最常用</mark></td></tr>
             <tr><th scope="row">折线模型</th><td>u&ge;U<sub>th</sub></td><td>0.5&nbsp;V 电压源 + 串联电阻 r<sub>D</sub></td><td>要求较精确</td></tr>
+            <tr><th scope="row">微变（小信号）模型</th><td>已在 Q 点正向导通</td><td>一个动态电阻 r<sub>d</sub></td><td>直流上叠加<mark>微小交流信号</mark>时</td></tr>
           </tbody>
         </table>
+
+        <h4>微变等效模型（第 5 讲重点）</h4>
+        <p>
+          当二极管上除直流偏置外还叠加了一个<strong>幅度很小的交流信号</strong>时，工作点只在静态工作点 Q 附近微小摆动，
+          这一小段曲线可近似为直线——对这个交流小信号而言，二极管就等效为一个电阻，称为<strong>动态电阻（微变电阻）r<sub>d</sub></strong>，
+          其值是伏安特性曲线<strong>在 Q 点处切线斜率的倒数</strong>。对二极管方程求导可得：
+        </p>
+        <p class="eq"><var>r</var><sub>d</sub> = <var>U</var><sub>T</sub> / <var>I</var><sub>DQ</sub> ≈ 26&nbsp;mV / <var>I</var><sub>DQ</sub>(mA)&nbsp;&nbsp;（常温）</p>
+        <aside class="note">
+          <strong>要点：</strong>① r<sub>d</sub> 不是常数，<strong>随 Q 点电流增大而减小</strong>（1&nbsp;mA 时约 26&nbsp;Ω，2.6&nbsp;mA 时约 10&nbsp;Ω）；
+          ② 分析套路是「<strong>先直流求 Q 点 → 再把二极管换成 r<sub>d</sub> 算交流</strong>」——这正是第五章三极管微变等效电路法的雏形，
+          三极管的 r<sub>be</sub> 公式（5.4 节）中的 26&nbsp;mV/I<sub>E</sub> 一项就来源于发射结的这个动态电阻。
+        </aside>
 
         <h3>2.3 典型应用</h3>
         <dl>
@@ -329,9 +385,31 @@
 
         <h3>2.4 稳压二极管与特殊二极管</h3>
         <aside class="note">
-          <strong>稳压管（齐纳二极管）</strong>工作在<strong>反向击穿区</strong>：只要不超过额定功率，反向击穿是可逆的，
-          且击穿后电流大幅变化时端电压几乎不变——利用这一点实现稳压。使用时必须<strong>串联限流电阻</strong>，否则会热击穿损坏。
+          <strong>稳压管（齐纳二极管）</strong>工作在<strong>反向击穿区</strong>：只要不超过额定功率，反向击穿（电击穿）是可逆的，
+          且击穿后电流大幅变化时端电压几乎不变——伏安曲线在击穿区<strong>非常陡直</strong>，利用这一点实现稳压。
+          使用时必须<strong>串联限流电阻</strong>，否则会因电流失控发展为热击穿而损坏。
         </aside>
+
+        <h4>稳压管的主要参数</h4>
+        <dl>
+          <dt>稳定电压 U<sub>Z</sub></dt>
+          <dd>规定电流下的击穿电压，即输出的「稳压值」。同型号存在分散性，但对每一只管子是确定的。</dd>
+          <dt>稳定电流 I<sub>Z</sub> 与最大稳定电流 I<sub>ZM</sub></dt>
+          <dd>I<sub>Z</sub> 是正常稳压的<strong>最小</strong>工作电流（低于它曲线不够陡、稳压效果差）；I<sub>ZM</sub> 由额定功耗决定。工作电流必须落在 <strong>I<sub>Z</sub> ~ I<sub>ZM</sub></strong> 之间。</dd>
+          <dt>动态电阻 r<sub>Z</sub> = ΔU<sub>Z</sub>/ΔI<sub>Z</sub></dt>
+          <dd>击穿区曲线越陡 r<sub>Z</sub> 越小（几 Ω ~ 几十 Ω），稳压性能越好。</dd>
+          <dt>额定功耗 P<sub>ZM</sub> = U<sub>Z</sub>·I<sub>ZM</sub></dt>
+          <dd>超过则由电击穿转为热击穿而烧毁。</dd>
+          <dt>温度系数 α</dt>
+          <dd>由击穿机理决定（见表 2-1）：<strong>U<sub>Z</sub>&lt;4&nbsp;V（齐纳击穿）为负、U<sub>Z</sub>&gt;7&nbsp;V（雪崩击穿）为正、5~6&nbsp;V 附近最小</strong>，故要求温度稳定的基准常选 6&nbsp;V 左右的稳压管，或用正温度系数稳压管与正向二极管（&minus;2&nbsp;mV/℃）串联补偿。</dd>
+        </dl>
+
+        <h4>典型稳压电路</h4>
+        <p>
+          输入直流电压 U<sub>I</sub> 经限流电阻 R 接稳压管（<strong>反接</strong>：阴极接高电位），负载 R<sub>L</sub> 与稳压管<strong>并联</strong>取电压。
+          稳压过程是一个自动调节：U<sub>I</sub> 升高（或负载电流减小）→ U<sub>O</sub> 略升 → 稳压管电流<strong>急剧</strong>增大 → R 上压降增大 → 把多余电压「吃掉」，U<sub>O</sub>≈U<sub>Z</sub> 基本不变。
+          设计时校验两个边界：<strong>U<sub>I</sub> 最高且负载最轻时不超 I<sub>ZM</sub>；U<sub>I</sub> 最低且负载最重时不低于 I<sub>Z</sub></strong>。
+        </p>
         <ul>
           <li><strong>发光二极管 LED</strong>：正向导通时发光，压降约 1.8~3&nbsp;V，需串限流电阻。</li>
           <li><strong>光电二极管</strong>：反偏，受光照产生光电流，用于光检测。</li>
@@ -390,6 +468,12 @@
         </table>
 
         <h3>3.3 特性曲线与主要参数</h3>
+        <p>
+          <strong>输入特性</strong> <var>i</var><sub>B</sub>~<var>u</var><sub>BE</sub>（固定 U<sub>CE</sub>）：形状与二极管正向特性相同（发射结就是一个正偏 PN 结），
+          硅管死区约 0.5&nbsp;V、导通后 U<sub>BE</sub>≈0.7&nbsp;V。U<sub>CE</sub> 从 0 增大时曲线<strong>右移</strong>；
+          U<sub>CE</sub>&gt;1&nbsp;V 后集电结已充分反偏、基区复合电流基本定型，曲线不再明显移动——所以通常只画 U<sub>CE</sub>≥1&nbsp;V 一条。
+        </p>
+        <p><strong>输出特性</strong> <var>i</var><sub>C</sub>~<var>u</var><sub>CE</sub>（固定 I<sub>B</sub>）：一族曲线，分三个区（见图 4）。</p>
         <figure>
           <svg width="560" height="300" viewBox="0 0 560 300" role="img" aria-label="三极管输出特性曲线，含截止、放大、饱和三个区">
             <line x1="70" y1="250" x2="520" y2="250" stroke="#888" stroke-width="1.5" marker-end="url(#a4)"/>
@@ -412,7 +496,7 @@
         </figure>
         <dl>
           <dt>主要参数</dt>
-          <dd><strong>电流放大系数 β</strong>（几十~几百）、<strong>极间反向电流 I<sub>CBO</sub>/I<sub>CEO</sub></strong>（穿透电流，受温度影响大）。</dd>
+          <dd><strong>电流放大系数 β</strong>（几十~几百）、<strong>极间反向电流 I<sub>CBO</sub>/I<sub>CEO</sub></strong>（受温度影响大）。二者关系：<strong>I<sub>CEO</sub> = (1+β)·I<sub>CBO</sub></strong>——基极开路时集-射间的「穿透电流」是 I<sub>CBO</sub> 被放大 (1+β) 倍的结果，故 β 大的管子温度稳定性反而差。</dd>
           <dd><strong>极限参数</strong>：集电极最大电流 I<sub>CM</sub>、最大反向电压 U<sub>(BR)CEO</sub>、最大功耗 P<sub>CM</sub>，三者围成「安全工作区」。</dd>
           <dt>温度的影响</dt>
           <dd>温度升高 → β 增大、I<sub>CBO</sub> 增大、U<sub>BE</sub> 减小（约 &minus;2&nbsp;mV/℃）→ 静态工作点漂移，这是放大电路必须「稳定 Q 点」的原因。</dd>
@@ -439,7 +523,26 @@
           其工作区分为：可变电阻区（深三极管区）、<strong>恒流区（放大用）</strong>、夹断/截止区。
         </p>
 
-        <h3>4.3 FET 与 BJT 对比</h3>
+        <h3>4.3 特性曲线与主要参数（第 8~9 讲）</h3>
+        <p>FET 用两组曲线描述（对应 BJT 的输入/输出特性）：</p>
+        <dl>
+          <dt>转移特性 i<sub>D</sub>~u<sub>GS</sub>（固定 u<sub>DS</sub>）</dt>
+          <dd>体现「电压控电流」。恒流区内近似为平方律：
+            <strong>增强型 MOS</strong>：<var>i</var><sub>D</sub> = K(<var>u</var><sub>GS</sub> &minus; U<sub>GS(th)</sub>)²；
+            <strong>JFET / 耗尽型</strong>：<var>i</var><sub>D</sub> = I<sub>DSS</sub>(1 &minus; <var>u</var><sub>GS</sub>/U<sub>GS(off)</sub>)²，
+            其中 I<sub>DSS</sub> 为 u<sub>GS</sub>=0 时的饱和漏极电流，U<sub>GS(off)</sub> 为夹断电压。</dd>
+          <dt>输出特性 i<sub>D</sub>~u<sub>DS</sub>（固定 u<sub>GS</sub>）</dt>
+          <dd>一族曲线，分<strong>可变电阻区</strong>（u<sub>DS</sub> 小，i<sub>D</sub> 随 u<sub>DS</sub> 近似线性，可作压控电阻）、<strong>恒流区</strong>（放大用，对应 BJT 放大区）、<strong>截止区</strong>与击穿区。</dd>
+        </dl>
+        <p>主要参数：</p>
+        <ul>
+          <li><strong>开启电压 U<sub>GS(th)</sub></strong>（增强型）/ <strong>夹断电压 U<sub>GS(off)</sub></strong>（耗尽型、JFET）：形成/夹断沟道的临界栅源电压。</li>
+          <li><strong>低频跨导 g<sub>m</sub> = Δi<sub>D</sub>/Δu<sub>GS</sub></strong>（单位 mS）：转移特性在 Q 点的斜率，衡量栅压对漏流的控制力，是 FET 小信号模型的核心参数（地位相当于 BJT 的 β），恒流区内 g<sub>m</sub> 随 I<sub>DQ</sub> 增大而增大。</li>
+          <li><strong>直流输入电阻 R<sub>GS</sub></strong>：JFET &gt;10<sup>7</sup>&nbsp;Ω，MOS 管可达 10<sup>9</sup>~10<sup>15</sup>&nbsp;Ω。</li>
+        </ul>
+        <aside class="tip"><strong>使用注意：</strong>MOS 管栅极与沟道间隔着极薄的 SiO₂，输入电阻又极高，感应的静电电荷无处泄放，<strong>极易静电击穿</strong>——存放时应使三个电极短接，焊接时烙铁要良好接地，切勿悬空栅极。</aside>
+
+        <h3>4.4 FET 与 BJT 对比</h3>
         <table>
           <caption>表 4&nbsp;&nbsp;场效应管 vs 双极型三极管</caption>
           <thead><tr><th scope="col">对比项</th><th scope="col">BJT（三极管）</th><th scope="col">FET（场效应管）</th></tr></thead>
@@ -596,6 +699,13 @@
             <tr><th scope="row">共基 CB</th><td>大</td><td>同相</td><td>低</td><td>中</td><td>高频放大</td></tr>
           </tbody>
         </table>
+        <p>共集电路（射极跟随器，第 15 讲）的定量结果值得单独记住（R<sub>L</sub>′=R<sub>e</sub>∥R<sub>L</sub>）：</p>
+        <p class="eq">
+          <var>A</var><sub>u</sub> = (1+<var>β</var>)R<sub>L</sub>′ / [r<sub>be</sub>+(1+<var>β</var>)R<sub>L</sub>′] ≈ 1（略小于 1，同相）<br>
+          <var>R</var><sub>i</sub> = R<sub>b</sub> ∥ [r<sub>be</sub>+(1+<var>β</var>)R<sub>L</sub>′]（大）&nbsp;&nbsp;&nbsp;
+          <var>R</var><sub>o</sub> ≈ (r<sub>be</sub>+R<sub>s</sub>′) / (1+<var>β</var>)（小）
+        </p>
+        <aside class="note"><strong>规律：</strong>发射极回路的电阻折算到基极回路要<strong>乘 (1+β)</strong>，基极回路的电阻折算到发射极回路要<strong>除 (1+β)</strong>——这条「阻抗折算」规则贯穿共集、共基与差分电路的计算。</aside>
         <aside class="tip"><strong>场效应管放大电路</strong>（第 16 讲）与 BJT 一一对应：共源（≈共射，电压放大）、共漏（≈共集，源极跟随器，高输入阻抗缓冲）、共栅（≈共基，高频）。分析方法相同：先用 <var>u</var><sub>GS</sub> 定 Q，再用跨导 <var>g</var><sub>m</sub> 建小信号模型，共源增益 <var>A</var><sub>u</sub>=&minus;<var>g</var><sub>m</sub>(R<sub>d</sub>∥R<sub>L</sub>)。</aside>
 
         <h3>5.7 派生电路（组合放大电路）</h3>
@@ -634,6 +744,13 @@
           <dt>通频带</dt>
           <dd><var>BW</var> = <var>f</var><sub>H</sub> &minus; <var>f</var><sub>L</sub>，即增益下降到中频值 0.707 倍（&minus;3&nbsp;dB）之间的频率范围。</dd>
         </dl>
+        <p>估算方法：每个电容与它「看进去」的回路等效电阻 R 构成一阶 RC 环节，转折频率都是同一个公式：</p>
+        <p class="eq"><var>f</var> = 1 / (2π<var>R</var><var>C</var>)</p>
+        <ul>
+          <li>耦合/旁路电容与回路电阻构成<strong>高通</strong> → 各自给出一个下限频率，取<strong>最高</strong>者为 f<sub>L</sub>（常由容量小、回路电阻小的旁路电容 C<sub>e</sub> 决定）；</li>
+          <li>结电容/杂散电容与等效电阻构成<strong>低通</strong> → 各自给出一个上限频率，取<strong>最低</strong>者为 f<sub>H</sub>。</li>
+        </ul>
+        <p>在转折频率处增益恰好下降 3&nbsp;dB，相位产生 ±45° 附加相移；远离转折频率后每十倍频变化 ±20&nbsp;dB、相移趋向 ±90°。</p>
 
         <h3>6.1 高频分析工具：混合 Π 模型</h3>
         <p>
@@ -694,6 +811,21 @@
           </svg>
           <figcaption>图 6&nbsp;&nbsp;集成运放电路符号（∞ 表示理想开环增益无穷大）</figcaption>
         </figure>
+
+        <h4>集成运放的主要性能参数</h4>
+        <table>
+          <caption>表 7-2&nbsp;&nbsp;实际运放偏离理想的程度用这些参数衡量（括号内为通用型典型值）</caption>
+          <thead><tr><th scope="col">参数</th><th scope="col">含义</th><th scope="col">影响</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">开环差模增益 A<sub>od</sub></th><td>无反馈时的差模电压增益（10<sup>5</sup> 以上，约 100&nbsp;dB）</td><td>越大，「虚短」近似越准</td></tr>
+            <tr><th scope="row">共模抑制比 K<sub>CMR</sub></th><td>差模增益与共模增益之比（80~120&nbsp;dB）</td><td>越大，抗共模干扰/温漂越强</td></tr>
+            <tr><th scope="row">输入失调电压 U<sub>IO</sub> / 失调电流 I<sub>IO</sub></th><td>输入级不完全对称，使输出为零所需在输入端补加的电压/电流（mV / nA 级）</td><td>直流精度的主要误差源，且随温度漂移</td></tr>
+            <tr><th scope="row">输入偏置电流 I<sub>IB</sub></th><td>两输入端静态基极电流的平均值</td><td>流过外接电阻产生附加误差（两输入端外接等效电阻应平衡）</td></tr>
+            <tr><th scope="row">转换速率 SR</th><td>输出电压的最大变化速率（V/μs）</td><td><strong>大信号</strong>快速变化时的极限，不够则输出变「斜坡」失真</td></tr>
+            <tr><th scope="row">单位增益带宽 f<sub>T</sub>（GBW）</th><td>开环增益降到 1 时的频率</td><td><strong>小信号</strong>带宽极限：闭环增益 × 带宽 ≈ 常数</td></tr>
+          </tbody>
+        </table>
+        <aside class="tip"><strong>选型直觉:</strong>做直流/传感器小信号 → 盯 U<sub>IO</sub>、I<sub>IB</sub>、K<sub>CMR</sub>（精密运放）；做高频/快沿 → 盯 GBW、SR（高速运放）。理想化分析（虚短虚断）在深度负反馈的中低频下几乎总是够用。</aside>
 
         <h3>7.3 电流源电路与有源负载（镜像电流源）</h3>
         <p>
@@ -817,12 +949,30 @@
           <li><strong>展宽通频带</strong>、减小<strong>非线性失真</strong>与噪声（同样被压缩 1+AF 倍）；</li>
           <li>按组态<strong>改变输入/输出电阻</strong>（串联升 R<sub>i</sub>、电压降 R<sub>o</sub>……）。</li>
         </ul>
-        <aside class="note"><strong>代价与风险：</strong>增益下降；且在深度负反馈下，若附加相移在某频率达 180°，负反馈可能变成正反馈而<strong>自激振荡</strong>。需用相位裕度判断稳定性，必要时加「相位补偿」电容。</aside>
+        <aside class="note"><strong>代价：</strong>各项改善都以增益下降为交换——被压缩的倍数与改善的倍数同为 (1+AF)。「性能不会凭空变好，只是用多余的增益去换」。</aside>
+
+        <h3>8.3 负反馈放大电路的稳定性（第 35 讲）</h3>
+        <p>
+          负反馈电路自带隐患：放大电路在高/低频段有<strong>附加相移</strong>（每个极点最多贡献 90°，见第六章）。
+          若在某个频率上附加相移达到 <strong>&minus;180°</strong>，反馈信号就从「反相抵消」变成「同相增强」——负反馈变成了正反馈；
+          此时若环路增益幅值仍 <strong>|AF| ≥ 1</strong>，电路便无输入也能输出，发生<strong>自激振荡</strong>（这两个条件恰是第十章振荡器故意满足的条件）。
+        </p>
+        <dl>
+          <dt>判稳方法（环路增益 AF 的波特图）</dt>
+          <dd>找两个特征频率：|AF|=1（0&nbsp;dB）处的 <var>f</var><sub>c</sub>，和附加相移 = &minus;180° 处的 <var>f</var><sub>180</sub>。
+          <strong>f<sub>c</sub> &lt; f<sub>180</sub> 则稳定</strong>（幅值先掉到 1，相位还没转够）；f<sub>c</sub> &gt; f<sub>180</sub> 则自激。</dd>
+          <dt>相位裕度 γ</dt>
+          <dd>γ = 180° &minus; |∠AF(f<sub>c</sub>)|。工程上要求 <strong>γ ≥ 45°</strong>，留有余量才能保证接上各种负载、温度变化后仍不振、且阶跃响应不过分振铃。</dd>
+          <dt>消振：相位补偿</dt>
+          <dd>在电路内加补偿电容（简单滞后补偿、RC 滞后补偿、<strong>密勒补偿</strong>等），人为制造一个低频主极点，让 |AF| 提前跌到 0&nbsp;dB——用带宽换稳定。多数通用运放（如 741）内部已做「内补偿」，任意闭环增益下都稳定。</dd>
+        </dl>
+        <aside class="tip"><strong>经验：</strong>三级及以上放大器深度负反馈最容易自激（三个极点能凑满 180°）；反馈越深（F 越大）越危险。若示波器上看到电路「无输入却有高频正弦输出」，先怀疑自激，检查补偿与布线寄生电容。</aside>
       </section>
 
       <!-- ============ 第九章 ============ -->
       <section id="ch9">
         <h2>九、运算电路（运放的线性应用）</h2>
+        <h3>9.1 基本运算电路</h3>
         <p>在运放外接电阻、电容构成深度负反馈，利用「虚短+虚断」即可实现各种数学运算。下表的公式都可由两步推出，建议自己动手验证。</p>
         <table>
           <caption>表 7&nbsp;&nbsp;常用运算电路一览</caption>
@@ -835,8 +985,11 @@
             <tr><th scope="row">减法（差分）</th><td><var>u</var><sub>o</sub> ∝ (u<sub>2</sub> &minus; u<sub>1</sub>)</td><td>测量、仪表放大器</td></tr>
             <tr><th scope="row">积分器</th><td><var>u</var><sub>o</sub> = &minus;(1/RC)∫u<sub>i</sub>&nbsp;dt</td><td>反馈用电容，波形发生</td></tr>
             <tr><th scope="row">微分器</th><td><var>u</var><sub>o</sub> = &minus;RC·du<sub>i</sub>/dt</td><td>输入端用电容，对突变敏感</td></tr>
+            <tr><th scope="row">对数运算</th><td><var>u</var><sub>o</sub> = &minus;U<sub>T</sub>·ln[u<sub>i</sub>/(I<sub>S</sub>R)]</td><td>反馈支路用二极管/三极管（利用其指数特性）</td></tr>
+            <tr><th scope="row">指数（反对数）运算</th><td><var>u</var><sub>o</sub> = &minus;I<sub>S</sub>R·e<sup>u<sub>i</sub>/U<sub>T</sub></sup></td><td>把二极管/三极管移到输入支路，与对数电路互逆</td></tr>
           </tbody>
         </table>
+        <aside class="note"><strong>思想：</strong>反相输入组态下「<strong>输出表达式由反馈支路元件的伏安特性决定</strong>」——反馈用电阻得比例、用电容得积分、用 PN 结得对数；把非线性元件放输入支路则得到反函数（指数）。对数+加法+指数级联即可实现乘法——这正是模拟乘法器（9.3）的一种实现思路。</aside>
         <details>
           <summary>示例：用虚短+虚断推导反相比例电路</summary>
           <p>同相端接地 → 虚短得反相端电位 u<sub>-</sub>=0（虚地）。虚断 → 流入运放电流为零，故 R<sub>1</sub> 电流全部流过 R<sub>f</sub>：
@@ -879,12 +1032,28 @@
           <li><strong>LC 振荡器</strong>（变压器反馈、电感三点式、电容三点式）：适合高频。</li>
           <li><strong>石英晶体振荡器</strong>：频率极稳定，用于时钟、通信。</li>
         </ul>
-
-        <h3>10.2 非正弦波 / 电压比较器</h3>
-        <p>
-          运放<strong>开环或正反馈</strong>时工作于非线性区（虚短不再成立），输出只在正、负饱和之间跳变，构成<strong>电压比较器</strong>。
-          加正反馈的<strong>迟滞比较器（施密特触发器）</strong>有两个门限，抗干扰强；配合积分器可产生<strong>方波-三角波</strong>。
+        <p><strong>RC 桥式（文氏桥）定量结果</strong>（第 40 讲）：RC 串并联网络在 <var>f</var><sub>0</sub> 处反馈系数最大为 <strong>F=1/3</strong> 且相移为 0，故放大部分用同相比例电路、增益略大于 3 即可起振：</p>
+        <p class="eq">
+          振荡频率&nbsp;<var>f</var><sub>0</sub> = 1/(2π<var>RC</var>)&nbsp;&nbsp;&nbsp;&nbsp;
+          起振条件&nbsp;<var>A</var><sub>u</sub> = 1 + R<sub>f</sub>/R<sub>1</sub> &gt; 3&nbsp;（即 R<sub>f</sub> 略大于 2R<sub>1</sub>）
         </p>
+        <p>稳幅靠反馈支路的非线性元件自动完成：如 R<sub>1</sub> 用正温度系数热敏电阻/钨丝灯泡，或 R<sub>f</sub> 并联二极管——幅度增大时增益自动回落到 3，输出稳定为低失真正弦波。</p>
+
+        <h3>10.2 电压比较器（第 42~43 讲）</h3>
+        <p>
+          运放<strong>开环或正反馈</strong>时工作于非线性区（<mark>虚短不再成立，虚断仍成立</mark>），输出只有正、负饱和值（±U<sub>OM</sub>）两种状态——
+          比较器就是「模拟量 → 开关量」的一位判决电路。分析方法固定：<strong>求出使 u<sub>+</sub>=u<sub>&minus;</sub> 的输入电压即阈值 U<sub>T</sub></strong>，再画输出对输入的<strong>电压传输特性</strong>（阶梯状折线）。
+        </p>
+        <table>
+          <caption>表 8-0&nbsp;&nbsp;三种常用电压比较器</caption>
+          <thead><tr><th scope="col">类型</th><th scope="col">结构</th><th scope="col">阈值</th><th scope="col">特点与用途</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">单限比较器</th><td>开环，一端接参考电压 U<sub>REF</sub>（U<sub>REF</sub>=0 为过零比较器）</td><td>1 个：U<sub>T</sub>=U<sub>REF</sub></td><td>电平检测、波形变换（正弦→方波）；缺点：输入在阈值附近的<strong>毛刺会使输出反复跳变</strong></td></tr>
+            <tr><th scope="row">迟滞比较器（施密特触发器）</th><td>输出经 R<sub>2</sub> 正反馈到<strong>同相端</strong></td><td>2 个：U<sub>T±</sub> = ±R<sub>1</sub>/(R<sub>1</sub>+R<sub>2</sub>)·U<sub>OM</sub>（对称过零型）</td><td>输出状态不同阈值也不同，形成回差（滞回）<strong>ΔU=U<sub>T+</sub>&minus;U<sub>T&minus;</sub></strong>；只要干扰幅度小于回差就不会误翻转，<mark>抗干扰强</mark>，是波形整形的标准电路</td></tr>
+            <tr><th scope="row">窗口比较器</th><td>两个单限比较器 + 逻辑合成</td><td>2 个：U<sub>TL</sub>、U<sub>TH</sub></td><td>判断输入是否落在区间内，用于电压监测、报警</td></tr>
+          </tbody>
+        </table>
+        <aside class="tip"><strong>回差是双刃剑：</strong>回差越大抗干扰越强，但比较精度越低（阈值不确定范围变大）——按干扰幅度选取。迟滞比较器配合<strong>积分器</strong>（或 RC 充放电）首尾相接，即可自激产生<strong>方波-三角波</strong>，见 10.4。</aside>
 
         <h3>10.3 功率放大电路</h3>
         <p>功放的任务是向负载（扬声器、电机）输出<strong>足够大的功率</strong>，关注的是效率、最大输出功率和失真，而非电压增益。</p>
@@ -901,6 +1070,16 @@
           <strong>互补对称功放（OCL/OTL）</strong>用 NPN+PNP 两管轮流推挽工作：OCL 为双电源、无输出电容；OTL 为单电源、靠大电容耦合输出。
           乙类存在<strong>交越失真</strong>（信号过零附近两管都不导通），实际采用<strong>甲乙类</strong>——给两管一点微导通偏置（如二极管/U<sub>BE</sub> 倍增电路）即可消除。
         </p>
+        <p><strong>OCL 的定量计算</strong>（电源 ±V<sub>CC</sub>，负载 R<sub>L</sub>，忽略管压降时输出幅度最大可达 V<sub>CC</sub>）：</p>
+        <p class="eq">
+          最大输出功率&nbsp;<var>P</var><sub>om</sub> = V<sub>CC</sub>² / (2R<sub>L</sub>)&nbsp;&nbsp;&nbsp;&nbsp;
+          效率&nbsp;<var>η</var> = (π/4)·(U<sub>om</sub>/V<sub>CC</sub>)，最大 π/4 ≈ 78.5%
+        </p>
+        <ul>
+          <li>考虑饱和压降时把 V<sub>CC</sub> 换成 (V<sub>CC</sub>&minus;U<sub>CES</sub>) 再代入。</li>
+          <li>单管最大管耗出现在 U<sub>om</sub>≈0.6V<sub>CC</sub>（<strong>不是</strong>满输出时！），约为 <strong>P<sub>Tmax</sub>≈0.2P<sub>om</sub></strong>——选功率管按此校核 P<sub>CM</sub>；耐压需 |U<sub>(BR)CEO</sub>|&gt;2V<sub>CC</sub>（一管导通时另一管承受两倍电源压）。</li>
+          <li>OTL 单电源 V<sub>CC</sub> 供电，输出中点静态在 V<sub>CC</sub>/2，公式里用 V<sub>CC</sub>/2 替代 V<sub>CC</sub>。</li>
+        </ul>
         <aside class="tip"><strong>功放安全：</strong>功率管发热严重，必须考虑散热（散热片）与二次击穿，并核算 P<sub>CM</sub>、I<sub>CM</sub>、U<sub>(BR)CEO</sub> 三个极限参数。</aside>
 
         <h3>10.4 波形产生与信号转换电路</h3>
@@ -934,7 +1113,7 @@
 
       <section id="source">
         <h2>来源</h2>
-        <p>本笔记内容整理自 B 站搬运的《模拟电子技术基础》（上海交通大学）课程，共 45 讲，并已<strong>逐讲对照课程大纲</strong>补充图解分析法、H 参数模型、混合 Π 模型与特征频率、镜像电流源与有源负载、派生/多级放大、仪表放大器、模拟乘法器、波形与信号转换等专题（逐讲索引见「课程概述」中的 45 讲对应表）：</p>
+        <p>本笔记内容整理自 B 站搬运的《模拟电子技术基础》（上海交通大学）课程，共 45 讲，并已<strong>逐讲对照课程大纲</strong>补充图解分析法、H 参数模型、混合 Π 模型与特征频率、镜像电流源与有源负载、派生/多级放大、仪表放大器、模拟乘法器、波形与信号转换，以及 PN 结电容、雪崩/齐纳击穿与温度特性、二极管微变等效、FET 特性曲线与跨导、共集电路计算、运放实际参数、负反馈稳定性判据、文氏桥与比较器、功放输出功率与效率等专题（逐讲索引见「课程概述」中的 45 讲对应表）：</p>
         <p><a href="https://www.bilibili.com/video/BV1SKVo6kEuT/" target="_blank" rel="noopener">bilibili.com/video/BV1SKVo6kEuT</a>（共 45 个分 P）</p>
         <p class="lead">文中所有插图均为配合知识点自绘的 SVG 示意图（非视频截图），公式与结论按通用模电教材体系整理，仅供个人学习交流使用。</p>
       </section>
