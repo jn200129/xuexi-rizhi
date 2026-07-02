@@ -363,6 +363,104 @@
           </tbody>
         </table>
 
+        <p>
+          <strong>建模思想：</strong>所谓「等效模型」，就是用<strong>分段直线</strong>去近似那条指数伏安曲线——直线段对应的电路只含理想开关、电压源、电阻三种元件，于是非线性问题变成了线性电路计算。
+          近似取得越细（理想 → 恒压降 → 折线），结果越准但计算越繁；<strong>选哪个模型，取决于信号幅度与 0.7&nbsp;V 相比是否可忽略</strong>。
+          前三种是「大信号（直流）模型」，回答「通不通、通了压降多少」；第四种微变模型只对<strong>叠加在 Q 点上的交流小信号</strong>负责，回答「曲线在 Q 点附近的斜率是多少」。
+        </p>
+        <figure>
+          <svg width="920" height="320" viewBox="0 0 920 320" role="img" aria-label="二极管四种等效模型：理想模型、恒压降模型、折线模型、微变小信号模型的伏安近似与等效电路">
+            <defs>
+              <marker id="am1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#888"/></marker>
+            </defs>
+            <!-- panel frames -->
+            <g font-size="13" font-weight="bold" fill="#1d4ed8" text-anchor="middle">
+              <text x="125" y="26">① 理想模型</text>
+              <text x="355" y="26">② 恒压降模型</text>
+              <text x="585" y="26">③ 折线模型</text>
+              <text x="815" y="26">④ 微变（小信号）模型</text>
+            </g>
+            <!-- ===== panel 1 ===== -->
+            <g>
+              <line x1="45" y1="120" x2="205" y2="120" stroke="#888" stroke-width="1.2" marker-end="url(#am1)"/>
+              <line x1="95" y1="150" x2="95" y2="45" stroke="#888" stroke-width="1.2" marker-end="url(#am1)"/>
+              <text x="205" y="136" font-size="10" fill="#555">u</text><text x="82" y="52" font-size="10" fill="#555">i</text>
+              <line x1="95" y1="120" x2="95" y2="55" stroke="#2563eb" stroke-width="2.5"/>
+              <line x1="50" y1="120" x2="95" y2="120" stroke="#2563eb" stroke-width="2.5"/>
+              <text x="103" y="70" font-size="10" fill="#2563eb">u&gt;0 即导通</text>
+              <!-- equiv: wire -->
+              <line x1="55" y1="215" x2="195" y2="215" stroke="#444" stroke-width="2"/>
+              <circle cx="55" cy="215" r="3" fill="#444"/><circle cx="195" cy="215" r="3" fill="#444"/>
+              <text x="48" y="203" font-size="11" fill="#444">A</text><text x="192" y="203" font-size="11" fill="#444">K</text>
+              <text x="125" y="240" text-anchor="middle" font-size="11" fill="#666">导通=短路（压降 0）</text>
+            </g>
+            <!-- ===== panel 2 ===== -->
+            <g>
+              <line x1="275" y1="120" x2="435" y2="120" stroke="#888" stroke-width="1.2" marker-end="url(#am1)"/>
+              <line x1="325" y1="150" x2="325" y2="45" stroke="#888" stroke-width="1.2" marker-end="url(#am1)"/>
+              <text x="435" y="136" font-size="10" fill="#555">u</text><text x="312" y="52" font-size="10" fill="#555">i</text>
+              <line x1="370" y1="120" x2="370" y2="55" stroke="#2563eb" stroke-width="2.5"/>
+              <line x1="280" y1="120" x2="370" y2="120" stroke="#2563eb" stroke-width="2.5"/>
+              <text x="362" y="136" font-size="10" fill="#b03a3a">0.7</text>
+              <!-- equiv: battery -->
+              <line x1="285" y1="215" x2="340" y2="215" stroke="#444" stroke-width="2"/>
+              <line x1="340" y1="198" x2="340" y2="232" stroke="#444" stroke-width="2.5"/>
+              <line x1="352" y1="206" x2="352" y2="224" stroke="#444" stroke-width="1.6"/>
+              <line x1="352" y1="215" x2="425" y2="215" stroke="#444" stroke-width="2"/>
+              <circle cx="285" cy="215" r="3" fill="#444"/><circle cx="425" cy="215" r="3" fill="#444"/>
+              <text x="278" y="203" font-size="11" fill="#444">A</text><text x="422" y="203" font-size="11" fill="#444">K</text>
+              <text x="330" y="192" font-size="10" fill="#444">+</text>
+              <text x="355" y="248" text-anchor="middle" font-size="11" fill="#666">导通=0.7&nbsp;V 电压源</text>
+            </g>
+            <!-- ===== panel 3 ===== -->
+            <g>
+              <line x1="505" y1="120" x2="665" y2="120" stroke="#888" stroke-width="1.2" marker-end="url(#am1)"/>
+              <line x1="555" y1="150" x2="555" y2="45" stroke="#888" stroke-width="1.2" marker-end="url(#am1)"/>
+              <text x="665" y="136" font-size="10" fill="#555">u</text><text x="542" y="52" font-size="10" fill="#555">i</text>
+              <line x1="510" y1="120" x2="590" y2="120" stroke="#2563eb" stroke-width="2.5"/>
+              <line x1="590" y1="120" x2="640" y2="58" stroke="#2563eb" stroke-width="2.5"/>
+              <text x="580" y="136" font-size="10" fill="#b03a3a">0.5</text>
+              <text x="640" y="82" font-size="10" fill="#2563eb">斜率=1/r_D</text>
+              <!-- equiv: battery + resistor -->
+              <line x1="500" y1="215" x2="540" y2="215" stroke="#444" stroke-width="2"/>
+              <line x1="540" y1="198" x2="540" y2="232" stroke="#444" stroke-width="2.5"/>
+              <line x1="552" y1="206" x2="552" y2="224" stroke="#444" stroke-width="1.6"/>
+              <line x1="552" y1="215" x2="576" y2="215" stroke="#444" stroke-width="2"/>
+              <rect x="576" y="207" width="44" height="16" fill="#fff" stroke="#444"/>
+              <line x1="620" y1="215" x2="660" y2="215" stroke="#444" stroke-width="2"/>
+              <circle cx="500" cy="215" r="3" fill="#444"/><circle cx="660" cy="215" r="3" fill="#444"/>
+              <text x="493" y="203" font-size="11" fill="#444">A</text><text x="657" y="203" font-size="11" fill="#444">K</text>
+              <text x="530" y="192" font-size="10" fill="#444">+0.5V</text>
+              <text x="598" y="200" text-anchor="middle" font-size="10" fill="#444">r_D</text>
+              <text x="580" y="248" text-anchor="middle" font-size="11" fill="#666">0.5&nbsp;V 源 + 串联电阻</text>
+            </g>
+            <!-- ===== panel 4 ===== -->
+            <g>
+              <line x1="735" y1="120" x2="895" y2="120" stroke="#888" stroke-width="1.2" marker-end="url(#am1)"/>
+              <line x1="765" y1="150" x2="765" y2="45" stroke="#888" stroke-width="1.2" marker-end="url(#am1)"/>
+              <text x="895" y="136" font-size="10" fill="#555">u</text><text x="752" y="52" font-size="10" fill="#555">i</text>
+              <path d="M765,120 Q820,118 840,100 Q855,80 862,58" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+              <circle cx="845" cy="93" r="4" fill="#b03a3a"/>
+              <text x="852" y="90" font-size="11" fill="#b03a3a">Q</text>
+              <line x1="812" y1="128" x2="878" y2="55" stroke="#d97706" stroke-width="1.6" stroke-dasharray="4 3"/>
+              <text x="805" y="145" font-size="10" fill="#b45309">Q 点切线，斜率=1/r_d</text>
+              <!-- equiv: resistor only -->
+              <line x1="740" y1="215" x2="780" y2="215" stroke="#444" stroke-width="2"/>
+              <rect x="780" y="207" width="50" height="16" fill="#fff" stroke="#444"/>
+              <line x1="830" y1="215" x2="885" y2="215" stroke="#444" stroke-width="2"/>
+              <circle cx="740" cy="215" r="3" fill="#444"/><circle cx="885" cy="215" r="3" fill="#444"/>
+              <text x="805" y="200" text-anchor="middle" font-size="10" fill="#444">r_d = U_T/I_DQ</text>
+              <text x="812" y="248" text-anchor="middle" font-size="11" fill="#666">仅对交流小信号有效</text>
+            </g>
+            <text x="460" y="290" text-anchor="middle" font-size="12" fill="#666">前三种：未达导通条件时均等效为「开路」；④ 的前提是直流已把管子偏置在 Q 点（导通）</text>
+            <!-- separators -->
+            <line x1="230" y1="20" x2="230" y2="260" stroke="#e2e5ea"/>
+            <line x1="460" y1="20" x2="460" y2="260" stroke="#e2e5ea"/>
+            <line x1="690" y1="20" x2="690" y2="260" stroke="#e2e5ea"/>
+          </svg>
+          <figcaption>图 2-2&nbsp;&nbsp;二极管四种等效模型：上排为对伏安曲线的直线近似，下排为导通时的等效电路。由左到右精度递增、计算量递增</figcaption>
+        </figure>
+
         <h4>微变等效模型（第 5 讲重点）</h4>
         <p>
           当二极管上除直流偏置外还叠加了一个<strong>幅度很小的交流信号</strong>时，工作点只在静态工作点 Q 附近微小摆动，
@@ -378,7 +476,7 @@
 
         <h3>2.3 典型应用</h3>
         <dl>
-          <dt>整流</dt><dd>利用单向导电把交流变脉动直流，半波整流（1 管）、桥式全波整流（4 管）是开关电源、充电器的入口电路。</dd>
+          <dt>整流</dt><dd>利用单向导电把交流变脉动直流，半波整流（1 管）、桥式全波整流（4 管）是开关电源、充电器的入口电路。整流后通常接<strong>大电容滤波</strong>（电容充放电填平脉动，输出约为 1.2&nbsp;U<sub>2</sub>），再接稳压环节（稳压管电路见 2.4，或三端稳压器/串联型稳压——本课程未展开，属「直流稳压电源」章节）。</dd>
           <dt>限幅 / 钳位</dt><dd>把信号幅度限制在某范围内，或把波形某一电平「钳」到固定值，保护后级电路。</dd>
           <dt>检波 / 开关</dt><dd>高频信号取包络（检波），或在数字电路中作为单向通路。</dd>
         </dl>
@@ -498,6 +596,8 @@
           <dt>主要参数</dt>
           <dd><strong>电流放大系数 β</strong>（几十~几百）、<strong>极间反向电流 I<sub>CBO</sub>/I<sub>CEO</sub></strong>（受温度影响大）。二者关系：<strong>I<sub>CEO</sub> = (1+β)·I<sub>CBO</sub></strong>——基极开路时集-射间的「穿透电流」是 I<sub>CBO</sub> 被放大 (1+β) 倍的结果，故 β 大的管子温度稳定性反而差。</dd>
           <dd><strong>极限参数</strong>：集电极最大电流 I<sub>CM</sub>、最大反向电压 U<sub>(BR)CEO</sub>、最大功耗 P<sub>CM</sub>，三者围成「安全工作区」。</dd>
+          <dt>基区宽度调制（Early 效应）</dt>
+          <dd>放大区的输出特性并非绝对水平，而是<strong>微微上翘</strong>：U<sub>CE</sub> 增大 → 集电结耗尽层变宽 → 有效基区变薄 → 复合减少、β 略增 → I<sub>C</sub> 略升。把各条曲线向左反向延长会近似交于一点（&minus;U<sub>A</sub>，Early 电压）。上翘斜率的倒数就是集-射间的动态电阻 <strong>r<sub>ce</sub></strong>（几十~几百 kΩ）——它是 H 参数中 h<sub>22</sub>、混合 Π 模型中 r<sub>ce</sub> 的物理来源，也决定了 7.3 节「有源负载」能把增益提到多高的上限。</dd>
           <dt>温度的影响</dt>
           <dd>温度升高 → β 增大、I<sub>CBO</sub> 增大、U<sub>BE</sub> 减小（约 &minus;2&nbsp;mV/℃）→ 静态工作点漂移，这是放大电路必须「稳定 Q 点」的原因。</dd>
         </dl>
@@ -540,7 +640,56 @@
           <li><strong>低频跨导 g<sub>m</sub> = Δi<sub>D</sub>/Δu<sub>GS</sub></strong>（单位 mS）：转移特性在 Q 点的斜率，衡量栅压对漏流的控制力，是 FET 小信号模型的核心参数（地位相当于 BJT 的 β），恒流区内 g<sub>m</sub> 随 I<sub>DQ</sub> 增大而增大。</li>
           <li><strong>直流输入电阻 R<sub>GS</sub></strong>：JFET &gt;10<sup>7</sup>&nbsp;Ω，MOS 管可达 10<sup>9</sup>~10<sup>15</sup>&nbsp;Ω。</li>
         </ul>
+        <h4>FET 的小信号（微变）等效模型</h4>
+        <p>
+          与二极管、三极管一样，FET 在恒流区的 Q 点附近也可线性化。因为栅极几乎不取电流（i<sub>G</sub>≈0），
+          <strong>输入回路 g-s 之间直接视为开路</strong>；输出回路 d-s 之间等效为一个<strong>压控电流源 g<sub>m</sub>·u<sub>gs</sub></strong>（受栅源电压控制，g<sub>m</sub> 即转移特性在 Q 点的斜率），
+          必要时再并联输出特性上翘对应的电阻 r<sub>ds</sub>（通常几十 kΩ~几 MΩ，估算时忽略）。
+        </p>
+        <figure>
+          <svg width="500" height="240" viewBox="0 0 500 240" role="img" aria-label="FET 小信号模型：栅源间开路，漏源间为压控电流源 gm·ugs 并联 rds">
+            <defs><marker id="af1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#b03a3a"/></marker></defs>
+            <rect x="30" y="25" width="440" height="175" fill="#f8faff" stroke="#93b4f5" stroke-dasharray="6 4" rx="8"/>
+            <!-- input side -->
+            <circle cx="70" cy="60" r="3.5" fill="#444"/><text x="55" y="53" font-size="12" fill="#444">g</text>
+            <line x1="70" y1="60" x2="140" y2="60" stroke="#444" stroke-width="2"/>
+            <circle cx="140" cy="60" r="3" fill="#fff" stroke="#444" stroke-width="1.6"/>
+            <text x="150" y="55" font-size="10" fill="#94a3b8">开路（i_G≈0）</text>
+            <text x="88" y="120" font-size="12" fill="#2563eb">u_gs</text>
+            <text x="76" y="105" font-size="11" fill="#2563eb">+</text>
+            <text x="76" y="150" font-size="11" fill="#2563eb">&minus;</text>
+            <!-- output side -->
+            <circle cx="430" cy="60" r="3.5" fill="#444"/><text x="438" y="53" font-size="12" fill="#444">d</text>
+            <line x1="430" y1="60" x2="280" y2="60" stroke="#444" stroke-width="2"/>
+            <circle cx="280" cy="105" r="19" fill="#fff" stroke="#b03a3a" stroke-width="2"/>
+            <line x1="280" y1="93" x2="280" y2="118" stroke="#b03a3a" stroke-width="2" marker-end="url(#af1)"/>
+            <line x1="280" y1="60" x2="280" y2="86" stroke="#444" stroke-width="2"/>
+            <line x1="280" y1="124" x2="280" y2="175" stroke="#444" stroke-width="2"/>
+            <text x="305" y="103" font-size="12" fill="#b03a3a">g_m·u_gs</text>
+            <rect x="372" y="90" width="16" height="56" fill="#fff" stroke="#444"/>
+            <line x1="380" y1="60" x2="380" y2="90" stroke="#444" stroke-width="2"/>
+            <line x1="380" y1="146" x2="380" y2="175" stroke="#444" stroke-width="2"/>
+            <text x="396" y="122" font-size="11" fill="#666">r_ds（可略）</text>
+            <!-- common rail -->
+            <line x1="70" y1="175" x2="430" y2="175" stroke="#444" stroke-width="2"/>
+            <circle cx="70" cy="175" r="3.5" fill="#444"/><circle cx="430" cy="175" r="3.5" fill="#444"/>
+            <line x1="70" y1="60" x2="70" y2="60" stroke="#444"/>
+            <line x1="70" y1="98" x2="70" y2="175" stroke="#444" stroke-width="0"/>
+            <text x="250" y="192" text-anchor="middle" font-size="11" fill="#666">s（公共端）</text>
+            <text x="250" y="225" text-anchor="middle" font-size="11" fill="#666">对比 BJT：电流控制 βi_b ↔ 电压控制 g_m·u_gs；r_be ↔ 开路（输入阻抗极高的模型化体现）</text>
+          </svg>
+          <figcaption>图 4-2&nbsp;&nbsp;FET 小信号模型：输入开路 + 压控电流源。共源增益 A<sub>u</sub>=&minus;g<sub>m</sub>(R<sub>d</sub>∥R<sub>L</sub>) 直接由它得出（与共射公式对照：β/r<sub>be</sub> 的位置换成了 g<sub>m</sub>）</figcaption>
+        </figure>
         <aside class="tip"><strong>使用注意：</strong>MOS 管栅极与沟道间隔着极薄的 SiO₂，输入电阻又极高，感应的静电电荷无处泄放，<strong>极易静电击穿</strong>——存放时应使三个电极短接，焊接时烙铁要良好接地，切勿悬空栅极。</aside>
+
+        <h4>FET 的偏置电路（设 Q 点）</h4>
+        <p>
+          FET 放大同样要先偏置在恒流区，但栅极不取电流，偏置只需「造一个合适的 U<sub>GS</sub>」：
+          <strong>自给偏压式</strong>——源极串电阻 R<sub>s</sub>，I<sub>D</sub> 流过使源极电位升高，栅极经大电阻接地（0&nbsp;V），得 U<sub>GS</sub>=&minus;I<sub>D</sub>R<sub>s</sub>，
+          <mark>只适用于 U<sub>GS</sub>&lt;0 也能导通的 JFET / 耗尽型</mark>；
+          <strong>分压式</strong>——栅极由 R<sub>g1</sub>/R<sub>g2</sub> 分压抬到正电位，再配 R<sub>s</sub>，U<sub>GS</sub>=U<sub>G</sub>&minus;I<sub>D</sub>R<sub>s</sub> 可正可负，<mark>增强型必须用它</mark>。
+          求 Q 点时把偏置方程与转移特性（平方律）联立即可；R<sub>s</sub> 同样起稳定 Q 点的直流负反馈作用（对应 BJT 的 5.5 节）。
+        </p>
 
         <h3>4.4 FET 与 BJT 对比</h3>
         <table>
@@ -671,7 +820,130 @@
         <h3>5.4 动态分析：微变等效电路法（H 参数模型）</h3>
         <aside class="note"><strong>命名说明：</strong>这里把三极管线性化得到的小信号模型，正式名称叫 <strong>H 参数（混合参数）等效模型</strong>（第 13 讲）——以 <var>r</var><sub>be</sub>（即 h<sub>ie</sub>）和电流放大系数 <var>β</var>（即 h<sub>fe</sub>）为核心参数，故又称「<var>r</var><sub>be</sub>-β 模型」。</aside>
         <p>在小信号下，把三极管在 Q 点附近线性化为一个受控源模型：基极-发射极间等效为 <var>r</var><sub>be</sub>，集电极等效为受控电流源 <var>βi</var><sub>b</sub>。</p>
-        <p class="eq"><var>r</var><sub>be</sub> ≈ 200&nbsp;Ω + (1+<var>β</var>) · 26&nbsp;mV / <var>I</var><sub>E</sub>(mA)</p>
+        <p>
+          <strong>「H 参数」怎么来的：</strong>把三极管当成一个二端口网络（输入口 b-e、输出口 c-e），在 Q 点附近对两条特性曲线做全微分，各写一个线性方程：
+        </p>
+        <p class="eq">
+          <var>u</var><sub>be</sub> = h<sub>11</sub>·<var>i</var><sub>b</sub> + h<sub>12</sub>·<var>u</var><sub>ce</sub>&nbsp;&nbsp;&nbsp;&nbsp;
+          <var>i</var><sub>c</sub> = h<sub>21</sub>·<var>i</var><sub>b</sub> + h<sub>22</sub>·<var>u</var><sub>ce</sub>
+        </p>
+        <p>
+          四个 h 参数就是特性曲线在 Q 点的四个偏导数（量纲有电阻、有纯数、有电导，「混合」hybrid 由此得名）。其中
+          <strong>h<sub>12</sub></strong>（输出电压对输入的内反馈，约 10<sup>-3</sup>~10<sup>-4</sup>）和
+          <strong>h<sub>22</sub></strong>（输出特性微小上翘的斜率，即 1/r<sub>ce</sub>，r<sub>ce</sub> 高达几十~几百 kΩ）在一般精度下都可忽略，
+          于是只剩两个参数：<strong>h<sub>11</sub> = r<sub>be</sub></strong>（输入特性在 Q 点的切线斜率倒数）和 <strong>h<sub>21</sub> = β</strong>——模型简化为「一个电阻 + 一个受控电流源」：
+        </p>
+        <figure>
+          <svg width="760" height="520" viewBox="0 0 760 520" role="img" aria-label="H 参数微变等效模型：三极管符号线性化为 rbe 与受控电流源，下方为完整的共射放大电路微变等效电路">
+            <defs>
+              <marker id="ah1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#444"/></marker>
+              <marker id="ah2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#b03a3a"/></marker>
+            </defs>
+            <!-- ===== top: transformation ===== -->
+            <text x="130" y="28" text-anchor="middle" font-size="13" font-weight="bold" fill="#334155">三极管（工作在放大区）</text>
+            <!-- BJT symbol -->
+            <line x1="60" y1="100" x2="148" y2="100" stroke="#444" stroke-width="2"/>
+            <line x1="148" y1="70" x2="148" y2="130" stroke="#444" stroke-width="3"/>
+            <line x1="148" y1="85" x2="205" y2="55" stroke="#444" stroke-width="2"/>
+            <line x1="205" y1="55" x2="205" y2="35" stroke="#444" stroke-width="2"/>
+            <line x1="148" y1="115" x2="205" y2="145" stroke="#444" stroke-width="2"/>
+            <polygon points="197,141 184,140 190,130" fill="#444"/>
+            <line x1="205" y1="145" x2="205" y2="168" stroke="#444" stroke-width="2"/>
+            <text x="52" y="92" font-size="12" fill="#444">b</text>
+            <text x="212" y="45" font-size="12" fill="#444">c</text>
+            <text x="212" y="165" font-size="12" fill="#444">e</text>
+            <line x1="75" y1="88" x2="105" y2="88" stroke="#b03a3a" stroke-width="1.6" marker-end="url(#ah2)"/>
+            <text x="82" y="80" font-size="11" fill="#b03a3a">i_b</text>
+            <!-- arrow -->
+            <line x1="240" y1="100" x2="305" y2="100" stroke="#2563eb" stroke-width="2.5" marker-end="url(#ah1)"/>
+            <text x="272" y="88" text-anchor="middle" font-size="12" fill="#1d4ed8">Q 点线性化</text>
+            <!-- equivalent model -->
+            <rect x="325" y="38" width="400" height="180" fill="#f8faff" stroke="#93b4f5" stroke-dasharray="6 4" rx="8"/>
+            <text x="525" y="30" text-anchor="middle" font-size="13" font-weight="bold" fill="#1d4ed8">H 参数简化模型（r_be-β 模型）</text>
+            <circle cx="355" cy="75" r="3.5" fill="#444"/><text x="342" y="68" font-size="12" fill="#444">b</text>
+            <line x1="355" y1="75" x2="440" y2="75" stroke="#444" stroke-width="2"/>
+            <line x1="400" y1="75" x2="425" y2="75" stroke="#b03a3a" stroke-width="0"/>
+            <line x1="372" y1="75" x2="396" y2="75" stroke="#b03a3a" stroke-width="1.6" marker-end="url(#ah2)"/>
+            <text x="376" y="66" font-size="11" fill="#b03a3a">i_b</text>
+            <rect x="432" y="95" width="16" height="60" fill="#fff" stroke="#444"/>
+            <line x1="440" y1="75" x2="440" y2="95" stroke="#444" stroke-width="2"/>
+            <line x1="440" y1="155" x2="440" y2="192" stroke="#444" stroke-width="2"/>
+            <text x="458" y="130" font-size="12" fill="#444">r_be</text>
+            <!-- controlled source -->
+            <circle cx="620" cy="125" r="20" fill="#fff" stroke="#b03a3a" stroke-width="2"/>
+            <line x1="620" y1="112" x2="620" y2="138" stroke="#b03a3a" stroke-width="2" marker-end="url(#ah2)"/>
+            <line x1="620" y1="75" x2="620" y2="105" stroke="#444" stroke-width="2"/>
+            <line x1="620" y1="145" x2="620" y2="192" stroke="#444" stroke-width="2"/>
+            <circle cx="700" cy="75" r="3.5" fill="#444"/><text x="705" y="68" font-size="12" fill="#444">c</text>
+            <line x1="620" y1="75" x2="700" y2="75" stroke="#444" stroke-width="2"/>
+            <text x="648" y="122" font-size="12" fill="#b03a3a">βi_b</text>
+            <text x="648" y="138" font-size="10" fill="#b45309">（受 i_b 控制）</text>
+            <line x1="355" y1="192" x2="700" y2="192" stroke="#444" stroke-width="2"/>
+            <circle cx="355" cy="192" r="3.5" fill="#444"/><circle cx="700" cy="192" r="3.5" fill="#444"/>
+            <text x="522" y="208" text-anchor="middle" font-size="11" fill="#666">e（公共端）</text>
+            <!-- ===== bottom: full CE small-signal circuit ===== -->
+            <text x="380" y="258" text-anchor="middle" font-size="13" font-weight="bold" fill="#334155">共射放大电路的完整微变等效电路（交流通路：V_CC 与耦合电容均视为短路）</text>
+            <!-- ground rail -->
+            <line x1="50" y1="460" x2="710" y2="460" stroke="#444" stroke-width="2"/>
+            <!-- source -->
+            <circle cx="80" cy="390" r="16" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+            <text x="80" y="395" text-anchor="middle" font-size="12" fill="#2563eb">u_s</text>
+            <line x1="80" y1="406" x2="80" y2="460" stroke="#444" stroke-width="2"/>
+            <line x1="80" y1="374" x2="80" y2="330" stroke="#444" stroke-width="2"/>
+            <line x1="80" y1="330" x2="118" y2="330" stroke="#444" stroke-width="2"/>
+            <rect x="118" y="322" width="46" height="16" fill="#fff" stroke="#444"/>
+            <text x="141" y="316" text-anchor="middle" font-size="11" fill="#444">R_s</text>
+            <line x1="164" y1="330" x2="250" y2="330" stroke="#444" stroke-width="2"/>
+            <!-- Rb -->
+            <line x1="205" y1="330" x2="205" y2="352" stroke="#444" stroke-width="2"/>
+            <rect x="197" y="352" width="16" height="56" fill="#fff" stroke="#444"/>
+            <line x1="205" y1="408" x2="205" y2="460" stroke="#444" stroke-width="2"/>
+            <text x="222" y="384" font-size="11" fill="#444">R_b</text>
+            <!-- b node + rbe -->
+            <circle cx="250" cy="330" r="3.5" fill="#444"/><text x="246" y="318" font-size="12" fill="#444">b</text>
+            <line x1="250" y1="330" x2="250" y2="352" stroke="#444" stroke-width="2"/>
+            <rect x="242" y="352" width="16" height="56" fill="#fff" stroke="#444"/>
+            <line x1="250" y1="408" x2="250" y2="460" stroke="#444" stroke-width="2"/>
+            <text x="267" y="384" font-size="11" fill="#444">r_be</text>
+            <line x1="222" y1="330" x2="242" y2="330" stroke="#b03a3a" stroke-width="1.6" marker-end="url(#ah2)"/>
+            <text x="222" y="320" font-size="11" fill="#b03a3a">i_b</text>
+            <!-- controlled source at c -->
+            <circle cx="420" cy="380" r="20" fill="#fff" stroke="#b03a3a" stroke-width="2"/>
+            <line x1="420" y1="367" x2="420" y2="393" stroke="#b03a3a" stroke-width="2" marker-end="url(#ah2)"/>
+            <line x1="420" y1="330" x2="420" y2="360" stroke="#444" stroke-width="2"/>
+            <line x1="420" y1="400" x2="420" y2="460" stroke="#444" stroke-width="2"/>
+            <text x="447" y="378" font-size="12" fill="#b03a3a">βi_b</text>
+            <circle cx="420" cy="330" r="3.5" fill="#444"/><text x="414" y="318" font-size="12" fill="#444">c</text>
+            <!-- Rc, RL -->
+            <line x1="420" y1="330" x2="620" y2="330" stroke="#444" stroke-width="2"/>
+            <line x1="520" y1="330" x2="520" y2="352" stroke="#444" stroke-width="2"/>
+            <rect x="512" y="352" width="16" height="56" fill="#fff" stroke="#444"/>
+            <line x1="520" y1="408" x2="520" y2="460" stroke="#444" stroke-width="2"/>
+            <text x="537" y="384" font-size="11" fill="#444">R_c</text>
+            <line x1="620" y1="330" x2="620" y2="352" stroke="#444" stroke-width="2"/>
+            <rect x="612" y="352" width="16" height="56" fill="#fff" stroke="#444"/>
+            <line x1="620" y1="408" x2="620" y2="460" stroke="#444" stroke-width="2"/>
+            <text x="637" y="384" font-size="11" fill="#444">R_L</text>
+            <text x="672" y="336" font-size="12" fill="#b03a3a">u_o</text>
+            <!-- notes -->
+            <text x="310" y="345" font-size="10" fill="#94a3b8">（b-e 与 c-e 之间</text>
+            <text x="310" y="358" font-size="10" fill="#94a3b8">仅由 βi_b 联系）</text>
+            <text x="150" y="490" font-size="11" fill="#666">R_i = R_b ∥ r_be（从 b 看入）</text>
+            <text x="480" y="490" font-size="11" fill="#666">R_o ≈ R_c（受控源为理想恒流，内阻∞）</text>
+          </svg>
+          <figcaption>图 5-3&nbsp;&nbsp;H 参数微变等效电路：上——三极管在 Q 点线性化为 r<sub>be</sub> + 受控电流源 βi<sub>b</sub>；下——据此画出的共射放大电路完整交流等效电路，A<sub>u</sub>、R<sub>i</sub>、R<sub>o</sub> 三个公式全部由它按线性电路求出</figcaption>
+        </figure>
+        <p>
+          <strong>r<sub>be</sub> 的组成</strong>也有清晰的物理来源：基极到发射极要先过基区的体电阻 r<sub>bb'</sub>（约 100~300&nbsp;Ω），再过发射结——发射结就是一个正偏 PN 结，其动态电阻 r<sub>e</sub>=26&nbsp;mV/I<sub>E</sub>（即 2.2 节二极管的 r<sub>d</sub>！）；
+          但 r<sub>e</sub> 上流的是 i<sub>e</sub>=(1+β)i<sub>b</sub>，按 5.6 节的阻抗折算规则，折算到基极回路要<strong>乘 (1+β)</strong>：
+        </p>
+        <p class="eq"><var>r</var><sub>be</sub> = r<sub>bb'</sub> + (1+<var>β</var>)·26&nbsp;mV / <var>I</var><sub>E</sub>(mA) ≈ 200&nbsp;Ω + (1+<var>β</var>) · 26&nbsp;mV / <var>I</var><sub>E</sub>(mA)</p>
+        <aside class="tip">
+          <strong>模型的适用边界（易错点）：</strong>① 只对<strong>交流增量</strong>有效——先画交流通路（直流电源 V<sub>CC</sub> 对地短路、耦合/旁路电容短路）再替换三极管；
+          ② 信号要小（u<sub>be</sub> 摆幅不超过约 10&nbsp;mV，否则指数曲线的弯曲不可忽略，产生非线性失真）；
+          ③ 只适用于<strong>中低频</strong>（高频时结电容不可忽略，要换 6.1 的混合 Π 模型）；
+          ④ 管子必须已由直流偏置在<strong>放大区</strong>——所以永远是「先静态，后动态」。
+        </aside>
         <p>由此求得共射放大电路的核心指标：</p>
         <p class="eq">
           电压增益&nbsp;<var>A</var><sub>u</sub> = &minus;<var>β</var>(<var>R</var><sub>c</sub>∥<var>R</var><sub>L</sub>) / <var>r</var><sub>be</sub>
@@ -757,6 +1029,67 @@
           研究高频特性要用<strong>混合 Π（hybrid-π）模型</strong>（第 24 讲）替代低频的 H 参数模型：在 b'-e 间加入<strong>结电容 C<sub>π</sub></strong>、b'-c 间加入<strong>结电容 C<sub>μ</sub></strong>。
           其中 C<sub>μ</sub> 跨接在输入与输出之间，因<strong>密勒效应</strong>被等效放大 (1+|<var>A</var><sub>u</sub>|) 倍折算到输入端，成为限制高频的主因。
         </p>
+        <figure>
+          <svg width="700" height="330" viewBox="0 0 700 330" role="img" aria-label="混合Π高频小信号模型：基极经 rbb' 到内部节点 b'，b'-e 间为 rb'e 并联 Cπ，b'-c 间跨接 Cμ，输出为压控电流源 gm·ub'e 并联 rce">
+            <defs><marker id="ap1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#b03a3a"/></marker></defs>
+            <rect x="30" y="30" width="640" height="265" fill="#f8faff" stroke="#93b4f5" stroke-dasharray="6 4" rx="8"/>
+            <!-- b terminal, rbb' -->
+            <circle cx="65" cy="165" r="3.5" fill="#444"/><text x="50" y="158" font-size="12" fill="#444">b</text>
+            <line x1="65" y1="165" x2="105" y2="165" stroke="#444" stroke-width="2"/>
+            <rect x="105" y="157" width="50" height="16" fill="#fff" stroke="#444"/>
+            <text x="130" y="150" text-anchor="middle" font-size="11" fill="#444">r_bb'</text>
+            <line x1="155" y1="165" x2="230" y2="165" stroke="#444" stroke-width="2"/>
+            <circle cx="230" cy="165" r="3.5" fill="#1d4ed8"/><text x="222" y="155" font-size="12" fill="#1d4ed8">b'</text>
+            <!-- rb'e -->
+            <line x1="230" y1="165" x2="230" y2="185" stroke="#444" stroke-width="2"/>
+            <rect x="222" y="185" width="16" height="55" fill="#fff" stroke="#444"/>
+            <line x1="230" y1="240" x2="230" y2="265" stroke="#444" stroke-width="2"/>
+            <text x="192" y="216" font-size="11" fill="#444">r_b'e</text>
+            <!-- Cpi -->
+            <line x1="230" y1="165" x2="300" y2="165" stroke="#444" stroke-width="2"/>
+            <line x1="300" y1="165" x2="300" y2="200" stroke="#444" stroke-width="2"/>
+            <line x1="286" y1="200" x2="314" y2="200" stroke="#444" stroke-width="2.2"/>
+            <line x1="286" y1="210" x2="314" y2="210" stroke="#444" stroke-width="2.2"/>
+            <line x1="300" y1="210" x2="300" y2="265" stroke="#444" stroke-width="2"/>
+            <text x="322" y="210" font-size="12" fill="#1d4ed8">C_π</text>
+            <text x="252" y="192" font-size="11" fill="#2563eb">u_b'e</text>
+            <text x="244" y="178" font-size="10" fill="#2563eb">+</text>
+            <text x="244" y="252" font-size="10" fill="#2563eb">&minus;</text>
+            <!-- Cmu across top -->
+            <line x1="230" y1="165" x2="230" y2="80" stroke="#444" stroke-width="2"/>
+            <line x1="230" y1="80" x2="335" y2="80" stroke="#444" stroke-width="2"/>
+            <line x1="335" y1="64" x2="335" y2="96" stroke="#444" stroke-width="2.2"/>
+            <line x1="347" y1="64" x2="347" y2="96" stroke="#444" stroke-width="2.2"/>
+            <line x1="347" y1="80" x2="460" y2="80" stroke="#444" stroke-width="2"/>
+            <line x1="460" y1="80" x2="460" y2="165" stroke="#444" stroke-width="2"/>
+            <text x="341" y="55" text-anchor="middle" font-size="12" fill="#b03a3a">C_μ（密勒电容）</text>
+            <!-- c node, gm source, rce -->
+            <circle cx="460" cy="165" r="3.5" fill="#444"/>
+            <line x1="460" y1="165" x2="640" y2="165" stroke="#444" stroke-width="2"/>
+            <circle cx="640" cy="165" r="3.5" fill="#444"/><text x="648" y="158" font-size="12" fill="#444">c</text>
+            <circle cx="500" cy="212" r="19" fill="#fff" stroke="#b03a3a" stroke-width="2"/>
+            <line x1="500" y1="200" x2="500" y2="225" stroke="#b03a3a" stroke-width="2" marker-end="url(#ap1)"/>
+            <line x1="500" y1="165" x2="500" y2="193" stroke="#444" stroke-width="2"/>
+            <line x1="500" y1="231" x2="500" y2="265" stroke="#444" stroke-width="2"/>
+            <text x="525" y="210" font-size="12" fill="#b03a3a">g_m·u_b'e</text>
+            <rect x="592" y="185" width="16" height="55" fill="#fff" stroke="#444"/>
+            <line x1="600" y1="165" x2="600" y2="185" stroke="#444" stroke-width="2"/>
+            <line x1="600" y1="240" x2="600" y2="265" stroke="#444" stroke-width="2"/>
+            <text x="616" y="216" font-size="11" fill="#666">r_ce</text>
+            <!-- rail -->
+            <line x1="65" y1="265" x2="640" y2="265" stroke="#444" stroke-width="2"/>
+            <circle cx="65" cy="265" r="3.5" fill="#444"/><circle cx="640" cy="265" r="3.5" fill="#444"/>
+            <text x="352" y="282" text-anchor="middle" font-size="11" fill="#666">e（公共端）</text>
+            <text x="352" y="315" text-anchor="middle" font-size="11" fill="#666">低频时 C_π、C_μ 开路，g_m·u_b'e 与 βi_b 等价（g_m = β/r_b'e）——模型退化回 H 参数模型</text>
+          </svg>
+          <figcaption>图 5-4&nbsp;&nbsp;混合 Π 高频小信号模型：在 H 参数模型基础上分出内部节点 b'，补上两个结电容 C<sub>π</sub>（发射结）与 C<sub>μ</sub>（集电结），受控源改由 u<sub>b'e</sub> 控制</figcaption>
+        </figure>
+        <p><strong>密勒效应的定量结论：</strong>共射电路中 C<sub>μ</sub> 两端电压是 u<sub>b'e</sub> 与被放大反相后的输出之差，充放电电流被放大，从输入端看等效于一个大得多的对地电容。折算后总输入电容与上限频率为：</p>
+        <p class="eq">
+          <var>C</var><sub>i</sub> ≈ C<sub>π</sub> + (1 + g<sub>m</sub>R<sub>L</sub>′)·C<sub>μ</sub>&nbsp;&nbsp;&nbsp;&nbsp;
+          <var>f</var><sub>H</sub> ≈ 1 / (2π·<var>R</var>·<var>C</var><sub>i</sub>)（R 为 C<sub>i</sub> 两端看到的等效电阻）
+        </p>
+        <p>这解释了 5.7 节 Cascode 电路展宽频带的原理：共基级把共射管的电压增益钳到约 1，使 (1+g<sub>m</sub>R<sub>L</sub>′) 因子消失，C<sub>μ</sub> 不再被放大。</p>
         <dl>
           <dt>β 的频率响应</dt>
           <dd>电流放大系数 β 本身随频率下降，定义 <strong>β 截止频率 f<sub>β</sub></strong>（β 降到 0.707 倍处）。</dd>
@@ -792,6 +1125,17 @@
           </tbody>
         </table>
         <aside class="tip"><strong>记忆：</strong>增益只看<strong>输出</strong>——<strong>双端输出</strong>得满增益，<strong>单端输出</strong>增益减半；零漂抑制也只看输出——双端输出两管漂移相减、抑制最好，单端输出靠射极恒流源/R<sub>e</sub> 来压共模。<strong>输入</strong>方式只影响信号怎么加，不改变差模增益大小。</aside>
+
+        <h4>定量计算：半电路法</h4>
+        <p>
+          利用电路的对称性，把差分电路「劈成两半」分别按单管共射电路计算，是标准解法：
+          <strong>差模信号</strong>两管电流一增一减，公共射极点电流不变、电位不动——射极对差模信号相当于<strong>接地</strong>（R<sub>e</sub> 不出现在差模半电路里）；
+          <strong>共模信号</strong>两管电流同增同减，流过 R<sub>e</sub> 的电流加倍——每半边等效串一个 <strong>2R<sub>e</sub></strong>。由半电路直接写出（R<sub>L</sub>′ 为集电极总负载）：
+        </p>
+        <p class="eq">
+          双端输出差模增益&nbsp;<var>A</var><sub>d</sub> = &minus;<var>β</var>R<sub>L</sub>′ / (R<sub>s</sub>+r<sub>be</sub>)&nbsp;（单端输出减半）<br>
+          单端输出共模增益&nbsp;<var>A</var><sub>c</sub> ≈ &minus;<var>β</var>R<sub>c</sub> / [r<sub>be</sub> + 2(1+<var>β</var>)R<sub>e</sub>]&nbsp;→ R<sub>e</sub>（或恒流源内阻）越大，A<sub>c</sub> 越小、K<sub>CMR</sub> 越高
+        </p>
 
         <h3>7.2 集成运放的组成与理想化</h3>
         <p>集成运放内部一般为：<strong>输入级（差分）→ 中间级（高增益共射）→ 输出级（互补射极跟随器）→ 偏置电路（电流源）</strong>。对外可视为一个高增益直流放大器，有同相端(+)、反相端(&minus;)和输出端。</p>
@@ -995,7 +1339,12 @@
           <p>同相端接地 → 虚短得反相端电位 u<sub>-</sub>=0（虚地）。虚断 → 流入运放电流为零，故 R<sub>1</sub> 电流全部流过 R<sub>f</sub>：
           (u<sub>i</sub>&minus;0)/R<sub>1</sub> = (0&minus;u<sub>o</sub>)/R<sub>f</sub>，整理即得 <var>u</var><sub>o</sub> = &minus;(R<sub>f</sub>/R<sub>1</sub>)·u<sub>i</sub>。</p>
         </details>
-        <p>此外，运放配 RC 网络还能构成<strong>有源滤波器</strong>（低通/高通/带通），相比无源滤波具有增益且不受负载影响。</p>
+        <p>
+          此外，运放配 RC 网络还能构成<strong>有源滤波器</strong>（低通/高通/带通/带阻），相比无源滤波<strong>有增益、输出不受负载影响、无需电感</strong>。
+          最简单的一阶有源低通 = RC 低通接同相比例放大，截止频率仍为 <var>f</var><sub>0</sub>=1/(2π<var>RC</var>)，但一阶衰减只有 &minus;20&nbsp;dB/十倍频；
+          要更陡的过渡带用二阶（常用 <strong>Sallen-Key 压控电压源结构</strong>，&minus;40&nbsp;dB/十倍频）或多级级联，品质因数 Q 决定截止点附近是否隆起（巴特沃斯 Q=0.707 最平坦）。
+          把低通与高通级联得带通，相减得带阻（陷波器，如 50&nbsp;Hz 工频陷波）。
+        </p>
 
         <h3>9.2 仪表放大器（高精度差分放大）</h3>
         <p>
@@ -1029,7 +1378,7 @@
         <p>组成上需有：放大电路、正反馈网络、<strong>选频网络</strong>（决定频率）、稳幅环节。常见类型：</p>
         <ul>
           <li><strong>RC 桥式（文氏桥）振荡器</strong>：用 RC 串并联选频，适合低频（几 Hz~几百 kHz），波形好。</li>
-          <li><strong>LC 振荡器</strong>（变压器反馈、电感三点式、电容三点式）：适合高频。</li>
+          <li><strong>LC 振荡器</strong>（变压器反馈、电感三点式、电容三点式）：适合高频。三点式的<strong>组成法则（相位条件的电路化）</strong>：与发射极（源极）相连的两个电抗<strong>同性质</strong>，第三边（接基极-集电极）为<strong>异性质</strong>——口诀「射同基（集）反」。电感三点式易起振但波形较差；<strong>电容三点式波形好、频率上限高</strong>（改进型：克拉泼、西勒电路，进一步提高频率稳定度）。</li>
           <li><strong>石英晶体振荡器</strong>：频率极稳定，用于时钟、通信。</li>
         </ul>
         <p><strong>RC 桥式（文氏桥）定量结果</strong>（第 40 讲）：RC 串并联网络在 <var>f</var><sub>0</sub> 处反馈系数最大为 <strong>F=1/3</strong> 且相移为 0，故放大部分用同相比例电路、增益略大于 3 即可起振：</p>
@@ -1113,7 +1462,7 @@
 
       <section id="source">
         <h2>来源</h2>
-        <p>本笔记内容整理自 B 站搬运的《模拟电子技术基础》（上海交通大学）课程，共 45 讲，并已<strong>逐讲对照课程大纲</strong>补充图解分析法、H 参数模型、混合 Π 模型与特征频率、镜像电流源与有源负载、派生/多级放大、仪表放大器、模拟乘法器、波形与信号转换，以及 PN 结电容、雪崩/齐纳击穿与温度特性、二极管微变等效、FET 特性曲线与跨导、共集电路计算、运放实际参数、负反馈稳定性判据、文氏桥与比较器、功放输出功率与效率等专题（逐讲索引见「课程概述」中的 45 讲对应表）：</p>
+        <p>本笔记内容整理自 B 站搬运的《模拟电子技术基础》（上海交通大学）课程，共 45 讲，并已<strong>逐讲对照课程大纲</strong>补充图解分析法、H 参数模型、混合 Π 模型与特征频率、镜像电流源与有源负载、派生/多级放大、仪表放大器、模拟乘法器、波形与信号转换，以及 PN 结电容、雪崩/齐纳击穿与温度特性、二极管微变等效、FET 特性曲线与跨导、共集电路计算、运放实际参数、负反馈稳定性判据、文氏桥与比较器、功放输出功率与效率等专题；另配<strong>四套等效模型电路图</strong>（二极管四模型、BJT 的 H 参数模型及共射完整微变等效电路、混合 Π 高频模型、FET 小信号模型）与推导讲解，并补充 Early 效应与 r<sub>ce</sub>、FET 偏置电路、差分半电路法定量公式、LC 三点式组成法则、有源滤波器阶数与结构、整流滤波去向等查漏内容（逐讲索引见「课程概述」中的 45 讲对应表）：</p>
         <p><a href="https://www.bilibili.com/video/BV1SKVo6kEuT/" target="_blank" rel="noopener">bilibili.com/video/BV1SKVo6kEuT</a>（共 45 个分 P）</p>
         <p class="lead">文中所有插图均为配合知识点自绘的 SVG 示意图（非视频截图），公式与结论按通用模电教材体系整理，仅供个人学习交流使用。</p>
       </section>

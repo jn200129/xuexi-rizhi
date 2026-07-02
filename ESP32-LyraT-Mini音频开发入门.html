@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="江楠">
+  <meta name="description" content="ESP32-LyraT-Mini 音频开发板从零上手：硬件组成（ES8311/ES7243）、Windows 下 ESP-IDF + ESP-ADF 环境搭建国内镜像实操、ADF 音频管道概念、全部官方例程分类与可做的项目清单。江楠的学习日志。">
+  <meta name="keywords" content="ESP32,LyraT-Mini,ESP-ADF,ESP-IDF,音频开发,ES8311,ES7243,智能音箱,语音识别,唤醒词,WakeNet,MultiNet,DuerOS,蓝牙音箱,网络电台,VoIP,gitee镜像,环境搭建">
+  <title>ESP32-LyraT-Mini 音频开发入门 — 江楠的学习日志</title>
+  <style>
+    :root{
+      --accent:#2563eb; --accent-dark:#1d4ed8; --bg:#f7f8fa; --card:#fff;
+      --border:#e2e5ea; --text:#1f2329; --muted:#64748b;
+    }
+    *{box-sizing:border-box;}
+    body{margin:0;font-family:-apple-system,"Segoe UI","Microsoft YaHei","PingFang SC",sans-serif;
+      line-height:1.75;color:var(--text);background:var(--bg);}
+    .skip-link{position:absolute;left:-999px;top:0;background:#fff;color:var(--accent);padding:.5rem 1rem;z-index:100;}
+    .skip-link:focus{left:0;}
+    header.site{background:linear-gradient(135deg,#3b82f6 0%,var(--accent) 45%,var(--accent-dark) 100%);
+      color:#fff;padding:3rem 1.5rem 2.4rem;text-align:center;
+      box-shadow:0 6px 24px rgba(37,99,235,.18);}
+    header.site h1{margin:0 0 .5rem;font-size:2.1rem;}
+    header.site p{margin:.2rem 0;opacity:.92;}
+    .meta-list{list-style:none;padding:0;margin:.9rem 0 0;display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;}
+    .meta-list li{background:rgba(255,255,255,.18);padding:.25rem .7rem;border-radius:999px;font-size:.85rem;}
+    .layout{max-width:1180px;margin:0 auto;padding:1.6rem 1.5rem;display:grid;
+      grid-template-columns:248px 1fr;gap:1.9rem;align-items:start;}
+    .sidebar{position:sticky;top:1.4rem;background:var(--card);border:1px solid var(--border);
+      border-radius:16px;padding:1.1rem 1rem;box-shadow:0 4px 18px rgba(15,23,42,.06);max-height:calc(100vh - 2.8rem);overflow:auto;}
+    .sidebar .home-link{display:flex;align-items:center;gap:.45rem;font-weight:600;color:#fff;
+      text-decoration:none;padding:.6rem .8rem;border-radius:11px;
+      background:linear-gradient(135deg,var(--accent),var(--accent-dark));
+      box-shadow:0 4px 12px rgba(37,99,235,.28);margin-bottom:1rem;transition:transform .15s,box-shadow .15s;}
+    .sidebar .home-link:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(37,99,235,.38);}
+    .sidebar .toc-title{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;
+      color:var(--muted);margin:.2rem .35rem .55rem;font-weight:700;}
+    .sidebar nav ul{list-style:none;margin:0;padding:0;}
+    .sidebar nav li{margin:.12rem 0;}
+    .sidebar a.toc-link{display:block;color:var(--text);text-decoration:none;font-size:.92rem;
+      padding:.46rem .7rem;border-radius:9px;border-left:3px solid transparent;transition:all .15s;}
+    .sidebar a.toc-link:hover{background:#eef4ff;color:var(--accent-dark);border-left-color:var(--accent);
+      transform:translateX(2px);}
+    main{min-width:0;}
+    article>section{background:var(--card);border:1px solid var(--border);border-radius:14px;
+      padding:1.5rem 1.8rem;margin-bottom:1.6rem;scroll-margin-top:20px;}
+    h2{color:var(--accent-dark);border-bottom:2px solid var(--border);padding-bottom:.45rem;margin-top:.2rem;}
+    h3{margin-top:1.6rem;color:var(--text);}
+    h4{margin-top:1rem;color:var(--muted);}
+    p{margin:.7rem 0;}
+    dl dt{font-weight:600;margin-top:.8rem;}
+    dl dd{margin:0 0 .4rem 1.2rem;}
+    table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:.93rem;}
+    caption{caption-side:top;text-align:left;color:var(--muted);font-size:.9rem;margin-bottom:.4rem;}
+    th,td{border:1px solid var(--border);padding:.55rem .7rem;text-align:left;vertical-align:top;}
+    thead{background:#eef2ff;}
+    tbody tr:nth-child(even){background:#fafbfc;}
+    th[scope=row]{background:#f3f6ff;white-space:nowrap;}
+    aside.tip{border-left:4px solid #f59e0b;background:#fff8eb;padding:.8rem 1rem;border-radius:6px;margin:1rem 0;}
+    aside.tip strong{color:#b45309;}
+    aside.note{border-left:4px solid var(--accent);background:#eff6ff;padding:.8rem 1rem;border-radius:6px;margin:1rem 0;}
+    aside.note strong{color:var(--accent-dark);}
+    figure{margin:1.2rem 0;text-align:center;}
+    figure svg{max-width:100%;height:auto;background:#fff;border:1px solid var(--border);border-radius:10px;}
+    figcaption{color:var(--muted);font-size:.88rem;margin-top:.45rem;}
+    details{border:1px solid var(--border);border-radius:8px;padding:.6rem 1rem;margin:.7rem 0;background:#fcfcfd;}
+    summary{cursor:pointer;font-weight:600;}
+    code{background:#eef0f3;padding:.1rem .35rem;border-radius:4px;font-size:.9em;}
+    pre{background:#1e293b;color:#e2e8f0;border-radius:10px;padding:1rem 1.2rem;overflow-x:auto;
+      font-size:.88rem;line-height:1.6;}
+    pre code{background:none;padding:0;color:inherit;}
+    mark{background:#fde68a;}
+    ul,ol{padding-left:1.4rem;}
+    .lead{font-size:1.02rem;color:var(--muted);}
+    footer.site{text-align:center;color:var(--muted);padding:2rem 1rem;font-size:.9rem;}
+    footer.site a{color:var(--accent);}
+    .backtop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;
+      text-decoration:none;padding:.55rem .85rem;border-radius:50%;box-shadow:0 4px 12px rgba(37,99,235,.4);font-size:1.1rem;}
+    @media(max-width:820px){
+      .layout{grid-template-columns:1fr;gap:1.1rem;padding:1.1rem;}
+      .sidebar{position:static;top:auto;max-height:none;}
+      .sidebar nav ul{display:flex;flex-wrap:wrap;gap:.4rem;}
+      .sidebar a.toc-link{border-left:none;border:1px solid var(--border);font-size:.85rem;padding:.34rem .7rem;}
+      .sidebar a.toc-link:hover{transform:none;}
+    }
+    @media(max-width:600px){header.site h1{font-size:1.7rem;}article>section{padding:1.2rem 1rem;}}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="site">
+    <h1>ESP32-LyraT-Mini 音频开发入门</h1>
+    <p>江楠的学习日志 · 硬件认识 + Windows 环境搭建（国内镜像实操）+ 可做项目全景</p>
+    <ul class="meta-list">
+      <li>#ESP32</li><li>#ESP-ADF</li><li>#音频开发</li>
+      <li>#智能音箱</li><li>#语音识别</li><li>#物联网</li>
+    </ul>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <a class="home-link" href="index.html">&larr; 返回首页</a>
+      <p class="toc-title">本文目录</p>
+      <nav aria-label="章节目录">
+        <ul>
+          <li><a class="toc-link" href="#ch1">一、认识这块板子</a></li>
+          <li><a class="toc-link" href="#ch2">二、环境搭建（Windows 实操）</a></li>
+          <li><a class="toc-link" href="#ch3">三、跑通第一个例子</a></li>
+          <li><a class="toc-link" href="#ch4">四、ESP-ADF 核心概念</a></li>
+          <li><a class="toc-link" href="#ch5">五、能做什么项目（全景）</a></li>
+          <li><a class="toc-link" href="#ch6">六、踩坑与注意事项</a></li>
+          <li><a class="toc-link" href="#source">来源</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="main" tabindex="-1">
+    <article>
+
+      <!-- ============ 第一章 ============ -->
+      <section id="ch1">
+        <h2>一、认识这块板子：ESP32-LyraT-Mini V1.2</h2>
+        <p class="lead">
+          ESP32-LyraT-Mini 是乐鑫官方的<strong>单声道音频开发板</strong>，定位是「用最小的成本把 ESP32 音频应用链路跑通」：
+          一颗 ESP32 模组 + 一收一放两颗音频芯片 + 麦克风/喇叭/耳机/SD 卡/按键/锂电池管理，智能音箱该有的硬件它都有。
+          官方音频框架 <strong>ESP-ADF</strong>（Espressif Audio Development Framework）对它开箱即用。
+        </p>
+
+        <h3>1.1 硬件组成</h3>
+        <table>
+          <caption>表 1&nbsp;&nbsp;ESP32-LyraT-Mini V1.2 主要硬件</caption>
+          <thead><tr><th scope="col">部件</th><th scope="col">型号/规格</th><th scope="col">作用</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">主控模组</th><td>ESP32-WROVER-E（双核 240&nbsp;MHz，<strong>4&nbsp;MB Flash + 8&nbsp;MB PSRAM</strong>，Wi-Fi + 蓝牙双模）</td><td>跑协议栈、解码器、语音模型——8&nbsp;MB PSRAM 是能跑语音识别/网络流媒体的关键</td></tr>
+            <tr><th scope="row">播放通路</th><td><strong>ES8311</strong> 低功耗单声道编解码器（I2S 数据 + I2C 配置）</td><td>DAC 放音，接 3.5&nbsp;mm 耳机座（带插入检测）和功放 → 2.0&nbsp;mm 喇叭座（推荐 4&nbsp;Ω&nbsp;3&nbsp;W）</td></tr>
+            <tr><th scope="row">录音通路</th><td><strong>ES7243</strong> 音频 ADC + 板载单麦克风</td><td>拾音，走独立 I2S 送进 ESP32——录音、语音识别都靠它</td></tr>
+            <tr><th scope="row">存储</th><td>MicroSD 卡槽（1 线模式）</td><td>存放/播放本地音乐、保存录音</td></tr>
+            <tr><th scope="row">人机交互</th><td>6 个功能键（Rec / Mode / Play / Set / Vol&minus; / Vol+）+ Boot / RST</td><td>播放器控制、录音触发；Boot+RST 进下载模式</td></tr>
+            <tr><th scope="row">USB / 调试</th><td>两个 Micro-USB：UART 口（<strong>CP2102N</strong> 桥）+ 供电口</td><td>烧录、串口日志、供电</td></tr>
+            <tr><th scope="row">电源管理</th><td><strong>AP5056</strong> 锂电池线性充电芯片</td><td>5&nbsp;V USB 或 3.7&nbsp;V 锂电池（建议 &gt;1000&nbsp;mAh）供电，可边充边用；音频与数字电源分开稳压、隔离噪声</td></tr>
+          </tbody>
+        </table>
+
+        <figure>
+          <svg width="920" height="470" viewBox="0 0 920 470" role="img" aria-label="ESP32-LyraT-Mini 硬件功能框图：ESP32-WROVER-E 为中心，左侧 USB 与电源，右侧 ES8311 播放与 ES7243 录音通路，下方 SD 卡与按键">
+            <defs><marker id="ab1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto-start-reverse"><path d="M0,0 L6,3 L0,6 Z" fill="#64748b"/></marker></defs>
+            <!-- center module -->
+            <rect x="360" y="160" width="200" height="150" rx="10" fill="#eef4ff" stroke="#2563eb" stroke-width="2.5"/>
+            <text x="460" y="195" text-anchor="middle" font-size="16" font-weight="bold" fill="#1d4ed8">ESP32-WROVER-E</text>
+            <text x="460" y="220" text-anchor="middle" font-size="12" fill="#334155">双核 240 MHz · Wi-Fi/BT</text>
+            <text x="460" y="242" text-anchor="middle" font-size="12" fill="#334155">4 MB Flash + 8 MB PSRAM</text>
+            <text x="460" y="272" text-anchor="middle" font-size="11" fill="#64748b">I2S0 / I2S1 / I2C / SDIO / UART</text>
+            <!-- left: usb uart -->
+            <rect x="40" y="120" width="130" height="52" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+            <text x="105" y="142" text-anchor="middle" font-size="12" fill="#334155">Micro-USB（调试）</text>
+            <text x="105" y="160" text-anchor="middle" font-size="11" fill="#64748b">烧录 + 串口日志</text>
+            <rect x="215" y="120" width="100" height="52" rx="8" fill="#fef3e8" stroke="#d97706" stroke-width="1.5"/>
+            <text x="265" y="142" text-anchor="middle" font-size="12" fill="#b45309">CP2102N</text>
+            <text x="265" y="160" text-anchor="middle" font-size="11" fill="#b45309">USB-UART 桥</text>
+            <line x1="170" y1="146" x2="215" y2="146" stroke="#64748b" stroke-width="2" marker-end="url(#ab1)"/>
+            <line x1="315" y1="146" x2="360" y2="185" stroke="#64748b" stroke-width="2" marker-end="url(#ab1)"/>
+            <text x="330" y="152" font-size="10" fill="#64748b">UART0</text>
+            <!-- left: power -->
+            <rect x="40" y="300" width="130" height="52" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+            <text x="105" y="322" text-anchor="middle" font-size="12" fill="#334155">Micro-USB（供电）</text>
+            <text x="105" y="340" text-anchor="middle" font-size="11" fill="#64748b">5 V 输入</text>
+            <rect x="215" y="300" width="100" height="52" rx="8" fill="#fde8e8" stroke="#d97777" stroke-width="1.5"/>
+            <text x="265" y="322" text-anchor="middle" font-size="12" fill="#b03a3a">AP5056</text>
+            <text x="265" y="340" text-anchor="middle" font-size="11" fill="#b03a3a">锂电池充电</text>
+            <line x1="170" y1="326" x2="215" y2="326" stroke="#64748b" stroke-width="2" marker-end="url(#ab1)"/>
+            <line x1="315" y1="326" x2="360" y2="290" stroke="#64748b" stroke-width="2" marker-end="url(#ab1)"/>
+            <text x="322" y="318" font-size="10" fill="#64748b">3.3V×2 路</text>
+            <rect x="215" y="385" width="100" height="42" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+            <text x="265" y="403" text-anchor="middle" font-size="12" fill="#334155">3.7 V 锂电池</text>
+            <text x="265" y="419" text-anchor="middle" font-size="10" fill="#64748b">&gt;1000 mAh</text>
+            <line x1="265" y1="385" x2="265" y2="352" stroke="#64748b" stroke-width="2" marker-end="url(#ab1)" marker-start="url(#ab1)"/>
+            <!-- right: playback -->
+            <rect x="640" y="105" width="120" height="55" rx="8" fill="#e6f7ee" stroke="#16a34a" stroke-width="1.8"/>
+            <text x="700" y="128" text-anchor="middle" font-size="13" font-weight="bold" fill="#15803d">ES8311</text>
+            <text x="700" y="147" text-anchor="middle" font-size="11" fill="#15803d">单声道 Codec（放）</text>
+            <line x1="560" y1="190" x2="640" y2="135" stroke="#16a34a" stroke-width="2" marker-end="url(#ab1)"/>
+            <text x="585" y="150" font-size="10" fill="#16a34a">I2S + I2C</text>
+            <rect x="800" y="70" width="95" height="42" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+            <text x="847" y="88" text-anchor="middle" font-size="11" fill="#334155">3.5mm 耳机</text>
+            <text x="847" y="103" text-anchor="middle" font-size="10" fill="#64748b">带插入检测</text>
+            <rect x="800" y="128" width="95" height="42" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+            <text x="847" y="146" text-anchor="middle" font-size="11" fill="#334155">功放→喇叭座</text>
+            <text x="847" y="161" text-anchor="middle" font-size="10" fill="#64748b">4Ω 3W</text>
+            <line x1="760" y1="122" x2="800" y2="95" stroke="#64748b" stroke-width="2" marker-end="url(#ab1)"/>
+            <line x1="760" y1="140" x2="800" y2="148" stroke="#64748b" stroke-width="2" marker-end="url(#ab1)"/>
+            <!-- right: record -->
+            <rect x="640" y="230" width="120" height="55" rx="8" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.8"/>
+            <text x="700" y="253" text-anchor="middle" font-size="13" font-weight="bold" fill="#6d28d9">ES7243</text>
+            <text x="700" y="272" text-anchor="middle" font-size="11" fill="#6d28d9">音频 ADC（收）</text>
+            <line x1="640" y1="257" x2="560" y2="235" stroke="#7c3aed" stroke-width="2" marker-end="url(#ab1)"/>
+            <text x="580" y="235" font-size="10" fill="#7c3aed">I2S</text>
+            <rect x="800" y="237" width="95" height="42" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+            <text x="847" y="255" text-anchor="middle" font-size="11" fill="#334155">板载麦克风</text>
+            <text x="847" y="270" text-anchor="middle" font-size="10" fill="#64748b">单麦</text>
+            <line x1="800" y1="258" x2="760" y2="258" stroke="#64748b" stroke-width="2" marker-end="url(#ab1)"/>
+            <!-- bottom: sd + keys -->
+            <rect x="360" y="370" width="95" height="52" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+            <text x="407" y="392" text-anchor="middle" font-size="12" fill="#334155">MicroSD</text>
+            <text x="407" y="409" text-anchor="middle" font-size="10" fill="#64748b">1 线模式</text>
+            <line x1="407" y1="370" x2="430" y2="310" stroke="#64748b" stroke-width="2" marker-end="url(#ab1)" marker-start="url(#ab1)"/>
+            <rect x="480" y="370" width="180" height="52" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+            <text x="570" y="392" text-anchor="middle" font-size="12" fill="#334155">6 功能键 + Boot/RST</text>
+            <text x="570" y="409" text-anchor="middle" font-size="10" fill="#64748b">Rec·Mode·Play·Set·Vol±</text>
+            <line x1="540" y1="370" x2="500" y2="310" stroke="#64748b" stroke-width="2" marker-end="url(#ab1)"/>
+            <text x="460" y="40" text-anchor="middle" font-size="14" font-weight="bold" fill="#334155">ESP32-LyraT-Mini V1.2 功能框图</text>
+            <text x="460" y="452" text-anchor="middle" font-size="11" fill="#94a3b8">收（麦克风→ES7243）与放（ES8311→喇叭/耳机）各走一路 I2S——这正是它能做「边听边说」应用（AEC 回声消除）的硬件基础</text>
+          </svg>
+          <figcaption>图 1&nbsp;&nbsp;LyraT-Mini 功能框图：一收（ES7243）一放（ES8311）+ Wi-Fi/蓝牙 + SD + 按键 + 锂电管理，智能音箱的最小硬件闭环</figcaption>
+        </figure>
+
+        <aside class="note">
+          <strong>和它的兄弟们：</strong>LyraT（双声道 ES8388、双麦）→ LyraT-Mini（单声道、单麦、更便宜）→ Korvo 系列（麦克风阵列，远场语音）。
+          Mini 的定位是入门与量产原型：<mark>近场语音 + 播放</mark>的项目它全能做；要「三米外喊小度」那种远场唤醒，才需要上麦克风阵列的板子。
+        </aside>
+      </section>
+
+      <!-- ============ 第二章 ============ -->
+      <section id="ch2">
+        <h2>二、环境搭建（Windows 实操，国内镜像版）</h2>
+        <p class="lead">
+          官方文档的开发环境 = <strong>ESP-IDF</strong>（ESP32 基础开发框架，编译器/烧录器都在这）+ <strong>ESP-ADF</strong>（音频框架，以 IDF 为地基）。
+          国内直连 GitHub 很慢甚至失败，下面是全程用<strong>乐鑫官方国内镜像</strong>（gitee + dl.espressif.cn）的实际操作记录。
+        </p>
+
+        <figure>
+          <svg width="920" height="210" viewBox="0 0 920 210" role="img" aria-label="环境搭建五步流程：克隆 esp-adf、切 v2.7、子模块换 gitee 镜像、install 安装工具链、export 进入环境">
+            <defs><marker id="as1" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#2563eb"/></marker></defs>
+            <g font-size="12">
+              <rect x="20" y="55" width="150" height="80" rx="10" fill="#eef4ff" stroke="#2563eb" stroke-width="2"/>
+              <text x="95" y="83" text-anchor="middle" font-weight="bold" fill="#1d4ed8">① 克隆 esp-adf</text>
+              <text x="95" y="103" text-anchor="middle" font-size="11" fill="#334155">gitee 官方镜像</text>
+              <text x="95" y="120" text-anchor="middle" font-size="11" fill="#64748b">放 D:\esp\</text>
+              <rect x="205" y="55" width="150" height="80" rx="10" fill="#eef4ff" stroke="#2563eb" stroke-width="2"/>
+              <text x="280" y="83" text-anchor="middle" font-weight="bold" fill="#1d4ed8">② 切 v2.7 版本</text>
+              <text x="280" y="103" text-anchor="middle" font-size="11" fill="#334155">master 已是 v3.0 新架构</text>
+              <text x="280" y="120" text-anchor="middle" font-size="11" fill="#64748b">文档对应 v2.x</text>
+              <rect x="390" y="55" width="150" height="80" rx="10" fill="#eef4ff" stroke="#2563eb" stroke-width="2"/>
+              <text x="465" y="83" text-anchor="middle" font-weight="bold" fill="#1d4ed8">③ 子模块换镜像</text>
+              <text x="465" y="103" text-anchor="middle" font-size="11" fill="#334155">esp-idf / adf-libs / esp-sr</text>
+              <text x="465" y="120" text-anchor="middle" font-size="11" fill="#64748b">git config url 指到 gitee</text>
+              <rect x="575" y="55" width="150" height="80" rx="10" fill="#fef3e8" stroke="#d97706" stroke-width="2"/>
+              <text x="650" y="83" text-anchor="middle" font-weight="bold" fill="#b45309">④ install.bat</text>
+              <text x="650" y="103" text-anchor="middle" font-size="11" fill="#334155">装交叉编译器/Python 环境</text>
+              <text x="650" y="120" text-anchor="middle" font-size="11" fill="#64748b">走 dl.espressif.cn</text>
+              <rect x="760" y="55" width="140" height="80" rx="10" fill="#e6f7ee" stroke="#16a34a" stroke-width="2"/>
+              <text x="830" y="83" text-anchor="middle" font-weight="bold" fill="#15803d">⑤ export.bat</text>
+              <text x="830" y="103" text-anchor="middle" font-size="11" fill="#334155">进入编译环境</text>
+              <text x="830" y="120" text-anchor="middle" font-size="11" fill="#64748b">每开新终端都要跑</text>
+            </g>
+            <line x1="170" y1="95" x2="205" y2="95" stroke="#2563eb" stroke-width="2.5" marker-end="url(#as1)"/>
+            <line x1="355" y1="95" x2="390" y2="95" stroke="#2563eb" stroke-width="2.5" marker-end="url(#as1)"/>
+            <line x1="540" y1="95" x2="575" y2="95" stroke="#2563eb" stroke-width="2.5" marker-end="url(#as1)"/>
+            <line x1="725" y1="95" x2="760" y2="95" stroke="#2563eb" stroke-width="2.5" marker-end="url(#as1)"/>
+            <text x="460" y="30" text-anchor="middle" font-size="14" font-weight="bold" fill="#334155">Windows + 国内镜像：五步搭好 ESP-ADF</text>
+            <text x="460" y="175" text-anchor="middle" font-size="11" fill="#94a3b8">①③ 解决「GitHub 拉不动」，④ 解决「工具链下载慢」——三处镜像换完，全程不碰梯子</text>
+          </svg>
+          <figcaption>图 2&nbsp;&nbsp;环境搭建流程。ESP-IDF 不用单独装：v2.7 的 esp-adf 把配套版本的 esp-idf 作为子模块内置了</figcaption>
+        </figure>
+
+        <h3>2.1 版本选择：v2.7 还是 master？</h3>
+        <table>
+          <caption>表 2&nbsp;&nbsp;ESP-ADF 两条版本线（2026-07 现状）</caption>
+          <thead><tr><th scope="col">版本</th><th scope="col">架构</th><th scope="col">配套 IDF</th><th scope="col">选择建议</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">v2.7（正式版）</th><td>经典 audio_pipeline/element 架构，<code>examples/</code> 下 60+ 例程，板级支持齐全</td><td>内置 esp-idf 子模块（v5.4 系）</td><td><mark>入门选它</mark>——官方文档、教程、例程全部对应这条线</td></tr>
+            <tr><th scope="row">master（v3.0 开发版）</th><td>全新 ESP-GMF 通用多媒体框架，目录变为 <code>adf_examples/</code></td><td>需自装 ESP-IDF ≥ v5.5.2</td><td>新架构方向，但资料还少，暂不建议入门用</td></tr>
+          </tbody>
+        </table>
+
+        <h3>2.2 实际执行的命令</h3>
+        <p>前置：Windows 已有 git 和 Python（3.9~3.13 皆可；install 脚本会另建独立的 Python 虚拟环境，不污染系统）。全部文件按惯例放 D 盘：</p>
+<pre><code># ① 从 gitee 官方镜像克隆（几分钟，不用 --recursive，子模块下一步换源后再拉）
+mkdir D:\esp && cd D:\esp
+git clone https://gitee.com/EspressifSystems/esp-adf.git
+cd esp-adf
+
+# ② 切到 v2.7 正式版
+git checkout v2.7
+
+# ③ 三个子模块的 URL 从 github 重定向到 gitee 镜像，再递归拉取
+#    （esp-idf 自身的子模块用的是相对路径，会自动跟着解析到 gitee，无需逐个改）
+git config submodule.esp-idf.url https://gitee.com/EspressifSystems/esp-idf.git
+git config "submodule.components/esp-adf-libs.url" https://gitee.com/EspressifSystems/esp-adf-libs.git
+git config "submodule.components/esp-sr.url" https://gitee.com/EspressifSystems/esp-sr.git
+git submodule update --init --recursive        # 最大的一步，esp-idf 全量约 2 GB
+
+# ④ 安装工具链（编译器、烧录工具、Python 虚拟环境）——先把下载源指到乐鑫国内 CDN
+set IDF_GITHUB_ASSETS=dl.espressif.cn/github_assets
+set PIP_INDEX_URL=https://pypi.tuna.tsinghua.edu.cn/simple
+install.bat
+
+# ⑤ 进入开发环境（设好 IDF_PATH、ADF_PATH、PATH——每开一个新终端都要执行）
+export.bat
+</code></pre>
+        <aside class="tip">
+          <strong>Linux/macOS</strong> 对应 <code>./install.sh</code> 与 <code>. ./export.sh</code>，其余完全一致。
+          嫌每次 export 麻烦，可以给「已 export 的 cmd」做个快捷方式（参考官方 ESP-IDF CMD 的做法：
+          <code>cmd /k "cd /d D:\esp\esp-adf && export.bat"</code>）。
+        </aside>
+      </section>
+
+      <!-- ============ 第三章 ============ -->
+      <section id="ch3">
+        <h2>三、跑通第一个例子：play_mp3_control</h2>
+        <p>官方指定的 Hello World 是 <code>examples/get-started/play_mp3_control</code>——播放一段内置 MP3，按键控制播放/暂停/音量。流程是所有 ADF 项目通用的：</p>
+<pre><code>cd examples\get-started\play_mp3_control
+
+idf.py set-target esp32          # 选芯片（LyraT-Mini 是经典 ESP32）
+idf.py menuconfig                # 关键一步：选板子！
+#   Audio HAL → Audio board → ESP32-Lyrat-Mini V1.1
+#  （V1.2 的板子同样选这项，官方就是这么对应的）
+
+idf.py build                     # 编译
+idf.py -p COM口 flash monitor    # 烧录 + 打开串口监视器（板子接「UART」口）
+#   退出 monitor：Ctrl + ]
+</code></pre>
+        <p>
+          接上耳机或喇叭，复位后就能听到音乐；串口里能看到 pipeline 各元素的状态日志。
+          <strong>验证录音通路</strong>可以再烧 <code>examples/recorder/pipeline_wav_amr_sdcard</code>（按 Rec 键录到 SD 卡）。
+        </p>
+        <aside class="note">
+          <strong>menuconfig 选板子为什么重要：</strong>ADF 把每块官方板的引脚、Codec 型号、功放使能脚都封装成了「board」组件（<code>components/audio_board/lyrat_mini_v1_1/</code>）。
+          选对板子，<code>audio_board_init()</code> 一行就把 ES8311+ES7243 全配好；选错则无声/无麦。自己画的板子也可以照这个目录结构加一块「自定义 board」。
+        </aside>
+      </section>
+
+      <!-- ============ 第四章 ============ -->
+      <section id="ch4">
+        <h2>四、ESP-ADF 核心概念：音频管道</h2>
+        <p>
+          ADF 的编程模型一句话：<strong>把音频处理拆成一个个「元素」（element），用「管道」（pipeline）串起来，数据在环形缓冲里自动流动</strong>。
+          你不用手写「读文件→解码→重采样→喂 I2S」的循环，只需声明链路、监听事件。
+        </p>
+        <figure>
+          <svg width="900" height="270" viewBox="0 0 900 270" role="img" aria-label="ESP-ADF 音频管道模型：输入流经解码器、音频处理到输出流，各元素间由环形缓冲连接，事件汇报给应用">
+            <defs><marker id="ag1" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#2563eb"/></marker></defs>
+            <rect x="30" y="80" width="840" height="110" rx="12" fill="none" stroke="#93b4f5" stroke-dasharray="7 5" stroke-width="1.6"/>
+            <text x="60" y="70" font-size="12" fill="#64748b">audio_pipeline（管道）</text>
+            <g font-size="12">
+              <rect x="55" y="105" width="160" height="60" rx="9" fill="#eef4ff" stroke="#2563eb" stroke-width="2"/>
+              <text x="135" y="130" text-anchor="middle" font-weight="bold" fill="#1d4ed8">输入流 stream</text>
+              <text x="135" y="150" text-anchor="middle" font-size="11" fill="#334155">HTTP / SD卡 / I2S麦克风…</text>
+              <rect x="270" y="105" width="160" height="60" rx="9" fill="#e6f7ee" stroke="#16a34a" stroke-width="2"/>
+              <text x="350" y="130" text-anchor="middle" font-weight="bold" fill="#15803d">解码/编码器</text>
+              <text x="350" y="150" text-anchor="middle" font-size="11" fill="#334155">MP3/AAC/WAV/AMR/OPUS…</text>
+              <rect x="485" y="105" width="160" height="60" rx="9" fill="#f3e8ff" stroke="#7c3aed" stroke-width="2"/>
+              <text x="565" y="130" text-anchor="middle" font-weight="bold" fill="#6d28d9">音频处理</text>
+              <text x="565" y="150" text-anchor="middle" font-size="11" fill="#334155">重采样/EQ/混音/变速…</text>
+              <rect x="700" y="105" width="150" height="60" rx="9" fill="#fef3e8" stroke="#d97706" stroke-width="2"/>
+              <text x="775" y="130" text-anchor="middle" font-weight="bold" fill="#b45309">输出流 stream</text>
+              <text x="775" y="150" text-anchor="middle" font-size="11" fill="#334155">I2S → ES8311 → 喇叭</text>
+            </g>
+            <line x1="215" y1="135" x2="270" y2="135" stroke="#2563eb" stroke-width="2.5" marker-end="url(#ag1)"/>
+            <line x1="430" y1="135" x2="485" y2="135" stroke="#2563eb" stroke-width="2.5" marker-end="url(#ag1)"/>
+            <line x1="645" y1="135" x2="700" y2="135" stroke="#2563eb" stroke-width="2.5" marker-end="url(#ag1)"/>
+            <text x="242" y="126" text-anchor="middle" font-size="10" fill="#94a3b8">环形缓冲</text>
+            <text x="457" y="126" text-anchor="middle" font-size="10" fill="#94a3b8">环形缓冲</text>
+            <text x="672" y="126" text-anchor="middle" font-size="10" fill="#94a3b8">环形缓冲</text>
+            <rect x="330" y="215" width="240" height="38" rx="9" fill="#fff" stroke="#b03a3a" stroke-width="1.8"/>
+            <text x="450" y="239" text-anchor="middle" font-size="12" fill="#b03a3a">事件接口 event_iface → 应用程序</text>
+            <line x1="450" y1="190" x2="450" y2="215" stroke="#b03a3a" stroke-width="2" marker-end="url(#ag1)"/>
+            <text x="450" y="40" text-anchor="middle" font-size="14" font-weight="bold" fill="#334155">「元素串成管道，数据自动流动，状态靠事件」</text>
+          </svg>
+          <figcaption>图 3&nbsp;&nbsp;ADF 音频管道模型。换一种玩法 ≈ 换一种元素组合：网络电台 = http_stream + mp3_decoder + i2s_stream；录音上传 = i2s_stream(读) + encoder + http_stream(写)</figcaption>
+        </figure>
+        <p>在这套管道之上，ADF 还提供成品级「服务」组件：Wi-Fi 配网服务、蓝牙服务、按键外设、<strong>ESP Audio 播放器</strong>（多格式一键播放）、语音识别接口（对接 esp-sr 的 WakeNet 唤醒词 / MultiNet 命令词模型）等——例程基本就是这些积木的不同拼法。</p>
+      </section>
+
+      <!-- ============ 第五章 ============ -->
+      <section id="ch5">
+        <h2>五、这块板子能做什么项目（官方例程全景 + 项目点子）</h2>
+        <p class="lead">以下按 <code>examples/</code> 目录逐类整理（v2.7 实测目录），★ 为特别适合 LyraT-Mini 上手的。</p>
+
+        <table>
+          <caption>表 3&nbsp;&nbsp;ESP-ADF v2.7 官方例程全景（60+ 个，按目录分类）</caption>
+          <thead><tr><th scope="col">类别</th><th scope="col">代表例程</th><th scope="col">能玩出什么</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">get-started 入门</th><td>★ play_mp3_control、pipeline_tcp_client、pipeline_a2dp_sink_and_hfp</td><td>第一个声音、TCP 收流播放、蓝牙音箱+免提通话二合一</td></tr>
+            <tr><th scope="row">player 播放器</th><td>★ pipeline_http_mp3、★ pipeline_living_stream、pipeline_a2dp_sink/source、pipeline_flash_tone、pipeline_play_mp3_with_dac_or_pwm</td><td><strong>网络电台/HLS 直播流</strong>、蓝牙音箱（sink）/蓝牙发射器（source，把 SD 音乐发给蓝牙耳机）、开机提示音、无 Codec 板的 PWM 出声</td></tr>
+            <tr><th scope="row">recorder 录音</th><td>★ pipeline_wav_amr_sdcard、pipeline_recording_to_sdcard、★ pipeline_raw_http、av_muxer_sdcard</td><td>录音笔（WAV/AMR 存 SD）、<strong>把麦克风数据 HTTP POST 上云</strong>（对接语音转文字 API 的雏形）</td></tr>
+            <tr><th scope="row">speech_recognition 语音识别</th><td>★ <strong>wwe</strong>（WakeNet 唤醒词）、vad（人声检测）</td><td>离线「嗨，乐鑫」唤醒；VAD 自动启停录音——<mark>全离线，不要云、不要钱</mark></td></tr>
+            <tr><th scope="row">dueros 语音助手</th><td>dueros（百度 DuerOS 全链路）</td><td>自制「小度」：唤醒 → 录音上云 → 语音答复，智能音箱完整闭环</td></tr>
+            <tr><th scope="row">cloud_services 云服务</th><td>pipeline_baidu_speech_mp3、pipeline_aws_polly_mp3、google_translate_device</td><td>文字转语音播报（百度/AWS Polly）、实体「翻译机」</td></tr>
+            <tr><th scope="row">protocols 通信协议</th><td>★ voip、esp-rtc、rtmp、esp-rtsp</td><td><strong>SIP 网络对讲机/门铃</strong>、音视频通话、RTMP 推流（后两者要带屏/摄像头的板子）</td></tr>
+            <tr><th scope="row">audio_processing 音效</th><td>pipeline_resample、pipeline_equalizer、pipeline_sonic、pipeline_alc</td><td>重采样、10 段 EQ、<strong>变速变调</strong>（快放/慢放/变声）、自动电平</td></tr>
+            <tr><th scope="row">advanced 进阶</th><td>★ multi-room、dlna、audio_mixer_tone、downmix、algorithm（AEC/AGC/NS）、wifi_bt_ble_coex</td><td><strong>多房间同步播放</strong>（全屋音响）、DLNA 投音、混音（背景乐+提示音）、回声消除算法、Wi-Fi/蓝牙共存</td></tr>
+            <tr><th scope="row">display / cli / ota / system</th><td>led_pixels、cli、ota、battery、power_save</td><td>音乐律动灯带（WS2812）、串口命令行调试台、<strong>OTA 在线升级</strong>、电池电量监测、低功耗</td></tr>
+          </tbody>
+        </table>
+
+        <h3>由易到难的一条学习路线</h3>
+        <figure>
+          <svg width="900" height="300" viewBox="0 0 900 300" role="img" aria-label="学习路线阶梯：从本地播放到网络电台、蓝牙音箱、录音上云、离线唤醒、命令词控制，最终到语音助手与全屋音响">
+            <defs><marker id="al1" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#94a3b8"/></marker></defs>
+            <g font-size="11.5">
+              <rect x="30" y="215" width="130" height="52" rx="9" fill="#eef4ff" stroke="#2563eb" stroke-width="2"/>
+              <text x="95" y="237" text-anchor="middle" font-weight="bold" fill="#1d4ed8">① 本地播放</text>
+              <text x="95" y="255" text-anchor="middle" font-size="10.5" fill="#334155">play_mp3 / SD 播放器</text>
+              <rect x="175" y="185" width="130" height="52" rx="9" fill="#eef4ff" stroke="#2563eb" stroke-width="2"/>
+              <text x="240" y="207" text-anchor="middle" font-weight="bold" fill="#1d4ed8">② 网络电台</text>
+              <text x="240" y="225" text-anchor="middle" font-size="10.5" fill="#334155">http_mp3 / living_stream</text>
+              <rect x="320" y="155" width="130" height="52" rx="9" fill="#e6f7ee" stroke="#16a34a" stroke-width="2"/>
+              <text x="385" y="177" text-anchor="middle" font-weight="bold" fill="#15803d">③ 蓝牙音箱</text>
+              <text x="385" y="195" text-anchor="middle" font-size="10.5" fill="#334155">a2dp_sink (+HFP 免提)</text>
+              <rect x="465" y="125" width="130" height="52" rx="9" fill="#e6f7ee" stroke="#16a34a" stroke-width="2"/>
+              <text x="530" y="147" text-anchor="middle" font-weight="bold" fill="#15803d">④ 录音 &amp; 上云</text>
+              <text x="530" y="165" text-anchor="middle" font-size="10.5" fill="#334155">wav_sdcard / raw_http</text>
+              <rect x="610" y="95" width="130" height="52" rx="9" fill="#f3e8ff" stroke="#7c3aed" stroke-width="2"/>
+              <text x="675" y="117" text-anchor="middle" font-weight="bold" fill="#6d28d9">⑤ 离线唤醒/命令</text>
+              <text x="675" y="135" text-anchor="middle" font-size="10.5" fill="#334155">wwe (WakeNet/MultiNet)</text>
+              <rect x="755" y="55" width="130" height="62" rx="9" fill="#fef3e8" stroke="#d97706" stroke-width="2"/>
+              <text x="820" y="77" text-anchor="middle" font-weight="bold" fill="#b45309">⑥ 语音助手</text>
+              <text x="820" y="94" text-anchor="middle" font-size="10.5" fill="#334155">dueros / 接大模型 API</text>
+              <text x="820" y="110" text-anchor="middle" font-size="10.5" fill="#334155">multi-room 全屋音响</text>
+            </g>
+            <line x1="160" y1="238" x2="175" y2="223" stroke="#94a3b8" stroke-width="2" marker-end="url(#al1)"/>
+            <line x1="305" y1="208" x2="320" y2="193" stroke="#94a3b8" stroke-width="2" marker-end="url(#al1)"/>
+            <line x1="450" y1="178" x2="465" y2="163" stroke="#94a3b8" stroke-width="2" marker-end="url(#al1)"/>
+            <line x1="595" y1="148" x2="610" y2="133" stroke="#94a3b8" stroke-width="2" marker-end="url(#al1)"/>
+            <line x1="740" y1="118" x2="755" y2="103" stroke="#94a3b8" stroke-width="2" marker-end="url(#al1)"/>
+            <text x="450" y="30" text-anchor="middle" font-size="14" font-weight="bold" fill="#334155">LyraT-Mini 学习路线：每一级都是前一级管道上多插一两个「积木」</text>
+          </svg>
+          <figcaption>图 4&nbsp;&nbsp;由易到难的项目阶梯。①~⑤ 全部单板可完成；⑥ 的 DuerOS 需要百度开发者账号，也可以把「录音上云」对接任意语音大模型 API 自制助手</figcaption>
+        </figure>
+
+        <h3>结合板子特性的项目点子</h3>
+        <ul>
+          <li><strong>语音控制开关</strong>：wwe 唤醒 + MultiNet 离线命令词（「打开灯」「关闭风扇」）+ GPIO 继电器——全离线、断网可用，最能出成果的实战。</li>
+          <li><strong>宝宝故事机 / 白噪声机</strong>：SD 卡 + 6 个实体按键选曲 + 锂电池——板子的按键和电源管理天生为此准备。</li>
+          <li><strong>网络收音机</strong>：living_stream 例程 + 电台 HLS 直播源列表，Mode 键换台。</li>
+          <li><strong>SIP 对讲门铃</strong>：voip 例程，Rec 键呼叫，手机 SIP 客户端应答——一收一放两路 I2S + AEC 正好用上。</li>
+          <li><strong>会议录音笔</strong>：VAD 自动启停 + AMR 压缩存 SD + 充电电池，录一整天。</li>
+          <li><strong>老人呼叫器</strong>：按键触发录音上云 + 微信/Telegram Bot 推送（cloud_services 思路）。</li>
+          <li><strong>音乐律动灯</strong>：led_pixels 例程接 WS2812 灯带，播放器变氛围灯。</li>
+          <li><strong>接大模型的 AI 音箱</strong>：唤醒 → 录音 POST 到自建服务（语音转文字 → LLM → 文字转语音）→ 拉回 MP3 播放——DuerOS 链路的「自主可控版」。</li>
+        </ul>
+        <aside class="tip">
+          <strong>单麦的边界要心里有数：</strong>WakeNet 在 LyraT-Mini 上做<strong>近场</strong>（1~2 米）唤醒没问题；嘈杂环境远场唤醒、声源定位需要麦克风阵列（Korvo 系列）。
+          另外 ESP32 经典款不支持 MultiNet 最新的大模型命令词（那些要 ESP32-S3），入门离线命令词够用即可。
+        </aside>
+      </section>
+
+      <!-- ============ 第六章 ============ -->
+      <section id="ch6">
+        <h2>六、踩坑与注意事项</h2>
+        <dl>
+          <dt>1. gitee 的 master ≠ 文档里的 ADF</dt>
+          <dd>2026 年起 master 已切到 v3.0 新架构（ESP-GMF，目录是 <code>adf_examples/</code>，且要求 IDF ≥ 5.5.2）。照官方入门文档学习务必 <code>git checkout v2.7</code>，否则连 <code>examples/</code> 目录都找不到。</dd>
+          <dt>2. 子模块直连 GitHub 会卡死</dt>
+          <dd>esp-adf 的 <code>.gitmodules</code> 写的是 github 地址，必须先 <code>git config submodule.&lt;名&gt;.url</code> 改到 gitee 再 <code>submodule update</code>（见 2.2 ③）。esp-idf 内部子模块是相对路径，会自动跟随 gitee，不用管。</dd>
+          <dt>3. 工具链下载慢</dt>
+          <dd>install 前设 <code>IDF_GITHUB_ASSETS=dl.espressif.cn/github_assets</code>（乐鑫国内 CDN），pip 换清华源。</dd>
+          <dt>4. 串口驱动与端口</dt>
+          <dd>板上是 CP2102N，Win10/11 一般免驱；设备管理器看 COM 号。烧录/日志都接标着 <strong>UART</strong> 的那个 Micro-USB 口（另一个只供电）。烧录失败就按住 Boot 再点 RST 进下载模式。</dd>
+          <dt>5. menuconfig 忘选板子</dt>
+          <dd>现象是编译能过、烧完没声/麦不响。Audio HAL → Audio board → <strong>ESP32-Lyrat-Mini V1.1</strong>（V1.2 硬件也选它）。</dd>
+          <dt>6. export 不是一劳永逸</dt>
+          <dd><code>export.bat</code> 只对当前终端生效，每开新窗口都要跑一次；两个框架路径由它设置（<code>IDF_PATH=D:\esp\esp-adf\esp-idf</code>、<code>ADF_PATH=D:\esp\esp-adf</code>）。</dd>
+          <dt>7. 杀毒软件干扰</dt>
+          <dd>官方明确提示安装工具链时可能被杀软拦截（大量小文件+改 PATH），install 报奇怪的权限错误时先临时关掉。</dd>
+        </dl>
+      </section>
+
+      <section id="source">
+        <h2>来源</h2>
+        <p>本文依据乐鑫官方文档与 ESP-ADF v2.7 源码仓库实测整理（环境搭建部分为 2026-07-02 在本机 Windows 11 + gitee 镜像的实际操作记录），例程清单取自本地克隆的 <code>examples/</code> 目录：</p>
+        <ul>
+          <li><a href="https://docs.espressif.com/projects/esp-adf/zh_CN/latest/design-guide/dev-boards/get-started-esp32-lyrat-mini.html" target="_blank" rel="noopener">ESP32-LyraT-Mini V1.2 入门指南（官方中文文档）</a></li>
+          <li><a href="https://docs.espressif.com/projects/esp-adf/zh_CN/latest/get-started/index.html" target="_blank" rel="noopener">ESP-ADF 快速入门（安装步骤官方说明）</a></li>
+          <li><a href="https://github.com/espressif/esp-adf" target="_blank" rel="noopener">espressif/esp-adf（GitHub）</a> / <a href="https://gitee.com/EspressifSystems/esp-adf" target="_blank" rel="noopener">gitee 官方镜像</a></li>
+        </ul>
+        <p class="lead">文中所有插图均为配合知识点自绘的 SVG 示意图，仅供个人学习交流使用。</p>
+      </section>
+
+    </article>
+    </main>
+  </div>
+
+  <a class="backtop" href="#main" aria-label="回到顶部">&uarr;</a>
+
+  <footer class="site">
+    <p>&copy; 2026 江楠的学习日志 · 用语义化 HTML 构建 · <a href="index.html">返回首页</a></p>
+  </footer>
+</body>
+</html>
