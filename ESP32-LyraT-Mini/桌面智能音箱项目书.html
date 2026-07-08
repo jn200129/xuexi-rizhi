@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="江楠">
+  <meta name="description" content="基于 ESP32-LyraT-Mini 的桌面智能音箱项目设计书：三合一（时钟+网络电台+语音助手），LVGL v9 UI、大模型 API 接入、Wi-Fi/蓝牙/SD 三音源、实时 FFT 频谱。江楠的学习日志。">
+  <meta name="keywords" content="ESP32,LyraT-Mini,ESP-ADF,LVGL,ST7789,桌面音箱,智能音箱,时钟屏,网络电台,大模型,ASR,TTS,FFT,频谱,天气,项目实战">
+  <title>ESP32-LyraT-Mini 桌面智能音箱项目书 — 江楠的学习日志</title>
+  <style>
+    :root{
+      --accent:#2563eb; --accent-dark:#1d4ed8; --bg:#f7f8fa; --card:#fff;
+      --border:#e2e5ea; --text:#1f2329; --muted:#64748b;
+    }
+    *{box-sizing:border-box;}
+    body{margin:0;font-family:-apple-system,"Segoe UI","Microsoft YaHei","PingFang SC",sans-serif;
+      line-height:1.75;color:var(--text);background:var(--bg);}
+    .skip-link{position:absolute;left:-999px;top:0;background:#fff;color:var(--accent);padding:.5rem 1rem;z-index:100;}
+    .skip-link:focus{left:0;}
+    header.site{background:linear-gradient(135deg,#3b82f6 0%,var(--accent) 45%,var(--accent-dark) 100%);
+      color:#fff;padding:3rem 1.5rem 2.4rem;text-align:center;
+      box-shadow:0 6px 24px rgba(37,99,235,.18);}
+    header.site h1{margin:0 0 .5rem;font-size:2.1rem;}
+    header.site p{margin:.2rem 0;opacity:.92;}
+    .meta-list{list-style:none;padding:0;margin:.9rem 0 0;display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;}
+    .meta-list li{background:rgba(255,255,255,.18);padding:.25rem .7rem;border-radius:999px;font-size:.85rem;}
+    .layout{max-width:1180px;margin:0 auto;padding:1.6rem 1.5rem;display:grid;
+      grid-template-columns:248px 1fr;gap:1.9rem;align-items:start;}
+    .sidebar{position:sticky;top:1.4rem;background:var(--card);border:1px solid var(--border);
+      border-radius:16px;padding:1.1rem 1rem;box-shadow:0 4px 18px rgba(15,23,42,.06);max-height:calc(100vh - 2.8rem);overflow:auto;}
+    .sidebar .home-link{display:flex;align-items:center;gap:.45rem;font-weight:600;color:#fff;
+      text-decoration:none;padding:.6rem .8rem;border-radius:11px;
+      background:linear-gradient(135deg,var(--accent),var(--accent-dark));
+      box-shadow:0 4px 12px rgba(37,99,235,.28);margin-bottom:1rem;transition:transform .15s,box-shadow .15s;}
+    .sidebar .home-link:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(37,99,235,.38);}
+    .sidebar .toc-title{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;
+      color:var(--muted);margin:.2rem .35rem .55rem;font-weight:700;}
+    .sidebar nav ul{list-style:none;margin:0;padding:0;}
+    .sidebar nav li{margin:.12rem 0;}
+    .sidebar a.toc-link{display:block;color:var(--text);text-decoration:none;font-size:.92rem;
+      padding:.46rem .7rem;border-radius:9px;border-left:3px solid transparent;transition:all .15s;}
+    .sidebar a.toc-link:hover{background:#eef4ff;color:var(--accent-dark);border-left-color:var(--accent);
+      transform:translateX(2px);}
+    main{min-width:0;}
+    article>section{background:var(--card);border:1px solid var(--border);border-radius:14px;
+      padding:1.5rem 1.8rem;margin-bottom:1.6rem;scroll-margin-top:20px;}
+    h2{color:var(--accent-dark);border-bottom:2px solid var(--border);padding-bottom:.45rem;margin-top:.2rem;}
+    h3{margin-top:1.6rem;color:var(--text);}
+    h4{margin-top:1rem;color:var(--muted);}
+    p{margin:.7rem 0;}
+    dl dt{font-weight:600;margin-top:.8rem;}
+    dl dd{margin:0 0 .4rem 1.2rem;}
+    table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:.93rem;}
+    caption{caption-side:top;text-align:left;color:var(--muted);font-size:.9rem;margin-bottom:.4rem;}
+    th,td{border:1px solid var(--border);padding:.55rem .7rem;text-align:left;vertical-align:top;}
+    thead{background:#eef2ff;}
+    tbody tr:nth-child(even){background:#fafbfc;}
+    th[scope=row]{background:#f3f6ff;white-space:nowrap;}
+    aside.tip{border-left:4px solid #f59e0b;background:#fff8eb;padding:.8rem 1rem;border-radius:6px;margin:1rem 0;}
+    aside.tip strong{color:#b45309;}
+    aside.note{border-left:4px solid var(--accent);background:#eff6ff;padding:.8rem 1rem;border-radius:6px;margin:1rem 0;}
+    aside.note strong{color:var(--accent-dark);}
+    figure{margin:1.2rem 0;text-align:center;}
+    figure svg{max-width:100%;height:auto;background:#fff;border:1px solid var(--border);border-radius:10px;}
+    figcaption{color:var(--muted);font-size:.88rem;margin-top:.45rem;}
+    details{border:1px solid var(--border);border-radius:8px;padding:.6rem 1rem;margin:.7rem 0;background:#fcfcfd;}
+    summary{cursor:pointer;font-weight:600;}
+    code{background:#eef0f3;padding:.1rem .35rem;border-radius:4px;font-size:.9em;}
+    pre{background:#1e293b;color:#e2e8f0;border-radius:10px;padding:1rem 1.2rem;overflow-x:auto;
+      font-size:.86rem;line-height:1.65;}
+    pre code{background:none;padding:0;color:inherit;}
+    mark{background:#fde68a;}
+    ul,ol{padding-left:1.4rem;}
+    .lead{font-size:1.02rem;color:var(--muted);}
+    footer.site{text-align:center;color:var(--muted);padding:2rem 1rem;font-size:.9rem;}
+    footer.site a{color:var(--accent);}
+    .backtop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;
+      text-decoration:none;padding:.55rem .85rem;border-radius:50%;box-shadow:0 4px 12px rgba(37,99,235,.4);font-size:1.1rem;}
+    .badge-row{display:flex;flex-wrap:wrap;gap:.5rem;margin:.6rem 0 0;}
+    .badge{background:#eef2ff;color:var(--accent-dark);padding:.15rem .6rem;border-radius:6px;font-size:.82rem;font-weight:600;}
+    .badge.g{background:#e6f7ee;color:#15803d;}
+    .badge.o{background:#fef3e8;color:#b45309;}
+    .badge.r{background:#fde8e8;color:#b03a3a;}
+    @media(max-width:820px){
+      .layout{grid-template-columns:1fr;gap:1.1rem;padding:1.1rem;}
+      .sidebar{position:static;top:auto;max-height:none;}
+      .sidebar nav ul{display:flex;flex-wrap:wrap;gap:.4rem;}
+      .sidebar a.toc-link{border-left:none;border:1px solid var(--border);font-size:.85rem;padding:.34rem .7rem;}
+      .sidebar a.toc-link:hover{transform:none;}
+    }
+    @media(max-width:600px){header.site h1{font-size:1.7rem;}article>section{padding:1.2rem 1rem;}}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="site">
+    <h1>ESP32-LyraT-Mini 桌面智能音箱</h1>
+    <p>项目设计书 v1.0 · 时钟 + 网络电台 + 语音助手三合一 · 6 周迭代 · 立项 2026-07-03</p>
+    <ul class="meta-list">
+      <li>#桌面成品</li><li>#LVGL</li><li>#大模型</li>
+      <li>#语音助手</li><li>#网络电台</li><li>#FFT频谱</li>
+    </ul>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <a class="home-link" href="../index.html">&larr; 返回首页</a>
+      <p class="toc-title">项目书目录</p>
+      <nav aria-label="章节目录">
+        <ul>
+          <li><a class="toc-link" href="#ch0">0. 一句话概括</a></li>
+          <li><a class="toc-link" href="#ch1">1. 项目立项</a></li>
+          <li><a class="toc-link" href="#ch2">2. 需求与功能指标</a></li>
+          <li><a class="toc-link" href="#ch3">3. 硬件方案</a></li>
+          <li><a class="toc-link" href="#ch4">4. 软件架构</a></li>
+          <li><a class="toc-link" href="#ch5">5. 分周迭代计划</a></li>
+          <li><a class="toc-link" href="#ch6">6. 关键技术点</a></li>
+          <li><a class="toc-link" href="#ch7">7. 测试计划</a></li>
+          <li><a class="toc-link" href="#ch8">8. 风险与备选</a></li>
+          <li><a class="toc-link" href="#ch9">9. 交付物清单</a></li>
+          <li><a class="toc-link" href="#ch10">10. 学习目标</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="main" tabindex="-1">
+    <article>
+
+      <section id="ch0">
+        <h2>0. 项目一句话概括</h2>
+        <p class="lead">
+          <strong>「一台放在桌面的语音音箱：默认显示大时钟和天气，说唤醒词进入语音助手（接大模型），随时切到网络电台/蓝牙/SD 播放模式，屏上带实时频谱和专辑封面。」</strong>
+        </p>
+        <div class="badge-row">
+          <span class="badge">时钟屏保</span>
+          <span class="badge">天气</span>
+          <span class="badge">离线唤醒</span>
+          <span class="badge g">大模型对话</span>
+          <span class="badge g">TTS 播报</span>
+          <span class="badge">网络电台</span>
+          <span class="badge">蓝牙音箱</span>
+          <span class="badge o">实时 FFT 频谱</span>
+          <span class="badge r">LVGL v9</span>
+        </div>
+      </section>
+
+      <section id="ch1">
+        <h2>1. 项目立项</h2>
+        <h3>1.1 背景与选题</h3>
+        <p>
+          现在的智能音箱有两类：① 小米/小度类的<strong>带屏音箱</strong>——UI 好、功能全，但云端全绑生态、隐私不可控、离线即残废；
+          ② 极客向的 Raspberry Pi + HAT——自由度高但硬件成本 500+ 且笨重、外壳难。
+        </p>
+        <aside class="note">
+          <strong>LyraT-Mini（约 200 元）+ 1.9" IPS 屏（约 20 元）</strong>接近前者的产品感、后者的可玩性，
+          同时能做到"<mark>离线唤醒 + 云端可换</mark>"——今天用百度 API，明天想换 Deepseek 就换，不受生态锁死。
+          这是我要做这个项目的最大动机。
+        </aside>
+
+        <h3>1.2 差异化定位</h3>
+        <table>
+          <caption>表 1-1&nbsp;&nbsp;竞品分析</caption>
+          <thead><tr><th scope="col">对手</th><th scope="col">优势</th><th scope="col">劣势</th><th scope="col">我们的做法</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">小米/小度带屏音箱</th><td>UI 完整、生态大</td><td>云端强绑定、不可 DIY</td><td>云端服务全部可换、代码全开源</td></tr>
+            <tr><th scope="row">树莓派 + 屏</th><td>极高自由度</td><td>贵、耗电、启动慢、外壳难</td><td>单板 MCU 秒启动，小巧带电池</td></tr>
+            <tr><th scope="row">Alexa/Google Home</th><td>服务成熟</td><td>国内不好用</td><td>全走国内 API</td></tr>
+            <tr><th scope="row">老式桌面收音机</th><td>情怀</td><td>无智能</td><td>保留电台+加智能语音</td></tr>
+          </tbody>
+        </table>
+
+        <h3>1.3 交付预期（MVP）</h3>
+        <p>一台桌面成品（约 100mm × 80mm × 40mm，前面板一屏一喇叭），用户体验：</p>
+        <ul>
+          <li><strong>待机（时钟模式）</strong>：大字号时钟 + 星期日期 + 天气图标 + 温度 + 城市；夜间自动降亮度；</li>
+          <li><strong>语音模式</strong>（说"嗨乐鑫"触发）：屏切换到语音波形动画 → 上传语音到 ASR → 显示识别文字 → 显示大模型回复 → TTS 播报；</li>
+          <li><strong>播放模式</strong>（长按 Play 键切入）：
+            <ul>
+              <li>网络电台（默认，Mode 键换台）</li>
+              <li>蓝牙 A2DP（手机连上直接推音乐）</li>
+              <li>SD 卡本地文件</li>
+              <li>UI：专辑封面（96×96）+ 歌名 + 进度条 + 底部 16 段实时 FFT 频谱</li>
+            </ul>
+          </li>
+          <li><strong>锂电池续航 ≥ 6 小时</strong>（待机 + 偶尔播放和语音交互）；</li>
+          <li><strong>Wi-Fi 配网</strong>：初次上电无 Wi-Fi 时进入 SoftAP 模式（手机连 <code>LyraT-Setup</code>）。</li>
+        </ul>
+      </section>
+
+      <section id="ch2">
+        <h2>2. 需求分析与功能指标</h2>
+
+        <h3>2.1 功能需求（MoSCoW 优先级）</h3>
+        <table>
+          <caption>表 2-1&nbsp;&nbsp;需求分类</caption>
+          <thead><tr><th scope="col">分类</th><th scope="col">需求</th><th scope="col">优先级</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Must</th><td>时钟界面 + NTP 对时 + 天气 API</td><td><span class="badge r">P0</span></td></tr>
+            <tr><th scope="row">Must</th><td>网络电台播放 + 4 个预置台切换</td><td><span class="badge r">P0</span></td></tr>
+            <tr><th scope="row">Must</th><td>唤醒词触发 + 屏切换 + ASR + 大模型 API + TTS</td><td><span class="badge r">P0</span></td></tr>
+            <tr><th scope="row">Must</th><td>6 键 + 长/短按状态切换</td><td><span class="badge r">P0</span></td></tr>
+            <tr><th scope="row">Must</th><td>Wi-Fi SoftAP 配网</td><td><span class="badge r">P0</span></td></tr>
+            <tr><th scope="row">Should</th><td>蓝牙 A2DP sink（手机音源直推）</td><td><span class="badge o">P1</span></td></tr>
+            <tr><th scope="row">Should</th><td>SD 卡本地音乐播放</td><td><span class="badge o">P1</span></td></tr>
+            <tr><th scope="row">Should</th><td>实时 FFT 频谱可视化（16 段）</td><td><span class="badge o">P1</span></td></tr>
+            <tr><th scope="row">Should</th><td>专辑封面加载（HTTP JPEG）</td><td><span class="badge o">P1</span></td></tr>
+            <tr><th scope="row">Could</th><td>桌面日历/日程（读 iCal）</td><td><span class="badge">P2</span></td></tr>
+            <tr><th scope="row">Could</th><td>环境音检测（哭声/门铃/警报）</td><td><span class="badge">P2</span></td></tr>
+            <tr><th scope="row">Won't</th><td>触摸屏交互（本 MVP 用实体键）</td><td>—</td></tr>
+          </tbody>
+        </table>
+
+        <h3>2.2 性能指标</h3>
+        <table>
+          <caption>表 2-2&nbsp;&nbsp;可量化的项目验收指标</caption>
+          <thead><tr><th scope="col">指标</th><th scope="col">目标值</th><th scope="col">依据</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">屏分辨率 / 刷新</th><td>170×320 IPS ≥ 30 fps</td><td>ST7789 SPI 40 MHz + DMA</td></tr>
+            <tr><th scope="row">时钟 UI 空闲功耗</th><td>≤ 100 mA @ 3.7V</td><td>屏 20 mA + ESP32 待唤醒 60 mA</td></tr>
+            <tr><th scope="row">唤醒响应延时</th><td>≤ 500 ms</td><td>从说完到屏切换</td></tr>
+            <tr><th scope="row">从唤醒到 TTS 出声</th><td>≤ 3 秒</td><td>含 ASR + LLM + TTS 网络往返</td></tr>
+            <tr><th scope="row">网络电台切换</th><td>≤ 2 秒</td><td>断流 → 起播</td></tr>
+            <tr><th scope="row">蓝牙对码 → 出声</th><td>≤ 6 秒</td><td>A2DP sink 连接 + 首帧</td></tr>
+            <tr><th scope="row">FFT 频谱刷新率</th><td>≥ 20 fps</td><td>1024 点 FFT / 每 50 ms 一次</td></tr>
+            <tr><th scope="row">语音助手一次交互</th><td>≤ 5 秒</td><td>唤醒 → 说话 → 播报完</td></tr>
+            <tr><th scope="row">一次充满续航</th><td>≥ 6 小时</td><td>1500 mAh 电池 @ 平均 200 mA</td></tr>
+            <tr><th scope="row">崩溃恢复</th><td>看门狗 → 3 秒回时钟态</td><td>esp_task_wdt</td></tr>
+          </tbody>
+        </table>
+
+        <h3>2.3 用户交互矩阵</h3>
+        <table>
+          <caption>表 2-3&nbsp;&nbsp;各状态下 6 键的语义</caption>
+          <thead><tr><th scope="col">状态</th><th scope="col">Rec</th><th scope="col">Mode</th><th scope="col">Play</th><th scope="col">Set</th><th scope="col">Vol−</th><th scope="col">Vol+</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">时钟态</th><td>手动进入语音</td><td>切城市</td><td>长按进播放态</td><td>长按亮度/夜间</td><td>—</td><td>—</td></tr>
+            <tr><th scope="row">语音态</th><td>取消</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+            <tr><th scope="row">播放态</th><td>回时钟</td><td>换台/切下一首</td><td>暂停/继续</td><td>长按删收藏</td><td>音量−</td><td>音量+</td></tr>
+            <tr><th scope="row">配网态</th><td>取消</td><td>—</td><td>—</td><td>长按恢复出厂</td><td>—</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="ch3">
+        <h2>3. 硬件方案</h2>
+
+        <h3>3.1 硬件框图</h3>
+        <figure>
+          <svg width="920" height="440" viewBox="0 0 920 440" role="img" aria-label="项目硬件框图：ESP32 中心，麦克风经 ES7243 与 WakeNet 到播放通路，SPI 屏在右上，Wi-Fi 连云端 API，蓝牙 A2DP 接手机">
+            <defs>
+              <marker id="ba1" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#2563eb"/></marker>
+              <marker id="ba2" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#16a34a"/></marker>
+              <marker id="ba3" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#d97706"/></marker>
+              <marker id="ba4" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#7c3aed"/></marker>
+            </defs>
+            <text x="460" y="30" text-anchor="middle" font-size="15" font-weight="bold" fill="#334155">桌面智能音箱硬件框图</text>
+            <!-- 主控 -->
+            <rect x="310" y="150" width="280" height="140" rx="10" fill="#eef4ff" stroke="#2563eb" stroke-width="2.5"/>
+            <text x="450" y="180" text-anchor="middle" font-size="15" font-weight="bold" fill="#1d4ed8">ESP32-WROVER-E</text>
+            <text x="450" y="204" text-anchor="middle" font-size="11" fill="#334155">双核 240 MHz · 4 MB Flash · 8 MB PSRAM</text>
+            <text x="450" y="230" text-anchor="middle" font-size="10.5" fill="#b45309">Core 0: LVGL / Wi-Fi / HTTP</text>
+            <text x="450" y="248" text-anchor="middle" font-size="10.5" fill="#7c3aed">Core 1: 音频 / 唤醒 / FFT</text>
+            <text x="450" y="272" text-anchor="middle" font-size="10.5" fill="#64748b">状态机：CLOCK ↔ VOICE ↔ PLAYER</text>
+            <!-- 麦克风 + ES7243 -->
+            <rect x="50" y="60" width="90" height="42" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+            <text x="95" y="78" text-anchor="middle" font-size="11" fill="#334155">板载麦克风</text>
+            <text x="95" y="93" text-anchor="middle" font-size="10" fill="#64748b">单麦</text>
+            <rect x="160" y="60" width="105" height="42" rx="8" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.8"/>
+            <text x="212" y="78" text-anchor="middle" font-size="12" font-weight="bold" fill="#6d28d9">ES7243 ADC</text>
+            <text x="212" y="93" text-anchor="middle" font-size="10" fill="#6d28d9">16 kHz 16-bit</text>
+            <line x1="140" y1="81" x2="160" y2="81" stroke="#2563eb" stroke-width="2" marker-end="url(#ba1)"/>
+            <line x1="265" y1="90" x2="315" y2="160" stroke="#2563eb" stroke-width="2" marker-end="url(#ba1)"/>
+            <text x="275" y="120" font-size="10" fill="#2563eb">I2S1</text>
+            <!-- ES8311 + 喇叭 -->
+            <rect x="620" y="60" width="105" height="42" rx="8" fill="#e6f7ee" stroke="#16a34a" stroke-width="1.8"/>
+            <text x="672" y="78" text-anchor="middle" font-size="12" font-weight="bold" fill="#15803d">ES8311 DAC</text>
+            <text x="672" y="93" text-anchor="middle" font-size="10" fill="#15803d">+ PA_EN</text>
+            <rect x="755" y="60" width="115" height="42" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+            <text x="812" y="78" text-anchor="middle" font-size="11" fill="#334155">4Ω 3W 圆喇叭</text>
+            <text x="812" y="93" text-anchor="middle" font-size="10" fill="#64748b">前面板</text>
+            <line x1="580" y1="160" x2="620" y2="90" stroke="#16a34a" stroke-width="2" marker-end="url(#ba2)"/>
+            <text x="595" y="125" font-size="10" fill="#16a34a">I2S0</text>
+            <line x1="725" y1="81" x2="755" y2="81" stroke="#16a34a" stroke-width="2" marker-end="url(#ba2)"/>
+            <!-- 屏 -->
+            <rect x="620" y="150" width="230" height="80" rx="8" fill="#fef3e8" stroke="#d97706" stroke-width="2"/>
+            <text x="735" y="175" text-anchor="middle" font-size="13" font-weight="bold" fill="#b45309">1.9" IPS 彩屏（ST7789）</text>
+            <text x="735" y="195" text-anchor="middle" font-size="11" fill="#b45309">170 × 320 · SPI 4-wire</text>
+            <text x="735" y="215" text-anchor="middle" font-size="10" fill="#b45309">SCK13 · MOSI22 · CS27 · DC12 · RST19 · BLK4</text>
+            <line x1="590" y1="200" x2="620" y2="190" stroke="#d97706" stroke-width="2" marker-end="url(#ba3)"/>
+            <text x="600" y="185" font-size="10" fill="#b45309">SPI2</text>
+            <!-- SD -->
+            <rect x="620" y="270" width="105" height="45" rx="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.8"/>
+            <text x="672" y="288" text-anchor="middle" font-size="12" font-weight="bold" fill="#0369a1">MicroSD 卡</text>
+            <text x="672" y="304" text-anchor="middle" font-size="10" fill="#0369a1">本地音乐/秘钥</text>
+            <line x1="500" y1="290" x2="620" y2="290" stroke="#0284c7" stroke-width="2" marker-end="url(#ba1)" marker-start="url(#ba1)"/>
+            <text x="547" y="282" font-size="10" fill="#0369a1">1-bit SDIO</text>
+            <!-- 按键 -->
+            <rect x="50" y="270" width="200" height="45" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+            <text x="150" y="288" text-anchor="middle" font-size="12" fill="#334155">6 键（ADC 分压）</text>
+            <text x="150" y="304" text-anchor="middle" font-size="10" fill="#64748b">Rec · Mode · Play · Set · Vol±</text>
+            <line x1="250" y1="288" x2="310" y2="260" stroke="#2563eb" stroke-width="2" marker-end="url(#ba1)"/>
+            <text x="270" y="272" font-size="10" fill="#2563eb">GPIO36</text>
+            <!-- 云端 -->
+            <rect x="60" y="360" width="230" height="55" rx="8" fill="#eef4ff" stroke="#2563eb" stroke-width="2"/>
+            <text x="175" y="380" text-anchor="middle" font-size="12" font-weight="bold" fill="#1d4ed8">☁ 云端服务（Wi-Fi）</text>
+            <text x="175" y="396" text-anchor="middle" font-size="10" fill="#334155">天气 · NTP · ASR · LLM · TTS</text>
+            <text x="175" y="410" text-anchor="middle" font-size="10" fill="#64748b">网络电台 HLS 流</text>
+            <line x1="230" y1="360" x2="330" y2="292" stroke="#2563eb" stroke-width="2" marker-end="url(#ba1)" marker-start="url(#ba1)"/>
+            <!-- 蓝牙 -->
+            <rect x="335" y="360" width="230" height="55" rx="8" fill="#f0f9ff" stroke="#0369a1" stroke-width="2"/>
+            <text x="450" y="380" text-anchor="middle" font-size="12" font-weight="bold" fill="#0369a1">📱 手机蓝牙 A2DP</text>
+            <text x="450" y="396" text-anchor="middle" font-size="10" fill="#0369a1">SBC / AAC 音频推送</text>
+            <text x="450" y="410" text-anchor="middle" font-size="10" fill="#64748b">与 Wi-Fi 分时共存</text>
+            <line x1="450" y1="360" x2="450" y2="293" stroke="#0369a1" stroke-width="2" marker-end="url(#ba1)" marker-start="url(#ba1)"/>
+            <!-- 电池 -->
+            <rect x="600" y="360" width="230" height="55" rx="8" fill="#fde8e8" stroke="#d97777" stroke-width="1.5"/>
+            <text x="715" y="380" text-anchor="middle" font-size="12" fill="#b03a3a">🔋 锂电池 3.7V 1500 mAh</text>
+            <text x="715" y="396" text-anchor="middle" font-size="10" fill="#b03a3a">AP5056 充电管理</text>
+            <text x="715" y="410" text-anchor="middle" font-size="10" fill="#64748b">续航 ≥ 6 小时</text>
+            <line x1="590" y1="360" x2="580" y2="295" stroke="#b03a3a" stroke-width="2" marker-end="url(#ba1)"/>
+          </svg>
+          <figcaption>图 1&nbsp;&nbsp;硬件框图。在便签器基础上新增：SPI 彩屏、蓝牙音源、云端 ASR/LLM/TTS/天气 4 类服务</figcaption>
+        </figure>
+
+        <h3>3.2 屏幕方案（新增）</h3>
+        <table>
+          <caption>表 3-1&nbsp;&nbsp;屏选型</caption>
+          <thead><tr><th scope="col">项目</th><th scope="col">选择</th><th scope="col">理由</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">屏型号</th><td>1.9" IPS ST7789</td><td>主流、便宜、驱动成熟；比 0.96" OLED 视觉冲击强 3 倍</td></tr>
+            <tr><th scope="row">分辨率</th><td>170 × 320</td><td>竖屏，正好放大时钟 + 底部天气/频谱</td></tr>
+            <tr><th scope="row">接口</th><td>SPI 4-wire</td><td>只占 5 个 GPIO</td></tr>
+            <tr><th scope="row">背光</th><td>PWM 可调</td><td>夜间自动降亮，省电</td></tr>
+          </tbody>
+        </table>
+
+        <p><strong>接线</strong>（LyraT-Mini 扩展排针，落板前用万用表核对具体引脚）：</p>
+        <table>
+          <caption>表 3-2&nbsp;&nbsp;屏 ↔ ESP32 引脚映射</caption>
+          <thead><tr><th scope="col">屏</th><th scope="col">ESP32 GPIO</th><th scope="col">说明</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">VCC / GND</th><td>3V3 / GND</td><td>建议 π 型滤波隔离电源噪声</td></tr>
+            <tr><th scope="row">SCK</th><td>GPIO 13</td><td>SPI2 HSPI CLK</td></tr>
+            <tr><th scope="row">MOSI</th><td>GPIO 22</td><td>SPI2 HSPI MOSI</td></tr>
+            <tr><th scope="row">CS</th><td>GPIO 27</td><td>片选</td></tr>
+            <tr><th scope="row">DC</th><td>GPIO 12</td><td>数据/命令切换</td></tr>
+            <tr><th scope="row">RST</th><td>GPIO 19</td><td>硬复位</td></tr>
+            <tr><th scope="row">BLK</th><td>GPIO 4（PWM）</td><td>背光可调，接 LEDC</td></tr>
+          </tbody>
+        </table>
+        <aside class="tip">
+          <strong>W1 必做的引脚校验：</strong>LyraT-Mini V1.2 板载资源占用 15 个 GPIO，剩余可外扩约 5–7 个。
+          W1 阶段必须先量测这 6 个 GPIO 在板上是否真的空闲/已引出。若冲突则调整——BLK 可先接 3V3 常亮兜底。
+        </aside>
+
+        <h3>3.3 外壳（MVP 阶段）</h3>
+        <ul>
+          <li>Bambu Studio 设计，PLA 白色 + 前面板蜂窝纹理；</li>
+          <li>前面板：1.9" 屏 + 麦克风孔阵列 + 4Ω 3W 圆喇叭孔；</li>
+          <li>侧面：6 键（丝网印刷图标）、SD 卡槽、Micro-USB 充电口；</li>
+          <li>内部：主板 + 1500 mAh 锂电池 + 铜箔屏蔽（喇叭腔与主板隔离）；</li>
+          <li>尺寸目标：≤ 100mm × 80mm × 40mm。</li>
+        </ul>
+      </section>
+
+      <section id="ch4">
+        <h2>4. 软件架构</h2>
+
+        <h3>4.1 分层架构</h3>
+        <figure>
+          <svg width="880" height="400" viewBox="0 0 880 400" role="img" aria-label="软件分层架构：应用层状态机 → UI层（LVGL）→ 业务组件（唤醒/音频/语音/网络/天气/电台/按键）→ 框架层 → 基础层">
+            <text x="440" y="30" text-anchor="middle" font-size="14" font-weight="bold" fill="#334155">项目软件分层架构</text>
+            <!-- 应用层 -->
+            <rect x="50" y="55" width="770" height="45" rx="8" fill="#fde8e8" stroke="#d97777" stroke-width="1.8"/>
+            <text x="435" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#b03a3a">① 应用层：三态状态机 CLOCK ↔ VOICE ↔ PLAYER（+ 配网）</text>
+            <text x="435" y="94" text-anchor="middle" font-size="10.5" fill="#b03a3a">app_main() · 事件总线（xEventGroup + xQueue）· 全局配置</text>
+            <!-- UI 层 -->
+            <rect x="50" y="112" width="770" height="60" rx="8" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.8"/>
+            <text x="435" y="132" text-anchor="middle" font-size="13" font-weight="bold" fill="#6d28d9">② UI 层（LVGL v9）</text>
+            <g font-size="11" fill="#334155">
+              <text x="80" y="152">clock_view</text><text x="80" y="164" font-size="9.5" fill="#64748b">大字时钟+天气</text>
+              <text x="240" y="152">voice_view</text><text x="240" y="164" font-size="9.5" fill="#64748b">波形+ASR/LLM 文本</text>
+              <text x="440" y="152">player_view</text><text x="440" y="164" font-size="9.5" fill="#64748b">封面+进度+16 段频谱</text>
+              <text x="640" y="152">net_view</text><text x="640" y="164" font-size="9.5" fill="#64748b">SoftAP 配网向导</text>
+            </g>
+            <!-- 业务组件 -->
+            <rect x="50" y="184" width="770" height="100" rx="8" fill="#eef4ff" stroke="#2563eb" stroke-width="1.8"/>
+            <text x="435" y="204" text-anchor="middle" font-size="13" font-weight="bold" fill="#1d4ed8">③ 业务组件</text>
+            <g font-size="10.5" fill="#334155">
+              <rect x="70" y="212" width="115" height="60" rx="6" fill="#fff" stroke="#93b4f5"/>
+              <text x="127" y="230" text-anchor="middle" font-weight="bold" fill="#1d4ed8">wakenet_svc</text>
+              <text x="127" y="248" text-anchor="middle">离线唤醒</text>
+              <text x="127" y="262" text-anchor="middle" fill="#64748b">esp-sr</text>
+              <rect x="197" y="212" width="115" height="60" rx="6" fill="#fff" stroke="#93b4f5"/>
+              <text x="254" y="230" text-anchor="middle" font-weight="bold" fill="#1d4ed8">audio_svc</text>
+              <text x="254" y="248" text-anchor="middle">ADF pipeline</text>
+              <text x="254" y="262" text-anchor="middle" fill="#64748b">播/录/蓝牙</text>
+              <rect x="324" y="212" width="115" height="60" rx="6" fill="#fff" stroke="#93b4f5"/>
+              <text x="381" y="230" text-anchor="middle" font-weight="bold" fill="#1d4ed8">voice_svc</text>
+              <text x="381" y="248" text-anchor="middle">ASR→LLM→TTS</text>
+              <text x="381" y="262" text-anchor="middle" fill="#64748b">云端串接</text>
+              <rect x="451" y="212" width="115" height="60" rx="6" fill="#fff" stroke="#93b4f5"/>
+              <text x="508" y="230" text-anchor="middle" font-weight="bold" fill="#1d4ed8">net_svc</text>
+              <text x="508" y="248" text-anchor="middle">Wi-Fi 状态机</text>
+              <text x="508" y="262" text-anchor="middle" fill="#64748b">SoftAP 配网</text>
+              <rect x="578" y="212" width="115" height="60" rx="6" fill="#fff" stroke="#93b4f5"/>
+              <text x="635" y="230" text-anchor="middle" font-weight="bold" fill="#1d4ed8">weather_svc</text>
+              <text x="635" y="248" text-anchor="middle">天气+NTP</text>
+              <text x="635" y="262" text-anchor="middle" fill="#64748b">HTTP JSON</text>
+              <rect x="705" y="212" width="100" height="60" rx="6" fill="#fff" stroke="#93b4f5"/>
+              <text x="755" y="230" text-anchor="middle" font-weight="bold" fill="#1d4ed8">radio_svc</text>
+              <text x="755" y="248" text-anchor="middle">电台源管理</text>
+              <text x="755" y="262" text-anchor="middle" fill="#64748b">HLS/MP3</text>
+            </g>
+            <!-- 框架层 -->
+            <rect x="50" y="298" width="770" height="42" rx="8" fill="#e6f7ee" stroke="#16a34a" stroke-width="1.8"/>
+            <text x="435" y="318" text-anchor="middle" font-size="13" font-weight="bold" fill="#15803d">④ 框架层：ESP-ADF v2.7 · LVGL v9 · esp_lcd · esp_lvgl_port · esp-dsp（FFT）</text>
+            <text x="435" y="334" text-anchor="middle" font-size="10.5" fill="#15803d">audio_pipeline · audio_element · esp-sr · audio_board · button_svc</text>
+            <!-- 基础层 -->
+            <rect x="50" y="352" width="770" height="42" rx="8" fill="#fef3e8" stroke="#d97706" stroke-width="1.8"/>
+            <text x="435" y="372" text-anchor="middle" font-size="13" font-weight="bold" fill="#b45309">⑤ ESP-IDF v5.3.1</text>
+            <text x="435" y="388" text-anchor="middle" font-size="10.5" fill="#b45309">FreeRTOS · LwIP · FATFS · esp_wifi · esp_bt · esp_pm · esp_task_wdt · esp_http_client</text>
+          </svg>
+          <figcaption>图 2&nbsp;&nbsp;5 层软件架构。UI 层与业务层解耦：所有业务组件通过事件总线更新 UI，不直接持有 LVGL 对象</figcaption>
+        </figure>
+
+        <h3>4.2 核心状态机</h3>
+        <figure>
+          <svg width="900" height="380" viewBox="0 0 900 380" role="img" aria-label="桌面音箱状态机：配网→时钟→语音/播放三态循环">
+            <defs><marker id="bs1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#334155"/></marker></defs>
+            <text x="450" y="30" text-anchor="middle" font-size="14" font-weight="bold" fill="#334155">桌面音箱三态状态机</text>
+            <!-- 配网 -->
+            <ellipse cx="150" cy="90" rx="70" ry="35" fill="#fef3e8" stroke="#d97706" stroke-width="2.5"/>
+            <text x="150" y="88" text-anchor="middle" font-size="13" font-weight="bold" fill="#b45309">NET_SETUP</text>
+            <text x="150" y="105" text-anchor="middle" font-size="10" fill="#334155">SoftAP 配网</text>
+            <text x="60" y="70" font-size="11" fill="#334155">Wi-Fi 无配置</text>
+            <line x1="90" y1="80" x2="115" y2="88" stroke="#334155" stroke-width="2" marker-end="url(#bs1)"/>
+            <!-- 时钟态 -->
+            <circle cx="450" cy="180" r="65" fill="#eef4ff" stroke="#2563eb" stroke-width="2.5"/>
+            <text x="450" y="176" text-anchor="middle" font-size="14" font-weight="bold" fill="#1d4ed8">CLOCK</text>
+            <text x="450" y="195" text-anchor="middle" font-size="11" fill="#334155">时钟态</text>
+            <text x="450" y="211" text-anchor="middle" font-size="10" fill="#64748b">默认待机</text>
+            <line x1="220" y1="100" x2="393" y2="160" stroke="#334155" stroke-width="2" marker-end="url(#bs1)"/>
+            <text x="270" y="135" font-size="11" fill="#334155">Wi-Fi 就绪</text>
+            <!-- 语音态 -->
+            <circle cx="180" cy="290" r="60" fill="#fde8e8" stroke="#b03a3a" stroke-width="2.5"/>
+            <text x="180" y="288" text-anchor="middle" font-size="14" font-weight="bold" fill="#b03a3a">VOICE</text>
+            <text x="180" y="306" text-anchor="middle" font-size="11" fill="#334155">语音助手</text>
+            <text x="180" y="322" text-anchor="middle" font-size="10" fill="#64748b">波形+ASR/LLM</text>
+            <path d="M395,220 Q290,260 240,270" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#bs1)"/>
+            <text x="270" y="245" font-size="11" fill="#334155">唤醒词/Rec键</text>
+            <path d="M240,270 Q340,240 405,215" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#bs1)" stroke-dasharray="5 4"/>
+            <text x="290" y="290" font-size="11" fill="#64748b">TTS 播完/超时</text>
+            <!-- 播放态 -->
+            <circle cx="720" cy="290" r="60" fill="#f3e8ff" stroke="#7c3aed" stroke-width="2.5"/>
+            <text x="720" y="288" text-anchor="middle" font-size="14" font-weight="bold" fill="#6d28d9">PLAYER</text>
+            <text x="720" y="306" text-anchor="middle" font-size="11" fill="#334155">播放态</text>
+            <text x="720" y="322" text-anchor="middle" font-size="10" fill="#64748b">电台/蓝牙/SD</text>
+            <path d="M508,220 Q615,265 660,275" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#bs1)"/>
+            <text x="576" y="245" font-size="11" fill="#334155">长按 Play</text>
+            <path d="M660,275 Q560,240 505,215" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#bs1)" stroke-dasharray="5 4"/>
+            <text x="565" y="290" font-size="11" fill="#64748b">Rec 键</text>
+            <!-- 语音 → 播放（意图识别） -->
+            <path d="M235,300 Q450,335 665,300" fill="none" stroke="#334155" stroke-width="2" stroke-dasharray="3 3" marker-end="url(#bs1)"/>
+            <text x="450" y="352" text-anchor="middle" font-size="11" fill="#64748b">语音说"放音乐" → LLM 意图识别 → 直接进播放态</text>
+            <!-- 图例 -->
+            <text x="800" y="60" font-size="12" font-weight="bold" fill="#334155">图例</text>
+            <line x1="750" y1="80" x2="790" y2="80" stroke="#334155" stroke-width="2"/><text x="800" y="84" font-size="10" fill="#334155">用户操作</text>
+            <line x1="750" y1="98" x2="790" y2="98" stroke="#334155" stroke-width="2" stroke-dasharray="5 4"/><text x="800" y="102" font-size="10" fill="#334155">条件/自动</text>
+            <line x1="750" y1="116" x2="790" y2="116" stroke="#334155" stroke-width="2" stroke-dasharray="3 3"/><text x="800" y="120" font-size="10" fill="#334155">意图跳转</text>
+          </svg>
+          <figcaption>图 3&nbsp;&nbsp;三态状态机。所有状态互相可达，语音态还能通过 LLM 意图识别<strong>直接</strong>跳到播放态（如"帮我放张学友的歌"）</figcaption>
+        </figure>
+
+        <h3>4.3 FreeRTOS 任务划分</h3>
+        <table>
+          <caption>表 4-1&nbsp;&nbsp;任务清单（分核心运行）</caption>
+          <thead><tr><th scope="col">任务</th><th scope="col">核心</th><th scope="col">优先级</th><th scope="col">栈</th><th scope="col">职责</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">app_main</th><td>任意</td><td>5</td><td>4 KB</td><td>状态机 + 事件总线</td></tr>
+            <tr><th scope="row">lvgl_task</th><td>Core 0</td><td>6</td><td>8 KB</td><td>LVGL 心跳 + 渲染</td></tr>
+            <tr><th scope="row">wakenet_task</th><td>Core 1</td><td>8</td><td>8 KB</td><td>音频送 WakeNet</td></tr>
+            <tr><th scope="row">pipeline_task</th><td>Core 1</td><td>7</td><td>4 KB</td><td>ADF pipeline 事件泵</td></tr>
+            <tr><th scope="row">fft_task</th><td>Core 1</td><td>5</td><td>4 KB</td><td>ESP-DSP FFT，出频谱数据</td></tr>
+            <tr><th scope="row">network_task</th><td>Core 0</td><td>4</td><td>8 KB</td><td>Wi-Fi + HTTP 客户端</td></tr>
+            <tr><th scope="row">button_task</th><td>任意</td><td>4</td><td>2 KB</td><td>6 键去抖</td></tr>
+          </tbody>
+        </table>
+        <aside class="note">
+          <strong>分核心原则：</strong>
+          <ul>
+            <li><strong>Core 0</strong>：Wi-Fi 协议栈（系统默认）+ LVGL 渲染 + 网络任务；</li>
+            <li><strong>Core 1</strong>：音频 I2S DMA + WakeNet + FFT——避免 Wi-Fi 突发抢 CPU 导致爆音/掉帧。</li>
+          </ul>
+        </aside>
+
+        <h3>4.4 三种界面 wireframe</h3>
+        <figure>
+          <svg width="880" height="360" viewBox="0 0 880 360" role="img" aria-label="三种界面 wireframe：时钟态大字时钟+天气；语音态波形+文字对话；播放态封面+进度+频谱柱">
+            <text x="440" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#334155">三种模式屏幕 wireframe（170×320 竖屏）</text>
+            <!-- Clock -->
+            <rect x="60" y="55" width="200" height="290" rx="12" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+            <text x="160" y="80" text-anchor="middle" font-size="11" fill="#94a3b8">CLOCK 时钟态</text>
+            <text x="160" y="155" text-anchor="middle" font-size="42" font-weight="bold" fill="#f8fafc">21:07</text>
+            <line x1="90" y1="175" x2="230" y2="175" stroke="#334155" stroke-width="1"/>
+            <text x="160" y="200" text-anchor="middle" font-size="14" fill="#e2e8f0">周五 · 7月3日</text>
+            <text x="105" y="260" font-size="24" fill="#fbbf24">☀</text>
+            <text x="145" y="262" font-size="20" font-weight="bold" fill="#f8fafc">32°</text>
+            <text x="145" y="282" font-size="12" fill="#94a3b8">广州</text>
+            <rect x="90" y="305" width="140" height="22" rx="4" fill="#1e293b"/>
+            <text x="105" y="321" font-size="11" fill="#22c55e">📶 Wi-Fi ✓</text>
+            <text x="180" y="321" font-size="11" fill="#e2e8f0">🔋 82%</text>
+            <!-- Voice -->
+            <rect x="340" y="55" width="200" height="290" rx="12" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+            <text x="440" y="80" text-anchor="middle" font-size="11" fill="#94a3b8">VOICE 语音态</text>
+            <text x="440" y="115" text-anchor="middle" font-size="14" font-weight="bold" fill="#22d3ee">"嗨乐鑫"</text>
+            <!-- 波形 -->
+            <g stroke="#22d3ee" stroke-width="2" fill="none" opacity="0.7">
+              <path d="M360,155 Q373,140 380,155 T400,155 T420,155 T440,155 T460,155 T480,155 T500,155 T520,155"/>
+              <path d="M360,155 Q373,175 380,155 T400,155 T420,155 T440,155 T460,155 T480,155 T500,155 T520,155"/>
+            </g>
+            <line x1="360" y1="185" x2="520" y2="185" stroke="#334155" stroke-width="1"/>
+            <text x="360" y="210" font-size="11" fill="#94a3b8">你说：</text>
+            <text x="360" y="228" font-size="12" fill="#e2e8f0">帮我查明天广州</text>
+            <text x="360" y="245" font-size="12" fill="#e2e8f0">的天气</text>
+            <text x="360" y="278" font-size="11" fill="#22c55e">AI：</text>
+            <text x="360" y="296" font-size="12" fill="#f8fafc">明天广州多云</text>
+            <text x="360" y="313" font-size="12" fill="#f8fafc">26~31°</text>
+            <text x="440" y="335" text-anchor="middle" font-size="10" fill="#64748b">▶ 正在播报…</text>
+            <!-- Player -->
+            <rect x="620" y="55" width="200" height="290" rx="12" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+            <text x="720" y="80" text-anchor="middle" font-size="11" fill="#94a3b8">PLAYER 播放态</text>
+            <rect x="655" y="100" width="80" height="80" rx="6" fill="#1e293b" stroke="#7c3aed" stroke-width="1.5"/>
+            <text x="695" y="145" text-anchor="middle" font-size="9" fill="#94a3b8">封面</text>
+            <text x="695" y="158" text-anchor="middle" font-size="9" fill="#94a3b8">96×96</text>
+            <text x="745" y="125" font-size="13" font-weight="bold" fill="#f8fafc">城南花已开</text>
+            <text x="745" y="145" font-size="11" fill="#a1a1aa">任然</text>
+            <text x="745" y="175" font-size="9" fill="#94a3b8">豆瓣 FM</text>
+            <rect x="640" y="200" width="160" height="4" rx="2" fill="#1e293b"/>
+            <rect x="640" y="200" width="60" height="4" rx="2" fill="#22c55e"/>
+            <text x="640" y="220" font-size="9" fill="#94a3b8">02:14 / 04:20</text>
+            <!-- 频谱 -->
+            <g fill="#22d3ee">
+              <rect x="640" y="270" width="7" height="20"/>
+              <rect x="650" y="260" width="7" height="30"/>
+              <rect x="660" y="250" width="7" height="40"/>
+              <rect x="670" y="240" width="7" height="50"/>
+              <rect x="680" y="230" width="7" height="60"/>
+              <rect x="690" y="225" width="7" height="65"/>
+              <rect x="700" y="235" width="7" height="55"/>
+              <rect x="710" y="245" width="7" height="45"/>
+              <rect x="720" y="255" width="7" height="35"/>
+              <rect x="730" y="245" width="7" height="45"/>
+              <rect x="740" y="240" width="7" height="50"/>
+              <rect x="750" y="235" width="7" height="55"/>
+              <rect x="760" y="245" width="7" height="45"/>
+              <rect x="770" y="255" width="7" height="35"/>
+              <rect x="780" y="265" width="7" height="25"/>
+              <rect x="790" y="275" width="7" height="15"/>
+            </g>
+            <text x="720" y="315" text-anchor="middle" font-size="10" fill="#22d3ee">▶ 16 段 FFT 频谱</text>
+            <rect x="640" y="325" width="160" height="15" rx="3" fill="#1e293b"/>
+            <text x="720" y="337" text-anchor="middle" font-size="9" fill="#e2e8f0">▶ ⏮ ⏭  🔊 65%</text>
+          </svg>
+          <figcaption>图 4&nbsp;&nbsp;三种模式的界面 wireframe。深色主题（省 IPS 屏电、护眼）；配色采用青蓝主色 + 语义色（成功=绿、警告=黄、错误=红）</figcaption>
+        </figure>
+      </section>
+
+      <section id="ch5">
+        <h2>5. 分周迭代计划</h2>
+        <table>
+          <caption>表 5-1&nbsp;&nbsp;6 周里程碑与验收</caption>
+          <thead><tr><th scope="col">周</th><th scope="col">里程碑</th><th scope="col">交付物</th><th scope="col">验收</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">W1</th><td>环境 + 屏点亮 + LVGL Hello</td><td>屏能显示 "Hello LVGL"、能显示图片</td><td>屏刷新 ≥ 30 fps，无雪花</td></tr>
+            <tr><th scope="row">W2</th><td>时钟界面 + NTP + 天气 API</td><td>时钟自动对时，天气 15 分钟拉一次</td><td>断网 24h 时钟仍精准（RTC 兜底）</td></tr>
+            <tr><th scope="row">W3</th><td>网络电台 + 蓝牙 + SD + 频谱</td><td>播放态所有音源可切、频谱可视化</td><td>3 种音源无缝切换 ≤ 2s</td></tr>
+            <tr><th scope="row">W4</th><td>唤醒 + ASR + LLM + TTS</td><td>完整语音闭环、屏切换动画</td><td>从唤醒到播报总时长 ≤ 5s</td></tr>
+            <tr><th scope="row">W5</th><td>Wi-Fi 配网 + 电池 + 亮度</td><td>SoftAP 配网、夜间降亮、电量图标</td><td>断网重连、充放电正常</td></tr>
+            <tr><th scope="row">W6</th><td>外壳 + 联调 + 验收</td><td>装壳成品、README、演示视频</td><td>用户测试 3 天无 Bug</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="ch6">
+        <h2>6. 关键技术点解析</h2>
+
+        <h3>6.1 LVGL v9 与 ESP-ADF 共存</h3>
+        <p>
+          问题：LVGL 心跳需要固定周期喂 <code>lv_timer_handler()</code>，与 ADF pipeline 的事件泵不能互相阻塞。
+          方案：用 <code>esp_lvgl_port</code> 官方组件——它内部帮你处理好任务同步、DMA 缓冲、异步刷新。
+        </p>
+<pre><code>esp_lcd_panel_handle_t panel;
+esp_lcd_new_panel_st7789(io, &amp;panel_cfg, &amp;panel);
+lvgl_port_init(&amp;lvgl_cfg);
+lv_display_t *disp = lvgl_port_add_disp(&amp;(lvgl_port_display_cfg_t){
+    .io_handle = io, .panel_handle = panel,
+    .buffer_size = 170 * 40, .double_buffer = true,
+});
+// 之后 LVGL 心跳、绘制、事件都由 esp_lvgl_port 内部任务处理</code></pre>
+
+        <h3>6.2 ASR / LLM / TTS 串接</h3>
+        <p><strong>每次唤醒后的调用链</strong>：</p>
+<pre><code>[本地] WakeNet 命中
+   ↓
+[本地] 录音 → 16k WAV 或 PCM buffer（最长 6 秒 或 VAD 静音）
+   ↓
+[云端] POST 到 ASR（百度/讯飞）→ 返回文字
+   ↓  UI 上屏显示"你说：xxx"
+[云端] POST 文字到 LLM（Deepseek/千帆/OpenAI）→ 返回回复文字
+   ↓  UI 上屏显示"AI：xxx"
+[云端] POST 回复到 TTS（百度/微软）→ 返回 MP3 URL 或数据流
+   ↓
+[本地] ADF pipeline 播放 MP3 → 出声</code></pre>
+        <aside class="tip">
+          <strong>同步 vs 流式：</strong>MVP 用同步（等每一步返回），总延时 3–5 秒；后续可切流式 SSE 输出边说边合成，压到 2 秒内。
+          <br><strong>Token 与密钥：</strong>所有 API Key 放 SD 卡的 <code>/config/secrets.json</code>（不进 Git），启动时读入内存；被封了换新 Key 只改文件不烧固件。
+        </aside>
+
+        <h3>6.3 FFT 频谱可视化</h3>
+        <p>用 <strong>ESP-DSP</strong> 库的 <code>dsps_fft2r_fc32</code>：</p>
+<pre><code>esp_err_t err = dsps_fft2r_init_fc32(NULL, N);  // N=1024
+// 每 50 ms 从 I2S buffer 拷 1024 采样
+dsps_wind_hann_f32(wind, N);   // 汉宁窗
+for (int i=0; i&lt;N; i++) fft_in[i*2] = sample[i]*wind[i];
+dsps_fft2r_fc32(fft_in, N);
+dsps_bit_rev_fc32(fft_in, N);
+dsps_cplx2reC_fc32(fft_in, N);
+// 幅值取对数 → 分到 16 段 → 送 LVGL 画柱状</code></pre>
+        <p><strong>CPU 消耗</strong>：Core 1 上 1024 点 FFT 约 1.5 ms/次，20 Hz 刷新占 3% CPU，完全够。</p>
+
+        <h3>6.4 时钟绘制的性能陷阱</h3>
+        <p>大字号数字（占屏 60% 面积）如果每秒重绘会闪。方案：</p>
+        <ul>
+          <li>用 LVGL 的 <strong>partial refresh</strong> —— 只重绘变化的位数（分钟数字比小时数字变化频繁 60 倍）；</li>
+          <li>秒钟用<strong>单独的圆环 canvas</strong> 每秒重画一次，不动大数字；</li>
+          <li>天气图标只在 15 分钟 API 返回后重绘一次。</li>
+        </ul>
+
+        <h3>6.5 双电源域与地环路（音质补丁）</h3>
+        <p>给屏加上后，SPI 时钟成为<strong>新噪声源</strong>。工程处理：</p>
+        <ul>
+          <li>屏 VCC 走独立 RC 低通滤波（10Ω + 10 μF）；</li>
+          <li>SPI 走线远离 I2S 差分；</li>
+          <li>屏和音频不共 3V3 走线——即使做不到理想 Hi-Fi，也把可听底噪降到 −70 dBFS 以下。</li>
+        </ul>
+      </section>
+
+      <section id="ch7">
+        <h2>7. 测试计划</h2>
+
+        <h3>7.1 单元测试</h3>
+        <table>
+          <caption>表 7-1&nbsp;&nbsp;模块级用例</caption>
+          <thead><tr><th scope="col">模块</th><th scope="col">用例</th><th scope="col">通过条件</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">ST7789 驱动</th><td>连续绘 100 帧全屏</td><td>无花屏、无 tearing</td></tr>
+            <tr><th scope="row">LVGL 渲染</th><td>30 分钟连续切界面</td><td>无内存泄漏（heap 稳定）</td></tr>
+            <tr><th scope="row">NTP 对时</th><td>断网 24h + 恢复</td><td>时间误差 &lt; 5 秒</td></tr>
+            <tr><th scope="row">WakeNet</th><td>各 100 次唤醒/非唤醒</td><td>命中 ≥ 95%、误触 ≤ 2%</td></tr>
+            <tr><th scope="row">蓝牙 A2DP</th><td>手机连断 20 次</td><td>无死机、每次能对码</td></tr>
+            <tr><th scope="row">HTTP + JSON</th><td>ASR/LLM/TTS 各 50 次</td><td>无 crash、失败自恢复</td></tr>
+            <tr><th scope="row">FFT</th><td>1000 次连续变换</td><td>CPU &lt; 5%、无数值溢出</td></tr>
+          </tbody>
+        </table>
+
+        <h3>7.2 集成测试（场景）</h3>
+        <ul>
+          <li><strong>场景 A：桌面待机 12 小时</strong>——时钟/天气正确刷新、无 UI 卡顿；</li>
+          <li><strong>场景 B：语音连续交互 20 次</strong>——无死机、每次总延时 ≤ 5s；</li>
+          <li><strong>场景 C：切换 3 种音源</strong>——电台 → 蓝牙 → SD → 电台，切换无爆音；</li>
+          <li><strong>场景 D：断网播放</strong>——电台断线自动切 SD 卡兜底或蓝牙；</li>
+          <li><strong>场景 E：Wi-Fi 弱信号</strong>——距离路由器 15m 时电台不断流。</li>
+        </ul>
+
+        <h3>7.3 环境测试</h3>
+        <ul>
+          <li>屋内 50 lux（暗）→ 屏亮度 30% 舒适；</li>
+          <li>屋内 500 lux（白天）→ 屏亮度 100% 可视；</li>
+          <li>环境噪声 30–50 dB SPL 均能唤醒。</li>
+        </ul>
+      </section>
+
+      <section id="ch8">
+        <h2>8. 风险与备选方案</h2>
+        <table>
+          <caption>表 8-1&nbsp;&nbsp;项目风险登记册</caption>
+          <thead><tr><th scope="col">风险</th><th scope="col">概率</th><th scope="col">影响</th><th scope="col">备选方案</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">LVGL v9 + ADF v2.7 集成问题</th><td>中</td><td>高</td><td>回退 LVGL v8.3（稳定成熟）</td></tr>
+            <tr><th scope="row">屏 SPI 干扰 I2S 音频</th><td>中</td><td>中</td><td>屏走 HSPI，音频独立 I2S bus；屏 VCC 加 π 滤波</td></tr>
+            <tr><th scope="row">Wi-Fi + 蓝牙共存不稳</th><td>中</td><td>中</td><td>蓝牙和 Wi-Fi 分时开（进蓝牙模式关 Wi-Fi）</td></tr>
+            <tr><th scope="row">云端 API 被限流/收费</th><td>高</td><td>高</td><td>抽象层封装，一次实现 3 家（百度/讯飞/Deepseek），运行时切换</td></tr>
+            <tr><th scope="row">PSRAM 不够 LVGL 双缓冲 + 播放器</th><td>中</td><td>中</td><td>LVGL 用单缓冲 + 部分刷新；专辑封面缩到 96×96</td></tr>
+            <tr><th scope="row">大字号中文字库占 Flash</th><td>中</td><td>低</td><td>只打包常用 500 字（<code>--include=常用字库.txt</code>）</td></tr>
+            <tr><th scope="row">3D 打印外壳散热</th><td>低</td><td>低</td><td>底部开散热槽，靠电池仓热质量兜底</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="ch9">
+        <h2>9. 交付物清单</h2>
+        <ul>
+          <li>项目源码（GitHub 仓库 + Tag v1.0，含 LVGL 界面图片资源）</li>
+          <li>硬件：装壳成品一台 + 备用 PCB + 备用屏</li>
+          <li>文档：本项目书 + README + 用户使用手册（含唤醒词、按键、配网说明）</li>
+          <li>服务器：可选自建 LLM 代理（把外部 API 统一封装，方便替换）</li>
+          <li>视频：3 分钟功能演示</li>
+          <li>周报：6 篇</li>
+        </ul>
+      </section>
+
+      <section id="ch10">
+        <h2>10. 学习收获目标</h2>
+        <p>完成本项目后，我应该：</p>
+        <ol>
+          <li>掌握 LVGL v9 从零到成品的完整流程（对象树、样式、动画、图片、字库）；</li>
+          <li>掌握 <code>esp_lcd</code> + <code>esp_lvgl_port</code> 官方组件（SPI 屏驱动、DMA、双缓冲）；</li>
+          <li>会写多云端 API 的抽象层（一次代码支持百度/讯飞/Deepseek）；</li>
+          <li>掌握 ESP-DSP 库做 FFT、加窗、幅值对数；</li>
+          <li>会做 Wi-Fi 弱网/断线的完整重连状态机；</li>
+          <li>会用 Wi-Fi + BT 共存的正确姿势；</li>
+          <li>完整走完"想法 → 硬件 → 软件 → 外壳 → 用户手册"的产品化流程。</li>
+        </ol>
+        <aside class="note">
+          <strong>配套阅读：</strong>本项目所用的开发板、环境搭建、ADF 音频管道概念，参见同 repo 内的
+          《<a href="音频开发入门.html">ESP32-LyraT-Mini 音频开发入门</a>》与
+          《<a href="智能语音便签器项目书.html">智能语音便签器项目书</a>》。
+          本项目书在便签器之上加了：屏（LVGL）、云端 AI、蓝牙音源、频谱可视化——是"产品化"程度更高的一档。
+        </aside>
+      </section>
+
+    </article>
+    </main>
+  </div>
+
+  <a class="backtop" href="#main" aria-label="回到顶部">&uarr;</a>
+
+  <footer class="site">
+    <p>&copy; 2026 江楠的学习日志 · 项目立项 2026-07-03 · <a href="../index.html">返回首页</a></p>
+  </footer>
+</body>
+</html>
