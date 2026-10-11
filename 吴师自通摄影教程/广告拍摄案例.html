@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="江楠">
+<meta name="description" content="吴师自通摄影教程广告拍摄案例逐集细化笔记（P67–P70），附索尼 A7C II 对照操作与自绘示意图。">
+<meta name="keywords" content="摄影教程,吴玮,吴师自通,广告拍摄案例,索尼A7C II,A7C2,摄影笔记">
+<title>广告拍摄案例 · 吴师自通摄影教程 — 江楠的学习日志</title>
+<style>
+:root{--accent:#2563eb;--accent-dark:#1d4ed8;--bg:#f7f8fa;--card:#fff;--border:#e2e5ea;--text:#1f2329;--muted:#64748b;
+  --sony:#c2410c;--sony-bg:#fff7ed;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:-apple-system,"Segoe UI","Microsoft YaHei","PingFang SC",sans-serif;line-height:1.75;color:var(--text);background:var(--bg);}
+.skip-link{position:absolute;left:-999px;top:0;background:#fff;color:var(--accent);padding:.5rem 1rem;z-index:100;}
+.skip-link:focus{left:0;}
+header.site{background:linear-gradient(135deg,#3b82f6 0%,var(--accent) 45%,var(--accent-dark) 100%);color:#fff;padding:2.6rem 1.5rem 2rem;text-align:center;box-shadow:0 6px 24px rgba(37,99,235,.18);}
+header.site h1{margin:0 0 .4rem;font-size:2rem;line-height:1.35;}
+header.site p{margin:.2rem 0;opacity:.93;}
+.meta-list{list-style:none;padding:0;margin:.8rem 0 0;display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;}
+.meta-list li{background:rgba(255,255,255,.18);padding:.22rem .7rem;border-radius:999px;font-size:.85rem;}
+nav.modnav{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:20;}
+nav.modnav ul{list-style:none;margin:0 auto;padding:.45rem 1rem;max-width:1180px;display:flex;flex-wrap:wrap;gap:.35rem;justify-content:center;}
+nav.modnav a{display:block;text-decoration:none;color:var(--text);font-size:.86rem;padding:.25rem .65rem;border-radius:999px;border:1px solid var(--border);}
+nav.modnav a:hover{border-color:var(--accent);color:var(--accent-dark);}
+nav.modnav a[aria-current=page]{background:var(--accent);color:#fff;border-color:var(--accent);}
+.layout{max-width:1180px;margin:0 auto;padding:1.6rem 1.5rem;display:grid;grid-template-columns:250px 1fr;gap:1.9rem;align-items:start;}
+.sidebar{position:sticky;top:3.6rem;max-height:calc(100vh - 4.6rem);overflow-y:auto;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1rem .9rem;box-shadow:0 4px 18px rgba(15,23,42,.06);}
+.sidebar .home-link{display:flex;align-items:center;gap:.45rem;font-weight:600;color:#fff;text-decoration:none;padding:.55rem .8rem;border-radius:11px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));box-shadow:0 4px 12px rgba(37,99,235,.28);margin-bottom:.9rem;}
+.sidebar .toc-title{font-size:.74rem;letter-spacing:.1em;color:var(--muted);margin:.2rem .35rem .5rem;font-weight:700;}
+.sidebar nav ul{list-style:none;margin:0;padding:0;}
+.sidebar nav li{margin:.08rem 0;}
+.sidebar a.toc-link{display:block;color:var(--text);text-decoration:none;font-size:.88rem;line-height:1.45;padding:.38rem .6rem;border-radius:9px;border-left:3px solid transparent;}
+.sidebar a.toc-link:hover{background:#eef4ff;color:var(--accent-dark);border-left-color:var(--accent);}
+.sidebar a.toc-link b{color:var(--accent-dark);font-weight:700;margin-right:.3rem;}
+main{min-width:0;}
+article>section{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem 1.8rem;margin-bottom:1.6rem;scroll-margin-top:64px;}
+h2{color:var(--accent-dark);border-bottom:2px solid var(--border);padding-bottom:.45rem;margin-top:.2rem;line-height:1.45;}
+h2 .ep-no{display:inline-block;background:var(--accent);color:#fff;border-radius:8px;font-size:.8em;padding:0 .45rem;margin-right:.35rem;vertical-align:.08em;}
+h3{margin-top:1.6rem;color:var(--text);}
+h4{margin-top:1rem;color:var(--muted);}
+p{margin:.7rem 0;}
+.ep-meta{color:var(--muted);font-size:.88rem;margin-top:-.3rem;}
+.ep-meta a{color:var(--accent);}
+blockquote.oneliner,blockquote{margin:1rem 0;padding:.75rem 1rem;background:#eef4ff;border-left:4px solid var(--accent);border-radius:8px;}
+blockquote p{margin:.2rem 0;}
+nav.outline{background:#f8fafc;border:1px dashed #cbd5e1;border-radius:10px;padding:.6rem 1rem .6rem .8rem;margin:1rem 0;}
+nav.outline .outline-t{margin:.1rem 0 .3rem;font-weight:700;color:var(--accent-dark);}
+nav.outline ol{margin:.2rem 0;}
+a.ts{font-family:Consolas,"SFMono-Regular",monospace;font-size:.82em;color:var(--accent-dark);background:#e8efff;border-radius:5px;padding:0 .3rem;text-decoration:none;white-space:nowrap;}
+a.ts:hover{background:var(--accent);color:#fff;}
+.box{border-radius:12px;padding:.4rem 1.1rem .8rem;margin:1.3rem 0;}
+.box h3{margin-top:.7rem;}
+.box.a7c2{background:var(--sony-bg);border:1px solid #fed7aa;border-left:5px solid var(--sony);}
+.box.a7c2 h3{color:var(--sony);}
+.box.errata{background:#f8fafc;border:1px solid var(--border);border-left:5px solid #64748b;}
+.box.terms{background:#f0fdf4;border:1px solid #bbf7d0;border-left:5px solid #16a34a;}
+.box.terms h3{color:#15803d;}
+.table-wrap{overflow-x:auto;margin:1rem 0;-webkit-overflow-scrolling:touch;}
+table{border-collapse:collapse;width:100%;font-size:.92rem;}
+.table-wrap table{margin:0;}
+th,td{border:1px solid var(--border);padding:.5rem .65rem;text-align:left;vertical-align:top;}
+thead{background:#eef2ff;}
+.box.a7c2 thead{background:#ffedd5;}
+tbody tr:nth-child(even){background:#fafbfc;}
+.box.a7c2 tbody tr:nth-child(even){background:#fffaf3;}
+figure{margin:1.4rem 0;text-align:center;}
+figure svg{max-width:100%;height:auto;display:block;margin:0 auto;}
+figcaption{color:var(--muted);font-size:.88rem;margin-top:.5rem;line-height:1.6;}
+.fig-todo{border:1px dashed #cbd5e1;border-radius:10px;padding:1.2rem;color:var(--muted);}
+code{background:#eef0f3;padding:.1rem .35rem;border-radius:4px;font-size:.9em;}
+details{border:1px solid var(--border);border-radius:8px;padding:.5rem .9rem;margin:.5rem 0;background:#fcfcfd;}
+summary{cursor:pointer;font-weight:600;}
+details[open] summary{margin-bottom:.3rem;}
+details summary .ep-no-s{display:inline-block;min-width:2.6em;color:var(--accent-dark);font-family:Consolas,monospace;}
+details summary a{color:var(--text);text-decoration:none;}
+details summary a:hover{color:var(--accent-dark);text-decoration:underline;}
+.ep-nav{text-align:right;font-size:.85rem;margin-bottom:0;}
+.ep-nav a{color:var(--muted);text-decoration:none;}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.9rem;margin:1rem 0;}
+.cards a.card{display:block;text-decoration:none;color:var(--text);border:1px solid var(--border);border-radius:12px;padding:.8rem 1rem;background:#fff;transition:all .15s;}
+.cards a.card:hover{border-color:var(--accent);box-shadow:0 4px 14px rgba(37,99,235,.15);transform:translateY(-1px);}
+.cards a.card b{display:block;color:var(--accent-dark);font-size:1.02rem;}
+.cards a.card span{display:block;color:var(--muted);font-size:.85rem;line-height:1.55;margin-top:.2rem;}
+.cards a.card.sony b{color:var(--sony);}
+.todo{color:var(--muted);}
+a.src{font-size:.75em;color:#94a3b8;text-decoration:none;border-bottom:1px dotted #cbd5e1;white-space:nowrap;}
+a.src:hover{color:var(--accent);}
+mark{background:#fde68a;}
+ul,ol{padding-left:1.4rem;}
+footer.site{text-align:center;color:var(--muted);padding:2rem 1rem;font-size:.9rem;}
+footer.site a{color:var(--accent);}
+.backtop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;text-decoration:none;width:42px;height:42px;line-height:42px;text-align:center;border-radius:50%;box-shadow:0 4px 12px rgba(37,99,235,.4);font-size:1.1rem;}
+@media(max-width:860px){
+  .layout{grid-template-columns:1fr;gap:1rem;padding:1rem;}
+  .sidebar{position:static;max-height:none;}
+  .sidebar nav ul{display:flex;flex-wrap:wrap;gap:.35rem;}
+  .sidebar a.toc-link{border-left:none;border:1px solid var(--border);font-size:.82rem;padding:.3rem .6rem;}
+  nav.modnav{position:static;}
+}
+@media(max-width:600px){header.site h1{font-size:1.6rem;}article>section{padding:1.1rem .95rem;}th,td{padding:.4rem .5rem;}}
+@media print{nav.modnav,.sidebar,.backtop{display:none;}.layout{display:block;}article>section{break-inside:auto;}}
+</style>
+</head>
+<body id="top">
+<a class="skip-link" href="#main">跳到主要内容</a>
+<header class="site">
+  <h1>广告拍摄案例</h1>
+  <p>吴师自通摄影教程 · 广告拍摄案例（P67–P70，4 集，约 0.4 小时）· 逐集细化笔记 + A7C II 对照</p>
+  <ul class="meta-list"><li>#吴师自通摄影教程</li><li>#广告拍摄案例</li><li>#索尼A7C II</li><li>#摄影入门</li></ul>
+</header>
+<nav class="modnav" aria-label="课程篇章"><ul><li><a href="index.html">总览与大纲</a></li><li><a href="基础篇.html">基础篇</a></li><li><a href="构图篇.html">构图篇</a></li><li><a href="器材维护篇.html">器材维护篇</a></li><li><a href="影棚静物篇.html">影棚静物篇</a></li><li><a href="机型速成篇.html">机型速成篇</a></li><li><a href="用光与影棚篇.html">用光与影棚篇</a></li><li><a href="广告拍摄案例.html" aria-current="page">广告拍摄案例</a></li><li><a href="口袋摄影课.html">口袋摄影课</a></li><li><a href="A7C2操作手册.html">A7C II 操作手册</a></li><li><a href="知识总结.html">知识总结</a></li></ul></nav>
+<div class="layout">
+  <aside class="sidebar">
+    <a class="home-link" href="../index.html">&larr; 返回学习日志首页</a>
+    <p class="toc-title">本页目录</p>
+    <nav aria-label="本页目录"><ul><li><a class="toc-link" href="#intro">本篇导读</a></li><li><a class="toc-link" href="#p67"><b>P67</b>珠光首饰的广告拍摄</a></li><li><a class="toc-link" href="#p68"><b>P68</b>化妆品广告拍摄</a></li><li><a class="toc-link" href="#p69"><b>P69</b>鞋类产品的广告拍摄</a></li><li><a class="toc-link" href="#p70"><b>P70</b>广告拍摄案例</a></li></ul></nav>
+  </aside>
+  <main id="main" tabindex="-1"><article>
+<section id="intro" aria-label="本篇导读"><p><strong>本篇导读</strong>：4 集短小的广告拍摄案例：珠光首饰、化妆品、鞋类、服装。每集几分钟，讲清一个产品的难点和布光方案（多为高位逆光＋两侧或前侧柔光的三灯布光，配合测光表控制光比），可以当作影棚静物篇的进阶补充。</p>
+</section>
+<section id="p67" class="episode" aria-labelledby="p67-t"><h2 id="p67-t"><span class="ep-no">P67</span> 珠光首饰的广告拍摄</h2>
+<p class="ep-meta">原标题：067珠光首饰的广告拍摄 · 时长 4:54 · <a href="https://www.bilibili.com/video/BV1Vt411E7nT?p=67" target="_blank" rel="noopener">▶ 在 B 站观看本集</a></p>
+<blockquote class="oneliner">
+<p><strong>一句话</strong>：珠宝拍摄难点在于多面反射易产生黑面及体积小细节难展现，需用微距镜头配合紧凑布光及多图合成。</p>
+</blockquote>
+<nav class="outline" aria-label="本集大纲"><p class="outline-t">本集大纲</p><ol>
+<li>珠宝拍摄难点分析<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=67&t=10" target="_blank" rel="noopener" title="跳到视频 00:10">00:10</a></li>
+<li>体积小与镜头选择<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=67&t=75" target="_blank" rel="noopener" title="跳到视频 01:15">01:15</a></li>
+<li>微距镜头的优势<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=67&t=110" target="_blank" rel="noopener" title="跳到视频 01:50">01:50</a></li>
+<li>紧凑曝光法（包围布光）<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=67&t=146" target="_blank" rel="noopener" title="跳到视频 02:26">02:26</a></li>
+<li>布光具体设置<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=67&t=179" target="_blank" rel="noopener" title="跳到视频 02:59">02:59</a></li>
+<li>辅助光源设置<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=67&t=211" target="_blank" rel="noopener" title="跳到视频 03:31">03:31</a></li>
+<li>对焦与合成技巧<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=67&t=249" target="_blank" rel="noopener" title="跳到视频 04:09">04:09</a></li>
+</ol></nav>
+
+<h3>1. 珠宝拍摄难点分析<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=67&t=10" target="_blank" rel="noopener" title="跳到视频 00:10">00:10–01:15</a></h3><p>珠宝首饰拍摄难度大，主要源于其属性。</p>
+<ul>
+<li><strong>多面反射</strong>：<strong>金银材质</strong>，面多。曝光不紧凑会导致部分面受光不足或反射环境物，形成<strong>黑面</strong>。</li>
+<li><strong>后果</strong>：黑面会破坏产品的高档感和质感表现。</li>
+<li><strong>体积小</strong>：普通镜头拍摄比例小，细节展现不完全。高像素受镜头<strong>解像力</strong>制约，裁剪放大后细节丢失。</li>
+</ul>
+
+<h3>2. 体积小与镜头选择<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=67&t=75" target="_blank" rel="noopener" title="跳到视频 01:15">01:15–01:50</a></h3><p>解决体积小的问题，需使用<strong>微距镜头</strong>。</p>
+<ul>
+<li><strong>放大率</strong>：被摄物体面积与传感器成像面积的比例。微距镜头可达<strong>1比1</strong>的放大率。</li>
+<li><strong>优势</strong>：画面成像比例大，细节展现能力强，且带有极高的<strong>锐度还原能力</strong>。</li>
+</ul>
+
+<h3>3. 紧凑曝光法（包围布光）<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=67&t=146" target="_blank" rel="noopener" title="跳到视频 02:26">02:26–02:59</a></h3><p>解决多面反射黑面问题，采用<strong>紧凑曝光</strong>法。</p>
+<ul>
+<li><strong>原理</strong>：光源凑得更紧凑，减少间隙，减少环境反射，增加亮面，展现更多细节。</li>
+<li><strong>名称</strong>：这种曝光法在珠宝拍摄中常被称为<strong>包围布光法</strong>。</li>
+</ul>
+
+<h3>4. 布光具体设置<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=67&t=179" target="_blank" rel="noopener" title="跳到视频 02:59">02:59–03:31</a></h3><p>主光设置。</p>
+<ul>
+<li><strong>位置</strong>：近乎于<strong>顶光</strong>的<strong>逆光</strong>照明，且应尽量<strong>接近被摄物</strong>。</li>
+<li><strong>附件改装</strong>：拆除柔光箱内部两层柔光布，换<strong>硫酸纸</strong>。</li>
+<li><strong>效果</strong>：保证质感还原，在其上留下<strong>亮度渐变</strong>，且<strong>表面层次非常平淡</strong>。</li>
+</ul>
+
+<h3>5. 辅助光源设置<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=67&t=211" target="_blank" rel="noopener" title="跳到视频 03:31">03:31–04:09</a></h3><p>辅助光设置。</p>
+<ul>
+<li><strong>位置</strong>：在两侧。</li>
+<li><strong>功率</strong>：略低于高位逆光。</li>
+</ul>
+
+<h3>6. 对焦与合成技巧<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=67&t=249" target="_blank" rel="noopener" title="跳到视频 04:09">04:09–04:54</a></h3><p>微距拍摄的特殊操作。</p>
+<ul>
+<li><strong>对焦</strong>：微距镜头靠得近，<strong>景深</strong>小，需使用<strong>手动对焦</strong>进行精细对焦。</li>
+<li><strong>合成</strong>：采用<strong>多焦点对焦</strong>、多张照片合成的方式。</li>
+<li><strong>目的</strong>：最终得到一张全景深、亮面较多的照片。</li>
+</ul>
+<p><strong>本集术语</strong></p>
+<ul>
+<li><strong>解像力</strong>：镜头还原细节的能力。</li>
+<li><strong>放大率</strong>：被摄物体面积与传感器成像面积的比例。</li>
+<li><strong>景深</strong>：画面中清晰的范围。</li>
+<li><strong>包围布光法</strong>：一种紧凑曝光法，通过紧凑光源减少间隙，增加亮面。</li>
+</ul>
+
+<div class="box a7c2"><h3>📷 换成 A7C II 怎么做</h3><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>课程里的概念/操作</th>
+<th>A7C II 上的名称</th>
+<th>怎么操作</th>
+<th>说明（出处）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M 手动曝光</td>
+<td>M（手动曝光）</td>
+<td>模式旋钮转 M；前转盘=光圈，后转盘L=快门</td>
+<td>看 M.M. 指示；ISO 可设 ISO AUTO（0302C_manual_exposure.html）</td>
+</tr>
+<tr>
+<td>影棚闪光灯 / 引闪器</td>
+<td>—</td>
+<td>见 7.10 清单：实时取景显示设置效果关、机械快门、静音模式关、快门不超过同步速度、固定 ISO</td>
+<td>（0414_live_view_disp_set.html；0414H_shutter_type.html）</td>
+</tr>
+<tr>
+<td>包围曝光 AEB</td>
+<td>连续阶段曝光 ／ 单拍阶段曝光</td>
+<td>按控制拨轮左（拍摄模式）→ 选，再用控制拨轮选步长与张数；顺序在［阶段曝光设置］</td>
+<td>可选步长/张数全集帮助指南未载明（0407_drivemode_cont_bracket.html；0407G_bracket_setting.html）</td>
+</tr>
+<tr>
+<td>RAW+JPEG</td>
+<td>RAW&amp;JPEG</td>
+<td>MENU →（拍摄）→［影像质量/记录］→［〈静〉文件格式］→［RAW&amp;JPEG］</td>
+<td>［JPEG/HEIF切换］为 HEIF 时变成 RAW&amp;HEIF；RAW 压缩方式在［RAW文件类型］（0404M_file_format.html；201h_jpeg_heif_switch.html）</td>
+</tr>
+<tr>
+<td>人脸/眼部对焦</td>
+<td>AF中的被摄体识别（识别目标：人）</td>
+<td>出厂已开；MENU →（对焦）→［被摄体识别］</td>
+<td>（211h_subject_recognition_af.html；0301B_shooting_still_images.html）</td>
+</tr>
+<tr>
+<td>镜头防抖 IS/VR 开关</td>
+<td>SteadyShot（机身）</td>
+<td>MENU →（拍摄）→［影像稳定］→［〈静〉SteadyShot］</td>
+<td>三脚架上关；镜头有防抖开关时只能用镜头开关（0414_still_image_steadyshot.html）</td>
+</tr>
+<tr>
+<td>M 档曝光量标尺</td>
+<td>M.M.（手动测光）</td>
+<td>M 档且 ISO 非 AUTO 时显示</td>
+<td>ISO AUTO 时不显示（0302C_manual_exposure.html）</td>
+</tr>
+</tbody>
+</table></div>
+<p>（表中名称与路径摘自《A7C II 操作手册》，均与索尼官方帮助指南逐条核对；本集未列出的操作见手册。）</p>
+</div>
+<div class="box errata"><h3>🕰️ 时代差异与勘误</h3><ul>
+<li>影棚同步：部分课程机型有 PC 同步口接影棚闪光灯 → A7C II 部件表里没有 PC 同步口，影棚灯用热靴上的引闪器触发，并把［实时取景显示］设为「设置效果关」以免取景画面发暗。</li>
+<li>反光镜：单反按快门时反光镜抬起、回落会带来震动，要用反光镜预升等办法 → A7C II 没有反光镜；三脚架上防抖动可用 2 秒自拍、Bluetooth 遥控器或手机遥控，并关闭 SteadyShot。</li>
+<li>实时取景：单反要切到 LV（实时显示）才能用屏幕取景 → A7C II 的取景器和显示屏始终是实时取景，不用切换。</li>
+<li>防抖：课程年代防抖做在镜头里（佳能 IS、尼康 VR）→ A7C II 机身内置影像传感器位移防抖（SteadyShot），镜头带防抖开关时以镜头开关为准；上三脚架建议关闭。</li>
+<li>肩屏与专用键：单反顶部有肩屏和 ISO/WB/驱动等专用键 → A7C II 没有肩屏；ISO 在控制拨轮右、拍摄模式（单拍/连拍/自拍）在控制拨轮左、白平衡模式出厂在 C1，其余靠 Fn 菜单和自定义键。</li>
+<li>AE 锁与景深预览：单反有 AE 锁键（佳能 ✱、尼康 AE-L）和景深预览键 → A7C II 没有专用键，要把［AE锁定保持］或［光圈预览］分配给自定义键。</li>
+</ul>
+</div>
+<div class="box terms"><h3>🔖 本集术语</h3><ul>
+<li>无</li>
+</ul>
+</div>
+<p class="ep-nav"><a href="#top">↑ 回到本页顶部</a></p></section>
+<section id="p68" class="episode" aria-labelledby="p68-t"><h2 id="p68-t"><span class="ep-no">P68</span> 化妆品广告拍摄</h2>
+<p class="ep-meta">原标题：068化妆品的广告拍摄 · 时长 3:51 · <a href="https://www.bilibili.com/video/BV1Vt411E7nT?p=68" target="_blank" rel="noopener">▶ 在 B 站观看本集</a></p>
+<blockquote class="oneliner">
+<p><strong>一句话</strong>：使用三支柔光光源（高位逆光+两侧45度对称光）拍摄瓶装化妆品，确保正面曝光准确并突出瓶盖高光投影。</p>
+</blockquote>
+<nav class="outline" aria-label="本集大纲"><p class="outline-t">本集大纲</p><ol>
+<li>化妆品拍摄要点<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=68&t=10" target="_blank" rel="noopener" title="跳到视频 00:10">00:10</a></li>
+<li>三光源设置概述<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=68&t=42" target="_blank" rel="noopener" title="跳到视频 00:42">00:42</a></li>
+<li>高位逆光的作用<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=68&t=82" target="_blank" rel="noopener" title="跳到视频 01:22">01:22</a></li>
+<li>两侧对称柔光光源布置<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=68&t=119" target="_blank" rel="noopener" title="跳到视频 01:59">01:59</a></li>
+<li>光源功率与角度控制<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=68&t=152" target="_blank" rel="noopener" title="跳到视频 02:32">02:32</a></li>
+<li>拍摄效果分析<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=68&t=187" target="_blank" rel="noopener" title="跳到视频 03:07">03:07</a></li>
+<li>光影效果变化技巧<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=68&t=219" target="_blank" rel="noopener" title="跳到视频 03:39">03:39</a></li>
+</ol></nav>
+
+<h3>1. 化妆品拍摄要点<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=68&t=10" target="_blank" rel="noopener" title="跳到视频 00:10">00:10–00:42</a></h3><p>化妆品瓶装产品拍摄需注意<strong>正面表面照明</strong>，确保曝光准确而非处于黑暗中。化妆品瓶盖通常是<strong>高反射金属材质</strong>，为强化美观性，摄影师通常让柔光枪在其表面留下<strong>高光投影</strong>。</p>
+
+<h3>2. 三光源设置概述<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=68&t=42" target="_blank" rel="noopener" title="跳到视频 00:42">00:42–01:22</a></h3><p>化妆品拍摄需使用<strong>三支光源</strong>，均以挂载柔光箱的<strong>软光形式</strong>出现。其中一支为<strong>高位逆光</strong>，形成近似顶光照明，作用包括：在瓶体上部表面留下充足照明；使产品轮廓在画面中更为显眼；营造化妆品在静物拍摄台上的印象及前端投影。</p>
+
+<h3>3. 高位逆光的作用<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=68&t=82" target="_blank" rel="noopener" title="跳到视频 01:22">01:22–01:59</a></h3><p>高位逆光确定后，需在前端位置以<strong>45度角对称布置两只柔光光源</strong>。这两只柔光箱分别位于<strong>左45度和右45度</strong>，置于相机附近，投射到被拍摄的瓶装化妆品。对光源的<strong>功率控制、距离控制和角度控制</strong>应尽量保持一致。</p>
+
+<h3>4. 两侧对称柔光光源布置<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=68&t=119" target="_blank" rel="noopener" title="跳到视频 01:59">01:59–02:32</a></h3><p>将光源功率调节至<strong>全光输出</strong>，可获得较小光圈，使近距离拍摄时画面景深足够。补光后通过<strong>测光表结果分析</strong>，调整两边照明比例输出。需确保两边光源发光量完全相同，避免功率不一致导致的照明不均。</p>
+
+<h3>5. 光源功率与角度控制<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=68&t=152" target="_blank" rel="noopener" title="跳到视频 02:32">02:32–03:07</a></h3><p>获取准确曝光的光圈后，摄影师进行对焦并按下快门，获得化妆品照片。拍摄效果包括：瓶体上方金属盖上留下<strong>柔光箱高光投影</strong>；产品前端得到有效照明；圆形瓶体表面光感得到全面交代；瓶体表面质感因45度角前侧光得到层次表现。</p>
+
+<h3>6. 拍摄效果分析<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=68&t=187" target="_blank" rel="noopener" title="跳到视频 03:07">03:07–03:39</a></h3><p>化妆品拍摄不必完全遵循45度角对称形式，可适当更改两只灯光的照明角度，使画面获得不同的<strong>光影渐面效果</strong>。这种渐面效果不仅表现在瓶体本身，也表现在瓶盖上的两处高光。</p>
+
+<h3>7. 光影效果变化技巧<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=68&t=219" target="_blank" rel="noopener" title="跳到视频 03:39">03:39–03:51</a></h3><p>通过调整灯光角度，可以创造不同的光影效果，这是化妆品拍摄的重要技巧。</p>
+<figure id="fig-P68-1"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 732" role="img" aria-label="化妆品三光源布光俯视图：相机在最下方，化妆品瓶放在静物台中央；正后方一盏高位柔光箱作逆光（近似顶光），照亮瓶体上部并勾出轮廓；相机附近左前 45° 和右前 45° 各一盏柔光箱对称布置，功率、距离、角度尽量一致；瓶盖是金属材质，留下柔光箱的高光投影">
+<title>化妆品三光源布光俯视图：相机在最下方，化妆品瓶放在静物台中央；正后方一盏高位柔光箱作逆光（近似顶光），照亮瓶体上部并勾出轮廓；相机附近左前 45° 和右前 45° 各一盏柔光箱对称布置，功率、距离、角度尽量一致；瓶盖是金属材质，留下柔光箱的高光投影</title>
+<defs><marker id="p68-1-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker><linearGradient id="p68-1-bm1" gradientUnits="userSpaceOnUse" x1="360.0" y1="117.0" x2="360.0" y2="282.0"><stop offset="0" stop-color="#fbbf24" stop-opacity=".66"/><stop offset="1" stop-color="#fbbf24" stop-opacity=".18"/></linearGradient><linearGradient id="p68-1-bm2" gradientUnits="userSpaceOnUse" x1="261.0" y1="351.0" x2="338.8" y2="273.2"><stop offset="0" stop-color="#fbbf24" stop-opacity=".66"/><stop offset="1" stop-color="#fbbf24" stop-opacity=".18"/></linearGradient><linearGradient id="p68-1-bm3" gradientUnits="userSpaceOnUse" x1="459.0" y1="351.0" x2="381.2" y2="273.2"><stop offset="0" stop-color="#fbbf24" stop-opacity=".66"/><stop offset="1" stop-color="#fbbf24" stop-opacity=".18"/></linearGradient></defs>
+<text x="360" y="27" font-size="18" font-weight="bold" text-anchor="middle" fill="#1e3a8a">化妆品三光源布光俯视图</text>
+<g transform="translate(54.0 50) rotate(-90) scale(.5)"><polygon points="-22.0,0 22.0,0 9.2,-34 -9.2,-34" fill="#fff" stroke="#444" stroke-width="1.6" stroke-linejoin="round"/><rect x="-8" y="-46" width="16" height="12" rx="3" fill="#64748b" stroke="#444" stroke-width="1.2"/><line x1="-22.0" y1="0" x2="22.0" y2="0" stroke="#444" stroke-width="4.5" stroke-linecap="round"/></g><text x="64.0" y="54.0" font-size="12" fill="#475569">柔光箱</text><polygon points="114.04000000000002,47 140.04000000000002,41 140.04000000000002,59 114.04000000000002,53" fill="#fbbf24" fill-opacity=".5"/><text x="146.0" y="54.0" font-size="12" fill="#475569">光线</text><line x1="184.04000000000002" y1="50" x2="206.04000000000002" y2="50" stroke="#64748b" stroke-width="1.6" stroke-dasharray="6 4"/><text x="212.0" y="54.0" font-size="12" fill="#475569">0° = 相机—被摄体连线</text><circle cx="357.16" cy="50" r="8" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="2 4" stroke-linecap="round"/><text x="371.2" y="54.0" font-size="12" fill="#475569">灯位示意</text><circle cx="439.16" cy="50" r="5.5" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/><text x="451.2" y="54.0" font-size="12" fill="#475569">主灯</text><circle cx="495.16" cy="50" r="5.5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.8"/><text x="507.2" y="54.0" font-size="12" fill="#475569">辅灯（补光）</text><circle cx="599.1600000000001" cy="50" r="5.5" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.8"/><text x="611.2" y="54.0" font-size="12" fill="#475569">轮廓灯/背景灯</text>
+<rect x="12" y="64" width="696" height="406" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/><circle cx="360" cy="252" r="110" fill="none" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="2 5" stroke-linecap="round"/><line x1="360" y1="136" x2="360" y2="252" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5 4"/><line x1="244" y1="252" x2="476" y2="252" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5 4"/><line x1="360" y1="252" x2="360" y2="400" stroke="#64748b" stroke-width="1.6" stroke-dasharray="6 4"/><rect x="250" y="197" width="220" height="116" rx="6" fill="#fff" stroke="#94a3b8" stroke-width="1.3"/><text x="241.0" y="247.0" font-size="11" text-anchor="end" fill="#475569">90°</text><text x="479.0" y="247.0" font-size="11" text-anchor="start" fill="#475569">90°</text><text x="367.0" y="133.0" font-size="11" text-anchor="start" fill="#475569">180°</text><text x="367.0" y="377.0" font-size="11" text-anchor="start" fill="#475569">0°</text>
+
+<polygon points="332.0,117.0 302.9,282.0 417.1,282.0 388.0,117.0" fill="url(#p68-1-bm1)"/><polygon points="280.8,370.8 372.3,306.7 305.3,239.7 241.2,331.2" fill="url(#p68-1-bm2)"/><polygon points="478.8,331.2 414.7,239.7 347.7,306.7 439.2,370.8" fill="url(#p68-1-bm3)"/>
+<defs><radialGradient id="p68-1-cap" cx=".38" cy=".33" r=".85"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#94a3b8"/></radialGradient></defs><circle cx="360" cy="252" r="27" fill="#fce7f3" stroke="#444" stroke-width="1.8"/><circle cx="360" cy="252" r="16" fill="url(#p68-1-cap)" stroke="#444" stroke-width="1.4"/><path d="M357.2,267.8 A16,16 0 0 0 350.6,264.9" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round"/><path d="M362.8,267.8 A16,16 0 0 1 369.4,264.9" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round"/>
+<rect x="253.0" y="202.0" width="39.0" height="16" rx="3" fill="#fff" fill-opacity=".85"/><text x="256.0" y="213.0" font-size="11" text-anchor="start" fill="#475569">静物台</text><rect x="297.0" y="206.0" width="126.0" height="17" rx="3" fill="#fff" fill-opacity=".85"/><text x="360.0" y="218.0" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f2329">化妆品瓶（金属瓶盖）</text><text x="322.0" y="80.0" font-size="13" font-weight="bold" text-anchor="end" fill="#1f2329">高位逆光 · 近似顶光</text><text x="322.0" y="97.0" font-size="12" text-anchor="end" fill="#475569">柔光箱 · 高位</text><text x="322.0" y="114.0" font-size="12" text-anchor="end" fill="#475569">方位：正后方 180°（示意）</text>
+<line x1="360.0" y1="125.0" x2="360.0" y2="195.3" stroke="#444" stroke-width="1.4" stroke-dasharray="5 3" marker-end="url(#p68-1-arr)"/><line x1="266.7" y1="345.3" x2="318.4" y2="293.6" stroke="#444" stroke-width="1.4" stroke-dasharray="5 3" marker-end="url(#p68-1-arr)"/><line x1="453.3" y1="345.3" x2="401.6" y2="293.6" stroke="#444" stroke-width="1.4" stroke-dasharray="5 3" marker-end="url(#p68-1-arr)"/>
+<g transform="translate(360.0 117.0) rotate(0.0)"><polygon points="-28.0,0 28.0,0 11.8,-34 -11.8,-34" fill="#fff" stroke="#444" stroke-width="1.6" stroke-linejoin="round"/><rect x="-8" y="-46" width="16" height="12" rx="3" fill="#64748b" stroke="#444" stroke-width="1.2"/><line x1="-28.0" y1="0" x2="28.0" y2="0" stroke="#f59e0b" stroke-width="4.5" stroke-linecap="round"/></g><circle cx="360.0" cy="98.3" r="9" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.8"/><text x="360.0" y="102.5" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f2329">1</text><g transform="translate(261.0 351.0) rotate(-135.0)"><polygon points="-28.0,0 28.0,0 11.8,-34 -11.8,-34" fill="#fff" stroke="#444" stroke-width="1.6" stroke-linejoin="round"/><rect x="-8" y="-46" width="16" height="12" rx="3" fill="#64748b" stroke="#444" stroke-width="1.2"/><line x1="-28.0" y1="0" x2="28.0" y2="0" stroke="#2563eb" stroke-width="4.5" stroke-linecap="round"/></g><circle cx="247.8" cy="364.2" r="9" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/><text x="247.8" y="368.4" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f2329">2</text><g transform="translate(459.0 351.0) rotate(-225.0)"><polygon points="-28.0,0 28.0,0 11.8,-34 -11.8,-34" fill="#fff" stroke="#444" stroke-width="1.6" stroke-linejoin="round"/><rect x="-8" y="-46" width="16" height="12" rx="3" fill="#64748b" stroke="#444" stroke-width="1.2"/><line x1="-28.0" y1="0" x2="28.0" y2="0" stroke="#2563eb" stroke-width="4.5" stroke-linecap="round"/></g><circle cx="472.2" cy="364.2" r="9" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/><text x="472.2" y="368.4" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f2329">3</text>
+<text x="216.5" y="373.5" font-size="13" font-weight="bold" text-anchor="end" fill="#1f2329">主灯 · 左前 45°</text><text x="216.5" y="390.5" font-size="12" text-anchor="end" fill="#475569">柔光箱 · 高度课程未说明</text><text x="216.5" y="407.5" font-size="12" text-anchor="end" fill="#475569">方位：左 45°（置于相机附近）</text><text x="503.5" y="373.5" font-size="13" font-weight="bold" text-anchor="start" fill="#1f2329">主灯 · 右前 45°</text><text x="503.5" y="390.5" font-size="12" text-anchor="start" fill="#475569">柔光箱 · 高度课程未说明</text><text x="503.5" y="407.5" font-size="12" text-anchor="start" fill="#475569">方位：右 45°（置于相机附近）</text>
+<rect x="347" y="404" width="26" height="16" rx="3" fill="#cbd5e1" stroke="#444" stroke-width="1.8"/><rect x="328" y="418" width="64" height="32" rx="6" fill="#fff" stroke="#444" stroke-width="2"/><circle cx="380" cy="428" r="3" fill="#444"/><text x="402.0" y="432.0" font-size="13" font-weight="bold" fill="#1f2329">相机</text><text x="402.0" y="448.0" font-size="12" fill="#475569">近距离拍摄</text>
+<rect x="12" y="480" width="696" height="240.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.2"/><circle cx="34" cy="498.0" r="9" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.8"/><text x="34.0" y="502.2" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f2329">1</text><text x="50.0" y="502.5" font-size="13" font-weight="bold" fill="#1f2329">高位逆光</text><text x="112.0" y="502.5" font-size="12" fill="#1f2329">正后方高位的柔光箱，近似顶光：照亮瓶体上部表面、让轮廓在画面里更显眼，</text><text x="112.0" y="520.5" font-size="12" fill="#1f2329">并在静物台上营造瓶体的印象和前端的投影。</text><line x1="22" y1="530.0" x2="698" y2="530.0" stroke="#bfdbfe" stroke-width="1"/><circle cx="34" cy="546.0" r="9" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/><text x="34.0" y="550.2" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f2329">2</text><text x="50.0" y="550.5" font-size="13" font-weight="bold" fill="#1f2329">左前灯</text><text x="112.0" y="550.5" font-size="12" fill="#1f2329">置于相机附近、左前 45° 的前侧光：照亮瓶体正面，让瓶体表面有层次，瓶盖映出柔光箱的高光。</text><line x1="22" y1="560.0" x2="698" y2="560.0" stroke="#bfdbfe" stroke-width="1"/><circle cx="34" cy="576.0" r="9" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/><text x="34.0" y="580.2" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f2329">3</text><text x="50.0" y="580.5" font-size="13" font-weight="bold" fill="#1f2329">右前灯</text><text x="112.0" y="580.5" font-size="12" fill="#1f2329">与左灯对称：功率、距离、角度都尽量一致，两边发光量完全相同，照明才均匀。</text><line x1="22" y1="590.0" x2="698" y2="590.0" stroke="#bfdbfe" stroke-width="1"/><text x="24.0" y="610.5" font-size="12" font-weight="bold" fill="#1e3a8a">拍摄参数</text><text x="84.0" y="610.5" font-size="12" fill="#1f2329">功率均置于全光输出：能用较小光圈，近距离拍摄景深才够；</text><text x="84.0" y="628.5" font-size="12" fill="#1f2329">再用测光表分析、微调两边照明比例，定下准确曝光的光圈后对焦拍摄。</text><text x="24.0" y="650.5" font-size="12" font-weight="bold" fill="#1e3a8a">要点</text><text x="84.0" y="650.5" font-size="12" fill="#1f2329">不必死守 45° 对称：适当改两盏灯的照明角度，瓶身和瓶盖上的两处高光会出现不同的明暗渐变。</text><text x="84.0" y="668.5" font-size="12" fill="#1f2329">三光源对称布置：照明均匀、瓶盖高光投影到位。</text><text x="24.0" y="690.5" font-size="12" font-weight="bold" fill="#1e3a8a">说明</text><text x="84.0" y="690.5" font-size="12" fill="#1f2329">灯距与角度为示意：方位只按课程说的前侧（0°~90°）、侧逆（90°~180°）定性画，</text><text x="84.0" y="708.5" font-size="12" fill="#1f2329">高低只分高位与低位，课程没给具体数值。</text>
+</svg><figcaption><strong>图 68-1</strong>　化妆品三光源布光俯视图——瓶装化妆品用三支柔光箱：正后方一盏高位逆光（近似顶光）照亮瓶体上部、勾出轮廓并营造台面投影，相机附近左 45°、右 45° 各一盏对称的前侧光照亮正面，功率、距离、角度尽量一致，瓶盖上留下两处柔光箱高光；不必死守 45° 对称，改角度可得不同渐变（灯距与角度为示意，高度课程只说了逆光为高位）。</figcaption></figure>
+
+<div class="box a7c2"><h3>📷 换成 A7C II 怎么做</h3><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>课程里的概念/操作</th>
+<th>A7C II 上的名称</th>
+<th>怎么操作</th>
+<th>说明（出处）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M 手动曝光</td>
+<td>M（手动曝光）</td>
+<td>模式旋钮转 M；前转盘=光圈，后转盘L=快门</td>
+<td>看 M.M. 指示；ISO 可设 ISO AUTO（0302C_manual_exposure.html）</td>
+</tr>
+<tr>
+<td>影棚闪光灯 / 引闪器</td>
+<td>—</td>
+<td>见 7.10 清单：实时取景显示设置效果关、机械快门、静音模式关、快门不超过同步速度、固定 ISO</td>
+<td>（0414_live_view_disp_set.html；0414H_shutter_type.html）</td>
+</tr>
+<tr>
+<td>自定义白平衡（佳能）／预设手动 PRE（尼康）</td>
+<td>自定义 1～3</td>
+<td>白平衡模式选［自定义 N］→ 按右 → 选设置图标 → 白色填满捕捉框按中央 → 再按中央注册</td>
+<td>用闪光捕获的要配闪光使用（0410B_custom_white_balance.html）</td>
+</tr>
+<tr>
+<td>RAW+JPEG</td>
+<td>RAW&amp;JPEG</td>
+<td>MENU →（拍摄）→［影像质量/记录］→［〈静〉文件格式］→［RAW&amp;JPEG］</td>
+<td>［JPEG/HEIF切换］为 HEIF 时变成 RAW&amp;HEIF；RAW 压缩方式在［RAW文件类型］（0404M_file_format.html；201h_jpeg_heif_switch.html）</td>
+</tr>
+<tr>
+<td>反光镜预升</td>
+<td><strong>无此功能</strong>（无反光镜）</td>
+<td>防按快门抖动：［自拍定时(单张)］2 秒、Bluetooth 遥控器、手机/电脑遥控；［快门类型］设［电子快门］则只用电子快门拍摄（但不能闪光/B门/长时曝光降噪/防闪烁）</td>
+<td>帮助指南没有“电子前帘快门”选项；三脚架上要关闭 SteadyShot（0407_drivemode_selftimer.html；0706_bluetooth_remote.html；0414H_shutter_type.html；0414_still_image_steadyshot.html）</td>
+</tr>
+<tr>
+<td>自拍 2 秒/10 秒</td>
+<td>自拍定时(单张)</td>
+<td>拍摄模式→［自拍定时(单张)］→ 10/5/2 秒</td>
+<td>2 秒用于减少按快门抖动（0407_drivemode_selftimer.html）</td>
+</tr>
+</tbody>
+</table></div>
+<p>（表中名称与路径摘自《A7C II 操作手册》，均与索尼官方帮助指南逐条核对；本集未列出的操作见手册。）</p>
+</div>
+<div class="box errata"><h3>🕰️ 时代差异与勘误</h3><ul>
+<li>影棚同步：部分课程机型有 PC 同步口接影棚闪光灯 → A7C II 部件表里没有 PC 同步口，影棚灯用热靴上的引闪器触发，并把［实时取景显示］设为「设置效果关」以免取景画面发暗。</li>
+<li>反光镜：单反按快门时反光镜抬起、回落会带来震动，要用反光镜预升等办法 → A7C II 没有反光镜；三脚架上防抖动可用 2 秒自拍、Bluetooth 遥控器或手机遥控，并关闭 SteadyShot。</li>
+<li>闪光同步：课程里的机型同步速度多在 1/180～1/250 秒 → A7C II 为 1/160 秒（全画幅，使用 Sony 闪光灯时）；电子快门或静音模式下不能闪光。</li>
+<li>对焦系统：单反用独立的相位对焦模块，对焦点数量有限 → A7C II 用相位检测/对比度检测，支持被摄体识别（人、动物/鸟类、昆虫、汽车/火车、飞机）和跟踪。</li>
+<li>自定义拍摄模式：佳能 C1～C3、尼康 U1/U2 → A7C II 模式旋钮的 1/2/3（调出用［MR拍摄设置存储］存下的设置）。</li>
+<li>检查曝光：单反主要靠拍后回放检查 → A7C II 拍摄前就能看柱状图、斑马线等辅助显示；回放时按 DISP 看柱状图和过曝/欠曝警告。</li>
+</ul>
+</div>
+<div class="box terms"><h3>🔖 本集术语</h3><ul>
+<li><strong>柔光箱</strong>：产生柔和光线的摄影附件，通过扩散光线减少阴影硬度</li>
+<li><strong>高位逆光</strong>：从高处向被摄物后方照射的光源，用于勾勒轮廓和提供顶部照明</li>
+<li><strong>高光投影</strong>：光源在光滑表面反射形成的高光区域，增强产品质感</li>
+<li><strong>测光表</strong>：测量光线强度的专业工具，用于确定正确曝光参数</li>
+<li><strong>景深</strong>：照片中清晰成像的前后范围，受光圈、焦距等因素影响</li>
+</ul>
+</div>
+<p class="ep-nav"><a href="#top">↑ 回到本页顶部</a></p></section>
+<section id="p69" class="episode" aria-labelledby="p69-t"><h2 id="p69-t"><span class="ep-no">P69</span> 鞋类产品的广告拍摄</h2>
+<p class="ep-meta">原标题：069鞋类产品的广告拍摄 · 时长 6:27 · <a href="https://www.bilibili.com/video/BV1Vt411E7nT?p=69" target="_blank" rel="noopener">▶ 在 B 站观看本集</a></p>
+<blockquote class="oneliner">
+<p><strong>一句话</strong>：鞋类产品广告拍摄需三灯布光（高位逆光、45度前侧光、辅助光），通过测光调整光比，确保产品细节和质感充分展现。</p>
+</blockquote>
+<nav class="outline" aria-label="本集大纲"><p class="outline-t">本集大纲</p><ol>
+<li>设备准备与相机设置<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=69&t=10" target="_blank" rel="noopener" title="跳到视频 00:10">00:10</a></li>
+<li>鞋类产品布光方案<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=69&t=90" target="_blank" rel="noopener" title="跳到视频 01:30">01:30</a></li>
+<li>高位逆光的作用<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=69&t=120" target="_blank" rel="noopener" title="跳到视频 02:00">02:00</a></li>
+<li>45度前侧光主照明<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=69&t=191" target="_blank" rel="noopener" title="跳到视频 03:11">03:11</a></li>
+<li>辅助光源的设置<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=69&t=236" target="_blank" rel="noopener" title="跳到视频 03:56">03:56</a></li>
+<li>测光与光圈调整<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=69&t=268" target="_blank" rel="noopener" title="跳到视频 04:28">04:28</a></li>
+<li>各部位测光方法<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=69&t=307" target="_blank" rel="noopener" title="跳到视频 05:07">05:07</a></li>
+<li>光比控制与调整<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=69&t=340" target="_blank" rel="noopener" title="跳到视频 05:40">05:40</a></li>
+</ol></nav>
+
+<h3>1. 设备准备与相机设置<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=69&t=10" target="_blank" rel="noopener" title="跳到视频 00:10">00:10–01:30</a></h3><p>拍摄鞋类产品需要三只添加了柔光箱作为附件的影棚闪光灯，功率不低于400瓦秒。较小的光圈可维持充分锐度，高功率灯光在低输出时回电时间短。相机设置包括：</p>
+<ul>
+<li><strong>图片分辨率</strong>：使用最高分辨率，如果偏重于后期调色，可以使用RAW格式</li>
+<li><strong>感光度</strong>：使用最低感光度（通常为ISO 100）</li>
+<li><strong>白平衡</strong>：使用自定义白平衡方法，确保色彩准确还原</li>
+<li><strong>快门速度</strong>：约定俗成设置为1/125秒</li>
+<li><strong>光圈</strong>：通过测光表测得</li>
+</ul>
+
+<h3>2. 鞋类产品布光方案<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=69&t=90" target="_blank" rel="noopener" title="跳到视频 01:30">01:30–02:34</a></h3><p>鞋类产品拍摄采用三只柔光箱构成的三点照明系统。<strong>高位逆光</strong>是拍摄鞋类产品必不可少的部分，位于顶部，作用包括：</p>
+<ul>
+<li>照亮静物台表面</li>
+<li>在静物台上留下鞋的印象</li>
+<li>在前方形成淡淡阴影，平衡画面美感和构图</li>
+<li>对拍摄物体进行轮廓勾勒，使画面更加分明</li>
+</ul>
+
+<h3>3. 45度前侧光主照明<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=69&t=191" target="_blank" rel="noopener" title="跳到视频 03:11">03:11–03:56</a></h3><p>在被摄面迎合相机的面使用<strong>45度角的前侧光</strong>作为主要照明，优点包括：</p>
+<ul>
+<li>能将大面积的被摄面照亮</li>
+<li>为产品营造很好的质感和层次感</li>
+<li>会在另一侧形成暗区和阴影</li>
+</ul>
+
+<h3>4. 辅助光源的设置<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=69&t=236" target="_blank" rel="noopener" title="跳到视频 03:56">03:56–04:28</a></h3><p>为平衡阴影、降低反差、展现暗部细节，在另一侧设置辅助光源。光源功率设置：</p>
+<ul>
+<li><strong>顶光源</strong>：全功率输出</li>
+<li><strong>主照明光源</strong>：全功率输出</li>
+<li><strong>辅助光源</strong>：一半功率输出</li>
+</ul>
+<p>左右两侧照明光比达到一级以上时，可适当升高辅助光源，使光比更小。层次和质感在亮度渐变时能得到最大化的展现。</p>
+
+<h3>5. 测光与光圈调整<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=69&t=268" target="_blank" rel="noopener" title="跳到视频 04:28">04:28–05:07</a></h3><p>完成布光后进行测光，通过测得数值调节闪光灯功率。测得：</p>
+<ul>
+<li>左侧光圈值：f/16</li>
+<li>右侧光圈值：f/10</li>
+</ul>
+<p>测光后需要对灯光进行功率或距离调整，使各部位曝光维持理想比例。测光需针对产品的各个被摄角度进行。</p>
+
+<h3>6. 各部位测光方法<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=69&t=307" target="_blank" rel="noopener" title="跳到视频 05:07">05:07–05:40</a></h3><p>主要测量<strong>主视光面</strong>和<strong>俯视光面</strong>。当两者光圈值相差很大时，说明光比控制过于极端，会丢失暗部或高光细节。此时需要调整左右主辅光源的照明比例。</p>
+
+<h3>7. 光比控制与调整〔05:40–结尾〕</h3><p>调整光比的理想方式是通过缩小闪光灯的照明输出，而非调整距离，以保持原本的曝光设置。将闪光灯功率从高向低调后，需进行一次闪光释放，确保下次输出按更改后的比例进行。完成布光和闪光灯输出功率调整后，即可按下快门完成拍摄。</p>
+<figure id="fig-P69-1"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 808" role="img" aria-label="鞋类产品三点布光俯视图：相机在最下方，女鞋放在静物台上；正后方一盏高位柔光箱作逆光（顶光源，全功率），左前 45° 一盏柔光箱作主灯（全功率），右侧一盏柔光箱作辅灯（一半功率）补暗部；测光左侧 f/16、右侧 f/10，两侧光比一级以上">
+<title>鞋类产品三点布光俯视图：相机在最下方，女鞋放在静物台上；正后方一盏高位柔光箱作逆光（顶光源，全功率），左前 45° 一盏柔光箱作主灯（全功率），右侧一盏柔光箱作辅灯（一半功率）补暗部；测光左侧 f/16、右侧 f/10，两侧光比一级以上</title>
+<defs><marker id="p69-1-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker><marker id="p69-1-dbl" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b03a3a"/></marker><linearGradient id="p69-1-bm1" gradientUnits="userSpaceOnUse" x1="360.0" y1="117.0" x2="360.0" y2="282.0"><stop offset="0" stop-color="#fbbf24" stop-opacity=".66"/><stop offset="1" stop-color="#fbbf24" stop-opacity=".18"/></linearGradient><linearGradient id="p69-1-bm2" gradientUnits="userSpaceOnUse" x1="261.0" y1="351.0" x2="338.8" y2="273.2"><stop offset="0" stop-color="#fbbf24" stop-opacity=".66"/><stop offset="1" stop-color="#fbbf24" stop-opacity=".18"/></linearGradient><linearGradient id="p69-1-bm3" gradientUnits="userSpaceOnUse" x1="495.2" y1="288.2" x2="389.0" y2="259.8"><stop offset="0" stop-color="#fbbf24" stop-opacity=".66"/><stop offset="1" stop-color="#fbbf24" stop-opacity=".18"/></linearGradient></defs>
+<text x="360" y="27" font-size="18" font-weight="bold" text-anchor="middle" fill="#1e3a8a">鞋类产品三点布光俯视图</text>
+<g transform="translate(54.0 50) rotate(-90) scale(.5)"><polygon points="-22.0,0 22.0,0 9.2,-34 -9.2,-34" fill="#fff" stroke="#444" stroke-width="1.6" stroke-linejoin="round"/><rect x="-8" y="-46" width="16" height="12" rx="3" fill="#64748b" stroke="#444" stroke-width="1.2"/><line x1="-22.0" y1="0" x2="22.0" y2="0" stroke="#444" stroke-width="4.5" stroke-linecap="round"/></g><text x="64.0" y="54.0" font-size="12" fill="#475569">柔光箱</text><polygon points="114.04000000000002,47 140.04000000000002,41 140.04000000000002,59 114.04000000000002,53" fill="#fbbf24" fill-opacity=".5"/><text x="146.0" y="54.0" font-size="12" fill="#475569">光线</text><line x1="184.04000000000002" y1="50" x2="206.04000000000002" y2="50" stroke="#64748b" stroke-width="1.6" stroke-dasharray="6 4"/><text x="212.0" y="54.0" font-size="12" fill="#475569">0° = 相机—被摄体连线</text><circle cx="357.16" cy="50" r="8" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="2 4" stroke-linecap="round"/><text x="371.2" y="54.0" font-size="12" fill="#475569">灯位示意</text><circle cx="439.16" cy="50" r="5.5" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/><text x="451.2" y="54.0" font-size="12" fill="#475569">主灯</text><circle cx="495.16" cy="50" r="5.5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.8"/><text x="507.2" y="54.0" font-size="12" fill="#475569">辅灯（补光）</text><circle cx="599.1600000000001" cy="50" r="5.5" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.8"/><text x="611.2" y="54.0" font-size="12" fill="#475569">轮廓灯/背景灯</text>
+<rect x="12" y="64" width="696" height="406" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/><circle cx="360" cy="252" r="110" fill="none" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="2 5" stroke-linecap="round"/><line x1="360" y1="136" x2="360" y2="252" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5 4"/><line x1="244" y1="252" x2="476" y2="252" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5 4"/><line x1="360" y1="252" x2="360" y2="400" stroke="#64748b" stroke-width="1.6" stroke-dasharray="6 4"/><rect x="250" y="197" width="220" height="116" rx="6" fill="#fff" stroke="#94a3b8" stroke-width="1.3"/><text x="241.0" y="247.0" font-size="11" text-anchor="end" fill="#475569">90°</text><text x="479.0" y="247.0" font-size="11" text-anchor="start" fill="#475569">90°</text><text x="367.0" y="133.0" font-size="11" text-anchor="start" fill="#475569">180°</text><text x="367.0" y="377.0" font-size="11" text-anchor="start" fill="#475569">0°</text>
+
+<polygon points="332.0,117.0 302.9,282.0 417.1,282.0 388.0,117.0" fill="url(#p69-1-bm1)"/><polygon points="280.8,370.8 372.3,306.7 305.3,239.7 241.2,331.2" fill="url(#p69-1-bm2)"/><polygon points="501.7,264.1 400.5,216.9 377.5,302.6 488.8,312.4" fill="url(#p69-1-bm3)"/>
+<g transform="translate(360 252) rotate(-8)"><path d="M-50.0,0.0 C-50.0,-1.8 -46.7,-3.8 -44.0,-5.5 C-41.3,-7.2 -37.7,-9.2 -34.0,-10.5 C-30.3,-11.8 -26.3,-13.1 -22.0,-13.5 C-17.7,-13.9 -12.3,-13.5 -8.0,-13.0 C-3.7,-12.5 0.0,-11.1 4.0,-10.5 C8.0,-9.9 11.7,-9.6 16.0,-9.5 C20.3,-9.4 26.0,-10.2 30.0,-10.0 C34.0,-9.8 37.3,-9.5 40.0,-8.5 C42.7,-7.5 44.7,-5.4 46.0,-4.0 C47.3,-2.6 48.0,-1.3 48.0,0.0 C48.0,1.3 47.3,2.6 46.0,4.0 C44.7,5.4 42.7,7.5 40.0,8.5 C37.3,9.5 34.0,9.8 30.0,10.0 C26.0,10.2 20.3,9.4 16.0,9.5 C11.7,9.6 8.0,9.9 4.0,10.5 C0.0,11.1 -3.7,12.5 -8.0,13.0 C-12.3,13.5 -17.7,13.9 -22.0,13.5 C-26.3,13.1 -30.3,11.8 -34.0,10.5 C-37.7,9.2 -41.3,7.2 -44.0,5.5 C-46.7,3.8 -50.0,1.8 -50.0,0.0 Z" fill="#c9a27a" stroke="#444" stroke-width="1.8" stroke-linejoin="round"/><path d="M-45.0,0.0 C-45.0,-1.3 -42.0,-2.7 -39.6,-4.0 C-37.2,-5.2 -33.9,-6.6 -30.6,-7.6 C-27.3,-8.5 -23.7,-9.4 -19.8,-9.7 C-15.9,-10.0 -11.1,-9.7 -7.2,-9.4 C-3.3,-9.0 0.0,-8.0 3.6,-7.6 C7.2,-7.1 10.5,-6.9 14.4,-6.8 C18.3,-6.8 23.4,-7.3 27.0,-7.2 C30.6,-7.1 33.6,-6.8 36.0,-6.1 C38.4,-5.4 40.2,-3.9 41.4,-2.9 C42.6,-1.9 43.2,-1.0 43.2,0.0 C43.2,1.0 42.6,1.9 41.4,2.9 C40.2,3.9 38.4,5.4 36.0,6.1 C33.6,6.8 30.6,7.1 27.0,7.2 C23.4,7.3 18.3,6.8 14.4,6.8 C10.5,6.9 7.2,7.1 3.6,7.6 C0.0,8.0 -3.3,9.0 -7.2,9.4 C-11.1,9.7 -15.9,10.0 -19.8,9.7 C-23.7,9.4 -27.3,8.5 -30.6,7.6 C-33.9,6.6 -37.2,5.2 -39.6,4.0 C-42.0,2.7 -45.0,1.3 -45.0,0.0 Z" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="1" stroke-dasharray="3 3"/><path d="M-4,0 C2,-5.5 12,-8 26,-7.8 C38,-7.5 43,-4 43,0 C43,4 38,7.5 26,7.8 C12,8 2,5.5 -4,0 Z" fill="#f3e7d6" stroke="#444" stroke-width="1.3" stroke-linejoin="round"/><ellipse cx="28" cy="0.4" rx="11" ry="4" fill="#e0c9a8"/><path d="M-37,-8.5 Q-31,0 -37,8.5" fill="none" stroke="#444" stroke-width="1" opacity=".5"/></g>
+<rect x="253.0" y="202.0" width="39.0" height="16" rx="3" fill="#fff" fill-opacity=".85"/><text x="256.0" y="213.0" font-size="11" text-anchor="start" fill="#475569">静物台</text><rect x="321.0" y="214.0" width="78.0" height="17" rx="3" fill="#fff" fill-opacity=".85"/><text x="360.0" y="226.0" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f2329">女鞋（俯视）</text><rect x="259.0" y="236.0" width="50.0" height="16" rx="3" fill="#fff" fill-opacity=".85"/><text x="284.0" y="247.0" font-size="11" text-anchor="middle" fill="#475569">左侧测光</text><rect x="267.1" y="251.0" width="33.8" height="18" rx="3" fill="#fff" fill-opacity=".85"/><text x="284.0" y="264.0" font-size="13" font-weight="bold" text-anchor="middle" fill="#1f2329">f/16</text><rect x="411.0" y="236.0" width="50.0" height="16" rx="3" fill="#fff" fill-opacity=".85"/><text x="436.0" y="247.0" font-size="11" text-anchor="middle" fill="#475569">右侧测光</text><rect x="419.1" y="251.0" width="33.8" height="18" rx="3" fill="#fff" fill-opacity=".85"/><text x="436.0" y="264.0" font-size="13" font-weight="bold" text-anchor="middle" fill="#1f2329">f/10</text><line x1="304" y1="288" x2="416" y2="288" stroke="#b03a3a" stroke-width="1.6" marker-start="url(#p69-1-dbl)" marker-end="url(#p69-1-dbl)"/><rect x="324.0" y="293.0" width="72.0" height="16" rx="3" fill="#fff" fill-opacity=".85"/><text x="360.0" y="304.0" font-size="11" font-weight="bold" text-anchor="middle" fill="#b03a3a">光比一级以上</text><text x="322.0" y="80.0" font-size="13" font-weight="bold" text-anchor="end" fill="#1f2329">高位逆光（顶光源）· 全功率</text><text x="322.0" y="97.0" font-size="12" text-anchor="end" fill="#475569">柔光箱 · 高位</text><text x="322.0" y="114.0" font-size="12" text-anchor="end" fill="#475569">方位：正后方 180°（示意）</text>
+<line x1="360.0" y1="125.0" x2="360.0" y2="195.3" stroke="#444" stroke-width="1.4" stroke-dasharray="5 3" marker-end="url(#p69-1-arr)"/><line x1="266.7" y1="345.3" x2="303.4" y2="308.6" stroke="#444" stroke-width="1.4" stroke-dasharray="5 3" marker-end="url(#p69-1-arr)"/><line x1="487.5" y1="286.2" x2="437.3" y2="272.7" stroke="#444" stroke-width="1.4" stroke-dasharray="5 3" marker-end="url(#p69-1-arr)"/>
+<g transform="translate(360.0 117.0) rotate(0.0)"><polygon points="-28.0,0 28.0,0 11.8,-34 -11.8,-34" fill="#fff" stroke="#444" stroke-width="1.6" stroke-linejoin="round"/><rect x="-8" y="-46" width="16" height="12" rx="3" fill="#64748b" stroke="#444" stroke-width="1.2"/><line x1="-28.0" y1="0" x2="28.0" y2="0" stroke="#f59e0b" stroke-width="4.5" stroke-linecap="round"/></g><circle cx="360.0" cy="98.3" r="9" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.8"/><text x="360.0" y="102.5" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f2329">1</text><g transform="translate(261.0 351.0) rotate(-135.0)"><polygon points="-28.0,0 28.0,0 11.8,-34 -11.8,-34" fill="#fff" stroke="#444" stroke-width="1.6" stroke-linejoin="round"/><rect x="-8" y="-46" width="16" height="12" rx="3" fill="#64748b" stroke="#444" stroke-width="1.2"/><line x1="-28.0" y1="0" x2="28.0" y2="0" stroke="#2563eb" stroke-width="4.5" stroke-linecap="round"/></g><circle cx="247.8" cy="364.2" r="9" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/><text x="247.8" y="368.4" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f2329">2</text><g transform="translate(495.2 288.2) rotate(-255.0)"><polygon points="-25.0,0 25.0,0 10.5,-34 -10.5,-34" fill="#fff" stroke="#444" stroke-width="1.6" stroke-linejoin="round"/><rect x="-8" y="-46" width="16" height="12" rx="3" fill="#64748b" stroke="#444" stroke-width="1.2"/><line x1="-25.0" y1="0" x2="25.0" y2="0" stroke="#16a34a" stroke-width="4.5" stroke-linecap="round"/></g><circle cx="513.3" cy="293.1" r="9" fill="#dcfce7" stroke="#16a34a" stroke-width="1.8"/><text x="513.3" y="297.3" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f2329">3</text>
+<text x="216.5" y="373.5" font-size="13" font-weight="bold" text-anchor="end" fill="#1f2329">主灯 · 左前 45° · 全功率</text><text x="216.5" y="390.5" font-size="12" text-anchor="end" fill="#475569">柔光箱 · 前侧光</text><text x="216.5" y="407.5" font-size="12" text-anchor="end" fill="#475569">照亮被摄面，造质感层次</text><text x="551.7" y="290.1" font-size="13" font-weight="bold" text-anchor="start" fill="#1f2329">辅灯 · 另一侧 · 一半功率</text><text x="551.7" y="307.1" font-size="12" text-anchor="start" fill="#475569">柔光箱 · 补暗部</text><text x="551.7" y="324.1" font-size="12" text-anchor="start" fill="#475569">方位：右侧（示意）</text>
+
+<rect x="347" y="404" width="26" height="16" rx="3" fill="#cbd5e1" stroke="#444" stroke-width="1.8"/><rect x="328" y="418" width="64" height="32" rx="6" fill="#fff" stroke="#444" stroke-width="2"/><circle cx="380" cy="428" r="3" fill="#444"/><text x="402.0" y="432.0" font-size="13" font-weight="bold" fill="#1f2329">相机</text><text x="402.0" y="448.0" font-size="12" fill="#475569">ISO 100 · 1/125 s</text>
+<rect x="12" y="480" width="696" height="316.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.2"/><circle cx="34" cy="498.0" r="9" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.8"/><text x="34.0" y="502.2" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f2329">1</text><text x="50.0" y="502.5" font-size="13" font-weight="bold" fill="#1f2329">高位逆光</text><text x="112.0" y="502.5" font-size="12" fill="#1f2329">正后方高位的柔光箱（顶光源），全功率：照亮静物台表面，在台面留下鞋的印象，</text><text x="112.0" y="520.5" font-size="12" fill="#1f2329">前方形成淡淡的阴影来平衡构图，还能勾出鞋的轮廓，让主体在画面里更分明。</text><line x1="22" y1="530.0" x2="698" y2="530.0" stroke="#bfdbfe" stroke-width="1"/><circle cx="34" cy="546.0" r="9" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/><text x="34.0" y="550.2" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f2329">2</text><text x="50.0" y="550.5" font-size="13" font-weight="bold" fill="#1f2329">主灯</text><text x="112.0" y="550.5" font-size="12" fill="#1f2329">照向被摄面（迎向相机的面）的 45° 前侧光，全功率：照亮大面积被摄面，</text><text x="112.0" y="568.5" font-size="12" fill="#1f2329">营造质感和层次；它会让另一侧出现暗区和阴影。</text><line x1="22" y1="578.0" x2="698" y2="578.0" stroke="#bfdbfe" stroke-width="1"/><circle cx="34" cy="594.0" r="9" fill="#dcfce7" stroke="#16a34a" stroke-width="1.8"/><text x="34.0" y="598.2" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f2329">3</text><text x="50.0" y="598.5" font-size="13" font-weight="bold" fill="#1f2329">辅灯</text><text x="112.0" y="598.5" font-size="12" fill="#1f2329">放在另一侧补暗部，只开一半功率：平衡阴影、降低反差、让暗部细节更多；</text><text x="112.0" y="616.5" font-size="12" fill="#1f2329">左右有一定的亮度渐变，层次和质感才能得到最大化的展现。</text><line x1="22" y1="626.0" x2="698" y2="626.0" stroke="#bfdbfe" stroke-width="1"/><text x="24.0" y="646.5" font-size="12" font-weight="bold" fill="#1e3a8a">拍摄参数</text><text x="84.0" y="646.5" font-size="12" fill="#1f2329">三只加柔光箱的影棚闪光灯，各 400 瓦秒以上 · ISO 100 · 快门 1/125 s · 光圈用测光表测；</text><text x="84.0" y="664.5" font-size="12" fill="#1f2329">自定义白平衡；分辨率设最高，偏重后期调色可用 RAW</text><text x="24.0" y="686.5" font-size="12" font-weight="bold" fill="#1e3a8a">测光</text><text x="84.0" y="686.5" font-size="12" fill="#1f2329">左侧 f/16、右侧 f/10，两边光比达到一级以上，可适当升高辅灯、让光比小一点。分别测「主视光面」和</text><text x="84.0" y="704.5" font-size="12" fill="#1f2329">「俯视光面」：两者光圈相差很大就是光比太极端，会丢暗部或高光细节，要调整左右主辅灯的比例。</text><text x="24.0" y="726.5" font-size="12" font-weight="bold" fill="#1e3a8a">调整</text><text x="84.0" y="726.5" font-size="12" fill="#1f2329">缩小光比靠调低灯的输出功率，不靠改距离，这样曝光设置不变；功率从高调低后要先放一次闪光，</text><text x="84.0" y="744.5" font-size="12" fill="#1f2329">下一次才按新功率输出。</text><text x="24.0" y="766.5" font-size="12" font-weight="bold" fill="#1e3a8a">说明</text><text x="84.0" y="766.5" font-size="12" fill="#1f2329">灯距与角度为示意：顶光源在正后方高位、主灯在 45° 前侧是课程说的；辅灯课程只说「另一侧」，</text><text x="84.0" y="784.5" font-size="12" fill="#1f2329">图中画在右侧；根据左侧 f/16、右侧 f/10 的读数，把主灯画在左；高低只分高位与低位，没有具体数值。</text>
+</svg><figcaption><strong>图 69-1</strong>　鞋类产品三点布光俯视图——鞋类三点布光：正后方一盏高位逆光（顶光源，全功率）照亮静物台、留下鞋的印象并勾出轮廓，左前 45° 一盏主灯（全功率）照亮被摄面、造出质感和层次，另一侧一盏辅灯只开一半功率补暗部；测光左侧 f/16、右侧 f/10，光比一级以上，可适当升高辅灯来缩小光比（灯距与角度为示意）。</figcaption></figure>
+
+<div class="box a7c2"><h3>📷 换成 A7C II 怎么做</h3><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>课程里的概念/操作</th>
+<th>A7C II 上的名称</th>
+<th>怎么操作</th>
+<th>说明（出处）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M 手动曝光</td>
+<td>M（手动曝光）</td>
+<td>模式旋钮转 M；前转盘=光圈，后转盘L=快门</td>
+<td>看 M.M. 指示；ISO 可设 ISO AUTO（0302C_manual_exposure.html）</td>
+</tr>
+<tr>
+<td>影棚闪光灯 / 引闪器</td>
+<td>—</td>
+<td>见 7.10 清单：实时取景显示设置效果关、机械快门、静音模式关、快门不超过同步速度、固定 ISO</td>
+<td>（0414_live_view_disp_set.html；0414H_shutter_type.html）</td>
+</tr>
+<tr>
+<td>自定义白平衡（佳能）／预设手动 PRE（尼康）</td>
+<td>自定义 1～3</td>
+<td>白平衡模式选［自定义 N］→ 按右 → 选设置图标 → 白色填满捕捉框按中央 → 再按中央注册</td>
+<td>用闪光捕获的要配闪光使用（0410B_custom_white_balance.html）</td>
+</tr>
+<tr>
+<td>RAW+JPEG</td>
+<td>RAW&amp;JPEG</td>
+<td>MENU →（拍摄）→［影像质量/记录］→［〈静〉文件格式］→［RAW&amp;JPEG］</td>
+<td>［JPEG/HEIF切换］为 HEIF 时变成 RAW&amp;HEIF；RAW 压缩方式在［RAW文件类型］（0404M_file_format.html；201h_jpeg_heif_switch.html）</td>
+</tr>
+</tbody>
+</table></div>
+<p>（表中名称与路径摘自《A7C II 操作手册》，均与索尼官方帮助指南逐条核对；本集未列出的操作见手册。）</p>
+</div>
+<div class="box errata"><h3>🕰️ 时代差异与勘误</h3><ul>
+<li>影棚同步：部分课程机型有 PC 同步口接影棚闪光灯 → A7C II 部件表里没有 PC 同步口，影棚灯用热靴上的引闪器触发，并把［实时取景显示］设为「设置效果关」以免取景画面发暗。</li>
+<li>自定义拍摄模式：佳能 C1～C3、尼康 U1/U2 → A7C II 模式旋钮的 1/2/3（调出用［MR拍摄设置存储］存下的设置）。</li>
+<li>照片风格：佳能照片风格、尼康优化校准 → A7C II 叫「创意外观」（ST/PT/NT/VV/VV2/FL/IN/SH/BW/SE）。</li>
+</ul>
+</div>
+<div class="box terms"><h3>🔖 本集术语</h3><ul>
+<li><strong>柔光箱</strong>：闪光灯附件，将硬光转化为柔和均匀的光线</li>
+<li><strong>高位逆光</strong>：从高处照射的逆光，用于勾勒物体轮廓</li>
+<li><strong>前侧光</strong>：从侧面照射的光线，能表现物体质感和层次</li>
+<li><strong>光比</strong>：画面中最亮与最暗部分的亮度比值</li>
+<li><strong>测光表</strong>：测量光线强度的专业设备，用于确定正确曝光</li>
+</ul>
+</div>
+<p class="ep-nav"><a href="#top">↑ 回到本页顶部</a></p></section>
+<section id="p70" class="episode" aria-labelledby="p70-t"><h2 id="p70-t"><span class="ep-no">P70</span> 广告拍摄案例</h2>
+<p class="ep-meta">原标题：070服装的广告拍摄 · 时长 9:29 · <a href="https://www.bilibili.com/video/BV1Vt411E7nT?p=70" target="_blank" rel="noopener">▶ 在 B 站观看本集</a></p>
+<blockquote class="oneliner">
+<p><strong>一句话</strong>：影棚中拍摄服饰、箱包等布艺产品的相机设置与三灯布光方案。</p>
+</blockquote>
+<nav class="outline" aria-label="本集大纲"><p class="outline-t">本集大纲</p><ol>
+<li>影棚拍摄相机设置<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=70&t=10" target="_blank" rel="noopener" title="跳到视频 00:10">00:10</a></li>
+<li>感光度与白平衡设置<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=70&t=41" target="_blank" rel="noopener" title="跳到视频 00:41">00:41</a></li>
+<li>对焦模式与分辨率设置<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=70&t=74" target="_blank" rel="noopener" title="跳到视频 01:14">01:14</a></li>
+<li>快门速度与光圈设置<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=70&t=149" target="_blank" rel="noopener" title="跳到视频 02:29">02:29</a></li>
+<li>曝光控制方法<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=70&t=201" target="_blank" rel="noopener" title="跳到视频 03:21">03:21</a></li>
+<li>服饰拍摄布光方案<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=70&t=240" target="_blank" rel="noopener" title="跳到视频 04:00">04:00</a></li>
+<li>灯光角度与功率控制<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=70&t=275" target="_blank" rel="noopener" title="跳到视频 04:35">04:35</a></li>
+<li>测光与光圈确定<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=70&t=342" target="_blank" rel="noopener" title="跳到视频 05:42">05:42</a></li>
+<li>拍摄角度与镜头选择<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=70&t=450" target="_blank" rel="noopener" title="跳到视频 07:30">07:30</a></li>
+<li>白色服装拍摄技巧<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=70&t=490" target="_blank" rel="noopener" title="跳到视频 08:10">08:10</a></li>
+<li>其他布艺产品拍摄方法<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=70&t=528" target="_blank" rel="noopener" title="跳到视频 08:48">08:48</a></li>
+</ol></nav>
+
+<h3>1. 影棚拍摄相机设置<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=70&t=10" target="_blank" rel="noopener" title="跳到视频 00:10">00:10–01:14</a></h3><p>在影棚中拍摄服饰、箱包等布艺产品，需要三只柔光灯（闪光灯上加柔光枪）。相机设置在影棚中必须一成不变，特别是闪光影棚中只能使用手动模式。感光度应设置为相机最低值，以维持画面最高的细腻程度。由于影棚闪光灯提供了非常强的亮度，不必担心感光度过低导致的快门过慢问题。白平衡建议使用自定义白平衡，需要一张白平衡板或灰板，在布完光后拍下，告诉相机这是自定义取样的标准，促使照相机在接下来的拍摄中得到准确的色彩还原。对焦模式可设为自动对焦，并选择单次对焦模式，让相机一次对焦精准并锁定对焦。测光模式在闪光影棚中不需要做任何考量，无论设为评价测光、局部测光、点测光还是中央重点测光都不予考虑，因为实际运用的光圈快门不是通过相机的内置测光表获取。拍摄图片的分辨率应设置到最高，因为影棚中拍摄的照片属于产品摄影范畴，高分辨率能展示更多细节。白平衡调教放在打光完成以后进行。</p>
+
+<h3>2. 感光度与白平衡设置<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=70&t=41" target="_blank" rel="noopener" title="跳到视频 00:41">00:41–02:29</a></h3><p>相机感光度设置为最低值，白平衡设置建议在所有摄影棚里都尽量使用自定义白平衡。自定义白平衡需要一张白平衡板或灰板，在布完光后拍下，告诉相机这是自定义取样的标准，促使照相机在接下来的拍摄中得到准确的色彩还原。白平衡调教放在打光完成以后进行。快门速度控制在常用的大多数影棚摄影师的一个不成文规定：1/125秒。在感光度最低、快门速度为1/125秒的情况下进行设置。光圈设置在影棚中有两种曝光推算法：一种是通过估算法先给出一个既定值（如f/11），通过试拍后，如果曝光过度则缩小光圈，如果曝光不足则开大光圈；另一种更为精确的方式是使用外置测光表对影棚中的闪光亮度进行测量，以便更精确地控制曝光细节。</p>
+
+<h3>3. 对焦模式与分辨率设置<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=70&t=74" target="_blank" rel="noopener" title="跳到视频 01:14">01:14–02:29</a></h3><p>对焦模式可设为自动对焦，并选择单次对焦模式，让相机一次对焦精准并锁定对焦。测光模式在闪光影棚中不需要做任何考量，无论设为评价测光、局部测光、点测光还是中央重点测光都不予考虑，因为实际运用的光圈快门不是通过相机的内置测光表获取。拍摄图片的分辨率应设置到最高，因为影棚中拍摄的照片属于产品摄影范畴，高分辨率能展示更多细节。</p>
+
+<h3>4. 快门速度与光圈设置<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=70&t=149" target="_blank" rel="noopener" title="跳到视频 02:29">02:29–03:21</a></h3><p>快门速度控制在1/125秒（这是大多数影棚摄影师的一个不成文规定）。光圈设置在影棚中有两种曝光推算法：一种是通过估算法先给出一个既定值（如f/11），通过试拍后，如果曝光过度则缩小光圈，如果曝光不足则开大光圈，也可以通过调节灯光功率来控制画面亮度；另一种更为精确的方式是使用外置测光表对影棚中的闪光亮度进行测量，以便更精确地控制曝光细节。</p>
+
+<h3>5. 曝光控制方法<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=70&t=201" target="_blank" rel="noopener" title="跳到视频 03:21">03:21–04:00</a></h3><p>常见的服饰、箱包拍摄方法在影棚中的打光，多采用左右两边各一个侧光，加上一个顶部的灯光。拍摄服饰时有两种方式：一种是将服装叠起来拍，另一种是将服装铺开来拍。在铺开来拍时，要注意柔光箱尽量控制为横向，以确保大面积的照明得到均匀的受光。灯头的投射角度尽量以略向下的俯角来投射，两边的灯光做相同的控制和功率投射向被摄物。适当的时候也可以将灯光的高度升得更高一点，这取决于服饰铺在地面上具体有多大。</p>
+
+<h3>6. 服饰拍摄布光方案<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=70&t=240" target="_blank" rel="noopener" title="跳到视频 04:00">04:00–04:35</a></h3><p>常见的服饰拍摄布光方法多采用左右两边各一个侧光，加上一个顶部的灯光。左右两边的侧光要注意，当服装铺开来拍时，柔光箱尽量控制为横向，以确保大面积的照明得到均匀的受光。灯头的投射角度尽量以略向下的俯角来投射，两边的灯光做相同的角度和功率控制。顶光是为了加强被摄物在水平面上细节的表现，而左右的侧光是为了强调产品的质感。功率控制上，建议在使用功率不是特别大的闪光灯（如400瓦闪光灯）时，尽量将功率开到较大位置（如全功率），以提供充分的照明。</p>
+
+<h3>7. 灯光角度与功率控制<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=70&t=275" target="_blank" rel="noopener" title="跳到视频 04:35">04:35–05:42</a></h3><p>功率控制上，建议在使用功率不是特别大的闪光灯（如400瓦闪光灯）时，尽量将功率开到较大位置（如全功率），以提供充分的照明，便于尽量缩小光圈。有人可能会问，如果光圈开得过大，会不会影响画面的锐度？服饰拍摄经常会出现一个恼人的问题，在服装表面布料上会出现摩尔纹，而将光圈刻意收得很小，能够使锐度略微降低，尽量缓解摩尔纹现象。目前将两只灯光的功率都控到最高，以略微的俯角投射向被摄物，实现较为均匀的照明。顶灯也从上往下打光，功率也开到最高。接下来要进行测光，以确定拍摄需要用到的光圈大小。测光表的使用方法可参见影棚基础课程中的说明。</p>
+
+<h3>8. 测光与光圈确定<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=70&t=342" target="_blank" rel="noopener" title="跳到视频 05:42">05:42–07:30</a></h3><p>使用测光表进行测光，采用触发器去触发现场的闪光光源，挨个分步测量被摄物各个位置所受光的情况。在ISO 100的感光度下，测得衣服大致的受光每个位置都在f/22的光圈位置。需要注意尽量让两边靠近边缘的部位保证其受光与中心部位大致相当，避免画面出现明显的高光和暗影。完成f/22的光圈获取后，即可进行拍摄。在相机镜头理想的情况下，没有添加绿光滤镜等特殊滤镜时，可直接为相机输入f/22的光圈值进行拍摄。由于拍摄服装往往需要从很高的曲形角度才能拍全，建议使用标准镜头拍摄，摄影师可能需要通过爬梯子登高的方式来取景和按动快门。值得一提的是，如果拍摄的不是黑色服装而是白色服装，拍摄白色服装时需要注意曝光控制。</p>
+
+<h3>9. 拍摄角度与镜头选择<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=70&t=450" target="_blank" rel="noopener" title="跳到视频 07:30">07:30–08:10</a></h3><p>拍摄白色服装时，曝光控制需要特别注意。如果测出的光圈是f/22，建议将光圈再收小半级，让白色衣服略微曝光不足，这样能让白色衣服的细节表现更多，让画面出现一定的反差。为了表现白色服装更多的层次和质感，尽量让两侧光源的光线输出有一定的比例，例如一只侧灯保持全功率，另一只侧灯置于3/4输出功率的位置，这样在衣服的左右便呈现一定的亮度渐变。</p>
+
+<h3>10. 白色服装拍摄技巧<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=70&t=490" target="_blank" rel="noopener" title="跳到视频 08:10">08:10–08:48</a></h3><p>拍摄白色服装时，曝光控制需要特别注意。如果测出的光圈是f/22，建议将光圈再收小半级，让白色衣服略微曝光不足，这样能让白色衣服的细节表现更多，让画面出现一定的反差。为了表现白色服装更多的层次和质感，尽量让两侧光源的光线输出有一定的比例，例如一只侧灯保持全功率，另一只侧灯置于3/4输出功率的位置，这样在衣服的左右便呈现一定的亮度渐变。至于箱包、鞋帽等其他布艺产品的拍摄，其方法与普通衣物的拍摄控制手法大致雷同。</p>
+
+<h3>11. 其他布艺产品拍摄方法〔08:48–结尾〕</h3><p>箱包、鞋帽等其他布艺产品的拍摄方法与普通衣物的拍摄控制手法大致雷同。</p>
+<figure id="fig-P70-1"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 776" role="img" aria-label="服饰拍摄三灯布光俯视图：黑色衣服铺开在地面，相机在最下方（实际站高处、从衣服正上方向下俯拍）；左右两侧各一盏横置柔光箱作侧光，灯头略向下俯角、同角度同功率（全功率），衣服正上方一盏顶灯从上往下打光（全功率）；右上角侧视小图显示三盏灯的相对高度">
+<title>服饰拍摄三灯布光俯视图：黑色衣服铺开在地面，相机在最下方（实际站高处、从衣服正上方向下俯拍）；左右两侧各一盏横置柔光箱作侧光，灯头略向下俯角、同角度同功率（全功率），衣服正上方一盏顶灯从上往下打光（全功率）；右上角侧视小图显示三盏灯的相对高度</title>
+<defs><marker id="p70-1-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker><linearGradient id="p70-1-bm1" gradientUnits="userSpaceOnUse" x1="212.0" y1="240.0" x2="370.0" y2="240.0"><stop offset="0" stop-color="#fbbf24" stop-opacity=".66"/><stop offset="1" stop-color="#fbbf24" stop-opacity=".18"/></linearGradient><linearGradient id="p70-1-bm2" gradientUnits="userSpaceOnUse" x1="508.0" y1="240.0" x2="350.0" y2="240.0"><stop offset="0" stop-color="#fbbf24" stop-opacity=".66"/><stop offset="1" stop-color="#fbbf24" stop-opacity=".18"/></linearGradient></defs>
+<text x="360" y="27" font-size="18" font-weight="bold" text-anchor="middle" fill="#1e3a8a">服饰拍摄三灯布光俯视图</text>
+<g transform="translate(54.0 50) rotate(-90) scale(.5)"><polygon points="-22.0,0 22.0,0 9.2,-34 -9.2,-34" fill="#fff" stroke="#444" stroke-width="1.6" stroke-linejoin="round"/><rect x="-8" y="-46" width="16" height="12" rx="3" fill="#64748b" stroke="#444" stroke-width="1.2"/><line x1="-22.0" y1="0" x2="22.0" y2="0" stroke="#444" stroke-width="4.5" stroke-linecap="round"/></g><text x="64.0" y="54.0" font-size="12" fill="#475569">柔光箱</text><polygon points="114.04000000000002,47 140.04000000000002,41 140.04000000000002,59 114.04000000000002,53" fill="#fbbf24" fill-opacity=".5"/><text x="146.0" y="54.0" font-size="12" fill="#475569">光线</text><line x1="184.04000000000002" y1="50" x2="206.04000000000002" y2="50" stroke="#64748b" stroke-width="1.6" stroke-dasharray="6 4"/><text x="212.0" y="54.0" font-size="12" fill="#475569">0° = 相机—被摄体连线</text><circle cx="357.16" cy="50" r="8" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="2 4" stroke-linecap="round"/><text x="371.2" y="54.0" font-size="12" fill="#475569">灯位示意</text><circle cx="439.16" cy="50" r="5.5" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/><text x="451.2" y="54.0" font-size="12" fill="#475569">主灯</text><circle cx="495.16" cy="50" r="5.5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.8"/><text x="507.2" y="54.0" font-size="12" fill="#475569">辅灯（补光）</text><circle cx="599.1600000000001" cy="50" r="5.5" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.8"/><text x="611.2" y="54.0" font-size="12" fill="#475569">轮廓灯/背景灯</text>
+<rect x="12" y="64" width="696" height="406" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/><circle cx="360" cy="240" r="100" fill="none" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="2 5" stroke-linecap="round"/><line x1="360" y1="134" x2="360" y2="240" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5 4"/><line x1="254" y1="240" x2="466" y2="240" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5 4"/><line x1="360" y1="240" x2="360" y2="400" stroke="#64748b" stroke-width="1.6" stroke-dasharray="6 4"/><rect x="250" y="180" width="220" height="128" rx="6" fill="#fff" stroke="#94a3b8" stroke-width="1.3"/><text x="251.0" y="235.0" font-size="11" text-anchor="end" fill="#475569">90°</text><text x="469.0" y="235.0" font-size="11" text-anchor="start" fill="#475569">90°</text><text x="367.0" y="131.0" font-size="11" text-anchor="start" fill="#475569">180°</text><text x="367.0" y="355.0" font-size="11" text-anchor="start" fill="#475569">0°</text>
+
+<polygon points="212.0,275.0 370.0,302.9 370.0,177.1 212.0,205.0" fill="url(#p70-1-bm1)"/><polygon points="508.0,205.0 350.0,177.1 350.0,302.9 508.0,275.0" fill="url(#p70-1-bm2)"/>
+<path d="M347.0,195.0 L329.0,200.0 L296.0,221.0 L308.0,237.0 L329.0,228.0 L329.0,285.0 L391.0,285.0 L391.0,228.0 L412.0,237.0 L424.0,221.0 L391.0,200.0 L373.0,195.0 Q360,212 347,195 Z" fill="#586274" stroke="#444" stroke-width="1.8" stroke-linejoin="round"/><path d="M347,195 L358,207 L344,211 Z" fill="#fff" stroke="#444" stroke-width="1.2" stroke-linejoin="round"/><path d="M373,195 L362,207 L376,211 Z" fill="#fff" stroke="#444" stroke-width="1.2" stroke-linejoin="round"/><line x1="360" y1="208" x2="360" y2="285" stroke="#cbd5e1" stroke-width="1" opacity=".6"/><circle cx="364" cy="222" r="1.7" fill="#fff" stroke="#444" stroke-width=".9"/><circle cx="364" cy="236" r="1.7" fill="#fff" stroke="#444" stroke-width=".9"/><circle cx="364" cy="250" r="1.7" fill="#fff" stroke="#444" stroke-width=".9"/><circle cx="364" cy="264" r="1.7" fill="#fff" stroke="#444" stroke-width=".9"/><path d="M338,254 Q346,266 338,278" fill="none" stroke="#cbd5e1" stroke-width="1" opacity=".5"/><path d="M380,246 Q373,258 380,270" fill="none" stroke="#cbd5e1" stroke-width="1" opacity=".5"/><path d="M304,228 Q314,226 320,220" fill="none" stroke="#cbd5e1" stroke-width="1" opacity=".5"/>
+<rect x="253.0" y="292.0" width="28.0" height="16" rx="3" fill="#fff" fill-opacity=".85"/><text x="256.0" y="303.0" font-size="11" text-anchor="start" fill="#475569">地面</text><rect x="280" y="190" width="160" height="100" rx="8" fill="#fef3c7" fill-opacity=".34" stroke="#f59e0b" stroke-width="2" stroke-dasharray="7 4"/><rect x="352" y="181" width="16" height="10" rx="2.5" fill="#64748b" stroke="#444" stroke-width="1.1"/><circle cx="299" cy="207" r="9" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.8"/><text x="299.0" y="211.2" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f2329">3</text><rect x="317.4" y="137.0" width="85.3" height="18" rx="3" fill="#fff" fill-opacity=".85"/><text x="360.0" y="150.0" font-size="13" font-weight="bold" text-anchor="middle" fill="#1f2329">顶灯 · 全功率</text><rect x="272.4" y="155.0" width="175.2" height="17" rx="3" fill="#fff" fill-opacity=".85"/><text x="360.0" y="167.0" font-size="12" text-anchor="middle" fill="#475569">柔光箱 · 衣服正上方，灯头朝下</text><rect x="323.0" y="290.0" width="114.0" height="17" rx="3" fill="#fff" fill-opacity=".85"/><text x="380.0" y="302.0" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f2329">黑色衣服（铺开拍）</text><rect x="500" y="70" width="200" height="134" rx="8" fill="#fff" stroke="#cbd5e1" stroke-width="1.2"/><text x="508.0" y="86.0" font-size="12" font-weight="bold" fill="#1f2329">侧视（示意）</text><polygon points="544.8,134.5 634.0,172.5 566.0,172.5 535.2,161.5" fill="#fbbf24" fill-opacity="0.26"/><polygon points="655.2,134.5 664.8,161.5 634.0,172.5 566.0,172.5" fill="#fbbf24" fill-opacity="0.26"/><polygon points="578.4,116.0 621.6,116.0 634.0,172.5 566.0,172.5" fill="#fbbf24" fill-opacity="0.26"/><rect x="566.0" y="173" width="68" height="5" rx="1.5" fill="#586274" stroke="#444" stroke-width="1.2"/><line x1="510" y1="178" x2="690" y2="178" stroke="#94a3b8" stroke-width="1.6"/><text x="600.0" y="192.0" font-size="11" text-anchor="middle" fill="#475569">平铺在地面的衣服</text><line x1="525.9" y1="146.0" x2="525.9" y2="178" stroke="#444" stroke-width="1.5"/><path d="M525.9,169 L517.9,178 M525.9,169 L533.9,178" fill="none" stroke="#444" stroke-width="1.3"/><g transform="translate(540.0 148.0) rotate(-70.3) scale(0.65)"><polygon points="-22.0,0 22.0,0 9.2,-34 -9.2,-34" fill="#fff" stroke="#444" stroke-width="1.6" stroke-linejoin="round"/><rect x="-8" y="-46" width="16" height="12" rx="3" fill="#64748b" stroke="#444" stroke-width="1.2"/><line x1="-22.0" y1="0" x2="22.0" y2="0" stroke="#2563eb" stroke-width="4.5" stroke-linecap="round"/></g><circle cx="527.1" cy="143.4" r="7.5" fill="#dbeafe" stroke="#2563eb" stroke-width="1.6"/><text x="527.1" y="147.4" font-size="11" font-weight="bold" text-anchor="middle" fill="#1f2329">1</text><line x1="674.1" y1="146.0" x2="674.1" y2="178" stroke="#444" stroke-width="1.5"/><path d="M674.1,169 L666.1,178 M674.1,169 L682.1,178" fill="none" stroke="#444" stroke-width="1.3"/><g transform="translate(660.0 148.0) rotate(70.3) scale(0.65)"><polygon points="-22.0,0 22.0,0 9.2,-34 -9.2,-34" fill="#fff" stroke="#444" stroke-width="1.6" stroke-linejoin="round"/><rect x="-8" y="-46" width="16" height="12" rx="3" fill="#64748b" stroke="#444" stroke-width="1.2"/><line x1="-22.0" y1="0" x2="22.0" y2="0" stroke="#2563eb" stroke-width="4.5" stroke-linecap="round"/></g><circle cx="672.9" cy="143.4" r="7.5" fill="#dbeafe" stroke="#2563eb" stroke-width="1.6"/><text x="672.9" y="147.4" font-size="11" font-weight="bold" text-anchor="middle" fill="#1f2329">2</text><g transform="translate(600.0 116.0) rotate(0.0) scale(0.72)"><polygon points="-30.0,0 30.0,0 12.6,-34 -12.6,-34" fill="#fff" stroke="#444" stroke-width="1.6" stroke-linejoin="round"/><rect x="-8" y="-46" width="16" height="12" rx="3" fill="#64748b" stroke="#444" stroke-width="1.2"/><line x1="-30.0" y1="0" x2="30.0" y2="0" stroke="#f59e0b" stroke-width="4.5" stroke-linecap="round"/></g><circle cx="600.0" cy="100.8" r="7.5" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.6"/><text x="600.0" y="104.8" font-size="11" font-weight="bold" text-anchor="middle" fill="#1f2329">3</text><text x="622.0" y="110.0" font-size="11" font-weight="bold" fill="#1f2329">顶灯 · 朝下</text>
+<line x1="220.0" y1="240.0" x2="297.8" y2="240.0" stroke="#444" stroke-width="1.4" stroke-dasharray="5 3" marker-end="url(#p70-1-arr)"/><line x1="500.0" y1="240.0" x2="422.2" y2="240.0" stroke="#444" stroke-width="1.4" stroke-dasharray="5 3" marker-end="url(#p70-1-arr)"/>
+<g transform="translate(212.0 240.0) rotate(-90.0)"><polygon points="-35.0,0 35.0,0 14.7,-34 -14.7,-34" fill="#fff" stroke="#444" stroke-width="1.6" stroke-linejoin="round"/><rect x="-8" y="-46" width="16" height="12" rx="3" fill="#64748b" stroke="#444" stroke-width="1.2"/><line x1="-35.0" y1="0" x2="35.0" y2="0" stroke="#2563eb" stroke-width="4.5" stroke-linecap="round"/></g><circle cx="193.3" cy="240.0" r="9" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/><text x="193.3" y="244.2" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f2329">1</text><g transform="translate(508.0 240.0) rotate(90.0)"><polygon points="-35.0,0 35.0,0 14.7,-34 -14.7,-34" fill="#fff" stroke="#444" stroke-width="1.6" stroke-linejoin="round"/><rect x="-8" y="-46" width="16" height="12" rx="3" fill="#64748b" stroke="#444" stroke-width="1.2"/><line x1="-35.0" y1="0" x2="35.0" y2="0" stroke="#2563eb" stroke-width="4.5" stroke-linecap="round"/></g><circle cx="526.7" cy="240.0" r="9" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/><text x="526.7" y="244.2" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f2329">2</text>
+<text x="154.0" y="230.0" font-size="13" font-weight="bold" text-anchor="end" fill="#1f2329">左灯 · 全功率</text><text x="154.0" y="247.0" font-size="12" text-anchor="end" fill="#475569">柔光箱（横置）</text><text x="154.0" y="264.0" font-size="12" text-anchor="end" fill="#475569">灯头略向下俯角</text><text x="154.0" y="281.0" font-size="12" text-anchor="end" fill="#475569">方位：左侧 90°</text><text x="566.0" y="230.0" font-size="13" font-weight="bold" text-anchor="start" fill="#1f2329">右灯 · 全功率</text><text x="566.0" y="247.0" font-size="12" text-anchor="start" fill="#475569">柔光箱（横置）</text><text x="566.0" y="264.0" font-size="12" text-anchor="start" fill="#475569">灯头略向下俯角</text><text x="566.0" y="281.0" font-size="12" text-anchor="start" fill="#475569">与左灯同角度、同功率</text>
+
+<rect x="347" y="404" width="26" height="16" rx="3" fill="#cbd5e1" stroke="#444" stroke-width="1.8"/><rect x="328" y="418" width="64" height="32" rx="6" fill="#fff" stroke="#444" stroke-width="2"/><circle cx="380" cy="428" r="3" fill="#444"/><text x="402.0" y="432.0" font-size="13" font-weight="bold" fill="#1f2329">相机（站高处俯拍）</text><text x="402.0" y="448.0" font-size="12" fill="#475569">标准镜头 · 镜头朝下</text>
+<rect x="12" y="480" width="696" height="284.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.2"/><circle cx="34" cy="498.0" r="9" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/><text x="34.0" y="502.2" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f2329">1</text><text x="50.0" y="502.5" font-size="13" font-weight="bold" fill="#1f2329">左灯</text><text x="112.0" y="502.5" font-size="12" fill="#1f2329">左侧的柔光箱，全功率：铺开拍时要横置，大面积才能均匀受光；灯头以略向下的俯角投射，</text><text x="112.0" y="520.5" font-size="12" fill="#1f2329">左右侧光的作用是强调产品的质感。</text><line x1="22" y1="530.0" x2="698" y2="530.0" stroke="#bfdbfe" stroke-width="1"/><circle cx="34" cy="546.0" r="9" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/><text x="34.0" y="550.2" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f2329">2</text><text x="50.0" y="550.5" font-size="13" font-weight="bold" fill="#1f2329">右灯</text><text x="112.0" y="550.5" font-size="12" fill="#1f2329">右侧的柔光箱，与左灯做完全相同的控制：同角度、同功率，两边光量相同，照明才较为均匀。</text><line x1="22" y1="560.0" x2="698" y2="560.0" stroke="#bfdbfe" stroke-width="1"/><circle cx="34" cy="576.0" r="9" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.8"/><text x="34.0" y="580.2" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f2329">3</text><text x="50.0" y="580.5" font-size="13" font-weight="bold" fill="#1f2329">顶灯</text><text x="112.0" y="580.5" font-size="12" fill="#1f2329">衣服正上方的灯，也开全功率、从上往下打：加强衣服水平面（上表面）上细节的表现。</text><line x1="22" y1="590.0" x2="698" y2="590.0" stroke="#bfdbfe" stroke-width="1"/><text x="24.0" y="610.5" font-size="12" font-weight="bold" fill="#1e3a8a">拍摄参数</text><text x="84.0" y="610.5" font-size="12" fill="#1f2329">ISO 100（相机最低）· 快门 1/125 s · 用测光表逐点测衣服各处，约 f/22；两边靠近边缘处的受光要与中心</text><text x="84.0" y="628.5" font-size="12" fill="#1f2329">大致相当，免得出现明显的高光和暗影；设 f/22 拍摄</text><text x="24.0" y="650.5" font-size="12" font-weight="bold" fill="#1e3a8a">功率</text><text x="84.0" y="650.5" font-size="12" fill="#1f2329">400 瓦的闪光灯尽量开到全功率，才能把光圈缩得很小：光圈很小还能略微降低锐度，缓解布料上的摩尔纹</text><text x="24.0" y="672.5" font-size="12" font-weight="bold" fill="#1e3a8a">要点</text><text x="84.0" y="672.5" font-size="12" fill="#1f2329">灯的高度可以再升高，取决于衣服铺开有多大；相机要架得很高、用标准镜头（广角从低处往下拍会变形），</text><text x="84.0" y="690.5" font-size="12" fill="#1f2329">摄影师常要爬梯子登高取景</text><text x="24.0" y="712.5" font-size="12" font-weight="bold" fill="#1e3a8a">图示</text><text x="84.0" y="712.5" font-size="12" fill="#1f2329">平面图把相机画在衣服下方，只表示取景朝向；实际是站高处从衣服正上方向下拍，见右上角侧视小图</text><text x="24.0" y="734.5" font-size="12" font-weight="bold" fill="#1e3a8a">说明</text><text x="84.0" y="734.5" font-size="12" fill="#1f2329">灯距、高度与俯角大小为示意：课程只说左右各一盏侧光、一盏顶灯，灯头略向下俯角、功率全开，</text><text x="84.0" y="752.5" font-size="12" fill="#1f2329">没有给具体的距离、高度和角度数值。</text>
+</svg><figcaption><strong>图 70-1</strong>　服饰拍摄三灯布光俯视图——服饰（铺开在地面）三灯布光：左右各一盏横置柔光箱作侧光，灯头略向下俯角、同角度同功率，用来强调产品质感；衣服正上方再加一盏顶灯从上往下打，加强水平面上的细节；三灯都开全功率（400 瓦闪光灯），测得各处约 f/22；相机架高、用标准镜头从上往下拍（灯距与高度为示意）。</figcaption></figure>
+<figure id="fig-P70-2"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 724" role="img" aria-label="白色服装拍摄布光示意图：白色衣服铺开在地面，相机在最下方（实际站高处、从衣服正上方向下俯拍）；左侧一盏横置柔光箱全功率，右侧一盏横置柔光箱 3/4 功率，衣服左右出现从亮到略暗的亮度渐变；右上角侧视小图显示两灯同高、灯头略向下，右灯光束更淡">
+<title>白色服装拍摄布光示意图：白色衣服铺开在地面，相机在最下方（实际站高处、从衣服正上方向下俯拍）；左侧一盏横置柔光箱全功率，右侧一盏横置柔光箱 3/4 功率，衣服左右出现从亮到略暗的亮度渐变；右上角侧视小图显示两灯同高、灯头略向下，右灯光束更淡</title>
+<defs><marker id="p70-2-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker><linearGradient id="p70-2-gs" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#c3cedb"/></linearGradient><linearGradient id="p70-2-bm1" gradientUnits="userSpaceOnUse" x1="212.0" y1="240.0" x2="370.0" y2="240.0"><stop offset="0" stop-color="#fbbf24" stop-opacity=".66"/><stop offset="1" stop-color="#fbbf24" stop-opacity=".18"/></linearGradient><linearGradient id="p70-2-bm2" gradientUnits="userSpaceOnUse" x1="508.0" y1="240.0" x2="350.0" y2="240.0"><stop offset="0" stop-color="#fbbf24" stop-opacity=".66"/><stop offset="1" stop-color="#fbbf24" stop-opacity=".18"/></linearGradient></defs>
+<text x="360" y="27" font-size="18" font-weight="bold" text-anchor="middle" fill="#1e3a8a">白色服装拍摄布光示意图</text>
+<g transform="translate(54.0 50) rotate(-90) scale(.5)"><polygon points="-22.0,0 22.0,0 9.2,-34 -9.2,-34" fill="#fff" stroke="#444" stroke-width="1.6" stroke-linejoin="round"/><rect x="-8" y="-46" width="16" height="12" rx="3" fill="#64748b" stroke="#444" stroke-width="1.2"/><line x1="-22.0" y1="0" x2="22.0" y2="0" stroke="#444" stroke-width="4.5" stroke-linecap="round"/></g><text x="64.0" y="54.0" font-size="12" fill="#475569">柔光箱</text><polygon points="114.04000000000002,47 140.04000000000002,41 140.04000000000002,59 114.04000000000002,53" fill="#fbbf24" fill-opacity=".5"/><text x="146.0" y="54.0" font-size="12" fill="#475569">光线</text><line x1="184.04000000000002" y1="50" x2="206.04000000000002" y2="50" stroke="#64748b" stroke-width="1.6" stroke-dasharray="6 4"/><text x="212.0" y="54.0" font-size="12" fill="#475569">0° = 相机—被摄体连线</text><circle cx="357.16" cy="50" r="8" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="2 4" stroke-linecap="round"/><text x="371.2" y="54.0" font-size="12" fill="#475569">灯位示意</text><circle cx="439.16" cy="50" r="5.5" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/><text x="451.2" y="54.0" font-size="12" fill="#475569">主灯</text><circle cx="495.16" cy="50" r="5.5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.8"/><text x="507.2" y="54.0" font-size="12" fill="#475569">辅灯（补光）</text><circle cx="599.1600000000001" cy="50" r="5.5" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.8"/><text x="611.2" y="54.0" font-size="12" fill="#475569">轮廓灯/背景灯</text>
+<rect x="12" y="64" width="696" height="406" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/><circle cx="360" cy="240" r="100" fill="none" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="2 5" stroke-linecap="round"/><line x1="360" y1="134" x2="360" y2="240" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5 4"/><line x1="254" y1="240" x2="466" y2="240" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5 4"/><line x1="360" y1="240" x2="360" y2="400" stroke="#64748b" stroke-width="1.6" stroke-dasharray="6 4"/><rect x="250" y="180" width="220" height="128" rx="6" fill="#fff" stroke="#94a3b8" stroke-width="1.3"/><text x="251.0" y="235.0" font-size="11" text-anchor="end" fill="#475569">90°</text><text x="469.0" y="235.0" font-size="11" text-anchor="start" fill="#475569">90°</text><text x="367.0" y="131.0" font-size="11" text-anchor="start" fill="#475569">180°</text><text x="367.0" y="355.0" font-size="11" text-anchor="start" fill="#475569">0°</text>
+<rect x="250" y="180" width="220" height="128" rx="6" fill="#d5dce6" stroke="#94a3b8" stroke-width="1.3"/>
+<polygon points="212.0,275.0 370.0,302.9 370.0,177.1 212.0,205.0" fill="url(#p70-2-bm1)"/><g opacity="0.6"><polygon points="508.0,205.0 350.0,177.1 350.0,302.9 508.0,275.0" fill="url(#p70-2-bm2)"/></g>
+<path d="M347.0,195.0 L329.0,200.0 L296.0,221.0 L308.0,237.0 L329.0,228.0 L329.0,285.0 L391.0,285.0 L391.0,228.0 L412.0,237.0 L424.0,221.0 L391.0,200.0 L373.0,195.0 Q360,212 347,195 Z" fill="url(#p70-2-gs)" stroke="#444" stroke-width="1.8" stroke-linejoin="round"/><path d="M347,195 L358,207 L344,211 Z" fill="#fff" stroke="#444" stroke-width="1.2" stroke-linejoin="round"/><path d="M373,195 L362,207 L376,211 Z" fill="#fff" stroke="#444" stroke-width="1.2" stroke-linejoin="round"/><line x1="360" y1="208" x2="360" y2="285" stroke="#444" stroke-width="1" opacity=".6"/><circle cx="364" cy="222" r="1.7" fill="#fff" stroke="#444" stroke-width=".9"/><circle cx="364" cy="236" r="1.7" fill="#fff" stroke="#444" stroke-width=".9"/><circle cx="364" cy="250" r="1.7" fill="#fff" stroke="#444" stroke-width=".9"/><circle cx="364" cy="264" r="1.7" fill="#fff" stroke="#444" stroke-width=".9"/><path d="M338,254 Q346,266 338,278" fill="none" stroke="#444" stroke-width="1" opacity=".5"/><path d="M380,246 Q373,258 380,270" fill="none" stroke="#444" stroke-width="1" opacity=".5"/><path d="M304,228 Q314,226 320,220" fill="none" stroke="#444" stroke-width="1" opacity=".5"/>
+<rect x="253.0" y="186.0" width="72.0" height="16" rx="3" fill="#fff" fill-opacity=".85"/><text x="256.0" y="197.0" font-size="11" text-anchor="start" fill="#475569">地面（示意）</text><rect x="281.4" y="290.0" width="157.2" height="17" rx="3" fill="#fff" fill-opacity=".85"/><text x="360.0" y="302.0" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f2329">左亮 → 右略暗（亮度渐变）</text><rect x="500" y="70" width="200" height="134" rx="8" fill="#fff" stroke="#cbd5e1" stroke-width="1.2"/><text x="508.0" y="86.0" font-size="12" font-weight="bold" fill="#1f2329">侧视（示意）</text><text x="508.0" y="101.0" font-size="11" fill="#475569">灯头略向下俯角</text><polygon points="544.8,134.5 634.0,172.5 566.0,172.5 535.2,161.5" fill="#fbbf24" fill-opacity="0.34"/><polygon points="655.2,134.5 664.8,161.5 634.0,172.5 566.0,172.5" fill="#fbbf24" fill-opacity="0.17"/><rect x="566.0" y="173" width="68" height="5" rx="1.5" fill="url(#p70-2-gs)" stroke="#444" stroke-width="1.2"/><line x1="510" y1="178" x2="690" y2="178" stroke="#94a3b8" stroke-width="1.6"/><text x="600.0" y="192.0" font-size="11" text-anchor="middle" fill="#475569">白色衣服：左亮右略暗</text><line x1="525.9" y1="146.0" x2="525.9" y2="178" stroke="#444" stroke-width="1.5"/><path d="M525.9,169 L517.9,178 M525.9,169 L533.9,178" fill="none" stroke="#444" stroke-width="1.3"/><g transform="translate(540.0 148.0) rotate(-70.3) scale(0.65)"><polygon points="-22.0,0 22.0,0 9.2,-34 -9.2,-34" fill="#fff" stroke="#444" stroke-width="1.6" stroke-linejoin="round"/><rect x="-8" y="-46" width="16" height="12" rx="3" fill="#64748b" stroke="#444" stroke-width="1.2"/><line x1="-22.0" y1="0" x2="22.0" y2="0" stroke="#2563eb" stroke-width="4.5" stroke-linecap="round"/></g><circle cx="527.1" cy="143.4" r="7.5" fill="#dbeafe" stroke="#2563eb" stroke-width="1.6"/><text x="527.1" y="147.4" font-size="11" font-weight="bold" text-anchor="middle" fill="#1f2329">1</text><line x1="674.1" y1="146.0" x2="674.1" y2="178" stroke="#444" stroke-width="1.5"/><path d="M674.1,169 L666.1,178 M674.1,169 L682.1,178" fill="none" stroke="#444" stroke-width="1.3"/><g transform="translate(660.0 148.0) rotate(70.3) scale(0.65)"><polygon points="-22.0,0 22.0,0 9.2,-34 -9.2,-34" fill="#fff" stroke="#444" stroke-width="1.6" stroke-linejoin="round"/><rect x="-8" y="-46" width="16" height="12" rx="3" fill="#64748b" stroke="#444" stroke-width="1.2"/><line x1="-22.0" y1="0" x2="22.0" y2="0" stroke="#16a34a" stroke-width="4.5" stroke-linecap="round"/></g><circle cx="672.9" cy="143.4" r="7.5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.6"/><text x="672.9" y="147.4" font-size="11" font-weight="bold" text-anchor="middle" fill="#1f2329">2</text><rect x="517.5" y="109.0" width="45.0" height="18" rx="9.0" fill="#dbeafe" stroke="#2563eb" stroke-width="1.4"/><text x="540.0" y="122.0" font-size="11" font-weight="bold" text-anchor="middle" fill="#1f2329">全功率</text><rect x="632.8" y="109.0" width="54.5" height="18" rx="9.0" fill="#dcfce7" stroke="#16a34a" stroke-width="1.4"/><text x="660.0" y="122.0" font-size="11" font-weight="bold" text-anchor="middle" fill="#1f2329">3/4 功率</text>
+<line x1="220.0" y1="240.0" x2="297.8" y2="240.0" stroke="#444" stroke-width="1.4" stroke-dasharray="5 3" marker-end="url(#p70-2-arr)"/><line x1="500.0" y1="240.0" x2="422.2" y2="240.0" stroke="#444" stroke-width="1.4" stroke-dasharray="5 3" marker-end="url(#p70-2-arr)"/>
+<g transform="translate(212.0 240.0) rotate(-90.0)"><polygon points="-35.0,0 35.0,0 14.7,-34 -14.7,-34" fill="#fff" stroke="#444" stroke-width="1.6" stroke-linejoin="round"/><rect x="-8" y="-46" width="16" height="12" rx="3" fill="#64748b" stroke="#444" stroke-width="1.2"/><line x1="-35.0" y1="0" x2="35.0" y2="0" stroke="#2563eb" stroke-width="4.5" stroke-linecap="round"/></g><circle cx="193.3" cy="240.0" r="9" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/><text x="193.3" y="244.2" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f2329">1</text><g transform="translate(508.0 240.0) rotate(90.0)"><polygon points="-35.0,0 35.0,0 14.7,-34 -14.7,-34" fill="#fff" stroke="#444" stroke-width="1.6" stroke-linejoin="round"/><rect x="-8" y="-46" width="16" height="12" rx="3" fill="#64748b" stroke="#444" stroke-width="1.2"/><line x1="-35.0" y1="0" x2="35.0" y2="0" stroke="#16a34a" stroke-width="4.5" stroke-linecap="round"/></g><circle cx="526.7" cy="240.0" r="9" fill="#dcfce7" stroke="#16a34a" stroke-width="1.8"/><text x="526.7" y="244.2" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f2329">2</text>
+<text x="154.0" y="230.0" font-size="13" font-weight="bold" text-anchor="end" fill="#1f2329">左灯 · 全功率</text><text x="154.0" y="247.0" font-size="12" text-anchor="end" fill="#475569">柔光箱（横置）</text><text x="154.0" y="264.0" font-size="12" text-anchor="end" fill="#475569">灯头略向下俯角</text><text x="154.0" y="281.0" font-size="12" text-anchor="end" fill="#475569">这一侧衣服更亮</text><text x="566.0" y="230.0" font-size="13" font-weight="bold" text-anchor="start" fill="#1f2329">右灯 · 3/4 功率</text><text x="566.0" y="247.0" font-size="12" text-anchor="start" fill="#475569">柔光箱（横置）</text><text x="566.0" y="264.0" font-size="12" text-anchor="start" fill="#475569">灯头略向下俯角</text><text x="566.0" y="281.0" font-size="12" text-anchor="start" fill="#475569">这一侧衣服略暗</text>
+
+<rect x="347" y="404" width="26" height="16" rx="3" fill="#cbd5e1" stroke="#444" stroke-width="1.8"/><rect x="328" y="418" width="64" height="32" rx="6" fill="#fff" stroke="#444" stroke-width="2"/><circle cx="380" cy="428" r="3" fill="#444"/><text x="402.0" y="432.0" font-size="13" font-weight="bold" fill="#1f2329">相机（站高处俯拍）</text><text x="402.0" y="448.0" font-size="12" fill="#475569">标准镜头 · 镜头朝下</text>
+<rect x="12" y="480" width="696" height="232.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.2"/><circle cx="34" cy="498.0" r="9" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/><text x="34.0" y="502.2" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f2329">1</text><text x="50.0" y="502.5" font-size="13" font-weight="bold" fill="#1f2329">左灯</text><text x="112.0" y="502.5" font-size="12" fill="#1f2329">一只侧灯继续保持全功率（哪一侧全功率，课程没限定，图中画在左）。</text><line x1="22" y1="512.0" x2="698" y2="512.0" stroke="#bfdbfe" stroke-width="1"/><circle cx="34" cy="528.0" r="9" fill="#dcfce7" stroke="#16a34a" stroke-width="1.8"/><text x="34.0" y="532.2" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f2329">2</text><text x="50.0" y="532.5" font-size="13" font-weight="bold" fill="#1f2329">右灯</text><text x="112.0" y="532.5" font-size="12" fill="#1f2329">另一只侧灯调到 3/4 的输出功率：两侧光量有一定比例，衣服左右便出现亮度渐变，</text><text x="112.0" y="550.5" font-size="12" fill="#1f2329">白色衣服的层次和质感才表现得更好。</text><line x1="22" y1="560.0" x2="698" y2="560.0" stroke="#bfdbfe" stroke-width="1"/><text x="24.0" y="580.5" font-size="12" font-weight="bold" fill="#1e3a8a">曝光</text><text x="84.0" y="580.5" font-size="12" fill="#1f2329">照常用测光表得到光圈（如 f/22），白色衣服再把光圈收小半级：</text><text x="84.0" y="598.5" font-size="12" fill="#1f2329">让白衣服略微欠曝，细节表现更多，画面有一定反差</text><text x="24.0" y="620.5" font-size="12" font-weight="bold" fill="#1e3a8a">要点</text><text x="84.0" y="620.5" font-size="12" fill="#1f2329">其余布置和上一张相同：柔光箱横置、略向下的俯角；顶灯照旧从上往下打，课程没再提它的功率，图中没画。</text><text x="84.0" y="638.5" font-size="12" fill="#1f2329">箱包、鞋帽等其他布艺产品的拍法，与普通衣物大致雷同</text><text x="24.0" y="660.5" font-size="12" font-weight="bold" fill="#1e3a8a">图示</text><text x="84.0" y="660.5" font-size="12" fill="#1f2329">渐变是示意：衣服左亮右略暗；平面图和侧视小图里，右灯的光束都画得更淡，表示功率略低</text><text x="24.0" y="682.5" font-size="12" font-weight="bold" fill="#1e3a8a">说明</text><text x="84.0" y="682.5" font-size="12" fill="#1f2329">灯距、高度与俯角大小为示意：课程只给了「一只全功率、一只 3/4 功率」的比例，</text><text x="84.0" y="700.5" font-size="12" fill="#1f2329">没有给具体的距离、高度和角度数值。</text>
+</svg><figcaption><strong>图 70-2</strong>　白色服装拍摄布光示意图——白色服装拍摄：布光同黑色衣服，但让两只侧灯的功率成一定比例——一只全功率、另一只 3/4 功率，衣服左右出现亮度渐变，层次和质感更好；测得光圈（如 f/22）再收小半级，让白衣服略微欠曝、细节更多（灯距与高度为示意）。</figcaption></figure>
+
+<div class="box a7c2"><h3>📷 换成 A7C II 怎么做</h3><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>课程里的概念/操作</th>
+<th>A7C II 上的名称</th>
+<th>怎么操作</th>
+<th>说明（出处）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M 手动曝光</td>
+<td>M（手动曝光）</td>
+<td>模式旋钮转 M；前转盘=光圈，后转盘L=快门</td>
+<td>看 M.M. 指示；ISO 可设 ISO AUTO（0302C_manual_exposure.html）</td>
+</tr>
+<tr>
+<td>影棚闪光灯 / 引闪器</td>
+<td>—</td>
+<td>见 7.10 清单：实时取景显示设置效果关、机械快门、静音模式关、快门不超过同步速度、固定 ISO</td>
+<td>（0414_live_view_disp_set.html；0414H_shutter_type.html）</td>
+</tr>
+<tr>
+<td>ISO 感光度（课程称“相对感光度”）</td>
+<td>ISO</td>
+<td>按控制拨轮右（ISO）选值；或 MENU →（曝光/颜色）→［曝光］→［ISO］</td>
+<td>出厂 ISO AUTO；照片 100～51200，扩展 50～204800（0408C_iso.html；231h_specifications_ilc2360.html）</td>
+</tr>
+<tr>
+<td>自定义白平衡（佳能）／预设手动 PRE（尼康）</td>
+<td>自定义 1～3</td>
+<td>白平衡模式选［自定义 N］→ 按右 → 选设置图标 → 白色填满捕捉框按中央 → 再按中央注册</td>
+<td>用闪光捕获的要配闪光使用（0410B_custom_white_balance.html）</td>
+</tr>
+<tr>
+<td>单次自动对焦 ONE SHOT／AF-S</td>
+<td>单次AF（AF-S）</td>
+<td>MENU →（对焦）→［AF/MF］→［对焦模式］→［单次AF］</td>
+<td>合焦锁定（0405C_focus_mode.html）</td>
+</tr>
+<tr>
+<td>RAW+JPEG</td>
+<td>RAW&amp;JPEG</td>
+<td>MENU →（拍摄）→［影像质量/记录］→［〈静〉文件格式］→［RAW&amp;JPEG］</td>
+<td>［JPEG/HEIF切换］为 HEIF 时变成 RAW&amp;HEIF；RAW 压缩方式在［RAW文件类型］（0404M_file_format.html；201h_jpeg_heif_switch.html）</td>
+</tr>
+</tbody>
+</table></div>
+<p>（表中名称与路径摘自《A7C II 操作手册》，均与索尼官方帮助指南逐条核对；本集未列出的操作见手册。）</p>
+</div>
+<div class="box errata"><h3>🕰️ 时代差异与勘误</h3><ul>
+<li>影棚同步：部分课程机型有 PC 同步口接影棚闪光灯 → A7C II 部件表里没有 PC 同步口，影棚灯用热靴上的引闪器触发，并把［实时取景显示］设为「设置效果关」以免取景画面发暗。</li>
+<li>取景：课程里的单反用光学取景器（反光镜＋五棱镜/五面镜）→ A7C II 是电子取景器（1.0 cm，约 236 万点），取景画面就是传感器的实时画面；［实时取景显示］为「设置效果开」时可直接预览曝光和白平衡效果。</li>
+<li>反光镜：单反按快门时反光镜抬起、回落会带来震动，要用反光镜预升等办法 → A7C II 没有反光镜；三脚架上防抖动可用 2 秒自拍、Bluetooth 遥控器或手机遥控，并关闭 SteadyShot。</li>
+<li>内置闪光灯：课程里的入门/中端单反大多有内置闪光灯 → A7C II 没有内置闪光灯，闪光一律在多接口热靴上外接闪光灯（另售）。</li>
+<li>防抖：课程年代防抖做在镜头里（佳能 IS、尼康 VR）→ A7C II 机身内置影像传感器位移防抖（SteadyShot），镜头带防抖开关时以镜头开关为准；上三脚架建议关闭。</li>
+<li>闪光同步：课程里的机型同步速度多在 1/180～1/250 秒 → A7C II 为 1/160 秒（全画幅，使用 Sony 闪光灯时）；电子快门或静音模式下不能闪光。</li>
+</ul>
+</div>
+<div class="box terms"><h3>🔖 本集术语</h3><ul>
+<li><strong>柔光灯</strong>：闪光灯上加装的柔光箱，提供柔和的光线</li>
+<li><strong>自定义白平衡</strong>：使用白平衡板或灰板作为标准，让相机获取准确的色彩还原</li>
+<li><strong>单次对焦</strong>：相机对焦模式之一，一次对焦精准并锁定对焦</li>
+<li><strong>摩尔纹</strong>：服装表面布料上可能出现的恼人现象，通过缩小光圈可略微缓解</li>
+<li><strong>测光表</strong>：外置设备，用于精确测量影棚中闪光亮度，控制曝光</li>
+</ul>
+</div>
+<p class="ep-nav"><a href="#top">↑ 回到本页顶部</a></p></section>
+  </article></main>
+</div>
+<footer class="site">
+  <p>江楠的学习日志 · 吴师自通摄影教程（索尼 A7C II 对照学习笔记）</p>
+  <p>课程视频：<a href="https://www.bilibili.com/video/BV1Vt411E7nT/" target="_blank" rel="noopener">bilibili.com/video/BV1Vt411E7nT</a>（吴玮老师主讲，UP 主搬运）· A7C II 资料：<a href="https://helpguide.sony.net/ilc/2360/v1/zh-cn/index.html" target="_blank" rel="noopener">索尼官方帮助指南</a></p>
+  <p>所有插图均为本页自绘 SVG，不含视频截图或第三方图片；笔记仅供个人学习。</p>
+</footer>
+<a class="backtop" href="#top" aria-label="回到顶部">↑</a>
+</body>
+</html>

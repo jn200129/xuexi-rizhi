@@ -1,0 +1,3392 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="江楠">
+<meta name="description" content="按吴师自通摄影教程知识顺序整理的索尼 A7C II（ILCE-7CM2）操作手册：按键、菜单路径、曝光/对焦/白平衡/闪光/影棚设置。">
+<meta name="keywords" content="索尼A7C II,A7C2,ILCE-7CM2,操作手册,菜单,按键,曝光,对焦,白平衡,闪光灯">
+<title>A7C II 操作手册 · 吴师自通摄影教程 — 江楠的学习日志</title>
+<style>
+:root{--accent:#2563eb;--accent-dark:#1d4ed8;--bg:#f7f8fa;--card:#fff;--border:#e2e5ea;--text:#1f2329;--muted:#64748b;
+  --sony:#c2410c;--sony-bg:#fff7ed;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:-apple-system,"Segoe UI","Microsoft YaHei","PingFang SC",sans-serif;line-height:1.75;color:var(--text);background:var(--bg);}
+.skip-link{position:absolute;left:-999px;top:0;background:#fff;color:var(--accent);padding:.5rem 1rem;z-index:100;}
+.skip-link:focus{left:0;}
+header.site{background:linear-gradient(135deg,#3b82f6 0%,var(--accent) 45%,var(--accent-dark) 100%);color:#fff;padding:2.6rem 1.5rem 2rem;text-align:center;box-shadow:0 6px 24px rgba(37,99,235,.18);}
+header.site h1{margin:0 0 .4rem;font-size:2rem;line-height:1.35;}
+header.site p{margin:.2rem 0;opacity:.93;}
+.meta-list{list-style:none;padding:0;margin:.8rem 0 0;display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;}
+.meta-list li{background:rgba(255,255,255,.18);padding:.22rem .7rem;border-radius:999px;font-size:.85rem;}
+nav.modnav{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:20;}
+nav.modnav ul{list-style:none;margin:0 auto;padding:.45rem 1rem;max-width:1180px;display:flex;flex-wrap:wrap;gap:.35rem;justify-content:center;}
+nav.modnav a{display:block;text-decoration:none;color:var(--text);font-size:.86rem;padding:.25rem .65rem;border-radius:999px;border:1px solid var(--border);}
+nav.modnav a:hover{border-color:var(--accent);color:var(--accent-dark);}
+nav.modnav a[aria-current=page]{background:var(--accent);color:#fff;border-color:var(--accent);}
+.layout{max-width:1180px;margin:0 auto;padding:1.6rem 1.5rem;display:grid;grid-template-columns:250px 1fr;gap:1.9rem;align-items:start;}
+.sidebar{position:sticky;top:3.6rem;max-height:calc(100vh - 4.6rem);overflow-y:auto;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1rem .9rem;box-shadow:0 4px 18px rgba(15,23,42,.06);}
+.sidebar .home-link{display:flex;align-items:center;gap:.45rem;font-weight:600;color:#fff;text-decoration:none;padding:.55rem .8rem;border-radius:11px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));box-shadow:0 4px 12px rgba(37,99,235,.28);margin-bottom:.9rem;}
+.sidebar .toc-title{font-size:.74rem;letter-spacing:.1em;color:var(--muted);margin:.2rem .35rem .5rem;font-weight:700;}
+.sidebar nav ul{list-style:none;margin:0;padding:0;}
+.sidebar nav li{margin:.08rem 0;}
+.sidebar a.toc-link{display:block;color:var(--text);text-decoration:none;font-size:.88rem;line-height:1.45;padding:.38rem .6rem;border-radius:9px;border-left:3px solid transparent;}
+.sidebar a.toc-link:hover{background:#eef4ff;color:var(--accent-dark);border-left-color:var(--accent);}
+.sidebar a.toc-link b{color:var(--accent-dark);font-weight:700;margin-right:.3rem;}
+main{min-width:0;}
+article>section{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem 1.8rem;margin-bottom:1.6rem;scroll-margin-top:64px;}
+h2{color:var(--accent-dark);border-bottom:2px solid var(--border);padding-bottom:.45rem;margin-top:.2rem;line-height:1.45;}
+h2 .ep-no{display:inline-block;background:var(--accent);color:#fff;border-radius:8px;font-size:.8em;padding:0 .45rem;margin-right:.35rem;vertical-align:.08em;}
+h3{margin-top:1.6rem;color:var(--text);}
+h4{margin-top:1rem;color:var(--muted);}
+p{margin:.7rem 0;}
+.ep-meta{color:var(--muted);font-size:.88rem;margin-top:-.3rem;}
+.ep-meta a{color:var(--accent);}
+blockquote.oneliner,blockquote{margin:1rem 0;padding:.75rem 1rem;background:#eef4ff;border-left:4px solid var(--accent);border-radius:8px;}
+blockquote p{margin:.2rem 0;}
+nav.outline{background:#f8fafc;border:1px dashed #cbd5e1;border-radius:10px;padding:.6rem 1rem .6rem .8rem;margin:1rem 0;}
+nav.outline .outline-t{margin:.1rem 0 .3rem;font-weight:700;color:var(--accent-dark);}
+nav.outline ol{margin:.2rem 0;}
+a.ts{font-family:Consolas,"SFMono-Regular",monospace;font-size:.82em;color:var(--accent-dark);background:#e8efff;border-radius:5px;padding:0 .3rem;text-decoration:none;white-space:nowrap;}
+a.ts:hover{background:var(--accent);color:#fff;}
+.box{border-radius:12px;padding:.4rem 1.1rem .8rem;margin:1.3rem 0;}
+.box h3{margin-top:.7rem;}
+.box.a7c2{background:var(--sony-bg);border:1px solid #fed7aa;border-left:5px solid var(--sony);}
+.box.a7c2 h3{color:var(--sony);}
+.box.errata{background:#f8fafc;border:1px solid var(--border);border-left:5px solid #64748b;}
+.box.terms{background:#f0fdf4;border:1px solid #bbf7d0;border-left:5px solid #16a34a;}
+.box.terms h3{color:#15803d;}
+.table-wrap{overflow-x:auto;margin:1rem 0;-webkit-overflow-scrolling:touch;}
+table{border-collapse:collapse;width:100%;font-size:.92rem;}
+.table-wrap table{margin:0;}
+th,td{border:1px solid var(--border);padding:.5rem .65rem;text-align:left;vertical-align:top;}
+thead{background:#eef2ff;}
+.box.a7c2 thead{background:#ffedd5;}
+tbody tr:nth-child(even){background:#fafbfc;}
+.box.a7c2 tbody tr:nth-child(even){background:#fffaf3;}
+figure{margin:1.4rem 0;text-align:center;}
+figure svg{max-width:100%;height:auto;display:block;margin:0 auto;}
+figcaption{color:var(--muted);font-size:.88rem;margin-top:.5rem;line-height:1.6;}
+.fig-todo{border:1px dashed #cbd5e1;border-radius:10px;padding:1.2rem;color:var(--muted);}
+code{background:#eef0f3;padding:.1rem .35rem;border-radius:4px;font-size:.9em;}
+details{border:1px solid var(--border);border-radius:8px;padding:.5rem .9rem;margin:.5rem 0;background:#fcfcfd;}
+summary{cursor:pointer;font-weight:600;}
+details[open] summary{margin-bottom:.3rem;}
+details summary .ep-no-s{display:inline-block;min-width:2.6em;color:var(--accent-dark);font-family:Consolas,monospace;}
+details summary a{color:var(--text);text-decoration:none;}
+details summary a:hover{color:var(--accent-dark);text-decoration:underline;}
+.ep-nav{text-align:right;font-size:.85rem;margin-bottom:0;}
+.ep-nav a{color:var(--muted);text-decoration:none;}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.9rem;margin:1rem 0;}
+.cards a.card{display:block;text-decoration:none;color:var(--text);border:1px solid var(--border);border-radius:12px;padding:.8rem 1rem;background:#fff;transition:all .15s;}
+.cards a.card:hover{border-color:var(--accent);box-shadow:0 4px 14px rgba(37,99,235,.15);transform:translateY(-1px);}
+.cards a.card b{display:block;color:var(--accent-dark);font-size:1.02rem;}
+.cards a.card span{display:block;color:var(--muted);font-size:.85rem;line-height:1.55;margin-top:.2rem;}
+.cards a.card.sony b{color:var(--sony);}
+.todo{color:var(--muted);}
+a.src{font-size:.75em;color:#94a3b8;text-decoration:none;border-bottom:1px dotted #cbd5e1;white-space:nowrap;}
+a.src:hover{color:var(--accent);}
+mark{background:#fde68a;}
+ul,ol{padding-left:1.4rem;}
+footer.site{text-align:center;color:var(--muted);padding:2rem 1rem;font-size:.9rem;}
+footer.site a{color:var(--accent);}
+.backtop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;text-decoration:none;width:42px;height:42px;line-height:42px;text-align:center;border-radius:50%;box-shadow:0 4px 12px rgba(37,99,235,.4);font-size:1.1rem;}
+@media(max-width:860px){
+  .layout{grid-template-columns:1fr;gap:1rem;padding:1rem;}
+  .sidebar{position:static;max-height:none;}
+  .sidebar nav ul{display:flex;flex-wrap:wrap;gap:.35rem;}
+  .sidebar a.toc-link{border-left:none;border:1px solid var(--border);font-size:.82rem;padding:.3rem .6rem;}
+  nav.modnav{position:static;}
+}
+@media(max-width:600px){header.site h1{font-size:1.6rem;}article>section{padding:1.1rem .95rem;}th,td{padding:.4rem .5rem;}}
+@media print{nav.modnav,.sidebar,.backtop{display:none;}.layout{display:block;}article>section{break-inside:auto;}}
+</style>
+</head>
+<body id="top">
+<a class="skip-link" href="#main">跳到主要内容</a>
+<header class="site">
+  <h1>索尼 A7C II 操作手册</h1>
+  <p>按吴师自通摄影教程的知识顺序，把课程里的每个相机操作对照到 A7C II</p>
+  <ul class="meta-list"><li>#吴师自通摄影教程</li><li>#索尼A7C II</li><li>#ILCE-7CM2</li><li>#按键与菜单</li></ul>
+</header>
+<nav class="modnav" aria-label="课程篇章"><ul><li><a href="index.html">总览与大纲</a></li><li><a href="基础篇.html">基础篇</a></li><li><a href="构图篇.html">构图篇</a></li><li><a href="器材维护篇.html">器材维护篇</a></li><li><a href="影棚静物篇.html">影棚静物篇</a></li><li><a href="机型速成篇.html">机型速成篇</a></li><li><a href="用光与影棚篇.html">用光与影棚篇</a></li><li><a href="广告拍摄案例.html">广告拍摄案例</a></li><li><a href="口袋摄影课.html">口袋摄影课</a></li><li><a href="A7C2操作手册.html" aria-current="page">A7C II 操作手册</a></li><li><a href="知识总结.html">知识总结</a></li></ul></nav>
+<div class="layout">
+  <aside class="sidebar">
+    <a class="home-link" href="../index.html">&larr; 返回学习日志首页</a>
+    <p class="toc-title">本页目录</p>
+    <nav aria-label="本页目录"><ul><li><a class="toc-link" href="#s1">0 使用前必读</a></li><li><a class="toc-link" href="#s2">1 机身部件与按键</a></li><li><a class="toc-link" href="#s3">2 菜单体系</a></li><li><a class="toc-link" href="#s4">3 照相模式与曝光</a></li><li><a class="toc-link" href="#s5">4 白平衡与色彩/画质</a></li><li><a class="toc-link" href="#s6">5 对焦</a></li><li><a class="toc-link" href="#s7">6 驱动、防抖、长曝光</a></li><li><a class="toc-link" href="#s8">7 闪光灯</a></li><li><a class="toc-link" href="#s9">8 显示与回放</a></li><li><a class="toc-link" href="#s10">9 维护、存储卡、电池</a></li><li><a class="toc-link" href="#s11">10 主要规格</a></li><li><a class="toc-link" href="#s12">11 课程概念 → A7C II 速查对照表</a></li><li><a class="toc-link" href="#s13">附 B 未能从帮助指南确认的事项</a></li></ul></nav>
+  </aside>
+  <main id="main" tabindex="-1"><article>
+<section id="lead"><blockquote>
+<p>这一页按「吴师自通摄影教程」用到的相机功能，把索尼 A7C II（ILCE-7CM2）的按键、转盘和菜单路径整理成手册。所有菜单名称与路径都照抄<strong>索尼官方中文帮助指南</strong>原文，并逐条核对过（每条末尾的灰色链接可直接打开对应的官方页面）；帮助指南里查不到的内容标为「帮助指南未载明」或「推论」，汇总在文末「附 B」。</p>
+</blockquote>
+<p><strong>怎么用</strong>：先看第 1 章认识按键；拍照时遇到课程里的佳能/尼康操作，到第 11 章「课程概念 → A7C II 速查对照表」查对应做法；影棚闪光拍摄前过一遍 7.10 的清单。</p>
+<blockquote>
+<p><strong>用途</strong>：《吴师自通摄影教程》（吴玮，B 站 86 集，2010 年前后录制，基于佳能/尼康数码单反讲解）笔记的通用参考——把课程里的相机操作翻译成 A7C II 上的做法。</p>
+<p><strong>依据</strong>：索尼官方简体中文在线帮助指南（ILCE-7CM2，385 页）全文 <code>A7C2_帮助指南全文.md</code>。每条事实后括号里是出处页文件名，在线地址 = <code>https://helpguide.sony.net/ilc/2360/v1/zh-cn/contents/</code> + 文件名。</p>
+<p><strong>标注约定</strong>：帮助指南里查不到的写「帮助指南未载明」；根据原文作的推论标「（推论）」，操作建议标「（建议）」，二者都不是官方原文。帮助指南中注明“当相机的系统软件（固件）版本为2.00或更高版本时”才有的功能，本手册标「（固件2.00+）」。</p>
+</blockquote>
+<hr />
+</section>
+<section id="s1"><h2>0 使用前必读</h2><h3>0.1 帮助指南用语 ↔ 课程（佳能/尼康）用语</h3>
+<p>索尼中文菜单的用词与佳能/尼康中文差别很大，下表是全手册的“翻译键”。左列是相机菜单上的原文（本手册菜单名一律照此写），右列是课程/大陆通行说法。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>帮助指南（相机菜单）用语</th>
+<th>课程 / 大陆通行说法</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>照相模式</td>
+<td>曝光模式（P/A/S/M、全自动、场景）</td>
+<td>菜单分组［照相模式］、模式旋钮（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td><strong>拍摄模式</strong></td>
+<td><strong>驱动模式</strong>（佳能）／释放模式（尼康）：单拍、连拍、自拍、包围</td>
+<td><strong>最易混淆</strong>：索尼的“拍摄模式”不是 P/A/S/M（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>阶段曝光</td>
+<td>包围曝光（AEB）</td>
+<td>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>静止影像 ／ 动态影像</td>
+<td>照片 ／ 视频</td>
+<td></td>
+</tr>
+<tr>
+<td>显示屏 ／ 取景器</td>
+<td>机背液晶屏 ／ 电子取景器（EVF）</td>
+<td></td>
+</tr>
+<tr>
+<td>柱状图</td>
+<td>直方图</td>
+<td>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>数字水平量规</td>
+<td>电子水平仪</td>
+<td>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>多重／中心／点测光／整个屏幕平均／强光</td>
+<td>评价（矩阵）测光／中央重点平均测光／点测光／全画面平均测光／高光（亮部）重点测光</td>
+<td>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>单次AF／自动AF／连续AF／DMF／手动对焦</td>
+<td>AF-S（ONE SHOT）／AF-A（AI FOCUS）／AF-C（AI SERVO）／自动对焦后手动微调／MF</td>
+<td>屏幕图标就是 AF-S/AF-A/AF-C/DMF/MF（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>对焦区域</td>
+<td>自动对焦区域模式 + 对焦点选择</td>
+<td>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>AF中的被摄体识别</td>
+<td>眼部/主体识别自动对焦</td>
+<td>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>动态范围优化（DRO）</td>
+<td>自动亮度优化（佳能 ALO）／动态 D-Lighting（尼康）</td>
+<td>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>创意外观</td>
+<td>照片风格（佳能 Picture Style）／优化校准（尼康 Picture Control）</td>
+<td>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>低速同步 ／ 后帘同步闪光</td>
+<td>慢速同步 ／ 后帘同步</td>
+<td>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>闪光补偿</td>
+<td>闪光曝光补偿</td>
+<td>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>FEL锁定</td>
+<td>FE 锁（佳能）／FV 锁（尼康）</td>
+<td>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>自定键/转盘设置</td>
+<td>按键自定义</td>
+<td>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>拍摄设置存储 ／ 调出拍摄设置（菜单上带“MR”图标）</td>
+<td>用户自定义拍摄模式（佳能 C 档／尼康 U 档）</td>
+<td>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+</tbody>
+</table></div>
+<h3>0.2 方位与菜单路径写法</h3>
+<ul>
+<li><strong>方位</strong>：左/右一律以拍摄者右手握持握柄、从机背看为准（握柄在右）。部件相对位置是本手册对照帮助指南部件图（<code>image\c_ilc2360_ilc2370_partname_01~08.png</code> 等）目视得出的描述。</li>
+<li><strong>路径</strong>：写成 MENU →（页签）→［分组］→［项目］，与帮助指南原文写法一致（例如 MENU →（拍摄）→［影像质量/记录］→［纵横比］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>））。</li>
+<li><strong>页签图标</strong>（帮助指南用图标表示页签，本手册转写为页签中文名）：
+<ul>
+<li>（我的菜单）= 星形图标</li>
+<li>（主）= 房子图标</li>
+<li>（拍摄）= 相机图标。帮助指南在不同页面也把它画成“相机/摄像机”或“摄像机”图标，三者都是同一个（拍摄）页签；页签里显示哪些项目随静止影像/动态影像/S&amp;Q旋钮位置变化（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</li>
+<li>（曝光/颜色）= 带“+/−”的曝光图标</li>
+<li>（对焦）= “AF MF”字样图标</li>
+<li>（播放）= 播放三角图标</li>
+<li>（网络）= 地球图标</li>
+<li>（设置）= 工具箱图标</li>
+</ul>
+</li>
+<li><strong>项目名前的小图标</strong>：〈静〉= 静止影像图标（实心相机），〈动〉= 动态影像图标，〈播〉= 播放图标；只在需要区分时写出（例如［〈静〉自定键/转盘设置］与［〈动〉自定键/转盘设置］是两个不同项目）。带“静止影像/动态影像共用”图标的项目省略图标。“MR”“APS-C S35”图标本身就是字母，照写为［MR拍摄设置存储］［APS-C S35拍摄］（图标含义见 <a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<hr />
+</section>
+<section id="s2"><h2>1 机身部件与按键</h2><figure id="fig-A-1"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 446" role="img" aria-label="索尼 A7C II 顶部俯视示意图：快门按钮与电源开关、前转盘、MOVIE 按钮、模式旋钮、静止影像/动态影像/S&amp;Q 旋钮、后转盘 R、后转盘 L、多接口热靴、影像传感器位置标记、取景器与镜头">
+  <title>索尼 A7C II 顶部俯视示意图</title>
+  <defs>
+    <pattern id="a1-knurl" width="5" height="10" patternUnits="userSpaceOnUse">
+      <rect width="5" height="10" fill="#cbd5e1"/>
+      <line x1="2.5" y1="0" x2="2.5" y2="10" stroke="#64748b" stroke-width="1.1"/>
+    </pattern>
+    <pattern id="a1-rib" width="10" height="5" patternUnits="userSpaceOnUse">
+      <rect width="10" height="5" fill="#d1d5db"/>
+      <line x1="0" y1="2.5" x2="10" y2="2.5" stroke="#9ca3af" stroke-width="1.2"/>
+    </pattern>
+  </defs>
+
+  <text x="271" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#1e3a8a">A7C II 顶部（俯视，镜头朝前）</text>
+
+  <!-- 镜头 -->
+  <rect x="133" y="64" width="226" height="136" rx="6" fill="#e5e7eb" stroke="#444" stroke-width="2"/>
+  <rect x="133" y="88" width="226" height="34" fill="url(#a1-rib)" stroke="#444" stroke-width="1"/>
+  <rect x="133" y="146" width="226" height="22" fill="url(#a1-rib)" stroke="#444" stroke-width="1"/>
+  <rect x="139" y="186" width="214" height="14" fill="#9ca3af" stroke="#444" stroke-width="1"/>
+  <text x="246" y="80" text-anchor="middle" font-size="11" fill="#475569">前</text>
+
+  <!-- 前转盘（握柄正面，俯视只见上缘） -->
+  <rect x="410" y="129" width="56" height="12" rx="4" fill="url(#a1-knurl)" stroke="#444" stroke-width="1.3"/>
+
+  <!-- 机身轮廓（含右前方握柄） -->
+  <path d="M78,200 H378 V161 Q378,139 400,139 H460 Q482,139 482,161 V335 Q482,353 464,353 H78 Q60,353 60,335 V218 Q60,200 78,200 Z"
+        fill="#f1f5f9" stroke="#444" stroke-width="2.5"/>
+
+  <!-- 影像传感器平面 -->
+  <line x1="62" y1="261" x2="480" y2="261" stroke="#2563eb" stroke-width="1.2" stroke-dasharray="6 4" opacity=".55"/>
+  <circle cx="190" cy="261" r="7" fill="#fff" stroke="#1f2329" stroke-width="1.5"/>
+  <line x1="181" y1="261" x2="199" y2="261" stroke="#1f2329" stroke-width="1.5"/>
+
+  <!-- 多接口热靴 -->
+  <rect x="215" y="228" width="62" height="68" rx="4" fill="#cbd5e1" stroke="#444" stroke-width="1.6"/>
+  <rect x="223" y="234" width="46" height="56" rx="2" fill="#94a3b8"/>
+  <line x1="229" y1="236" x2="229" y2="288" stroke="#e2e8f0" stroke-width="2"/>
+  <line x1="263" y1="236" x2="263" y2="288" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- 静止影像/动态影像/S&Q 旋钮（下层）与拨杆 -->
+  <rect x="366" y="263" width="24" height="12" rx="4" fill="#cbd5e1" stroke="#444" stroke-width="1.3"/>
+  <circle cx="333" cy="270" r="40" fill="#e2e8f0" stroke="#444" stroke-width="1.6"/>
+  <!-- 模式旋钮 -->
+  <circle cx="333" cy="270" r="30" fill="#f8fafc" stroke="#64748b" stroke-width="6" stroke-dasharray="2 2.6"/>
+  <circle cx="333" cy="270" r="26.5" fill="#f8fafc" stroke="#444" stroke-width="1"/>
+  <text x="333" y="274" text-anchor="middle" font-size="11" fill="#1f2329">模式</text>
+
+  <!-- MOVIE 按钮 -->
+  <circle cx="398" cy="214" r="9" fill="#b03a3a" stroke="#444" stroke-width="1.2"/>
+
+  <!-- 快门按钮与电源开关 -->
+  <circle cx="437" cy="170" r="22" fill="#cbd5e1" stroke="#444" stroke-width="1.5"/>
+  <rect x="455" y="176" width="18" height="9" rx="3" fill="#cbd5e1" stroke="#444" stroke-width="1.3" transform="rotate(30 455 176)"/>
+  <circle cx="437" cy="170" r="13" fill="#fff" stroke="#444" stroke-width="1.5"/>
+
+  <!-- 后转盘 R -->
+  <circle cx="430" cy="316" r="27" fill="#f8fafc" stroke="#64748b" stroke-width="6" stroke-dasharray="2 2.6"/>
+  <circle cx="430" cy="316" r="23.5" fill="#f8fafc" stroke="#444" stroke-width="1"/>
+
+  <!-- 后转盘 L（机背上沿的横置拨轮） -->
+  <rect x="376" y="348" width="62" height="12" rx="4" fill="url(#a1-knurl)" stroke="#444" stroke-width="1.3"/>
+
+  <!-- 取景器目镜（机背左上角） -->
+  <rect x="66" y="350" width="90" height="16" rx="4" fill="#2b2f36"/>
+  <text x="111" y="345" text-anchor="middle" font-size="11" fill="#475569">后</text>
+
+  <!-- 编号引线 -->
+  <g stroke="#2563eb" stroke-width="1.3" fill="none">
+    <line x1="495" y1="158" x2="450" y2="166"/>
+    <line x1="495" y1="198" x2="463" y2="185"/>
+    <line x1="495" y1="120" x2="466" y2="132"/>
+    <line x1="379" y1="226" x2="391" y2="219"/>
+    <line x1="333" y1="314" x2="333" y2="299"/>
+    <line x1="298" y1="306" x2="305" y2="299"/>
+    <line x1="495" y1="318" x2="457" y2="318"/>
+    <line x1="407" y1="378" x2="407" y2="360"/>
+    <line x1="246" y1="312" x2="246" y2="296"/>
+    <line x1="160" y1="244" x2="184" y2="256"/>
+    <line x1="111" y1="378" x2="111" y2="366"/>
+    <line x1="110" y1="120" x2="133" y2="120"/>
+  </g>
+  <g font-size="11" font-weight="bold" fill="#fff" text-anchor="middle">
+    <circle cx="505" cy="158" r="10" fill="#2563eb"/><text x="505" y="162">1</text>
+    <circle cx="505" cy="198" r="10" fill="#2563eb"/><text x="505" y="202">2</text>
+    <circle cx="505" cy="120" r="10" fill="#2563eb"/><text x="505" y="124">3</text>
+    <circle cx="370" cy="232" r="10" fill="#2563eb"/><text x="370" y="236">4</text>
+    <circle cx="333" cy="324" r="10" fill="#2563eb"/><text x="333" y="328">5</text>
+    <circle cx="291" cy="313" r="10" fill="#2563eb"/><text x="291" y="317">6</text>
+    <circle cx="505" cy="318" r="10" fill="#2563eb"/><text x="505" y="322">7</text>
+    <circle cx="407" cy="388" r="10" fill="#2563eb"/><text x="407" y="392">8</text>
+    <circle cx="246" cy="322" r="10" fill="#2563eb"/><text x="246" y="326">9</text>
+    <circle cx="150" cy="239" r="10" fill="#2563eb"/><text x="150" y="243">10</text>
+    <circle cx="111" cy="388" r="10" fill="#2563eb"/><text x="111" y="392">11</text>
+    <circle cx="100" cy="120" r="10" fill="#2563eb"/><text x="100" y="124">12</text>
+  </g>
+
+  <!-- 图例 -->
+  <g font-size="13" fill="#1f2329">
+    <text x="540" y="92" font-size="14" font-weight="bold" fill="#1e3a8a">部件名称（帮助指南叫法）</text>
+    <text x="540" y="118"><tspan font-weight="bold" fill="#2563eb">1</tspan> 快门按钮</text>
+    <text x="540" y="142"><tspan font-weight="bold" fill="#2563eb">2</tspan> ON/OFF（电源）开关</text>
+    <text x="540" y="166"><tspan font-weight="bold" fill="#2563eb">3</tspan> 前转盘（握柄正面、快门下方）</text>
+    <text x="540" y="190"><tspan font-weight="bold" fill="#2563eb">4</tspan> MOVIE（动态影像）按钮</text>
+    <text x="540" y="214"><tspan font-weight="bold" fill="#2563eb">5</tspan> 模式旋钮 AUTO/P/A/S/M/1/2/3</text>
+    <text x="540" y="238"><tspan font-weight="bold" fill="#2563eb">6</tspan> 静止影像/动态影像/S&amp;Q 旋钮</text>
+    <text x="540" y="262"><tspan font-weight="bold" fill="#2563eb">7</tspan> 后转盘 R</text>
+    <text x="540" y="286"><tspan font-weight="bold" fill="#2563eb">8</tspan> 后转盘 L（机背上沿）</text>
+    <text x="540" y="310"><tspan font-weight="bold" fill="#2563eb">9</tspan> 多接口热靴</text>
+    <text x="540" y="334"><tspan font-weight="bold" fill="#2563eb">10</tspan> 影像传感器位置标记</text>
+    <text x="540" y="358"><tspan font-weight="bold" fill="#2563eb">11</tspan> 取景器目镜（机背左上角）</text>
+    <text x="540" y="382"><tspan font-weight="bold" fill="#2563eb">12</tspan> 镜头（卡口在机身正面）</text>
+  </g>
+  <text x="271" y="418" text-anchor="middle" font-size="12" fill="#475569">从机身后上方看下去，左右与背面图一致；比例不精确</text>
+  <text x="271" y="436" text-anchor="middle" font-size="12" fill="#475569">蓝色虚线＝影像传感器所在平面（对焦距离、最近对焦距离都从这里量起）</text>
+</svg><figcaption><strong>图 A-1</strong>　A7C II 顶部按键（俯视）——快门/电源开关与前转盘在握柄上，模式旋钮（下层是静止影像/动态影像/S&amp;Q 旋钮）与后转盘 R 在机顶右侧，热靴旁的 ⊖ 是传感器平面位置。</figcaption></figure>
+<figure id="fig-A-2"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470" role="img" aria-label="索尼 A7C II 背面按键示意图：取景器、眼传感器、屈光度调节旋钮、显示屏、MENU 按钮、C1 按钮、后转盘 L、AF-ON 按钮、Fn 按钮、控制拨轮、C2 按钮、播放按钮，以及顶部的模式旋钮与静止影像/动态影像/S&amp;Q 旋钮、后转盘 R、多接口热靴">
+  <title>索尼 A7C II 背面按键示意图</title>
+  <defs>
+    <pattern id="a2-knurl" width="6" height="10" patternUnits="userSpaceOnUse">
+      <rect width="6" height="10" fill="#cbd5e1"/>
+      <line x1="3" y1="0" x2="3" y2="10" stroke="#64748b" stroke-width="1.2"/>
+    </pattern>
+    <pattern id="a2-knurl-h" width="10" height="5" patternUnits="userSpaceOnUse">
+      <rect width="10" height="5" fill="#cbd5e1"/>
+      <line x1="0" y1="2.5" x2="10" y2="2.5" stroke="#64748b" stroke-width="1.1"/>
+    </pattern>
+  </defs>
+
+  <text x="310" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#1e3a8a">A7C II 背面（含顶部可见部件）</text>
+
+  <!-- 顶部可见部件 -->
+  <rect x="190" y="90" width="62" height="10" rx="2" fill="#94a3b8" stroke="#444" stroke-width="1.5"/>
+  <rect x="338" y="88" width="98" height="12" rx="3" fill="#e2e8f0" stroke="#444" stroke-width="1.5"/>
+  <rect x="344" y="70" width="86" height="18" rx="4" fill="url(#a2-knurl)" stroke="#444" stroke-width="1.5"/>
+  <rect x="466" y="78" width="80" height="22" rx="4" fill="url(#a2-knurl)" stroke="#444" stroke-width="1.5"/>
+
+  <!-- 机身 -->
+  <rect x="50" y="100" width="520" height="298" rx="24" fill="#f1f5f9" stroke="#444" stroke-width="2.5"/>
+
+  <!-- 取景器 -->
+  <rect x="64" y="112" width="104" height="56" rx="10" fill="#2b2f36"/>
+  <rect x="76" y="122" width="68" height="36" rx="4" fill="#475569"/>
+  <rect x="150" y="126" width="8" height="28" rx="2" fill="#0f172a"/>
+  <!-- 屈光度调节旋钮 -->
+  <rect x="172" y="116" width="12" height="48" rx="3" fill="url(#a2-knurl-h)" stroke="#444" stroke-width="1.2"/>
+
+  <!-- 显示屏（左侧铰链，可侧翻） -->
+  <rect x="44" y="200" width="10" height="30" rx="2" fill="#64748b"/>
+  <rect x="44" y="334" width="10" height="30" rx="2" fill="#64748b"/>
+  <rect x="64" y="178" width="318" height="208" rx="8" fill="#1f2937"/>
+  <rect x="76" y="188" width="294" height="188" rx="3" fill="#334155"/>
+
+  <!-- MENU / C1 -->
+  <circle cx="220" cy="130" r="18" fill="#fff" stroke="#444" stroke-width="1.5"/>
+  <text x="220" y="134" text-anchor="middle" font-size="11" font-weight="bold" fill="#1f2329">MENU</text>
+  <circle cx="266" cy="130" r="14" fill="#fff" stroke="#444" stroke-width="1.5"/>
+  <text x="266" y="134" text-anchor="middle" font-size="11" font-weight="bold" fill="#1f2329">C1</text>
+
+  <!-- 后转盘 L（背面顶缘右侧，横置拨轮） -->
+  <rect x="440" y="106" width="76" height="20" rx="5" fill="url(#a2-knurl)" stroke="#444" stroke-width="1.5"/>
+
+  <!-- AF-ON / Fn -->
+  <circle cx="488" cy="160" r="21" fill="#fff" stroke="#444" stroke-width="1.5"/>
+  <text x="488" y="164" text-anchor="middle" font-size="11" font-weight="bold" fill="#1f2329">AF-ON</text>
+  <circle cx="490" cy="206" r="14" fill="#fff" stroke="#444" stroke-width="1.5"/>
+  <text x="490" y="210" text-anchor="middle" font-size="12" font-weight="bold" fill="#1f2329">Fn</text>
+
+  <!-- 控制拨轮 -->
+  <circle cx="480" cy="280" r="46" fill="#e2e8f0" stroke="#444" stroke-width="2"/>
+  <circle cx="480" cy="280" r="17" fill="#fff" stroke="#444" stroke-width="1.5"/>
+  <path d="M480,241 l-5,7 h10 z M480,319 l-5,-7 h10 z M441,280 l7,-5 v10 z M519,280 l-7,-5 v10 z" fill="#64748b"/>
+
+  <!-- 播放 / C2 -->
+  <circle cx="432" cy="356" r="12" fill="#fff" stroke="#444" stroke-width="1.5"/>
+  <path d="M428,350 l10,6 l-10,6 z" fill="#1f2329"/>
+  <circle cx="526" cy="356" r="12" fill="#fff" stroke="#444" stroke-width="1.5"/>
+  <text x="526" y="360" text-anchor="middle" font-size="11" font-weight="bold" fill="#1f2329">C2</text>
+
+  <!-- 编号引线 -->
+  <g stroke="#2563eb" stroke-width="1.3" fill="none">
+    <line x1="40" y1="140" x2="78" y2="140"/>
+    <line x1="126" y1="88" x2="151" y2="126"/>
+    <line x1="176" y1="74" x2="178" y2="116"/>
+    <line x1="40" y1="282" x2="70" y2="282"/>
+    <line x1="220" y1="152" x2="220" y2="147"/>
+    <line x1="266" y1="152" x2="266" y2="144"/>
+    <line x1="428" y1="144" x2="446" y2="126"/>
+    <line x1="532" y1="160" x2="509" y2="160"/>
+    <line x1="530" y1="206" x2="504" y2="206"/>
+    <line x1="539" y1="254" x2="521" y2="262"/>
+    <line x1="545" y1="376" x2="534" y2="365"/>
+    <line x1="413" y1="376" x2="424" y2="365"/>
+    <line x1="387" y1="60" x2="387" y2="70"/>
+    <line x1="506" y1="60" x2="506" y2="78"/>
+    <line x1="221" y1="74" x2="221" y2="90"/>
+  </g>
+  <g font-size="11" font-weight="bold" fill="#fff" text-anchor="middle">
+    <circle cx="30" cy="140" r="10" fill="#2563eb"/><text x="30" y="144">1</text>
+    <circle cx="120" cy="80" r="10" fill="#2563eb"/><text x="120" y="84">2</text>
+    <circle cx="176" cy="64" r="10" fill="#2563eb"/><text x="176" y="68">3</text>
+    <circle cx="30" cy="282" r="10" fill="#2563eb"/><text x="30" y="286">4</text>
+    <circle cx="220" cy="162" r="10" fill="#2563eb"/><text x="220" y="166">5</text>
+    <circle cx="266" cy="162" r="10" fill="#2563eb"/><text x="266" y="166">6</text>
+    <circle cx="420" cy="152" r="10" fill="#2563eb"/><text x="420" y="156">7</text>
+    <circle cx="543" cy="160" r="10" fill="#2563eb"/><text x="543" y="164">8</text>
+    <circle cx="540" cy="206" r="10" fill="#2563eb"/><text x="540" y="210">9</text>
+    <circle cx="548" cy="250" r="10" fill="#2563eb"/><text x="548" y="254">10</text>
+    <circle cx="552" cy="384" r="10" fill="#2563eb"/><text x="552" y="388">11</text>
+    <circle cx="406" cy="384" r="10" fill="#2563eb"/><text x="406" y="388">12</text>
+    <circle cx="387" cy="50" r="10" fill="#2563eb"/><text x="387" y="54">13</text>
+    <circle cx="506" cy="50" r="10" fill="#2563eb"/><text x="506" y="54">14</text>
+    <circle cx="221" cy="64" r="10" fill="#2563eb"/><text x="221" y="68">15</text>
+  </g>
+
+  <!-- 图例 -->
+  <g font-size="13" fill="#1f2329">
+    <text x="598" y="92" font-size="14" font-weight="bold" fill="#1e3a8a">部件名称（帮助指南叫法）</text>
+    <text x="598" y="118"><tspan font-weight="bold" fill="#2563eb">1</tspan> 取景器（电子取景器）</text>
+    <text x="598" y="140"><tspan font-weight="bold" fill="#2563eb">2</tspan> 眼传感器（眼睛贴近自动切换）</text>
+    <text x="598" y="162"><tspan font-weight="bold" fill="#2563eb">3</tspan> 屈光度调节旋钮</text>
+    <text x="598" y="184"><tspan font-weight="bold" fill="#2563eb">4</tspan> 显示屏（触摸屏，侧翻可旋转）</text>
+    <text x="598" y="206"><tspan font-weight="bold" fill="#2563eb">5</tspan> MENU 按钮</text>
+    <text x="598" y="228"><tspan font-weight="bold" fill="#2563eb">6</tspan> C1 按钮（自定义按钮 1）</text>
+    <text x="598" y="250"><tspan font-weight="bold" fill="#2563eb">7</tspan> 后转盘 L</text>
+    <text x="598" y="272"><tspan font-weight="bold" fill="#2563eb">8</tspan> AF-ON 按钮（播放时：放大）</text>
+    <text x="598" y="294"><tspan font-weight="bold" fill="#2563eb">9</tspan> Fn 按钮（播放时：发送到手机）</text>
+    <text x="598" y="316"><tspan font-weight="bold" fill="#2563eb">10</tspan> 控制拨轮（上下左右＋中央）</text>
+    <text x="598" y="338"><tspan font-weight="bold" fill="#2563eb">11</tspan> C2 按钮（播放时：删除）</text>
+    <text x="598" y="360"><tspan font-weight="bold" fill="#2563eb">12</tspan> 播放按钮</text>
+    <text x="598" y="382"><tspan font-weight="bold" fill="#2563eb">13</tspan> 模式旋钮＋静止/动态/S&amp;Q 旋钮</text>
+    <text x="598" y="404"><tspan font-weight="bold" fill="#2563eb">14</tspan> 后转盘 R（机顶右后角）</text>
+    <text x="598" y="426"><tspan font-weight="bold" fill="#2563eb">15</tspan> 多接口热靴</text>
+  </g>
+  <text x="310" y="430" text-anchor="middle" font-size="12" fill="#475569">示意图，比例不精确；部件位置与名称依据索尼官方帮助指南「各部分名称」</text>
+  <text x="310" y="450" text-anchor="middle" font-size="12" fill="#475569">13～15 位于机顶，此处画在机身上沿之上表示</text>
+</svg><figcaption><strong>图 A-2</strong>　A7C II 背面按键——右手拇指区集中了 AF-ON、Fn、控制拨轮、C2 与后转盘 L；MENU、C1 在取景器右侧。</figcaption></figure>
+<figure id="fig-A-3"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 412" role="img" aria-label="A7C II 模式旋钮八个档位（AUTO、P、A、S、M、1、2、3）与下层静止影像/动态影像/S&amp;Q 旋钮，以及各档位对应的佳能叫法">
+  <title>A7C II 模式旋钮与静止影像/动态影像/S&amp;Q 旋钮</title>
+  <text x="380" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#1e3a8a">模式旋钮（上层）＋ 静止影像/动态影像/S&amp;Q 旋钮（下层）</text>
+
+  <!-- 模式旋钮俯视 -->
+  <circle cx="170" cy="180" r="112" fill="#f8fafc" stroke="#64748b" stroke-width="10" stroke-dasharray="3 3.5"/>
+  <circle cx="170" cy="180" r="105" fill="#f8fafc" stroke="#444" stroke-width="1.5"/>
+  <circle cx="170" cy="180" r="44" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+  <text x="170" y="176" text-anchor="middle" font-size="12" fill="#475569">模式旋钮</text>
+  <text x="170" y="193" text-anchor="middle" font-size="11" fill="#475569">（俯视）</text>
+  <!-- 指示标记 -->
+  <rect x="26" y="174" width="14" height="12" fill="#1f2329"/>
+  <text x="31" y="208" text-anchor="middle" font-size="11" fill="#475569">指示</text>
+  <text x="31" y="222" text-anchor="middle" font-size="11" fill="#475569">标记</text>
+  <!-- 档位文字 r=78 -->
+  <g font-size="17" font-weight="bold" text-anchor="middle" fill="#1f2329">
+    <text x="94" y="186" fill="#2563eb" font-size="15">AUTO</text>
+    <text x="115" y="131">P</text>
+    <text x="170" y="108">A</text>
+    <text x="225" y="131">S</text>
+    <text x="248" y="186">M</text>
+    <text x="225" y="241">1</text>
+    <text x="170" y="264">2</text>
+    <text x="115" y="241">3</text>
+  </g>
+  <path d="M110,318 Q170,342 230,318" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <path d="M110,318 l9,-1 l-5,8 z M230,318 l-9,-1 l5,8 z" fill="#2563eb"/>
+  <text x="170" y="360" text-anchor="middle" font-size="12" fill="#475569">两个方向都能转</text>
+
+  <!-- 档位说明 -->
+  <g font-size="13" fill="#1f2329">
+    <rect x="330" y="56" width="412" height="26" rx="4" fill="#eef2ff"/>
+    <text x="340" y="74" font-weight="bold">档位</text>
+    <text x="400" y="74" font-weight="bold">帮助指南名称</text>
+    <text x="540" y="74" font-weight="bold">佳能单反对应</text>
+    <text x="640" y="74" font-weight="bold">谁定曝光</text>
+
+    <text x="340" y="104" font-weight="bold" fill="#2563eb">AUTO</text><text x="400" y="104">智能自动/场景选择</text><text x="540" y="104">A+ / 场景模式</text><text x="640" y="104">相机全定</text>
+    <text x="340" y="132" font-weight="bold" fill="#2563eb">P</text><text x="400" y="132">程序自动</text><text x="540" y="132">P</text><text x="640" y="132">相机定组合</text>
+    <text x="340" y="160" font-weight="bold" fill="#2563eb">A</text><text x="400" y="160">光圈优先</text><text x="540" y="160">Av</text><text x="640" y="160">你定光圈</text>
+    <text x="340" y="188" font-weight="bold" fill="#2563eb">S</text><text x="400" y="188">快门优先</text><text x="540" y="188">Tv</text><text x="640" y="188">你定快门</text>
+    <text x="340" y="216" font-weight="bold" fill="#2563eb">M</text><text x="400" y="216">手动曝光（含 BULB）</text><text x="540" y="216">M / B</text><text x="640" y="216">全部自己定</text>
+    <text x="340" y="244" font-weight="bold" fill="#2563eb">1/2/3</text><text x="400" y="244">调出拍摄设置</text><text x="540" y="244">C1/C2/C3</text><text x="640" y="244">存好的整套</text>
+    <line x1="330" y1="254" x2="742" y2="254" stroke="#e2e8f0"/>
+  </g>
+  <text x="340" y="276" font-size="12" fill="#475569">P 档转前转盘或后转盘 L＝程序偏移（屏上显示 P*）；M 档前转盘调光圈、</text>
+  <text x="340" y="294" font-size="12" fill="#475569">后转盘 L 调快门，顺时针转过 30″ 即为 BULB（B 门）。</text>
+
+  <!-- 下层旋钮：三档示意 -->
+  <rect x="340" y="314" width="400" height="66" rx="10" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="352" y="334" font-size="12" font-weight="bold" fill="#1e3a8a">下层旋钮（拨杆转动）三个位置：</text>
+  <g font-size="13" fill="#1f2329">
+    <rect x="352" y="344" width="112" height="26" rx="13" fill="#2563eb"/>
+    <text x="408" y="362" text-anchor="middle" fill="#fff" font-weight="bold">静止影像</text>
+    <rect x="474" y="344" width="112" height="26" rx="13" fill="#fff" stroke="#94a3b8"/>
+    <text x="530" y="362" text-anchor="middle">动态影像</text>
+    <rect x="596" y="344" width="132" height="26" rx="13" fill="#fff" stroke="#94a3b8"/>
+    <text x="662" y="362" text-anchor="middle">S&amp;Q（慢/快动作）</text>
+  </g>
+  <text x="380" y="404" text-anchor="middle" font-size="11" fill="#94a3b8">拍照片时下层旋钮放在「静止影像」；档位与名称依据索尼帮助指南</text>
+</svg><figcaption><strong>图 A-3</strong>　模式旋钮与静止影像/动态影像/S&amp;Q 旋钮——拍照时下层旋钮放在静止影像，上层模式旋钮选 P/A/S/M；A=佳能 Av，S=佳能 Tv，1/2/3 相当于佳能 C1/C2/C3。</figcaption></figure>
+<h3>1.1 正面</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>部件</th>
+<th>位置</th>
+<th>说明 / 出厂功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>快门按钮</td>
+<td>握柄顶部最前端</td>
+<td>半按对焦/测光，全按拍摄（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>ON/OFF（电源）开关</td>
+<td>套在快门按钮外圈的拨杆</td>
+<td>开关机</td>
+</tr>
+<tr>
+<td>前转盘</td>
+<td>握柄正面、快门按钮正下方（食指位置）</td>
+<td>“可以快速地调整各照相模式的设置”；默认功能见 1.7</td>
+</tr>
+<tr>
+<td>自拍指示灯/AF辅助照明</td>
+<td>机身正面，握柄与镜头卡口之间的上方</td>
+<td>自拍倒计时时闪烁（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）；暗处半按快门时点亮辅助对焦（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）；拍摄时勿遮挡</td>
+</tr>
+<tr>
+<td>镜头释放按钮</td>
+<td>机身正面，镜头卡口靠握柄一侧的下方</td>
+<td>按住并转动镜头即可取下（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>麦克风</td>
+<td>机顶前沿、镜头卡口上方（左右各一组小孔）</td>
+<td>录视频时勿遮挡；规格为立体声（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>安装标记</td>
+<td>卡口边缘的白点</td>
+<td>与镜头白点对齐后转动安装（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>影像传感器、卡口、镜头接点</td>
+<td>卡口内部</td>
+<td>请勿直接接触</td>
+</tr>
+</tbody>
+</table></div>
+<h3>1.2 顶部</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>部件</th>
+<th>位置</th>
+<th>说明 / 出厂功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>模式旋钮</td>
+<td>机顶右侧、后转盘R 的左边</td>
+<td>档位：AUTO（智能自动/场景选择）、P、A、S、M、1、2、3（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。<strong>没有 B 档</strong>（B 门在 M 档里设，见 3.1）</td>
+</tr>
+<tr>
+<td>静止影像/动态影像/S&amp;Q旋钮</td>
+<td>模式旋钮底座下的拨杆环</td>
+<td>三档：静止影像（相机图标）／动态影像／S&amp;Q（慢动作/快动作）；切换照相模式大类，菜单内容随之改变（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>后转盘R</td>
+<td>机顶最右后角</td>
+<td>出厂 =［曝光补偿］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>MOVIE（动态影像）按钮</td>
+<td>机顶，后转盘R 与快门按钮之间</td>
+<td>出厂 = 动态影像拍摄；静止影像档也能直接按它录视频（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>多接口热靴</td>
+<td>机顶中部、取景器右侧</td>
+<td>装闪光灯、引闪器、音频附件等；出厂装有插座盖（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>扬声器</td>
+<td>机顶左侧（取景器一侧）</td>
+<td>单声道（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>影像传感器位置标记</td>
+<td>机顶、热靴前方附近</td>
+<td>精确测量拍摄距离时以此标记的横线为准</td>
+</tr>
+</tbody>
+</table></div>
+<h3>1.3 背面</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>部件</th>
+<th>位置</th>
+<th>拍摄时（出厂）</th>
+<th>播放时</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>取景器</td>
+<td>机背左上角</td>
+<td>电子取景器</td>
+<td>—</td>
+</tr>
+<tr>
+<td>眼传感器</td>
+<td>取景器目镜右侧</td>
+<td>眼睛靠近时自动切换到取景器显示（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+<td>—</td>
+</tr>
+<tr>
+<td>屈光度调节旋钮</td>
+<td>取景器右侧的小拨轮</td>
+<td>转到取景器显示清晰为止；范围 −4.0～+3.0 m⁻¹（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+<td>—</td>
+</tr>
+<tr>
+<td>显示屏</td>
+<td>机背中部</td>
+<td>触摸屏；侧翻式，向左翻开约 176°（图中 A），可旋转约 270°（图中 B）</td>
+<td>—</td>
+</tr>
+<tr>
+<td>MENU按钮</td>
+<td>机背顶部，取景器目镜右侧、显示屏上方的横向长按钮（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+<td>打开菜单</td>
+<td>打开菜单</td>
+</tr>
+<tr>
+<td>C1按钮（自定义按钮1）</td>
+<td>MENU 按钮右侧</td>
+<td>［白平衡模式］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+<td>遵循拍摄时的自定义</td>
+</tr>
+<tr>
+<td>后转盘L</td>
+<td>机背右上角拇指位置（C1 右侧）</td>
+<td>见 1.7；“可以快速地调整各照相模式的设置”</td>
+<td>浏览影像</td>
+</tr>
+<tr>
+<td>AF-ON（AF开启）按钮</td>
+<td>后转盘L 正下方</td>
+<td>［跟踪开启+AF开启］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+<td>（放大）按钮</td>
+</tr>
+<tr>
+<td>Fn（功能）按钮</td>
+<td>AF-ON 下方</td>
+<td>显示功能菜单（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+<td>（发送到智能手机）按钮</td>
+</tr>
+<tr>
+<td>控制拨轮</td>
+<td>Fn 下方</td>
+<td>上=DISP，左=拍摄模式，右=ISO，中央=［对焦标准］，下与旋转=未设定（见 1.6）</td>
+<td>左/右或转动=上一张/下一张；下=影像索引</td>
+</tr>
+<tr>
+<td>C2按钮（自定义按钮2）</td>
+<td>控制拨轮右下方</td>
+<td>［触摸操作选择］</td>
+<td>（删除）按钮</td>
+</tr>
+<tr>
+<td>（播放）按钮</td>
+<td>控制拨轮左下方</td>
+<td>切换为播放模式（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<h3>1.4 侧面——机身左侧（取景器一侧）</h3>
+<p>所有接口和存储卡都在机身左侧，按部件图从上往下大致为：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>部件</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>肩带用挂钩</td>
+<td>左右两侧各一个</td>
+</tr>
+<tr>
+<td>（麦克风）接口</td>
+<td>接外接麦克风时内置麦克风自动关闭，插入式电源麦克风由相机供电（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）；Ø3.5 mm 立体声迷你插孔（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>充电指示灯</td>
+<td>USB 充电时点亮=充电中，熄灭=充电结束，闪烁=温度不适导致充电错误/暂停（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>USB Type-C 接口</td>
+<td>USB 3.2（5Gbps），兼容 USB 供电（USB-PD）（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>存储卡插槽</td>
+<td><strong>只有 1 个</strong> SD 卡槽（部件表只列一个存储卡插槽；推论：单卡槽）。存储卡盖上有滑动锁定开关（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>（耳机）接口</td>
+<td>Ø3.5 mm 立体声迷你插孔</td>
+</tr>
+<tr>
+<td>HDMI微型插孔</td>
+<td>HDMI D 型</td>
+</tr>
+<tr>
+<td>存取指示灯</td>
+<td>侧面下部靠后；点亮时不要取卡/电池、不要关机（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+</tbody>
+</table></div>
+<h3>1.5 底部</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>部件</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电池插槽 / 锁定杆 / 电池盖</td>
+<td>在握柄底部；电池盖带滑动开关，关盖后拨向 LOCK（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>三脚架安装孔</td>
+<td>1/4-20 UNC；<strong>须用螺丝长度小于 5.5 mm 的三脚架</strong>，否则固定不牢并可能损坏相机</td>
+</tr>
+</tbody>
+</table></div>
+<p>可选握柄 GP-X2 装在底部，装着握柄也能换电池（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</p>
+<h3>1.6 各按键/转盘出厂默认功能总表</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>按键 / 转盘</th>
+<th>静止影像拍摄（〈静〉自定键/转盘设置）</th>
+<th>动态影像拍摄（〈动〉自定键/转盘设置）</th>
+<th>播放（〈播〉自定义键设置）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>前转盘</td>
+<td>Av/Tv(Av处于M模式)</td>
+<td>遵照自定义(静止影像)</td>
+<td>转动浏览影像，跳转方式默认“逐个”</td>
+</tr>
+<tr>
+<td>后转盘L</td>
+<td>Av/Tv(Tv处于M模式)</td>
+<td>遵照自定义(静止影像)</td>
+<td>同上</td>
+</tr>
+<tr>
+<td>后转盘R</td>
+<td>曝光补偿</td>
+<td>遵照自定义(静止影像)</td>
+<td>同上</td>
+</tr>
+<tr>
+<td>控制拨轮（旋转）</td>
+<td>未设定</td>
+<td>遵照自定义(静止影像)</td>
+<td>上一张/下一张（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>控制拨轮 上</td>
+<td>DISP（自定义键可分配列表里没有“上按钮”，即固定为 DISP）（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+<td>DISP</td>
+<td>DISP</td>
+</tr>
+<tr>
+<td>控制拨轮 中央（中央按钮功能）</td>
+<td>对焦标准</td>
+<td>遵照自定义(静止影像)</td>
+<td>进入影像组播放、退出播放放大等（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>控制拨轮 左（左按钮功能）</td>
+<td>拍摄模式（=驱动模式）</td>
+<td>〈动〉自拍定时</td>
+<td>上一张</td>
+</tr>
+<tr>
+<td>控制拨轮 右（右按钮功能）</td>
+<td>ISO</td>
+<td>遵照自定义(静止影像)</td>
+<td>下一张</td>
+</tr>
+<tr>
+<td>控制拨轮 下（下按钮）</td>
+<td>未设定</td>
+<td>遵照自定义(静止影像)</td>
+<td>影像索引（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>C1（自定义按钮1）</td>
+<td>白平衡模式</td>
+<td>遵照自定义(静止影像)</td>
+<td>遵循自定义(静止/动态)</td>
+</tr>
+<tr>
+<td>C2（自定义按钮2）</td>
+<td>触摸操作选择</td>
+<td>遵照自定义(静止影像)</td>
+<td>删除</td>
+</tr>
+<tr>
+<td>AF-ON按钮</td>
+<td>跟踪开启+AF开启</td>
+<td>遵照自定义(静止影像)</td>
+<td>放大（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>MOVIE按钮</td>
+<td>动态影像拍摄</td>
+<td>动态影像拍摄</td>
+<td>遵循自定义(静止/动态)</td>
+</tr>
+<tr>
+<td>Fn按钮</td>
+<td>功能菜单（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+<td>功能菜单</td>
+<td>发送（到智能手机）</td>
+</tr>
+<tr>
+<td>镜头上的对焦保持按钮（部分镜头才有）</td>
+<td>对焦保持</td>
+<td>遵照自定义(静止影像)</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<p>补充：</p>
+<ul>
+<li>动态影像拍摄且［曝光控制类型］=［灵活曝光模式］时，C1=［长按Av自动/手动］、C2=［长按Tv自动/手动］、AF-ON=［长按ISO自动/手动］；手动时用前转盘调光圈、控制拨轮调快门速度、后转盘L调 ISO（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>帮助指南没有给出 AUTO（智能自动/场景选择）档下各转盘的功能——帮助指南未载明。</li>
+</ul>
+<h3>1.7 P/A/S/M 下四个转盘的出厂功能（静止影像）</h3>
+<p>“Av/Tv(Av处于M模式)”的意思是：该转盘在 P/A/S 中调本模式可调的那个量（P 程序转换、A 光圈、S 快门），在 M 模式中调光圈（Av）；“Av/Tv(Tv处于M模式)”在 M 中调快门速度（Tv）（推论，依据下表各模式页原文）。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>照相模式</th>
+<th>前转盘</th>
+<th>后转盘L</th>
+<th>后转盘R</th>
+<th>控制拨轮旋转</th>
+<th>出处</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P 程序自动</td>
+<td>程序转换（改变快门/光圈组合，P 变 P*；仅静止影像、不用闪光灯时）</td>
+<td>程序转换</td>
+<td>曝光补偿</td>
+<td>未设定</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>A 光圈优先</td>
+<td>光圈</td>
+<td>光圈</td>
+<td>曝光补偿</td>
+<td>未设定</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>S 快门优先</td>
+<td>快门速度</td>
+<td>快门速度</td>
+<td>曝光补偿</td>
+<td>未设定</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>M 手动曝光</td>
+<td>光圈</td>
+<td>快门速度（顺时针转动直到显示［BULB］即为 B 门）</td>
+<td>曝光补偿——<strong>只有 ISO=ISO AUTO 时才起作用</strong></td>
+<td>未设定</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>想让 M 模式与其他模式的转盘功能不同：给转盘/拨轮分配功能时勾选［将M模式和其他模式分开。］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>想反转转盘方向：MENU →（设置）→［转盘自定义］→［Av/Tv旋转］→［翻转］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>ISO 不在转盘上：按控制拨轮右（ISO）后，转前转盘或控制拨轮按 1/3 EV 改，转后转盘L/R 按 1 EV 改（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<h3>1.8 模式旋钮与静止影像/动态影像/S&amp;Q旋钮</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>模式旋钮档位</th>
+<th>帮助指南名称</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AUTO</td>
+<td>智能自动 / 场景选择</td>
+<td>相机自动识别场景拍摄；或指定场景</td>
+</tr>
+<tr>
+<td>P</td>
+<td>程序自动</td>
+<td>自动定快门+光圈，可程序转换</td>
+</tr>
+<tr>
+<td>A</td>
+<td>光圈优先</td>
+<td>光圈优先，快门自动</td>
+</tr>
+<tr>
+<td>S</td>
+<td>快门优先</td>
+<td>快门优先，光圈自动</td>
+</tr>
+<tr>
+<td>M</td>
+<td>手动曝光</td>
+<td>手动光圈+快门；B 门也在这里</td>
+</tr>
+<tr>
+<td>1 / 2 / 3</td>
+<td>MR调出拍摄设置</td>
+<td>调出用［MR拍摄设置存储］注册的设置（见 2.6）</td>
+</tr>
+</tbody>
+</table></div>
+<p>静止影像/动态影像/S&amp;Q旋钮：静止影像照相模式／动态影像拍摄模式／慢动作/快动作照相模式；延时动态影像也在 S&amp;Q 档里选［缩时摄影］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。动态影像档下，P/A/S/M 是否由模式旋钮决定取决于［曝光控制类型］（见 3.2）。</p>
+<h3>1.9 与课程里单反的硬件差异速览</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>单反上的东西</th>
+<th>A7C II 情况</th>
+<th>出处</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>内置闪光灯</td>
+<td><strong>无</strong>。部件表里没有闪光灯，闪光一律用“闪光灯（另售）”装在多接口热靴上</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>AE 锁定按钮（佳能 *、尼康 AE-L）</td>
+<td><strong>无专用按键</strong>，要把［AE锁定保持］/［AE锁定切换］分配给自定义键</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>景深预览按钮</td>
+<td><strong>无专用按键</strong>，要分配［光圈预览］</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>顶部液晶肩屏、ISO/WB/驱动专用键</td>
+<td>无肩屏；ISO 在控制拨轮右、驱动（拍摄模式）在控制拨轮左、白平衡默认在 C1</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>模式转盘 B 档、C 档</td>
+<td>无 B 档（M 档里把快门转到 BULB）；1/2/3 相当于 C 档</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>机身 AF/MF 拨杆</td>
+<td>机身无；可分配［AF/MF选择器保持］/［AF/MF选择器切换］，镜头上有 AF/MF 开关时以镜头开关为准</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>反光镜、光学取景器</td>
+<td>取景器是 1.0 cm 电子取景器；无反光镜结构，取景画面始终是传感器的实时画面（推论）</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>镜头防抖（IS/VR）</td>
+<td>机身内置 SteadyShot（影像传感器位移），部分镜头可与机身协同</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>双卡槽</td>
+<td>单 SD 卡槽（兼容 UHS-I/UHS-II）</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</section>
+<section id="s3"><h2>2 菜单体系</h2><h3>2.1 MENU 的页签与分组</h3>
+<p>按 MENU 显示菜单：左列是页签（A），中间是分组编号（B），右边是项目（C）；用控制拨轮上/下/左/右移动，按中央确定，再按 MENU 返回/退出（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。帮助指南菜单总表注明“此处列出的菜单选项卡的顺序与实际显示有所不同”，按 <a class="src" href="" target="_blank" rel="noopener">官方页</a> 的菜单画面图示，页签<strong>从上到下</strong>是：我的菜单 → 主 → 拍摄 → 曝光/颜色 → 对焦 → 播放 → 网络 → 设置。</p>
+<p>各页签的分组（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>页签</th>
+<th>分组（按帮助指南菜单总表顺序）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>（主）</td>
+<td>无分组，是拍摄设置一览表，可直接点选修改（见 2.2）</td>
+</tr>
+<tr>
+<td>（拍摄）</td>
+<td>影像质量/记录、媒体、文件、照相模式、拍摄模式、快门/静音、录音、TC/UB、影像稳定、变焦、拍摄显示、标记显示、拍摄选项</td>
+</tr>
+<tr>
+<td>（曝光/颜色）</td>
+<td>曝光、曝光补偿、测光、闪光灯、白平衡模式、颜色/色调、斑马线显示</td>
+</tr>
+<tr>
+<td>（对焦）</td>
+<td>AF/MF、对焦区域、被摄体识别、对焦辅助、峰值显示</td>
+</tr>
+<tr>
+<td>（播放）</td>
+<td>播放目标、放大倍率、选择/备忘录、删除、编辑、观看、播放选项</td>
+</tr>
+<tr>
+<td>（网络）</td>
+<td>连接/电脑遥控（带智能手机图标）、FTP传输、流式传输、Creators' Cloud、Wi-Fi、Bluetooth、有线LAN、USB-LAN/共享、网络选项</td>
+</tr>
+<tr>
+<td>（设置）</td>
+<td>区域/日期、重置/保存设置、操作自定义、转盘自定义、触摸操作、可访问性、取景器/显示屏、显示选项、电源设置选项、声音选项、USB、外部输出、设置选项</td>
+</tr>
+<tr>
+<td>（我的菜单）</td>
+<td>我的菜单设置（自己添加的项目另成页）</td>
+</tr>
+</tbody>
+</table></div>
+<p>要点：</p>
+<ul>
+<li>（主）（拍摄）（曝光/颜色）（对焦）里显示哪些项目随静止影像/动态影像/S&amp;Q旋钮位置不同；静止影像档下也会显示部分基本动态影像项目，因为 MOVIE 按钮随时能录（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>菜单项目上按（删除）按钮（即 C2）可看该项目的说明（［相机内功能介绍］）；出现上下文菜单时选［相机内功能介绍］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。同一个上下文菜单里有［添加到我的菜单］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>［MENU］功能本身也可分配给自定义键（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>触摸操作：［触摸操作］=［开］且［触摸面板设置］下［菜单画面］=［开］时，菜单可触摸操作（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<h3>2.2 主菜单（拍摄设置列表）</h3>
+<p>MENU →（主）。静止影像用的“主 1”列出：快门速度、光圈、曝光补偿、ISO、格式化、〈静〉文件格式、RAW文件类型、JPEG影像质量/HEIF影像质量、JPEG影像尺寸/HEIF影像尺寸、纵横比、照相模式、拍摄模式、闪光模式、闪光补偿、无线闪光灯、白平衡模式、对焦模式、对焦区域、剩余电池电量。P 模式时快门和光圈显示在同一区域，选中该区域可做程序转换。可把［显示主菜单］分配给自定义键一键打开。</p>
+<h3>2.3 Fn 菜单（功能菜单）</h3>
+<ul>
+<li><strong>操作</strong>：拍摄时按 Fn → 用控制拨轮上/下/左/右选功能 → 转<strong>前转盘</strong>选设置 → 按控制拨轮中央确定；部分功能可用后转盘L/R 微调。选中图标后按中央可进入该功能的专用设置画面（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li><strong>容量</strong>：静止影像、动态影像各 12 个（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li><strong>更改</strong>：MENU →（设置）→［操作自定义］→［Fn菜单设置］→ 选要替换的格子 → 选新功能（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）；触摸开启时也可长按 Fn 菜单里的图标进入［Fn菜单设置］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li><strong>出厂 12 项</strong>：帮助指南正文<strong>没有逐项列出</strong>，只给了一张“功能菜单的示例”图（p_functionmenu_ilc2360_01.png），并说明“显示的项目因相机状态而异”。可以确定的是静止影像 Fn 菜单出厂含［创意外观］（帮助指南以“把［创意外观］换成［网格线显示］”为例，<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。示例图中按图标外形可辨认出（本手册辨认，非原文）：创意外观（ST）、测光模式（多重）、〈静〉SteadyShot（开）、识别目标（人）、对焦模式（AF-A）、APS-C S35拍摄（自动）、白平衡模式（AWB）、一个“AE + 手指”触摸类图标、静音模式、AF中的被摄体识别（开）、对焦区域（广域）、JPEG影像尺寸（33M）。</li>
+<li>DISP 切到［〈静〉取景器］画面时按 Fn，可直接在该信息画面上改设置；该画面上［创意外观］［图片配置文件］要进入专用设置画面才能改（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>触摸：［拍摄画面］下［上划］=［打开Fn菜单］（出厂即如此）时，在拍摄画面上划可打开 Fn 菜单（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<h3>2.4 自定义键（自定键/转盘设置）</h3>
+<p><strong>可自定义的部件</strong>：自定义按钮1（C1）、后转盘L、MOVIE按钮、后转盘R、AF-ON按钮、Fn/（发送）按钮、控制拨轮（旋转）/中央按钮功能/左按钮功能/右按钮功能/下按钮、自定义按钮2（C2）、前转盘；另外镜头上的对焦保持按钮也可分配（部分镜头才有）。静止影像、动态影像、播放三套分开设置。</p>
+<p><strong>路径</strong>：</p>
+<ul>
+<li>静止影像：MENU →（设置）→［操作自定义］→［〈静〉自定键/转盘设置］</li>
+<li>动态影像：MENU →（设置）→［操作自定义］→［〈动〉自定键/转盘设置］</li>
+<li>播放：MENU →（设置）→［操作自定义］→［〈播〉自定义键设置］</li>
+<li>前两项也可从 MENU →（设置）→［转盘自定义］进入（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<p><strong>步骤</strong>（以把［被摄体识别AF］分配到中央按钮为例）：进入［〈静〉自定键/转盘设置］→ 用控制拨轮上/下移到［后侧］画面 → 选［中央按钮功能］按中央 → 选［被摄体识别AF］按中央（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。在设置画面上直接按想改的那个键，可跳到该键的设置画面（某些键除外）。</p>
+<p><strong>帮助指南中出现过的可分配功能（举例，按用途归类）</strong>：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>用途</th>
+<th>可分配的功能名（照原文）</th>
+<th>出处</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>曝光锁定</td>
+<td>［AE锁定保持］［AE锁定切换］，以及带点测光图标的［〈点测光图标〉AE锁定保持］［〈点测光图标〉AE锁定切换］（“点AEL”）</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>对焦</td>
+<td>［AF开启］［对焦保持］［对焦标准］［跟踪开启］［跟踪开启+AF开启］［跟踪开启（中央框图标）+AF ON］［被摄体识别AF］［AF/MF选择器保持］［AF/MF选择器切换］［切换对焦区域］［识别目标切换］［切换右眼/左眼］［保持识别关闭］［切换识别关闭］［保持跟踪关闭］［切换跟踪关闭］［保持跟踪识别关闭］［切换跟踪识别关闭］［保持期间注册AF区域］［切换注册的AF区域］［注册的AF区域+AF开启］［切换AF边框移动保持］</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>预览</td>
+<td>［光圈预览］（景深预览）［拍摄结果预览］［亮屏显示］</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>闪光</td>
+<td>［FEL锁定切换］［FEL锁定保持］［FEL锁定/AEL保持］［FEL锁定/AEL切换］［无线测试闪光灯］［外置闪光灯闪光设置］</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>白平衡</td>
+<td>［白平衡模式］（C1 出厂）［AWB锁定保持］［AWB锁定切换］</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>显示/构图</td>
+<td>［网格线显示选择］［网格线类型］［取景器/显示屏选择］［〈静〉取景器帧速率］［显示主菜单］［MENU］［切换显示屏翻转显示］</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>防抖/防闪烁</td>
+<td>［〈静〉SteadyShot选择］［防闪烁拍摄选择］［可变快门选择］［防闪烁Tv扫描］［快门速度(步级)］</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>设置调出</td>
+<td>［调出自定保持1］～［调出自定保持3］、我的转盘（［保持期间的我的转盘1～3］［我的转盘1→2→3］［切换我的转盘1～3］）、［〈静〉照相模式］</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>播放</td>
+<td>［保护］［分级］（〈播〉自定义键设置）、拍摄后立刻给最后一张评级的［添加分级（1颗星图标）］～［添加分级（5颗星图标）］（〈静〉自定键）</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>限制</strong>：［AE锁定保持］［对焦标准］［AF/MF选择器保持］［保持期间注册AF区域］不能分配给控制拨轮的［左按钮功能］［右按钮功能］［下按钮］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。全部可分配功能清单帮助指南只给了外部链接 https://support.d-imaging.sony.co.jp/support/tutorial/ilc/ilce-7cm2/l/custom.php（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</p>
+<p><strong>我的转盘设置</strong>（临时换转盘功能）：MENU →（设置）→［转盘自定义］→［我的转盘设置］，把前转盘/后转盘L/后转盘R/控制拨轮的功能组合登记为［我的转盘1］～［我的转盘3］；再在自定键设置里给某键分配“保持期间/1→2→3/切换”任一种调出方式（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</p>
+<p><strong>注册自定义拍摄设置</strong>（按住键临时换整套设置）：MENU →（拍摄）→［照相模式］→［注册自定义拍摄设置］→［调出自定保持1］～［调出自定保持3］，勾选要调出的项目（曝光、对焦设置、拍摄模式等）后［注册］；再给某键分配对应的［调出自定保持N］，按住该键时生效、松开恢复。仅 P/A/S/M 可用（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</p>
+<h3>2.5 我的菜单</h3>
+<ul>
+<li>添加：MENU →（我的菜单）→［我的菜单设置］→［添加项目］→ 选项目 → 选位置；或在菜单项目上按（删除）按钮 →［添加到我的菜单］。最多 42 个；（播放）页签的项目不能加（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>排序/删除：同一分组里的［排序项目］［删除项目］［删除页面］［全部删除］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>按 MENU 先出“我的菜单”：MENU →（我的菜单）→［我的菜单设置］→［从我的菜单显示］→［开］（出厂［关］=显示最近一次的菜单）（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<h3>2.6 MR（拍摄设置存储 / 调出拍摄设置）</h3>
+<ul>
+<li><strong>存</strong>：先把相机调成要保存的设置 → MENU →（拍摄）→［照相模式］→［MR拍摄设置存储］→ 选编号 → 按中央确定（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li><strong>容量</strong>：每种照相模式（静止影像/动态影像/慢和快动作/延时）可存 3 组到相机（对应模式旋钮 1/2/3），另可存 4 组到存储卡（M1～M4，需插卡）（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li><strong>能存什么</strong>：各种拍摄功能，包括曝光模式（P/A/S/M）、光圈、快门速度；<strong>不能存程序转换</strong>；<strong>不能存自定义键设置</strong>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li><strong>取</strong>：模式旋钮转到 1/2/3；卡上的 M1～M4 用 MENU →（拍摄）→［照相模式］→［MR调出拍摄设置］选编号。可调出同型号其他相机存在卡上的设置（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li><strong>改</strong>：改好后重新存到同一编号（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li><strong>注意</strong>：格式化存储卡会删掉卡上的 M1～M4（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<h3>2.7 其他与“设置管理”有关的功能</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>功能</th>
+<th>路径 / 操作</th>
+<th>说明</th>
+<th>出处</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>保存/加载设置</td>
+<td>MENU →（设置）→［重置/保存设置］→［保存/加载设置］→［加载］/［保存］/［删除］</td>
+<td>整机设置存到卡上，每张卡最多 10 组；不同型号不能互加载；自定义白平衡 1～3、外置闪光灯设置、IPTC/版权信息等不保存；模式旋钮在 1/2/3 时不能用</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>出厂重置</td>
+<td>MENU →（设置）→［重置/保存设置］→［出厂重置］→［相机设置复位］或［初始化］</td>
+<td>前者只复位主要拍摄设置，后者全部初始化；图片配置文件（PPLUT 除外）不被重设</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>静态/动态不同设置</td>
+<td>MENU →（设置）→［操作自定义］→［静态/动态不同设置］</td>
+<td>光圈、快门速度、ISO、曝光补偿、测光模式、白平衡模式、图片配置文件、对焦模式可选照片/视频分开设</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>转盘/拨轮锁定</td>
+<td>MENU →（设置）→［转盘自定义］→［转盘/拨轮锁定］→［锁定］，之后按住 Fn 直到出现“已锁定。”</td>
+<td>锁前转盘、后转盘L/R、控制拨轮；同时按住 MENU 和 Fn 5 秒可锁住除快门外所有键</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</section>
+<section id="s4"><h2>3 照相模式与曝光</h2><h3>3.1 照相模式一览</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>模式</th>
+<th>怎么进入</th>
+<th>要点</th>
+<th>出处</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>智能自动</td>
+<td>静止影像档 + 模式旋钮 AUTO → 照相模式选择画面选［智能自动］</td>
+<td>自动场景识别（肖像、婴儿、夜景、背光、风景、微距、聚光灯、低照明、三脚架夜景等图标）；不能曝光补偿；ISO 固定 ISO AUTO、白平衡固定［自动］、测光固定［多重］、对焦区域固定［广域］</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>场景选择</td>
+<td>模式旋钮 AUTO → 照相模式选择画面选场景</td>
+<td>肖像／运动／微距／风景／黄昏／夜景／夜景肖像（夜景肖像要用另售闪光灯）</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>（切换自动/场景）</td>
+<td>MENU →（拍摄）→［照相模式］→［自动/场景选择］</td>
+<td>［照相模式选择屏幕］设为［不显示］时用它选</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>P 程序自动</td>
+<td>模式旋钮 P</td>
+<td>转前转盘/后转盘L 做程序转换（P→P*）；用闪光灯时不能转换；换模式或关机即取消</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>A 光圈优先</td>
+<td>模式旋钮 A</td>
+<td>前转盘/后转盘L 调光圈；若无法正确曝光，快门速度数字闪烁</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>S 快门优先</td>
+<td>模式旋钮 S</td>
+<td>前转盘/后转盘L 调快门；若无法正确曝光，光圈值闪烁</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>M 手动曝光</td>
+<td>模式旋钮 M</td>
+<td>前转盘=光圈，后转盘L=快门速度；ISO 也可设 ISO AUTO</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>B 门</td>
+<td>静止影像档 + 模式旋钮 M → <strong>顺时针转后转盘L直到显示［BULB］</strong> → 前转盘调光圈 → 半按对焦 → 按住快门曝光</td>
+<td>连拍/自拍(连拍)/连续阶段曝光、电子快门、静音模式开、间隔拍摄时不能用 BULB（会暂时变 30 秒）</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>MR 1/2/3</td>
+<td>模式旋钮 1/2/3</td>
+<td>调出存好的设置（见 2.6）</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3>3.2 曝光控制类型（只用于视频）</h3>
+<p>MENU →（拍摄）→［照相模式］→［曝光控制类型］，只在动态影像/S&amp;Q 档出现：</p>
+<ul>
+<li>［P/A/S/M模式］（出厂）：视频也用模式旋钮的 P/A/S/M。</li>
+<li>［灵活曝光模式］：光圈、快门、ISO 各自独立切换自动/手动（用 C1/C2/AF-ON 长按切换，见 1.6）。</li>
+<li>静止影像档按 MOVIE 录视频时，即使设了灵活曝光模式，也按模式旋钮的曝光模式录（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>对照片拍摄没有影响——照片的 P/A/S/M 就是模式旋钮（推论：该项只在动态影像/S&amp;Q 档显示，<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<h3>3.3 快门：速度范围、快门类型、静音、防闪烁</h3>
+<ul>
+<li><strong>速度范围</strong>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）：机械快门 1/4000～30 秒 + BULB；电子快门 1/8000～30 秒；视频 1/8000～1 秒。</li>
+<li><strong>快门类型</strong>：MENU →（拍摄）→［快门/静音］→［快门类型］→［机械快门］（出厂）/［电子快门］。只有这两项；P/A/S/M 以外的照相模式下不能选。<strong>电子快门时不能用：闪光拍摄、长时曝光降噪、BULB 拍摄、防闪烁拍摄</strong>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。帮助指南中没有“电子前帘快门”这一选项。</li>
+<li><strong>静音模式</strong>：MENU →（拍摄）→［快门/静音］→［静音模式设置］→［静音模式］→［开］。开启后［快门类型］和［间隔内的快门类型］锁定为［电子快门］、［音频信号(拍摄)］锁定为［关］；同样不能闪光、不能长时曝光降噪、不能 BULB、不能防闪烁拍摄；光圈和对焦的操作音仍会有（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li><strong>防闪烁</strong>：MENU →（拍摄）→［快门/静音］→［防闪烁设置］：
+<ul>
+<li>［防闪烁拍摄］（仅照片，仅机械快门，P/A/S/M 和智能自动可用）：半按快门检测 100/120 Hz 闪烁，看到闪烁图标后再拍；B 门、电子快门、视频档时不可用（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>［可变快门］（S/M/灵活曝光、可手动设快门时）：快门速度以小数显示（如 250.6），在［可变快门设置］里微调，按控制拨轮中央可自动设定；能对付高于 100/120 Hz 的 LED 闪烁。<strong>开启时闪光灯同步速度可能被限制到更慢</strong>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+</li>
+</ul>
+<h3>3.4 光圈</h3>
+<p>A 档用前转盘或后转盘L、M 档用前转盘调光圈（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。“用镜头光圈环设定光圈值时，光圈环的值优先于转盘的值”这句原文出自视频［自动/手动切设］页（<a class="src" href="" target="_blank" rel="noopener">官方页</a>），照片模式下光圈环与转盘的关系帮助指南未载明。景深预览见 3.12 的［光圈预览］。</p>
+<h3>3.5 ISO</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+<th>出处</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>设定</td>
+<td>按控制拨轮右（ISO）→ 选值；或 MENU →（曝光/颜色）→［曝光］→［ISO］。前转盘/控制拨轮 1/3 EV 一档，后转盘L/R 1 EV 一档</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>范围（照片）</td>
+<td>ISO 100～51200；扩展最小 ISO 50、最大 ISO 204800；菜单可选 ISO 50～ISO 204800；ISO 50 等低于 100 时动态范围可能降低</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>ISO AUTO</td>
+<td>出厂即 ISO AUTO；自动范围 ISO 100～12800，可设上下限：选［ISO AUTO］后按控制拨轮右 →［ISO AUTO最大］/［ISO AUTO最小］</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>ISO AUTO最小速度</td>
+<td>MENU →（曝光/颜色）→［曝光］→［ISO AUTO最小速度］：［更慢］［低速］［标准］（按焦距自动）［高速］［更快］，各档相差 1 EV；或直接指定 1/8000～30&quot;。只对 P、A 有效；即使到了 ISO AUTO 上限仍欠曝，快门会慢于该值；用闪光灯拍亮处时最快受 1/160 秒同步速度限制</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>ISO范围限制</td>
+<td>MENU →（曝光/颜色）→［曝光］→［ISO范围限制］→［最小］/［最大］，限制手动 ISO 可选范围</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>M + ISO AUTO</td>
+<td>可以；ISO 自动变化来配合你设的光圈/快门；这时可用曝光补偿；无法达到适当曝光时 ISO 值闪烁</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>固定为 AUTO 的模式</td>
+<td>智能自动、场景选择</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3>3.6 曝光补偿、曝光步级、曝光标准调整</h3>
+<ul>
+<li><strong>曝光补偿</strong>：出厂由<strong>后转盘R</strong>直接调；菜单路径 MENU →（曝光/颜色）→［曝光补偿］→［曝光补偿］。照片范围 −5.0～+5.0 EV，视频 −2.0～+2.0 EV；画面亮度只模拟到 ±3.0 EV，超出部分仍会记录到照片里。智能自动、场景选择不能补偿；<strong>M 模式只有 ISO AUTO 时才能补偿</strong>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li><strong>曝光步级</strong>：MENU →（曝光/颜色）→［曝光补偿］→［曝光步级］→［0.3段］（出厂）/［0.5段］，同时决定快门、光圈、曝光补偿的级差（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li><strong>曝光标准调整</strong>：MENU →（曝光/颜色）→［曝光补偿］→［曝光标准调整］→ 选测光模式 → 在 −1～+1 EV 间以 1/6 EV 调；相当于给某种测光模式加固定偏移，不显示为曝光补偿，Exif 中单独记录；会改变 M.M.（手动测光）的基准（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<h3>3.7 AE 锁定（A7C II 没有 AEL 专用键）</h3>
+<ol>
+<li>分配：MENU →（设置）→［操作自定义］→［〈静〉自定键/转盘设置］→ 选键 → 分配［AE锁定切换］（按一下锁、再按一下解）或［AE锁定保持］（按住期间锁定）（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>对准要测光的位置按该键，屏幕显示 AE 锁定图标（图标外形是星号“✱”）；再重新构图对焦拍摄（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>还有带点测光图标的［AE锁定保持］/［AE锁定切换］（即“点AEL”）：帮助指南只说“使用点AEL期间将根据为［点测光］设定的值锁定曝光值”，未单独说明其操作（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>半按快门锁曝光：MENU →（曝光/颜色）→［测光］→［快门AEL］：［自动］（出厂；单次AF 时半按在对焦后锁定曝光，自动AF 判定被摄体移动或连拍时取消）／［开］（半按即锁）／［关］（半按不锁，对焦与曝光分开）。给某键分配了［AE锁定切换］时，该键操作优先（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li><strong>手动转换</strong>（M 模式）：按住分配了 AE 锁定的键再转前/后转盘，可在保持曝光值不变的前提下改变快门/光圈组合（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>限制：［AE锁定保持］不能分配给控制拨轮左/右/下；用光学变焦以外的变焦时 AE 锁定不可用（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ol>
+<h3>3.8 测光模式</h3>
+<p>MENU →（曝光/颜色）→［测光］→［测光模式］（出厂［多重］，<a class="src" href="" target="_blank" rel="noopener">官方页</a>）：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>帮助指南说明</th>
+<th>对应课程概念</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>多重</td>
+<td>整个画面分成多个区域分别测光，决定整体适当曝光（多重测光）；规格为 1200 区域评估测光（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+<td>评价测光 / 矩阵测光</td>
+</tr>
+<tr>
+<td>中心</td>
+<td>测整个画面平均亮度，强调中央区域（偏重中央测光）</td>
+<td>中央重点平均测光</td>
+</tr>
+<tr>
+<td>点测光</td>
+<td>只测测光圆内部；圆的大小可选［点测光: 标准］/［点测光: 大］；位置由［点测光点］决定</td>
+<td>点测光（“大”可作局部测光的替代，推论）</td>
+</tr>
+<tr>
+<td>整个屏幕平均</td>
+<td>测整个画面平均亮度，构图/被摄体位置变化时曝光稳定</td>
+<td>全画面平均（课程中无对应）</td>
+</tr>
+<tr>
+<td>强光</td>
+<td>强调画面高光区域，适合避免过曝；与 DRO 同时开启时会自动校正亮度和对比度；画面有更亮部分时主体可能偏暗</td>
+<td>高光（亮部）重点测光</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>智能自动、场景选择、使用光学变焦以外的变焦时，测光固定为［多重］。</li>
+<li><strong>点测光点</strong>：MENU →（曝光/颜色）→［测光］→［点测光点］→［中间］（出厂，始终测中央）/［对焦点联动］。联动只在对焦区域为［点: L/M/S］［扩展点］［跟踪: 点L/M/S］［跟踪: 扩展点］时有效；［广域］［区］［中间固定］及其跟踪版时测光点锁在中央；与跟踪的起始位置联动，但不随被摄体跟踪移动（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li><strong>多重测光人脸优先</strong>：MENU →（曝光/颜色）→［测光］→［多重测光人脸优先］→［开］（出厂）/［关］；多重测光时以检测到的人脸测光；识别目标不是［人］时不工作（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<h3>3.9 包围曝光（阶段曝光）</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+<th>出处</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>进入</td>
+<td>按控制拨轮左（拍摄模式）→［连续阶段曝光］（按住快门连拍完一组）或［单拍阶段曝光］（每按一次拍一张）；也可 MENU →（拍摄）→［拍摄模式］→［拍摄模式］</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>步长与张数</td>
+<td>进入后用控制拨轮选“曝光值”（步长）和“拍摄张数”；选 2 张时可选偏 + 或偏 −。帮助指南指示示例为“以 0.3 EV 步级偏移的 3 张”、闪光阶段曝光“以 0.7 EV 步级偏移的 3 张”；<strong>可选步长和张数的完整清单帮助指南未载明</strong></td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>顺序</td>
+<td>MENU →（拍摄）→［拍摄模式］→［阶段曝光设置］→［阶段曝光顺序］：［0→-→+］（出厂）/［-→0→+］</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>配合自拍</td>
+<td>同上［阶段曝光中自拍定时］：关/2秒/5秒/10秒</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>改变的是什么</td>
+<td>M 模式 + ISO AUTO 时改 ISO；M 模式非 ISO AUTO 时改快门速度；有曝光补偿时以补偿后为中心</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>不能用</td>
+<td>智能自动、场景选择、［图片配置文件］不为［关］时</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>带闪光灯</td>
+<td>选连续阶段曝光也会变成<strong>闪光阶段曝光</strong>（改变闪光量），且要每张按一次快门</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>另有［白平衡阶段曝光］［DRO阶段曝光］［对焦包围］，见第 6 章。</p>
+<h3>3.10 DRO、自动 HDR、HLG 静态影像</h3>
+<ul>
+<li><strong>动态范围优化（DRO）</strong>：MENU →（曝光/颜色）→［颜色/色调］→［动态范围优化］→［关］／［动态范围优化: 自动］（出厂）／［动态范围优化: 1级］（弱）～［5级］（强）。［图片配置文件］不为［关］或［Log拍摄］为［开(灵活ISO)］时固定为［关］；场景选择中黄昏/夜景/夜景肖像固定［关］，其余场景固定［自动］；增强效果时可能有噪点（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li><strong>自动 HDR（多张合成）</strong>：帮助指南的菜单总表里<strong>没有</strong>此项（<a class="src" href="" target="_blank" rel="noopener">官方页</a>），即帮助指南未载有该功能。</li>
+<li><strong>HLG静态影像</strong>：MENU →（拍摄）→［影像质量/记录］→［HLG静态影像］→［开］；仅在 HEIF 格式（［JPEG/HEIF切换］设为 HEIF、［〈静〉文件格式］设为［HEIF］）且 P/A/S/M 时可用，得到宽动态范围、BT.2020 色域的照片；开启时 DRO、创意外观、DRO 阶段曝光、图片配置文件不可用（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<h3>3.11 斑马线与直方图</h3>
+<ul>
+<li><strong>斑马线</strong>：MENU →（曝光/颜色）→［斑马线显示］→［斑马线显示］［开］/［关］（出厂关）；［斑马线水平］70/75/80/85/90/95/100/100+（出厂 70）。可登记查正确曝光用（标准值+范围）和查过曝用（下限值）两种，出厂分别登记在［自定义 1］［自定义 2］。HDMI 外接设备上不显示（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li><strong>直方图（柱状图）</strong>：拍摄或播放时反复按 DISP 切到［柱状图］显示；左暗右亮，两端出现峰值表示有过曝/欠曝区域；直方图反映的是屏幕显示的影像，<strong>用闪光灯时拍摄画面与回放的直方图会非常不同</strong>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<h3>3.12 实时取景显示（影棚闪光关键）与各种预览</h3>
+<p><strong>实时取景显示设置</strong>：MENU →（拍摄）→［拍摄显示］→［实时取景显示设置］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；出厂值见 <a class="src" href="" target="_blank" rel="noopener">官方页</a>）：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>子项</th>
+<th>选项（出厂值加粗）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>实时取景显示</td>
+<td><strong>设置效果开</strong> / 设置效果关</td>
+<td>开=屏幕近似反映曝光补偿、白平衡、创意外观等所有设置；关=不反映设置，始终以适当亮度显示（M 模式也一样），画面出现 VIEW 图标，此时拍出的亮度与屏幕不同</td>
+</tr>
+<tr>
+<td>曝光效果</td>
+<td><strong>曝光设置+闪光</strong> / 仅曝光设置</td>
+<td>设置效果开时是否在实时取景里显示闪光自动修正的效果；用闪光灯拍人像时选［仅曝光设置］可按环境光手动定曝光；<strong>只对 Sony 制造的闪光灯有效</strong></td>
+</tr>
+<tr>
+<td>帧速率低速限制</td>
+<td>开 / <strong>关</strong></td>
+<td>开=暗处取景帧速率不变慢，但画面可能变暗</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>原文提示：“当使用摄影棚闪光灯等第三方闪光灯时，在有些快门速度设置下实时取景显示可能较暗。当［实时取景显示］设定为［设置效果关］时，将会明亮地显示实时取景显示”（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>智能自动、场景选择下不能设为［设置效果关］；静止影像档里录视频时设置仍会反映到画面（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li><strong>亮屏显示</strong>（暗处构图）：给某键分配［亮屏显示］，按下后延长取景曝光时间让暗处可见；期间实时取景自动变为［设置效果关］；关机、切出 P/A/S/M、对焦模式改为手动对焦以外时自动取消（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li><strong>光圈预览</strong>（=景深预览）：给某键分配［光圈预览］，按住期间收缩到设定光圈查看虚化（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li><strong>拍摄结果预览</strong>：给某键分配［拍摄结果预览］，按住期间预览应用了 DRO、快门速度、光圈、ISO 的效果（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<h3>3.13 M 模式下的曝光指示（M.M.）与“曝光设置向导”</h3>
+<ul>
+<li>M 模式、ISO <strong>不是</strong> ISO AUTO 时，用“M.M.”（手动测光）看曝光：向 + 表示变亮、向 − 表示变暗、0 为相机分析的适当曝光；显示屏上以数值显示，取景器中以测光指示显示；环境光超出测光范围时指示闪烁；ISO AUTO 时不出现 M.M.（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>［曝光标准调整］会改变 M.M. 的基准（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>A 档快门值闪烁、S 档光圈值闪烁、M+ISO AUTO 时 ISO 值闪烁 = 无法达到适当曝光（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>帮助指南中<strong>没有</strong>“曝光设置向导/曝光设置导览”之类的功能（全文检索无此项）。</li>
+</ul>
+<hr />
+</section>
+<section id="s5"><h2>4 白平衡与色彩/画质</h2><h3>4.1 白平衡模式</h3>
+<ul>
+<li>路径：MENU →（曝光/颜色）→［白平衡模式］→［白平衡模式］；出厂［自动］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。<strong>出厂已分配到 C1 按钮</strong>，拍摄时按 C1 即可改（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>智能自动、场景选择下固定为［自动］。汞灯、钠灯下无法准确白平衡，建议用闪光灯或［自定义 1］～［自定义 3］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>选项（照原文）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>自动 ／ 自动: 环境 ／ 自动: 白</td>
+<td>相机自动检测光源；后两个只在［AWB优先级设置］设为［环境］或［白］时才出现</td>
+</tr>
+<tr>
+<td>日光 ／ 阴影 ／ 阴天 ／ 白炽灯</td>
+<td>预设白平衡</td>
+</tr>
+<tr>
+<td>荧光灯: 暖白色 ／ 荧光灯: 冷白色 ／ 荧光灯: 日光白 ／ 荧光灯: 日光</td>
+<td>四种荧光灯预设</td>
+</tr>
+<tr>
+<td>闪光灯</td>
+<td>仅拍照片时有</td>
+</tr>
+<tr>
+<td>水中自动</td>
+<td>预设</td>
+</tr>
+<tr>
+<td>色温/滤光片</td>
+<td>按光源调色调，实现 CC（色彩补偿）滤光片效果</td>
+</tr>
+<tr>
+<td>自定义 1 ／ 自定义 2 ／ 自定义 3</td>
+<td>记忆现场照明下的标准白色（见 4.3）</td>
+</tr>
+</tbody>
+</table></div>
+<h3>4.2 色温（K 值）与微调</h3>
+<ul>
+<li>选［色温/滤光片］后，<strong>转后转盘L 或后转盘R</strong> 即可改色温（不必按控制拨轮右）（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。“我的转盘”也可登记［白平衡模式(色温)］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li><strong>K 值可调范围帮助指南未载明</strong>。图标表里白平衡显示示例为“7500K A5 G5”（<a class="src" href="" target="_blank" rel="noopener">官方页</a>），但正文没有说明色温/滤光片各轴的名称与范围。</li>
+<li><strong>微调</strong>：在白平衡选择画面按控制拨轮右，显示微调画面后按需微调色调（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。微调画面各轴（课程里的 A-B／G-M）的名称与级数帮助指南未载明。</li>
+</ul>
+<h3>4.3 自定义白平衡登记步骤</h3>
+<ol>
+<li>MENU →（曝光/颜色）→［白平衡模式］→［白平衡模式］→ 选［自定义 1］～［自定义 3］之一 → <strong>按控制拨轮右</strong>。</li>
+<li>选“设置自定义白平衡”图标 → 按控制拨轮中央。</li>
+<li>让白色区域完全覆盖白平衡捕捉框 → 按中央。听到快门声并显示［捕获自定义WB数据。］后，显示校正值（色温和彩色滤光）。
+<ul>
+<li>捕捉框位置可用控制拨轮上/下/左/右移动；按（删除）按钮回到中央。</li>
+<li>捕捉后按控制拨轮右可进入微调画面。</li>
+<li>动态影像档、［静音模式］为［开］、［快门类型］为［电子快门］时没有快门声。</li>
+</ul>
+</li>
+<li>按中央注册，返回菜单。设置一直保留到被覆盖为止。</li>
+</ol>
+<p>注意：显示［捕获自定义WB失败。］表示数值超出预期范围（例如被摄体太鲜艳），仍可注册但建议重做，此时自定义白平衡图标显示为橙色；<strong>如果捕获时用了闪光灯，就以闪光注册，以后调出该设置拍摄时务必用闪光灯</strong>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。自定义白平衡 1～3 不能用［保存/加载设置］保存到卡上（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</p>
+<h3>4.4 AWB 相关设置</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>功能</th>
+<th>路径 / 选项</th>
+<th>出处</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AWB优先级设置</td>
+<td>MENU →（曝光/颜色）→［白平衡模式］→［AWB优先级设置］→［标准］（出厂）／［环境］（优先光源色调，偏暖氛围）／［白］（低色温光源下优先还原白色）</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>快门AWB锁定</td>
+<td>MENU →（曝光/颜色）→［白平衡模式］→［快门AWB锁定］→［快门半路向下］（半按即锁，连拍中也锁）／［连拍］（连拍锁定为第一张）／［关］（出厂）；只在白平衡为［自动］或［水中自动］时起作用</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>AWB锁定键</td>
+<td>给自定义键分配［AWB锁定保持］或［AWB锁定切换］</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>AWB锁定 + 闪光</td>
+<td>白平衡在闪光前已被锁定，色调可能不自然；用闪光灯时把［快门AWB锁定］设为［关］或［连拍］、不要用 AWB 锁定键，或把白平衡设为［闪光灯］</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>减震WB</td>
+<td>只用于视频，改变白平衡切换速度</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3>4.5 白平衡包围（白平衡阶段曝光）</h3>
+<p>按控制拨轮左（拍摄模式）→［白平衡阶段曝光］→ 用控制拨轮右/左选：</p>
+<ul>
+<li>［白平衡阶段曝光: Lo］：三张白平衡略微变化（10 MK⁻¹ 范围内）</li>
+<li>［白平衡阶段曝光: Hi］：三张白平衡显著变化（20 MK⁻¹ 范围内）</li>
+</ul>
+<p>MK⁻¹ 与“迈尔德”是同一数值单位；顺序按［阶段曝光设置］→［阶段曝光顺序］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</p>
+<h3>4.6 文件格式（RAW/JPEG/HEIF）</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>路径</th>
+<th>选项（出厂值加粗）</th>
+<th>出处</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JPEG/HEIF切换</td>
+<td>MENU →（拍摄）→［影像质量/记录］→［JPEG/HEIF切换］</td>
+<td><strong>JPEG</strong>／HEIF(4:2:0)／HEIF(4:2:2)；决定下面各项显示为 JPEG 还是 HEIF</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>〈静〉文件格式</td>
+<td>MENU →（拍摄）→［影像质量/记录］→［〈静〉文件格式］</td>
+<td>RAW／RAW&amp;JPEG（或 RAW&amp;HEIF）／<strong>JPEG</strong>（或 HEIF）</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>RAW文件类型</td>
+<td>MENU →（拍摄）→［影像质量/记录］→［RAW文件类型］</td>
+<td>未压缩／无损压缩(L)／无损压缩(M)／无损压缩(S)／<strong>已压缩</strong>（约为未压缩一半大小）</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>RAW 每像素 14 比特；但［连拍］且［RAW文件类型］为［已压缩］时限制为 12 比特（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>RAW 纵横比始终 3:2；RAW+JPEG/HEIF 时 JPEG/HEIF 按［纵横比］设置记录（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>无损压缩 L 只能在全画幅拍摄时选；M/S 尺寸显影后像素数与 JPEG/HEIF 的 M/S 相同（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>打开 RAW 需要 Imaging Edge Desktop；播放 HEIF 需要支持 HEIF 的环境（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<h3>4.7 JPEG/HEIF 影像质量、影像尺寸、纵横比</h3>
+<ul>
+<li><strong>影像质量</strong>：MENU →（拍摄）→［影像质量/记录］→［JPEG影像质量］/［HEIF影像质量］→ 超精细／<strong>精细</strong>（出厂）／标准／小（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li><strong>纵横比</strong>：MENU →（拍摄）→［影像质量/记录］→［纵横比］→ <strong>3:2</strong>（出厂）／4:3／16:9／1:1（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li><strong>影像尺寸</strong>：MENU →（拍摄）→［影像质量/记录］→［JPEG影像尺寸］/［HEIF影像尺寸］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）：</li>
+</ul>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>纵横比</th>
+<th>L</th>
+<th>M</th>
+<th>S</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3:2</td>
+<td>33M（7008×4672）</td>
+<td>14M（4608×3072）</td>
+<td>8.2M（3504×2336）</td>
+</tr>
+<tr>
+<td>4:3</td>
+<td>29M（6224×4672）</td>
+<td>13M（4096×3072）</td>
+<td>7.3M（3120×2336）</td>
+</tr>
+<tr>
+<td>16:9</td>
+<td>28M（7008×3944）</td>
+<td>12M（4608×2592）</td>
+<td>6.9M（3504×1968）</td>
+</tr>
+<tr>
+<td>1:1</td>
+<td>22M（4672×4672）</td>
+<td>9.4M（3072×3072）</td>
+<td>5.5M（2336×2336）</td>
+</tr>
+</tbody>
+</table></div>
+<p>APS-C 尺寸拍摄时不能选 L，选了 L 会暂时变成 M（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</p>
+<h3>4.8 APS-C/Super 35mm 拍摄</h3>
+<ul>
+<li>MENU →（拍摄）→［影像质量/记录］→［APS-C S35拍摄］→［开］（视角约为镜头标注焦距的 1.5 倍）／［自动］（出厂，按镜头自动；装 APS-C 专用镜头时变 APS-C）／［关］（始终全画幅）。</li>
+<li>4K 60p/50p 视频时锁定为［开］。</li>
+<li>规格中 APS-C 尺寸的闪光同步速度为 1/200 秒（全画幅 1/160 秒，Sony 闪光灯）（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>带功能环的镜头可设为用功能环切换全画幅/APS-C：MENU →（设置）→［转盘自定义］→［功能环(镜头)］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<h3>4.9 色彩空间</h3>
+<p>MENU →（拍摄）→［影像质量/记录］→［色彩空间］→［sRGB］（出厂）／［AdobeRGB］。AdobeRGB 文件名以“_”开头；在不支持 Adobe RGB 的设备上会显示得低饱和。<strong>HEIF 格式时此设置无效</strong>：［HLG静态影像］关时用 sRGB，开时用 BT.2100（BT.2020 色域）。</p>
+<h3>4.10 创意外观（=照片风格）</h3>
+<ul>
+<li>路径：MENU →（曝光/颜色）→［颜色/色调］→［创意外观］；出厂［ST(标准)］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>风格：ST(标准)、PT(人像)、NT(中性，低饱和低锐度，适合后期)、VV(鲜明)、VV2(鲜明2)、FL(胶片)、IN(哑光)、SH(柔和高调)、BW(黑白)、SE(棕褐色)；另有 6 个［自定义外观］槽位可存自己的设置。</li>
+<li>可调参数：对比度 −9～+9、高光 −9～+9、阴影 −9～+9、褪色 0～9、饱和度 −9～+9、锐度 0～9、锐度范围 1～5、清晰 0～9。</li>
+<li>操作：控制拨轮上/下选风格 → 按右进入参数 → 左/右选参数、上/下改值；改过的风格图标旁出现星号；在该风格调整画面按（删除）按钮可一次性恢复默认。</li>
+<li>限制：［图片配置文件］不为［关］或［Log拍摄］为［开(灵活ISO)］时固定为［-］；BW、SE 不能调饱和度；视频不能调锐度范围；［HLG静态影像］开时不可用（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>智能自动/场景选择下可通过触摸“影像调整”图标（我的影像风格）选创意外观并调背景虚化、亮度、色彩（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<h3>4.11 图片配置文件（简述）</h3>
+<p>MENU →（曝光/颜色）→［颜色/色调］→［图片配置文件］，出厂［关］。可用于照片和视频但“主要还是专为动态影像而设计”；帮助指南列出的预设有 PP1（Movie 伽玛）、PP2（Still 伽玛）、PP3（ITU709 自然）、PP4（忠实 ITU709）、PP5（Cine1）、PP6（Cine2）、PP10（HLG2，HDR 视频）、PP11（S-Cinetone）及 PPLUT1～4（仅视频，套用用户 LUT）。设为［关］以外时：DRO 固定［关］、创意外观固定［-］、不能阶段曝光（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。<strong>拍照学课程时保持［关］，用创意外观代替照片风格</strong>（建议）。</p>
+<h3>4.12 降噪</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>路径</th>
+<th>选项（出厂加粗）</th>
+<th>要点</th>
+<th>出处</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>高ISO降噪</td>
+<td>MENU →（拍摄）→［影像质量/记录］→［高ISO降噪］</td>
+<td><strong>标准</strong>／低／关</td>
+<td>智能自动、场景选择固定［标准］</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>长时曝光降噪</td>
+<td>MENU →（拍摄）→［影像质量/记录］→［长时曝光降噪］</td>
+<td><strong>开</strong>／关</td>
+<td>快门 1 秒或更长时，拍完再花与曝光等长的时间降噪，期间不能拍；处理中按快门可取消；电子快门、连拍、连续阶段曝光时不可用；智能自动、场景选择不能设为关</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3>4.13 其他画质相关</h3>
+<ul>
+<li><strong>镜头补偿</strong>：MENU →（拍摄）→［影像质量/记录］→［镜头补偿］→［阴影补偿］（自动/低/关，出厂自动）、［色差补偿］（自动/关，出厂自动）、［失真补偿］（自动/关，出厂关；部分镜头固定自动）、［呼吸补偿］（仅视频）；只对兼容自动补偿的镜头有效（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li><strong>美肤效果</strong>：MENU →（曝光/颜色）→［颜色/色调］→［美肤效果］→ 关（出厂）/开（高/中/低）；RAW 不可用（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<hr />
+</section>
+<section id="s6"><h2>5 对焦</h2><h3>5.1 对焦模式</h3>
+<p>路径：MENU →（对焦）→［AF/MF］→［对焦模式］；<strong>出厂［自动AF］</strong>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>选项（照原文）</th>
+<th>屏幕图标</th>
+<th>说明</th>
+<th>课程对应</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>单次AF</td>
+<td>AF-S</td>
+<td>合焦后锁定焦点，用于静止被摄体</td>
+<td>ONE SHOT／AF-S</td>
+</tr>
+<tr>
+<td>自动AF</td>
+<td>AF-A</td>
+<td>半按时判定静止则锁定、运动则连续对焦；连拍时第二张起用连续AF；<strong>只在使用支持相位检测AF的镜头时可用</strong></td>
+<td>AI FOCUS／AF-A</td>
+</tr>
+<tr>
+<td>连续AF</td>
+<td>AF-C</td>
+<td>半按住期间持续对焦；合焦时不发哔音</td>
+<td>AI SERVO／AF-C</td>
+</tr>
+<tr>
+<td>DMF</td>
+<td>DMF</td>
+<td>自动对焦后可转对焦环手动微调</td>
+<td>自动对焦后手动微调</td>
+</tr>
+<tr>
+<td>手动对焦</td>
+<td>MF</td>
+<td>转对焦环手动对焦；拍照片时转环，画面会显示“焦距”（原文用词，指对焦距离指示，仅供参考；装卡口适配器时不显示）（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+<td>MF</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>视频（动态影像档、S&amp;Q 档或录制中）只能用［连续AF］和［手动对焦］。</li>
+<li>对焦指示（图标外形据 image 目录图标文件）：实心圆点“●”点亮 = 合焦并锁定；“●”闪烁 = 未合焦；括号包着圆点“(●)”点亮 = 合焦并随被摄体移动连续调整；空括号“( )”点亮 = 正在对焦（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>对焦锁定（课程里的“半按锁焦再构图”）：单次AF 下半按住快门即锁定对焦，构图后按到底（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>难对焦的被摄体：暗且远、低反差、隔玻璃、快速移动、反光、闪烁光、背光、重复图案、对焦区域内远近不同的被摄体（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<h3>5.2 对焦区域（=对焦点选择）</h3>
+<p>路径：MENU →（对焦）→［对焦区域］→［对焦区域］；出厂［广域］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>广域</td>
+<td>自动对覆盖整个画面的被摄体对焦；半按时合焦区域显示绿框</td>
+</tr>
+<tr>
+<td>区</td>
+<td>在屏幕上选一个“区”，相机在区内自动选对焦区域</td>
+</tr>
+<tr>
+<td>中间固定</td>
+<td>自动对画面中央对焦，配合对焦锁定使用</td>
+</tr>
+<tr>
+<td>点: L ／ 点: M ／ 点: S</td>
+<td>对焦框可移到任意位置，对很小的被摄体对焦（L/M/S 为框大小）</td>
+</tr>
+<tr>
+<td>扩展点</td>
+<td>选定点对不上焦时，用其周围的对焦点作为第二优先</td>
+</tr>
+<tr>
+<td>跟踪（跟踪: 广域／区／中间固定／点L／点M／点S／扩展点）</td>
+<td><strong>只在［连续AF］时有效</strong>；半按住时在所选区域内跟踪被摄体；视频档不能选</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>移动对焦框</strong>：对焦区域为［区］［点］［扩展点］时，按分配了［对焦标准］的键（<strong>出厂 = 控制拨轮中央</strong>），再用控制拨轮上/下/左/右移动；移动中按（删除）按钮回中央；再按一次［对焦标准］键退出，控制拨轮恢复原来的功能（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>对焦区域为［广域］［中间固定］［跟踪: 广域］［跟踪: 中间固定］时，自动对焦模式下按［对焦标准］键会对画面中央对焦（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li><strong>触摸</strong>：［拍摄期间的触摸功能］出厂为［触碰对焦］，可在显示屏上触摸/拖动对焦框（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>智能自动、场景选择下固定［广域］；使用光学变焦以外的变焦时对焦区域设置被禁用（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>相关辅助项（都在 MENU →（对焦）→［对焦区域］下）：［对焦区域限制］（只保留勾选的区域类型，配合［切换对焦区域］键快速切换）（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）；［换垂直和水平AF区］（关/仅AF点/AF点 + AF区域，横竖拍各记一套）（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）；［AF区域注册功能］（预存一个对焦框位置，按住自定义键调出）（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）；［对焦点的循环］（不循环/循环）（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）；［AF边框移动距离］（标准/大）（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）；［对焦边框颜色］（白/红）（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）；［AF-C区域显示］［AF区域自动清除］［相位检测区域］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<h3>5.3 跟踪</h3>
+<p>三种用法：</p>
+<ol>
+<li>［对焦区域］选［跟踪］系列（照片，仅连续AF），半按开始跟踪。</li>
+<li>触摸：［拍摄期间的触摸功能］设为［触碰跟踪］，触摸被摄体开始跟踪（照片可用于单次AF/自动AF/连续AF/DMF）。</li>
+<li>自定义键［跟踪开启］：按住期间临时把当前对焦区域变成对应的“跟踪”版（如［点: S］→［跟踪: 点S］）（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ol>
+<ul>
+<li><strong>AF-ON 键出厂是［跟踪开启+AF开启］</strong>：按住时自动对焦和跟踪同时工作，按对焦区域设置跟踪；另有［跟踪开启（中央框图标）+AF ON］，不论对焦区域，都从画面中央开始跟踪（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>暂停跟踪：分配［保持跟踪关闭］/［切换跟踪关闭］；暂停对已识别被摄体的跟踪：［保持跟踪识别关闭］/［切换跟踪识别关闭］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>AF跟踪灵敏度：MENU →（对焦）→［AF/MF］→［AF跟踪灵敏度］→ 5(响应)／4／3(标准，出厂)／2／1(锁定)（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<h3>5.4 被摄体识别 AF（眼部对焦）</h3>
+<ul>
+<li><strong>出厂就已开启人眼识别</strong>：［AF中的被摄体识别］=［开］、［识别目标］=［人］、［右眼/左眼选择］=［自动］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>路径：MENU →（对焦）→［被摄体识别］→［AF中的被摄体识别］（开/关）、［识别目标］、［右眼/左眼选择］、［被摄体检测框显示］等（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li><strong>识别目标</strong>：［自动］（固件2.00+，从勾选的目标中自动选）、［人］、［动物/鸟类］、［动物］、［鸟类］、［昆虫］、［汽车/火车］、［飞机］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li><strong>两种用法</strong>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）：</li>
+</ul>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>［AF中的被摄体识别］=开</th>
+<th>自定义键［被摄体识别AF］</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>怎么对焦</td>
+<td>半按快门</td>
+<td>按住分配了该功能的键</td>
+</tr>
+<tr>
+<td>对焦范围</td>
+<td>在所设对焦区域内部或附近识别眼/头/身体</td>
+<td>不论对焦区域设置，整个画面任意位置</td>
+</tr>
+<tr>
+<td>没识别到时</td>
+<td>执行普通自动对焦</td>
+<td>不执行自动对焦</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>动物/鸟类可在［识别目标］画面按右设［识别部分］：眼部/头部/身体、眼部/头部、眼部；还有跟踪转移范围、持续跟踪等级、识别灵敏度等详细设置（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>［右眼/左眼选择］：自动／右眼（被摄体的右眼，即拍摄者看去左侧那只）／左眼；可分配［切换右眼/左眼］键临时切换（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>想看到识别框：［〈静〉被摄体检测框显示］设为［开］（照片出厂为关）（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>识别目标不是［人］时，［多重测光人脸优先］和［登记的人脸优先］不可用（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<h3>5.5 AF-S / AF-C 优先级设置</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>路径</th>
+<th>选项（出厂加粗）</th>
+<th>出处</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AF-S优先级设置</td>
+<td>MENU →（对焦）→［AF/MF］→［AF-S优先级设置］</td>
+<td>AF（不合焦不释放快门）／快门释放优先（脱焦也释放）／<strong>均衡</strong>；用于单次AF、DMF、自动AF 且被摄体静止时</td>
+<td>0405H_AF-<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>AF-C优先级设置</td>
+<td>MENU →（对焦）→［AF/MF］→［AF-C优先级设置］</td>
+<td>AF／快门释放优先／<strong>均衡</strong>；用于连续AF 且被摄体移动时</td>
+<td>0405H_AF-<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3>5.6 AF-ON 后对焦（让半按快门不对焦）</h3>
+<ol>
+<li>MENU →（对焦）→［AF/MF］→［半按快门AF］→［关］：半按快门不再自动对焦（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>用 AF-ON 按钮对焦。注意 AF-ON 出厂是［跟踪开启+AF开启］（见 5.3）；如只要单纯的后按对焦，可把 AF-ON 改分配为［AF开启］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>预测被摄体位置、在指定距离对焦时，把［半按快门AF］和［预先AF］都设为［关］（［预先AF］出厂即关）（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>若还想让半按快门不锁曝光：［快门AEL］设为［关］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ol>
+<h3>5.7 对焦放大与 MF 辅助</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>功能</th>
+<th>路径 / 操作</th>
+<th>出厂</th>
+<th>出处</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>对焦放大</td>
+<td>MENU →（对焦）→［对焦辅助］→［对焦放大］→ 按控制拨轮中央放大（每按一次换倍率），上/下/左/右移动位置，（删除）按钮回中央；MF 时可在放大状态下调焦</td>
+<td>—</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>初始对焦放大倍率</td>
+<td>MENU →（对焦）→［对焦辅助］→［〈静〉初始对焦放大倍率］：全画幅 x1.0/x6.9，APS-C x1.0/x4.5</td>
+<td>x1.0</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>对焦放大时间</td>
+<td>MENU →（对焦）→［对焦辅助］→［对焦放大时间］：2秒/5秒/无限制</td>
+<td>无限制</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>MF中自动放大对焦</td>
+<td>MENU →（对焦）→［对焦辅助］→［MF中自动放大对焦］：MF/DMF 下一转对焦环自动放大；视频、卡口适配器时不可用</td>
+<td>开</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>放大对焦中AF</td>
+<td>MENU →（对焦）→［对焦辅助］→［放大对焦中AF］：放大画面里半按可再次自动对焦，可对比［点］更小的区域对焦</td>
+<td>开</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>触摸放大</td>
+<td>［拍摄期间的触摸功能］为［触碰对焦］时，MF 下用显示屏拍摄可双击要对焦处放大</td>
+<td>—</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3>5.8 峰值</h3>
+<p>MENU →（对焦）→［峰值显示］→［峰值显示］（开/关，出厂关）、［峰值水平］（高/中/低，出厂中）、［峰值色彩］（红/黄/蓝色/白，出厂白）。用于 MF 或 DMF；视频时也可用于自动对焦；HDMI 外接设备上不显示（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</p>
+<h3>5.9 DMF 与全部时间DMF</h3>
+<ul>
+<li>DMF：对焦模式选［DMF］→ 半按自动对焦 → 保持半按转对焦环微调 → 按到底（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>全部时间DMF：MENU →（对焦）→［AF/MF］→［全部时间DMF］→［开］（出厂关）：自动对焦时转对焦环即可随时手动对焦，不必切到 DMF；连续AF/自动AF 下连拍时不可用（［连拍: Lo］除外），部分镜头不支持（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<h3>5.10 对焦保持、AF/MF 切换</h3>
+<ul>
+<li>［对焦保持］：分配给自定义键后，对焦后按该键锁定对焦；连续AF 下按住该键可锁定焦点；镜头上的对焦保持按钮出厂即为此功能（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>［AF/MF选择器保持］（按住期间切换）/［AF/MF选择器切换］（按一下切换），不能分配给控制拨轮左/右/下；镜头 AF/MF 开关优先（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<h3>5.11 AF辅助照明</h3>
+<p>MENU →（对焦）→［AF/MF］→［AF辅助照明］→［自动］（出厂，暗处自动点亮）／［关］。灯在机身正面（自拍指示灯/AF辅助照明）；有效距离约 0.3～3.0 m（FE 28-70 mm F3.5-5.6 OSS 时）（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。热靴上装的闪光灯若带 AF 辅助照明，闪光灯打开时也会用它。视频/S&amp;Q、连续AF 或自动AF 且被摄体移动、对焦放大中、场景选择的风景/运动/夜景、装卡口适配器时不可用。</p>
+<h3>5.12 其他对焦项</h3>
+<ul>
+<li>预先AF：MENU →（对焦）→［AF/MF］→［预先AF］，开=半按前就先对焦，出厂关；只适用 E 卡口镜头（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>AF光圈驱动：［对焦优先级］／［标准］（出厂）／［静音优先级］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>自动对焦系统：相位检测/对比度检测，感光度范围 −4 EV～+20 EV（ISO 100、F2.0 相当）（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<hr />
+</section>
+<section id="s7"><h2>6 驱动、防抖、长曝光</h2><h3>6.1 拍摄模式（=驱动模式）</h3>
+<p>按<strong>控制拨轮左</strong>（拍摄模式）→ 选项目 → 用控制拨轮右/左选子档；或 MENU →（拍摄）→［拍摄模式］→［拍摄模式］。出厂［单张拍摄］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>选项（照原文）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>单张拍摄</td>
+<td>按一次拍一张</td>
+</tr>
+<tr>
+<td>连拍</td>
+<td>按住快门连续拍摄（档位见 6.2）</td>
+</tr>
+<tr>
+<td>自拍定时(单张)</td>
+<td>10秒／5秒／2秒</td>
+</tr>
+<tr>
+<td>自拍定时(连拍)</td>
+<td>10秒3张、10秒5张、5秒3张、5秒5张、2秒3张、2秒5张</td>
+</tr>
+<tr>
+<td>连续阶段曝光</td>
+<td>按住快门拍完一组不同曝光</td>
+</tr>
+<tr>
+<td>单拍阶段曝光</td>
+<td>每按一次拍一张，逐张完成一组</td>
+</tr>
+<tr>
+<td>对焦包围</td>
+<td>边移动对焦位置边连拍（景深合成用）</td>
+</tr>
+<tr>
+<td>白平衡阶段曝光</td>
+<td>三张不同色调（4.5）</td>
+</tr>
+<tr>
+<td>DRO阶段曝光</td>
+<td>三张不同 DRO 等级</td>
+</tr>
+</tbody>
+</table></div>
+<p>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</p>
+<h3>6.2 连拍档位与速度</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>档位</th>
+<th>最高速度（规格，基于索尼测量条件）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>连拍：Hi+</td>
+<td>约 10 张/秒</td>
+</tr>
+<tr>
+<td>连拍: Hi</td>
+<td>约 8.0 张/秒</td>
+</tr>
+<tr>
+<td>连拍: Mid</td>
+<td>约 6.0 张/秒</td>
+</tr>
+<tr>
+<td>连拍: Lo</td>
+<td>约 3.0 张/秒</td>
+</tr>
+</tbody>
+</table></div>
+<p>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</p>
+<ul>
+<li>Hi+ 时取景画面不是实时显示；Hi+/Hi/Mid 下光圈大于 F22（数值更大）时对焦锁定为第一张；未压缩/无损压缩 RAW、用闪光灯时连拍变慢（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>连拍可记录张数（L:33M、Hi+）：JPEG/HEIF 精细约 1000 张以上；RAW 已压缩约 44 张；RAW&amp;JPEG 已压缩约 35 张（RAW&amp;HEIF 约 38）；RAW 未压缩约 18 张；RAW&amp;JPEG/HEIF 未压缩约 16 张；RAW 无损压缩 L 约 27 张；RAW&amp;JPEG 无损 L 约 20 张（RAW&amp;HEIF 约 22）（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>连拍中持续对焦和测光：对焦模式设［连续AF］，［快门AEL］设［关］或［自动］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>缓存满时显示“SLOW”并降速；剩余张数指示：MENU →（设置）→［显示选项］→［〈静〉剩余拍摄显示］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<h3>6.3 自拍</h3>
+<ul>
+<li>2 秒自拍用于<strong>减少按快门引起的相机抖动</strong>，5/10 秒用于自拍入镜（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>取消：再按快门或按控制拨轮左停止倒计时；选［单张拍摄］即取消自拍。关倒计时哔音：［音频信号(拍摄)］设为［关］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>阶段曝光配自拍：MENU →（拍摄）→［拍摄模式］→［阶段曝光设置］→［阶段曝光中自拍定时］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<h3>6.4 各种阶段曝光（包围）一览</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>内容</th>
+<th>出处</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>连续/单拍阶段曝光</td>
+<td>曝光包围，见 3.9</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>白平衡阶段曝光</td>
+<td>Lo（10 MK⁻¹）/Hi（20 MK⁻¹），3 张</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>DRO阶段曝光</td>
+<td>Lo：Lv1、Lv2、Lv3；Hi：Lv1、Lv3、Lv5；3 张</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>对焦包围</td>
+<td>按控制拨轮右设［增量］1～10 和［拍摄张数］2～299；［对焦包围顺序］0→+（从当前位置向无穷远，到无穷远即停）或 0→-→+（固定 3 张）；［拍摄间隔］（最短/1秒/2秒/3秒/5秒/10秒/15秒/30秒）、［曝光平滑］、［对焦包围保存目的地］在［阶段曝光设置］里</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3>6.5 间隔拍摄</h3>
+<p>MENU →（拍摄）→［拍摄模式］→［间隔拍摄功能］→［间隔拍摄］→［开］，再设：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>子项</th>
+<th>范围（出厂）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>拍摄开始时间</td>
+<td>1秒～99分59秒（1秒）</td>
+</tr>
+<tr>
+<td>拍摄间隔</td>
+<td>1～60秒（3秒），指一张曝光开始到下一张曝光开始</td>
+</tr>
+<tr>
+<td>拍摄次数</td>
+<td>1～9999（30）</td>
+</tr>
+<tr>
+<td>AE跟踪灵敏度</td>
+<td>高/中/低（中）</td>
+</tr>
+<tr>
+<td>间隔内的快门类型</td>
+<td>机械快门/电子快门（电子快门，不论［快门类型］设置）</td>
+</tr>
+<tr>
+<td>拍摄间隔优先</td>
+<td>关/开（关）；P/A 下快门比间隔长时是否以间隔优先</td>
+</tr>
+</tbody>
+</table></div>
+<p>按快门开始；途中按快门结束。智能自动下不可用；建议 USB 供电；可用 Imaging Edge Desktop（Viewer）做成延时视频，相机内可用［间隔连续播放］预览（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</p>
+<h3>6.6 B 门与 BULB 定时器</h3>
+<ul>
+<li>B 门步骤见 3.1（模式旋钮 M → 后转盘L 顺时针直到［BULB］→ 按住快门）（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li><strong>BULB定时器</strong>：MENU →（曝光/颜色）→［曝光］→［BULB定时器设置］→［BULB定时器］开/关（出厂关）、［曝光时间］2～900 秒，1 秒为增量（出厂 60 秒）。开时显示倒计时，关时显示已曝光时间；中途按相机或遥控器快门可停止（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>原文提示：曝光越长噪点越明显；建议相机冷却时开始；B 门易模糊，建议用三脚架、Bluetooth 遥控器（另售）或“配备锁定功能的遥控器（另售）”；用 Bluetooth 遥控器时按一下其快门开始、再按一下结束（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<h3>6.7 遥控方式</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>方式</th>
+<th>设置</th>
+<th>出处</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bluetooth 遥控器（另售）或三脚架拍摄手柄（另售）</td>
+<td>MENU →（网络）→［Bluetooth］→［Bluetooth功能］→［开］；→［Bluetooth遥控］→［开］；→［配对］，在遥控器上配对后确认。一次只能连一个；开启时省电模式不可用</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>智能手机（Creators' App）</td>
+<td>MENU →（网络）→［连接/电脑遥控］→［智能手机连接］，按提示开 Bluetooth，在手机上用 Creators' App 配对；可边看手机画面边拍</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>电脑（Imaging Edge Desktop Remote）</td>
+<td>Wi-Fi 接入点 / Wi-Fi Direct / USB 连接；MENU →（网络）→［连接/电脑遥控］→［电脑遥控功能］→［电脑遥控］→［开］；USB 连接时在相机画面选［遥控拍摄(电脑遥控)］；已连智能手机时不能电脑遥控</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>遥控拍摄的保存位置</td>
+<td>MENU →（网络）→［连接/电脑遥控］→［遥控拍摄设置］→［静态影像保存目的地］：仅限目的地／目的地+拍摄装置（出厂）／仅拍摄装置</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>带锁定功能的（有线）遥控器</td>
+<td>B 门页提到“配备锁定功能的遥控器（另售）”，未说明型号与连接方式</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3>6.8 SteadyShot（机身防抖）</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>路径 / 选项</th>
+<th>出处</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>〈静〉SteadyShot</td>
+<td>MENU →（拍摄）→［影像稳定］→［〈静〉SteadyShot］→ 开（出厂）/关。<strong>用三脚架时务必关闭</strong>（可能误动作）；可分配［〈静〉SteadyShot选择］键切换；镜头带 SteadyShot 开关时只能用镜头开关；部分镜头可与机身协同</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>SteadyShot调整</td>
+<td>MENU →（拍摄）→［影像稳定］→［SteadyShot调整］→ 自动（出厂，读镜头信息）/手动</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>SteadyShot 焦距</td>
+<td>MENU →（拍摄）→［影像稳定］→［〈SteadyShot图标〉焦距］→ 8mm～1000mm（出厂 8mm）；相机拿不到镜头焦距信息（如转接手动镜头）时，把调整设为手动并按镜头焦距设定</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>〈动〉SteadyShot（视频）</td>
+<td>动态增强（固件2.00+）／增强／标准（出厂）／关；增强会裁切变窄</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>暗处 SteadyShot 图标闪烁 = 有抖动风险，建议开大光圈或提高 ISO 提高快门速度；S、M 模式下不出现 SteadyShot 警告（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>防抖补偿级数：<strong>帮助指南未载明</strong>（规格页只写“相机内影像传感器位移影像稳定系统”）（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<h3>6.9 长时间曝光注意事项（汇总）</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>注意点</th>
+<th>出处</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>［长时曝光降噪］出厂为开：1 秒及更长曝光后要再等同样长的降噪时间，期间不能拍；赶时机可设关</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>电子快门/静音模式下不能 B 门、不能长时曝光降噪</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>三脚架上关闭 SteadyShot</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>用遥控器或 2 秒自拍避免按快门抖动</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>暗处构图看不清：分配并使用［亮屏显示］</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>拍烟花：手动对焦到无穷远；不清楚无穷远位置的镜头，先用烟花对焦</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>长时间拍摄（间隔拍摄等）可用 USB-PD 设备从墙壁插座供电（建议 9V/3A）；须装着有电的电池，开机时不充电</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>装天文望远镜等无镜头接点的光学设备：［无镜头时释放快门］设为［允许］（出厂即允许），测光不准需看片手动调曝光</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</section>
+<section id="s8"><h2>7 闪光灯</h2><h3>7.1 没有内置闪光灯；多接口热靴</h3>
+<ul>
+<li><strong>A7C II 无内置闪光灯</strong>：部件表中没有闪光灯，帮助指南的闪光拍摄一律是“使用闪光灯（另售）”装到多接口热靴上（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。课程里“内置闪光灯”的内容在 A7C II 上需改用外接闪光灯。</li>
+<li>热靴出厂装有插座盖，装闪光灯/引闪器前取下（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li><strong>装卸闪光灯等附件前先关相机电源</strong>，装好确认牢固；<strong>不要在多接口热靴上使用产生 250 V 或以上电压、或与相机极性相反的市售闪光灯</strong>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>充电图标闪烁 = 正在充电，常亮 = 充电完成；录视频时不能用闪光灯（带 LED 灯的闪光灯可用 LED）；镜头遮光罩会挡光，用闪光灯时取下；广角端可能出现镜头阴影（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<h3>7.2 闪光模式</h3>
+<p>路径：MENU →（曝光/颜色）→［闪光灯］→［闪光模式］。默认值列表为［自动闪光］，但原文注明“默认设置取决于照相模式”，且某些模式下部分选项不可用（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>选项（照原文）</th>
+<th>说明</th>
+<th>课程对应</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>禁止闪光</td>
+<td>闪光灯不工作</td>
+<td>关闭闪光</td>
+</tr>
+<tr>
+<td>自动闪光</td>
+<td>暗处或逆光时闪光</td>
+<td>自动闪光</td>
+</tr>
+<tr>
+<td>强制闪光</td>
+<td>每次触发快门都闪光</td>
+<td>强制/补光闪光</td>
+</tr>
+<tr>
+<td>低速同步</td>
+<td>每次都闪光，并降低快门速度把背景也拍清楚</td>
+<td>慢速同步（夜景人像）</td>
+</tr>
+<tr>
+<td>后帘同步闪光</td>
+<td>曝光结束前一刻闪光，拍出自然的运动轨迹</td>
+<td>后帘同步</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>无线闪光不是闪光模式里的一项，而是单独的［无线闪光灯］开关（见 7.5）。图标表里另有无线闪光图标“WL”“SLOW WL”“REAR WL”“SLOW HSS WL”及减轻红眼图标（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<h3>7.3 闪光补偿与“曝光补偿设置”</h3>
+<ul>
+<li><strong>闪光补偿</strong>：MENU →（曝光/颜色）→［闪光灯］→［闪光补偿］，−3.0～+3.0 EV；只改变闪光量。智能自动、场景选择下不工作；加 ND 镜、闪光灯加柔光罩/色片时可用它修正。被摄体超出闪光范围时 + 方向可能看不出效果，太近时 − 方向可能看不出效果（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li><strong>曝光补偿设置</strong>：MENU →（曝光/颜色）→［闪光灯］→［曝光补偿设置］→［环境光+闪光］（曝光补偿同时控制闪光和环境光）／［仅环境光］（出厂，曝光补偿只控制环境光）（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<h3>7.4 闪光同步速度与高速同步</h3>
+<ul>
+<li><strong>同步速度</strong>（使用 Sony 制造的闪光灯时）：<strong>1/160 秒（全画幅）、1/200 秒（APS-C 尺寸）</strong>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>用闪光灯拍明亮场景时，最高快门速度受 1/160 秒同步速度限制（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>［可变快门］为开时，闪光同步速度可能被限制在更慢的速度（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li><strong>高速同步（HSS）</strong>：帮助指南正文没有任何设置说明，只在拍摄画面图标表中出现“SLOW HSS WL”图标（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）——设置方法帮助指南未载明，需看所用闪光灯的说明书。</li>
+</ul>
+<h3>7.5 无线闪光</h3>
+<ul>
+<li>两种方式：用相机上闪光灯的光作信号的<strong>光信号</strong>无线闪光；用无线通讯的<strong>射频信号</strong>无线闪光（需兼容的闪光灯或无线引闪发射器（另售））。</li>
+<li>步骤：MENU →（曝光/颜色）→［闪光灯］→［无线闪光灯］→［开］（出厂关）→ 取下插座盖，装上闪光灯或无线引闪发射器 → 光信号方式把机顶闪光灯设为控制器；用机顶闪光灯做射频无线时把它设为引闪器 → 离机闪光灯设为无线模式或装到无线引闪接收器（另售）上。</li>
+<li>测试闪光：给自定义键分配［无线测试闪光灯］后按该键。</li>
+<li>离机闪光灯被别的相机的控制器触发时，改闪光灯通道。</li>
+</ul>
+<h3>7.6 减轻红眼闪光</h3>
+<p>MENU →（曝光/颜色）→［闪光灯］→［减轻红眼闪光］→［开］/［关］（出厂关）。开时拍摄前预闪 2 次或以上。</p>
+<h3>7.7 FEL 锁定（=FE 锁 / FV 锁）</h3>
+<ol>
+<li>MENU →（设置）→［操作自定义］→［〈静〉自定键/转盘设置］→ 选键 → 分配［FEL锁定切换］（另有［FEL锁定保持］）。</li>
+<li>把要锁定闪光量的被摄体放在画面中央并对焦 → 按该键：闪光灯预闪，FEL 锁定图标点亮。</li>
+<li>重新构图拍摄；再按一次该键解除。</li>
+</ol>
+<ul>
+<li>［FEL锁定/AEL保持］［FEL锁定/AEL切换］：在闪光模式为［禁止闪光］或［自动闪光］、闪光灯无法闪光、或外接闪光灯设为手动闪光模式时，改为锁定 AE。</li>
+<li>没装闪光灯不能 FEL 锁定；装了不支持 FEL 锁定的闪光灯会显示错误信息。</li>
+</ul>
+<h3>7.8 外置闪光灯设置、注册闪光灯拍摄设置</h3>
+<ul>
+<li><strong>外置闪光灯设置</strong>：MENU →（曝光/颜色）→［闪光灯］→［外置闪光灯设置］→［外置闪光灯闪光设置］（闪光模式、闪光等级等）/［外闪光灯自定义设置］（其他、无线、单元设置）；用相机屏幕和控制拨轮设置热靴上的闪光灯或无线引闪发射器。<strong>仅限 Sony 生产并直接装在热靴上的闪光灯/引闪发射器</strong>；连接线离机连接时不可用；视频/S&amp;Q 档不可用；使用前把闪光灯软件更新到最新（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li><strong>注册闪光灯拍摄设置</strong>：MENU →（曝光/颜色）→［闪光灯］→［注册闪光灯拍摄设置］，为闪光拍摄单独保存［〈闪光图标〉快门速度范围］（最低/最高，选［同步速度］则自动设为可同步的最高快门速度；P、A 可用）和［〈闪光图标〉ISO］（P/A/S/M 可用），相机判断闪光灯是否打开自动切换；兼容的闪光灯见支持页 https://www.sony.net/dics/ilce7cm2/（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<h3>7.9 闪光测光方式（ADI / TTL）</h3>
+<p>帮助指南<strong>没有</strong> ADI、P-TTL 等闪光测光方式的名称与说明；只写到“通常的闪光拍摄期间，相机自动调整闪光等级以使得被摄体获得最佳曝光”和 FEL 锁定时的“预闪光”（<a class="src" href="" target="_blank" rel="noopener">官方页</a>），以及实时取景［曝光效果］里的“闪光灯曝光自动修正”（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。——帮助指南未载明。</p>
+<h3>7.10 影棚闪光灯经热靴引闪器触发时的设置清单</h3>
+<p>按课程分集标题（<code>bv_meta.json</code>），第 11 集（内置与外置闪光灯）、第 20～29 集（影棚 01～10）、第 41/55/56/59 集（外拍灯与闪光灯速成）、第 63～70 集（闪光摄影与影棚闪光灯、影棚构成与广告拍摄）都涉及闪光灯或影棚灯。以下逐条注明依据；标「建议」「推论」的是据原文推导的做法，不是官方原文。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>设置</th>
+<th>怎么设</th>
+<th>依据（原文要点）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>实时取景显示 → 设置效果关</strong></td>
+<td>MENU →（拍摄）→［拍摄显示］→［实时取景显示设置］→［实时取景显示］→［设置效果关］</td>
+<td>“当使用摄影棚闪光灯等第三方闪光灯时，在有些快门速度设置下实时取景显示可能较暗。当［实时取景显示］设定为［设置效果关］时，将会明亮地显示实时取景显示”；开启后画面显示 VIEW 图标，拍出亮度与屏幕不同；智能自动/场景选择下不能设关（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>2</td>
+<td>快门类型 = 机械快门</td>
+<td>MENU →（拍摄）→［快门/静音］→［快门类型］→［机械快门］（出厂即是）</td>
+<td>［电子快门］时无法闪光拍摄（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>3</td>
+<td>静音模式 = 关</td>
+<td>MENU →（拍摄）→［快门/静音］→［静音模式设置］→［静音模式］→［关］</td>
+<td>静音模式开时无法闪光拍摄，且快门类型被锁为电子快门（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>4</td>
+<td>快门速度不超过同步速度</td>
+<td>用 M 档，后转盘L 把快门设在 1/160 秒或更慢；APS-C 拍摄时规格为 1/200 秒</td>
+<td>规格：同步速度 1/160 秒（全画幅）、1/200 秒（APS-C），<strong>注明“当使用Sony制造的闪光灯时”</strong>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。用第三方引闪器时相机是否自动限制快门、能否同步更快——帮助指南未载明；建议先试拍确认画面无黑边</td>
+</tr>
+<tr>
+<td>5</td>
+<td>可变快门 = 关</td>
+<td>MENU →（拍摄）→［快门/静音］→［防闪烁设置］→［可变快门］→［关］（出厂关）</td>
+<td>开启时同步速度可能被限制到更慢（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>6</td>
+<td>装卸引闪器前关机；注意电压与极性</td>
+<td>—</td>
+<td>装卸附件前关电源；勿用 250 V 以上或极性相反的市售闪光灯（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。该条原文针对闪光灯，用于引闪器为推论</td>
+</tr>
+<tr>
+<td>7</td>
+<td>ISO 用固定值，不用 ISO AUTO</td>
+<td>按控制拨轮右（ISO）选具体数值</td>
+<td>建议：M 档下 ISO AUTO 会按环境光自动改变 ISO 来“配合”曝光（<a class="src" href="" target="_blank" rel="noopener">官方页</a>），而影棚闪光曝光由闪光决定，固定 ISO 才能保证可重复（推论）</td>
+</tr>
+<tr>
+<td>8</td>
+<td>不要信 M.M. 与拍摄画面直方图</td>
+<td>以回放的直方图/实拍为准</td>
+<td>直方图原文：“当使用闪光灯时，拍摄和播放的柱状图显示极为不同”（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。M.M. 是相机测光的环境光读数，不含影棚闪光（推论）</td>
+</tr>
+<tr>
+<td>9</td>
+<td>白平衡</td>
+<td>选［闪光灯］预设，或用自定义白平衡在闪光下捕获</td>
+<td>自定义白平衡捕获时若用了闪光灯，就以闪光注册，调出时务必用闪光（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）；第三方引闪器在自定义白平衡捕获时是否触发——帮助指南未载明</td>
+</tr>
+<tr>
+<td>10</td>
+<td>关掉 AWB 锁定类功能</td>
+<td>［快门AWB锁定］设［关］或［连拍］，不用 AWB 锁定键，或白平衡设［闪光灯］</td>
+<td>白平衡在闪光前已被锁定会导致色调不自然（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>11</td>
+<td>“曝光效果［仅曝光设置］”不适用</td>
+<td>—</td>
+<td>［曝光效果］“仅当使用Sony制造的闪光灯时”才有效（<a class="src" href="" target="_blank" rel="noopener">官方页</a>），所以第三方影棚灯靠第 1 条解决取景亮度</td>
+</tr>
+<tr>
+<td>12</td>
+<td>闪光模式</td>
+<td>—</td>
+<td>第三方引闪器需要哪种［闪光模式］帮助指南未载明；建议先用［强制闪光］试拍确认能触发（建议）</td>
+</tr>
+<tr>
+<td>13</td>
+<td>连拍</td>
+<td>影棚一般用［单张拍摄］</td>
+<td>用闪光灯时连拍速度会减慢（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>14</td>
+<td>拍后立即检查</td>
+<td>MENU →（设置）→［显示选项］→［〈静〉自动检视］→ 2秒/5秒/10秒（出厂关）</td>
+<td>拍后立即显示照片（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）；建议影棚里打开</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</section>
+<section id="s9"><h2>8 显示与回放</h2><h3>8.1 DISP 显示模式</h3>
+<p>按控制拨轮<strong>上</strong>（DISP）切换显示内容；显示屏与取景器分别设定。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>场合</th>
+<th>出厂循环顺序（照原文）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>拍摄 · 显示屏</td>
+<td>显示全部信息 → 无显示信息 → 柱状图 → 数字水平量规 → 〈静〉取景器 → 显示全部信息</td>
+</tr>
+<tr>
+<td>拍摄 · 取景器</td>
+<td>数字水平量规 → 无显示信息 → 柱状图 → 数字水平量规</td>
+</tr>
+<tr>
+<td>播放（显示屏/取景器）</td>
+<td>显示信息 → 柱状图 → 无显示信息 → 显示信息</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>出厂<strong>不显示</strong>：［关闭显示屏］、取景器的［显示全部信息］——需要时在 MENU →（设置）→［操作自定义］→［DISP(画面显示)设置］→［显示屏］或［取景器］里勾选后［确定］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>各模式含义：［显示全部信息］显示记录信息；［无显示信息］不显示记录信息，可选［〈静〉曝光: 打开］（始终显示曝光信息）或［〈静〉曝光: 超时］（操作后一段时间隐藏）；［柱状图］显示亮度分布；［数字水平量规］见 8.3；［〈静〉取景器］显示屏只显示拍摄信息、不显示被摄体（用取景器拍时用）；［关闭显示屏］拍摄时始终关闭显示屏（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>动态影像档不能显示［〈静〉取景器］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>取景器/显示屏切换方式：MENU →（设置）→［取景器/显示屏］→［选择取景器/显示屏］→［自动］（出厂，眼传感器自动切换）／［取景器（手动）］／［显示屏（手动）］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<h3>8.2 网格线与纵横标记</h3>
+<ul>
+<li><strong>网格线显示</strong>：MENU →（拍摄）→［拍摄显示］→［网格线显示］→［开］/［关］（出厂关）；可分配［网格线显示选择］键一键开关（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li><strong>网格线类型</strong>：MENU →（拍摄）→［拍摄显示］→［网格线类型］→［三等分线网格］（出厂）／［黄金分割］（固件2.00+）／［方形网格］／［对角 + 方形网格］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li><strong>纵横标记</strong>（照片，3:2 拍摄时）：MENU →（拍摄）→［标记显示］→［〈静〉纵横标记］（开/关）、［纵横标记类型］（1:1/5:4/4:3/16:9/1.91:1/2.35:1）、［纵横标记透明度］（0～15），可与网格线同时显示，后期可按标记［裁切］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<h3>8.3 水平仪（数字水平量规）</h3>
+<p>按 DISP 切到［数字水平量规］：同时指示前后（俯仰）与左右（水平）方向是否水平，处于水平时指示变绿。前后大幅倾斜时误差很大；即使校正后也可能有接近 ±1° 的误差。</p>
+<h3>8.4 回放操作</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>操作</th>
+<th>方法</th>
+<th>出处</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>进入播放</td>
+<td>按（播放）按钮；或触摸屏幕上的播放图标（触摸功能图标未显示时左右滑动屏幕调出）</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>翻页</td>
+<td>控制拨轮左/右或转动控制拨轮；转前转盘/后转盘L/后转盘R 也可，跳转步进可在 MENU →（播放）→［播放选项］→［影像跳转设置］里分别设（逐个/按10个/按100个/按时间/仅保护/仅分级等，出厂逐个）</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>放大</td>
+<td>按 <strong>AF-ON 按钮</strong>（播放时为放大按钮）；转控制拨轮调倍率；控制拨轮上/下/左/右移动位置；转前转盘/后转盘L/R 以同一倍率看上一张/下一张；按 MENU 或控制拨轮中央退出；默认从拍摄时的对焦位置放大</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>放大初始设置</td>
+<td>MENU →（播放）→［放大倍率］→［放大初始放大倍率］（标准放大倍率/上一次放大倍率）、［放大初始位置］（对焦位置/中央）</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>索引（缩略图）</td>
+<td>播放时按控制拨轮下（影像索引）；张数在 MENU →（播放）→［播放选项］→［影像索引］设 9 张/30 张</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>删除当前张</td>
+<td>按 <strong>C2</strong>（播放时为删除按钮）→ 选［删除］→ 按中央；MENU →（播放）→［删除］→［按两次删除］设为开后可连按两下删除</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>删除多张</td>
+<td>MENU →（播放）→［删除］→［删除］→［多个影像］/［该文件夹内的全部影像］/［该日期的全部影像］等；受保护影像删不掉</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>保护</td>
+<td>MENU →（播放）→［选择/备忘录］→［保护］；或用 MENU →（设置）→［操作自定义］→［〈播〉自定义键设置］把［保护］分配给某键</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>分级（评星）</td>
+<td>MENU →（播放）→［选择/备忘录］→［分级］；或在〈播〉自定义键设置给某键分配［分级］，每按一次改变星级（可用星数在［分级设置(自定义键)］勾选）</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>直方图</td>
+<td>播放时按 DISP 切到柱状图显示：显示亮度及 R/G/B 直方图</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td><strong>高光警告</strong></td>
+<td>柱状图显示时，影像中曝光过度或曝光不足的区域会在柱状图显示上<strong>闪烁</strong>（曝光过度/曝光不足警告）</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>显示对焦框</td>
+<td>MENU →（播放）→［播放选项］→［〈播〉对焦边框显示］→［开］（出厂关）；实际对焦用的框显示为绿色</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>拍后自动显示</td>
+<td>MENU →（设置）→［显示选项］→［〈静〉自动检视］→ 10秒/5秒/2秒/关（出厂关）；按播放时的 DISP 模式显示</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>连拍成组显示</td>
+<td>MENU →（播放）→［播放选项］→［以组显示］（出厂开）：连拍、间隔拍摄的照片显示为一组，按中央进入组内；删除组会删掉组内全部</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>发送到手机</td>
+<td>播放时按 Fn（播放时为发送到智能手机按钮）</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</section>
+<section id="s10"><h2>9 维护、存储卡、电池</h2><h3>9.1 传感器清洁</h3>
+<ol>
+<li>确认电池电量充足（<strong>51% 或以上</strong>）。</li>
+<li>MENU →（设置）→［设置选项］→［防尘功能］→［传感器清洁］→［确定］：影像传感器略微振动抖落灰尘。</li>
+<li>取下镜头（清洁模式下在开机状态拆镜头）。</li>
+<li>用市售气吹清洁传感器表面及周围，相机略微朝下握持让灰尘落下。</li>
+<li>关机，装回镜头。</li>
+</ol>
+<p>注意：清洁中不要关机；<strong>不要用喷雾式气吹</strong>；气吹尖端不要伸进卡口内部碰到传感器；不要吹得过猛；仍有灰尘请找服务处；振动声音正常；关机时也可能自动清洁；要在关机状态下清洁传感器，先把［关机时快门］设为［关］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。防尘系统为“光学滤波器的防静电涂层和影像传感器位移机构”（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</p>
+<h3>9.2 关机时快门关闭（换镜头防尘）</h3>
+<ul>
+<li>MENU →（设置）→［设置选项］→［防尘功能］→［关机时快门］→［开］/［关］（出厂关，<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>开：开机状态下把 ON/OFF 开关拨到 OFF 时快门关闭（需要一点时间）；开、关机时都有快门声。</li>
+<li><strong>开启时存放相机必须装镜头盖</strong>，否则阳光等可能在相机内聚焦导致冒烟起火。</li>
+<li>不要用手指碰已关闭的快门，不要用气吹吹快门；有水滴附着风险时设为［关］。</li>
+<li>因省电模式或电池耗尽而断电时快门不会关闭，开机再关机即可关闭。</li>
+<li>自己清洁传感器时：执行［传感器清洁］或把［关机时快门］设为［关］。</li>
+</ul>
+<h3>9.3 像素映射</h3>
+<ul>
+<li><strong>自动像素映射</strong>：MENU →（设置）→［设置选项］→［自动像素映射］→［开］（出厂）/［关］；开时关机时定期执行，期间有快门声（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li><strong>手动像素映射</strong>：MENU →（设置）→［设置选项］→［像素映射］→［确定］；完成后相机重启；电量低时不能执行。自动像素映射关时建议每三天一次；照片出现亮点时立即执行（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<h3>9.4 格式化</h3>
+<ul>
+<li>MENU →（拍摄）→［媒体］→［格式化］→［确定］（快速格式化）；在确认画面按（删除）按钮可改为<strong>完全格式化</strong>（耗时更长，用于读写变慢或彻底删除数据时）。</li>
+<li>快捷方式：在拍摄画面<strong>按住 MENU 按钮，再按住（删除）按钮约两秒</strong>。</li>
+<li>会永久删除全部数据，<strong>包括受保护的影像和卡上的 M1～M4</strong>；请在本相机上格式化（电脑格式化的卡可能无法使用）；剩余电量低于 1% 不能格式化。</li>
+<li>新卡第一次在本机使用时建议先格式化（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<h3>9.5 电池与 USB-PD 充电</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+<th>出处</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电池型号</td>
+<td>NP-FZ100 锂离子电池组（7.2 V），随机附带 1 块</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>装卸</td>
+<td>滑动电池盖开关打开 → 用电池顶端推开锁定杆插到锁定 → 关盖并拨向 LOCK；取出前确认存取指示灯不亮并关机，拨锁定杆取出</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>USB-PD 机内充电</td>
+<td><strong>关机</strong>状态下用 USB-C–USB-C 线连接 USB-PD 设备；设备输出 18 W（9 V/2 A）以上、连接线支持 3 A 以上；用 27 W（9 V/3 A）设备约 175 分钟充满；不支持 PD 的设备（USB-A–USB-C，适配器 1.5 A 以上）也能充但更慢</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>充电指示灯（橙色）</td>
+<td>亮=充电中；灭=充电结束；闪=温度不适导致错误或暂停</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>开机时</td>
+<td>从电源供电可操作相机，但<strong>不给电池充电</strong></td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>墙壁插座供电拍摄</td>
+<td>建议用兼容 9V/3A 的 USB-PD 设备；须插有电的电池，供电期间不要取电池</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>推荐充电温度</td>
+<td>10～30 °C</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>续航（CIPA）</td>
+<td>照片：显示屏约 560 张、取景器约 530 张；实际拍视频约 105/100 分钟；连续拍视频约 165 分钟</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+<tr>
+<td>保养</td>
+<td>只用纯正 Sony 电池；低温下性能下降，放贴身口袋保暖；长期存放前每年至少充一次电再在相机上用完，存于阴凉干燥处</td>
+<td><a class="src" href="" target="_blank" rel="noopener">官方页</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3>9.6 存储卡</h3>
+<ul>
+<li><strong>插槽</strong>：1 个（见 1.4），支持 SD/SDHC/SDXC，兼容 UHS-I 与 UHS-II；microSD 须用适配器（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>拍照片：SD/SDHC/SDXC 均可；视频按格式需要 U3 或更高（XAVC HS/S）或 V90 或更高（XAVC S-I）等（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>插卡：滑动存储卡盖开关打开 → 缺角按图示方向插到咔嗒声 → 关盖拨向 LOCK；取卡前确认存取指示灯不亮，向里按一下弹出（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>注意：存取指示灯亮时不要取卡/电池、拔线或关机；SDXC 是 exFAT，不兼容的设备提示格式化时不要照做；反复拍删造成碎片化导致录像中断时，备份后在本机格式化；出现过热图标时关机稍等再取卡（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li><strong>无存储卡时释放快门</strong>：出厂［允许］（不插卡也能按快门但不保存），帮助指南建议实拍前设为［禁止］：MENU →（拍摄）→［快门/静音］→［无存储卡时释放快门］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>播放其他设备拍的照片不正常时：MENU →（拍摄）→［媒体］→［修复影像数据库］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<h3>9.7 相机清洁注意事项</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>部位</th>
+<th>做法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>镜头</td>
+<td>不用含稀释剂、汽油等有机溶剂的清洁剂；先用气吹除尘，粘着的灰尘用蘸少许镜头清洁剂的软布或纸巾<strong>从中心向外螺旋状</strong>擦；不要把清洁剂直接喷到镜头上</td>
+</tr>
+<tr>
+<td>机身卡口</td>
+<td>不要碰卡口内侧的镜头接点等零件；卡口内部用市售气吹吹掉灰尘（<strong>不要用喷雾式气吹</strong>）</td>
+</tr>
+<tr>
+<td>机身表面</td>
+<td>用蘸少许水的软布擦，再用干布擦干；不要沾稀释剂、汽油、酒精、一次性擦布、驱虫剂、防晒霜、杀虫剂，手上沾了这些也别碰相机；不要让相机长时间接触橡胶或乙烯基</td>
+</tr>
+<tr>
+<td>显示屏</td>
+<td>用纸巾用力擦可能划伤；先轻轻去灰再用软布擦净</td>
+</tr>
+</tbody>
+</table></div>
+<h3>9.8 换镜头与日常防护</h3>
+<ul>
+<li>装卸镜头前关机；装镜头时对齐两个白色安装标记、卡口朝下握持防尘；在无尘处迅速操作；取下后给机身装机身盖、镜头装前后盖（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>不用时装镜头前盖或机身盖，装机身盖前先除去盖上的灰尘（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>相机采用防尘防滴设计，但不能完全防止灰尘或水滴进入（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>从冷处进暖处防结露：先装进塑料袋密封，约一小时后再取出（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+<li>三脚架螺丝长度小于 5.5 mm；不要装着三脚架携带相机（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）。</li>
+</ul>
+<hr />
+</section>
+<section id="s11"><h2>10 主要规格</h2><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>规格（帮助指南原文）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>相机类型 / 镜头</td>
+<td>可更换镜头数码相机；Sony E 卡口系统镜头</td>
+</tr>
+<tr>
+<td>影像传感器</td>
+<td>35 mm 全画幅（35.9 mm × 23.9 mm）CMOS</td>
+</tr>
+<tr>
+<td>有效像素 / 总像素</td>
+<td>约 33 000 000 像素 / 约 34 100 000 像素</td>
+</tr>
+<tr>
+<td>防抖</td>
+<td>相机内影像传感器位移影像稳定系统（<strong>补偿级数未载明</strong>）</td>
+</tr>
+<tr>
+<td>防尘</td>
+<td>光学滤波器的防静电涂层和影像传感器位移机构</td>
+</tr>
+<tr>
+<td>自动对焦</td>
+<td>相位检测/对比度检测；感光度范围 −4 EV～+20 EV（相当于 ISO 100、F2.0）；AF 辅助照明约 0.3～3.0 m（FE 28-70 mm F3.5-5.6 OSS）</td>
+</tr>
+<tr>
+<td>电子取景器</td>
+<td>1.0 cm（0.39 型）；2 359 296 点；覆盖率 100%；放大倍率约 0.70 倍（50 mm 镜头对焦无限远，−1 m⁻¹）；视点距目镜约 22 mm、距目镜框约 19.6 mm（−1 m⁻¹）；屈光度 −4.0～+3.0 m⁻¹</td>
+</tr>
+<tr>
+<td>显示屏</td>
+<td>7.5 cm（3.0 型）TFT，触摸面板，1 036 800 点</td>
+</tr>
+<tr>
+<td>测光</td>
+<td>1 200 区域评估测光；测光范围 −3 EV～+20 EV（相当于 ISO 100、F2.0 镜头）</td>
+</tr>
+<tr>
+<td>ISO</td>
+<td>照片 ISO 100～51 200（扩展最小 ISO 50、最大 ISO 204 800），ISO AUTO 100～12 800（可设上下限）；视频相当于 ISO 100～51 200（扩展最大相当于 ISO 102 400）</td>
+</tr>
+<tr>
+<td>曝光补偿</td>
+<td>±5.0 EV（1/3 EV、1/2 EV 步级可切换）</td>
+</tr>
+<tr>
+<td>快门</td>
+<td>电子控制、纵走式、焦平面；照片机械快门 1/4000～30 秒、BULB；照片电子快门 1/8000～30 秒；视频 1/8000～1 秒</td>
+</tr>
+<tr>
+<td>闪光同步速度</td>
+<td>1/160 秒（全画幅）、1/200 秒（APS-C 尺寸）（使用 Sony 制造的闪光灯时）</td>
+</tr>
+<tr>
+<td>连拍</td>
+<td>Hi+ 约 10 张/秒、Hi 约 8.0、Mid 约 6.0、Lo 约 3.0</td>
+</tr>
+<tr>
+<td>记录格式</td>
+<td>JPEG（DCF 2.0、Exif 2.32、MPF Baseline）、HEIF（MPEG-A MIAF）、RAW（Sony ARW 5.0）；视频 XAVC HS（H.265）、XAVC S（H.264）</td>
+</tr>
+<tr>
+<td>记录媒体</td>
+<td>SD 卡（兼容 UHS-I 和 UHS-II）</td>
+</tr>
+<tr>
+<td>接口</td>
+<td>USB Type-C（SuperSpeed USB 5Gbps / USB 3.2，兼容 USB 供电）、HDMI D 型微型插孔、Ø3.5 mm 麦克风插孔、Ø3.5 mm 耳机插孔</td>
+</tr>
+<tr>
+<td>电源 / 电池</td>
+<td>额定输入 7.2 V 直流；NP-FZ100</td>
+</tr>
+<tr>
+<td>耗电量（FE 28-60mm F4-5.6）</td>
+<td>取景器：照片约 3.7 W、视频约 6.0 W；显示屏：照片约 3.5 W、视频约 6.0 W</td>
+</tr>
+<tr>
+<td>电池续航</td>
+<td>照片约 560 张（显示屏）/ 约 530 张（取景器）（CIPA，<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>工作 / 存放温度</td>
+<td>0～40 °C / −20～55 °C</td>
+</tr>
+<tr>
+<td>尺寸（宽×高×深）</td>
+<td>约 124.0 × 71.1 × 63.4 mm（握柄到显示屏 58.6 mm）</td>
+</tr>
+<tr>
+<td>质量</td>
+<td>约 514 g（含电池和 SD 卡）</td>
+</tr>
+<tr>
+<td>麦克风 / 扬声器</td>
+<td>立体声 / 单声道</td>
+</tr>
+<tr>
+<td>无线</td>
+<td>无线 LAN（因型号不同：IEEE 802.11 a/b/g/n/ac 2.4/5 GHz，或 802.11 b/g/n 2.4 GHz）；Bluetooth 4.2</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</section>
+<section id="s12"><h2>11 课程概念 → A7C II 速查对照表</h2><p>“怎么操作”默认指静止影像档（静止影像/动态影像/S&amp;Q旋钮在相机图标）。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>课程里的概念/操作（佳能/尼康叫法）</th>
+<th>A7C II 上的名称</th>
+<th>怎么操作</th>
+<th>说明（出处）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Av 光圈优先（佳能 Av／尼康 A）</td>
+<td>A（光圈优先）</td>
+<td>模式旋钮转 A；前转盘或后转盘L 调光圈</td>
+<td>快门自动；快门数字闪烁=无法正确曝光（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Tv 快门优先（佳能 Tv／尼康 S）</td>
+<td>S（快门优先）</td>
+<td>模式旋钮转 S；前转盘或后转盘L 调快门</td>
+<td>光圈自动；光圈值闪烁=无法正确曝光（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>3</td>
+<td>P 程序自动</td>
+<td>P（程序自动）</td>
+<td>模式旋钮转 P；转前转盘/后转盘L 程序转换（显示 P*）</td>
+<td>用闪光灯时不能转换；换模式或关机即取消（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>4</td>
+<td>M 手动曝光</td>
+<td>M（手动曝光）</td>
+<td>模式旋钮转 M；前转盘=光圈，后转盘L=快门</td>
+<td>看 M.M. 指示；ISO 可设 ISO AUTO（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>5</td>
+<td>B 门</td>
+<td>BULB（在 M 模式内）</td>
+<td>模式旋钮 M → 后转盘L 顺时针转到显示［BULB］→ 按住快门；或用［BULB定时器设置］定时 2～900 秒</td>
+<td>模式旋钮没有 B 档；电子快门/静音模式/连拍/间隔拍摄时不能 BULB（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>6</td>
+<td>ISO 感光度（课程称“相对感光度”）</td>
+<td>ISO</td>
+<td>按控制拨轮右（ISO）选值；或 MENU →（曝光/颜色）→［曝光］→［ISO］</td>
+<td>出厂 ISO AUTO；照片 100～51200，扩展 50～204800（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>7</td>
+<td>曝光补偿</td>
+<td>曝光补偿</td>
+<td>转后转盘R；或 MENU →（曝光/颜色）→［曝光补偿］→［曝光补偿］</td>
+<td>±5.0 EV；M 模式仅 ISO AUTO 时有效；智能自动/场景选择不可用（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>8</td>
+<td>AE 锁（佳能 ✱ 键／尼康 AE-L）</td>
+<td>AE锁定保持 ／ AE锁定切换</td>
+<td><strong>无专用键</strong>：MENU →（设置）→［操作自定义］→［〈静〉自定键/转盘设置］→ 选键 → 分配</td>
+<td>也可用［快门AEL］让半按锁曝光；锁定图标为“✱”（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>9</td>
+<td>评价测光／矩阵测光</td>
+<td>多重</td>
+<td>MENU →（曝光/颜色）→［测光］→［测光模式］→［多重］</td>
+<td>出厂即多重；1200 区域；人脸优先可开关（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>10</td>
+<td>中央重点平均测光</td>
+<td>中心</td>
+<td>同上 →［中心］</td>
+<td>偏重中央（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>11</td>
+<td>点测光</td>
+<td>点测光（点测光: 标准）</td>
+<td>同上 →［点测光］→［点测光: 标准］；位置用 MENU →（曝光/颜色）→［测光］→［点测光点］设［中间］或［对焦点联动］</td>
+<td>联动只对点/扩展点类对焦区域有效（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>12</td>
+<td>局部测光（佳能）</td>
+<td><strong>无同名模式</strong></td>
+<td>替代：［点测光］→［点测光: 大］，或［中心］（推论）</td>
+<td>测光圆占画面的比例帮助指南未载明（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>13</td>
+<td>AWB 自动白平衡</td>
+<td>自动（白平衡模式）</td>
+<td>按 C1（出厂=白平衡模式）→［自动］</td>
+<td>偏暖/偏白取向用［AWB优先级设置］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>14</td>
+<td>自定义白平衡（佳能）／预设手动 PRE（尼康）</td>
+<td>自定义 1～3</td>
+<td>白平衡模式选［自定义 N］→ 按右 → 选设置图标 → 白色填满捕捉框按中央 → 再按中央注册</td>
+<td>用闪光捕获的要配闪光使用（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>15</td>
+<td>色温 K</td>
+<td>色温/滤光片</td>
+<td>白平衡模式选［色温/滤光片］→ 转后转盘L 或 R 改 K 值</td>
+<td>K 值范围帮助指南未载明（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>16</td>
+<td>单次自动对焦 ONE SHOT／AF-S</td>
+<td>单次AF（AF-S）</td>
+<td>MENU →（对焦）→［AF/MF］→［对焦模式］→［单次AF］</td>
+<td>合焦锁定（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>17</td>
+<td>人工智能伺服 AI SERVO／AF-C</td>
+<td>连续AF（AF-C）</td>
+<td>同上 →［连续AF］</td>
+<td>“跟踪”类对焦区域只在连续AF有效（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>18</td>
+<td>人工智能自动对焦 AI FOCUS／AF-A</td>
+<td>自动AF（AF-A）</td>
+<td>同上 →［自动AF］（出厂值）</td>
+<td>只在用支持相位检测AF的镜头时可用（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>19</td>
+<td>对焦点选择</td>
+<td>对焦区域 + 对焦标准键</td>
+<td>对焦区域选［点: L/M/S］［扩展点］［区］等；按控制拨轮中央（对焦标准）后上/下/左/右移框，（删除）键回中央；也可触摸拖动</td>
+<td>出厂对焦区域为广域（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>20</td>
+<td>景深预览</td>
+<td>光圈预览</td>
+<td><strong>无专用键</strong>：给自定义键分配［光圈预览］，按住预览</td>
+<td>另有［拍摄结果预览］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>21</td>
+<td>反光镜预升</td>
+<td><strong>无此功能</strong>（无反光镜）</td>
+<td>防按快门抖动：［自拍定时(单张)］2 秒、Bluetooth 遥控器、手机/电脑遥控；［快门类型］设［电子快门］则只用电子快门拍摄（但不能闪光/B门/长时曝光降噪/防闪烁）</td>
+<td>帮助指南没有“电子前帘快门”选项；三脚架上要关闭 SteadyShot（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>22</td>
+<td>高光色调优先（佳能）／自动亮度优化 ALO（佳能）／动态 D-Lighting（尼康）</td>
+<td>动态范围优化（DRO）</td>
+<td>MENU →（曝光/颜色）→［颜色/色调］→［动态范围优化］→ 自动/1级～5级/关</td>
+<td>DRO 对应 ALO/D-Lighting；佳能“高光色调优先”无同名功能，保护高光可配合［强光］测光与斑马线（推论）（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>23</td>
+<td>照片风格 Picture Style／优化校准 Picture Control</td>
+<td>创意外观</td>
+<td>MENU →（曝光/颜色）→［颜色/色调］→［创意外观］；也在 Fn 菜单里</td>
+<td>ST/PT/NT/VV/VV2/FL/IN/SH/BW/SE，可调对比度等 8 项（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>24</td>
+<td>长时间曝光降噪</td>
+<td>长时曝光降噪</td>
+<td>MENU →（拍摄）→［影像质量/记录］→［长时曝光降噪］</td>
+<td>出厂开，1 秒及以上生效，降噪时间与曝光等长（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>25</td>
+<td>高 ISO 降噪</td>
+<td>高ISO降噪</td>
+<td>MENU →（拍摄）→［影像质量/记录］→［高ISO降噪］→ 标准/低/关</td>
+<td>出厂标准（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>26</td>
+<td>包围曝光 AEB</td>
+<td>连续阶段曝光 ／ 单拍阶段曝光</td>
+<td>按控制拨轮左（拍摄模式）→ 选，再用控制拨轮选步长与张数；顺序在［阶段曝光设置］</td>
+<td>可选步长/张数全集帮助指南未载明（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>27</td>
+<td>闪光曝光补偿</td>
+<td>闪光补偿</td>
+<td>MENU →（曝光/颜色）→［闪光灯］→［闪光补偿］</td>
+<td>±3.0 EV；［曝光补偿设置］决定曝光补偿是否也作用于闪光（出厂仅环境光）（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>28</td>
+<td>FE 锁（佳能）／FV 锁（尼康）</td>
+<td>FEL锁定</td>
+<td>自定义键分配［FEL锁定切换］或［FEL锁定保持］；主体放中央按键预闪锁定</td>
+<td>需装支持 FEL 的闪光灯（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>29</td>
+<td>后帘同步</td>
+<td>后帘同步闪光</td>
+<td>MENU →（曝光/颜色）→［闪光灯］→［闪光模式］→［后帘同步闪光］</td>
+<td>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>30</td>
+<td>慢速同步（夜景人像）</td>
+<td>低速同步</td>
+<td>同上 →［低速同步］</td>
+<td>场景选择“夜景肖像”也要另售闪光灯（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>31</td>
+<td>传感器清洁</td>
+<td>传感器清洁（防尘功能）</td>
+<td>MENU →（设置）→［设置选项］→［防尘功能］→［传感器清洁］→［确定］，再取下镜头用气吹</td>
+<td>电量 51% 以上；勿用喷雾式气吹（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>32</td>
+<td>格式化</td>
+<td>格式化</td>
+<td>MENU →（拍摄）→［媒体］→［格式化］；快捷：拍摄画面按住 MENU 再按住（删除）键约 2 秒</td>
+<td>会删受保护影像和 M1～M4（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>33</td>
+<td>RAW+JPEG</td>
+<td>RAW&amp;JPEG</td>
+<td>MENU →（拍摄）→［影像质量/记录］→［〈静〉文件格式］→［RAW&amp;JPEG］</td>
+<td>［JPEG/HEIF切换］为 HEIF 时变成 RAW&amp;HEIF；RAW 压缩方式在［RAW文件类型］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>34</td>
+<td>色彩空间 sRGB/Adobe RGB</td>
+<td>色彩空间</td>
+<td>MENU →（拍摄）→［影像质量/记录］→［色彩空间］</td>
+<td>HEIF 格式下此设置无效（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>35</td>
+<td>实时取景（Live View）</td>
+<td>始终实时取景；［实时取景显示设置］</td>
+<td>取景器和显示屏一直显示传感器画面；［实时取景显示］设置效果开=模拟曝光/白平衡等，关=始终适当亮度（影棚闪光用关）</td>
+<td>与单反的区别：不用切换“实时取景模式”、取景器里也能看到曝光模拟（推论）；暗处用［亮屏显示］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>36</td>
+<td>驱动模式（单拍/连拍/自拍）</td>
+<td>拍摄模式</td>
+<td>按控制拨轮左</td>
+<td>索尼“拍摄模式”=驱动模式（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>37</td>
+<td>连拍高速/低速</td>
+<td>连拍：Hi+／Hi／Mid／Lo</td>
+<td>拍摄模式→［连拍］→ 控制拨轮左右选</td>
+<td>约 10/8.0/6.0/3.0 张/秒（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>38</td>
+<td>自拍 2 秒/10 秒</td>
+<td>自拍定时(单张)</td>
+<td>拍摄模式→［自拍定时(单张)］→ 10/5/2 秒</td>
+<td>2 秒用于减少按快门抖动（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>39</td>
+<td>白平衡包围</td>
+<td>白平衡阶段曝光</td>
+<td>拍摄模式→［白平衡阶段曝光］→ Lo/Hi</td>
+<td>3 张（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>40</td>
+<td>内置闪光灯</td>
+<td><strong>无此功能</strong></td>
+<td>用外接闪光灯（另售）装在多接口热靴</td>
+<td>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>41</td>
+<td>闪光同步速度</td>
+<td>—</td>
+<td>规格：1/160 秒（全画幅）、1/200 秒（APS-C），Sony 闪光灯</td>
+<td>第三方引闪器下的行为帮助指南未载明（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>42</td>
+<td>高速同步（佳能 HSS／尼康 FP）</td>
+<td>—</td>
+<td>帮助指南未载明设置方法</td>
+<td>仅图标表出现“SLOW HSS WL”图标（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>43</td>
+<td>无线闪光（主控/从属，光学/射频）</td>
+<td>无线闪光灯</td>
+<td>MENU →（曝光/颜色）→［闪光灯］→［无线闪光灯］→［开］</td>
+<td>测试闪光可分配［无线测试闪光灯］键（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>44</td>
+<td>防红眼</td>
+<td>减轻红眼闪光</td>
+<td>MENU →（曝光/颜色）→［闪光灯］→［减轻红眼闪光］→［开］</td>
+<td>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>45</td>
+<td>影棚闪光灯 / 引闪器</td>
+<td>—</td>
+<td>见 7.10 清单：实时取景显示设置效果关、机械快门、静音模式关、快门不超过同步速度、固定 ISO</td>
+<td>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>46</td>
+<td>直方图</td>
+<td>柱状图</td>
+<td>拍摄或播放时按 DISP 切换</td>
+<td>用闪光灯时拍摄画面与回放直方图差异很大（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>47</td>
+<td>高光警告（佳能）／高光显示（尼康）</td>
+<td>曝光过度/曝光不足警告</td>
+<td>播放时 DISP 切到柱状图显示，过曝/欠曝区域闪烁</td>
+<td>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>48</td>
+<td>网格线</td>
+<td>网格线显示 ／ 网格线类型</td>
+<td>MENU →（拍摄）→［拍摄显示］→［网格线显示］／［网格线类型］</td>
+<td>三等分/黄金分割/方形/对角（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>49</td>
+<td>电子水平仪</td>
+<td>数字水平量规</td>
+<td>按 DISP 切换</td>
+<td>误差约 ±1°（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>50</td>
+<td>回放放大检查清晰度</td>
+<td>放大</td>
+<td>播放时按 AF-ON（放大按钮），转控制拨轮调倍率</td>
+<td>默认从对焦位置放大（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>51</td>
+<td>删除 / 保护</td>
+<td>删除 ／ 保护</td>
+<td>播放时按 C2（删除）；MENU →（播放）→［选择/备忘录］→［保护］</td>
+<td>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>52</td>
+<td>后按对焦（AF-ON）</td>
+<td>AF开启 ＋ 半按快门AF 关</td>
+<td>MENU →（对焦）→［AF/MF］→［半按快门AF］→［关］，用 AF-ON 键对焦</td>
+<td>AF-ON 出厂是［跟踪开启+AF开启］（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>53</td>
+<td>实时取景放大手动对焦（佳能 5×/10×）</td>
+<td>对焦放大 ／ MF中自动放大对焦 ／ 峰值显示</td>
+<td>MENU →（对焦）→［对焦辅助］→［对焦放大］；MF 转对焦环自动放大；峰值在［峰值显示］分组</td>
+<td>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>54</td>
+<td>人脸/眼部对焦</td>
+<td>AF中的被摄体识别（识别目标：人）</td>
+<td>出厂已开；MENU →（对焦）→［被摄体识别］</td>
+<td>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>55</td>
+<td>用户自定义模式（佳能 C1～C3／尼康 U1、U2）</td>
+<td>MR拍摄设置存储 ／ MR调出拍摄设置</td>
+<td>存：MENU →（拍摄）→［照相模式］→［MR拍摄设置存储］；取：模式旋钮 1/2/3</td>
+<td>卡上另存 M1～M4（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>56</td>
+<td>速控屏 Q 键（佳能）／i 键（尼康）</td>
+<td>Fn（功能）按钮</td>
+<td>按 Fn，控制拨轮选项目，转前转盘改值</td>
+<td>照片、视频各 12 项（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>57</td>
+<td>我的菜单</td>
+<td>我的菜单</td>
+<td>MENU →（我的菜单）→［我的菜单设置］→［添加项目］</td>
+<td>最多 42 项（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>58</td>
+<td>画质 L/M/S、精细/标准</td>
+<td>JPEG影像尺寸 ／ JPEG影像质量</td>
+<td>MENU →（拍摄）→［影像质量/记录］</td>
+<td>L=33M（3:2）（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>59</td>
+<td>镜头防抖 IS/VR 开关</td>
+<td>SteadyShot（机身）</td>
+<td>MENU →（拍摄）→［影像稳定］→［〈静〉SteadyShot］</td>
+<td>三脚架上关；镜头有防抖开关时只能用镜头开关（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>60</td>
+<td>全自动（绿色方框）</td>
+<td>智能自动</td>
+<td>模式旋钮 AUTO →［智能自动］</td>
+<td>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>61</td>
+<td>场景模式（人像/风景/运动/微距/夜景人像）</td>
+<td>场景选择</td>
+<td>模式旋钮 AUTO → 选场景</td>
+<td>肖像/运动/微距/风景/黄昏/夜景/夜景肖像（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>62</td>
+<td>快门线/遥控器</td>
+<td>Bluetooth遥控 ／ 智能手机 ／ 电脑遥控</td>
+<td>见 6.7</td>
+<td>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>63</td>
+<td>间隔定时拍摄</td>
+<td>间隔拍摄功能</td>
+<td>MENU →（拍摄）→［拍摄模式］→［间隔拍摄功能］</td>
+<td>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>64</td>
+<td>自动 ISO 的最低快门速度</td>
+<td>ISO AUTO最小速度</td>
+<td>MENU →（曝光/颜色）→［曝光］→［ISO AUTO最小速度］</td>
+<td>仅 P、A 有效（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>65</td>
+<td>M 档曝光量标尺</td>
+<td>M.M.（手动测光）</td>
+<td>M 档且 ISO 非 AUTO 时显示</td>
+<td>ISO AUTO 时不显示（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>66</td>
+<td>防闪烁（佳能 Flicker 检测）</td>
+<td>防闪烁拍摄 ／ 可变快门</td>
+<td>MENU →（拍摄）→［快门/静音］→［防闪烁设置］</td>
+<td>（<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+<tr>
+<td>67</td>
+<td>屈光度调节</td>
+<td>屈光度调节旋钮</td>
+<td>取景器右侧小拨轮</td>
+<td>−4.0～+3.0 m⁻¹（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；<a class="src" href="" target="_blank" rel="noopener">官方页</a>）</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</section>
+<section id="s13"><h2>附 B 未能从帮助指南确认的事项</h2><p>以下内容在帮助指南（385 页全文）中查不到，或只有间接线索。用到时请以实机或其他官方资料为准。</p>
+<ol>
+<li><strong>SteadyShot 防抖补偿级数</strong>：规格页只写“相机内影像传感器位移影像稳定系统”，没有级数。</li>
+<li><strong>色温/滤光片的 K 值范围</strong>，以及<strong>白平衡微调画面各轴（课程里的 A-B、G-M）的名称与级数</strong>：正文未写；图标表里只有“7500K A5 G5”这样的显示示例。</li>
+<li><strong>包围曝光（连续/单拍阶段曝光）可选的全部步长与张数</strong>：正文只说“用控制拨轮选择曝光值和拍摄张数”，示例为 0.3 EV×3 张、闪光 0.7 EV×3 张，并提到可选 2 张。</li>
+<li><strong>高速同步（HSS）的设置方法与条件</strong>：正文没有说明，只在图标表出现“SLOW HSS WL”图标。</li>
+<li><strong>闪光测光方式（ADI、P-TTL 等）的名称与原理</strong>：正文没有。</li>
+<li><strong>第三方引闪器 / 影棚闪光灯下的相机行为</strong>：是否自动把快门限制在同步速度、能否用更快快门同步、需要哪种［闪光模式］、自定义白平衡捕获时会不会触发、［注册闪光灯拍摄设置］能否识别——都没有写。规格页的 1/160 秒、1/200 秒同步速度注明是“使用 Sony 制造的闪光灯时”。</li>
+<li><strong>Fn 菜单出厂 12 项的文字清单</strong>（照片、视频各 12 项）：只有一张示例图；能确定的只有照片 Fn 菜单含［创意外观］。2.3 节列出的其余项目是本手册按示例图图标辨认的。</li>
+<li><strong>AUTO 档（智能自动/场景选择）下各转盘的功能</strong>：未写。</li>
+<li><strong>电子前帘快门</strong>：［快门类型］只有［机械快门］/［电子快门］两项，全文没有“前帘”字样，无法确认机身是否有此机制。</li>
+<li><strong>照片模式下镜头光圈环与转盘谁优先</strong>：“光圈环优先”这句原文只出现在视频［自动/手动切设］页。</li>
+<li><strong>点测光圆（标准/大）占画面的大小</strong>，以及**“点AEL”（带点测光图标的 AE 锁定）的完整操作说明**：只提到其存在。</li>
+<li><strong>取景器刷新率的具体数值</strong>：只有［取景器帧速率］标准/高两档。</li>
+<li><strong>“配备锁定功能的遥控器（另售）”的型号与连接方式</strong>：B 门页提到，但部件表里没有遥控专用接口。</li>
+<li><strong>单卡槽</strong>：帮助指南没有直接说“1 个卡槽”，本手册依据是部件表只列了一个“存储卡插槽”、全文只按一张卡描述（推论）。</li>
+<li><strong>菜单页签的实际排列顺序</strong>：菜单总表注明“与实际显示有所不同”，本手册按 <a class="src" href="" target="_blank" rel="noopener">官方页</a> 的菜单画面图示写作 我的菜单→主→拍摄→曝光/颜色→对焦→播放→网络→设置。</li>
+<li><strong>各键的部分出厂功能含义</strong>：如 C2 出厂的［触摸操作选择］具体做什么，帮助指南只列了名称，没有说明。</li>
+</ol>
+<p>另：以下功能按帮助指南菜单总表和部件表判断为 <strong>A7C II 没有</strong>：内置闪光灯、AE 锁定专用键、景深预览专用键、模式旋钮上的 B 档、自动 HDR（多张合成）、“曝光设置向导”类功能（<a class="src" href="" target="_blank" rel="noopener">官方页</a>；231h_names_of_parts_ilc2360_ilc2370_*.html）。</p>
+</section>
+  </article></main>
+</div>
+<footer class="site">
+  <p>江楠的学习日志 · 吴师自通摄影教程（索尼 A7C II 对照学习笔记）</p>
+  <p>课程视频：<a href="https://www.bilibili.com/video/BV1Vt411E7nT/" target="_blank" rel="noopener">bilibili.com/video/BV1Vt411E7nT</a>（吴玮老师主讲，UP 主搬运）· A7C II 资料：<a href="https://helpguide.sony.net/ilc/2360/v1/zh-cn/index.html" target="_blank" rel="noopener">索尼官方帮助指南</a></p>
+  <p>所有插图均为本页自绘 SVG，不含视频截图或第三方图片；笔记仅供个人学习。</p>
+</footer>
+<a class="backtop" href="#top" aria-label="回到顶部">↑</a>
+</body>
+</html>

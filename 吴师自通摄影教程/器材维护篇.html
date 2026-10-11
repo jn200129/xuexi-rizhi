@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="江楠">
+<meta name="description" content="吴师自通摄影教程器材维护篇逐集细化笔记（P18–P19），附索尼 A7C II 对照操作与自绘示意图。">
+<meta name="keywords" content="摄影教程,吴玮,吴师自通,器材维护篇,索尼A7C II,A7C2,摄影笔记">
+<title>器材维护篇 · 吴师自通摄影教程 — 江楠的学习日志</title>
+<style>
+:root{--accent:#2563eb;--accent-dark:#1d4ed8;--bg:#f7f8fa;--card:#fff;--border:#e2e5ea;--text:#1f2329;--muted:#64748b;
+  --sony:#c2410c;--sony-bg:#fff7ed;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:-apple-system,"Segoe UI","Microsoft YaHei","PingFang SC",sans-serif;line-height:1.75;color:var(--text);background:var(--bg);}
+.skip-link{position:absolute;left:-999px;top:0;background:#fff;color:var(--accent);padding:.5rem 1rem;z-index:100;}
+.skip-link:focus{left:0;}
+header.site{background:linear-gradient(135deg,#3b82f6 0%,var(--accent) 45%,var(--accent-dark) 100%);color:#fff;padding:2.6rem 1.5rem 2rem;text-align:center;box-shadow:0 6px 24px rgba(37,99,235,.18);}
+header.site h1{margin:0 0 .4rem;font-size:2rem;line-height:1.35;}
+header.site p{margin:.2rem 0;opacity:.93;}
+.meta-list{list-style:none;padding:0;margin:.8rem 0 0;display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;}
+.meta-list li{background:rgba(255,255,255,.18);padding:.22rem .7rem;border-radius:999px;font-size:.85rem;}
+nav.modnav{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:20;}
+nav.modnav ul{list-style:none;margin:0 auto;padding:.45rem 1rem;max-width:1180px;display:flex;flex-wrap:wrap;gap:.35rem;justify-content:center;}
+nav.modnav a{display:block;text-decoration:none;color:var(--text);font-size:.86rem;padding:.25rem .65rem;border-radius:999px;border:1px solid var(--border);}
+nav.modnav a:hover{border-color:var(--accent);color:var(--accent-dark);}
+nav.modnav a[aria-current=page]{background:var(--accent);color:#fff;border-color:var(--accent);}
+.layout{max-width:1180px;margin:0 auto;padding:1.6rem 1.5rem;display:grid;grid-template-columns:250px 1fr;gap:1.9rem;align-items:start;}
+.sidebar{position:sticky;top:3.6rem;max-height:calc(100vh - 4.6rem);overflow-y:auto;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1rem .9rem;box-shadow:0 4px 18px rgba(15,23,42,.06);}
+.sidebar .home-link{display:flex;align-items:center;gap:.45rem;font-weight:600;color:#fff;text-decoration:none;padding:.55rem .8rem;border-radius:11px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));box-shadow:0 4px 12px rgba(37,99,235,.28);margin-bottom:.9rem;}
+.sidebar .toc-title{font-size:.74rem;letter-spacing:.1em;color:var(--muted);margin:.2rem .35rem .5rem;font-weight:700;}
+.sidebar nav ul{list-style:none;margin:0;padding:0;}
+.sidebar nav li{margin:.08rem 0;}
+.sidebar a.toc-link{display:block;color:var(--text);text-decoration:none;font-size:.88rem;line-height:1.45;padding:.38rem .6rem;border-radius:9px;border-left:3px solid transparent;}
+.sidebar a.toc-link:hover{background:#eef4ff;color:var(--accent-dark);border-left-color:var(--accent);}
+.sidebar a.toc-link b{color:var(--accent-dark);font-weight:700;margin-right:.3rem;}
+main{min-width:0;}
+article>section{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem 1.8rem;margin-bottom:1.6rem;scroll-margin-top:64px;}
+h2{color:var(--accent-dark);border-bottom:2px solid var(--border);padding-bottom:.45rem;margin-top:.2rem;line-height:1.45;}
+h2 .ep-no{display:inline-block;background:var(--accent);color:#fff;border-radius:8px;font-size:.8em;padding:0 .45rem;margin-right:.35rem;vertical-align:.08em;}
+h3{margin-top:1.6rem;color:var(--text);}
+h4{margin-top:1rem;color:var(--muted);}
+p{margin:.7rem 0;}
+.ep-meta{color:var(--muted);font-size:.88rem;margin-top:-.3rem;}
+.ep-meta a{color:var(--accent);}
+blockquote.oneliner,blockquote{margin:1rem 0;padding:.75rem 1rem;background:#eef4ff;border-left:4px solid var(--accent);border-radius:8px;}
+blockquote p{margin:.2rem 0;}
+nav.outline{background:#f8fafc;border:1px dashed #cbd5e1;border-radius:10px;padding:.6rem 1rem .6rem .8rem;margin:1rem 0;}
+nav.outline .outline-t{margin:.1rem 0 .3rem;font-weight:700;color:var(--accent-dark);}
+nav.outline ol{margin:.2rem 0;}
+a.ts{font-family:Consolas,"SFMono-Regular",monospace;font-size:.82em;color:var(--accent-dark);background:#e8efff;border-radius:5px;padding:0 .3rem;text-decoration:none;white-space:nowrap;}
+a.ts:hover{background:var(--accent);color:#fff;}
+.box{border-radius:12px;padding:.4rem 1.1rem .8rem;margin:1.3rem 0;}
+.box h3{margin-top:.7rem;}
+.box.a7c2{background:var(--sony-bg);border:1px solid #fed7aa;border-left:5px solid var(--sony);}
+.box.a7c2 h3{color:var(--sony);}
+.box.errata{background:#f8fafc;border:1px solid var(--border);border-left:5px solid #64748b;}
+.box.terms{background:#f0fdf4;border:1px solid #bbf7d0;border-left:5px solid #16a34a;}
+.box.terms h3{color:#15803d;}
+.table-wrap{overflow-x:auto;margin:1rem 0;-webkit-overflow-scrolling:touch;}
+table{border-collapse:collapse;width:100%;font-size:.92rem;}
+.table-wrap table{margin:0;}
+th,td{border:1px solid var(--border);padding:.5rem .65rem;text-align:left;vertical-align:top;}
+thead{background:#eef2ff;}
+.box.a7c2 thead{background:#ffedd5;}
+tbody tr:nth-child(even){background:#fafbfc;}
+.box.a7c2 tbody tr:nth-child(even){background:#fffaf3;}
+figure{margin:1.4rem 0;text-align:center;}
+figure svg{max-width:100%;height:auto;display:block;margin:0 auto;}
+figcaption{color:var(--muted);font-size:.88rem;margin-top:.5rem;line-height:1.6;}
+.fig-todo{border:1px dashed #cbd5e1;border-radius:10px;padding:1.2rem;color:var(--muted);}
+code{background:#eef0f3;padding:.1rem .35rem;border-radius:4px;font-size:.9em;}
+details{border:1px solid var(--border);border-radius:8px;padding:.5rem .9rem;margin:.5rem 0;background:#fcfcfd;}
+summary{cursor:pointer;font-weight:600;}
+details[open] summary{margin-bottom:.3rem;}
+details summary .ep-no-s{display:inline-block;min-width:2.6em;color:var(--accent-dark);font-family:Consolas,monospace;}
+details summary a{color:var(--text);text-decoration:none;}
+details summary a:hover{color:var(--accent-dark);text-decoration:underline;}
+.ep-nav{text-align:right;font-size:.85rem;margin-bottom:0;}
+.ep-nav a{color:var(--muted);text-decoration:none;}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.9rem;margin:1rem 0;}
+.cards a.card{display:block;text-decoration:none;color:var(--text);border:1px solid var(--border);border-radius:12px;padding:.8rem 1rem;background:#fff;transition:all .15s;}
+.cards a.card:hover{border-color:var(--accent);box-shadow:0 4px 14px rgba(37,99,235,.15);transform:translateY(-1px);}
+.cards a.card b{display:block;color:var(--accent-dark);font-size:1.02rem;}
+.cards a.card span{display:block;color:var(--muted);font-size:.85rem;line-height:1.55;margin-top:.2rem;}
+.cards a.card.sony b{color:var(--sony);}
+.todo{color:var(--muted);}
+a.src{font-size:.75em;color:#94a3b8;text-decoration:none;border-bottom:1px dotted #cbd5e1;white-space:nowrap;}
+a.src:hover{color:var(--accent);}
+mark{background:#fde68a;}
+ul,ol{padding-left:1.4rem;}
+footer.site{text-align:center;color:var(--muted);padding:2rem 1rem;font-size:.9rem;}
+footer.site a{color:var(--accent);}
+.backtop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;text-decoration:none;width:42px;height:42px;line-height:42px;text-align:center;border-radius:50%;box-shadow:0 4px 12px rgba(37,99,235,.4);font-size:1.1rem;}
+@media(max-width:860px){
+  .layout{grid-template-columns:1fr;gap:1rem;padding:1rem;}
+  .sidebar{position:static;max-height:none;}
+  .sidebar nav ul{display:flex;flex-wrap:wrap;gap:.35rem;}
+  .sidebar a.toc-link{border-left:none;border:1px solid var(--border);font-size:.82rem;padding:.3rem .6rem;}
+  nav.modnav{position:static;}
+}
+@media(max-width:600px){header.site h1{font-size:1.6rem;}article>section{padding:1.1rem .95rem;}th,td{padding:.4rem .5rem;}}
+@media print{nav.modnav,.sidebar,.backtop{display:none;}.layout{display:block;}article>section{break-inside:auto;}}
+</style>
+</head>
+<body id="top">
+<a class="skip-link" href="#main">跳到主要内容</a>
+<header class="site">
+  <h1>器材维护篇</h1>
+  <p>吴师自通摄影教程 · 器材维护篇（P18–P19，2 集，约 0.8 小时）· 逐集细化笔记 + A7C II 对照</p>
+  <ul class="meta-list"><li>#吴师自通摄影教程</li><li>#器材维护篇</li><li>#索尼A7C II</li><li>#摄影入门</li></ul>
+</header>
+<nav class="modnav" aria-label="课程篇章"><ul><li><a href="index.html">总览与大纲</a></li><li><a href="基础篇.html">基础篇</a></li><li><a href="构图篇.html">构图篇</a></li><li><a href="器材维护篇.html" aria-current="page">器材维护篇</a></li><li><a href="影棚静物篇.html">影棚静物篇</a></li><li><a href="机型速成篇.html">机型速成篇</a></li><li><a href="用光与影棚篇.html">用光与影棚篇</a></li><li><a href="广告拍摄案例.html">广告拍摄案例</a></li><li><a href="口袋摄影课.html">口袋摄影课</a></li><li><a href="A7C2操作手册.html">A7C II 操作手册</a></li><li><a href="知识总结.html">知识总结</a></li></ul></nav>
+<div class="layout">
+  <aside class="sidebar">
+    <a class="home-link" href="../index.html">&larr; 返回学习日志首页</a>
+    <p class="toc-title">本页目录</p>
+    <nav aria-label="本页目录"><ul><li><a class="toc-link" href="#intro">本篇导读</a></li><li><a class="toc-link" href="#p18"><b>P18</b>相机的维护与清洁</a></li><li><a class="toc-link" href="#p19"><b>P19</b>三脚架的维护与选购修正</a></li></ul></nav>
+  </aside>
+  <main id="main" tabindex="-1"><article>
+<section id="intro" aria-label="本篇导读"><p><strong>本篇导读</strong>：两集器材维护课：相机与镜头的日常保养和清洁顺序（先吹后擦），以及三脚架的结构、维护和选购测试。A7C II 没有反光镜，传感器直接暴露在卡口后面，换镜头时尤其要注意防尘；它有传感器清洁功能和「关机时快门关闭」的防尘设置，具体见笔记里的对照表。</p>
+</section>
+<section id="p18" class="episode" aria-labelledby="p18-t"><h2 id="p18-t"><span class="ep-no">P18</span> 相机的维护与清洁</h2>
+<p class="ep-meta">原标题：018维护01 相机的维护与清洁修正 · 时长 13:40 · <a href="https://www.bilibili.com/video/BV1Vt411E7nT?p=18" target="_blank" rel="noopener">▶ 在 B 站观看本集</a></p>
+<blockquote class="oneliner">
+<p><strong>一句话</strong>：本集讲解相机保养（湿度、温差、电池）及清洁套装使用步骤，强调先吹后擦、优先清洁UV镜，并介绍镜头笔原理。</p>
+</blockquote>
+<nav class="outline" aria-label="本集大纲"><p class="outline-t">本集大纲</p><ol>
+<li>照相机保养与清洁的常见问题（灰尘、手印、黑点）<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=18&t=29" target="_blank" rel="noopener" title="跳到视频 00:29">00:29</a></li>
+<li>基础保养维护：湿度控制（35%-55%防霉防脱胶）<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=18&t=105" target="_blank" rel="noopener" title="跳到视频 01:45">01:45</a></li>
+<li>防止水雾与霜：温差环境下的保护措施（保护膜抽气）<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=18&t=184" target="_blank" rel="noopener" title="跳到视频 03:04">03:04</a></li>
+<li>寒冷环境拍摄：电池存放建议（胸口口袋）<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=18&t=224" target="_blank" rel="noopener" title="跳到视频 03:44">03:44</a></li>
+<li>减少灰尘进入：更换镜头时的操作技巧（机身卡口朝下）<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=18&t=304" target="_blank" rel="noopener" title="跳到视频 05:04">05:04</a></li>
+<li>清洁套装构成：气吹、镜头水、镜头刷、镜头布、棉棒、一次性快干布<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=18&t=397" target="_blank" rel="noopener" title="跳到视频 06:37">06:37</a></li>
+<li>正确清洁顺序：先吹除大颗粒灰尘，再擦拭（闭门模式）<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=18&t=559" target="_blank" rel="noopener" title="跳到视频 09:19">09:19</a></li>
+<li>镜头清洁步骤：镜头纸+水，从内往外漩涡擦拭，镜头布擦干<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=18&t=625" target="_blank" rel="noopener" title="跳到视频 10:25">10:25</a></li>
+<li>边缘与内部清洁：棉棒清洁取景器、反光镜，卷棒镜头纸扫除边缘<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=18&t=698" target="_blank" rel="noopener" title="跳到视频 11:38">11:38</a></li>
+<li>优先清洁UV镜，严重污渍用镜头笔（石墨碳粉原理）<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=18&t=730" target="_blank" rel="noopener" title="跳到视频 12:10">12:10</a></li>
+</ol></nav>
+
+<h3>1. 常见问题与维护重要性<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=18&t=29" target="_blank" rel="noopener" title="跳到视频 00:29">00:29–01:13</a></h3><p><strong>正文</strong>：摄影爱好者常遇到镜头表面灰尘、手印，以及相机内部传感器（低通滤镜）出现灰尘导致照片有黑点的问题。清洁是维护不当后的不得已手段，应先注重保养。</p>
+
+<h3>2. 基础保养维护：湿度控制<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=18&t=105" target="_blank" rel="noopener" title="跳到视频 01:45">01:45–02:22</a></h3><p><strong>正文</strong>：照相机对保存湿度要求严格。</p>
+<ul>
+<li><strong>高湿度（&gt;55%）</strong>：会导致镜头、机身腔体、对焦屏、低通滤镜滋生霉菌。</li>
+<li><strong>低湿度（&lt;35%）</strong>：会导致机身皮革脱胶。</li>
+<li><strong>建议</strong>：日常保存应放在防潮箱中，维持 <strong>35%到55%</strong> 之间的湿度。</li>
+</ul>
+
+<h3>3. 防止水雾与霜<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=18&t=184" target="_blank" rel="noopener" title="跳到视频 03:04">03:04–03:44</a></h3><p><strong>正文</strong>：从冷环境进入热环境（如从空调房到户外），或反之，温差会导致镜头表面生成水雾，温度极低时甚至形成霜。</p>
+<ul>
+<li><strong>解决方法</strong>：进入空调房前，用保护膜完全包裹相机并 <strong>抽走空气</strong>；从冷环境到热环境时，待温差变小或无温差后再拿出拍摄。</li>
+</ul>
+
+<h3>4. 寒冷环境拍摄注意事项<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=18&t=224" target="_blank" rel="noopener" title="跳到视频 03:44">03:44–04:24</a></h3><p><strong>正文</strong>：在非常寒冷的环境下拍摄时，电池不应一直装在相机里。</p>
+<ul>
+<li><strong>操作</strong>：只在拍摄时把电池装入相机，其余时间放在随身的 <strong>胸口口袋</strong> 里，维持电池的正常温度，防止电量快速耗尽。</li>
+</ul>
+
+<h3>5. 减少灰尘进入<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=18&t=304" target="_blank" rel="noopener" title="跳到视频 05:04">05:04–05:46</a></h3><p><strong>正文</strong>：数码单反更换镜头时，反光板震动产生的气流会将灰尘带入传感器。</p>
+<ul>
+<li><strong>操作技巧</strong>：更换镜头时，将相机 <strong>机身卡口朝下</strong>，按下镜头卡口锁，再卸下镜头，可最大限度减少灰尘进入。</li>
+</ul>
+
+<h3>6. 清洁套装构成<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=18&t=397" target="_blank" rel="noopener" title="跳到视频 06:37">06:37–08:41</a></h3><p><strong>正文</strong>：一套完整的相机清洁套装包含：</p>
+<ul>
+<li><strong>镜头水</strong>：快干液体，防止水渍损伤镀膜。</li>
+<li><strong>气吹（吹气球）</strong>：吹除镜头表面的大颗粒灰尘。<strong>注意</strong>：必须先吹后擦，否则会形成划痕。</li>
+<li><strong>镜头刷</strong>：刷除镜头、机身、取景器中的大颗粒灰尘。</li>
+<li><strong>镜头布</strong>：擦干残留液体，<strong>不留纤维</strong>。</li>
+<li><strong>小棉棒</strong>：清洁取景器、反光镜、对焦屏等难以触及的地方。</li>
+<li><strong>一次性快干布</strong>：浸泡化学液体，用于严重污染的彻底清洁。</li>
+</ul>
+
+<h3>7. 正确清洁顺序<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=18&t=559" target="_blank" rel="noopener" title="跳到视频 09:19">09:19–10:25</a></h3><p><strong>正文</strong>：</p>
+<ol>
+<li><strong>吹除大颗粒灰尘</strong>：使用气吹吹除镜头表面、机身、反光镜、对焦屏的大颗粒灰尘。</li>
+<li><strong>传感器清洁</strong>：将快门设置为 <strong>闭门模式</strong>，按下快门使传感器（低通滤镜）裸露。将机身卡口朝下，用气吹吹除传感器表面的灰尘。</li>
+<li><strong>擦拭镜头</strong>：使用镜头纸 <strong>对半叠成双层</strong>，喷 <strong>两下</strong> 镜头水。<strong>从内往外</strong>呈 <strong>漩涡型</strong> 擦拭镜头前端表面。</li>
+<li><strong>擦干</strong>：用镜头布快速擦干，不留水印。</li>
+</ol>
+
+<h3>8. 边缘与内部清洁<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=18&t=698" target="_blank" rel="noopener" title="跳到视频 11:38">11:38–12:10</a></h3><p><strong>正文</strong>：</p>
+<ul>
+<li><strong>边缘灰尘</strong>：如果灰尘进入镜头边缘，先用镜头刷剔除，再用卷成细棒的镜头纸扫除。</li>
+<li><strong>内部清洁</strong>：用小棉棒清洁取景器、反光镜、对焦屏上的颗粒灰尘。</li>
+<li><strong>严重污染</strong>：如果镜头有严重手印、油渍，可使用 <strong>镜头笔</strong>（前端含有 <strong>石墨碳粉</strong>）去除。</li>
+</ul>
+
+<h3>9. 优先清洁UV镜<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=18&t=730" target="_blank" rel="noopener" title="跳到视频 12:10">12:10–12:41</a></h3><p><strong>正文</strong>：</p>
+<ul>
+<li><strong>原则</strong>：普通情况下，应尽量建立在对 <strong>UV镜</strong> 的清洁上，且要注意 <strong>双面</strong> 都要清洁。</li>
+<li><strong>例外</strong>：只有在没有使用UV镜且镜头表面有严重污染（手印、油渍）的情况下，才考虑使用一次性快干布或镜头笔直接清洁镜头。</li>
+</ul>
+
+
+
+<div class="box a7c2"><h3>📷 换成 A7C II 怎么做</h3><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>课程里的概念/操作</th>
+<th>A7C II 上的名称</th>
+<th>怎么操作</th>
+<th>说明（出处）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>传感器清洁</td>
+<td>传感器清洁（防尘功能）</td>
+<td>MENU →（设置）→［设置选项］→［防尘功能］→［传感器清洁］→［确定］，再取下镜头用气吹</td>
+<td>电量 51% 以上；勿用喷雾式气吹（0601_cleaning_mode.html）</td>
+</tr>
+<tr>
+<td>反光镜预升</td>
+<td><strong>无此功能</strong>（无反光镜）</td>
+<td>防按快门抖动：［自拍定时(单张)］2 秒、Bluetooth 遥控器、手机/电脑遥控；［快门类型］设［电子快门］则只用电子快门拍摄（但不能闪光/B门/长时曝光降噪/防闪烁）</td>
+<td>帮助指南没有“电子前帘快门”选项；三脚架上要关闭 SteadyShot（0407_drivemode_selftimer.html；0706_bluetooth_remote.html；0414H_shutter_type.html；0414_still_image_steadyshot.html）</td>
+</tr>
+<tr>
+<td>镜头防抖 IS/VR 开关</td>
+<td>SteadyShot（机身）</td>
+<td>MENU →（拍摄）→［影像稳定］→［〈静〉SteadyShot］</td>
+<td>三脚架上关；镜头有防抖开关时只能用镜头开关（0414_still_image_steadyshot.html）</td>
+</tr>
+<tr>
+<td>自拍 2 秒/10 秒</td>
+<td>自拍定时(单张)</td>
+<td>拍摄模式→［自拍定时(单张)］→ 10/5/2 秒</td>
+<td>2 秒用于减少按快门抖动（0407_drivemode_selftimer.html）</td>
+</tr>
+<tr>
+<td>快门线/遥控器</td>
+<td>Bluetooth遥控 ／ 智能手机 ／ 电脑遥控</td>
+<td>见 6.7</td>
+<td>（0706_bluetooth_remote.html；202h_register_smartphone.html；0903_pc_remote_function.html）</td>
+</tr>
+</tbody>
+</table></div>
+<p>（表中名称与路径摘自《A7C II 操作手册》，均与索尼官方帮助指南逐条核对；本集未列出的操作见手册。）</p>
+</div>
+<div class="box errata"><h3>🕰️ 时代差异与勘误</h3><ul>
+<li>反光镜：单反按快门时反光镜抬起、回落会带来震动，要用反光镜预升等办法 → A7C II 没有反光镜；三脚架上防抖动可用 2 秒自拍、Bluetooth 遥控器或手机遥控，并关闭 SteadyShot。</li>
+<li>防抖：课程年代防抖做在镜头里（佳能 IS、尼康 VR）→ A7C II 机身内置影像传感器位移防抖（SteadyShot），镜头带防抖开关时以镜头开关为准；上三脚架建议关闭。</li>
+<li>检查曝光：单反主要靠拍后回放检查 → A7C II 拍摄前就能看柱状图、斑马线等辅助显示；回放时按 DISP 看柱状图和过曝/欠曝警告。</li>
+</ul>
+</div>
+<div class="box terms"><h3>🔖 本集术语</h3><ul>
+<li><strong>低通滤镜</strong>：位于传感器前方的滤镜，用于消除摩尔纹，灰尘易附着在此。</li>
+<li><strong>闭门模式</strong>：快门设置为关闭状态，用于清洁传感器时防止灰尘进入。</li>
+<li><strong>气吹</strong>：利用压缩空气吹除镜头表面大颗粒灰尘的工具。</li>
+<li><strong>漩涡型擦拭</strong>：从镜头中心向外呈螺旋状擦拭的清洁手法。</li>
+<li><strong>UV镜</strong>：安装在镜头前用于保护镜头和吸收紫外线的玻璃滤镜。</li>
+<li><strong>镜头笔</strong>：前端含有石墨碳粉，用于去除油渍和顽固污渍的工具。</li>
+</ul>
+</div>
+<p class="ep-nav"><a href="#top">↑ 回到本页顶部</a></p></section>
+<section id="p19" class="episode" aria-labelledby="p19-t"><h2 id="p19-t"><span class="ep-no">P19</span> 三脚架的维护与选购修正</h2>
+<p class="ep-meta">原标题：019维护02 三脚架的维护与选购修正 · 时长 33:33 · <a href="https://www.bilibili.com/video/BV1Vt411E7nT?p=19" target="_blank" rel="noopener">▶ 在 B 站观看本集</a></p>
+<blockquote class="oneliner">
+<p><strong>一句话</strong>：脚架是摄影中仅次于照相机的重要器材，维护保养和科学选购能显著提升画质与拍摄成功率。</p>
+</blockquote>
+<nav class="outline" aria-label="本集大纲"><p class="outline-t">本集大纲</p><ol>
+<li>脚架在摄影中的意义<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=19&t=29" target="_blank" rel="noopener" title="跳到视频 00:29">00:29</a></li>
+<li>脚架的构成与部件介绍<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=19&t=338" target="_blank" rel="noopener" title="跳到视频 05:38">05:38</a></li>
+<li>脚架的维护与保养要点<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=19&t=639" target="_blank" rel="noopener" title="跳到视频 10:39">10:39</a></li>
+<li>脚架的选购考量因素<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=19&t=849" target="_blank" rel="noopener" title="跳到视频 14:09">14:09</a></li>
+<li>具体脚架型号的稳定性分析<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=19&t=997" target="_blank" rel="noopener" title="跳到视频 16:37">16:37</a></li>
+<li>脚架承重与高度的计算<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=19&t=1189" target="_blank" rel="noopener" title="跳到视频 19:49">19:49</a></li>
+<li>脚架便携性与用途的平衡<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=19&t=1397" target="_blank" rel="noopener" title="跳到视频 23:17">23:17</a></li>
+<li>云台的选购要点<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=19&t=1652" target="_blank" rel="noopener" title="跳到视频 27:32">27:32</a></li>
+<li>脚架的现场测试方法<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=19&t=1725" target="_blank" rel="noopener" title="跳到视频 28:45">28:45</a></li>
+<li>单电相机用户选购脚架的特殊性<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=19&t=1973" target="_blank" rel="noopener" title="跳到视频 32:53">32:53</a></li>
+</ol></nav>
+
+<h3>1. 脚架在摄影中的意义<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=19&t=29" target="_blank" rel="noopener" title="跳到视频 00:29">00:29–04:07</a></h3><p><strong>正文</strong>：脚架是重要的周边辅助器材，其用途总结为6点：</p>
+<ol>
+<li><strong>弱光摄影</strong>：配合慢速度快门获得细腻画质。</li>
+<li><strong>长焦摄影</strong>：防止轻微抖动导致的画面虚化。</li>
+<li><strong>风光摄影</strong>：维持画面水平，配合中灰滤镜拍摄慢门轨迹。</li>
+<li><strong>产品摄影</strong>：固定相机位置，便于反复调整灯光和光位。</li>
+<li><strong>微距摄影</strong>：微距景深极小，轻微抖动即导致模糊。</li>
+<li><strong>全景摄影</strong>：多张合成，避免广角镜头边缘畸变和素质下降。</li>
+</ol>
+
+<h3>2. 脚架的构成与部件介绍<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=19&t=338" target="_blank" rel="noopener" title="跳到视频 05:38">05:38–09:13</a></h3><p><strong>正文</strong>：脚架由<strong>脚架本体</strong>和<strong>云台</strong>两部分构成。</p>
+<ul>
+<li><strong>脚架本体</strong>：
+<ul>
+<li><strong>云台承载版</strong>：连接相机，使用8分之3螺丝。</li>
+<li><strong>法兰盘</strong>：连接脚管，将相机重量分散至三脚管。</li>
+<li><strong>角度调节片</strong>：调节脚架开合角度，适应低角度拍摄。</li>
+<li><strong>脚管</strong>：支撑结构，常见锁紧方式有<strong>旋钮式</strong>（紧固）和<strong>扳扣式</strong>（快捷）。</li>
+<li><strong>中轴</strong>：延伸高度，<strong>应尽量少用</strong>，因使用中轴会大幅降低稳定性。</li>
+<li><strong>中轴挂钩</strong>：户外大风时挂载重物增加稳定性。</li>
+<li><strong>脚垫</strong>：有胶垫和钢钉，适应不同地面。</li>
+</ul>
+</li>
+<li><strong>云台</strong>：
+<ul>
+<li><strong>快装板</strong>：使用4分之1英寸螺丝，连接相机。</li>
+<li><strong>快装夹</strong>：快速装卸相机。</li>
+<li><strong>球形云台</strong>：主体为球体，通过<strong>阻尼旋钮</strong>控制旋转松紧。</li>
+<li><strong>水平锁紧旋钮</strong>：用于摇摄和全景拍摄，配合刻度标尺。</li>
+</ul>
+</li>
+</ul>
+
+<h3>3. 脚架的维护与保养要点<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=19&t=639" target="_blank" rel="noopener" title="跳到视频 10:39">10:39–12:43</a></h3><p><strong>正文</strong>：</p>
+<ol>
+<li><strong>检查螺丝</strong>：保持1度松紧，切忌过紧导致滑丝。</li>
+<li><strong>脚管锁紧</strong>：螺口式脚管锁至固定住两根管即可，过紧会导致滑丝。</li>
+<li><strong>禁止涂抹油脂</strong>：不可在脚管内部锁紧装置涂抹油脂，脚管锁紧旋钮内部可稍涂。</li>
+<li><strong>清洁泥沙</strong>：户外作业后，将脚架分解，用刷子刷除螺纹泥沙，毛巾擦除塑胶环尘土。</li>
+<li><strong>雨雪后处理</strong>：展开脚管擦净泥沙水渍，静置待水分蒸发后再收拢。</li>
+<li><strong>携带方式</strong>：手提脚管上端，避免背包时抓中轴或云台。</li>
+<li><strong>禁止背相机</strong>：禁止将相机装在快装板上扛起脚架走，会导致云台或法兰盘损坏。</li>
+<li><strong>拍摄姿势</strong>：双脚向后，单脚向前，摄影师处于脚架双脚之间。</li>
+<li><strong>升降顺序</strong>：先伸粗脚管，再伸细脚管；能不用中轴尽量不用。</li>
+</ol>
+
+<h3>4. 脚架的选购考量因素<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=19&t=849" target="_blank" rel="noopener" title="跳到视频 14:09">14:09–15:50</a></h3><p><strong>正文</strong>：选购需考虑6点：<strong>稳定性、承重、高度、便携性、用途、价格</strong>。其中稳定性、便携性、价格三者矛盾。</p>
+<ul>
+<li><strong>稳定性因素</strong>：
+<ul>
+<li><strong>脚管直径</strong>：越粗越稳。</li>
+<li><strong>管径递减</strong>：脚管之间递减的毫米数越小，稳定性越强。</li>
+<li><strong>脚管节数</strong>：节数越少越稳（主流四节）。</li>
+<li><strong>材料</strong>：铝镁合金（主流）、碳纤维（便携）、木/石木（特殊）。</li>
+<li><strong>中轴稳定性</strong>：中轴锁紧装置必须可靠，防止下滑。</li>
+<li><strong>脚钉</strong>：与地面摩擦力好，钢钉优于胶钉。</li>
+</ul>
+</li>
+</ul>
+
+<h3>5. 具体脚架型号的稳定性分析<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=19&t=997" target="_blank" rel="noopener" title="跳到视频 16:37">16:37–19:02</a></h3><p><strong>正文</strong>：以MG684N为例：</p>
+<ul>
+<li><strong>管径</strong>：28毫米铝镁合金，四节设计。</li>
+<li><strong>递减</strong>：每级递减3毫米（主流为4毫米），递减越小越稳。</li>
+<li><strong>法兰盘</strong>：曲线式设计，将相机重量均匀释放至三脚管。</li>
+<li><strong>中轴</strong>：双重锁紧装置（环式螺扣+法兰盘旋钮），确保安全。</li>
+<li><strong>脚钉</strong>：可插拔式设计，优于旋钮式，不易进灰干扰。</li>
+</ul>
+
+<h3>6. 脚架承重与高度的计算<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=19&t=1189" target="_blank" rel="noopener" title="跳到视频 19:49">19:49–23:17</a></h3><p><strong>正文</strong>：</p>
+<ul>
+<li><strong>承重公式</strong>：脚架承重 ≥ （机身+镜头+闪光灯）× 1.5（保险）或 × 2。</li>
+<li><strong>高度计算</strong>：脚架在不使用中轴时，高度应达到<strong>身高减去35厘米</strong>左右。例如1.74米高的脚架适合约1.95米的人使用（留出头部空间）。</li>
+</ul>
+
+<h3>7. 脚架便携性与用途的平衡<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=19&t=1397" target="_blank" rel="noopener" title="跳到视频 23:17">23:17–26:20</a></h3><p><strong>正文</strong>：</p>
+<ul>
+<li><strong>便携性</strong>：
+<ul>
+<li>收起长度：越短越好（MG684N全收仅47厘米）。</li>
+<li>节数：节数越多越便携，但会影响稳定性，不提倡五节六节。</li>
+<li>锁紧装置：应能快速伸缩。</li>
+</ul>
+</li>
+<li><strong>用途</strong>：
+<ul>
+<li><strong>微距</strong>：中轴可倒置。</li>
+<li><strong>低角度</strong>：脚管可伸至88度。</li>
+<li><strong>独角架</strong>：拆去一节脚管，可作登山杖或独脚架使用。</li>
+</ul>
+</li>
+</ul>
+
+<h3>8. 云台的选购要点<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=19&t=1652" target="_blank" rel="noopener" title="跳到视频 27:32">27:32–28:08</a></h3><p><strong>正文</strong>：</p>
+<ul>
+<li><strong>灵活性</strong>：转动顺畅。</li>
+<li><strong>水平仪</strong>：带有足够水平仪，便于快速校准水平，减少裁剪。</li>
+<li><strong>锁紧可靠性</strong>：锁紧后不可用手压动，否则存在安全隐患，长时间曝光会失败。</li>
+<li><strong>水平刻度</strong>：下方刻度用于全景拍摄，合成无畸变画面。</li>
+</ul>
+
+<h3>9. 脚架的现场测试方法<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=19&t=1725" target="_blank" rel="noopener" title="跳到视频 28:45">28:45–31:31</a></h3><p><strong>正文</strong>：选购前需现场测试：</p>
+<ol>
+<li><strong>紧密性</strong>：抽动脚管，应有明显的“打气筒”阻力感（间隙小）。</li>
+<li><strong>抗压与抗扭曲</strong>：
+<ul>
+<li>按住法兰盘，看脚管是否扭曲。</li>
+<li>转动法兰盘，看是否偏移。</li>
+</ul>
+</li>
+<li><strong>吸震性能</strong>：
+<ul>
+<li>一手抓脚管留间隙，另一手弹动另一脚管。</li>
+<li>手感共振时间：<strong>超过2秒不合格</strong>，<strong>1秒以内优秀</strong>。</li>
+</ul>
+</li>
+</ol>
+
+<h3>10. 单电相机用户选购脚架的特殊性<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=19&t=1973" target="_blank" rel="noopener" title="跳到视频 32:53">32:53–33:33</a></h3><p><strong>正文</strong>：单电相机无反光镜，<strong>机震极小</strong>。用户可忽略中轴对稳定性的影响，更应优先考虑<strong>便携性</strong>。</p>
+<figure id="fig-P19-1"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 598" role="img" aria-label="三脚架结构示意图：脚架由脚架本体和云台构成。本体四大部分：云台承载版（上方 8分之3 英寸螺丝装云台）、法兰盘（连接脚管，下带角度调节片）、脚管（旋钮式或扳扣式锁紧，底部脚垫为胶垫或钢钉）、中轴（升高用，应尽量少用，末端有中轴挂钩，大风时挂重物增稳）；云台自上而下为 4分之1 英寸快装板、快装夹（含锁紧旋钮）、球体与阻尼旋钮、水平锁紧旋钮与刻度标尺">
+<title>三脚架结构示意图：脚架由脚架本体和云台构成。本体四大部分：云台承载版（上方 8分之3 英寸螺丝装云台）、法兰盘（连接脚管，下带角度调节片）、脚管（旋钮式或扳扣式锁紧，底部脚垫为胶垫或钢钉）、中轴（升高用，应尽量少用，末端有中轴挂钩，大风时挂重物增稳）；云台自上而下为 4分之1 英寸快装板、快装夹（含锁紧旋钮）、球体与阻尼旋钮、水平锁紧旋钮与刻度标尺</title>
+<defs><radialGradient id="p19-1-ball" cx=".35" cy=".3" r=".85"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#cbd5e1"/><stop offset="1" stop-color="#7a8aa0"/></radialGradient><linearGradient id="p19-1-tube" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#e5ebf3"/><stop offset=".5" stop-color="#cfd8e4"/><stop offset="1" stop-color="#aab6c6"/></linearGradient></defs>
+<text x="360.0" y="27.0" font-size="18" font-weight="bold" text-anchor="middle" fill="#1e3a8a">三脚架结构示意图</text>
+<text x="360.0" y="47.0" font-size="12" text-anchor="middle" fill="#475569">脚架由「脚架本体」和「云台」两部分构成；蓝色是本体的四大部分，橙色是要认清位置的部件</text>
+<g transform="translate(0 16)">
+<ellipse cx="352" cy="508" rx="176" ry="24" fill="#eef2f7" stroke="#dbe3ec" stroke-width="1.2"/>
+<g opacity="0.85"><line x1="407.4" y1="447.4" x2="418.0" y2="494.0" stroke="#444" stroke-width="8.4"/><line x1="407.4" y1="447.4" x2="418.0" y2="494.0" stroke="#d5dde8" stroke-width="6"/><line x1="396.9" y1="400.9" x2="407.4" y2="447.4" stroke="#444" stroke-width="9.9"/><line x1="396.9" y1="400.9" x2="407.4" y2="447.4" stroke="#d5dde8" stroke-width="7.5"/><line x1="385.9" y1="352.4" x2="396.9" y2="400.9" stroke="#444" stroke-width="11.4"/><line x1="385.9" y1="352.4" x2="396.9" y2="400.9" stroke="#d5dde8" stroke-width="9"/><line x1="374.0" y1="300.0" x2="385.9" y2="352.4" stroke="#444" stroke-width="13.4"/><line x1="374.0" y1="300.0" x2="385.9" y2="352.4" stroke="#d5dde8" stroke-width="11"/><line x1="385.3" y1="349.9" x2="386.4" y2="354.8" stroke="#64748b" stroke-width="14"/><line x1="396.3" y1="398.4" x2="397.4" y2="403.3" stroke="#64748b" stroke-width="12"/><line x1="406.9" y1="445.0" x2="408.0" y2="449.9" stroke="#64748b" stroke-width="10.5"/></g>
+<g opacity="1.0"><line x1="254.7" y1="468.2" x2="236.0" y2="520.0" stroke="#444" stroke-width="9.4"/><line x1="254.7" y1="468.2" x2="236.0" y2="520.0" stroke="#d5dde8" stroke-width="7"/><line x1="273.4" y1="416.3" x2="254.7" y2="468.2" stroke="#444" stroke-width="11.4"/><line x1="273.4" y1="416.3" x2="254.7" y2="468.2" stroke="#d5dde8" stroke-width="9"/><line x1="292.9" y1="362.3" x2="273.4" y2="416.3" stroke="#444" stroke-width="13.4"/><line x1="292.9" y1="362.3" x2="273.4" y2="416.3" stroke="#d5dde8" stroke-width="11"/><line x1="314.0" y1="304.0" x2="292.9" y2="362.3" stroke="#444" stroke-width="15.4"/><line x1="314.0" y1="304.0" x2="292.9" y2="362.3" stroke="#d5dde8" stroke-width="13"/><line x1="294.5" y1="358.1" x2="291.4" y2="366.6" stroke="#444" stroke-width="19"/><line x1="294.5" y1="358.1" x2="291.4" y2="366.6" stroke="#64748b" stroke-width="16.4"/><line x1="301.2" y1="363.2" x2="286.0" y2="357.7" stroke="#e2e8f0" stroke-width=".8"/><line x1="300.6" y1="365.1" x2="285.3" y2="359.6" stroke="#e2e8f0" stroke-width=".8"/><line x1="299.9" y1="367.0" x2="284.6" y2="361.4" stroke="#e2e8f0" stroke-width=".8"/><line x1="275.0" y1="412.1" x2="271.9" y2="420.6" stroke="#444" stroke-width="17"/><line x1="275.0" y1="412.1" x2="271.9" y2="420.6" stroke="#64748b" stroke-width="14.4"/><line x1="280.8" y1="416.9" x2="267.4" y2="412.0" stroke="#e2e8f0" stroke-width=".8"/><line x1="280.1" y1="418.7" x2="266.8" y2="413.9" stroke="#e2e8f0" stroke-width=".8"/><line x1="279.4" y1="420.6" x2="266.1" y2="415.8" stroke="#e2e8f0" stroke-width=".8"/><line x1="256.2" y1="463.9" x2="253.2" y2="472.4" stroke="#444" stroke-width="15"/><line x1="256.2" y1="463.9" x2="253.2" y2="472.4" stroke="#64748b" stroke-width="12.4"/><line x1="261.1" y1="468.4" x2="249.7" y2="464.2" stroke="#e2e8f0" stroke-width=".8"/><line x1="260.5" y1="470.2" x2="249.0" y2="466.1" stroke="#e2e8f0" stroke-width=".8"/><line x1="259.8" y1="472.1" x2="248.3" y2="468.0" stroke="#e2e8f0" stroke-width=".8"/></g>
+<g opacity="1.0"><line x1="454.6" y1="462.1" x2="470.0" y2="512.0" stroke="#444" stroke-width="9.4"/><line x1="454.6" y1="462.1" x2="470.0" y2="512.0" stroke="#d5dde8" stroke-width="7"/><line x1="439.3" y1="412.2" x2="454.6" y2="462.1" stroke="#444" stroke-width="11.4"/><line x1="439.3" y1="412.2" x2="454.6" y2="462.1" stroke="#d5dde8" stroke-width="9"/><line x1="423.3" y1="360.2" x2="439.3" y2="412.2" stroke="#444" stroke-width="13.4"/><line x1="423.3" y1="360.2" x2="439.3" y2="412.2" stroke="#d5dde8" stroke-width="11"/><line x1="406.0" y1="304.0" x2="423.3" y2="360.2" stroke="#444" stroke-width="15.4"/><line x1="406.0" y1="304.0" x2="423.3" y2="360.2" stroke="#d5dde8" stroke-width="13"/><line x1="422.4" y1="357.3" x2="424.2" y2="363.0" stroke="#444" stroke-width="18"/><line x1="422.4" y1="357.3" x2="424.2" y2="363.0" stroke="#64748b" stroke-width="15.6"/><g transform="translate(423.3 360.2) rotate(72.9)"><rect x="-8" y="-14.5" width="16" height="5.4" rx="2" fill="#94a3b8" stroke="#444" stroke-width="1.1"/><line x1="0" y1="-9.1" x2="0" y2="-9.5" stroke="#444" stroke-width="1"/><circle cx="-6" cy="-11.8" r="1.3" fill="#444"/></g><line x1="438.4" y1="409.3" x2="440.2" y2="415.0" stroke="#444" stroke-width="16"/><line x1="438.4" y1="409.3" x2="440.2" y2="415.0" stroke="#64748b" stroke-width="13.6"/><g transform="translate(439.3 412.2) rotate(72.9)"><rect x="-8" y="-13.5" width="16" height="5.4" rx="2" fill="#94a3b8" stroke="#444" stroke-width="1.1"/><line x1="0" y1="-8.1" x2="0" y2="-8.5" stroke="#444" stroke-width="1"/><circle cx="-6" cy="-10.8" r="1.3" fill="#444"/></g><line x1="453.8" y1="459.2" x2="455.5" y2="464.9" stroke="#444" stroke-width="14"/><line x1="453.8" y1="459.2" x2="455.5" y2="464.9" stroke="#64748b" stroke-width="11.6"/><g transform="translate(454.6 462.1) rotate(72.9)"><rect x="-8" y="-12.5" width="16" height="5.4" rx="2" fill="#94a3b8" stroke="#444" stroke-width="1.1"/><line x1="0" y1="-7.1" x2="0" y2="-7.5" stroke="#444" stroke-width="1"/><circle cx="-6" cy="-9.8" r="1.3" fill="#444"/></g></g>
+<line x1="239.4" y1="511.0" x2="240.7" y2="520.0" stroke="#475569" stroke-width="9"/>
+<rect x="228" y="518" width="22" height="9" rx="3.5" fill="#334155" stroke="#444" stroke-width="1.2"/>
+<polygon points="464.5,506 475.5,506 470,522" fill="#94a3b8" stroke="#444" stroke-width="1.4" stroke-linejoin="round"/>
+<rect x="463.5" y="502" width="13" height="5" rx="1.5" fill="#64748b" stroke="#444" stroke-width="1.1"/>
+<rect x="410" y="493" width="17" height="7" rx="3" fill="#475569" stroke="#444" stroke-width="1" opacity=".85"/>
+<text x="239.0" y="542.0" font-size="11" text-anchor="middle" fill="#475569">胶垫</text>
+<text x="470.0" y="536.0" font-size="11" text-anchor="middle" fill="#475569">钢钉</text>
+<rect x="354" y="232" width="12" height="190" fill="url(#p19-1-tube)" stroke="#444" stroke-width="1.6"/>
+<rect x="351" y="420" width="18" height="7" rx="2" fill="#94a3b8" stroke="#444" stroke-width="1.4"/>
+<circle cx="360" cy="438" r="7.5" fill="none" stroke="#444" stroke-width="4.6"/>
+<circle cx="360" cy="438" r="7.5" fill="none" stroke="#f59e0b" stroke-width="2.6"/>
+<path d="M330,262 L390,262 L400,296 L320,296 Z" fill="#cfe1fb" stroke="#444" stroke-width="1.9" stroke-linejoin="round"/>
+<line x1="326" y1="274" x2="394" y2="274" stroke="#444" stroke-width="1" opacity=".55"/>
+<polygon points="327,284 319,288 304,311 313,314 324,297" fill="#fcd9a8" stroke="#d97706" stroke-width="1.7" stroke-linejoin="round"/>
+<circle cx="313" cy="302" r="3.1" fill="#fff" stroke="#444" stroke-width="1.2"/>
+<polygon points="393,284 401,288 416,311 407,314 396,297" fill="#fcd9a8" stroke="#d97706" stroke-width="1.7" stroke-linejoin="round"/>
+<circle cx="407" cy="302" r="3.1" fill="#fff" stroke="#444" stroke-width="1.2"/>
+<rect x="354" y="232" width="12" height="32" fill="url(#p19-1-tube)" stroke="#444" stroke-width="1.6"/>
+<rect x="322" y="222" width="76" height="10" rx="3" fill="#cfe1fb" stroke="#444" stroke-width="1.9"/>
+<rect x="355" y="214" width="10" height="8.5" fill="#fbbf24" stroke="#d97706" stroke-width="1.2"/>
+<line x1="355" y1="217" x2="365" y2="217" stroke="#fff" stroke-width=".9"/><line x1="355" y1="220" x2="365" y2="220" stroke="#fff" stroke-width=".9"/>
+<rect x="328" y="200" width="64" height="14" rx="2.5" fill="#e2e8f0" stroke="#444" stroke-width="1.7"/>
+<line x1="332" y1="206" x2="332" y2="213" stroke="#444" stroke-width=".8"/>
+<line x1="336" y1="208" x2="336" y2="213" stroke="#444" stroke-width=".8"/>
+<line x1="340" y1="206" x2="340" y2="213" stroke="#444" stroke-width=".8"/>
+<line x1="344" y1="208" x2="344" y2="213" stroke="#444" stroke-width=".8"/>
+<line x1="348" y1="206" x2="348" y2="213" stroke="#444" stroke-width=".8"/>
+<line x1="352" y1="208" x2="352" y2="213" stroke="#444" stroke-width=".8"/>
+<line x1="356" y1="206" x2="356" y2="213" stroke="#444" stroke-width=".8"/>
+<line x1="360" y1="208" x2="360" y2="213" stroke="#444" stroke-width=".8"/>
+<line x1="364" y1="206" x2="364" y2="213" stroke="#444" stroke-width=".8"/>
+<line x1="368" y1="208" x2="368" y2="213" stroke="#444" stroke-width=".8"/>
+<line x1="372" y1="206" x2="372" y2="213" stroke="#444" stroke-width=".8"/>
+<line x1="376" y1="208" x2="376" y2="213" stroke="#444" stroke-width=".8"/>
+<line x1="380" y1="206" x2="380" y2="213" stroke="#444" stroke-width=".8"/>
+<line x1="384" y1="208" x2="384" y2="213" stroke="#444" stroke-width=".8"/>
+<line x1="388" y1="206" x2="388" y2="213" stroke="#444" stroke-width=".8"/>
+<rect x="392" y="203" width="18" height="8" rx="3" fill="#94a3b8" stroke="#444" stroke-width="1.3"/>
+<line x1="397" y1="204" x2="397" y2="210" stroke="#e2e8f0" stroke-width=".9"/>
+<line x1="401" y1="204" x2="401" y2="210" stroke="#e2e8f0" stroke-width=".9"/>
+<line x1="405" y1="204" x2="405" y2="210" stroke="#e2e8f0" stroke-width=".9"/>
+<rect x="313" y="162" width="25" height="12" rx="3" fill="#94a3b8" stroke="#444" stroke-width="1.3"/>
+<line x1="316" y1="163" x2="316" y2="173" stroke="#e2e8f0" stroke-width=".9"/>
+<line x1="321" y1="163" x2="321" y2="173" stroke="#e2e8f0" stroke-width=".9"/>
+<line x1="326" y1="163" x2="326" y2="173" stroke="#e2e8f0" stroke-width=".9"/>
+<line x1="331" y1="163" x2="331" y2="173" stroke="#e2e8f0" stroke-width=".9"/>
+<circle cx="360" cy="168" r="20" fill="url(#p19-1-ball)" stroke="#444" stroke-width="1.8"/>
+<path d="M334,184 L386,184 L382,200 L338,200 Z" fill="#cbd5e1" stroke="#444" stroke-width="1.6" stroke-linejoin="round"/>
+<rect x="394" y="130" width="19" height="10" rx="3" fill="#94a3b8" stroke="#444" stroke-width="1.3"/>
+<line x1="399" y1="131" x2="399" y2="139" stroke="#e2e8f0" stroke-width=".9"/>
+<line x1="403" y1="131" x2="403" y2="139" stroke="#e2e8f0" stroke-width=".9"/>
+<line x1="407" y1="131" x2="407" y2="139" stroke="#e2e8f0" stroke-width=".9"/>
+<rect x="326" y="125" width="68" height="21" rx="3" fill="#e2e8f0" stroke="#444" stroke-width="1.8"/>
+<rect x="316" y="119" width="88" height="6.5" rx="1.5" fill="#d1d5db" stroke="#444" stroke-width="1.5"/>
+<rect x="355.5" y="111" width="9" height="8.5" fill="#fbbf24" stroke="#d97706" stroke-width="1.1"/>
+<line x1="355.5" y1="114" x2="364.5" y2="114" stroke="#fff" stroke-width=".8"/><line x1="355.5" y1="117" x2="364.5" y2="117" stroke="#fff" stroke-width=".8"/>
+<rect x="300" y="70" width="120" height="42" rx="6" fill="#f8fafc" fill-opacity=".6" stroke="#94a3b8" stroke-width="1.4" stroke-dasharray="5 3"/>
+<rect x="264" y="78" width="36" height="28" rx="3" fill="#f8fafc" fill-opacity=".6" stroke="#94a3b8" stroke-width="1.4" stroke-dasharray="5 3"/>
+<rect x="382" y="62" width="26" height="8" rx="2" fill="#f8fafc" fill-opacity=".6" stroke="#94a3b8" stroke-width="1.4" stroke-dasharray="5 3"/>
+<text x="394.0" y="96.0" font-size="12" text-anchor="middle" fill="#94a3b8">相机</text>
+<rect x="83.7" y="103.0" width="128.3" height="22.0" rx="11" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.4"/>
+<text x="203.0" y="118.6" font-size="13" font-weight="bold" text-anchor="end" fill="#92400e">4分之1英寸快装板</text>
+<text x="212.0" y="139.0" font-size="12" text-anchor="end" fill="#475569">拧进相机底部的通用螺口</text>
+<polyline points="212.0,114.0 318.0,122.5" fill="none" stroke="#f59e0b" stroke-width="1.3" stroke-linejoin="round"/>
+<circle cx="318.0" cy="122.5" r="2.4" fill="#f59e0b"/>
+<text x="212.0" y="164.6" font-size="13" font-weight="bold" text-anchor="end" fill="#1f2329">球形云台</text>
+<text x="212.0" y="185.0" font-size="12" text-anchor="end" fill="#475569">球体 + 阻尼旋钮</text>
+<text x="212.0" y="200.0" font-size="12" text-anchor="end" fill="#475569">（控制转动松紧）</text>
+<polyline points="212.0,160.0 315.0,168.0" fill="none" stroke="#94a3b8" stroke-width="1.3" stroke-linejoin="round"/>
+<circle cx="315.0" cy="168.0" r="2.4" fill="#94a3b8"/>
+<rect x="126.4" y="215.0" width="85.6" height="22.0" rx="11" fill="#dbeafe" stroke="#2563eb" stroke-width="1.4"/>
+<text x="203.0" y="230.6" font-size="13" font-weight="bold" text-anchor="end" fill="#1e3a8a">云台承载版</text>
+<text x="212.0" y="251.0" font-size="12" text-anchor="end" fill="#475569">脚架本体最上方的底座</text>
+<polyline points="212.0,226.0 323.0,227.0" fill="none" stroke="#2563eb" stroke-width="1.3" stroke-linejoin="round"/>
+<circle cx="323.0" cy="227.0" r="2.4" fill="#2563eb"/>
+<rect x="153.4" y="272.0" width="58.6" height="22.0" rx="11" fill="#dbeafe" stroke="#2563eb" stroke-width="1.4"/>
+<text x="203.0" y="287.6" font-size="13" font-weight="bold" text-anchor="end" fill="#1e3a8a">法兰盘</text>
+<text x="212.0" y="308.0" font-size="12" text-anchor="end" fill="#475569">连接三条脚管，</text>
+<text x="212.0" y="323.0" font-size="12" text-anchor="end" fill="#475569">把相机的重量分散到脚管</text>
+<polyline points="212.0,283.0 325.5,277.0" fill="none" stroke="#2563eb" stroke-width="1.3" stroke-linejoin="round"/>
+<circle cx="325.5" cy="277.0" r="2.4" fill="#2563eb"/>
+<rect x="126.4" y="334.0" width="85.6" height="22.0" rx="11" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.4"/>
+<text x="203.0" y="349.6" font-size="13" font-weight="bold" text-anchor="end" fill="#92400e">角度调节片</text>
+<text x="212.0" y="370.0" font-size="12" text-anchor="end" fill="#475569">调脚架张开的角度，</text>
+<text x="212.0" y="385.0" font-size="12" text-anchor="end" fill="#475569">能拍更低的角度</text>
+<polyline points="212.0,345.0 308.0,300.0" fill="none" stroke="#f59e0b" stroke-width="1.3" stroke-linejoin="round"/>
+<circle cx="308.0" cy="300.0" r="2.4" fill="#f59e0b"/>
+<rect x="167.0" y="393.0" width="45.0" height="22.0" rx="11" fill="#dbeafe" stroke="#2563eb" stroke-width="1.4"/>
+<text x="203.0" y="408.6" font-size="13" font-weight="bold" text-anchor="end" fill="#1e3a8a">脚管</text>
+<text x="212.0" y="429.0" font-size="12" text-anchor="end" fill="#475569">常见四节；旋钮式锁得更紧</text>
+<polyline points="212.0,404.0 280.3,380.7" fill="none" stroke="#2563eb" stroke-width="1.3" stroke-linejoin="round"/>
+<circle cx="280.3" cy="380.7" r="2.4" fill="#2563eb"/>
+<rect x="167.0" y="467.0" width="45.0" height="22.0" rx="11" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.4"/>
+<text x="203.0" y="482.6" font-size="13" font-weight="bold" text-anchor="end" fill="#92400e">脚垫</text>
+<text x="212.0" y="503.0" font-size="12" text-anchor="end" fill="#475569">胶垫 / 钢钉，</text>
+<text x="212.0" y="518.0" font-size="12" text-anchor="end" fill="#475569">适应不同地面</text>
+<polyline points="212.0,478.0 229.0,522.0" fill="none" stroke="#f59e0b" stroke-width="1.3" stroke-linejoin="round"/>
+<circle cx="229.0" cy="522.0" r="2.4" fill="#f59e0b"/>
+<text x="508.0" y="110.6" font-size="13" font-weight="bold" text-anchor="start" fill="#1f2329">快装夹</text>
+<text x="508.0" y="131.0" font-size="12" text-anchor="start" fill="#475569">含锁紧旋钮，快速装卸相机</text>
+<polyline points="508.0,106.0 412.0,135.0" fill="none" stroke="#94a3b8" stroke-width="1.3" stroke-linejoin="round"/>
+<circle cx="412.0" cy="135.0" r="2.4" fill="#94a3b8"/>
+<text x="508.0" y="166.6" font-size="13" font-weight="bold" text-anchor="start" fill="#1f2329">水平锁紧旋钮 + 刻度标尺</text>
+<text x="508.0" y="187.0" font-size="12" text-anchor="start" fill="#475569">摇摄、拍全景</text>
+<text x="508.0" y="202.0" font-size="12" text-anchor="start" fill="#475569">（课程举例：每次转 30°）</text>
+<polyline points="508.0,162.0 409.0,207.0" fill="none" stroke="#94a3b8" stroke-width="1.3" stroke-linejoin="round"/>
+<circle cx="409.0" cy="207.0" r="2.4" fill="#94a3b8"/>
+<rect x="508.0" y="207.0" width="114.8" height="22.0" rx="11" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.4"/>
+<text x="517.0" y="222.6" font-size="13" font-weight="bold" text-anchor="start" fill="#92400e">8分之3英寸螺丝</text>
+<text x="508.0" y="243.0" font-size="12" text-anchor="start" fill="#475569">云台装在承载版上用的螺丝</text>
+<polyline points="508.0,218.0 365.0,218.0" fill="none" stroke="#f59e0b" stroke-width="1.3" stroke-linejoin="round"/>
+<circle cx="365.0" cy="218.0" r="2.4" fill="#f59e0b"/>
+<rect x="508.0" y="265.0" width="45.0" height="22.0" rx="11" fill="#dbeafe" stroke="#2563eb" stroke-width="1.4"/>
+<text x="517.0" y="280.6" font-size="13" font-weight="bold" text-anchor="start" fill="#1e3a8a">中轴</text>
+<text x="508.0" y="301.0" font-size="12" text-anchor="start" fill="#475569">用来升高，应尽量少用</text>
+<text x="508.0" y="316.0" font-size="12" text-anchor="start" fill="#475569">（用了会降低稳定性）</text>
+<polyline points="508.0,276.0 366.0,247.0" fill="none" stroke="#2563eb" stroke-width="1.3" stroke-linejoin="round"/>
+<circle cx="366.0" cy="247.0" r="2.4" fill="#2563eb"/>
+<text x="508.0" y="376.6" font-size="13" font-weight="bold" text-anchor="start" fill="#1f2329">扳扣式脚管锁</text>
+<text x="508.0" y="397.0" font-size="12" text-anchor="start" fill="#475569">开合更快捷</text>
+<polyline points="508.0,372.0 438.3,353.2" fill="none" stroke="#94a3b8" stroke-width="1.3" stroke-linejoin="round"/>
+<circle cx="438.3" cy="353.2" r="2.4" fill="#94a3b8"/>
+<rect x="324.0" y="462.0" width="72.1" height="22.0" rx="11" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.4"/>
+<text x="360.0" y="477.6" font-size="13" font-weight="bold" text-anchor="middle" fill="#92400e">中轴挂钩</text>
+<line x1="360.0" y1="462.0" x2="360.0" y2="447.0" stroke="#f59e0b" stroke-width="1.3"/><circle cx="360" cy="446.5" r="2.4" fill="#f59e0b"/>
+<text x="360.0" y="499.0" font-size="12" text-anchor="middle" fill="#475569">大风时挂重物，</text>
+<text x="360.0" y="514.0" font-size="12" text-anchor="middle" fill="#475569">增加稳定性</text>
+</g>
+<text x="360.0" y="584.0" font-size="11" text-anchor="middle" fill="#94a3b8">示意图，不按比例。脚管常见四节，管径由上到下逐节递减；升高时先伸粗管、再伸细管，能不用中轴就不用。</text>
+</svg><figcaption><strong>图 19-1</strong>　三脚架结构示意图——三脚架由脚架本体和云台两部分构成。本体四大部分：云台承载版（上方 8分之3 英寸螺丝装云台）、法兰盘（连接脚管并分散重量，下带角度调节片）、脚管（旋钮式锁得更紧、扳扣式更快捷，底部脚垫有胶垫和钢钉）、中轴（升高用，应尽量少用；末端有中轴挂钩，大风时挂重物增稳）；云台自上而下是 4分之1 英寸快装板、快装夹（含锁紧旋钮）、球体与阻尼旋钮、水平锁紧旋钮与刻度标尺（示意图，不按比例）。</figcaption></figure>
+
+
+<div class="box a7c2"><h3>📷 换成 A7C II 怎么做</h3><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>课程里的概念/操作</th>
+<th>A7C II 上的名称</th>
+<th>怎么操作</th>
+<th>说明（出处）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RAW+JPEG</td>
+<td>RAW&amp;JPEG</td>
+<td>MENU →（拍摄）→［影像质量/记录］→［〈静〉文件格式］→［RAW&amp;JPEG］</td>
+<td>［JPEG/HEIF切换］为 HEIF 时变成 RAW&amp;HEIF；RAW 压缩方式在［RAW文件类型］（0404M_file_format.html；201h_jpeg_heif_switch.html）</td>
+</tr>
+<tr>
+<td>反光镜预升</td>
+<td><strong>无此功能</strong>（无反光镜）</td>
+<td>防按快门抖动：［自拍定时(单张)］2 秒、Bluetooth 遥控器、手机/电脑遥控；［快门类型］设［电子快门］则只用电子快门拍摄（但不能闪光/B门/长时曝光降噪/防闪烁）</td>
+<td>帮助指南没有“电子前帘快门”选项；三脚架上要关闭 SteadyShot（0407_drivemode_selftimer.html；0706_bluetooth_remote.html；0414H_shutter_type.html；0414_still_image_steadyshot.html）</td>
+</tr>
+<tr>
+<td>影棚闪光灯 / 引闪器</td>
+<td>—</td>
+<td>见 7.10 清单：实时取景显示设置效果关、机械快门、静音模式关、快门不超过同步速度、固定 ISO</td>
+<td>（0414_live_view_disp_set.html；0414H_shutter_type.html）</td>
+</tr>
+<tr>
+<td>自定义白平衡（佳能）／预设手动 PRE（尼康）</td>
+<td>自定义 1～3</td>
+<td>白平衡模式选［自定义 N］→ 按右 → 选设置图标 → 白色填满捕捉框按中央 → 再按中央注册</td>
+<td>用闪光捕获的要配闪光使用（0410B_custom_white_balance.html）</td>
+</tr>
+<tr>
+<td>自拍 2 秒/10 秒</td>
+<td>自拍定时(单张)</td>
+<td>拍摄模式→［自拍定时(单张)］→ 10/5/2 秒</td>
+<td>2 秒用于减少按快门抖动（0407_drivemode_selftimer.html）</td>
+</tr>
+<tr>
+<td>镜头防抖 IS/VR 开关</td>
+<td>SteadyShot（机身）</td>
+<td>MENU →（拍摄）→［影像稳定］→［〈静〉SteadyShot］</td>
+<td>三脚架上关；镜头有防抖开关时只能用镜头开关（0414_still_image_steadyshot.html）</td>
+</tr>
+<tr>
+<td>快门线/遥控器</td>
+<td>Bluetooth遥控 ／ 智能手机 ／ 电脑遥控</td>
+<td>见 6.7</td>
+<td>（0706_bluetooth_remote.html；202h_register_smartphone.html；0903_pc_remote_function.html）</td>
+</tr>
+<tr>
+<td>间隔定时拍摄</td>
+<td>间隔拍摄功能</td>
+<td>MENU →（拍摄）→［拍摄模式］→［间隔拍摄功能］</td>
+<td>（0407P_interval_shoot_setting.html）</td>
+</tr>
+</tbody>
+</table></div>
+<p>（表中名称与路径摘自《A7C II 操作手册》，均与索尼官方帮助指南逐条核对；本集未列出的操作见手册。）</p>
+</div>
+<div class="box errata"><h3>🕰️ 时代差异与勘误</h3><ul>
+<li>反光镜：单反按快门时反光镜抬起、回落会带来震动，要用反光镜预升等办法 → A7C II 没有反光镜；三脚架上防抖动可用 2 秒自拍、Bluetooth 遥控器或手机遥控，并关闭 SteadyShot。</li>
+<li>实时取景：单反要切到 LV（实时显示）才能用屏幕取景 → A7C II 的取景器和显示屏始终是实时取景，不用切换。</li>
+<li>防抖：课程年代防抖做在镜头里（佳能 IS、尼康 VR）→ A7C II 机身内置影像传感器位移防抖（SteadyShot），镜头带防抖开关时以镜头开关为准；上三脚架建议关闭。</li>
+<li>感光度：课程年代的单反高 ISO 噪点明显 → A7C II 照片 ISO 100～51200（扩展 50～204800），高 ISO 画质好得多，但「光线允许就用低 ISO」的原则不变。</li>
+<li>存储卡：课程里有的机型用 CF 卡或双卡槽 → A7C II 只有一个 SD 卡槽（兼容 UHS-I/UHS-II）。</li>
+<li>肩屏与专用键：单反顶部有肩屏和 ISO/WB/驱动等专用键 → A7C II 没有肩屏；ISO 在控制拨轮右、拍摄模式（单拍/连拍/自拍）在控制拨轮左、白平衡模式出厂在 C1，其余靠 Fn 菜单和自定义键。</li>
+<li>转写/口误存疑：00:55 &quot;虚弧&quot; 应为 &quot;虚化&quot;</li>
+<li>转写/口误存疑：01:56 &quot;长交摄益&quot; 应为 &quot;长焦摄影&quot;</li>
+<li>转写/口误存疑：02:27 &quot;中规滤镜&quot; 应为 &quot;中灰滤镜&quot;</li>
+<li>转写/口误存疑：04:06 &quot;实&quot; 应为 &quot;实为&quot;</li>
+</ul>
+</div>
+<div class="box terms"><h3>🔖 本集术语</h3><ul>
+<li><strong>云台承载版</strong>：脚架本体上用于连接相机和云台的底座。</li>
+<li><strong>法兰盘</strong>：连接脚管和脚架主体的部件，用于分散相机重量。</li>
+<li><strong>阻尼旋钮</strong>：控制云台转动阻力的装置，调节力度可锁定或旋转。</li>
+<li><strong>管径递减</strong>：脚架各节脚管直径逐渐变小的数值，数值越小稳定性越好。</li>
+<li><strong>吸震性能</strong>：脚架吸收相机机震并传递到地面的能力。</li>
+<li><strong>中轴挂钩</strong>：中轴末端的挂钩，用于挂载重物增加户外稳定性。</li>
+</ul>
+</div>
+<p class="ep-nav"><a href="#top">↑ 回到本页顶部</a></p></section>
+  </article></main>
+</div>
+<footer class="site">
+  <p>江楠的学习日志 · 吴师自通摄影教程（索尼 A7C II 对照学习笔记）</p>
+  <p>课程视频：<a href="https://www.bilibili.com/video/BV1Vt411E7nT/" target="_blank" rel="noopener">bilibili.com/video/BV1Vt411E7nT</a>（吴玮老师主讲，UP 主搬运）· A7C II 资料：<a href="https://helpguide.sony.net/ilc/2360/v1/zh-cn/index.html" target="_blank" rel="noopener">索尼官方帮助指南</a></p>
+  <p>所有插图均为本页自绘 SVG，不含视频截图或第三方图片；笔记仅供个人学习。</p>
+</footer>
+<a class="backtop" href="#top" aria-label="回到顶部">↑</a>
+</body>
+</html>

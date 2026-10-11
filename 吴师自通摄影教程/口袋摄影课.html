@@ -1,0 +1,3018 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="江楠">
+<meta name="description" content="吴师自通摄影教程口袋摄影课逐集细化笔记（P71–P86），附索尼 A7C II 对照操作与自绘示意图。">
+<meta name="keywords" content="摄影教程,吴玮,吴师自通,口袋摄影课,索尼A7C II,A7C2,摄影笔记">
+<title>口袋摄影课 · 吴师自通摄影教程 — 江楠的学习日志</title>
+<style>
+:root{--accent:#2563eb;--accent-dark:#1d4ed8;--bg:#f7f8fa;--card:#fff;--border:#e2e5ea;--text:#1f2329;--muted:#64748b;
+  --sony:#c2410c;--sony-bg:#fff7ed;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:-apple-system,"Segoe UI","Microsoft YaHei","PingFang SC",sans-serif;line-height:1.75;color:var(--text);background:var(--bg);}
+.skip-link{position:absolute;left:-999px;top:0;background:#fff;color:var(--accent);padding:.5rem 1rem;z-index:100;}
+.skip-link:focus{left:0;}
+header.site{background:linear-gradient(135deg,#3b82f6 0%,var(--accent) 45%,var(--accent-dark) 100%);color:#fff;padding:2.6rem 1.5rem 2rem;text-align:center;box-shadow:0 6px 24px rgba(37,99,235,.18);}
+header.site h1{margin:0 0 .4rem;font-size:2rem;line-height:1.35;}
+header.site p{margin:.2rem 0;opacity:.93;}
+.meta-list{list-style:none;padding:0;margin:.8rem 0 0;display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;}
+.meta-list li{background:rgba(255,255,255,.18);padding:.22rem .7rem;border-radius:999px;font-size:.85rem;}
+nav.modnav{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:20;}
+nav.modnav ul{list-style:none;margin:0 auto;padding:.45rem 1rem;max-width:1180px;display:flex;flex-wrap:wrap;gap:.35rem;justify-content:center;}
+nav.modnav a{display:block;text-decoration:none;color:var(--text);font-size:.86rem;padding:.25rem .65rem;border-radius:999px;border:1px solid var(--border);}
+nav.modnav a:hover{border-color:var(--accent);color:var(--accent-dark);}
+nav.modnav a[aria-current=page]{background:var(--accent);color:#fff;border-color:var(--accent);}
+.layout{max-width:1180px;margin:0 auto;padding:1.6rem 1.5rem;display:grid;grid-template-columns:250px 1fr;gap:1.9rem;align-items:start;}
+.sidebar{position:sticky;top:3.6rem;max-height:calc(100vh - 4.6rem);overflow-y:auto;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1rem .9rem;box-shadow:0 4px 18px rgba(15,23,42,.06);}
+.sidebar .home-link{display:flex;align-items:center;gap:.45rem;font-weight:600;color:#fff;text-decoration:none;padding:.55rem .8rem;border-radius:11px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));box-shadow:0 4px 12px rgba(37,99,235,.28);margin-bottom:.9rem;}
+.sidebar .toc-title{font-size:.74rem;letter-spacing:.1em;color:var(--muted);margin:.2rem .35rem .5rem;font-weight:700;}
+.sidebar nav ul{list-style:none;margin:0;padding:0;}
+.sidebar nav li{margin:.08rem 0;}
+.sidebar a.toc-link{display:block;color:var(--text);text-decoration:none;font-size:.88rem;line-height:1.45;padding:.38rem .6rem;border-radius:9px;border-left:3px solid transparent;}
+.sidebar a.toc-link:hover{background:#eef4ff;color:var(--accent-dark);border-left-color:var(--accent);}
+.sidebar a.toc-link b{color:var(--accent-dark);font-weight:700;margin-right:.3rem;}
+main{min-width:0;}
+article>section{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem 1.8rem;margin-bottom:1.6rem;scroll-margin-top:64px;}
+h2{color:var(--accent-dark);border-bottom:2px solid var(--border);padding-bottom:.45rem;margin-top:.2rem;line-height:1.45;}
+h2 .ep-no{display:inline-block;background:var(--accent);color:#fff;border-radius:8px;font-size:.8em;padding:0 .45rem;margin-right:.35rem;vertical-align:.08em;}
+h3{margin-top:1.6rem;color:var(--text);}
+h4{margin-top:1rem;color:var(--muted);}
+p{margin:.7rem 0;}
+.ep-meta{color:var(--muted);font-size:.88rem;margin-top:-.3rem;}
+.ep-meta a{color:var(--accent);}
+blockquote.oneliner,blockquote{margin:1rem 0;padding:.75rem 1rem;background:#eef4ff;border-left:4px solid var(--accent);border-radius:8px;}
+blockquote p{margin:.2rem 0;}
+nav.outline{background:#f8fafc;border:1px dashed #cbd5e1;border-radius:10px;padding:.6rem 1rem .6rem .8rem;margin:1rem 0;}
+nav.outline .outline-t{margin:.1rem 0 .3rem;font-weight:700;color:var(--accent-dark);}
+nav.outline ol{margin:.2rem 0;}
+a.ts{font-family:Consolas,"SFMono-Regular",monospace;font-size:.82em;color:var(--accent-dark);background:#e8efff;border-radius:5px;padding:0 .3rem;text-decoration:none;white-space:nowrap;}
+a.ts:hover{background:var(--accent);color:#fff;}
+.box{border-radius:12px;padding:.4rem 1.1rem .8rem;margin:1.3rem 0;}
+.box h3{margin-top:.7rem;}
+.box.a7c2{background:var(--sony-bg);border:1px solid #fed7aa;border-left:5px solid var(--sony);}
+.box.a7c2 h3{color:var(--sony);}
+.box.errata{background:#f8fafc;border:1px solid var(--border);border-left:5px solid #64748b;}
+.box.terms{background:#f0fdf4;border:1px solid #bbf7d0;border-left:5px solid #16a34a;}
+.box.terms h3{color:#15803d;}
+.table-wrap{overflow-x:auto;margin:1rem 0;-webkit-overflow-scrolling:touch;}
+table{border-collapse:collapse;width:100%;font-size:.92rem;}
+.table-wrap table{margin:0;}
+th,td{border:1px solid var(--border);padding:.5rem .65rem;text-align:left;vertical-align:top;}
+thead{background:#eef2ff;}
+.box.a7c2 thead{background:#ffedd5;}
+tbody tr:nth-child(even){background:#fafbfc;}
+.box.a7c2 tbody tr:nth-child(even){background:#fffaf3;}
+figure{margin:1.4rem 0;text-align:center;}
+figure svg{max-width:100%;height:auto;display:block;margin:0 auto;}
+figcaption{color:var(--muted);font-size:.88rem;margin-top:.5rem;line-height:1.6;}
+.fig-todo{border:1px dashed #cbd5e1;border-radius:10px;padding:1.2rem;color:var(--muted);}
+code{background:#eef0f3;padding:.1rem .35rem;border-radius:4px;font-size:.9em;}
+details{border:1px solid var(--border);border-radius:8px;padding:.5rem .9rem;margin:.5rem 0;background:#fcfcfd;}
+summary{cursor:pointer;font-weight:600;}
+details[open] summary{margin-bottom:.3rem;}
+details summary .ep-no-s{display:inline-block;min-width:2.6em;color:var(--accent-dark);font-family:Consolas,monospace;}
+details summary a{color:var(--text);text-decoration:none;}
+details summary a:hover{color:var(--accent-dark);text-decoration:underline;}
+.ep-nav{text-align:right;font-size:.85rem;margin-bottom:0;}
+.ep-nav a{color:var(--muted);text-decoration:none;}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.9rem;margin:1rem 0;}
+.cards a.card{display:block;text-decoration:none;color:var(--text);border:1px solid var(--border);border-radius:12px;padding:.8rem 1rem;background:#fff;transition:all .15s;}
+.cards a.card:hover{border-color:var(--accent);box-shadow:0 4px 14px rgba(37,99,235,.15);transform:translateY(-1px);}
+.cards a.card b{display:block;color:var(--accent-dark);font-size:1.02rem;}
+.cards a.card span{display:block;color:var(--muted);font-size:.85rem;line-height:1.55;margin-top:.2rem;}
+.cards a.card.sony b{color:var(--sony);}
+.todo{color:var(--muted);}
+a.src{font-size:.75em;color:#94a3b8;text-decoration:none;border-bottom:1px dotted #cbd5e1;white-space:nowrap;}
+a.src:hover{color:var(--accent);}
+mark{background:#fde68a;}
+ul,ol{padding-left:1.4rem;}
+footer.site{text-align:center;color:var(--muted);padding:2rem 1rem;font-size:.9rem;}
+footer.site a{color:var(--accent);}
+.backtop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;text-decoration:none;width:42px;height:42px;line-height:42px;text-align:center;border-radius:50%;box-shadow:0 4px 12px rgba(37,99,235,.4);font-size:1.1rem;}
+@media(max-width:860px){
+  .layout{grid-template-columns:1fr;gap:1rem;padding:1rem;}
+  .sidebar{position:static;max-height:none;}
+  .sidebar nav ul{display:flex;flex-wrap:wrap;gap:.35rem;}
+  .sidebar a.toc-link{border-left:none;border:1px solid var(--border);font-size:.82rem;padding:.3rem .6rem;}
+  nav.modnav{position:static;}
+}
+@media(max-width:600px){header.site h1{font-size:1.6rem;}article>section{padding:1.1rem .95rem;}th,td{padding:.4rem .5rem;}}
+@media print{nav.modnav,.sidebar,.backtop{display:none;}.layout{display:block;}article>section{break-inside:auto;}}
+</style>
+</head>
+<body id="top">
+<a class="skip-link" href="#main">跳到主要内容</a>
+<header class="site">
+  <h1>口袋摄影课</h1>
+  <p>吴师自通摄影教程 · 口袋摄影课（P71–P86，16 集，约 4.6 小时）· 逐集细化笔记 + A7C II 对照</p>
+  <ul class="meta-list"><li>#吴师自通摄影教程</li><li>#口袋摄影课</li><li>#索尼A7C II</li><li>#摄影入门</li></ul>
+</header>
+<nav class="modnav" aria-label="课程篇章"><ul><li><a href="index.html">总览与大纲</a></li><li><a href="基础篇.html">基础篇</a></li><li><a href="构图篇.html">构图篇</a></li><li><a href="器材维护篇.html">器材维护篇</a></li><li><a href="影棚静物篇.html">影棚静物篇</a></li><li><a href="机型速成篇.html">机型速成篇</a></li><li><a href="用光与影棚篇.html">用光与影棚篇</a></li><li><a href="广告拍摄案例.html">广告拍摄案例</a></li><li><a href="口袋摄影课.html" aria-current="page">口袋摄影课</a></li><li><a href="A7C2操作手册.html">A7C II 操作手册</a></li><li><a href="知识总结.html">知识总结</a></li></ul></nav>
+<div class="layout">
+  <aside class="sidebar">
+    <a class="home-link" href="../index.html">&larr; 返回学习日志首页</a>
+    <p class="toc-title">本页目录</p>
+    <nav aria-label="本页目录"><ul><li><a class="toc-link" href="#intro">本篇导读</a></li><li><a class="toc-link" href="#p71"><b>P71</b>索尼A7R III口袋摄影课-I 外观控件</a></li><li><a class="toc-link" href="#p72"><b>P72</b>索尼A7R III口袋摄影课-III 关键功能</a></li><li><a class="toc-link" href="#p73"><b>P73</b>索尼A7R III口袋摄影课-IV 样片技巧</a></li><li><a class="toc-link" href="#p74"><b>P74</b>尼康Z7口袋摄影课-I 外观控件</a></li><li><a class="toc-link" href="#p75"><b>P75</b>尼康Z7曝光控制</a></li><li><a class="toc-link" href="#p76"><b>P76</b>尼康Z7口袋摄影课-III 关键功能</a></li><li><a class="toc-link" href="#p77"><b>P77</b>尼康Z7口袋摄影课-IV 样片技巧</a></li><li><a class="toc-link" href="#p78"><b>P78</b>佳能5D4口袋摄影课-I 外观控件</a></li><li><a class="toc-link" href="#p79"><b>P79</b>佳能5D4口袋摄影课-II 曝光控制</a></li><li><a class="toc-link" href="#p80"><b>P80</b>佳能EOS-R口袋摄影课-I 外观控件</a></li><li><a class="toc-link" href="#p81"><b>P81</b>佳能EOS-R口袋摄影课-II 曝光控制</a></li><li><a class="toc-link" href="#p82"><b>P82</b>佳能EOS-R口袋摄影课-IV 样片技巧</a></li><li><a class="toc-link" href="#p83"><b>P83</b>尼康D850口袋摄影课-I 外观控件</a></li><li><a class="toc-link" href="#p84"><b>P84</b>尼康D850口袋摄影课-II 曝光控制</a></li><li><a class="toc-link" href="#p85"><b>P85</b>尼康D850关键功能</a></li><li><a class="toc-link" href="#p86"><b>P86</b>尼康D850口袋摄影课-IV 样片技巧</a></li></ul></nav>
+  </aside>
+  <main id="main" tabindex="-1"><article>
+<section id="intro" aria-label="本篇导读"><p><strong>本篇导读</strong>：「口袋摄影课」是课程后期录制的新机型速览，包括索尼 A7R III、尼康 Z7、佳能 5D Mark IV、佳能 EOS R、尼康 D850，每台分外观控件、曝光控制、关键功能、样片技巧几集。合集缺少 A7R III 第 II 集、5D Mark IV 第 III/IV 集和 EOS R 第 III 集。索尼 A7R III 与 A7C II 同为索尼全画幅无反，菜单思路相近（A7C II 采用的是更新的菜单结构），最有参考价值。</p>
+</section>
+<section id="p71" class="episode" aria-labelledby="p71-t"><h2 id="p71-t"><span class="ep-no">P71</span> 索尼A7R III口袋摄影课-I 外观控件</h2>
+<p class="ep-meta">原标题：071索尼A7R3口袋摄影课-I 外观控件 · 时长 19:18 · <a href="https://www.bilibili.com/video/BV1Vt411E7nT?p=71" target="_blank" rel="noopener">▶ 在 B 站观看本集</a></p>
+<blockquote class="oneliner">
+<p><strong>一句话</strong>：认清 A7R III 的镜头标识、常用滤镜与机身各面按键转盘，并把 C1~C4 设成对焦相关功能；A7C II 大体同构，主要差在没有摇杆、没有机械曝光补偿旋钮、只有 C1/C2 两个 C 键、单卡槽。</p>
+</blockquote>
+<nav class="outline" aria-label="本集大纲"><p class="outline-t">本集大纲</p><ol>
+<li>开场：四节课安排与 A7R III 的两项升级<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=71&t=47" target="_blank" rel="noopener" title="跳到视频 00:47">00:47</a></li>
+<li>微单换镜头防尘<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=71&t=148" target="_blank" rel="noopener" title="跳到视频 02:28">02:28</a></li>
+<li>镜头标识：以 FE 24-70mm F4 ZA OSS 为例<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=71&t=221" target="_blank" rel="noopener" title="跳到视频 03:41">03:41</a></li>
+<li>常用滤镜：UV、偏振、磁吸、渐变与减光<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=71&t=384" target="_blank" rel="noopener" title="跳到视频 06:24">06:24</a></li>
+<li>机身前脸：卡口锁、前转盘、电源与快门键<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=71&t=606" target="_blank" rel="noopener" title="跳到视频 10:06">10:06</a></li>
+<li>机身顶部：热靴、模式转盘、C1/C2、曝光补偿转盘<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=71&t=679" target="_blank" rel="noopener" title="跳到视频 11:19">11:19</a></li>
+<li>机身背面：取景器到删除键<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=71&t=794" target="_blank" rel="noopener" title="跳到视频 13:14">13:14</a></li>
+<li>侧面与底部：双卡槽、接口、1/4 螺孔<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=71&t=907" target="_blank" rel="noopener" title="跳到视频 15:07">15:07</a></li>
+<li>电池保养与重型镜头持机<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=71&t=984" target="_blank" rel="noopener" title="跳到视频 16:24">16:24</a></li>
+<li>自定义键推荐与设置方法<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=71&t=1062" target="_blank" rel="noopener" title="跳到视频 17:42">17:42</a></li>
+</ol></nav>
+
+<h3>1. 开场：四节课安排与 A7R III 的两项升级<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=71&t=47" target="_blank" rel="noopener" title="跳到视频 00:47">00:47–02:28</a></h3><p>共四节、一个多小时：外观控件、曝光控制、关键功能、官方样片解析。相比前任 A7R II，除对焦、连拍升级外，老师认为主要升级有两点：<strong>对焦摇杆</strong>（终于能方便地控制焦点位置，告别 A7 系列饱受诟病的选点方式）、<strong>NP-FZ100 电池</strong>（视频时长、照片张数明显提升）。课程以 A7R III 拍静态照片为线索，讲它与所有「非紧凑式相机」（镜头机身可分离的单反、微单）通用的东西。</p>
+
+<h3>2. 微单换镜头防尘<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=71&t=148" target="_blank" rel="noopener" title="跳到视频 02:28">02:28–03:41</a></h3><p>按下 <strong>卡口锁</strong>、转动镜头即可取下。与单反不同，微单摘下镜头后 <strong>CMOS 直接裸露</strong>，所以拆装镜头都尽量让 <strong>卡口朝下</strong>，免得灰尘、口水落进去，拍出黑点。</p>
+
+<h3>3. 镜头标识：以 FE 24-70mm F4 ZA OSS 为例<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=71&t=221" target="_blank" rel="noopener" title="跳到视频 03:41">03:41–06:24</a></h3><p>老师机身上挂的是蔡司 24-70mm F4，不少人给索尼全画幅微单配它做首选挂机头，但不是最好——大师级 2.8 的 24-70 更好也更重。镜身标识：</p>
+<ul>
+<li><strong>FE</strong>：索尼全画幅微单卡口；<strong>F4</strong>：最大光圈，24mm 与 70mm 两端都是 F4，即 <strong>恒定光圈</strong>，一定程度上意味着专业级变焦；<strong>24-70mm</strong>：焦距范围，广角到中焦、无级变焦，全画幅挂机首选。</li>
+<li><strong>ZA</strong>：老师解释为蔡司 + 索尼 A（见勘误）；<strong>OSS</strong>：镜头光学防抖；红色 <strong>T*</strong>：蔡司 T* 镀膜；数字串是唯一的 <strong>序列号</strong>。</li>
+<li><strong>67mm</strong>：前端直径（口径）——丢了镜头盖按它买盖；<strong>配滤镜</strong>也按它选。</li>
+</ul>
+
+<h3>4. 常用滤镜：UV、偏振、磁吸、渐变与减光<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=71&t=384" target="_blank" rel="noopener" title="跳到视频 06:24">06:24–10:06</a></h3><ul>
+<li><strong>UV 镜</strong>：纯保护。镜头昂贵、UV 便宜，每支镜头都装一片；专业镜头（索尼 G 系列、蔡司 24-70）推荐卡色 G 系列 <strong>MCUV</strong>——镀膜越好、透光率越高，越像没隔着玻璃拍。</li>
+<li><strong>CPL 偏振镜</strong>（风光常规滤镜）：滤掉多余反光，颜色更饱和、更清晰，能隔水面拍到水下，让非逆光的天空更蓝、白云更突出。推荐卡色 G 系列。</li>
+<li><strong>磁吸滤镜系统</strong>（更推荐）：拧上 <strong>磁吸环</strong>，滤镜直接吸上。风光拍慢门要先构图再装减光镜，拧螺纹会错过时机，磁吸可一下吸上。展示的是卡色「金刚狼」磁吸圆镜 Pro 套装（77mm；67mm 的 24-70 F4 要选 67mm 套装）。</li>
+<li><strong>方片滤镜</strong>：转接环 + <strong>卡座（滤镜支架）</strong>，再插渐变镜或减光镜。</li>
+</ul>
+
+<h3>5. 机身前脸：卡口锁、前转盘、电源与快门键<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=71&t=606" target="_blank" rel="noopener" title="跳到视频 10:06">10:06–11:19</a></h3><p>前脸按键很少：<strong>卡口锁</strong>、<strong>前转盘</strong>、电源开关、快门键。</p>
+<ul>
+<li>前转盘同尼康的 <strong>辅转盘</strong>，M 档下控 <strong>光圈</strong>。</li>
+<li><strong>快门键</strong>：半按＝自动对焦；休眠时轻点唤醒；菜单、回看时半按可快速回到拍摄状态。</li>
+</ul>
+
+<h3>6. 机身顶部：热靴、模式转盘、C1/C2、曝光补偿转盘<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=71&t=679" target="_blank" rel="noopener" title="跳到视频 11:19">11:19–13:14</a></h3><ul>
+<li><strong>热靴</strong>（有保护盖）：装外置闪光灯，弱光给人像补光、逆光时平衡反差。一侧只有 <strong>焦平面标记</strong>（CMOS 位置）。</li>
+<li><strong>曝光模式转盘</strong>：M、S、A、P 及其他，白点对准哪档就是哪档；<strong>改模式要先按住中间按钮再转</strong>。</li>
+<li><strong>C1/C2</strong> 自定义键：索尼务必设置好才好用；老师经验是快门键旁的自定义键设成 <strong>对焦模式</strong> 和 <strong>对焦区域</strong>。</li>
+<li>刻度 <strong>+3 ~ −3</strong> 的转盘（现指 0）是 <strong>机械曝光补偿旋钮</strong>。</li>
+</ul>
+
+<h3>7. 机身背面：取景器到删除键<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=71&t=794" target="_blank" rel="noopener" title="跳到视频 13:14">13:14–15:07</a></h3><ul>
+<li>正中 <strong>电子取景器</strong>；<strong>C3</strong> 也是自定义键；<strong>MENU</strong> 进菜单；取景器右边的 <strong>小红点</strong> 是录像开始/停止。</li>
+<li><strong>AF-ON</strong> 对焦启动；<strong>AEL</strong> 曝光锁定；<strong>摇杆</strong> 在「自由点」下迅速移动焦点；<strong>Fn</strong> 是最重要的快捷菜单入口。</li>
+<li><strong>方向键 + 外圈复合转盘</strong> 是第三个转盘（配合其他控件设置功能、在菜单里选择）；AF-ON 上方的 <strong>主转盘</strong> 是第二个重要转盘，M 档控 <strong>快门</strong>。</li>
+<li><strong>播放键</strong>（浏览）回看，<strong>删除键</strong> 删照片。</li>
+</ul>
+
+<h3>8. 侧面与底部：双卡槽、接口、1/4 螺孔<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=71&t=907" target="_blank" rel="noopener" title="跳到视频 15:07">15:07–16:24</a></h3><ul>
+<li>侧面：A7R III 起有 <strong>双存储卡</strong>，利于高清视频、记录更长；接口集中在此：快门（线）、音频、麦克风、HDMI（高清）、充电（老师不展开）。</li>
+<li>底部：<strong>1/4 英寸螺孔</strong>接三脚架——所有相机三脚架快装板都是 1/4 螺丝，所以任何三脚架都能用。</li>
+</ul>
+
+<h3>9. 电池保养与重型镜头持机<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=71&t=984" target="_blank" rel="noopener" title="跳到视频 16:24">16:24–17:42</a></h3><ul>
+<li>底部 <strong>电池仓</strong> 装 NP-FZ100。老师提醒：<strong>超过半个月不用，请取出电池再存放</strong>。</li>
+<li>索尼镜头越来越多，也有长焦等重镜头。和单反一样，装重镜头时 <strong>左手托在重心处</strong>（重镜头重心在镜头，轻镜头仍在机身）；标准持机姿势更稳，还 <strong>延长机械部件寿命</strong>。</li>
+</ul>
+
+<h3>10. 自定义键推荐与设置方法<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=71&t=1062" target="_blank" rel="noopener" title="跳到视频 17:42">17:42–19:18</a></h3><p>索尼微单要好用，必须科学安排 C 键。老师推荐：<strong>C1＝对焦模式，C2＝对焦区域，C3＝眼控对焦（幻灯片原文），C4＝触屏操作</strong>（画面还标了 AF-ON、中央键等位置，360P 看不清，老师未口述，从略）。设置：<strong>MENU → 拍摄菜单2 → 自定义按键</strong>，把自定义按钮 1、2…按参考设定。下一讲：曝光控制。</p>
+
+<div class="box a7c2"><h3>📷 换成 A7C II 怎么做</h3><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>课程里的做法（A7R III）</th>
+<th>A7C II 上的对应</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>菜单分页：MENU → 拍摄菜单2 → 自定义按键</td>
+<td>菜单按「页签 → 分组 → 项目」排：MENU →（页签）→［分组］→［项目］。页签从上到下为我的菜单、主、拍摄、曝光/颜色、对焦、播放、网络、设置</td>
+<td>没有「拍摄菜单1/2」式分页；拍摄、曝光/颜色、对焦页签里的项目随静止影像/动态影像/S&amp;Q 旋钮位置变化</td>
+</tr>
+<tr>
+<td>按卡口锁转动镜头；换镜头卡口朝下</td>
+<td>关机后按住机身正面的 <strong>镜头释放按钮</strong>（卡口靠握柄一侧下方）并转动镜头；装镜头时对齐两个白色安装标记，卡口朝下</td>
+<td>传感器同样裸露，取下后装机身盖、镜头盖。关机时合上快门护传感器：MENU →（设置）→［设置选项］→［防尘功能］→［关机时快门］→［开］（出厂关；开启后存放必须装镜头盖，否则阳光聚焦有起火风险）</td>
+</tr>
+<tr>
+<td>镜头 OSS 光学防抖</td>
+<td>机身内置防抖：MENU →（拍摄）→［影像稳定］→［〈静〉SteadyShot］（出厂开）</td>
+<td>三脚架上要关；镜头自带防抖开关时只认镜头上的开关。FE 镜头同为 E 卡口，A7C II 通用</td>
+</tr>
+<tr>
+<td>前转盘（辅转盘）、电源开关、快门键</td>
+<td><strong>前转盘</strong>（握柄正面、快门按钮正下方）：出厂 A 档调光圈、S 档调快门、M 档调光圈；<strong>ON/OFF</strong> 拨杆套在快门按钮外圈；快门半按对焦/测光、全按拍摄</td>
+<td>「半按唤醒/回到拍摄状态」帮助指南未载明，需在相机上确认</td>
+</tr>
+<tr>
+<td>热靴、焦平面标记</td>
+<td><strong>多接口热靴</strong>（机顶中部、取景器右侧，出厂装插座盖）；<strong>影像传感器位置标记</strong>（机顶、热靴前方附近）</td>
+<td>无内置闪光灯，装卸附件前先关机；量拍摄距离以标记的横线为准</td>
+</tr>
+<tr>
+<td>曝光模式转盘（按住中间钮才能转）</td>
+<td><strong>模式旋钮</strong>（机顶右侧、后转盘R 左边）：AUTO、P、A、S、M、1/2/3；底座下另有 <strong>静止影像/动态影像/S&amp;Q 旋钮</strong></td>
+<td>无 B 档（M 档里把快门转到 BULB）；1/2/3 相当于 C 档；帮助指南未提「要按钮才能转」，需在相机上确认</td>
+</tr>
+<tr>
+<td>C1/C2、C3、C4</td>
+<td>只有 <strong>C1</strong>（机背，MENU 按钮右侧）和 <strong>C2</strong>（机背，控制拨轮右下方，播放时兼作删除），<strong>没有 C3/C4</strong></td>
+<td>出厂 C1=［白平衡模式］、C2=［触摸操作选择］；另可给前转盘、后转盘L/R、MOVIE、AF-ON、Fn、控制拨轮中央/左/右/下分配功能（上固定为 DISP）</td>
+</tr>
+<tr>
+<td>+3~−3 机械曝光补偿旋钮</td>
+<td><strong>无此旋钮</strong>：<strong>后转盘R</strong>（机顶最右后角）出厂即曝光补偿，−5.0～+5.0 EV；也可 MENU →（曝光/颜色）→［曝光补偿］→［曝光补偿］</td>
+<td>M 档只有 ISO AUTO 时才起作用</td>
+</tr>
+<tr>
+<td>电子取景器、MENU、小红点录像键</td>
+<td><strong>电子取景器</strong> 在机背左上角（0.39 型、约 236 万点），目镜右侧眼传感器自动切换，右侧小拨轮调屈光度；<strong>MENU 按钮</strong> 在机背顶部；<strong>MOVIE 按钮</strong> 在机顶、后转盘R 与快门按钮之间</td>
+<td>静止影像档下直接按 MOVIE 也能录视频</td>
+</tr>
+<tr>
+<td>AF-ON、AEL</td>
+<td><strong>AF-ON 按钮</strong>（后转盘L 正下方），出厂=［跟踪开启+AF开启］；<strong>无 AEL 专用键</strong>：MENU →（设置）→［操作自定义］→［〈静〉自定键/转盘设置］→ 选键 → 分配［AE锁定保持］或［AE锁定切换］</td>
+<td>也可用［快门AEL］让半按锁曝光</td>
+</tr>
+<tr>
+<td>对焦摇杆</td>
+<td><strong>没有摇杆</strong>（部件表与帮助指南全文都查不到）。对焦区域选［点: L］等时，按控制拨轮中央（出厂=［对焦标准］）再用上下左右移框；或直接在触摸屏上点、拖</td>
+<td>触摸对焦出厂开（［拍摄期间的触摸功能］=［触碰对焦］）；移框中按 C2（删除）回中央</td>
+</tr>
+<tr>
+<td>Fn、方向键＋外圈（第三转盘）、主转盘</td>
+<td><strong>Fn 按钮</strong>（AF-ON 下方）= 功能菜单；<strong>控制拨轮</strong>（Fn 下方）：上 DISP、左 拍摄模式、右 ISO、中央［对焦标准］，旋转与下出厂未设定；<strong>后转盘L</strong>（机背右上角拇指位置）：M 档调快门</td>
+<td>控制拨轮在菜单里用来选择、确认</td>
+</tr>
+<tr>
+<td>播放键、删除键</td>
+<td><strong>（播放）按钮</strong>（控制拨轮左下方）；<strong>C2</strong> 在播放时是删除</td>
+<td></td>
+</tr>
+<tr>
+<td>双存储卡；侧面接口</td>
+<td><strong>只有 1 个 SD 卡槽</strong>（部件表只列一个插槽），连同全部接口都在机身左侧：麦克风接口、耳机接口、HDMI 微型插孔（D 型）、USB Type-C（兼容 USB 供电，关机时可机内充电）</td>
+<td>部件表里没有单独的快门（线）接口；遥控用 Bluetooth 遥控器、手机（Creators' App）或电脑遥控</td>
+</tr>
+<tr>
+<td>1/4 螺孔；NP-FZ100；超半个月取出电池</td>
+<td><strong>三脚架安装孔</strong> 1/4-20 UNC，三脚架螺丝长度须小于 5.5 mm；<strong>同样用 NP-FZ100</strong>，照片约 560 张（显示屏）/ 530 张（取景器）（CIPA）</td>
+<td>帮助指南的存放建议：长期存放前每年至少充一次电再用完，存于阴凉干燥处（没有「半个月」的说法）；不要装着三脚架携带</td>
+</tr>
+<tr>
+<td>重镜头左手托重心</td>
+<td>同理。A7C II 机身小（约 514 g，含电池和 SD 卡），装大镜头更要托镜头；可选握柄 GP-X2 装在底部，装着也能换电池</td>
+<td></td>
+</tr>
+<tr>
+<td>自定义键设置</td>
+<td>MENU →（设置）→［操作自定义］→［〈静〉自定键/转盘设置］（也可从［转盘自定义］进入）；动态影像、播放各有独立设置项</td>
+<td>在设置画面直接按想改的键，可跳到该键的设置</td>
+</tr>
+<tr>
+<td>推荐 C1=对焦模式、C2=对焦区域</td>
+<td>对焦模式、对焦区域本来就在 Fn 菜单里（据帮助指南示例图辨认）；［切换对焦区域］可分配给键；［对焦模式］能否直接分配，帮助指南只给外部链接，需在相机上确认</td>
+<td>A7C II 只有 C1/C2 两键，出厂已被白平衡、触摸占用，按需改</td>
+</tr>
+<tr>
+<td>推荐 C3=眼控对焦（眼部对焦）</td>
+<td>把［被摄体识别AF］分配给键：帮助指南示例是分配到控制拨轮中央按钮，拍摄时按住它并检测到眼部，相机即对眼部对焦</td>
+<td>A7C II 出厂已开人眼识别（MENU →（对焦）→［被摄体识别］→［AF中的被摄体识别］），半按快门就工作</td>
+</tr>
+<tr>
+<td>推荐 C4=触屏操作</td>
+<td>C2 出厂就是［触摸操作选择］</td>
+<td>具体作用帮助指南只列名称，需在相机上确认</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="box errata"><h3>🕰️ 时代差异与勘误</h3><ul>
+<li><strong>ZA 的含义</strong>：老师说「ZA＝蔡司 + 索尼 A 卡口」；这支 FE 镜头是 E 卡口，ZA 指索尼 α 系统上的蔡司镜头，不是 A 卡口。</li>
+<li><strong>「眼控对焦」</strong>：口述与幻灯片都这么写，按上下文应是 <strong>眼部对焦（Eye AF）</strong>；索尼没有靠眼球控制对焦点的功能。</li>
+<li><strong>C4 在哪</strong>：机身介绍只讲了 C1/C2/C3，推荐设置时才冒出 C4，老师没说位置；推荐页画面里还标了 AF-ON、中央键等位置，设定值看不清。</li>
+<li><strong>合集缺 II</strong>：P71 之后直接是 P72（原编号 073），缺编号 072「曝光控制」；老师预告的那一讲、以及 P72 回指的「第二节」，在本合集里没有视频。</li>
+<li><strong>滤镜与品牌</strong>：老师反复推荐卡色（Kase），画面背景也是卡色宣传板，带推广性质；UV、偏振、减光、渐变滤镜本身通用，口径以你镜头前端的标注为准（课程以 67mm 为例）。</li>
+<li><strong>转写稿还原</strong>：「A723」＝A7R III，「先任A722」＝前任 A7R II，「FCZ100」＝NP-FZ100，「摇感」＝摇杆，「AF2」＝AF-ON，「非景凑视」＝非紧凑式，「梯芯」＝T*，「卡座」＝方片滤镜支架，「快门键接口」疑为快门线/遥控类接口。</li>
+</ul>
+</div>
+<div class="box terms"><h3>🔖 本集术语</h3><ul>
+<li><strong>非紧凑式相机</strong>：老师对镜头与机身可分离的相机（单反、微单）的叫法。</li>
+<li><strong>FE / E 卡口</strong>：索尼微单的镜头卡口；FE 即全画幅 E 卡口镜头，A7R III 与 A7C II 通用。</li>
+<li><strong>恒定光圈</strong>：变焦全程最大光圈不变（24-70mm F4 在两端都是 F4）。</li>
+<li><strong>OSS / T*</strong>：OSS＝镜头内光学防抖；T*＝蔡司镀膜标志。</li>
+<li><strong>镜头口径</strong>：前端直径（如 67mm），决定镜头盖和滤镜规格。</li>
+<li><strong>UV 镜 / CPL 偏振镜 / 减光镜 / 渐变镜</strong>：保护镜头 / 滤反光、增饱和 / 降低进光量以拍慢门 / 压暗天空以平衡反差。</li>
+<li><strong>磁吸滤镜</strong>：先拧上磁吸环，滤镜靠磁力吸附，装卸迅速。</li>
+<li><strong>焦平面标记</strong>：机身顶部指示传感器位置的符号。</li>
+<li><strong>自定义键（C1~C4）</strong>：可由用户指定功能的按键。</li>
+</ul>
+</div>
+<p class="ep-nav"><a href="#top">↑ 回到本页顶部</a></p></section>
+<section id="p72" class="episode" aria-labelledby="p72-t"><h2 id="p72-t"><span class="ep-no">P72</span> 索尼A7R III口袋摄影课-III 关键功能</h2>
+<p class="ep-meta">原标题：073索尼A7R3口袋摄影课-III 关键功能 · 时长 13:06 · <a href="https://www.bilibili.com/video/BV1Vt411E7nT?p=72" target="_blank" rel="noopener">▶ 在 B 站观看本集</a></p>
+<blockquote class="oneliner">
+<p><strong>一句话</strong>：A7R III 的关键设定都在 Fn 菜单：拍摄模式、对焦模式与区域、曝光补偿、ISO、测光、闪光、白平衡、创意风格；老师的取舍是 AF-S/AF-C 二选一、多重测光 + 曝光补偿、白平衡放自动；A7C II 的 Fn 菜单内容不同，见对照表。</p>
+</blockquote>
+<nav class="outline" aria-label="本集大纲"><p class="outline-t">本集大纲</p><ol>
+<li>Fn 菜单总览与拍摄模式<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=72&t=46" target="_blank" rel="noopener" title="跳到视频 00:46">00:46</a></li>
+<li>对焦模式：AF-S / AF-C / AF-A / DMF / MF<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=72&t=119" target="_blank" rel="noopener" title="跳到视频 01:59">01:59</a></li>
+<li>对焦区域：广域、区、中间、自由点<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=72&t=266" target="_blank" rel="noopener" title="跳到视频 04:26">04:26</a></li>
+<li>曝光补偿与感光度<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=72&t=365" target="_blank" rel="noopener" title="跳到视频 06:05">06:05</a></li>
+<li>测光模式<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=72&t=436" target="_blank" rel="noopener" title="跳到视频 07:16">07:16</a></li>
+<li>闪光模式与闪光补偿<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=72&t=539" target="_blank" rel="noopener" title="跳到视频 08:59">08:59</a></li>
+<li>白平衡<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=72&t=588" target="_blank" rel="noopener" title="跳到视频 09:48">09:48</a></li>
+<li>创意风格<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=72&t=669" target="_blank" rel="noopener" title="跳到视频 11:09">11:09</a></li>
+<li>优先摄像媒体与收尾<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=72&t=743" target="_blank" rel="noopener" title="跳到视频 12:23">12:23</a></li>
+</ol></nav>
+
+<h3>1. Fn 菜单总览与拍摄模式<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=72&t=46" target="_blank" rel="noopener" title="跳到视频 00:46">00:46–01:59</a></h3><p>关键设定集中在机背屏幕旁的 <strong>Fn 按钮</strong>，按下进入 Fn 菜单：上排 6 项（拍摄模式、对焦模式、对焦区域、曝光补偿、感光度、测光模式），下排 5 项（闪光模式、闪光补偿、白平衡、创意风格、优先摄像媒体）。
+<strong>拍摄模式</strong>（驱动/释放模式）：单张、高速连拍、定时、阶段性曝光。单张＝按一次拍一张；连拍＝按住不停拍到缓存耗尽；阶段性曝光另课讲。</p>
+
+<h3>2. 对焦模式：AF-S / AF-C / AF-A / DMF / MF<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=72&t=119" target="_blank" rel="noopener" title="跳到视频 01:59">01:59–04:26</a></h3><p>第一课建议把 C1 设成对焦模式，与在 Fn 里选等效。重点 AF-S 与 AF-C：</p>
+<ul>
+<li><strong>AF-S 单次</strong>（single）：半按快门对焦完成即停，松开重按才再对焦；拍摆拍、风景、摆拍人像。</li>
+<li><strong>AF-C 连续</strong>（continuous）：保持半按，主体距离变化时镜头持续对焦；抓拍、追拍高速运动物体。</li>
+<li><strong>AF-A</strong>：单次/连续自动切换，老师说「不被信任」、没有实际用途，所以往往就在 AF-S 与 AF-C 间选。</li>
+<li><strong>DMF</strong>：自动对焦后可转对焦环手动修正。<strong>MF</strong>：转环时屏幕出现近、远标尺，用处有限；仅拍星空、烟花时用，并调到无穷远。</li>
+<li>多数时候选精确度较高的 <strong>AF-S</strong>。</li>
+</ul>
+
+<h3>3. 对焦区域：广域、区、中间、自由点<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=72&t=266" target="_blank" rel="noopener" title="跳到视频 04:26">04:26–06:05</a></h3><p>第三项在索尼叫「对焦区域」（老师口述「焦点模式」）：</p>
+<ul>
+<li><strong>广域</strong>：相机在整个画面自选焦点；<strong>区</strong>：左、中、右三个大区选一个，相机在区内选；<strong>中间</strong>：固定在取景器中心。</li>
+<li><strong>自由点</strong>：自己指定焦点，左右键切 <strong>L/M/S</strong> 大小，<strong>摇杆</strong> 移位置；多数时候用它，人像、风光、旅行常用 <strong>L、M</strong>，对焦区域很小、要求精确用 <strong>S</strong>。焦点放主体：拍人放眼睛，拍风景放中景。</li>
+<li><strong>追拍运动物体</strong> 用广域或区：焦点位置不好预判，就划大范围让相机自己找。</li>
+</ul>
+
+<h3>4. 曝光补偿与感光度<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=72&t=365" target="_blank" rel="noopener" title="跳到视频 06:05">06:05–07:16</a></h3><ul>
+<li><strong>曝光补偿</strong>（第四项）：第二节讲过用转盘调，更建议用转盘；<strong>一旦拨动机械转盘，Fn 里的曝光补偿就变灰不可调</strong>，所以从这里调意义不大。</li>
+<li><strong>感光度</strong>（第五项）：控制 CMOS 对光的需求，越高需要光越少、噪点越多，越低越细腻（第二节已讲）。</li>
+</ul>
+
+<h3>5. 测光模式<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=72&t=436" target="_blank" rel="noopener" title="跳到视频 07:16">07:16–08:59</a></h3><p>上排最后一项，选项很多（多重、中心、点测光〔标准〕等），只讲两种：</p>
+<ul>
+<li><strong>多重测光</strong>：90% 的情况选它。</li>
+<li><strong>点测光</strong>：光线反差很大（如逆光人像，多重测光可能让人脸偏黑、欠曝）时用；取景器中心出现一个圆，<strong>只测圆内的光</strong>。</li>
+<li>老师建议：逆光人像也用 <strong>多重测光 + 曝光补偿</strong> 提亮脸，结果与点测光测脸 <strong>一模一样</strong>。</li>
+</ul>
+
+<h3>6. 闪光模式与闪光补偿<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=72&t=539" target="_blank" rel="noopener" title="跳到视频 08:59">08:59–09:48</a></h3><ul>
+<li><strong>闪光模式</strong>（下排第一项）：A7 系列 <strong>没有内置闪光灯</strong>，必须热靴装外置闪光灯才可用，不展开。</li>
+<li><strong>闪光补偿</strong>：外置闪光灯调到 <strong>TTL（自动闪光）</strong> 后，让输出比原来多或少；它控制 <strong>前景亮度</strong>——用闪光灯时前景亮度直接取决于闪光灯输出。</li>
+</ul>
+
+<h3>7. 白平衡<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=72&t=588" target="_blank" rel="noopener" title="跳到视频 09:48">09:48–11:09</a></h3><p>下排第三项，控制相机对场景的颜色还原：</p>
+<ul>
+<li><strong>绝大多数时候用 AWB</strong>，现代相机的自动白平衡已非常精准。</li>
+<li>少数情况才改：<strong>钨丝灯</strong> 下自动仍偏黄，就调到钨丝灯模式看能否矫正。</li>
+<li>场景型白平衡多用于 <strong>夜景</strong> 和 <strong>日出日落风光</strong>：夜景用 <strong>钨丝灯</strong> 让画面更冷更蓝；用 <strong>阴影/阴天</strong> 让照片更暖（转写稿此处再次写作「夜景摄影」）；拍夕阳可 <strong>创造性错用白平衡</strong>，前期调出色调，色彩常出乎意料。</li>
+</ul>
+
+<h3>8. 创意风格<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=72&t=669" target="_blank" rel="noopener" title="跳到视频 11:09">11:09–12:23</a></h3><p>下排第四项，设定照片的 <strong>清晰度、反差、饱和度</strong> 风格。</p>
+<ul>
+<li>一般选 <strong>标准</strong>；锐度、色调、反差更建议 <strong>拍 RAW、后期调</strong>。</li>
+<li>想前期拍黑白，选最后一项 <strong>黑白</strong>：只拍黑白灰，前提是 <strong>JPEG</strong>；用 <strong>RAW</strong> 时输出仍可还原彩色。</li>
+</ul>
+
+<h3>9. 优先摄像媒体与收尾<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=72&t=743" target="_blank" rel="noopener" title="跳到视频 12:23">12:23–13:06</a></h3><p>下排第五项 <strong>优先摄像媒体</strong>：高清视频存到 <strong>1 号卡还是 2 号卡</strong>。下一节用官方样片讲实战。</p>
+
+<div class="box a7c2"><h3>📷 换成 A7C II 怎么做</h3><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>课程里的做法（A7R III）</th>
+<th>A7C II 上的对应</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>按 Fn 进入功能菜单（两排图标）</td>
+<td><strong>Fn 按钮</strong>（AF-ON 下方）→ 控制拨轮选项目 → 转前转盘改值 → 按中央确定；换格子：MENU →（设置）→［操作自定义］→［Fn菜单设置］</td>
+<td>照片、视频各 12 格；出厂内容帮助指南未列，据示例图辨认含创意外观、测光模式、对焦模式、白平衡模式、对焦区域、AF中的被摄体识别等，<strong>没有</strong>拍摄模式、曝光补偿、ISO、闪光（它们各有专用操作）</td>
+</tr>
+<tr>
+<td>拍摄模式（单张/连拍/定时/阶段曝光）</td>
+<td>控制拨轮左；或 MENU →（拍摄）→［拍摄模式］→［拍摄模式］</td>
+<td>选项含［单张拍摄］、连拍（Hi+ 约 10 张/秒，Hi 约 8，Mid 约 6，Lo 约 3）、自拍、［连续阶段曝光］、［单拍阶段曝光］；缓存满显示 SLOW 并降速</td>
+</tr>
+<tr>
+<td>对焦模式 AF-S/AF-A/AF-C/DMF/MF</td>
+<td>MENU →（对焦）→［AF/MF］→［对焦模式］：［单次AF］／［自动AF］／［连续AF］／［DMF］／［手动对焦］</td>
+<td><strong>出厂是［自动AF］</strong>（AF-A，仅相位检测镜头可用），按老师建议改为［单次AF］或［连续AF］</td>
+</tr>
+<tr>
+<td>MF 对焦环、无穷远</td>
+<td>MF 转环时画面显示对焦距离指示（帮助指南称「焦距」，仅供参考）；MF 下转环自动放大（［MF中自动放大对焦］，出厂开）；DMF：半按对焦后保持半按再转环</td>
+<td>拍烟花：手动对焦到无穷远，不清楚无穷远位置就先用烟花对焦</td>
+</tr>
+<tr>
+<td>对焦区域（广域/区/中间/自由点 L M S/摇杆）</td>
+<td>MENU →（对焦）→［对焦区域］→［对焦区域］：［广域］（出厂）、［区］、［中间固定］、［点: L］［点: M］［点: S］（＝自由点）、［扩展点］、跟踪</td>
+<td>无摇杆：按控制拨轮中央（［对焦标准］）后上下左右移框，或触摸屏拖动；「跟踪」只在［连续AF］有效</td>
+</tr>
+<tr>
+<td>曝光补偿（机械转盘；动了转盘 Fn 里变灰）</td>
+<td><strong>后转盘R</strong>（出厂）；或 MENU →（曝光/颜色）→［曝光补偿］→［曝光补偿］</td>
+<td>−5.0～+5.0 EV；A7C II 没有机械旋钮，也就没有「变灰」</td>
+</tr>
+<tr>
+<td>感光度</td>
+<td>控制拨轮右（ISO）；或 MENU →（曝光/颜色）→［曝光］→［ISO］</td>
+<td>出厂 ISO AUTO；照片 ISO 100～51200（扩展 50～204800）</td>
+</tr>
+<tr>
+<td>测光模式（多重/中心/点测光）</td>
+<td>MENU →（曝光/颜色）→［测光］→［测光模式］：［多重］（出厂）／［中心］／［点测光］／［整个屏幕平均］／［强光］</td>
+<td>点测光有［点测光: 标准］［点测光: 大］；圆的位置由［点测光点］定：［中间］（出厂）或［对焦点联动］</td>
+</tr>
+<tr>
+<td>闪光模式</td>
+<td>MENU →（曝光/颜色）→［闪光灯］→［闪光模式］：［禁止闪光］／［自动闪光］／［强制闪光］／［低速同步］／［后帘同步闪光］</td>
+<td>无内置闪光灯，需另售闪光灯装到多接口热靴</td>
+</tr>
+<tr>
+<td>闪光补偿（TTL 下增减输出）</td>
+<td>MENU →（曝光/颜色）→［闪光灯］→［闪光补偿］</td>
+<td>−3.0～+3.0 EV，只改闪光量；曝光补偿是否也作用于闪光由［曝光补偿设置］定（出厂仅环境光）；帮助指南没有 TTL 之类闪光测光方式的名称，以闪光灯说明书为准</td>
+</tr>
+<tr>
+<td>白平衡（AWB、钨丝灯、阴影/阴天）</td>
+<td>按 <strong>C1</strong>（出厂=［白平衡模式］）；或 MENU →（曝光/颜色）→［白平衡模式］→［白平衡模式］：［自动］、［日光］、［阴影］、［阴天］、［白炽灯］（＝钨丝灯）、荧光灯四种、［闪光灯］、［水中自动］、［色温/滤光片］、［自定义 1］～3</td>
+<td>选［色温/滤光片］后转后转盘L/R 改色温；钨丝灯下自动偏黄：先试［白炽灯］，或把［AWB优先级设置］设为［白］</td>
+</tr>
+<tr>
+<td>创意风格（标准、黑白）</td>
+<td>MENU →（曝光/颜色）→［颜色/色调］→［创意外观］（也在 Fn 菜单里）</td>
+<td>出厂 ST(标准)；黑白＝BW(黑白)；还有 PT(人像)、NT(中性，适合后期) 等。创意外观与 RAW 的关系帮助指南未载明，需在相机上确认</td>
+</tr>
+<tr>
+<td>优先摄像媒体</td>
+<td><strong>A7C II 无此功能</strong>（单 SD 卡槽，视频记到这张卡）</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="box errata"><h3>🕰️ 时代差异与勘误</h3><ul>
+<li><strong>人眼识别</strong>：课程里「拍人把焦点放眼睛」靠手动选点；A7C II 出厂已开启人眼识别（［AF中的被摄体识别］=［开］、［识别目标］=［人］、［右眼/左眼选择］=［自动］），半按快门相机自己找眼睛；识别目标还可选动物/鸟类、昆虫、汽车/火车、飞机。</li>
+<li><strong>逆光人像</strong>：课程建议多重测光 + 曝光补偿；A7C II 的［多重测光人脸优先］（出厂开）会以检测到的人脸为准测光，逆光人像未必还得换点测光（推论）。</li>
+<li><strong>创意风格 → 创意外观</strong>：A7C II 有 ST、PT、NT、VV、VV2、FL、IN、SH、BW、SE 十种外观和 6 个自定义槽，可调对比度、高光、阴影、褪色、饱和度、锐度、锐度范围、清晰；课程只提了标准和黑白。</li>
+<li><strong>老师口误</strong>：把曝光补偿说成「左起第三个选项」，按他自己的顺序应是第四个。</li>
+<li><strong>转写稿修正</strong>：对焦模式一段的 AF-S/AF-A/AF-C 名称识别混乱，按后文定义还原；白平衡一段连说两次「夜景摄影」，第二次疑为日出日落类（听不清）。</li>
+<li><strong>合集缺 II</strong>：老师说「第二节曝光控制讲过」，本合集没有这一集（P71 之后直接是原编号 073）。</li>
+</ul>
+</div>
+<div class="box terms"><h3>🔖 本集术语</h3><ul>
+<li><strong>拍摄模式（驱动模式）</strong>：单张、连拍、自拍、阶段曝光等快门释放方式；A7C II 的「拍摄模式」指的就是它。</li>
+<li><strong>AF-S / AF-C / AF-A / DMF / MF</strong>：单次 / 连续 / 自动切换 / 自动对焦后手动微调 / 手动对焦。</li>
+<li><strong>对焦区域 / 自由点</strong>：相机在哪里找焦点：广域、区、中间、自由点 L/M/S（自己指定位置和大小）。</li>
+<li><strong>多重测光 / 点测光</strong>：对整个画面分区测光 / 只测取景器中心圆内的光。</li>
+<li><strong>TTL 自动闪光</strong>：闪光灯按相机测光自动决定输出，再用闪光补偿增减。</li>
+<li><strong>AWB</strong>：自动白平衡。</li>
+<li><strong>创意风格</strong>：索尼对「照片风格」的叫法，决定锐度、反差、饱和度；A7C II 称创意外观。</li>
+</ul>
+</div>
+<p class="ep-nav"><a href="#top">↑ 回到本页顶部</a></p></section>
+<section id="p73" class="episode" aria-labelledby="p73-t"><h2 id="p73-t"><span class="ep-no">P73</span> 索尼A7R III口袋摄影课-IV 样片技巧</h2>
+<p class="ep-meta">原标题：074索尼A7R3口袋摄影课-IV 样片技巧 · 时长 15:54 · <a href="https://www.bilibili.com/video/BV1Vt411E7nT?p=73" target="_blank" rel="noopener">▶ 在 B 站观看本集</a></p>
+<blockquote class="oneliner">
+<p><strong>一句话</strong>：用七张官方样片反推设定：人像用 A 档 + 大光圈 + AF-S；抓拍用 S 档 + ISO AUTO + 连拍 + AF-C；风光用 A 档 + 小光圈 + 低 ISO + 三脚架 + AF-S，再靠渐变镜、减光镜、偏振镜解决反差、慢门和反光。</p>
+</blockquote>
+<nav class="outline" aria-label="本集大纲"><p class="outline-t">本集大纲</p><ol>
+<li>样片一：户外自然光人像<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=73&t=45" target="_blank" rel="noopener" title="跳到视频 00:45">00:45</a></li>
+<li>样片二：影棚跳跃人像<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=73&t=292" target="_blank" rel="noopener" title="跳到视频 04:52">04:52</a></li>
+<li>样片三：高速运动的动物<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=73&t=345" target="_blank" rel="noopener" title="跳到视频 05:45">05:45</a></li>
+<li>样片四：建筑内部与像素转换多重拍摄<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=73&t=500" target="_blank" rel="noopener" title="跳到视频 08:20">08:20</a></li>
+<li>样片五：风光（光圈优先、小光圈、低感光度）<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=73&t=595" target="_blank" rel="noopener" title="跳到视频 09:55">09:55</a></li>
+<li>逆光风光：渐变镜平衡天地反差<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=73&t=697" target="_blank" rel="noopener" title="跳到视频 11:37">11:37</a></li>
+<li>样片六：慢门水流与减光镜<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=73&t=770" target="_blank" rel="noopener" title="跳到视频 12:50">12:50</a></li>
+<li>样片七：秋景倒影与偏振镜<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=73&t=890" target="_blank" rel="noopener" title="跳到视频 14:50">14:50</a></li>
+</ol></nav>
+
+<h3>1. 样片一：户外自然光人像<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=73&t=45" target="_blank" rel="noopener" title="跳到视频 00:45">00:45–04:52</a></h3><p>官方样片反推操控，分摆拍人像、抓拍、风景三类。第一张是标准户外自然光人像，特点是 <strong>人物醒目</strong>，靠 <strong>小景深</strong>。</p>
+<ul>
+<li><strong>镜头</strong>：24-70mm F4 拍这种纯人像力不从心（焦距不够长、光圈不够大，虚不出干净背景），要用 <strong>中焦段大光圈镜头</strong>。全画幅上 <strong>85–135mm 算中焦</strong>，人像取中景、腰以上、近景；135mm 以上算长焦，取特写。模拟摄影师装上 <strong>85mm F1.4 大师级</strong>：</li>
+<li><strong>设定</strong>：A 光圈优先；单张拍摄；对焦 AF-S，脸是焦点，选 <strong>大的对焦区域</strong>（应即 P72 讲的自由点 L），构图后把焦点挪到脸、眼睛；曝光补偿看实拍修正（过曝减、欠曝加），用机械曝光补偿转盘；晴天户外又是大光圈，<strong>低感光度</strong> 保细腻；测光 <strong>多重测光</strong>，靠补偿修正；白平衡 90% 以上用自动；闪光、创意风格与本片无关。</li>
+<li><strong>光圈</strong>：用辅转盘开到最大，但多数人像摄影师会从全开 <strong>稍微收小一点</strong>——大光圈定焦全开时锐度会下降；样张收到了 <strong>F1.8</strong>。然后构图、焦点挪到脸、调曝光补偿看亮度、按快门。</li>
+</ul>
+
+<h3>2. 样片二：影棚跳跃人像<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=73&t=292" target="_blank" rel="noopener" title="跳到视频 04:52">04:52–05:45</a></h3><p>影棚里拍的跳跃瞬间，是另一套思路，设定相对程序化：<strong>ISO 100、快门 1/125 秒，用光圈控制曝光</strong>；这张是 <strong>高速闪光灯多次连闪连拍</strong> 得到的。老师不展开，指向其旗下的商业摄影教程。</p>
+
+<h3>3. 样片三：高速运动的动物<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=73&t=345" target="_blank" rel="noopener" title="跳到视频 05:45">05:45–08:20</a></h3><p>样张是飞行的猛禽。与拍人不同：</p>
+<ul>
+<li><strong>S 快门优先</strong>：先定快门，相机调光圈控制曝光；配 <strong>ISO AUTO</strong>（抓拍没时间改感光度）。</li>
+<li>追拍要 <strong>以量取胜</strong>：多拍再精选。拍摄模式 <strong>高速连拍</strong>，对焦 <strong>连续对焦（AF-C）</strong>。</li>
+<li><strong>对焦区域</strong>：<strong>广域</strong>（相机在整个画面找）或 <strong>区</strong>（指定偏左/偏右的位置找）。本片意图具体，选一个「区」；不知道物体会出现在构图哪里，就选广域。测光仍用评价，白平衡自动。</li>
+<li>先估计物体速度需要多快的快门，如 <strong>1/1000 秒</strong>，用主转盘调到 1000；追踪时 <strong>按住快门不放</strong> 连续拍，最后多拍精选。</li>
+</ul>
+
+<h3>4. 样片四：建筑内部与像素转换多重拍摄<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=73&t=500" target="_blank" rel="noopener" title="跳到视频 08:20">08:20–09:55</a></h3><p>官网用这张宣传 A7R III 的 <strong>像素转换多重拍摄</strong>：菜单打开后，相机让 CMOS 上 <strong>每个像素点对 R、G、B 三色光各感知一张</strong>，共拍 <strong>4 张</strong>，再在索尼软件里合成一张高品质照片（转写稿此处作「一级像素」，听不清）。两点：① 必须 <strong>三脚架</strong>、机位不能动；② A7R III <strong>没有机内合成</strong>，得后期在索尼软件里合。这类题材：脚架、静物、<strong>低感光度</strong>、<strong>较小光圈</strong> 扩大景深，配合像素转换多重拍摄。</p>
+
+<h3>5. 样片五：风光（光圈优先、小光圈、低感光度）<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=73&t=595" target="_blank" rel="noopener" title="跳到视频 09:55">09:55–11:37</a></h3><ul>
+<li><strong>A 光圈优先 + 小光圈</strong>：本片 <strong>F8</strong>；老师说 <strong>8 是光圈大小的分界线，F 数 ≥ 8 算小光圈</strong>，景深足够。</li>
+<li>风光画质要求高，光线不强也用 <strong>低感光度</strong>：样张 <strong>ISO 200</strong>，用 100 也没有实质区别。</li>
+<li><strong>脚架上精细构图</strong>；静止物体用 <strong>单次对焦</strong>，<strong>自由点</strong> 放在 <strong>不是最近也不是最远的中景</strong>。</li>
+<li>按快门前看屏幕亮度，<strong>转曝光补偿转盘</strong>，看屏幕上模拟出来的曝光，觉得最合适时按下。</li>
+</ul>
+
+<h3>6. 逆光风光：渐变镜平衡天地反差<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=73&t=697" target="_blank" rel="noopener" title="跳到视频 11:37">11:37–12:50</a></h3><p>风光最佳光线往往是 <strong>逆光</strong>：影调透视好，但天空亮、地面暗，天空合适地面就黑，地面合适天空就过曝。需要 <strong>配合滤镜</strong>：推荐卡色金刚狼 <strong>方形渐变镜</strong>，上下移动它，直到屏幕上天地反差合适，再对焦、按快门。用了卡色滤镜后 <strong>不需要额外做曝光补偿</strong>——相机的 <strong>TTL 测光</strong> 已把滤镜算进去。</p>
+
+<h3>7. 样片六：慢门水流与减光镜<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=73&t=770" target="_blank" rel="noopener" title="跳到视频 12:50">12:50–14:50</a></h3><ul>
+<li>山间流水的快门规律：<strong>1/10 秒＝丝状，1 秒＝绸缎状，10 秒＝雾化</strong>。</li>
+<li>这张并非晴天阳光下拍的：晴天要得到 1/10 秒的丝状水流很难，即使 <strong>ISO 降到最低 100、光圈收到最小（一般 F22）</strong>，快门仍不够慢，必须用 <strong>减光镜</strong>——风光摄影最重要的附件。推荐卡色金刚狼 <strong>圆形磁吸减光镜</strong>，在脚架上构好图直接吸上。</li>
+<li>注意：构图后 <strong>先自动对焦对准，再切到手动对焦</strong>（相机就不再对焦），最后才吸上减光镜。</li>
+</ul>
+
+<h3>8. 样片七：秋景倒影与偏振镜<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=73&t=890" target="_blank" rel="noopener" title="跳到视频 14:50">14:50–15:54</a></h3><p>标准秋景，与前面风光一样：<strong>低感光度、小光圈、光圈优先、单次对焦、单点对焦在中景</strong>。画面有 <strong>水面倒影</strong> 时，镜头前吸一片卡色金刚狼 <strong>圆形磁吸偏振镜</strong>，用来 <strong>滤除或强化水面反光</strong>，让倒影构图更迷人。结尾：以上是四节课全部内容，更多 A7 系列技巧请关注公众号「摄影无师自通」。</p>
+
+<div class="box a7c2"><h3>📷 换成 A7C II 怎么做</h3><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>课程里的做法（A7R III）</th>
+<th>A7C II 上的对应</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>光圈优先 A、辅转盘调光圈</td>
+<td>模式旋钮转 <strong>A</strong>；<strong>前转盘或后转盘L</strong> 调光圈</td>
+<td>先开到最大再收一点（如 F1.4→F1.8）；课程用的 FE 镜头（含 85mm F1.4 大师级）同为 E 卡口，A7C II 通用</td>
+</tr>
+<tr>
+<td>单张拍摄</td>
+<td>控制拨轮左 →［单张拍摄］（出厂）</td>
+<td></td>
+</tr>
+<tr>
+<td>AF-S + 大对焦区域（自由点 L）</td>
+<td>MENU →（对焦）→［AF/MF］→［对焦模式］→［单次AF］；MENU →（对焦）→［对焦区域］→［对焦区域］→［点: L］</td>
+<td>A7C II 出厂已开人眼识别（［AF中的被摄体识别］=［开］、［识别目标］=［人］），半按快门相机自己找眼睛</td>
+</tr>
+<tr>
+<td>机械曝光补偿转盘看亮度</td>
+<td><strong>后转盘R</strong></td>
+<td>屏幕亮度只模拟到 ±3.0 EV；M 档仅 ISO AUTO 时有效</td>
+</tr>
+<tr>
+<td>低感光度；多重测光；自动白平衡</td>
+<td>控制拨轮右选 ISO（100 起，可扩展到 50）；［多重］（出厂）；［自动］（按 C1，出厂=［白平衡模式］）</td>
+<td></td>
+</tr>
+<tr>
+<td>影棚：ISO 100、1/125 秒、用光圈控制</td>
+<td>M 档；快门不超过同步速度（1/160 秒，全画幅、Sony 闪光灯）；MENU →（拍摄）→［快门/静音］下：［快门类型］保持［机械快门］，［静音模式设置］→［静音模式］→［关］；MENU →（拍摄）→［拍摄显示］→［实时取景显示设置］→［实时取景显示］→［设置效果关］；ISO 用固定值</td>
+<td>老师的 1/125 秒在同步速度内。第三方引闪器下相机的行为帮助指南未载明，先试拍；用闪光灯连拍会变慢</td>
+</tr>
+<tr>
+<td>快门优先 S、主转盘调快门</td>
+<td>模式旋钮转 <strong>S</strong>；前转盘或后转盘L 调快门速度（如 1/1000）</td>
+<td>光圈自动；光圈值闪烁＝无法正确曝光</td>
+</tr>
+<tr>
+<td>ISO AUTO</td>
+<td>控制拨轮右 →［ISO AUTO］（出厂）</td>
+<td>范围 100～12800，可设［ISO AUTO最大］／［ISO AUTO最小］</td>
+</tr>
+<tr>
+<td>高速连拍</td>
+<td>控制拨轮左 → 连拍（Hi+ 约 10 张/秒、Hi 约 8、Mid 约 6、Lo 约 3）</td>
+<td>连拍中持续对焦和测光：对焦模式［连续AF］，［快门AEL］设［关］或［自动］</td>
+</tr>
+<tr>
+<td>连续对焦 + 广域/区</td>
+<td>MENU →（对焦）→［AF/MF］→［对焦模式］→［连续AF］；［对焦区域］选［广域］或［区］</td>
+<td>还可用跟踪（［跟踪: 广域］等，只在［连续AF］有效）；识别目标可选［动物/鸟类］</td>
+</tr>
+<tr>
+<td>像素转换多重拍摄</td>
+<td><strong>A7C II 无此功能</strong>（帮助指南全文查不到）</td>
+<td>想要更细腻：三脚架、低 ISO、小光圈，单张约 3300 万像素</td>
+</tr>
+<tr>
+<td>风光：F8、ISO 100~200、三脚架、AF-S + 自由点对中景</td>
+<td>A 档，前转盘设 F8；ISO 100；三脚架上关防抖：MENU →（拍摄）→［影像稳定］→［〈静〉SteadyShot］；［单次AF］，［对焦区域］选［点: M］或［点: S］放到中景</td>
+<td>要放大确认焦点：MENU →（对焦）→［对焦辅助］→［对焦放大］</td>
+</tr>
+<tr>
+<td>屏幕上看模拟曝光</td>
+<td>MENU →（拍摄）→［拍摄显示］→［实时取景显示设置］→［实时取景显示］→［设置效果开］（出厂）</td>
+<td>开着才「所见即所得」；影棚闪光时才改［设置效果关］</td>
+</tr>
+<tr>
+<td>渐变镜、减光镜、偏振镜、磁吸套装</td>
+<td>与机身无关，通用；按镜头前端口径选</td>
+<td>通过镜头测光，用滤镜后不必额外补偿（推论，A7C II 同理）</td>
+</tr>
+<tr>
+<td>先自动对焦再切手动对焦</td>
+<td>MENU →（对焦）→［AF/MF］→［对焦模式］→［手动对焦］；或把［AF/MF选择器切换］分配给键</td>
+<td>镜头上有 AF/MF 开关时以镜头开关为准</td>
+</tr>
+<tr>
+<td>慢门：1/10 秒、1 秒、10 秒</td>
+<td>S 档或 M 档直接设快门；机械快门最慢 30 秒，更长用 BULB（M 档后转盘L 转到［BULB］）；用 2 秒自拍或遥控避免按快门抖动</td>
+<td>［长时曝光降噪］出厂开：1 秒以上曝光后要再等同样长时间，赶时机可关：MENU →（拍摄）→［影像质量/记录］→［长时曝光降噪］</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="box errata"><h3>🕰️ 时代差异与勘误</h3><ul>
+<li><strong>像素转换多重拍摄</strong>：A7C II 没有；A7R III 也只是机内连拍 4 张，再用索尼的后期软件合成。</li>
+<li><strong>抓拍动物</strong>：课程用广域/区；A7C II 另有被摄体识别（识别目标可选动物/鸟类，眼/头/身体）和跟踪，追拍比课程时代省事（推论）。</li>
+<li><strong>逆光风光</strong>：A7C II 菜单里没有自动 HDR（帮助指南菜单总表无此项），但有［动态范围优化］、测光［强光］、斑马线、［连续阶段曝光］（包围）可辅助；天地反差大时仍以渐变镜或后期合成为主（推论）。</li>
+<li><strong>曝光补偿旋钮</strong>：课程里「转曝光补偿转盘看屏幕模拟曝光」在 A7C II 上改转后转盘R；屏幕模拟只到 ±3.0 EV。</li>
+<li><strong>滤镜与品牌</strong>：老师仍在推荐卡色（Kase）金刚狼系列，带推广性质；渐变、减光、偏振镜是通用附件，其他品牌同样可用。</li>
+<li><strong>转写稿修正</strong>：「第三章」＝第三张，「光线优先」＝光圈优先，「ISO o two」＝ISO AUTO，「多拍精选」即多拍再筛选；「一级像素」听不清。</li>
+</ul>
+</div>
+<div class="box terms"><h3>🔖 本集术语</h3><ul>
+<li><strong>中焦 / 长焦（人像）</strong>：老师的划分：全画幅 85–135mm 为中焦，取中景、腰以上、近景；135mm 以上为长焦，取特写。</li>
+<li><strong>多拍精选</strong>：追拍靠数量取胜，拍很多再挑。</li>
+<li><strong>像素转换多重拍摄</strong>：A7R III 功能，每个像素对 R、G、B 各采样一次，拍 4 张后期合成。</li>
+<li><strong>渐变镜 / 减光镜 / 偏振镜</strong>：压暗天空平衡反差 / 降低进光量以拍慢门 / 滤除或强化反光。</li>
+<li><strong>丝状 / 绸缎状 / 雾化</strong>：流水在 1/10 秒、1 秒、10 秒快门下的效果。</li>
+<li><strong>F8 分界线</strong>：老师的说法，F 数 ≥ 8 算小光圈、景深足够。</li>
+</ul>
+</div>
+<p class="ep-nav"><a href="#top">↑ 回到本页顶部</a></p></section>
+<section id="p74" class="episode" aria-labelledby="p74-t"><h2 id="p74-t"><span class="ep-no">P74</span> 尼康Z7口袋摄影课-I 外观控件</h2>
+<p class="ep-meta">原标题：075尼康Z7口袋摄影课-I 外观控件 · 时长 18:05 · <a href="https://www.bilibili.com/video/BV1Vt411E7nT?p=74" target="_blank" rel="noopener">▶ 在 B 站观看本集</a></p>
+<blockquote class="oneliner">
+<p><strong>一句话</strong>：本集详细介绍了尼康Z7微单相机的外观控件布局和功能，包括镜头、机身前面板、顶部控件、背部控件以及侧面和底部控件的操作方法。</p>
+</blockquote>
+<nav class="outline" aria-label="本集大纲"><p class="outline-t">本集大纲</p><ol>
+<li>尼康Z系列相机介绍<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=74&t=47" target="_blank" rel="noopener" title="跳到视频 00:47">00:47</a></li>
+<li>镜头部分介绍<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=74&t=186" target="_blank" rel="noopener" title="跳到视频 03:06">03:06</a></li>
+<li>镜头滤镜使用建议<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=74&t=305" target="_blank" rel="noopener" title="跳到视频 05:05">05:05</a></li>
+<li>机身前面板控件<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=74&t=453" target="_blank" rel="noopener" title="跳到视频 07:33">07:33</a></li>
+<li>顶部控件详解<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=74&t=531" target="_blank" rel="noopener" title="跳到视频 08:51">08:51</a></li>
+<li>监屏信息解读<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=74&t=602" target="_blank" rel="noopener" title="跳到视频 10:02">10:02</a></li>
+<li>主转盘与辅转盘功能<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=74&t=665" target="_blank" rel="noopener" title="跳到视频 11:05">11:05</a></li>
+<li>背部控件详解<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=74&t=771" target="_blank" rel="noopener" title="跳到视频 12:51">12:51</a></li>
+<li>侧面和底部控件<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=74&t=997" target="_blank" rel="noopener" title="跳到视频 16:37">16:37</a></li>
+<li>电池介绍<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=74&t=1028" target="_blank" rel="noopener" title="跳到视频 17:08">17:08</a></li>
+</ol></nav>
+
+<h3>1. 尼康Z系列相机介绍<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=74&t=47" target="_blank" rel="noopener" title="跳到视频 00:47">00:47–01:50</a></h3><p>尼康Z系列是尼康最新的全画幅微单相机系列，Z作为英文字母表中的最后一个字母，象征着全新篇章的开始。Z系列相机在操控上与尼康单反相机非常相似，不会有太多违和感。尼康Z7由镜头和机身两部分组成。微单相机与单反相机的一个主要区别是，微单相机摘下镜头后，CMOS传感器会直接裸露在外界空气中，因此更容易落灰，建议在镜头拆下和安装过程中将卡口朝下操作，以避免相机频繁浸灰。庞大的尼康单反F系列镜头群可以通过转接环来把它转到Z系列的微单之上，这意味着他可以共享庞大的尼康的单反镜头系统。</p>
+
+<h3>2. 镜头部分介绍<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=74&t=186" target="_blank" rel="noopener" title="跳到视频 03:06">03:06–04:33</a></h3><p>尼康Z7套机搭载的是24-70mm F4S镜头。S代表尼康微单全画幅镜头系列的命名方式。镜头标识符含义：尼克尔是镜头品牌，24-70mm是焦距范围，1:4表示最大光圈为F4，无论是在广角端的24毫米，还是在最长焦端的70毫米，这是一只非恒定光圈的镜头，也意味着这是一只专业镜头，高品质的镜头。镜头前端有锁扣设计，可以在24毫米端把它再转一下，转到锁定的位置，这些镜头在装在摄影包里面呢，它就不会像以前的单反镜头那样，会由于重力或者震荡的原因呢不断的变焦，而导致镜头一些阻尼的松动。72mm表示镜头前端直径，兼容72mm的镜头盖和滤镜。</p>
+
+<h3>3. 镜头滤镜使用建议<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=74&t=305" target="_blank" rel="noopener" title="跳到视频 05:05">05:05–07:33</a></h3><p>滤镜使用分为两个方面：</p>
+<ol>
+<li>UV镜保护：京东非常昂贵啊，优惠竟很便宜。而对于一款专业级别的镜头来说，我们更建议你使用高品质的多层镀膜UV镜。我们建议你使用卡色的G系列MCUV。那么它能够把UV镜对成像的干扰降到更低，MC的意思即是多层镀膜的意思，装上它以后，几乎是感觉不到UV镜的存在的相机的滤镜。</li>
+<li>效果滤镜：如偏振镜用于过滤反光，建议使用卡色金刚狼系列磁吸圆镜，在要使用的时候，只需要把它放在镜头前端，它会吸附上这个磁吸接环，使用起来非常的方便；减光镜用于慢门拍摄，卡色磁吸系列减光镜，完成构图和对焦以后，只需要把磁吸减光镜放在镜头前端吸上去，就完成这个操作了；渐变镜用于解决天空太亮、地面太暗的反差问题，建议使用方片的渐变镜来控制镜头的取景的上下的天空和地面的光比反差，因为方便滤镜意味着我们可以轻松的上下调节滤镜的位置，从而实现并非一比一比例的天空与地面的构图。</li>
+</ol>
+
+<h3>4. 机身前面板控件<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=74&t=453" target="_blank" rel="noopener" title="跳到视频 07:33">07:33–08:51</a></h3><p>Z7机身前面板包含：</p>
+<ul>
+<li>卡口锁：按下它不动才能旋下镜头，装载镜头的时候，不需要按下它，只要白点对准白点对准了以后，把它转上去即可</li>
+<li>两个自定义按键FN1和FN2：可根据操作习惯或拍摄题材定义为相机功能，如感光度、包围曝光、闪光灯调节等</li>
+<li>辅转盘：位于快门键下方，在手动曝光模式下用于控制光圈</li>
+</ul>
+
+<h3>5. 顶部控件详解<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=74&t=531" target="_blank" rel="noopener" title="跳到视频 08:51">08:51–11:05</a></h3><p>Z7顶部控件包括：</p>
+<ul>
+<li>热靴：用于装载外置闪光灯、麦克风或其他设备</li>
+<li>曝光模式转盘：有锁扣设计，按下后才能转动，包括M(手动模式)、A(光圈优先)、S(快门优先)、P(程序全自动)、Auto(傻瓜模式)，一定要把中间的旋钮按下去再转动它，否则你可能会把这个转盘给整个的薅掉下来</li>
+<li>监屏：用于查看相机关键设定信息，如快门速度、光圈、感光度、电池电量、释放模式等</li>
+<li>主转盘：在手动模式下用于控制快门速度</li>
+</ul>
+
+<h3>6. 监屏信息解读<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=74&t=602" target="_blank" rel="noopener" title="跳到视频 10:02">10:02–11:36</a></h3><p>监屏显示的关键信息包括：</p>
+<ul>
+<li>快门速度和光圈值(光圈显示为&quot;杠杠&quot;表示镜头未解锁，需要将镜头焦距转到24毫米端，你会听到咔嗒一声，光圈就被读出来了，转动辅转盘能够看到对光圈的调节)</li>
+<li>感光度值</li>
+<li>电池电量显示</li>
+<li>释放模式(S表示单张拍摄)</li>
+<li>存储卡信息(照片格式、分辨率和剩余可拍摄数量)</li>
+</ul>
+
+<h3>7. 主转盘与辅转盘功能<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=74&t=665" target="_blank" rel="noopener" title="跳到视频 11:05">11:05–12:51</a></h3><p>主转盘和辅转盘的功能：</p>
+<ul>
+<li>在手动模式下，主转盘控制快门速度，辅转盘控制光圈</li>
+<li>按下ISO键不动，转动主转盘可更改ISO值</li>
+<li>按下ISO键不动，转动辅转盘可选择ISO是否开启自动</li>
+<li>按下曝光补偿键不动，转动主转盘可调节曝光补偿值</li>
+<li>快门键除了控制快门外，还用于唤醒休眠状态的相机和快速切回拍摄模式</li>
+<li>尼康的操作呢都是通过按一下对应的按键不动的同时去转动主辅转盘</li>
+</ul>
+
+<h3>8. 背部控件详解<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=74&t=771" target="_blank" rel="noopener" title="跳到视频 12:51">12:51–16:03</a></h3><p>Z7背部控件包括：</p>
+<ul>
+<li>浏览/删除键：用于浏览和删除照片</li>
+<li>电子取景器：在强光或逆光时使用，比主屏幕取景更省电</li>
+<li>复合按钮：外围拨动选择照片/视频模式，中间按钮(DISP)切换信息显示模式，一般情况下呢，我们会把它使用选择为简化的屏幕信息显示，也就是显示光圈、快门、测光表这些主要的信息</li>
+<li>对焦启动按键(AFR)：用于启动自动对焦</li>
+<li>摇杆：用于快速定位对焦点位置</li>
+<li>I按键：进入快捷子菜单，对常用功能进行设定</li>
+<li>放大/缩小键：在浏览照片时查看细节或缩略图</li>
+<li>菜单键(Menu)：进入菜单进行功能设定</li>
+<li>释放模式键：选择单张拍摄、连拍或定时拍摄</li>
+</ul>
+
+<h3>9. 侧面和底部控件<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=74&t=997" target="_blank" rel="noopener" title="跳到视频 16:37">16:37–17:08</a></h3><p>Z7侧面和底部控件包括：</p>
+<ul>
+<li>存储卡卡舱</li>
+<li>兼容性接口、麦克风接口、高清接口</li>
+<li>镜头侧面的自动对焦和手动对焦切换模式(MF)，只有在自动对焦无法生效的场合，比方说拍摄星空，拍摄烟花，比方说拍摄非常细小的微距的时候，自动对焦会出错，或者说根本无法自动对焦，我们才会把它切换到手动对焦上。大部分情况下都是使用A来进行照相机的自动对焦</li>
+<li>底部中间的1/4英寸螺口：用于装载相机到三脚架</li>
+<li>电池仓：使用尼康单反常用的EN-EL15A电池</li>
+</ul>
+
+<h3>10. 电池介绍<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=74&t=1028" target="_blank" rel="noopener" title="跳到视频 17:08">17:08–17:41</a></h3><p>Z7使用尼康单反常用的EN-EL15A电池，这款电池在单反上续航强劲，在Z7上也有非常不俗的表现，无论是在图片的拍摄还是在视频的拍摄过程中呢，那都能够起到很加的一个续航状态。</p>
+
+<div class="box a7c2"><h3>📷 换成 A7C II 怎么做</h3><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>课程里的概念/操作</th>
+<th>A7C II 上的名称</th>
+<th>怎么操作</th>
+<th>说明（出处）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M 手动曝光</td>
+<td>M（手动曝光）</td>
+<td>模式旋钮转 M；前转盘=光圈，后转盘L=快门</td>
+<td>看 M.M. 指示；ISO 可设 ISO AUTO（0302C_manual_exposure.html）</td>
+</tr>
+<tr>
+<td>ISO 感光度（课程称“相对感光度”）</td>
+<td>ISO</td>
+<td>按控制拨轮右（ISO）选值；或 MENU →（曝光/颜色）→［曝光］→［ISO］</td>
+<td>出厂 ISO AUTO；照片 100～51200，扩展 50～204800（0408C_iso.html；231h_specifications_ilc2360.html）</td>
+</tr>
+<tr>
+<td>曝光补偿</td>
+<td>曝光补偿</td>
+<td>转后转盘R；或 MENU →（曝光/颜色）→［曝光补偿］→［曝光补偿］</td>
+<td>±5.0 EV；M 模式仅 ISO AUTO 时有效；智能自动/场景选择不可用（0406B_exposure_compensation.html）</td>
+</tr>
+<tr>
+<td>对焦点选择</td>
+<td>对焦区域 + 对焦标准键</td>
+<td>对焦区域选［点: L/M/S］［扩展点］［区］等；按控制拨轮中央（对焦标准）后上/下/左/右移框，（删除）键回中央；也可触摸拖动</td>
+<td>出厂对焦区域为广域（0405C_autofocus_area.html；0405L_focus_standard.html）</td>
+</tr>
+<tr>
+<td>驱动模式（单拍/连拍/自拍）</td>
+<td>拍摄模式</td>
+<td>按控制拨轮左</td>
+<td>索尼“拍摄模式”=驱动模式（0407C_drive_mode.html）</td>
+</tr>
+<tr>
+<td>自拍 2 秒/10 秒</td>
+<td>自拍定时(单张)</td>
+<td>拍摄模式→［自拍定时(单张)］→ 10/5/2 秒</td>
+<td>2 秒用于减少按快门抖动（0407_drivemode_selftimer.html）</td>
+</tr>
+<tr>
+<td>后按对焦（AF-ON）</td>
+<td>AF开启 ＋ 半按快门AF 关</td>
+<td>MENU →（对焦）→［AF/MF］→［半按快门AF］→［关］，用 AF-ON 键对焦</td>
+<td>AF-ON 出厂是［跟踪开启+AF开启］（0405_shutter_button_af.html；201h_using_AF_ON_button.html）</td>
+</tr>
+<tr>
+<td>速控屏 Q 键（佳能）／i 键（尼康）</td>
+<td>Fn（功能）按钮</td>
+<td>按 Fn，控制拨轮选项目，转前转盘改值</td>
+<td>照片、视频各 12 项（0413_using_function_menu.html；201h_fn_menu_setting.html）</td>
+</tr>
+<tr>
+<td>镜头防抖 IS/VR 开关</td>
+<td>SteadyShot（机身）</td>
+<td>MENU →（拍摄）→［影像稳定］→［〈静〉SteadyShot］</td>
+<td>三脚架上关；镜头有防抖开关时只能用镜头开关（0414_still_image_steadyshot.html）</td>
+</tr>
+<tr>
+<td>景深预览</td>
+<td>光圈预览</td>
+<td><strong>无专用键</strong>：给自定义键分配［光圈预览］，按住预览</td>
+<td>另有［拍摄结果预览］（0414_aperture_preview.html；0414_shooting_result_preview.html）</td>
+</tr>
+<tr>
+<td>删除 / 保护</td>
+<td>删除 ／ 保护</td>
+<td>播放时按 C2（删除）；MENU →（播放）→［选择/备忘录］→［保护］</td>
+<td>（0502_using_delete_button.html；0506_protect.html）</td>
+</tr>
+<tr>
+<td>格式化</td>
+<td>格式化</td>
+<td>MENU →（拍摄）→［媒体］→［格式化］；快捷：拍摄画面按住 MENU 再按住（删除）键约 2 秒</td>
+<td>会删受保护影像和 M1～M4（0601_memory_format.html）</td>
+</tr>
+<tr>
+<td>RAW+JPEG</td>
+<td>RAW&amp;JPEG</td>
+<td>MENU →（拍摄）→［影像质量/记录］→［〈静〉文件格式］→［RAW&amp;JPEG］</td>
+<td>［JPEG/HEIF切换］为 HEIF 时变成 RAW&amp;HEIF；RAW 压缩方式在［RAW文件类型］（0404M_file_format.html；201h_jpeg_heif_switch.html）</td>
+</tr>
+<tr>
+<td>画质 L/M/S、精细/标准</td>
+<td>JPEG影像尺寸 ／ JPEG影像质量</td>
+<td>MENU →（拍摄）→［影像质量/记录］</td>
+<td>L=33M（3:2）（0404M_jpeg_image_size.html；0404M_jpeg_image_quality.html）</td>
+</tr>
+<tr>
+<td>全自动（绿色方框）</td>
+<td>智能自动</td>
+<td>模式旋钮 AUTO →［智能自动］</td>
+<td>（0302_intelligent_auto.html）</td>
+</tr>
+<tr>
+<td>场景模式（人像/风景/运动/微距/夜景人像）</td>
+<td>场景选择</td>
+<td>模式旋钮 AUTO → 选场景</td>
+<td>肖像/运动/微距/风景/黄昏/夜景/夜景肖像（221h_scene_selection_modedial.html）</td>
+</tr>
+</tbody>
+</table></div>
+<p>（表中名称与路径摘自《A7C II 操作手册》，均与索尼官方帮助指南逐条核对；本集未列出的操作见手册。）</p>
+</div>
+<div class="box errata"><h3>🕰️ 时代差异与勘误</h3><ul>
+<li>取景：课程里的单反用光学取景器（反光镜＋五棱镜/五面镜）→ A7C II 是电子取景器（1.0 cm，约 236 万点），取景画面就是传感器的实时画面；［实时取景显示］为「设置效果开」时可直接预览曝光和白平衡效果。</li>
+<li>反光镜：单反按快门时反光镜抬起、回落会带来震动，要用反光镜预升等办法 → A7C II 没有反光镜；三脚架上防抖动可用 2 秒自拍、Bluetooth 遥控器或手机遥控，并关闭 SteadyShot。</li>
+<li>防抖：课程年代防抖做在镜头里（佳能 IS、尼康 VR）→ A7C II 机身内置影像传感器位移防抖（SteadyShot），镜头带防抖开关时以镜头开关为准；上三脚架建议关闭。</li>
+<li>存储卡：课程里有的机型用 CF 卡或双卡槽 → A7C II 只有一个 SD 卡槽（兼容 UHS-I/UHS-II）。</li>
+<li>肩屏与专用键：单反顶部有肩屏和 ISO/WB/驱动等专用键 → A7C II 没有肩屏；ISO 在控制拨轮右、拍摄模式（单拍/连拍/自拍）在控制拨轮左、白平衡模式出厂在 C1，其余靠 Fn 菜单和自定义键。</li>
+<li>电池：A7C II 用 NP-FZ100 电池，可经 USB Type-C 用 USB-PD 设备充电。</li>
+<li>转写/口误存疑：05:05 京东非常昂贵啊，优惠竟很便宜</li>
+<li>转写/口误存疑：08:51 一定要把中间的旋钮按下去再转动它，否则你可能会把这个转盘给整个的薅掉下来</li>
+<li>转写/口误存疑：12:51 复合按钮，外围拨动选择照片/视频模式，中间按钮(DISP)切换信息显示模式，一般情况下呢，我们会把它使用选择为简化的屏幕信息显示</li>
+<li>转写/口误存疑：16:37 只有在自动对焦无法生效的场合，比方说拍摄星空，拍摄烟花，比方说拍摄非常细小的微距的时候，自动对焦会出错，或者说根本无法自动对焦，我们才会把它切换到手动对焦上</li>
+</ul>
+</div>
+<div class="box terms"><h3>🔖 本集术语</h3><ul>
+<li><strong>Z系列</strong>：尼康最新的全画幅微单相机系列，Z作为英文字母表中的最后一个字母，象征全新篇章的开始</li>
+<li><strong>S镜头</strong>：尼康微单全画幅镜头系列的命名方式</li>
+<li><strong>非恒定光圈</strong>：镜头在不同焦距下最大光圈值会变化的镜头</li>
+<li><strong>热靴</strong>：用于装载外置闪光灯、麦克风或其他设备的接口</li>
+<li><strong>监屏</strong>：用于查看相机关键设定信息的显示屏</li>
+<li><strong>辅转盘</strong>：位于快门键下方的转盘，在手动模式下用于控制光圈</li>
+<li><strong>主转盘</strong>：用于控制快门速度的转盘</li>
+<li><strong>I按键</strong>：尼康微单的快捷按键，用于进入快捷子菜单</li>
+<li><strong>EN-EL15A电池</strong>：尼康单反常用的电池型号，也用于Z7微单相机</li>
+</ul>
+</div>
+<p class="ep-nav"><a href="#top">↑ 回到本页顶部</a></p></section>
+<section id="p75" class="episode" aria-labelledby="p75-t"><h2 id="p75-t"><span class="ep-no">P75</span> 尼康Z7曝光控制</h2>
+<p class="ep-meta">原标题：076尼康Z7口袋摄影课-II 曝光控制 · 时长 18:06 · <a href="https://www.bilibili.com/video/BV1Vt411E7nT?p=75" target="_blank" rel="noopener">▶ 在 B 站观看本集</a></p>
+<blockquote class="oneliner">
+<p><strong>一句话</strong>：通过手动模式和光圈优先模式讲解尼康Z7的曝光控制技巧，包括感光度、光圈和快门的设置原则及相互关系。</p>
+</blockquote>
+<nav class="outline" aria-label="本集大纲"><p class="outline-t">本集大纲</p><ol>
+<li>相机基本设置与曝光模式<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=75&t=47" target="_blank" rel="noopener" title="跳到视频 00:47">00:47</a></li>
+<li>手动曝光的基本操作<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=75&t=83" target="_blank" rel="noopener" title="跳到视频 01:23">01:23</a></li>
+<li>感光度的控制原则<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=75&t=231" target="_blank" rel="noopener" title="跳到视频 03:51">03:51</a></li>
+<li>光圈大小的选择与景深关系<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=75&t=467" target="_blank" rel="noopener" title="跳到视频 07:47">07:47</a></li>
+<li>快门速度的调节与测光表使用<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=75&t=615" target="_blank" rel="noopener" title="跳到视频 10:15">10:15</a></li>
+<li>手动曝光的实践操作<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=75&t=687" target="_blank" rel="noopener" title="跳到视频 11:27">11:27</a></li>
+<li>快门速度与运动效果的关系<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=75&t=778" target="_blank" rel="noopener" title="跳到视频 12:58">12:58</a></li>
+<li>感光度与噪点的关系<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=75&t=809" target="_blank" rel="noopener" title="跳到视频 13:29">13:29</a></li>
+<li>景深控制的三个要素<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=75&t=884" target="_blank" rel="noopener" title="跳到视频 14:44">14:44</a></li>
+<li>光圈优先模式的使用<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=75&t=955" target="_blank" rel="noopener" title="跳到视频 15:55">15:55</a></li>
+<li>曝光补偿功能的使用<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=75&t=1006" target="_blank" rel="noopener" title="跳到视频 16:46">16:46</a></li>
+</ol></nav>
+
+<h3>1. 相机基本设置与曝光模式<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=75&t=47" target="_blank" rel="noopener" title="跳到视频 00:47">00:47–01:23</a></h3><p>尼康Z7是一款全画幅微单，操控方式与尼康单反非常相似。首先将曝光模式调校到手动模式(M)，将白色指示点对准M。打开电源开关，将镜头调到解锁位置并调到24毫米端，听到&quot;咔嗒&quot;声后确认。通过按下信息显示键，将屏幕调校为精简模式，精简模式下从左往右依次显示：电池电量、测光模式、矩阵测光、快门速度、光圈、ISO、剩余拍摄张数(若未安装存储卡则显示E)。</p>
+
+<h3>2. 手动曝光的基本操作<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=75&t=83" target="_blank" rel="noopener" title="跳到视频 01:23">01:23–03:51</a></h3><p>尼康Z7的主要控制通过主转盘和辅转盘实现。主转盘位于握持相机时右手大拇指可转动处，手动模式下控制快门速度；辅转盘位于快门键下方，用右手食指控制，调节光圈大小。曝光信息可通过三种方式查看：屏幕显示、监屏显示和电子取景器。屏幕显示的快门信息更为详细，例如160分之1秒在屏幕上会显示为160。手动曝光的参考是测光表，位于屏幕右侧，显示从上到下由正到负的标尺，在电子取景器中则以横向方式显示。</p>
+
+<h3>3. 感光度的控制原则<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=75&t=231" target="_blank" rel="noopener" title="跳到视频 03:51">03:51–07:14</a></h3><p>手动曝光的首要步骤是设定感光度。按住ISO键不动转动主转盘可调节感光度数值。要关闭自动感光度(ISO后方不再出现&quot;A&quot;)，可按住ISO键不动，转动辅转盘。自动感光度仅在追拍运动物体、使用快门优先时才使用。感光度设置原则：光线强用低感光度，光线弱用高感光度。经验值：户外阳光直射处使用100-200；户外阴影处使用400；照明条件好的室内(如舞台剧院灯光多的场合)使用800-1600；照明条件差的室内(如居家环境，没有阳光照射或仅开家用灯)使用1600-3200。低感光度可获得更细腻的画面，高感光度会增加噪点使画面粗糙。弱光情况下，若拍摄风景或静物且可使用三脚架，可使用低感光度配合慢快门；若需手持拍摄或拍摄运动物体，则需使用高感光度以保证足够快的快门速度。当前摄影棚环境照明条件好，感光度设置为800即可满足需求。</p>
+
+<h3>4. 光圈大小的选择与景深关系<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=75&t=467" target="_blank" rel="noopener" title="跳到视频 07:47">07:47–09:42</a></h3><p>手动曝光的第二步是调节光圈大小。原则是拍摄大场景用小光圈，拍摄小场景用大光圈。光圈数值与实际开口大小成反比，光圈数值越大，实际开口越小；光圈数值越小，实际开口越大。小光圈(F8、F11等)适合拍摄风景、街道、建筑等需要从近到远处都清晰的大场景；大光圈(F2.8、F4等)适合拍摄人像、静物等需要背景虚化以突出主体的小场景。光圈大小影响景深，光圈越大景深越小(背景越虚化)，光圈越小景深越大(从近到远处整体清晰)。景深是摄影中的三要素之一，与光圈有直接关系。当前镜头最大光圈为F4，拍摄静物时可使用最大光圈。</p>
+
+<h3>5. 快门速度的调节与测光表使用<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=75&t=615" target="_blank" rel="noopener" title="跳到视频 10:15">10:15–11:27</a></h3><p>手动曝光的最后一步是调节快门速度，使画面获得合适的亮度。通过调节快门速度，让测光标尺上的点归零(大致到零位置，偏差一两格问题不大)，即可获得曝光合适的照片。当测光标尺上的点出现在负的一边时，画面偏暗；出现在正的一边时，画面偏亮。在电子取景器中，测光标识以左右方式显示，点出现在左边就往左转快门转盘，点出现在右边就往右转快门转盘，让它回到中间。</p>
+
+<h3>6. 手动曝光的实践操作<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=75&t=687" target="_blank" rel="noopener" title="跳到视频 11:27">11:27–12:58</a></h3><p>手动曝光的操作流程是：先设定感光度，再设定光圈，最后调节快门让测光标尺归零。在调节快门时，要注意快门速度是否达到手持拍摄的安全速度(30分之1秒)。如果快门速度过慢(如10分之1秒)，即使拍摄静止物体也会因手抖而模糊。快门速度影响运动物体的清晰度，快门速度越快，运动的物体越清晰；快门速度越慢，运动的物体越加动态模糊。通过电子取景器调节快门更为简单，测光标识以左右方式显示，根据标识位置调整快门转盘方向即可。</p>
+
+<h3>7. 快门速度与运动效果的关系<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=75&t=778" target="_blank" rel="noopener" title="跳到视频 12:58">12:58–13:29</a></h3><p>不同的快门速度拍摄运动的物体会呈现不同的效果。快门速度越快，运动的物体越清晰；快门速度越慢，运动的物体越加动态模糊。30分之1秒是手持拍摄的安全快门速度。在进行手动曝光时，当测光标尺归零后，需检查快门速度是否达到安全值。若快门速度为60分之1秒或更快，更容易获得清晰照片；若只有10分之1秒，即使拍摄静止物体也会因手抖而模糊。图片展示中，第四、五排展示了快门时间与画面运动效果的关系，说明快门速度如何影响运动物体的表现。</p>
+
+<h3>8. 感光度与噪点的关系<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=75&t=809" target="_blank" rel="noopener" title="跳到视频 13:29">13:29–14:08</a></h3><p>感光度与噪点有直接关系。图片展示中感光度200时已出现明显噪点，但这张图片比较原始古老。对于尼康Z7这样的现代相机，感光度在1600时才会出现比较明显的噪点，因此可以放心使用1600以下的感光度。感光度的选择需要在画面亮度和噪点之间找到平衡。</p>
+
+<h3>9. 景深控制的三个要素<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=75&t=884" target="_blank" rel="noopener" title="跳到视频 14:44">14:44–15:55</a></h3><p>背景虚化不仅受光圈影响，还受另外两个重要因素控制：焦距和距离。焦距越长，背景越虚化，景深越小；距离越近，背景越虚化。要获得背景虚化的小景深照片，需要拉开主体与背景的距离，使用较长焦距和适当靠近主体。需要注意的是镜头有最近对焦距离，不可靠得太近拍摄，否则会出现无法对焦的情况。在日常生活中，大部分拍摄场合不会使用手动模式，而是选择光圈优先模式。</p>
+
+<h3>10. 光圈优先模式的使用<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=75&t=955" target="_blank" rel="noopener" title="跳到视频 15:55">15:55–16:46</a></h3><p>生活中大部分拍摄场合使用的是光圈优先模式而非手动模式。光圈优先模式下，用辅转盘控制光圈大小，相机自动计算快门速度，使测光标尺保持在中间位置，省去了手动调节快门的步骤。在光圈优先模式下，可以使用小光圈(F11左右)拍摄大景深的风景，或使用大光圈拍摄背景虚化的人物、静物或角落。</p>
+
+<h3>11. 曝光补偿功能的使用<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=75&t=1006" target="_blank" rel="noopener" title="跳到视频 16:46">16:46–17:17</a></h3><p>在光圈优先模式下，如果拍出的照片亮度不符合预期，可以使用曝光补偿功能进行矫正。按下加减号键不放，转动转盘调节曝光补偿。正补偿使照片更亮，负补偿使照片更暗。通过屏幕可以观察曝光补偿后画面的亮度模拟效果，选择喜欢的亮度后停止调节，然后对焦并拍摄。具体加多少减多少，可以通过屏幕观察模拟效果，选择最满意的亮度后，按下快门对焦，用力完全按下快门，拍出满意的照片。</p>
+
+<div class="box a7c2"><h3>📷 换成 A7C II 怎么做</h3><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>课程里的概念/操作</th>
+<th>A7C II 上的名称</th>
+<th>怎么操作</th>
+<th>说明（出处）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M 手动曝光</td>
+<td>M（手动曝光）</td>
+<td>模式旋钮转 M；前转盘=光圈，后转盘L=快门</td>
+<td>看 M.M. 指示；ISO 可设 ISO AUTO（0302C_manual_exposure.html）</td>
+</tr>
+<tr>
+<td>ISO 感光度（课程称“相对感光度”）</td>
+<td>ISO</td>
+<td>按控制拨轮右（ISO）选值；或 MENU →（曝光/颜色）→［曝光］→［ISO］</td>
+<td>出厂 ISO AUTO；照片 100～51200，扩展 50～204800（0408C_iso.html；231h_specifications_ilc2360.html）</td>
+</tr>
+<tr>
+<td>曝光补偿</td>
+<td>曝光补偿</td>
+<td>转后转盘R；或 MENU →（曝光/颜色）→［曝光补偿］→［曝光补偿］</td>
+<td>±5.0 EV；M 模式仅 ISO AUTO 时有效；智能自动/场景选择不可用（0406B_exposure_compensation.html）</td>
+</tr>
+<tr>
+<td>评价测光／矩阵测光</td>
+<td>多重</td>
+<td>MENU →（曝光/颜色）→［测光］→［测光模式］→［多重］</td>
+<td>出厂即多重；1200 区域；人脸优先可开关（0406_metering_mode.html；231h_specifications_ilc2360.html）</td>
+</tr>
+<tr>
+<td>景深预览</td>
+<td>光圈预览</td>
+<td><strong>无专用键</strong>：给自定义键分配［光圈预览］，按住预览</td>
+<td>另有［拍摄结果预览］（0414_aperture_preview.html；0414_shooting_result_preview.html）</td>
+</tr>
+<tr>
+<td>M 档曝光量标尺</td>
+<td>M.M.（手动测光）</td>
+<td>M 档且 ISO 非 AUTO 时显示</td>
+<td>ISO AUTO 时不显示（0302C_manual_exposure.html）</td>
+</tr>
+</tbody>
+</table></div>
+<p>（表中名称与路径摘自《A7C II 操作手册》，均与索尼官方帮助指南逐条核对；本集未列出的操作见手册。）</p>
+</div>
+<div class="box errata"><h3>🕰️ 时代差异与勘误</h3><ul>
+<li>取景：课程里的单反用光学取景器（反光镜＋五棱镜/五面镜）→ A7C II 是电子取景器（1.0 cm，约 236 万点），取景画面就是传感器的实时画面；［实时取景显示］为「设置效果开」时可直接预览曝光和白平衡效果。</li>
+<li>感光度：课程年代的单反高 ISO 噪点明显 → A7C II 照片 ISO 100～51200（扩展 50～204800），高 ISO 画质好得多，但「光线允许就用低 ISO」的原则不变。</li>
+<li>测光表：佳能取景器测光标尺左负右正、尼康相反 → A7C II 在 M 档显示 M.M.（手动测光）指示，ISO 为 ISO AUTO 时不显示。</li>
+<li>检查曝光：单反主要靠拍后回放检查 → A7C II 拍摄前就能看柱状图、斑马线等辅助显示；回放时按 DISP 看柱状图和过曝/欠曝警告。</li>
+</ul>
+</div>
+<div class="box terms"><h3>🔖 本集术语</h3><ul>
+<li><strong>手动曝光</strong>：摄影师通过对感光度、光圈、快门的调节，让照片获得合适亮度的曝光方式。</li>
+<li><strong>测光表/测光标尺</strong>：相机上显示曝光参考的标尺，手动模式下用于判断曝光是否准确，通常显示从正到负的刻度。</li>
+<li><strong>景深</strong>：照片中从最近到最远的清晰范围，受光圈、焦距和拍摄距离影响，是摄影三要素之一。</li>
+<li><strong>光圈优先</strong>：一种曝光模式，摄影师设定光圈，相机自动计算快门速度。</li>
+<li><strong>曝光补偿</strong>：在优先模式下调整照片亮度的功能，正值变亮，负值变暗。</li>
+<li><strong>安全快门</strong>：手持拍摄时避免模糊的最快快门速度，通常为30分之1秒或更快。</li>
+</ul>
+</div>
+<p class="ep-nav"><a href="#top">↑ 回到本页顶部</a></p></section>
+<section id="p76" class="episode" aria-labelledby="p76-t"><h2 id="p76-t"><span class="ep-no">P76</span> 尼康Z7口袋摄影课-III 关键功能</h2>
+<p class="ep-meta">原标题：077尼康Z7口袋摄影课-III 关键功能 · 时长 18:11 · <a href="https://www.bilibili.com/video/BV1Vt411E7nT?p=76" target="_blank" rel="noopener">▶ 在 B 站观看本集</a></p>
+<blockquote class="oneliner">
+<p><strong>一句话</strong>：讲解Z7的独立快捷按键（ISO、曝光补偿）及背部I键菜单中的核心设置，涵盖画质、对焦、测光与白平衡。</p>
+</blockquote>
+<nav class="outline" aria-label="本集大纲"><p class="outline-t">本集大纲</p><ol>
+<li>单独快捷按键：ISO与曝光补偿<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=76&t=47" target="_blank" rel="noopener" title="跳到视频 00:47">00:47–04:02</a></li>
+<li>背部I键菜单概览<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=76&t=242" target="_blank" rel="noopener" title="跳到视频 04:02">04:02–07:21</a></li>
+<li>设定优化校准（照片风格）<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=76&t=242" target="_blank" rel="noopener" title="跳到视频 04:02">04:02–06:00</a></li>
+<li>图像品质与尺寸<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=76&t=360" target="_blank" rel="noopener" title="跳到视频 06:00">06:00–06:38</a></li>
+<li>AF区域模式<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=76&t=441" target="_blank" rel="noopener" title="跳到视频 07:21">07:21–09:19</a></li>
+<li>白平衡调节<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=76&t=590" target="_blank" rel="noopener" title="跳到视频 09:50">09:50–11:05</a></li>
+<li>测光模式详解<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=76&t=701" target="_blank" rel="noopener" title="跳到视频 11:41">11:41–14:08</a></li>
+<li>动态D-Lighting与减震<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=76&t=848" target="_blank" rel="noopener" title="跳到视频 14:08">14:08–16:06</a></li>
+<li>对焦模式（AF-S/AF-C/MF）<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=76&t=966" target="_blank" rel="noopener" title="跳到视频 16:06">16:06–17:48</a></li>
+</ol></nav>
+
+<h3>1. 单独快捷按键：ISO与曝光补偿<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=76&t=47" target="_blank" rel="noopener" title="跳到视频 00:47">00:47–04:02</a></h3><p><strong>ISO感光度</strong></p>
+<ul>
+<li><strong>位置</strong>：相机顶部，快门键后方。</li>
+<li><strong>操作</strong>：按住不动转<strong>辅转盘</strong>选自动，转<strong>主转盘</strong>选具体数值。</li>
+<li><strong>概念</strong>：老摄影师称为“底片速度”，吴老师称之为“底片的加速度”。</li>
+<li><strong>作用</strong>：高ISO在相同光线下能让快门更快，利于抓拍清晰瞬间；低ISO则让照片更细腻、噪点更少。</li>
+<li><strong>建议</strong>：尽量使用低一点的感光度。</li>
+</ul>
+<p><strong>曝光补偿</strong></p>
+<ul>
+<li><strong>位置</strong>：ISO调节旁。</li>
+<li><strong>操作</strong>：按住不动转主转盘，调节正负补偿。</li>
+<li><strong>用途</strong>：在优先模式下校准画面亮度。逆光拍人脸过黑可增加补偿；拍剪影可降低补偿。</li>
+<li><strong>关键点</strong>：曝光补偿不是相机内部对照片亮度的调节，而是调节<strong>测光</strong>（光圈、快门、感光度）中的某一个变量。
+<ul>
+<li>例如：快门1/60秒，加一补偿变为1/30秒，加二补偿变为1/125秒。</li>
+</ul>
+</li>
+<li><strong>技巧</strong>：结合屏幕的曝光模拟，观察亮度合适后停止调节。</li>
+</ul>
+
+<h3>2. 背部I键菜单概览<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=76&t=242" target="_blank" rel="noopener" title="跳到视频 04:02">04:02–07:21</a></h3><p>按下背部I键弹出子菜单，包含相机常用详细关键信息。</p>
+
+<h3>3. 设定优化校准（照片风格）<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=76&t=242" target="_blank" rel="noopener" title="跳到视频 04:02">04:02–06:00</a></h3><ul>
+<li><strong>位置</strong>：I键菜单上排左起第一项。</li>
+<li><strong>含义</strong>：等同于佳能的“照片风格”，调校JPG格式的清晰度、反差、对比度和色彩饱和度。</li>
+<li><strong>建议</strong>：大多数时候选择“自动”或“标准”，尽量通过后期实现色彩和锐度的调整。</li>
+<li><strong>特殊功能</strong>：选择“单色模式”可直接拍摄黑白照片。</li>
+<li><strong>模式区别</strong>：
+<ul>
+<li><strong>鲜艳</strong>：色彩饱和度高。</li>
+<li><strong>风景</strong>：绿色和红色饱和度高，清晰度锐度高。</li>
+<li><strong>人像</strong>：降低锐度，降低黄色饱和度，肤色更白里透红（但尼康相机常被诟病肤色偏黄）。</li>
+</ul>
+</li>
+</ul>
+
+<h3>4. 图像品质与尺寸<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=76&t=360" target="_blank" rel="noopener" title="跳到视频 06:00">06:00–06:38</a></h3><ul>
+<li><strong>图像品质</strong>：选择照片记录格式。
+<ul>
+<li><strong>JPG</strong>：精细、标准、普通。</li>
+<li><strong>RAW</strong>：方便修图。</li>
+<li><strong>RAW+JPG</strong>：同步记录，方便检索和修图。</li>
+</ul>
+</li>
+<li><strong>图像尺寸</strong>：选择分辨率。如果照片只在手机屏幕展示，可缩小尺寸以节约内存。</li>
+</ul>
+
+<h3>5. AF区域模式<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=76&t=441" target="_blank" rel="noopener" title="跳到视频 07:21">07:21–09:19</a></h3><ul>
+<li><strong>含义</strong>：选择对焦点的大小或选择方式。</li>
+<li><strong>选项</strong>：点AF、单点AF、宽区AF、自动区域AF。</li>
+<li><strong>应用</strong>：
+<ul>
+<li><strong>单点AF</strong>：摆拍人像、静物、风景时使用，通过导航键设定具体对焦点（如人眼、风景中景）。</li>
+<li><strong>点AF</strong>：对焦点极小，移动速度慢。</li>
+<li><strong>宽区AF</strong>：抓拍运动物体，设定较大区域为焦点。</li>
+<li><strong>自动区域AF</strong>：相机自动搜寻焦点。</li>
+</ul>
+</li>
+</ul>
+
+<h3>6. 白平衡调节<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=76&t=590" target="_blank" rel="noopener" title="跳到视频 09:50">09:50–11:05</a></h3><ul>
+<li><strong>含义</strong>：控制照片的颜色还原。</li>
+<li><strong>操作</strong>：选择不同模式，屏幕模拟照片色彩会变化。</li>
+<li><strong>常用模式</strong>：
+<ul>
+<li><strong>自动（AWB）</strong>：大多数情况下选择此项，相机自动判断现场光并补偿。</li>
+<li><strong>场景模式</strong>：钨丝灯（夜景偏蓝）、阴影/阴天（偏暖）。</li>
+<li><strong>特殊用途</strong>：拍夜景用钨丝灯偏蓝，拍夕阳用阴影模式偏暖。</li>
+</ul>
+</li>
+</ul>
+
+<h3>7. 测光模式详解<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=76&t=701" target="_blank" rel="noopener" title="跳到视频 11:41">11:41–14:08</a></h3><ul>
+<li><strong>选项</strong>：矩阵测光、中央重点测光、点测光。</li>
+<li><strong>矩阵测光</strong>：画面分区域测光，重点考虑焦点位置。适合绝大多数场合。</li>
+<li><strong>点测光</strong>：只对焦点所在的局部区域测光。
+<ul>
+<li><strong>应用</strong>：光线反差极大或瞬间很短的场景（如划火柴）。</li>
+<li><strong>效果</strong>：焦点处曝光准确，比它亮处过曝，比它暗处欠曝。</li>
+</ul>
+</li>
+<li><strong>技巧</strong>：逆光人像也可用矩阵测光+曝光补偿达到同样效果，但点测光更适合瞬间抓拍。</li>
+</ul>
+
+<h3>8. 动态D-Lighting与减震<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=76&t=848" target="_blank" rel="noopener" title="跳到视频 14:08">14:08–16:06</a></h3><ul>
+<li><strong>动态D-Lighting</strong>：调节动态范围，让高光和阴影保留细节。
+<ul>
+<li><strong>JPG下生效</strong>：RAW下后期可补救。</li>
+<li><strong>建议</strong>：一般选“标准”，拍剪影时关闭。</li>
+</ul>
+</li>
+<li><strong>减震（VR）</strong>：
+<ul>
+<li><strong>建议</strong>：开机状态下尽量打开。</li>
+<li><strong>脚架拍摄</strong>：一般建议关闭，但吴老师指出除佳能7D+24-105镜头外，其他情况不关闭减震通常不会出现糊片，且减震耗电较少。</li>
+</ul>
+</li>
+</ul>
+
+<h3>9. 对焦模式（AF-S/AF-C/MF）<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=76&t=966" target="_blank" rel="noopener" title="跳到视频 16:06">16:06–17:48</a></h3><ul>
+<li><strong>AF-S（单次对焦）</strong>：
+<ul>
+<li><strong>适用</strong>：摆拍人像、静物、风景。</li>
+<li><strong>特点</strong>：对准一次后保持，未对准不释放快门，精度高。</li>
+</ul>
+</li>
+<li><strong>AF-C（连续对焦）</strong>：
+<ul>
+<li><strong>适用</strong>：追拍运动物体。</li>
+<li><strong>特点</strong>：半按快门保持对焦，给足快门力度即可释放。</li>
+</ul>
+</li>
+<li><strong>MF（手动对焦）</strong>：
+<ul>
+<li><strong>适用</strong>：自动对焦失效时，如拍摄星空、烟花、极细小物体。</li>
+</ul>
+</li>
+</ul>
+
+<div class="box a7c2"><h3>📷 换成 A7C II 怎么做</h3><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>课程里的概念/操作</th>
+<th>A7C II 上的名称</th>
+<th>怎么操作</th>
+<th>说明（出处）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ISO 感光度（课程称“相对感光度”）</td>
+<td>ISO</td>
+<td>按控制拨轮右（ISO）选值；或 MENU →（曝光/颜色）→［曝光］→［ISO］</td>
+<td>出厂 ISO AUTO；照片 100～51200，扩展 50～204800（0408C_iso.html；231h_specifications_ilc2360.html）</td>
+</tr>
+<tr>
+<td>曝光补偿</td>
+<td>曝光补偿</td>
+<td>转后转盘R；或 MENU →（曝光/颜色）→［曝光补偿］→［曝光补偿］</td>
+<td>±5.0 EV；M 模式仅 ISO AUTO 时有效；智能自动/场景选择不可用（0406B_exposure_compensation.html）</td>
+</tr>
+<tr>
+<td>照片风格 Picture Style／优化校准 Picture Control</td>
+<td>创意外观</td>
+<td>MENU →（曝光/颜色）→［颜色/色调］→［创意外观］；也在 Fn 菜单里</td>
+<td>ST/PT/NT/VV/VV2/FL/IN/SH/BW/SE，可调对比度等 8 项（0411B_creative_look.html；201h_fn_menu_setting.html）</td>
+</tr>
+<tr>
+<td>RAW+JPEG</td>
+<td>RAW&amp;JPEG</td>
+<td>MENU →（拍摄）→［影像质量/记录］→［〈静〉文件格式］→［RAW&amp;JPEG］</td>
+<td>［JPEG/HEIF切换］为 HEIF 时变成 RAW&amp;HEIF；RAW 压缩方式在［RAW文件类型］（0404M_file_format.html；201h_jpeg_heif_switch.html）</td>
+</tr>
+<tr>
+<td>对焦点选择</td>
+<td>对焦区域 + 对焦标准键</td>
+<td>对焦区域选［点: L/M/S］［扩展点］［区］等；按控制拨轮中央（对焦标准）后上/下/左/右移框，（删除）键回中央；也可触摸拖动</td>
+<td>出厂对焦区域为广域（0405C_autofocus_area.html；0405L_focus_standard.html）</td>
+</tr>
+<tr>
+<td>自定义白平衡（佳能）／预设手动 PRE（尼康）</td>
+<td>自定义 1～3</td>
+<td>白平衡模式选［自定义 N］→ 按右 → 选设置图标 → 白色填满捕捉框按中央 → 再按中央注册</td>
+<td>用闪光捕获的要配闪光使用（0410B_custom_white_balance.html）</td>
+</tr>
+<tr>
+<td>评价测光／矩阵测光</td>
+<td>多重</td>
+<td>MENU →（曝光/颜色）→［测光］→［测光模式］→［多重］</td>
+<td>出厂即多重；1200 区域；人脸优先可开关（0406_metering_mode.html；231h_specifications_ilc2360.html）</td>
+</tr>
+<tr>
+<td>中央重点平均测光</td>
+<td>中心</td>
+<td>同上 →［中心］</td>
+<td>偏重中央（0406_metering_mode.html）</td>
+</tr>
+<tr>
+<td>点测光</td>
+<td>点测光（点测光: 标准）</td>
+<td>同上 →［点测光］→［点测光: 标准］；位置用 MENU →（曝光/颜色）→［测光］→［点测光点］设［中间］或［对焦点联动］</td>
+<td>联动只对点/扩展点类对焦区域有效（0406_metering_mode.html；0406L_spotmetering_link_focus_point.html）</td>
+</tr>
+<tr>
+<td>高光色调优先（佳能）／自动亮度优化 ALO（佳能）／动态 D-Lighting（尼康）</td>
+<td>动态范围优化（DRO）</td>
+<td>MENU →（曝光/颜色）→［颜色/色调］→［动态范围优化］→ 自动/1级～5级/关</td>
+<td>DRO 对应 ALO/D-Lighting；佳能“高光色调优先”无同名功能，保护高光可配合［强光］测光与斑马线（推论）（0409B_d_range_optimizer.html；0406_metering_mode.html；0406M_zebra_display.html）</td>
+</tr>
+<tr>
+<td>单次自动对焦 ONE SHOT／AF-S</td>
+<td>单次AF（AF-S）</td>
+<td>MENU →（对焦）→［AF/MF］→［对焦模式］→［单次AF］</td>
+<td>合焦锁定（0405C_focus_mode.html）</td>
+</tr>
+<tr>
+<td>人工智能伺服 AI SERVO／AF-C</td>
+<td>连续AF（AF-C）</td>
+<td>同上 →［连续AF］</td>
+<td>“跟踪”类对焦区域只在连续AF有效（0405C_focus_mode.html；0405C_autofocus_area.html）</td>
+</tr>
+<tr>
+<td>人工智能自动对焦 AI FOCUS／AF-A</td>
+<td>自动AF（AF-A）</td>
+<td>同上 →［自动AF］（出厂值）</td>
+<td>只在用支持相位检测AF的镜头时可用（0405C_focus_mode.html；231h_default_value_list_focus_ilc2360.html）</td>
+</tr>
+<tr>
+<td>镜头防抖 IS/VR 开关</td>
+<td>SteadyShot（机身）</td>
+<td>MENU →（拍摄）→［影像稳定］→［〈静〉SteadyShot］</td>
+<td>三脚架上关；镜头有防抖开关时只能用镜头开关（0414_still_image_steadyshot.html）</td>
+</tr>
+<tr>
+<td>画质 L/M/S、精细/标准</td>
+<td>JPEG影像尺寸 ／ JPEG影像质量</td>
+<td>MENU →（拍摄）→［影像质量/记录］</td>
+<td>L=33M（3:2）（0404M_jpeg_image_size.html；0404M_jpeg_image_quality.html）</td>
+</tr>
+</tbody>
+</table></div>
+<p>（表中名称与路径摘自《A7C II 操作手册》，均与索尼官方帮助指南逐条核对；本集未列出的操作见手册。）</p>
+</div>
+<div class="box errata"><h3>🕰️ 时代差异与勘误</h3><ul>
+<li>照片风格：佳能照片风格、尼康优化校准 → A7C II 叫「创意外观」（ST/PT/NT/VV/VV2/FL/IN/SH/BW/SE）。</li>
+<li>亮度优化：佳能自动亮度优化、尼康动态 D-Lighting → A7C II 叫「动态范围优化（DRO）」。</li>
+<li>叫法：单拍/连拍/自拍在 A7C II 上叫「拍摄模式」（按控制拨轮左），包围曝光叫「阶段曝光」。</li>
+<li>AF 辅助：A7C II 正面有自拍指示灯/AF 辅助照明，暗处辅助自动对焦，设置在 MENU →（对焦）→［AF/MF］→［AF辅助照明］。</li>
+<li>电池：A7C II 用 NP-FZ100 电池，可经 USB Type-C 用 USB-PD 设备充电。</li>
+<li>检查曝光：单反主要靠拍后回放检查 → A7C II 拍摄前就能看柱状图、斑马线等辅助显示；回放时按 DISP 看柱状图和过曝/欠曝警告。</li>
+</ul>
+</div>
+<div class="box terms"><h3>🔖 本集术语</h3><ul>
+<li>无</li>
+</ul>
+</div>
+<p class="ep-nav"><a href="#top">↑ 回到本页顶部</a></p></section>
+<section id="p77" class="episode" aria-labelledby="p77-t"><h2 id="p77-t"><span class="ep-no">P77</span> 尼康Z7口袋摄影课-IV 样片技巧</h2>
+<p class="ep-meta">原标题：078尼康Z7口袋摄影课-IV 样片技巧 · 时长 15:46 · <a href="https://www.bilibili.com/video/BV1Vt411E7nT?p=77" target="_blank" rel="noopener">▶ 在 B 站观看本集</a></p>
+<blockquote class="oneliner">
+<p><strong>一句话</strong>：通过尼康Z7相机拍摄不同类型样片（人像、静物、风光、剪影、慢门和运动场景）的相机设置与控制技巧。</p>
+</blockquote>
+<nav class="outline" aria-label="本集大纲"><p class="outline-t">本集大纲</p><ol>
+<li>人像拍摄基础技巧<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=77&t=47" target="_blank" rel="noopener" title="跳到视频 00:47">00:47</a></li>
+<li>弱光人像拍摄<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=77&t=347" target="_blank" rel="noopener" title="跳到视频 05:47">05:47</a></li>
+<li>强光下静物拍摄<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=77&t=382" target="_blank" rel="noopener" title="跳到视频 06:22">06:22</a></li>
+<li>强光下抓拍技巧<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=77&t=447" target="_blank" rel="noopener" title="跳到视频 07:27">07:27</a></li>
+<li>风光摄影设置<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=77&t=595" target="_blank" rel="noopener" title="跳到视频 09:55">09:55</a></li>
+<li>剪影作品拍摄<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=77&t=637" target="_blank" rel="noopener" title="跳到视频 10:37">10:37</a></li>
+<li>慢门风光拍摄<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=77&t=758" target="_blank" rel="noopener" title="跳到视频 12:38">12:38</a></li>
+<li>运动场景抓拍<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=77&t=868" target="_blank" rel="noopener" title="跳到视频 14:28">14:28</a></li>
+</ol></nav>
+
+<h3>1. 人像拍摄基础技巧<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=77&t=47" target="_blank" rel="noopener" title="跳到视频 00:47">00:47–03:59</a></h3><p>讲解介于强光和弱光之间的人像拍摄技巧。关键是要找到合适的感光度，保证照片细腻且噪点少，同时保持基本清晰度。对于人物抓拍，建议使用1/125秒或更快的快门速度。相机设置方面：</p>
+<ul>
+<li>开机后调至<strong>光圈优先模式</strong></li>
+<li>先设定保守感光度（如ISO 400），转动主转盘调整</li>
+<li>根据需要开大光圈（如F1.4可稍收缩以增加锐度，F4则开至最大）</li>
+<li>观察快门速度，若不足则提高感光度</li>
+<li>其他设置：优化校准选&quot;标准&quot;，图像品质根据修图需求选择，闪光灯不介入，拍摄模式选低速连拍，对焦模式用单次对焦和单点对焦（对焦在眼睛上），白平衡用自动，测光模式用矩阵测光</li>
+</ul>
+
+<h3>2. 弱光人像拍摄<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=77&t=347" target="_blank" rel="noopener" title="跳到视频 05:47">05:47–06:22</a></h3><p>讲解弱光环境下的人像拍摄技巧。感光度可先设为ISO 800，光圈开至最大，快门速度1/60秒已足够。可使用单张拍摄而非连拍。若结合闪光灯，可使用手动模式，感光度设为略低的ISO 400，大光圈配合闪光灯补光，并降低闪光补偿使人物更自然。</p>
+
+<h3>3. 强光下静物拍摄<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=77&t=382" target="_blank" rel="noopener" title="跳到视频 06:22">06:22–07:27</a></h3><p>讲解强光下静物（如花卉）的拍摄技巧。设置与拍人像类似：</p>
+<ul>
+<li><strong>光圈优先模式</strong></li>
+<li>感光度使用最低值（如ISO 100）</li>
+<li>光圈开至最大</li>
+<li>优化校准选&quot;标准&quot;</li>
+<li>拍摄模式选单张</li>
+<li>对焦用单点和单次对焦</li>
+<li>测光用矩阵测光</li>
+<li>白平衡用自动</li>
+<li>构图后将焦点移至想要清晰的位置，按下快门</li>
+</ul>
+
+<h3>4. 强光下抓拍技巧<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=77&t=447" target="_blank" rel="noopener" title="跳到视频 07:27">07:27–09:15</a></h3><p>讲解强光下抓拍瞬间的技巧。使用<strong>快门优先模式</strong>，并配合感光度自动：</p>
+<ul>
+<li>感光度设为自动（ISO A），避免因光线不足导致光圈闪烁而错过抓拍时机</li>
+<li>快门速度设为1/100秒已足够</li>
+<li>优化校准选&quot;标准&quot;</li>
+<li>释放模式可选低速或高速连拍</li>
+<li>对焦用单点和单次对焦</li>
+<li>测光用点测光</li>
+<li>构图后将焦点放在关键位置（如人的手上），按下快门</li>
+<li>如曝光有问题，使用曝光补偿调整亮度</li>
+</ul>
+
+<h3>5. 风光摄影设置<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=77&t=595" target="_blank" rel="noopener" title="跳到视频 09:55">09:55–10:37</a></h3><p>讲解风光摄影的相机设置：</p>
+<ul>
+<li><strong>光圈优先模式</strong></li>
+<li>感光度设为ISO 100</li>
+<li>使用小光圈（约f/11）获得足够景深</li>
+<li>测光用矩阵测光</li>
+<li>对焦用单次对焦和单点对焦，对焦在中景位置</li>
+<li>白平衡用自动</li>
+<li>构图后移动焦点到中景位置，观察屏幕曝光情况，调节曝光补偿</li>
+<li>拍摄带天空的风光时，可使用方形渐变滤镜控制天空与地面亮度对比</li>
+</ul>
+
+<h3>6. 剪影作品拍摄<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=77&t=637" target="_blank" rel="noopener" title="跳到视频 10:37">10:37–12:38</a></h3><p>讲解弱光环境下剪影作品的拍摄技巧：</p>
+<ul>
+<li>光圈优先模式</li>
+<li>感光度适当提高（ISO 300-400）以防止快门太慢导致人物模糊</li>
+<li>使用小光圈（f/8-11）</li>
+<li>白平衡可改为荧光灯白平衡，控制偏紫色调</li>
+<li>对焦用单次对焦和单点对焦，对焦在景象边缘</li>
+<li>通过降低曝光补偿实现剪影效果</li>
+</ul>
+
+<h3>7. 慢门风光拍摄<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=77&t=758" target="_blank" rel="noopener" title="跳到视频 12:38">12:38–13:56</a></h3><p>讲解慢门风光拍摄技巧：</p>
+<ul>
+<li>使用低感光度（ISO 100左右）</li>
+<li>使用小光圈（如f/16）</li>
+<li>测光用矩阵测光</li>
+<li>白平衡用自动</li>
+<li>对焦用单次对焦和单点对焦，对焦在中景位置</li>
+<li>对焦锁死后切换至手动对焦模式</li>
+<li>装上ND减光镜，快门速度会变为几十秒</li>
+<li>拍摄后检查亮度，必要时调整曝光补偿重拍</li>
+</ul>
+
+<h3>8. 运动场景抓拍<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=77&t=868" target="_blank" rel="noopener" title="跳到视频 14:28">14:28–15:46</a></h3><p>讲解运动场景抓拍技巧：</p>
+<ul>
+<li>使用<strong>快门优先模式</strong>，配合感光度自动（ISO A）</li>
+<li>白平衡用自动</li>
+<li>释放模式选高速连拍</li>
+<li>对焦模式选连续对焦，并选择自动区域AF或宽区域AF</li>
+<li>半按快门追踪运动主体，在合适构图时按下快门不动，多拍精选</li>
+</ul>
+
+<div class="box a7c2"><h3>📷 换成 A7C II 怎么做</h3><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>课程里的概念/操作</th>
+<th>A7C II 上的名称</th>
+<th>怎么操作</th>
+<th>说明（出处）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Av 光圈优先（佳能 Av／尼康 A）</td>
+<td>A（光圈优先）</td>
+<td>模式旋钮转 A；前转盘或后转盘L 调光圈</td>
+<td>快门自动；快门数字闪烁=无法正确曝光（0302B_aperture_priority.html）</td>
+</tr>
+<tr>
+<td>Tv 快门优先（佳能 Tv／尼康 S）</td>
+<td>S（快门优先）</td>
+<td>模式旋钮转 S；前转盘或后转盘L 调快门</td>
+<td>光圈自动；光圈值闪烁=无法正确曝光（0302_shutter_priority.html）</td>
+</tr>
+<tr>
+<td>ISO 感光度（课程称“相对感光度”）</td>
+<td>ISO</td>
+<td>按控制拨轮右（ISO）选值；或 MENU →（曝光/颜色）→［曝光］→［ISO］</td>
+<td>出厂 ISO AUTO；照片 100～51200，扩展 50～204800（0408C_iso.html；231h_specifications_ilc2360.html）</td>
+</tr>
+<tr>
+<td>曝光补偿</td>
+<td>曝光补偿</td>
+<td>转后转盘R；或 MENU →（曝光/颜色）→［曝光补偿］→［曝光补偿］</td>
+<td>±5.0 EV；M 模式仅 ISO AUTO 时有效；智能自动/场景选择不可用（0406B_exposure_compensation.html）</td>
+</tr>
+<tr>
+<td>评价测光／矩阵测光</td>
+<td>多重</td>
+<td>MENU →（曝光/颜色）→［测光］→［测光模式］→［多重］</td>
+<td>出厂即多重；1200 区域；人脸优先可开关（0406_metering_mode.html；231h_specifications_ilc2360.html）</td>
+</tr>
+<tr>
+<td>点测光</td>
+<td>点测光（点测光: 标准）</td>
+<td>同上 →［点测光］→［点测光: 标准］；位置用 MENU →（曝光/颜色）→［测光］→［点测光点］设［中间］或［对焦点联动］</td>
+<td>联动只对点/扩展点类对焦区域有效（0406_metering_mode.html；0406L_spotmetering_link_focus_point.html）</td>
+</tr>
+<tr>
+<td>单次自动对焦 ONE SHOT／AF-S</td>
+<td>单次AF（AF-S）</td>
+<td>MENU →（对焦）→［AF/MF］→［对焦模式］→［单次AF］</td>
+<td>合焦锁定（0405C_focus_mode.html）</td>
+</tr>
+<tr>
+<td>人工智能伺服 AI SERVO／AF-C</td>
+<td>连续AF（AF-C）</td>
+<td>同上 →［连续AF］</td>
+<td>“跟踪”类对焦区域只在连续AF有效（0405C_focus_mode.html；0405C_autofocus_area.html）</td>
+</tr>
+<tr>
+<td>对焦点选择</td>
+<td>对焦区域 + 对焦标准键</td>
+<td>对焦区域选［点: L/M/S］［扩展点］［区］等；按控制拨轮中央（对焦标准）后上/下/左/右移框，（删除）键回中央；也可触摸拖动</td>
+<td>出厂对焦区域为广域（0405C_autofocus_area.html；0405L_focus_standard.html）</td>
+</tr>
+<tr>
+<td>照片风格 Picture Style／优化校准 Picture Control</td>
+<td>创意外观</td>
+<td>MENU →（曝光/颜色）→［颜色/色调］→［创意外观］；也在 Fn 菜单里</td>
+<td>ST/PT/NT/VV/VV2/FL/IN/SH/BW/SE，可调对比度等 8 项（0411B_creative_look.html；201h_fn_menu_setting.html）</td>
+</tr>
+<tr>
+<td>驱动模式（单拍/连拍/自拍）</td>
+<td>拍摄模式</td>
+<td>按控制拨轮左</td>
+<td>索尼“拍摄模式”=驱动模式（0407C_drive_mode.html）</td>
+</tr>
+<tr>
+<td>连拍高速/低速</td>
+<td>连拍：Hi+／Hi／Mid／Lo</td>
+<td>拍摄模式→［连拍］→ 控制拨轮左右选</td>
+<td>约 10/8.0/6.0/3.0 张/秒（231h_specifications_ilc2360.html）</td>
+</tr>
+<tr>
+<td>人脸/眼部对焦</td>
+<td>AF中的被摄体识别（识别目标：人）</td>
+<td>出厂已开；MENU →（对焦）→［被摄体识别］</td>
+<td>（211h_subject_recognition_af.html；0301B_shooting_still_images.html）</td>
+</tr>
+<tr>
+<td>画质 L/M/S、精细/标准</td>
+<td>JPEG影像尺寸 ／ JPEG影像质量</td>
+<td>MENU →（拍摄）→［影像质量/记录］</td>
+<td>L=33M（3:2）（0404M_jpeg_image_size.html；0404M_jpeg_image_quality.html）</td>
+</tr>
+<tr>
+<td>自动 ISO 的最低快门速度</td>
+<td>ISO AUTO最小速度</td>
+<td>MENU →（曝光/颜色）→［曝光］→［ISO AUTO最小速度］</td>
+<td>仅 P、A 有效（0408H_ISO_auto_minimun_SS.html）</td>
+</tr>
+</tbody>
+</table></div>
+<p>（表中名称与路径摘自《A7C II 操作手册》，均与索尼官方帮助指南逐条核对；本集未列出的操作见手册。）</p>
+</div>
+<div class="box errata"><h3>🕰️ 时代差异与勘误</h3><ul>
+<li>取景：课程里的单反用光学取景器（反光镜＋五棱镜/五面镜）→ A7C II 是电子取景器（1.0 cm，约 236 万点），取景画面就是传感器的实时画面；［实时取景显示］为「设置效果开」时可直接预览曝光和白平衡效果。</li>
+<li>感光度：课程年代的单反高 ISO 噪点明显 → A7C II 照片 ISO 100～51200（扩展 50～204800），高 ISO 画质好得多，但「光线允许就用低 ISO」的原则不变。</li>
+<li>肩屏与专用键：单反顶部有肩屏和 ISO/WB/驱动等专用键 → A7C II 没有肩屏；ISO 在控制拨轮右、拍摄模式（单拍/连拍/自拍）在控制拨轮左、白平衡模式出厂在 C1，其余靠 Fn 菜单和自定义键。</li>
+<li>测光表：佳能取景器测光标尺左负右正、尼康相反 → A7C II 在 M 档显示 M.M.（手动测光）指示，ISO 为 ISO AUTO 时不显示。</li>
+<li>对焦系统：单反用独立的相位对焦模块，对焦点数量有限 → A7C II 用相位检测/对比度检测，支持被摄体识别（人、动物/鸟类、昆虫、汽车/火车、飞机）和跟踪。</li>
+<li>检查曝光：单反主要靠拍后回放检查 → A7C II 拍摄前就能看柱状图、斑马线等辅助显示；回放时按 DISP 看柱状图和过曝/欠曝警告。</li>
+</ul>
+</div>
+<div class="box terms"><h3>🔖 本集术语</h3><ul>
+<li><strong>光圈优先模式</strong>：相机自动调整快门速度，用户只需控制光圈值的拍摄模式</li>
+<li><strong>快门优先模式</strong>：相机自动调整光圈值，用户只需控制快门速度的拍摄模式</li>
+<li><strong>矩阵测光</strong>：相机将画面分成多个区域分别测光后综合计算得出曝光值的测光模式</li>
+<li><strong>点测光</strong>：仅对画面中很小一个区域进行测光的模式</li>
+<li><strong>单次对焦</strong>：半按快门时对焦一次，焦点锁定后不再改变的自动对焦模式</li>
+<li><strong>连续对焦</strong>：半按快门期间持续追踪并调整焦点的自动对焦模式</li>
+<li><strong>优化校准</strong>：相机内置的图像风格预设，影响照片的色彩、对比度和锐度</li>
+<li><strong>曝光补偿</strong>：在相机自动测光基础上手动增加或减少曝光量的功能</li>
+<li><strong>ND减光镜</strong>：中性密度滤镜，用于减少进入镜头的光量，允许使用更慢的快门速度</li>
+</ul>
+</div>
+<p class="ep-nav"><a href="#top">↑ 回到本页顶部</a></p></section>
+<section id="p78" class="episode" aria-labelledby="p78-t"><h2 id="p78-t"><span class="ep-no">P78</span> 佳能5D4口袋摄影课-I 外观控件</h2>
+<p class="ep-meta">原标题：079佳能5D4口袋摄影课-I 外观控件 · 时长 14:26 · <a href="https://www.bilibili.com/video/BV1Vt411E7nT?p=78" target="_blank" rel="noopener">▶ 在 B 站观看本集</a></p>
+<blockquote class="oneliner">
+<p><strong>一句话</strong>：本集详解5D4机身与镜头的握持、安装、按键布局及常用滤镜选择。</p>
+</blockquote>
+<nav class="outline" aria-label="本集大纲"><p class="outline-t">本集大纲</p><ol>
+<li>课程定位与手持技巧<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=78&t=49" target="_blank" rel="noopener" title="跳到视频 00:49">00:49</a></li>
+<li>镜头安装方法<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=78&t=130" target="_blank" rel="noopener" title="跳到视频 02:10">02:10</a></li>
+<li>镜头卡口与规格解读<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=78&t=173" target="_blank" rel="noopener" title="跳到视频 02:53">02:53</a></li>
+<li>镜头锁扣与滤镜选择<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=78&t=291" target="_blank" rel="noopener" title="跳到视频 04:51">04:51</a></li>
+<li>常规滤镜种类与作用<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=78&t=436" target="_blank" rel="noopener" title="跳到视频 07:16">07:16</a></li>
+<li>机身前脸与快门键<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=78&t=480" target="_blank" rel="noopener" title="跳到视频 08:00">08:00</a></li>
+<li>机身顶部与曝光模式<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=78&t=521" target="_blank" rel="noopener" title="跳到视频 08:41">08:41</a></li>
+<li>顶部右侧快捷按钮<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=78&t=590" target="_blank" rel="noopener" title="跳到视频 09:50">09:50</a></li>
+<li>机身背部与转盘功能<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=78&t=671" target="_blank" rel="noopener" title="跳到视频 11:11">11:11</a></li>
+<li>机身侧面与底部接口<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=78&t=792" target="_blank" rel="noopener" title="跳到视频 13:12">13:12</a></li>
+</ol></nav>
+
+<h3>1. 课程定位与手持技巧<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=78&t=49" target="_blank" rel="noopener" title="跳到视频 00:49">00:49–01:25</a></h3><p><strong>本集定位</strong>：5D4定位为<strong>民用高端全画幅单反</strong>，本系列课程侧重<strong>照片拍摄</strong>角度。
+<strong>手持技巧</strong>：</p>
+<ul>
+<li>左手托住机身重心，右手握持手柄。</li>
+<li>食指控制快门，大拇指控制背屏辅转盘。</li>
+<li><strong>重型长焦镜头</strong>：左手需握持在镜头上，防止镜头拉坏机身卡口。</li>
+</ul>
+
+<h3>2. 镜头安装方法<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=78&t=130" target="_blank" rel="noopener" title="跳到视频 02:10">02:10–02:53</a></h3><ul>
+<li><strong>安装</strong>：银色卡口环，<strong>红点对红点</strong>耦合，转动一小半圈。</li>
+<li><strong>拆卸</strong>：卡口朝下操作，防止灰尘进入相机。</li>
+</ul>
+
+<h3>3. 镜头卡口与规格解读<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=78&t=173" target="_blank" rel="noopener" title="跳到视频 02:53">02:53–04:51</a></h3><ul>
+<li><strong>卡口类型</strong>：
+<ul>
+<li><strong>EF</strong>：佳能全画幅单反卡口（5D4专用）。</li>
+<li>EFS：佳能半画幅单反卡口。</li>
+<li>EOSM：佳能半画幅微单卡口。</li>
+<li>RF：佳能全画幅微单卡口。</li>
+</ul>
+</li>
+<li><strong>镜头标识</strong>：
+<ul>
+<li><strong>24-105mm</strong>：焦距范围，广角到中焦。</li>
+<li><strong>F4</strong>：恒定光圈。</li>
+<li><strong>L</strong>：红圈镜头，专业级。</li>
+<li><strong>IS</strong>：防抖系统。</li>
+<li><strong>USM</strong>：环形马达，宁静快速对焦。</li>
+<li><strong>77mm</strong>：镜头前端直径。</li>
+</ul>
+</li>
+<li><strong>镜头锁</strong>：二代镜头有锁扣，防止镜头滑出。</li>
+</ul>
+
+<h3>4. 镜头锁扣与滤镜选择<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=78&t=291" target="_blank" rel="noopener" title="跳到视频 04:51">04:51–07:16</a></h3><ul>
+<li><strong>滤镜选择</strong>：按镜头前端77mm口径选择。</li>
+<li><strong>推荐配件</strong>：卡色金刚狼磁吸系列圆镜。</li>
+<li><strong>磁吸滤镜用法</strong>：装上后调手动对焦，直接吸附减光镜（慢门）或渐变镜（平衡光比）。</li>
+<li><strong>常规滤镜</strong>：
+<ul>
+<li><strong>MCUV</strong>：保护镜头。</li>
+<li><strong>CPL</strong>：偏振镜，滤反光，让天空更蓝。</li>
+<li><strong>ND</strong>：减光镜，慢门拍摄。</li>
+<li><strong>GND</strong>：渐变镜，平衡天空与地面光比。</li>
+</ul>
+</li>
+</ul>
+
+<h3>5. 机身前脸与快门键<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=78&t=480" target="_blank" rel="noopener" title="跳到视频 08:00">08:00–08:41</a></h3><ul>
+<li><strong>前脸</strong>：卡口环、反光镜。</li>
+<li><strong>快门键</strong>：释放快门、开启自动对焦、唤醒休眠。</li>
+<li><strong>卡口锁</strong>：按下可拧下镜头。</li>
+<li><strong>景深预览按钮</strong>：缩小光圈后查看实际景深。</li>
+</ul>
+
+<h3>6. 机身顶部与曝光模式<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=78&t=521" target="_blank" rel="noopener" title="跳到视频 08:41">08:41–09:50</a></h3><ul>
+<li><strong>热靴</strong>：装载外置闪光灯、麦克风。</li>
+<li><strong>电源按键</strong>。</li>
+<li><strong>曝光模式</strong>：<strong>M</strong>（手动）、<strong>AV</strong>（光圈优先）、<strong>TV</strong>（快门优先）、<strong>P</strong>（程序）、<strong>B</strong>（B门）。需按下中间锁扣再旋转选择。</li>
+</ul>
+
+<h3>7. 顶部右侧快捷按钮<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=78&t=590" target="_blank" rel="noopener" title="跳到视频 09:50">09:50–11:11</a></h3><ul>
+<li><strong>肩屏</strong>。</li>
+<li><strong>监屏灯光</strong>：夜间弱光拍摄时开启。</li>
+<li><strong>三个快捷按钮</strong>：
+<ul>
+<li>按下后转动<strong>辅转盘</strong>：调节前面的功能（如白平衡WB）。</li>
+<li>按下后松开转动<strong>主转盘</strong>：调节后面的功能（如测光模式）。</li>
+<li>功能包括：驱动模式、对焦模式、闪光补偿、感光度调节。</li>
+</ul>
+</li>
+</ul>
+
+<h3>8. 机身背部与转盘功能<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=78&t=671" target="_blank" rel="noopener" title="跳到视频 11:11">11:11–13:12</a></h3><ul>
+<li><strong>取景器、主屏幕、Menu、Set、播放</strong>。</li>
+<li><strong>辅转盘</strong>：调节白平衡、测光模式等。</li>
+<li><strong>主转盘</strong>：手动模式调光圈，优先模式调曝光补偿。</li>
+<li><strong>Lock键</strong>：锁定主转盘，防止误触。</li>
+<li><strong>Q键</strong>：屏幕调控。</li>
+<li><strong>AF键</strong>：对焦启动。</li>
+<li><strong>自定义键</strong>：可定义Start/Stop、录像、屏幕开关等功能。</li>
+<li><strong>ISO/曝光锁定/焦点选择键</strong>。</li>
+</ul>
+
+<h3>9. 机身侧面与底部接口<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=78&t=792" target="_blank" rel="noopener" title="跳到视频 13:12">13:12–14:26</a></h3><ul>
+<li><strong>侧面</strong>：存储卡槽、快门线、麦克风、耳机、USB、高清线接口。</li>
+<li><strong>底部</strong>：<strong>4分之1螺口</strong>（脚架）。</li>
+<li><strong>电池仓</strong>：超过半个月不使用，请取出电池保存。</li>
+</ul>
+<p><strong>本集术语</strong></p>
+<ul>
+<li><strong>EF卡口</strong>：佳能全画幅单反镜头卡口。</li>
+<li><strong>EFS卡口</strong>：佳能半画幅单反镜头卡口。</li>
+<li><strong>RF卡口</strong>：佳能全画幅微单镜头卡口。</li>
+<li><strong>恒定光圈</strong>：镜头在变焦范围内光圈值保持不变。</li>
+<li><strong>磁吸圆镜</strong>：利用磁力吸附的圆形滤镜。</li>
+<li><strong>景深预览</strong>：通过按钮缩小光圈以查看实际景深范围。</li>
+<li><strong>热靴</strong>：相机顶部用于安装外接闪光灯或麦克风的接口。</li>
+<li><strong>曝光模式</strong>：相机控制曝光组合的方式（如M、AV、TV等）。</li>
+</ul>
+
+<div class="box a7c2"><h3>📷 换成 A7C II 怎么做</h3><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>课程里的概念/操作</th>
+<th>A7C II 上的名称</th>
+<th>怎么操作</th>
+<th>说明（出处）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M 手动曝光</td>
+<td>M（手动曝光）</td>
+<td>模式旋钮转 M；前转盘=光圈，后转盘L=快门</td>
+<td>看 M.M. 指示；ISO 可设 ISO AUTO（0302C_manual_exposure.html）</td>
+</tr>
+<tr>
+<td>B 门</td>
+<td>BULB（在 M 模式内）</td>
+<td>模式旋钮 M → 后转盘L 顺时针转到显示［BULB］→ 按住快门；或用［BULB定时器设置］定时 2～900 秒</td>
+<td>模式旋钮没有 B 档；电子快门/静音模式/连拍/间隔拍摄时不能 BULB（0302C_bulb.html；211h_bulb_timer.html）</td>
+</tr>
+<tr>
+<td>ISO 感光度（课程称“相对感光度”）</td>
+<td>ISO</td>
+<td>按控制拨轮右（ISO）选值；或 MENU →（曝光/颜色）→［曝光］→［ISO］</td>
+<td>出厂 ISO AUTO；照片 100～51200，扩展 50～204800（0408C_iso.html；231h_specifications_ilc2360.html）</td>
+</tr>
+<tr>
+<td>曝光补偿</td>
+<td>曝光补偿</td>
+<td>转后转盘R；或 MENU →（曝光/颜色）→［曝光补偿］→［曝光补偿］</td>
+<td>±5.0 EV；M 模式仅 ISO AUTO 时有效；智能自动/场景选择不可用（0406B_exposure_compensation.html）</td>
+</tr>
+<tr>
+<td>AE 锁（佳能 ✱ 键／尼康 AE-L）</td>
+<td>AE锁定保持 ／ AE锁定切换</td>
+<td><strong>无专用键</strong>：MENU →（设置）→［操作自定义］→［〈静〉自定键/转盘设置］→ 选键 → 分配</td>
+<td>也可用［快门AEL］让半按锁曝光；锁定图标为“✱”（0406_ae_lock.html；0406_shutter_button_ael.html）</td>
+</tr>
+<tr>
+<td>评价测光／矩阵测光</td>
+<td>多重</td>
+<td>MENU →（曝光/颜色）→［测光］→［测光模式］→［多重］</td>
+<td>出厂即多重；1200 区域；人脸优先可开关（0406_metering_mode.html；231h_specifications_ilc2360.html）</td>
+</tr>
+<tr>
+<td>景深预览</td>
+<td>光圈预览</td>
+<td><strong>无专用键</strong>：给自定义键分配［光圈预览］，按住预览</td>
+<td>另有［拍摄结果预览］（0414_aperture_preview.html；0414_shooting_result_preview.html）</td>
+</tr>
+<tr>
+<td>驱动模式（单拍/连拍/自拍）</td>
+<td>拍摄模式</td>
+<td>按控制拨轮左</td>
+<td>索尼“拍摄模式”=驱动模式（0407C_drive_mode.html）</td>
+</tr>
+<tr>
+<td>自拍 2 秒/10 秒</td>
+<td>自拍定时(单张)</td>
+<td>拍摄模式→［自拍定时(单张)］→ 10/5/2 秒</td>
+<td>2 秒用于减少按快门抖动（0407_drivemode_selftimer.html）</td>
+</tr>
+<tr>
+<td>速控屏 Q 键（佳能）／i 键（尼康）</td>
+<td>Fn（功能）按钮</td>
+<td>按 Fn，控制拨轮选项目，转前转盘改值</td>
+<td>照片、视频各 12 项（0413_using_function_menu.html；201h_fn_menu_setting.html）</td>
+</tr>
+<tr>
+<td>快门线/遥控器</td>
+<td>Bluetooth遥控 ／ 智能手机 ／ 电脑遥控</td>
+<td>见 6.7</td>
+<td>（0706_bluetooth_remote.html；202h_register_smartphone.html；0903_pc_remote_function.html）</td>
+</tr>
+<tr>
+<td>屈光度调节</td>
+<td>屈光度调节旋钮</td>
+<td>取景器右侧小拨轮</td>
+<td>−4.0～+3.0 m⁻¹（231h_names_of_parts_ilc2360_ilc2370_back.html；231h_specifications_ilc2360.html）</td>
+</tr>
+</tbody>
+</table></div>
+<p>（表中名称与路径摘自《A7C II 操作手册》，均与索尼官方帮助指南逐条核对；本集未列出的操作见手册。）</p>
+</div>
+<div class="box errata"><h3>🕰️ 时代差异与勘误</h3><ul>
+<li>反光镜：单反按快门时反光镜抬起、回落会带来震动，要用反光镜预升等办法 → A7C II 没有反光镜；三脚架上防抖动可用 2 秒自拍、Bluetooth 遥控器或手机遥控，并关闭 SteadyShot。</li>
+<li>肩屏与专用键：单反顶部有肩屏和 ISO/WB/驱动等专用键 → A7C II 没有肩屏；ISO 在控制拨轮右、拍摄模式（单拍/连拍/自拍）在控制拨轮左、白平衡模式出厂在 C1，其余靠 Fn 菜单和自定义键。</li>
+<li>AE 锁与景深预览：单反有 AE 锁键（佳能 ✱、尼康 AE-L）和景深预览键 → A7C II 没有专用键，要把［AE锁定保持］或［光圈预览］分配给自定义键。</li>
+<li>测光表：佳能取景器测光标尺左负右正、尼康相反 → A7C II 在 M 档显示 M.M.（手动测光）指示，ISO 为 ISO AUTO 时不显示。</li>
+<li>卡口：课程用佳能 EF/EF-S、尼康 F 卡口镜头 → A7C II 是 Sony E 卡口。</li>
+<li>检查曝光：单反主要靠拍后回放检查 → A7C II 拍摄前就能看柱状图、斑马线等辅助显示；回放时按 DISP 看柱状图和过曝/欠曝警告。</li>
+</ul>
+</div>
+<div class="box terms"><h3>🔖 本集术语</h3><ul>
+<li>无</li>
+</ul>
+</div>
+<p class="ep-nav"><a href="#top">↑ 回到本页顶部</a></p></section>
+<section id="p79" class="episode" aria-labelledby="p79-t"><h2 id="p79-t"><span class="ep-no">P79</span> 佳能5D4口袋摄影课-II 曝光控制</h2>
+<p class="ep-meta">原标题：080佳能5D4口袋摄影课-II 曝光控制 · 时长 18:06 · <a href="https://www.bilibili.com/video/BV1Vt411E7nT?p=79" target="_blank" rel="noopener">▶ 在 B 站观看本集</a></p>
+<blockquote class="oneliner">
+<p><strong>一句话</strong>：通过手动模式和光圈优先模式，掌握佳能5D4的曝光三要素(感光度、光圈、快门)调节原则和效果。</p>
+</blockquote>
+<nav class="outline" aria-label="本集大纲"><p class="outline-t">本集大纲</p><ol>
+<li>手动曝光模式介绍<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=79&t=50" target="_blank" rel="noopener" title="跳到视频 00:50">00:50</a></li>
+<li>5D4相机上的重要控件<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=79&t=82" target="_blank" rel="noopener" title="跳到视频 01:22">01:22</a></li>
+<li>手动模式下的曝光控制步骤<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=79&t=192" target="_blank" rel="noopener" title="跳到视频 03:12">03:12</a></li>
+<li>感光度(ISO)的调节与使用<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=79&t=310" target="_blank" rel="noopener" title="跳到视频 05:10">05:10</a></li>
+<li>光圈的选择原则<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=79&t=377" target="_blank" rel="noopener" title="跳到视频 06:17">06:17</a></li>
+<li>快门调节与测光标尺使用<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=79&t=447" target="_blank" rel="noopener" title="跳到视频 07:27">07:27</a></li>
+<li>曝光三要素对画面效果的影响<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=79&t=586" target="_blank" rel="noopener" title="跳到视频 09:46">09:46</a></li>
+<li>光圈与景深的关系<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=79&t=625" target="_blank" rel="noopener" title="跳到视频 10:25">10:25</a></li>
+<li>快门与运动效果的关系<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=79&t=666" target="_blank" rel="noopener" title="跳到视频 11:06">11:06</a></li>
+<li>感光度与画面噪点的关系<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=79&t=700" target="_blank" rel="noopener" title="跳到视频 11:40">11:40</a></li>
+<li>光圈大小的判断标准<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=79&t=743" target="_blank" rel="noopener" title="跳到视频 12:23">12:23</a></li>
+<li>光圈优先模式(AV模式)的使用<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=79&t=885" target="_blank" rel="noopener" title="跳到视频 14:45">14:45</a></li>
+</ol></nav>
+
+<h3>1. 手动曝光模式介绍<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=79&t=50" target="_blank" rel="noopener" title="跳到视频 00:50">00:50–01:22</a></h3><p>本集介绍佳能5D4的曝光控制技巧，首先通过手动曝光模式(M模式)进行讲解。需要将相机曝光模式转盘调校到手动模式M模式。打开电源后，如果相机屏幕显示不同，可按下info键切换到与老师相同的显示状态。</p>
+
+<h3>2. 5D4相机上的重要控件<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=79&t=82" target="_blank" rel="noopener" title="跳到视频 01:22">01:22–03:12</a></h3><p>佳能5D4有两个最重要的功能硬键和两个转盘。快门键后方的主转盘控制快门速度，转动时可以看到快门速度变化；屏幕右边的辅转盘控制光圈值，转动时光圈值发生变化。在转动这两个转盘时，可以通过屏幕、取景器和液晶屏看到光圈和快门的变化。注意在主屏幕上快门会显示为&quot;多少分之1&quot;(如320分之1)，而在取景器和液晶屏上则只显示为320。取景器和液晶屏中显示的常数意味着快门为它的倒数单位，秒。取景器中的光圈显示不再有大写的F标识。前面是快门，后面是光圈，非常非常的好认。</p>
+
+<h3>3. 手动模式下的曝光控制步骤<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=79&t=192" target="_blank" rel="noopener" title="跳到视频 03:12">03:12–05:10</a></h3><p>手动曝光控制首先需要调校感光度(ISO)。ISO是相机的感光度，表示感光元件对光线的敏感程度。ISO数值越高，满足准确曝光需要的光线越少；ISO数值越低，所需光线越多。老摄影师称ISO为&quot;底片的速度&quot;，严格来说应称为&quot;底片的加速度&quot;，因为ISO越高，快门可以用的越快。调节ISO的方法是在液晶屏上方的ISO按键按下后松开，然后转动主转盘更改ISO值。经验参数：光线强的晴天使用100的ISO；阴影处使用400的ISO；阴天使用200-400的ISO；晨昏使用400-800的ISO；照明条件好的室内使用800-1600的ISO；照明条件差的居家室内使用1600-3200的ISO。如果镜头光圈很大(如1.4)，在居家环境中仍可使用400的ISO。当前环境是照明条件非常良好的录影摄影棚，有非常强烈的持续光源，所以ISO会调校到400到800之间。</p>
+
+<h3>4. 感光度(ISO)的调节与使用<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=79&t=310" target="_blank" rel="noopener" title="跳到视频 05:10">05:10–07:27</a></h3><p>曝光三要素(感光度、光圈、快门)有先后顺序。手动曝光控制时，首先根据环境亮度设定感光度，然后调节光圈，最后调节快门。调节原则：拍摄大场景(城市、风景、海边、沙漠、森林等)使用小光圈(光圈数值大，如f/13)；拍摄小场景(人、静物)使用大光圈(光圈数值小，如f/4)。拍摄大的场景我们用f/10左右的小光圈。这里所说的人指的是个体的人或者是两个人，都属于小的范围，我们使用大的光圈，这里使用f/4的光圈。设定完感光度，设定完光圈，最后来调节快门，转动快门的时候，注意观察在相机主屏下方光圈快门的显示下有一个-3到正3的标识。同样的标识也会在取景器中可见。调节快门，让测光标尺下方游离光标的点到达中间零位置，获得准确曝光；让标尺处于正一边，照片曝光过度；处于负一边，照片曝光不足。简单来说，就是通过调节快门让测光标志归零，实现合适亮度。调节方法：当标尺在右边时，往右转转盘回到中间；当标尺在左边时，往左转转盘回到中间。</p>
+
+<h3>5. 光圈的选择原则<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=79&t=447" target="_blank" rel="noopener" title="跳到视频 07:27">07:27–09:16</a></h3><p>利用ISO、光圈和快门的调节，让测光标志归零，获得准确曝光。调节顺序为先定感光度，再定光圈，最后通过调节快门等测光标尺归零。感光度调节根据环境亮度确定，环境越亮使用的感光度越低，环境越暗手持拍摄需使用高感光度确保快门速度足够，避免手抖导致照片模糊。强光下不使用高感光度的原因是高感光度会导致画面噪点增加。对于5D4来说，感光度超过2000后噪点会变得非常明显。高感光度是不得已而为之的选择。PPT上显示的内容：左上角的100的感光度，画面细腻，右下角的12800的感光度，画面粗糙。如果拍摄静止物体，可通过三脚架固定相机，使用低感光度进行长时间曝光；拍摄运动物体时，即使固定相机，物体本身的运动也会导致主体模糊。</p>
+
+<h3>6. 快门调节与测光标尺使用<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=79&t=556" target="_blank" rel="noopener" title="跳到视频 09:16">09:16–10:25</a></h3><p>曝光三要素在画面效果中的作用：光圈大小与背景虚化程度有关，背景虚化在摄影中称为景深。景深是指在镜头的焦平面上清晰的范围。景深大意味着从近处到远处都是清晰的；景深小意味着清晰范围很窄，只有焦点前后清晰，背景模糊。光圈数值越小，光圈开口越大，光圈越小背景越清晰，光圈越大背景越模糊，即光圈大景深小，光圈小景深大。拍摄大场景风景使用小光圈是为了获得从前景到远景的整体清晰；拍摄小场景使用大光圈是为了实现小景深，简洁的构图。这也解释了为什么拍摄小的场景拍人拍静物，我们用大的光圈，目的是为了实现小的景深；为什么拍大的场景的风景，使用小的光圈，目的是因为大场景的风景需要从前景到中景到远景，整体的清晰。</p>
+
+<h3>7. 曝光三要素对画面效果的影响<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=79&t=625" target="_blank" rel="noopener" title="跳到视频 10:25">10:25–11:40</a></h3><p>曝光三要素对画面效果的影响：光圈大小与背景虚化程度的关系(景深)；快门与画面运动效果的关系，快门越快运动物体越清晰，快门越慢运动物体越模糊。对于5D4相机，手持摄影的安全快门是1/30秒，比1/30秒更慢的手持拍摄很可能因抖动导致画面模糊。感光度与画面噪点的关系：教材中的感光度和噪点关系图很古老(10年前的)，但对于5D4相机，即使ISO2000噪点也不明显，但超过2000后噪点开始几何上升。</p>
+
+<h3>8. 光圈与景深的关系<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=79&t=700" target="_blank" rel="noopener" title="跳到视频 11:40">11:40–12:23</a></h3><p>光圈大小的判断标准：光圈值小于等于4为大光圈，光圈值大于等于8为小光圈。拍摄大的风景使用f/8、f/11、f/16的小光圈；拍摄人像、静物一般使用f/4，甚至是f/2.8、f/1.8的大光圈。手动曝光控制回顾：根据场景亮度确定感光度(如居家室内光线弱，设定ISO为3200)；拍摄近处桌面上的静物时，将光圈开到最大；对准静物构图，调节快门让测光标尺到正中间；按下快门获得准确曝光。光圈和景深的关系表现为反比关系：大光圈小景深，小光圈大景深。</p>
+
+<h3>9. 快门与运动效果的关系<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=79&t=743" target="_blank" rel="noopener" title="跳到视频 12:23">12:23–14:08</a></h3><p>景深不仅受光圈影响，还受焦距影响：焦距越长，背景越虚化，景深越小；焦距越短，景深越大。拍摄距离的远近也会影响景深：靠得越近，背景越虚化；离得越远，景深越大。手动曝光模式下，可利用大光圈、长一点焦距、近一点的距离拍摄小景深照片。拍摄同一被摄物体使用不同的焦距所表现出来的景深变化：焦距越长，背景越虚化，景深越小；焦距越短，景深越大。拍摄距离的远近：靠得越近，背景越虚化；离得越远，景深越大。现在就用手动曝光模式尝试为桌上的小静物利用大的光圈、长一点的焦距、近一点的距离来拍摄这张属于你的小景深照片，进行创作吧。</p>
+
+<h3>10. 感光度与画面噪点的关系<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=79&t=848" target="_blank" rel="noopener" title="跳到视频 14:08">14:08–14:45</a></h3><p>在日常拍摄中，多数情况下使用光圈优先模式(AV模式)而非手动模式。在AV模式下，感光度仍根据环境亮度调校，不同的是在AV模式下可以控制光圈，而相机自动计算快门值。相机计算快门的标准也是让测光标尺到正中间，这替代了手动调节快门的过程，提高了拍摄效率。在光圈优先模式下，主转盘变成了光圈的调节选项(手动模式中辅转盘调节光圈)，拍摄小场景用最大光圈，拍摄大场景用小光圈，相机会自动算出快门以达到准确曝光标准。</p>
+
+<h3>11. 光圈大小的判断标准<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=79&t=885" target="_blank" rel="noopener" title="跳到视频 14:45">14:45–16:00</a></h3><p>光圈优先模式下，拍摄风景可使用f/11、f/16的小光圈保证大景深；拍摄人像使用f/1.8、f/2.8的大光圈虚化背景，突出人物。在光圈优先情况下，主转盘控制光圈，辅转盘控制相机的曝光补偿。曝光补偿是对相机测光表的重新调校，不做曝光补偿时相机调快门的标准是让测光标尺到0；调节正曝光补偿(如+1)时，相机算快门的标准是让测光标尺到+1，增加一档曝光，让画面更亮；减少曝光补偿可以让画面更暗。不做曝光补偿的情况下，照相机调快门，帮你算快门的标准是让测光标尺到0。我们调节了正的曝光补偿，比方说我们把曝光补偿调到正一，照相机帮我们算快门的标准是让当快门能够符合测光标准到正一时，增加一档的曝光，让画面更亮一些。通过减少曝光补偿，可以让画面更暗。通过增加曝光补偿，可以让画面在原有的基础上更亮。</p>
+
+<h3>12. 光圈优先模式(AV模式)的使用<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=79&t=960" target="_blank" rel="noopener" title="跳到视频 16:00">16:00–17:44</a></h3><p>进行曝光补偿调节时，如果发现转不动辅转盘，可能有两个问题：一是按下了辅转盘下方的lock按键锁住了转盘；二是相机进入了休眠状态，需先按一下快门唤醒相机再转动转盘。纠正光圈优先模式可能出现的不标准曝光问题。以上是对佳能5D4这款相机曝光控制的解释，接下来将进入佳能5D4关键控件的课程。</p>
+
+<div class="box a7c2"><h3>📷 换成 A7C II 怎么做</h3><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>课程里的概念/操作</th>
+<th>A7C II 上的名称</th>
+<th>怎么操作</th>
+<th>说明（出处）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Av 光圈优先（佳能 Av／尼康 A）</td>
+<td>A（光圈优先）</td>
+<td>模式旋钮转 A；前转盘或后转盘L 调光圈</td>
+<td>快门自动；快门数字闪烁=无法正确曝光（0302B_aperture_priority.html）</td>
+</tr>
+<tr>
+<td>Tv 快门优先（佳能 Tv／尼康 S）</td>
+<td>S（快门优先）</td>
+<td>模式旋钮转 S；前转盘或后转盘L 调快门</td>
+<td>光圈自动；光圈值闪烁=无法正确曝光（0302_shutter_priority.html）</td>
+</tr>
+<tr>
+<td>M 手动曝光</td>
+<td>M（手动曝光）</td>
+<td>模式旋钮转 M；前转盘=光圈，后转盘L=快门</td>
+<td>看 M.M. 指示；ISO 可设 ISO AUTO（0302C_manual_exposure.html）</td>
+</tr>
+<tr>
+<td>ISO 感光度（课程称“相对感光度”）</td>
+<td>ISO</td>
+<td>按控制拨轮右（ISO）选值；或 MENU →（曝光/颜色）→［曝光］→［ISO］</td>
+<td>出厂 ISO AUTO；照片 100～51200，扩展 50～204800（0408C_iso.html；231h_specifications_ilc2360.html）</td>
+</tr>
+<tr>
+<td>曝光补偿</td>
+<td>曝光补偿</td>
+<td>转后转盘R；或 MENU →（曝光/颜色）→［曝光补偿］→［曝光补偿］</td>
+<td>±5.0 EV；M 模式仅 ISO AUTO 时有效；智能自动/场景选择不可用（0406B_exposure_compensation.html）</td>
+</tr>
+<tr>
+<td>中央重点平均测光</td>
+<td>中心</td>
+<td>同上 →［中心］</td>
+<td>偏重中央（0406_metering_mode.html）</td>
+</tr>
+<tr>
+<td>局部测光（佳能）</td>
+<td><strong>无同名模式</strong></td>
+<td>替代：［点测光］→［点测光: 大］，或［中心］（推论）</td>
+<td>测光圆占画面的比例帮助指南未载明（0406_metering_mode.html）</td>
+</tr>
+<tr>
+<td>自定义白平衡（佳能）／预设手动 PRE（尼康）</td>
+<td>自定义 1～3</td>
+<td>白平衡模式选［自定义 N］→ 按右 → 选设置图标 → 白色填满捕捉框按中央 → 再按中央注册</td>
+<td>用闪光捕获的要配闪光使用（0410B_custom_white_balance.html）</td>
+</tr>
+<tr>
+<td>RAW+JPEG</td>
+<td>RAW&amp;JPEG</td>
+<td>MENU →（拍摄）→［影像质量/记录］→［〈静〉文件格式］→［RAW&amp;JPEG］</td>
+<td>［JPEG/HEIF切换］为 HEIF 时变成 RAW&amp;HEIF；RAW 压缩方式在［RAW文件类型］（0404M_file_format.html；201h_jpeg_heif_switch.html）</td>
+</tr>
+<tr>
+<td>驱动模式（单拍/连拍/自拍）</td>
+<td>拍摄模式</td>
+<td>按控制拨轮左</td>
+<td>索尼“拍摄模式”=驱动模式（0407C_drive_mode.html）</td>
+</tr>
+<tr>
+<td>自拍 2 秒/10 秒</td>
+<td>自拍定时(单张)</td>
+<td>拍摄模式→［自拍定时(单张)］→ 10/5/2 秒</td>
+<td>2 秒用于减少按快门抖动（0407_drivemode_selftimer.html）</td>
+</tr>
+<tr>
+<td>M 档曝光量标尺</td>
+<td>M.M.（手动测光）</td>
+<td>M 档且 ISO 非 AUTO 时显示</td>
+<td>ISO AUTO 时不显示（0302C_manual_exposure.html）</td>
+</tr>
+</tbody>
+</table></div>
+<p>（表中名称与路径摘自《A7C II 操作手册》，均与索尼官方帮助指南逐条核对；本集未列出的操作见手册。）</p>
+</div>
+<div class="box errata"><h3>🕰️ 时代差异与勘误</h3><ul>
+<li>取景：课程里的单反用光学取景器（反光镜＋五棱镜/五面镜）→ A7C II 是电子取景器（1.0 cm，约 236 万点），取景画面就是传感器的实时画面；［实时取景显示］为「设置效果开」时可直接预览曝光和白平衡效果。</li>
+<li>防抖：课程年代防抖做在镜头里（佳能 IS、尼康 VR）→ A7C II 机身内置影像传感器位移防抖（SteadyShot），镜头带防抖开关时以镜头开关为准；上三脚架建议关闭。</li>
+<li>感光度：课程年代的单反高 ISO 噪点明显 → A7C II 照片 ISO 100～51200（扩展 50～204800），高 ISO 画质好得多，但「光线允许就用低 ISO」的原则不变。</li>
+<li>肩屏与专用键：单反顶部有肩屏和 ISO/WB/驱动等专用键 → A7C II 没有肩屏；ISO 在控制拨轮右、拍摄模式（单拍/连拍/自拍）在控制拨轮左、白平衡模式出厂在 C1，其余靠 Fn 菜单和自定义键。</li>
+<li>测光表：佳能取景器测光标尺左负右正、尼康相反 → A7C II 在 M 档显示 M.M.（手动测光）指示，ISO 为 ISO AUTO 时不显示。</li>
+<li>检查曝光：单反主要靠拍后回放检查 → A7C II 拍摄前就能看柱状图、斑马线等辅助显示；回放时按 DISP 看柱状图和过曝/欠曝警告。</li>
+</ul>
+</div>
+<div class="box terms"><h3>🔖 本集术语</h3><ul>
+<li><strong>ISO</strong>：感光度，表示相机感光元件对光线的敏感程度，数值越高需要的光线越少</li>
+<li><strong>景深</strong>：在镜头焦平面上清晰的范围，景深大意味着从近到远都清晰，景深小意味着只有焦点前后清晰</li>
+<li><strong>曝光补偿</strong>：对相机测光表的重新调校，可增加或减少曝光量，使画面更亮或更暗</li>
+<li><strong>光圈优先模式(AV模式)</strong>：摄影师控制光圈，相机自动计算快门值的曝光模式</li>
+<li><strong>测光标尺</strong>：相机中-3到+3的标识，用于判断曝光是否准确，中间0表示准确曝光</li>
+<li><strong>安全快门</strong>：手持拍摄时避免因抖动导致模糊的最快快门速度，对于5D4是1/30秒</li>
+</ul>
+</div>
+<p class="ep-nav"><a href="#top">↑ 回到本页顶部</a></p></section>
+<section id="p80" class="episode" aria-labelledby="p80-t"><h2 id="p80-t"><span class="ep-no">P80</span> 佳能EOS-R口袋摄影课-I 外观控件</h2>
+<p class="ep-meta">原标题：081佳能EOS-R口袋摄影课-I 外观控件 · 时长 16:12 · <a href="https://www.bilibili.com/video/BV1Vt411E7nT?p=80" target="_blank" rel="noopener">▶ 在 B 站观看本集</a></p>
+<blockquote class="oneliner">
+<p><strong>一句话</strong>：本集详细介绍了佳能EOS-R全画幅微单相机的镜头标识、机身各部位控件功能及操作方法，并讲解了镜头滤镜系统与相机维护技巧。</p>
+</blockquote>
+<nav class="outline" aria-label="本集大纲"><p class="outline-t">本集大纲</p><ol>
+<li>相机基本结构<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=80&t=48" target="_blank" rel="noopener" title="跳到视频 00:48">00:48</a></li>
+<li>镜头结构与标识<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=80&t=179" target="_blank" rel="noopener" title="跳到视频 02:59">02:59</a></li>
+<li>镜头滤镜系统<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=80&t=393" target="_blank" rel="noopener" title="跳到视频 06:33">06:33</a></li>
+<li>机身前脸控件<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=80&t=537" target="_blank" rel="noopener" title="跳到视频 08:57">08:57</a></li>
+<li>顶部控件介绍<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=80&t=585" target="_blank" rel="noopener" title="跳到视频 09:45">09:45</a></li>
+<li>背面控件详解<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=80&t=723" target="_blank" rel="noopener" title="跳到视频 12:03">12:03</a></li>
+<li>侧面和底部控件<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=80&t=886" target="_blank" rel="noopener" title="跳到视频 14:46">14:46</a></li>
+<li>相机维护小技巧<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=80&t=920" target="_blank" rel="noopener" title="跳到视频 15:20">15:20</a></li>
+</ol></nav>
+
+<h3>1. 相机基本结构<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=80&t=48" target="_blank" rel="noopener" title="跳到视频 00:48">00:48–02:09</a></h3><p>佳能EOS-R是佳能第一款全画幅专业微单相机，更偏重于视频拍摄，但本课程主要讲述其在图片摄影中的操作方法。相机由机身和镜头两部分构成，与单反相机一样可通过按下机身前脸的卡口锁来摘下镜头。摘下镜头后，可以看到卡口内部有钢片的快门帘，它挡住了CMOS传感器。更换镜头时应尽量关闭电源，<strong>防止灰尘，甚至是口水落入CMOS导致后期拍摄中出现黑点</strong>。</p>
+
+<h3>2. 镜头结构与标识<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=80&t=179" target="_blank" rel="noopener" title="跳到视频 02:59">02:59–06:33</a></h3><p>佳能RF镜头与单反镜头不同，带有三个环：后方的变焦环控制焦距，前端的手动对焦环用于手动对焦，最前端的第三个环是功能键转环，<strong>转动时能听到线性的声音</strong>，用于控制感光度调节。镜头标识符从左往右依次为：RF（佳能全画幅微单卡口，与单反的EF卡口不兼容）、24-105毫米（焦距范围，广角24毫米到中焦105毫米的变焦镜头）、F4（最大光圈，恒定光圈镜头，归属于红圈镜头）、IS（光学稳定系统）、USM（环形对焦马达，实现静音和快速对焦，<strong>便于偷拍</strong>）、77毫米（镜头直径，用于装载滤镜）。</p>
+
+<h3>3. 镜头滤镜系统<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=80&t=393" target="_blank" rel="noopener" title="跳到视频 06:33">06:33–08:57</a></h3><p><strong>除了灯泡型的超广角镜头以外</strong>，每个镜头都应装载UV镜保护镜头。推荐使用卡色金刚狼系列耐摔型磁吸系列圆形镜片。滤镜系统包括圆形滤镜系统（如偏振镜、减光镜、灰色渐变镜）和方形滤镜系统。方形滤镜系统更便于调节渐变镜和减光镜。常规滤镜推荐：<strong>必须要给镜头装载一个用于保护它的高品质MCUV多层镀膜UV镜</strong>、CPR偏振镜、减光镜（用于实现慢门曝光）、渐变镜（<strong>用于控制风景时上方天空的亮度和地面亮度的平衡</strong>）。专业相机和镜头推荐使用金刚狼系列的磁吸滤镜pro套装，便于高效进行风光摄影。</p>
+
+<h3>4. 机身前脸控件<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=80&t=537" target="_blank" rel="noopener" title="跳到视频 08:57">08:57–09:45</a></h3><p>机身前脸有快门按钮，用于释放快门以及自动对焦和锁定曝光。快门按钮和卡口之间有一个小型圆形小灯光，<strong>这是一个倒计时的设计</strong>，进行定时拍摄时会闪烁，闪烁频率越高表示即将进入快门释放状态。</p>
+
+<h3>5. 顶部控件介绍<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=80&t=585" target="_blank" rel="noopener" title="跳到视频 09:45">09:45–12:03</a></h3><p>顶部控件包括：主电源键（on/off）、热靴（用于装载闪光灯或其他附件）、监屏（显示相机关键控件信息）。主转盘位于快门键后方，辅转盘位于右手操控时大拇指可转动的环位置。其他按键包括：M*FN自定义按键（<strong>往往我们相机默认的情况下</strong>会把它定义成对相机关键功能的调节，结合焦点选择键时可进行焦点模式选择）、红色的record录像按钮、lock键（锁定后辅转盘将无效）、灯光键（控制监屏灯光，便于在光线弱时查看相机实时数据）、MODE模式键（更改相机曝光模式，电源打开状态下按住MODE转动转盘，一般选择光圈优先模式AV，<strong>这和5D系列的机械式的曝光转盘有所不同</strong>）。</p>
+
+<h3>6. 背面控件详解<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=80&t=723" target="_blank" rel="noopener" title="跳到视频 12:03">12:03–14:46</a></h3><p>背面控件包括：电子取景器（<strong>在逆光情况下可排除周围光线干扰</strong>，<strong>屏幕往往会由于周围过亮，而导致摄影师无法判定构图和亮度</strong>）、电子取景器屈光度调节（调节到认为最清晰的状态，视力问题严重者建议戴眼镜调节）、menu主菜单键、主显示屏（支持触屏操作，可通过点击进行对焦和释放快门）、INFO/INF键（切换不同显示模式）、上下左右导航键、Q set键（相机主要功能控件，可通过上下左右选中各种关键功能进行快捷操作）、播放删除键、AFon控件（<strong>这是属于照相机比较进阶型的功能。这里暂且按下不表</strong>）、星号键（曝光锁定键）、焦点选择键（默认状态下通过导航键控制焦点位置）。特别值得注意的是，取景器旁边的自定义控制条，<strong>我们将在第三节课中为你讲述这根条的作用，提前透露一下</strong>，一般有经验的摄影师会将其设定为对白平衡的快捷调节。</p>
+
+<h3>7. 侧面和底部控件<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=80&t=886" target="_blank" rel="noopener" title="跳到视频 14:46">14:46–15:58</a></h3><p>一侧侧面有存储卡舱，另一侧面有扩展兼容接口，依次为：麦克风接口、耳机接口、快门线接口、USB接口和高清接口。底部有电池仓和1/4螺口（用于装载三脚架，<strong>把相机装载在三脚架之上</strong>）。相机维护技巧：<strong>有一个切记的相机维护技巧在于</strong>，如果相机超过两周以上的时间不用，请取出电池保存。</p>
+
+<h3>8. 相机维护小技巧<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=80&t=920" target="_blank" rel="noopener" title="跳到视频 15:20">15:20–15:58</a></h3><p>相机维护技巧：如果相机超过两周以上的时间不用，请取出电池保存。1/4螺口的作用是用于装载三脚架，衔接快装板和相机。</p>
+
+<div class="box a7c2"><h3>📷 换成 A7C II 怎么做</h3><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>课程里的概念/操作</th>
+<th>A7C II 上的名称</th>
+<th>怎么操作</th>
+<th>说明（出处）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Av 光圈优先（佳能 Av／尼康 A）</td>
+<td>A（光圈优先）</td>
+<td>模式旋钮转 A；前转盘或后转盘L 调光圈</td>
+<td>快门自动；快门数字闪烁=无法正确曝光（0302B_aperture_priority.html）</td>
+</tr>
+<tr>
+<td>P 程序自动</td>
+<td>P（程序自动）</td>
+<td>模式旋钮转 P；转前转盘/后转盘L 程序转换（显示 P*）</td>
+<td>用闪光灯时不能转换；换模式或关机即取消（0302B_program_auto.html）</td>
+</tr>
+<tr>
+<td>AWB 自动白平衡</td>
+<td>自动（白平衡模式）</td>
+<td>按 C1（出厂=白平衡模式）→［自动］</td>
+<td>偏暖/偏白取向用［AWB优先级设置］（0410C_white_balance.html；0410L_auto_white_balance_priority.html）</td>
+</tr>
+<tr>
+<td>单次自动对焦 ONE SHOT／AF-S</td>
+<td>单次AF（AF-S）</td>
+<td>MENU →（对焦）→［AF/MF］→［对焦模式］→［单次AF］</td>
+<td>合焦锁定（0405C_focus_mode.html）</td>
+</tr>
+<tr>
+<td>对焦点选择</td>
+<td>对焦区域 + 对焦标准键</td>
+<td>对焦区域选［点: L/M/S］［扩展点］［区］等；按控制拨轮中央（对焦标准）后上/下/左/右移框，（删除）键回中央；也可触摸拖动</td>
+<td>出厂对焦区域为广域（0405C_autofocus_area.html；0405L_focus_standard.html）</td>
+</tr>
+<tr>
+<td>RAW+JPEG</td>
+<td>RAW&amp;JPEG</td>
+<td>MENU →（拍摄）→［影像质量/记录］→［〈静〉文件格式］→［RAW&amp;JPEG］</td>
+<td>［JPEG/HEIF切换］为 HEIF 时变成 RAW&amp;HEIF；RAW 压缩方式在［RAW文件类型］（0404M_file_format.html；201h_jpeg_heif_switch.html）</td>
+</tr>
+<tr>
+<td>实时取景（Live View）</td>
+<td>始终实时取景；［实时取景显示设置］</td>
+<td>取景器和显示屏一直显示传感器画面；［实时取景显示］设置效果开=模拟曝光/白平衡等，关=始终适当亮度（影棚闪光用关）</td>
+<td>与单反的区别：不用切换“实时取景模式”、取景器里也能看到曝光模拟（推论）；暗处用［亮屏显示］（0414_live_view_disp_set.html；0414H_bright_monitoring.html）</td>
+</tr>
+<tr>
+<td>驱动模式（单拍/连拍/自拍）</td>
+<td>拍摄模式</td>
+<td>按控制拨轮左</td>
+<td>索尼“拍摄模式”=驱动模式（0407C_drive_mode.html）</td>
+</tr>
+<tr>
+<td>自拍 2 秒/10 秒</td>
+<td>自拍定时(单张)</td>
+<td>拍摄模式→［自拍定时(单张)］→ 10/5/2 秒</td>
+<td>2 秒用于减少按快门抖动（0407_drivemode_selftimer.html）</td>
+</tr>
+<tr>
+<td>速控屏 Q 键（佳能）／i 键（尼康）</td>
+<td>Fn（功能）按钮</td>
+<td>按 Fn，控制拨轮选项目，转前转盘改值</td>
+<td>照片、视频各 12 项（0413_using_function_menu.html；201h_fn_menu_setting.html）</td>
+</tr>
+<tr>
+<td>镜头防抖 IS/VR 开关</td>
+<td>SteadyShot（机身）</td>
+<td>MENU →（拍摄）→［影像稳定］→［〈静〉SteadyShot］</td>
+<td>三脚架上关；镜头有防抖开关时只能用镜头开关（0414_still_image_steadyshot.html）</td>
+</tr>
+<tr>
+<td>屈光度调节</td>
+<td>屈光度调节旋钮</td>
+<td>取景器右侧小拨轮</td>
+<td>−4.0～+3.0 m⁻¹（231h_names_of_parts_ilc2360_ilc2370_back.html；231h_specifications_ilc2360.html）</td>
+</tr>
+</tbody>
+</table></div>
+<p>（表中名称与路径摘自《A7C II 操作手册》，均与索尼官方帮助指南逐条核对；本集未列出的操作见手册。）</p>
+</div>
+<div class="box errata"><h3>🕰️ 时代差异与勘误</h3><ul>
+<li>取景：课程里的单反用光学取景器（反光镜＋五棱镜/五面镜）→ A7C II 是电子取景器（1.0 cm，约 236 万点），取景画面就是传感器的实时画面；［实时取景显示］为「设置效果开」时可直接预览曝光和白平衡效果。</li>
+<li>实时取景：单反要切到 LV（实时显示）才能用屏幕取景 → A7C II 的取景器和显示屏始终是实时取景，不用切换。</li>
+<li>防抖：课程年代防抖做在镜头里（佳能 IS、尼康 VR）→ A7C II 机身内置影像传感器位移防抖（SteadyShot），镜头带防抖开关时以镜头开关为准；上三脚架建议关闭。</li>
+<li>肩屏与专用键：单反顶部有肩屏和 ISO/WB/驱动等专用键 → A7C II 没有肩屏；ISO 在控制拨轮右、拍摄模式（单拍/连拍/自拍）在控制拨轮左、白平衡模式出厂在 C1，其余靠 Fn 菜单和自定义键。</li>
+<li>AE 锁与景深预览：单反有 AE 锁键（佳能 ✱、尼康 AE-L）和景深预览键 → A7C II 没有专用键，要把［AE锁定保持］或［光圈预览］分配给自定义键。</li>
+<li>测光表：佳能取景器测光标尺左负右正、尼康相反 → A7C II 在 M 档显示 M.M.（手动测光）指示，ISO 为 ISO AUTO 时不显示。</li>
+</ul>
+</div>
+<div class="box terms"><h3>🔖 本集术语</h3><ul>
+<li><strong>RF卡口</strong>：佳能全画幅微单专用卡口，与单反的EF卡口不兼容</li>
+<li><strong>恒定光圈</strong>：镜头在最短焦距和最长焦距的最大光圈相同，如F4，而非浮动的3.5-5.6</li>
+<li><strong>红圈镜头</strong>：佳能镜头系统中属于高端镜头，通常带有红色标识</li>
+<li><strong>IS</strong>：镜头光学稳定系统，用于减少手抖造成的模糊</li>
+<li><strong>USM</strong>：环形对焦马达，实现静音和快速对焦，便于偷拍</li>
+<li><strong>电子取景器</strong>：排除周围光线干扰，便于在逆光情况下判断构图和亮度</li>
+<li><strong>屈光度调节</strong>：调节电子取景器清晰度以匹配个人视力</li>
+<li><strong>磁吸滤镜</strong>：便于先构图和对焦后再安装滤镜，提高拍摄效率</li>
+<li><strong>线性声音</strong>：转动镜头前端功能环时能听到的特定声音，用于识别该环的功能</li>
+</ul>
+</div>
+<p class="ep-nav"><a href="#top">↑ 回到本页顶部</a></p></section>
+<section id="p81" class="episode" aria-labelledby="p81-t"><h2 id="p81-t"><span class="ep-no">P81</span> 佳能EOS-R口袋摄影课-II 曝光控制</h2>
+<p class="ep-meta">原标题：082佳能EOS-R口袋摄影课-II 曝光控制 · 时长 20:08 · <a href="https://www.bilibili.com/video/BV1Vt411E7nT?p=81" target="_blank" rel="noopener">▶ 在 B 站观看本集</a></p>
+<blockquote class="oneliner">
+<p><strong>一句话</strong>：本集详细讲解了佳能EOS-R微单相机在手动曝光模式（M模式）和光圈优先模式（AV模式）下的曝光控制技巧，包括曝光三要素的调节顺序和方法。</p>
+</blockquote>
+<nav class="outline" aria-label="本集大纲"><p class="outline-t">本集大纲</p><ol>
+<li>EOS-R曝光控制与单反的区别<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=81&t=47" target="_blank" rel="noopener" title="跳到视频 00:47">00:47</a></li>
+<li>手动模式（M）的界面解读<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=81&t=81" target="_blank" rel="noopener" title="跳到视频 01:21">01:21</a></li>
+<li>曝光三要素的调节方式<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=81&t=171" target="_blank" rel="noopener" title="跳到视频 02:51">02:51</a></li>
+<li>感光度的调节方法<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=81&t=212" target="_blank" rel="noopener" title="跳到视频 03:32">03:32</a></li>
+<li>快门和光圈的调节方法<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=81&t=287" target="_blank" rel="noopener" title="跳到视频 04:47">04:47</a></li>
+<li>手动曝光的基本逻辑<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=81&t=414" target="_blank" rel="noopener" title="跳到视频 06:54">06:54</a></li>
+<li>感光度的调节顺序和原则<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=81&t=455" target="_blank" rel="noopener" title="跳到视频 07:35">07:35</a></li>
+<li>不同场景的感光度设置建议<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=81&t=488" target="_blank" rel="noopener" title="跳到视频 08:08">08:08</a></li>
+<li>光圈的确定原则<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=81&t=619" target="_blank" rel="noopener" title="跳到视频 10:19">10:19</a></li>
+<li>快门的调节方法<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=81&t=684" target="_blank" rel="noopener" title="跳到视频 11:24">11:24</a></li>
+<li>手动曝光的完整流程<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=81&t=821" target="_blank" rel="noopener" title="跳到视频 13:41">13:41</a></li>
+<li>光圈优先模式（AV模式）的使用<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=81&t=933" target="_blank" rel="noopener" title="跳到视频 15:33">15:33</a></li>
+<li>曝光补偿的原理和应用<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=81&t=1008" target="_blank" rel="noopener" title="跳到视频 16:48">16:48</a></li>
+</ol></nav>
+
+<h3>1. EOS-R曝光控制与单反的区别<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=81&t=47" target="_blank" rel="noopener" title="跳到视频 00:47">00:47–01:21</a></h3><p>佳能EOS-R全画幅微单的曝光控制与佳能单反相机存在少许区别。本节课通过手动曝光的讲述，让学员明白EOS-R的曝光控制技巧。在EOS-R上，手动模式的调节方式不再有机械的转盘，而是通过电子方式实现。</p>
+
+<h3>2. 手动模式（M）的界面解读<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=81&t=81" target="_blank" rel="noopener" title="跳到视频 01:21">01:21–02:51</a></h3><p>在EOS-R上，通过按下MODE模式按键，再通过辅转盘调节到手动模式。建议将相机频显设定为带有曝光标志的精简信息状态。主屏显示信息从左往右由上而下包括：</p>
+<ul>
+<li>M：手动曝光模式</li>
+<li>43：表示相机存储卡中缓存还可存储43张连拍照片</li>
+<li>02:04：表示拍摄视频时，缓存可以拍摄2分钟04秒</li>
+<li>Q：触摸屏的相机可以通过按下Q来实现各快捷键的操作，将在第三节课中为你具体讲述</li>
+<li>125分之1：快门速度</li>
+<li>F5.6：当前光圈值</li>
+<li>-3到正3：测光表范围，游离光标处于正中间表示曝光准确</li>
+</ul>
+<p>注意：在感光度ISO自动时，相机并非纯粹的手动曝光模式。</p>
+
+<h3>3. 曝光三要素的调节方式<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=81&t=171" target="_blank" rel="noopener" title="跳到视频 02:51">02:51–03:32</a></h3><p>曝光三要素指感光度、光圈和快门。在EOS-R上：</p>
+<ul>
+<li>与单反相机相同：通过主转盘控制快门，辅转盘控制光圈</li>
+<li>与单反不同：通过镜头上的功能转盘控制感光度</li>
+</ul>
+
+<h3>4. 感光度的调节方法<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=81&t=212" target="_blank" rel="noopener" title="跳到视频 03:32">03:32–04:47</a></h3><p>在EOS-R上，感光度调节方式为：</p>
+<ul>
+<li>半按快门按键</li>
+<li>转动镜头最前方的功能转盘</li>
+<li>感光度越高，画面曝光越足越亮；感光度越低，画面曝光越低越暗</li>
+</ul>
+<p>这是EOS-R与单反不同的感光度控制方式。</p>
+
+<h3>5. 快门和光圈的调节方法<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=81&t=287" target="_blank" rel="noopener" title="跳到视频 04:47">04:47–06:07</a></h3><ul>
+<li><strong>主转盘</strong>（位于快门键后方）：控制快门速度，单位是秒。转动转盘可获得更快的快门速度，快门时间越短，曝光量越低。</li>
+<li><strong>辅转盘</strong>（位于模式转盘外围的复合转盘）：控制光圈大小。注意转动辅转盘时可能显示&quot;lock&quot;，表示辅转盘被锁定，需按下辅转盘旁边的lock键解锁。</li>
+</ul>
+<p>光圈数值越大，光圈实际收得越小；光圈数值越小，光圈开得越大。将光圈数值调小，画面曝光量越足。</p>
+
+<h3>6. 手动曝光的基本逻辑<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=81&t=414" target="_blank" rel="noopener" title="跳到视频 06:54">06:54–07:35</a></h3><p>手动曝光是利用曝光三要素（感光度、快门、光圈）的调节来实现想要的画面亮度效果。通过观察测光标尺：</p>
+<ul>
+<li>测光标尺在负一边：曝光不足</li>
+<li>测光标尺在正中间：曝光准确</li>
+<li>测光标尺在正一边：曝光过度</li>
+</ul>
+<p>可通过调节光圈、感光度或快门让测光标尺在正负之间游离。</p>
+
+<h3>7. 感光度的调节顺序和原则<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=81&t=455" target="_blank" rel="noopener" title="跳到视频 07:35">07:35–08:55</a></h3><p>手动曝光时，曝光三要素的调节顺序是：</p>
+<ol>
+<li>首先调节感光度（ISO）</li>
+<li>然后确定光圈</li>
+<li>最后调节快门</li>
+</ol>
+<p>感光度调节原则：</p>
+<ul>
+<li>光线越强，使用的感光度越低</li>
+<li>光线越弱，使用的感光度越高</li>
+<li>感光度描述的是相机的感光元件（CMOS）对光线的敏感程度</li>
+<li>感光度调得高需要更少的光线来满足曝光，调得低需要更多的光线才能满足曝光</li>
+</ul>
+
+<h3>8. 不同场景的感光度设置建议<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=81&t=535" target="_blank" rel="noopener" title="跳到视频 08:55">08:55–10:19</a></h3><p>不同场景的感光度设置经验：</p>
+<ul>
+<li>晴天户外：100-200</li>
+<li>阴天/晴天阴影处：200-400</li>
+<li>晨昏：400-800</li>
+<li>照明条件好的室内：800-1600</li>
+<li>照明条件弱的室内家居环境：1600-3200</li>
+</ul>
+<p>现代相机在1600感光度时仍能保持非常细腻的画面质量。只要条件允许，尽量使用低感光度。</p>
+
+<h3>9. 光圈的确定原则<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=81&t=619" target="_blank" rel="noopener" title="跳到视频 10:19">10:19–12:04</a></h3><p>光圈的确定取决于拍摄场景的大小：</p>
+<ul>
+<li>拍摄小场景（如一个人、一处静物）：使用最小光圈数值（大光圈）</li>
+<li>拍摄中等场景（如四五个人、一个建筑）：使用F8左右的光圈</li>
+<li>拍摄大场景（如城市全景、风景）：使用F11的光圈</li>
+<li>拍摄浩瀚风景：使用F16的光圈</li>
+</ul>
+<p>光圈大小与背景虚化关系：</p>
+<ul>
+<li>光圈越大（数值越小），背景越虚化</li>
+<li>光圈越小（数值越大），背景越实</li>
+</ul>
+<p>拍摄场景小用大光圈是为了背景虚化，突出主体；拍摄场景大用小光圈是为了保证从近到远处整体清晰。此外，镜头焦距和与被摄物体的距离也会影响画面的虚实关系。</p>
+
+<h3>10. 快门的调节方法<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=81&t=684" target="_blank" rel="noopener" title="跳到视频 11:24">11:24–13:41</a></h3><p>在完成感光度和光圈的调节后，最后一步是调节快门：</p>
+<ul>
+<li>通过转动主转盘调节快门</li>
+<li>让测光标尺处于正中间</li>
+<li>按下快门实现准确曝光</li>
+</ul>
+<p>手动曝光的基本技巧总结：</p>
+<ol>
+<li>根据环境亮度确定感光度范围</li>
+<li>根据拍摄场景大小确定光圈大小</li>
+<li>调节快门，让测光标尺居于正中间，按下快门</li>
+</ol>
+
+<h3>11. 手动曝光的完整流程<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=81&t=821" target="_blank" rel="noopener" title="跳到视频 13:41">13:41–15:33</a></h3><p>手动曝光的完整逻辑顺序：</p>
+<ol>
+<li>先定感光度ISO</li>
+<li>再定光圈大小</li>
+<li>最后调节快门，让测光标尺居于正中间</li>
+</ol>
+<p>注意事项：</p>
+<ul>
+<li>最终调节快门时，要确保快门速度能维持照片清晰</li>
+<li>一般要求快门速度应高于30分之1秒</li>
+<li>如果调节快门后速度过慢（如10分之1秒），可考虑使用三脚架或提高感光度</li>
+</ul>
+
+<h3>12. 光圈优先模式（AV模式）的使用<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=81&t=933" target="_blank" rel="noopener" title="跳到视频 15:33">15:33–16:48</a></h3><p>在大多数常规拍摄中（如人像、风景），更多使用光圈优先模式（AV模式）：</p>
+<ul>
+<li>按下MODE键调到AV模式</li>
+<li>半按快门转动镜头上的功能转盘：调节感光度</li>
+<li>转动主转盘：控制光圈，此时快门会相应变化</li>
+</ul>
+<p>光圈优先模式下：</p>
+<ul>
+<li>拍摄人像：使用大光圈（如F4.0）</li>
+<li>拍摄风景：使用F11-F16的小光圈，保证从近到远处整体清晰</li>
+</ul>
+
+<h3>13. 曝光补偿的原理和应用<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=81&t=1008" target="_blank" rel="noopener" title="跳到视频 16:48">16:48–19:38</a></h3><p>在光圈优先模式下，辅转盘的作用是曝光补偿：</p>
+<ul>
+<li>转动辅转盘可进行曝光补偿</li>
+<li>正补偿（如+1）：相机将延长快门时间，增加曝光量，画面变亮</li>
+<li>负补偿（如-1）：相机将缩短快门时间，减少曝光量，画面变暗</li>
+</ul>
+<p>佳能相机有非常好的曝光模拟系统，在电子取景器中看到的实时亮度显示就是最终照片的亮度效果。可根据喜好调节曝光补偿，获得想要的亮度效果。</p>
+<p>在强光情况下或需要省电时，可通过观察电子取景器进行操作，主转盘、辅转盘和ISO的调节方法与前面所述相同。</p>
+
+<div class="box a7c2"><h3>📷 换成 A7C II 怎么做</h3><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>课程里的概念/操作</th>
+<th>A7C II 上的名称</th>
+<th>怎么操作</th>
+<th>说明（出处）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M 手动曝光</td>
+<td>M（手动曝光）</td>
+<td>模式旋钮转 M；前转盘=光圈，后转盘L=快门</td>
+<td>看 M.M. 指示；ISO 可设 ISO AUTO（0302C_manual_exposure.html）</td>
+</tr>
+<tr>
+<td>ISO 感光度（课程称“相对感光度”）</td>
+<td>ISO</td>
+<td>按控制拨轮右（ISO）选值；或 MENU →（曝光/颜色）→［曝光］→［ISO］</td>
+<td>出厂 ISO AUTO；照片 100～51200，扩展 50～204800（0408C_iso.html；231h_specifications_ilc2360.html）</td>
+</tr>
+<tr>
+<td>曝光补偿</td>
+<td>曝光补偿</td>
+<td>转后转盘R；或 MENU →（曝光/颜色）→［曝光补偿］→［曝光补偿］</td>
+<td>±5.0 EV；M 模式仅 ISO AUTO 时有效；智能自动/场景选择不可用（0406B_exposure_compensation.html）</td>
+</tr>
+<tr>
+<td>RAW+JPEG</td>
+<td>RAW&amp;JPEG</td>
+<td>MENU →（拍摄）→［影像质量/记录］→［〈静〉文件格式］→［RAW&amp;JPEG］</td>
+<td>［JPEG/HEIF切换］为 HEIF 时变成 RAW&amp;HEIF；RAW 压缩方式在［RAW文件类型］（0404M_file_format.html；201h_jpeg_heif_switch.html）</td>
+</tr>
+<tr>
+<td>反光镜预升</td>
+<td><strong>无此功能</strong>（无反光镜）</td>
+<td>防按快门抖动：［自拍定时(单张)］2 秒、Bluetooth 遥控器、手机/电脑遥控；［快门类型］设［电子快门］则只用电子快门拍摄（但不能闪光/B门/长时曝光降噪/防闪烁）</td>
+<td>帮助指南没有“电子前帘快门”选项；三脚架上要关闭 SteadyShot（0407_drivemode_selftimer.html；0706_bluetooth_remote.html；0414H_shutter_type.html；0414_still_image_steadyshot.html）</td>
+</tr>
+<tr>
+<td>自拍 2 秒/10 秒</td>
+<td>自拍定时(单张)</td>
+<td>拍摄模式→［自拍定时(单张)］→ 10/5/2 秒</td>
+<td>2 秒用于减少按快门抖动（0407_drivemode_selftimer.html）</td>
+</tr>
+</tbody>
+</table></div>
+<p>（表中名称与路径摘自《A7C II 操作手册》，均与索尼官方帮助指南逐条核对；本集未列出的操作见手册。）</p>
+</div>
+<div class="box errata"><h3>🕰️ 时代差异与勘误</h3><ul>
+<li>取景：课程里的单反用光学取景器（反光镜＋五棱镜/五面镜）→ A7C II 是电子取景器（1.0 cm，约 236 万点），取景画面就是传感器的实时画面；［实时取景显示］为「设置效果开」时可直接预览曝光和白平衡效果。</li>
+<li>实时取景：单反要切到 LV（实时显示）才能用屏幕取景 → A7C II 的取景器和显示屏始终是实时取景，不用切换。</li>
+<li>防抖：课程年代防抖做在镜头里（佳能 IS、尼康 VR）→ A7C II 机身内置影像传感器位移防抖（SteadyShot），镜头带防抖开关时以镜头开关为准；上三脚架建议关闭。</li>
+<li>感光度：课程年代的单反高 ISO 噪点明显 → A7C II 照片 ISO 100～51200（扩展 50～204800），高 ISO 画质好得多，但「光线允许就用低 ISO」的原则不变。</li>
+<li>肩屏与专用键：单反顶部有肩屏和 ISO/WB/驱动等专用键 → A7C II 没有肩屏；ISO 在控制拨轮右、拍摄模式（单拍/连拍/自拍）在控制拨轮左、白平衡模式出厂在 C1，其余靠 Fn 菜单和自定义键。</li>
+<li>测光表：佳能取景器测光标尺左负右正、尼康相反 → A7C II 在 M 档显示 M.M.（手动测光）指示，ISO 为 ISO AUTO 时不显示。</li>
+</ul>
+</div>
+<div class="box terms"><h3>🔖 本集术语</h3><ul>
+<li><strong>曝光三要素</strong>：指感光度（ISO）、光圈和快门，三者共同决定照片的曝光量</li>
+<li><strong>手动模式（M）</strong>：完全由摄影师控制曝光三要素的模式</li>
+<li><strong>光圈优先模式（AV）</strong>：摄影师控制光圈，相机自动计算快门速度的模式</li>
+<li><strong>曝光补偿</strong>：在自动或半自动模式下，通过调整使照片变亮或变暗的功能</li>
+<li><strong>测光表</strong>：相机用来评估场景亮度并指导曝光的指示系统</li>
+<li><strong>ISO</strong>：感光度，表示相机感光元件对光线的敏感程度</li>
+<li><strong>光圈</strong>：控制镜头进光量的可调节开口，数值越小表示光圈越大</li>
+</ul>
+</div>
+<p class="ep-nav"><a href="#top">↑ 回到本页顶部</a></p></section>
+<section id="p82" class="episode" aria-labelledby="p82-t"><h2 id="p82-t"><span class="ep-no">P82</span> 佳能EOS-R口袋摄影课-IV 样片技巧</h2>
+<p class="ep-meta">原标题：083佳能EOS-R口袋摄影课-IV 样片技巧 · 时长 21:03 · <a href="https://www.bilibili.com/video/BV1Vt411E7nT?p=82" target="_blank" rel="noopener">▶ 在 B 站观看本集</a></p>
+<blockquote class="oneliner">
+<p><strong>一句话</strong>：通过官方样片详解佳能EOS-R在人像、风光、夜景、星空等不同场景下的相机操控与拍摄技巧。</p>
+</blockquote>
+<nav class="outline" aria-label="本集大纲"><p class="outline-t">本集大纲</p><ol>
+<li>户外人像拍摄技巧<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=82&t=49" target="_blank" rel="noopener" title="跳到视频 00:49">00:49–04:00</a></li>
+<li>室内人像拍摄技巧<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=82&t=240" target="_blank" rel="noopener" title="跳到视频 04:00">04:00–06:55</a></li>
+<li>日间风光摄影技巧<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=82&t=415" target="_blank" rel="noopener" title="跳到视频 06:55">06:55–08:12</a></li>
+<li>日出日落风光摄影技巧<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=82&t=492" target="_blank" rel="noopener" title="跳到视频 08:12">08:12–10:20</a></li>
+<li>夜景摄影技巧<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=82&t=620" target="_blank" rel="noopener" title="跳到视频 10:20">10:20–13:03</a></li>
+<li>星空摄影技巧<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=82&t=783" target="_blank" rel="noopener" title="跳到视频 13:03">13:03–15:58</a></li>
+<li>慢门风光摄影技巧<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=82&t=958" target="_blank" rel="noopener" title="跳到视频 15:58">15:58–17:46</a></li>
+<li>抓拍人像技巧<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=82&t=1066" target="_blank" rel="noopener" title="跳到视频 17:46">17:46–20:36</a></li>
+<li>影棚静物摄影简介<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=82&t=1236" target="_blank" rel="noopener" title="跳到视频 20:36">20:36–20:53</a></li>
+</ol></nav>
+
+<h3>1. 户外人像拍摄技巧<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=82&t=49" target="_blank" rel="noopener" title="跳到视频 00:49">00:49–04:00</a></h3><p>户外人像拍摄建议使用<strong>光圈优先模式</strong>。光线充足时，感光度调至原生最低（100-200）。对焦方式选择<strong>单点对焦</strong>，对焦人物眼睛。对焦模式选择<strong>单次对焦</strong>（摆拍人像），驱动方式为单张拍摄。测光模式建议使用<strong>评价测光</strong>，通过曝光补偿修正画面亮度。防闪烁拍摄对户外人像无影响。画质建议选择高画质、大分辨率。白平衡使用自动，照片风格可选择人像（肤色白里透红）或标准/自动。光圈建议开到最大后稍收缩一点（如f/4.0），使用较长焦距在合适距离构图。注意利用前景元素（如叶子）营造梦幻虚像效果。</p>
+
+<h3>2. 室内人像拍摄技巧<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=82&t=240" target="_blank" rel="noopener" title="跳到视频 04:00">04:00–06:55</a></h3><p>室内人像拍摄需以<strong>安全快门</strong>为基准。先保守设置感光度为800，光圈开至最大，检查快门速度是否达到1/30以上。如果不足，需提高感光度以确保快门速度。结合外置闪光灯拍摄时，需在菜单中调整<strong>闪光灯同步速度</strong>为1/60-1/200秒，防止快门过慢。使用闪光灯时，感光度设置在400-800之间即可，光圈尽量开大，相机自动计算快门速度。若人物脸部受光过强，需降低<strong>闪光补偿</strong>。</p>
+
+<h3>3. 日间风光摄影技巧<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=82&t=415" target="_blank" rel="noopener" title="跳到视频 06:55">06:55–08:12</a></h3><p>日间风光摄影建议使用光圈优先模式。感光度使用低值以获得更好画质和更少噪点。风光摄影需要<strong>大景深</strong>，因此光圈调至f/10左右。利用屏幕进行<strong>曝光模拟</strong>，调整曝光补偿至适当反差。对焦方式为单次对焦，单点对焦中景。驱动模式选择单次，测光使用评价测光。防闪烁拍摄无影响。画质选择最高像素，建议使用<strong>RAW格式</strong>。白平衡可根据屏幕上的色调调整，可使用多功能拨盘激活并感受不同白平衡下的效果。照片风格可调整为风光，使颜色更鲜艳、画面更锐利。</p>
+
+<h3>4. 日出日落风光摄影技巧<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=82&t=492" target="_blank" rel="noopener" title="跳到视频 08:12">08:12–10:20</a></h3><p>日出日落是风光摄影的黄金时段，天空与地面光线反差适中。当太阳直接出现在画面中时，即使位置偏低也具有高亮度，会导致其他元素昏暗。建议使用<strong>卡色磁吸防摔渐变镜</strong>控制画面反差，使上下亮度均衡。操作方法：完成构图后，将渐变镜调整好位置直接放在镜头前方。如果构图不需要从中间进行渐变，可使用卡色方镜和卡座进行上下位置调整，根据构图控制风光照片的画面反差。</p>
+
+<h3>5. 夜景摄影技巧<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=82&t=620" target="_blank" rel="noopener" title="跳到视频 10:20">10:20–13:03</a></h3><p>夜景摄影需要硬件准备：脚架、广角镜头。使用光圈优先模式，小光圈（f/11-f/16）控制大景深。对焦使用单点对焦，对焦在中景上亮的物体上（暗物体可能无法对焦）。驱动模式为单张拍摄，测光使用评价测光。防闪烁拍摄无影响。画质选择高画质，白平衡可根据需要调整偏暖色调（如选择阴天白平衡、阴影白平衡或色温模式K值超过6000）。照片风格可选择风光或标准。长宽比建议选择全画幅。拍摄时在脚架上完成构图，锁死云台，调整曝光补偿，观察屏幕亮度模拟，合适时按下快门后不要触碰相机。夜景拍摄应使用低感光度，既为控制画面质量，也为营造慢速快门形成车轨或让行人消失的效果。</p>
+
+<h3>6. 星空摄影技巧<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=82&t=783" target="_blank" rel="noopener" title="跳到视频 13:03">13:03–15:58</a></h3><p>星空摄影操作方法较为公式化。必须使用<strong>手动模式</strong>，前提是找到无光污染的拍摄地点。镜头光圈开至最大（建议使用f/2.8或更大光圈的广角镜头）。感光度设置：f/2.8光圈建议ISO 1600，f/4光圈建议ISO 3200，f/1.4光圈建议ISO 800（光圈越大，感光度可越低，噪点越少）。镜头调至<strong>手动对焦(MF)</strong>，转动对焦环至无穷远。快门速度使用**&quot;星空500法则&quot;<strong>：500÷焦距(毫米)=快门时间(秒)。例如24mm焦距，快门时间约20秒。为获得更冷调、更透彻干净的星空画面，建议添加</strong>卡色防光害星野滤镜**。</p>
+
+<h3>7. 慢门风光摄影技巧<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=82&t=958" target="_blank" rel="noopener" title="跳到视频 15:58">15:58–17:46</a></h3><p>强光下使用慢门拍摄风光需添加<strong>减光镜</strong>。使用卡色金刚狼防摔磁吸减光镜，在脚架上锁死云台固定相机，完成构图后将减光镜贴合到镜头前方。切换至手动模式，调整光圈和快门进行测光。感光度调至低值(如ISO 600)，调整快门速度至所需时间(如30秒)，当测光标识在中间时按下快门。使用磁吸减光镜的优势在于可快速贴合镜头，迅速进入测光状态，而普通减光镜安装后相机无法自动对焦，会延误拍摄时机。</p>
+
+<h3>8. 抓拍人像技巧<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=82&t=1066" target="_blank" rel="noopener" title="跳到视频 17:46">17:46–20:36</a></h3><p>抓拍运动中的人像需使用<strong>快门优先(TV)模式</strong>，并将感光度设置为自动(ISO AUTO)。对焦模式建议使用<strong>扩展对焦</strong>（根据拍摄物体大小选择小扩展或大扩展/区域自动对焦）。对焦选择<strong>连续对焦(AI SERVO)</strong>，驱动模式选择<strong>高速连拍</strong>（因抓拍运动物体失误率高）。测光使用评价测光，画质选择高画质，白平衡使用自动。根据所需凝固效果评估快门速度（如拍摄摩托车可能需要1/250秒或更高快门）。在快门优先模式下调整快门速度，追踪目标过程中按下快门进行连拍，最后筛选成功作品。如需结合高速闪光灯补光，需使用高速同步闪光灯功能。</p>
+
+<h3>9. 影棚静物摄影简介<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=82&t=1236" target="_blank" rel="noopener" title="跳到视频 20:36">20:36–20:53</a></h3><p>课程还展示了使用佳能EOS-R拍摄的影棚中的静物照片，但未在课堂上详细讲解。关于影棚摄影如何拍摄静物的内容，可关注摄影无师自通旗下的顶尖商业摄影教程。</p>
+
+<div class="box a7c2"><h3>📷 换成 A7C II 怎么做</h3><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>课程里的概念/操作</th>
+<th>A7C II 上的名称</th>
+<th>怎么操作</th>
+<th>说明（出处）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Av 光圈优先（佳能 Av／尼康 A）</td>
+<td>A（光圈优先）</td>
+<td>模式旋钮转 A；前转盘或后转盘L 调光圈</td>
+<td>快门自动；快门数字闪烁=无法正确曝光（0302B_aperture_priority.html）</td>
+</tr>
+<tr>
+<td>ISO 感光度（课程称“相对感光度”）</td>
+<td>ISO</td>
+<td>按控制拨轮右（ISO）选值；或 MENU →（曝光/颜色）→［曝光］→［ISO］</td>
+<td>出厂 ISO AUTO；照片 100～51200，扩展 50～204800（0408C_iso.html；231h_specifications_ilc2360.html）</td>
+</tr>
+<tr>
+<td>曝光补偿</td>
+<td>曝光补偿</td>
+<td>转后转盘R；或 MENU →（曝光/颜色）→［曝光补偿］→［曝光补偿］</td>
+<td>±5.0 EV；M 模式仅 ISO AUTO 时有效；智能自动/场景选择不可用（0406B_exposure_compensation.html）</td>
+</tr>
+<tr>
+<td>评价测光／矩阵测光</td>
+<td>多重</td>
+<td>MENU →（曝光/颜色）→［测光］→［测光模式］→［多重］</td>
+<td>出厂即多重；1200 区域；人脸优先可开关（0406_metering_mode.html；231h_specifications_ilc2360.html）</td>
+</tr>
+<tr>
+<td>单次自动对焦 ONE SHOT／AF-S</td>
+<td>单次AF（AF-S）</td>
+<td>MENU →（对焦）→［AF/MF］→［对焦模式］→［单次AF］</td>
+<td>合焦锁定（0405C_focus_mode.html）</td>
+</tr>
+<tr>
+<td>人工智能伺服 AI SERVO／AF-C</td>
+<td>连续AF（AF-C）</td>
+<td>同上 →［连续AF］</td>
+<td>“跟踪”类对焦区域只在连续AF有效（0405C_focus_mode.html；0405C_autofocus_area.html）</td>
+</tr>
+<tr>
+<td>对焦点选择</td>
+<td>对焦区域 + 对焦标准键</td>
+<td>对焦区域选［点: L/M/S］［扩展点］［区］等；按控制拨轮中央（对焦标准）后上/下/左/右移框，（删除）键回中央；也可触摸拖动</td>
+<td>出厂对焦区域为广域（0405C_autofocus_area.html；0405L_focus_standard.html）</td>
+</tr>
+<tr>
+<td>照片风格 Picture Style／优化校准 Picture Control</td>
+<td>创意外观</td>
+<td>MENU →（曝光/颜色）→［颜色/色调］→［创意外观］；也在 Fn 菜单里</td>
+<td>ST/PT/NT/VV/VV2/FL/IN/SH/BW/SE，可调对比度等 8 项（0411B_creative_look.html；201h_fn_menu_setting.html）</td>
+</tr>
+<tr>
+<td>闪光曝光补偿</td>
+<td>闪光补偿</td>
+<td>MENU →（曝光/颜色）→［闪光灯］→［闪光补偿］</td>
+<td>±3.0 EV；［曝光补偿设置］决定曝光补偿是否也作用于闪光（出厂仅环境光）（0402B_flash_comp.html；0406_exp_comp_set.html）</td>
+</tr>
+<tr>
+<td>驱动模式（单拍/连拍/自拍）</td>
+<td>拍摄模式</td>
+<td>按控制拨轮左</td>
+<td>索尼“拍摄模式”=驱动模式（0407C_drive_mode.html）</td>
+</tr>
+<tr>
+<td>闪光同步速度</td>
+<td>—</td>
+<td>规格：1/160 秒（全画幅）、1/200 秒（APS-C），Sony 闪光灯</td>
+<td>第三方引闪器下的行为帮助指南未载明（231h_specifications_ilc2360.html）</td>
+</tr>
+<tr>
+<td>高速同步（佳能 HSS／尼康 FP）</td>
+<td>—</td>
+<td>帮助指南未载明设置方法</td>
+<td>仅图标表出现“SLOW HSS WL”图标（211h_iconlist_stl.html）</td>
+</tr>
+<tr>
+<td>影棚闪光灯 / 引闪器</td>
+<td>—</td>
+<td>见 7.10 清单：实时取景显示设置效果关、机械快门、静音模式关、快门不超过同步速度、固定 ISO</td>
+<td>（0414_live_view_disp_set.html；0414H_shutter_type.html）</td>
+</tr>
+<tr>
+<td>直方图</td>
+<td>柱状图</td>
+<td>拍摄或播放时按 DISP 切换</td>
+<td>用闪光灯时拍摄画面与回放直方图差异很大（201h_histogram.html）</td>
+</tr>
+<tr>
+<td>高光警告（佳能）／高光显示（尼康）</td>
+<td>曝光过度/曝光不足警告</td>
+<td>播放时 DISP 切到柱状图显示，过曝/欠曝区域闪烁</td>
+<td>（201h_using_DISP_button.html）</td>
+</tr>
+<tr>
+<td>实时取景放大手动对焦（佳能 5×/10×）</td>
+<td>对焦放大 ／ MF中自动放大对焦 ／ 峰值显示</td>
+<td>MENU →（对焦）→［对焦辅助］→［对焦放大］；MF 转对焦环自动放大；峰值在［峰值显示］分组</td>
+<td>（0405_focus_magni.html；0405C_auto_magni_mf.html；0405M_peaking_display.html）</td>
+</tr>
+<tr>
+<td>画质 L/M/S、精细/标准</td>
+<td>JPEG影像尺寸 ／ JPEG影像质量</td>
+<td>MENU →（拍摄）→［影像质量/记录］</td>
+<td>L=33M（3:2）（0404M_jpeg_image_size.html；0404M_jpeg_image_quality.html）</td>
+</tr>
+<tr>
+<td>防闪烁（佳能 Flicker 检测）</td>
+<td>防闪烁拍摄 ／ 可变快门</td>
+<td>MENU →（拍摄）→［快门/静音］→［防闪烁设置］</td>
+<td>（201h_anti_flicker_setting.html）</td>
+</tr>
+</tbody>
+</table></div>
+<p>（表中名称与路径摘自《A7C II 操作手册》，均与索尼官方帮助指南逐条核对；本集未列出的操作见手册。）</p>
+</div>
+<div class="box errata"><h3>🕰️ 时代差异与勘误</h3><ul>
+<li>取景：课程里的单反用光学取景器（反光镜＋五棱镜/五面镜）→ A7C II 是电子取景器（1.0 cm，约 236 万点），取景画面就是传感器的实时画面；［实时取景显示］为「设置效果开」时可直接预览曝光和白平衡效果。</li>
+<li>反光镜：单反按快门时反光镜抬起、回落会带来震动，要用反光镜预升等办法 → A7C II 没有反光镜；三脚架上防抖动可用 2 秒自拍、Bluetooth 遥控器或手机遥控，并关闭 SteadyShot。</li>
+<li>防抖：课程年代防抖做在镜头里（佳能 IS、尼康 VR）→ A7C II 机身内置影像传感器位移防抖（SteadyShot），镜头带防抖开关时以镜头开关为准；上三脚架建议关闭。</li>
+<li>感光度：课程年代的单反高 ISO 噪点明显 → A7C II 照片 ISO 100～51200（扩展 50～204800），高 ISO 画质好得多，但「光线允许就用低 ISO」的原则不变。</li>
+<li>闪光同步：课程里的机型同步速度多在 1/180～1/250 秒 → A7C II 为 1/160 秒（全画幅，使用 Sony 闪光灯时）；电子快门或静音模式下不能闪光。</li>
+<li>影棚同步：部分课程机型有 PC 同步口接影棚闪光灯 → A7C II 部件表里没有 PC 同步口，影棚灯用热靴上的引闪器触发，并把［实时取景显示］设为「设置效果关」以免取景画面发暗。</li>
+</ul>
+</div>
+<div class="box terms"><h3>🔖 本集术语</h3><ul>
+<li><strong>光圈优先模式</strong>：一种半自动曝光模式，用户设定光圈值，相机自动计算快门速度。</li>
+<li><strong>单点对焦</strong>：对焦系统只对画面中指定的一点进行对焦。</li>
+<li><strong>单次对焦(One-shot AF)</strong>：对焦系统在半按快门时完成一次对焦，适合静态主体。</li>
+<li><strong>连续对焦(AI Servo AF)</strong>：对焦系统持续追踪移动主体，适合动态场景。</li>
+<li><strong>评价测光</strong>：相机将画面分为多个区域，分别测光后综合计算得出曝光值。</li>
+<li><strong>星空500法则</strong>：计算星空摄影快门时间的经验公式，快门时间=500÷焦距(毫米)。</li>
+<li><strong>渐变镜</strong>：一种一半透明一半半透明的滤镜，用于平衡画面明暗反差。</li>
+<li><strong>减光镜(ND镜)</strong>：降低进入相机光线量的滤镜，允许在强光下使用慢快门。</li>
+<li><strong>防光害滤镜</strong>：特殊滤镜，可减少光污染对星空拍摄的影响，使星空呈现更冷调的色调。</li>
+</ul>
+</div>
+<p class="ep-nav"><a href="#top">↑ 回到本页顶部</a></p></section>
+<section id="p83" class="episode" aria-labelledby="p83-t"><h2 id="p83-t"><span class="ep-no">P83</span> 尼康D850口袋摄影课-I 外观控件</h2>
+<p class="ep-meta">原标题：084尼康D850口袋摄影课-I 外观控件 · 时长 17:01 · <a href="https://www.bilibili.com/video/BV1Vt411E7nT?p=83" target="_blank" rel="noopener">▶ 在 B 站观看本集</a></p>
+<blockquote class="oneliner">
+<p><strong>一句话</strong>：详解尼康D850的E型镜头特性、机身各部位功能及操作逻辑。</p>
+</blockquote>
+<nav class="outline" aria-label="本集大纲"><p class="outline-t">本集大纲</p><ol>
+<li>课程介绍与E型镜头概述<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=83&t=48" target="_blank" rel="noopener" title="跳到视频 00:48">00:48</a></li>
+<li>镜头标识符与焦距建议<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=83&t=129" target="_blank" rel="noopener" title="跳到视频 02:09">02:09</a></li>
+<li>E型镜头的光圈设计与滤镜选择<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=83&t=243" target="_blank" rel="noopener" title="跳到视频 04:03">04:03</a></li>
+<li>方形滤镜的优势<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=83&t=502" target="_blank" rel="noopener" title="跳到视频 08:22">08:22</a></li>
+<li>机身前部与卡口介绍<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=83&t=532" target="_blank" rel="noopener" title="跳到视频 08:52">08:52</a></li>
+<li>机身顶部控件详解<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=83&t=599" target="_blank" rel="noopener" title="跳到视频 09:59">09:59</a></li>
+<li>机身后背控件详解<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=83&t=706" target="_blank" rel="noopener" title="跳到视频 11:46">11:46</a></li>
+<li>机身侧面与底部结构<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=83&t=850" target="_blank" rel="noopener" title="跳到视频 14:10">14:10</a></li>
+<li>操作逻辑总结<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=83&t=981" target="_blank" rel="noopener" title="跳到视频 16:21">16:21</a></li>
+</ol></nav>
+
+<h3>1. 课程介绍与E型镜头概述<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=83&t=48" target="_blank" rel="noopener" title="跳到视频 00:48">00:48–01:22</a></h3><p>课程将通过4个章节讲述D850的外观控件、关键功能、曝光控制及样片分析技巧，帮助学员在不到两小时内掌握相机。D850是尼康最新的民用全画幅单反，在 predecessor 基础上有升级改动，是现役性能最为强悍的单反之一，特别升级了高清视频拍摄功能，但本课程重点是图片拍摄技巧。D850作为单反相机分为机身和镜头两部分，老师手上D850挂载的是24-70mm f/2.8的E型镜头，采用电磁式光圈控制，利于视频拍摄时光圈的收缩控制。</p>
+
+<h3>2. 镜头标识符与焦距建议<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=83&t=129" target="_blank" rel="noopener" title="跳到视频 02:09">02:09–04:03</a></h3><p>镜头标识符包括透明对焦视窗（内有白色公制单位米和黄色英制单位英尺）、纳米涂层（N）、VR（新款24-70mm的特点，具有防抖性能）、AF-S（使用宁静自动对焦马达Silence）、尼克尔（尼康镜头品牌）、焦距范围（24-70mm，广角到中焦镜头）、光圈（1:2.8恒定）、ED镜片（超低色散镜片，抑制色散）。24-70mm适合风光、全景、中景，不适合人像近景特写（太近导致变形或尴尬），建议使用85-135mm之间的中焦镜头拍摄人像近景特写。M/A表示自动对焦，M表示手动对焦。</p>
+
+<h3>3. E型镜头的光圈设计与滤镜选择<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=83&t=243" target="_blank" rel="noopener" title="跳到视频 04:03">04:03–08:22</a></h3><p>E型镜头最大特点是没有机械光圈拨杆，摘下镜头时光圈全开（而以前的矩形镜头和D形镜头摘下后光圈处于最小状态）。镜头直径标注在镜头盖上，这只24-70mm镜头直径是82mm，需使用82mm的镜头盖、UV镜、偏振镜等圆形滤镜。品质镜头应装载卡色的MCUV，减少UV镜对成像质量的影响。推荐使用卡色金刚狼磁吸圆镜套装Pro，包括CPL偏振镜、ND减光镜。渐变镜用于风光摄影平衡光比，可调整角度实现天空地面平衡。减光镜用于慢门摄影，在强光下营造慢速快门效果；完成构图和对焦后，将镜头拨到手动对焦模式，再装上减光镜。方形滤镜优势：可调整上下位置，更有效控制天空和地面光比反差。</p>
+
+<h3>4. 机身前部与卡口介绍<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=83&t=532" target="_blank" rel="noopener" title="跳到视频 08:52">08:52–09:59</a></h3><p>卡口锁的作用：拆卸镜头时按下，将镜头转下来；安装镜头时无需按下，只需对准转上去。卡口环是机身前脸最显眼的部分，尽管镜头系统升级，但卡口仍是尼康的F口，可装载所有尼康F口镜头。前部有两个自定义按键：Fn1和Fn2，可设定为更有效的操作功能。前脸右上方有快门线接口和闪光同步接口。有尼康标志性的红色三角形外观，红色三角形上是相机的转盘（辅转盘），在手动曝光情况下用于控制光圈大小。</p>
+
+<h3>5. 机身顶部控件详解<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=83&t=599" target="_blank" rel="noopener" title="跳到视频 09:59">09:59–11:46</a></h3><p>顶部从左至右：释放模式转盘（需按插销才能转动），控制单张拍摄、连拍、定时拍摄、反光板预升。释放模式转盘中心嵌着四个快捷按钮：白平衡、画质、测光模式、曝光模式。中间有热靴，用于装载外置闪光灯和其他拓展设备。监屏用于监察相机关键信息，显示手动曝光、矩阵测光、快门、光圈、测光标尺等。快门按键外围是电源键。红点record键用于高清视频拍摄，按下开启，再按停止。ISO加减控件是曝光补偿按钮。尼康相机操作逻辑：按住对应按键不动，转动主转盘或辅转盘实现功能调节。</p>
+
+<h3>6. 机身后背控件详解<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=83&t=706" target="_blank" rel="noopener" title="跳到视频 11:46">11:46–14:10</a></h3><p>中心有圆形的光学取景器，旁边有光学取景器开关，可关闭以防止漏光（慢门拍摄时）或干扰测光（拍摄合影时使用自动曝光模式）。主转盘在手动曝光情况下控制快门速度，辅转盘用于功能快捷操作：按住对应按钮不动，转动转盘调节选项。AF-ON是对焦启动键，用于拍摄时更改焦点位置。上下左右导航键用于菜单选项选择。Lock键拨到L后，上下左右不能控制焦点或其他功能。INFO按钮显示相机关键参数选项。I键是补充快捷键，可调节其他功能，节省菜单查找时间。LV是尼康相机的实时取景，按下切换光学取景到屏幕取景，拨到摄像机图标表示将拍摄视频。左侧功能按钮：浏览键、删除键、菜单键。小钥匙（锁定照片）功能：观看照片时按下可锁定照片，防止通过机身删除键删除。放大缩小按钮用于查看照片细节或缩略图快速检索。OK键结合菜单和导航键使用，FN2是自定义按钮，可设定为快捷键。</p>
+
+<h3>7. 机身侧面与底部结构<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=83&t=850" target="_blank" rel="noopener" title="跳到视频 14:10">14:10–16:21</a></h3><p>机身有AF和M自动对焦/手动对焦切换。尼康相机多年未换卡口，仍可使用老镜头，机身带有自动对焦驱动马达。新型镜头不需要机身驱动，老款镜头（如50/1.8）需要机身驱动实现自动对焦。AF/M切换按键是装载D形镜头时切换自动对焦和手动对焦的。只有镜头上的M/A或A（自动对焦）同时机身对焦模式切换到AF，相机才进行自动对焦；任何一个调校为手动对焦模式都不会启动自动对焦。AF/M切换扳扣内围有复合键小按钮，按下转动主转盘和辅转盘分别控制对焦模式和对焦区域（第三节课详述）。侧面有存储卡舱、耳机/麦克风/USB/HDMI接口、BKT包围曝光控件。底部结构简单，1/4螺口用于连接三脚架快装板。电池仓：长时间不使用相机时，请拆下电池保存。</p>
+
+<h3>8. 操作逻辑总结<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=83&t=981" target="_blank" rel="noopener" title="跳到视频 16:21">16:21–17:01</a></h3><p>最重要的操作面板是右手大拇指（主转盘）和食指（辅转盘），用于调节光圈、快门及功能选项。</p>
+<p><strong>本集术语</strong></p>
+<ul>
+<li><strong>E型镜头</strong>：尼康新型镜头，采用电磁光圈控制，无机械拨杆。</li>
+<li><strong>VR</strong>：尼康镜头的防抖系统，手持拍摄时应打开；在运动交通工具上应从Normal调节为Active。</li>
+<li><strong>AF-S</strong>：使用宁静自动对焦马达的镜头。</li>
+<li><strong>ED镜片</strong>：超低色散镜片，抑制色散。</li>
+<li><strong>矩阵测光</strong>：尼康相机的测光模式之一。</li>
+<li><strong>实时取景</strong>：通过屏幕取景的模式。</li>
+<li><strong>包围曝光</strong>：连续拍摄不同曝光参数的照片。</li>
+<li><strong>反光板预升</strong>：在拍摄前升起反光板，防止震动。</li>
+<li><strong>F口</strong>：尼康镜头卡口标准。</li>
+<li><strong>MCUV</strong>：高品质UV镜品牌。</li>
+<li><strong>CPL</strong>：偏振镜。</li>
+<li><strong>ND</strong>：减光镜。</li>
+<li><strong>Normal/Active</strong>：防抖系统的两种模式。</li>
+</ul>
+
+<div class="box a7c2"><h3>📷 换成 A7C II 怎么做</h3><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>课程里的概念/操作</th>
+<th>A7C II 上的名称</th>
+<th>怎么操作</th>
+<th>说明（出处）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M 手动曝光</td>
+<td>M（手动曝光）</td>
+<td>模式旋钮转 M；前转盘=光圈，后转盘L=快门</td>
+<td>看 M.M. 指示；ISO 可设 ISO AUTO（0302C_manual_exposure.html）</td>
+</tr>
+<tr>
+<td>评价测光／矩阵测光</td>
+<td>多重</td>
+<td>MENU →（曝光/颜色）→［测光］→［测光模式］→［多重］</td>
+<td>出厂即多重；1200 区域；人脸优先可开关（0406_metering_mode.html；231h_specifications_ilc2360.html）</td>
+</tr>
+<tr>
+<td>反光镜预升</td>
+<td><strong>无此功能</strong>（无反光镜）</td>
+<td>防按快门抖动：［自拍定时(单张)］2 秒、Bluetooth 遥控器、手机/电脑遥控；［快门类型］设［电子快门］则只用电子快门拍摄（但不能闪光/B门/长时曝光降噪/防闪烁）</td>
+<td>帮助指南没有“电子前帘快门”选项；三脚架上要关闭 SteadyShot（0407_drivemode_selftimer.html；0706_bluetooth_remote.html；0414H_shutter_type.html；0414_still_image_steadyshot.html）</td>
+</tr>
+<tr>
+<td>包围曝光 AEB</td>
+<td>连续阶段曝光 ／ 单拍阶段曝光</td>
+<td>按控制拨轮左（拍摄模式）→ 选，再用控制拨轮选步长与张数；顺序在［阶段曝光设置］</td>
+<td>可选步长/张数全集帮助指南未载明（0407_drivemode_cont_bracket.html；0407G_bracket_setting.html）</td>
+</tr>
+<tr>
+<td>后按对焦（AF-ON）</td>
+<td>AF开启 ＋ 半按快门AF 关</td>
+<td>MENU →（对焦）→［AF/MF］→［半按快门AF］→［关］，用 AF-ON 键对焦</td>
+<td>AF-ON 出厂是［跟踪开启+AF开启］（0405_shutter_button_af.html；201h_using_AF_ON_button.html）</td>
+</tr>
+<tr>
+<td>驱动模式（单拍/连拍/自拍）</td>
+<td>拍摄模式</td>
+<td>按控制拨轮左</td>
+<td>索尼“拍摄模式”=驱动模式（0407C_drive_mode.html）</td>
+</tr>
+<tr>
+<td>自拍 2 秒/10 秒</td>
+<td>自拍定时(单张)</td>
+<td>拍摄模式→［自拍定时(单张)］→ 10/5/2 秒</td>
+<td>2 秒用于减少按快门抖动（0407_drivemode_selftimer.html）</td>
+</tr>
+<tr>
+<td>镜头防抖 IS/VR 开关</td>
+<td>SteadyShot（机身）</td>
+<td>MENU →（拍摄）→［影像稳定］→［〈静〉SteadyShot］</td>
+<td>三脚架上关；镜头有防抖开关时只能用镜头开关（0414_still_image_steadyshot.html）</td>
+</tr>
+</tbody>
+</table></div>
+<p>（表中名称与路径摘自《A7C II 操作手册》，均与索尼官方帮助指南逐条核对；本集未列出的操作见手册。）</p>
+</div>
+<div class="box errata"><h3>🕰️ 时代差异与勘误</h3><ul>
+<li>反光镜：单反按快门时反光镜抬起、回落会带来震动，要用反光镜预升等办法 → A7C II 没有反光镜；三脚架上防抖动可用 2 秒自拍、Bluetooth 遥控器或手机遥控，并关闭 SteadyShot。</li>
+<li>实时取景：单反要切到 LV（实时显示）才能用屏幕取景 → A7C II 的取景器和显示屏始终是实时取景，不用切换。</li>
+<li>防抖：课程年代防抖做在镜头里（佳能 IS、尼康 VR）→ A7C II 机身内置影像传感器位移防抖（SteadyShot），镜头带防抖开关时以镜头开关为准；上三脚架建议关闭。</li>
+<li>肩屏与专用键：单反顶部有肩屏和 ISO/WB/驱动等专用键 → A7C II 没有肩屏；ISO 在控制拨轮右、拍摄模式（单拍/连拍/自拍）在控制拨轮左、白平衡模式出厂在 C1，其余靠 Fn 菜单和自定义键。</li>
+<li>测光表：佳能取景器测光标尺左负右正、尼康相反 → A7C II 在 M 档显示 M.M.（手动测光）指示，ISO 为 ISO AUTO 时不显示。</li>
+<li>对焦系统：单反用独立的相位对焦模块，对焦点数量有限 → A7C II 用相位检测/对比度检测，支持被摄体识别（人、动物/鸟类、昆虫、汽车/火车、飞机）和跟踪。</li>
+</ul>
+</div>
+<div class="box terms"><h3>🔖 本集术语</h3><ul>
+<li>无</li>
+</ul>
+</div>
+<p class="ep-nav"><a href="#top">↑ 回到本页顶部</a></p></section>
+<section id="p84" class="episode" aria-labelledby="p84-t"><h2 id="p84-t"><span class="ep-no">P84</span> 尼康D850口袋摄影课-II 曝光控制</h2>
+<p class="ep-meta">原标题：085尼康D850口袋摄影课-II 曝光控制 · 时长 19:44 · <a href="https://www.bilibili.com/video/BV1Vt411E7nT?p=84" target="_blank" rel="noopener">▶ 在 B 站观看本集</a></p>
+<blockquote class="oneliner">
+<p><strong>一句话</strong>：掌握尼康D850的手动曝光模式和光圈优先模式，通过感光度、光圈和快门的调节控制画面曝光效果。</p>
+</blockquote>
+<nav class="outline" aria-label="本集大纲"><p class="outline-t">本集大纲</p><ol>
+<li>手动曝光模式介绍<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=84&t=51" target="_blank" rel="noopener" title="跳到视频 00:51">00:51</a></li>
+<li>手动曝光模式设置与界面<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=84&t=86" target="_blank" rel="noopener" title="跳到视频 01:26">01:26</a></li>
+<li>转盘控制功能<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=84&t=188" target="_blank" rel="noopener" title="跳到视频 03:08">03:08</a></li>
+<li>手动曝光调节顺序<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=84&t=255" target="_blank" rel="noopener" title="跳到视频 04:15">04:15</a></li>
+<li>感光度调节<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=84&t=288" target="_blank" rel="noopener" title="跳到视频 04:48">04:48</a></li>
+<li>ISO使用经验值<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=84&t=352" target="_blank" rel="noopener" title="跳到视频 05:52">05:52</a></li>
+<li>自动感光度设置<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=84&t=385" target="_blank" rel="noopener" title="跳到视频 06:25">06:25</a></li>
+<li>光圈选择原则<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=84&t=454" target="_blank" rel="noopener" title="跳到视频 07:34">07:34</a></li>
+<li>快门调节与测光表<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=84&t=553" target="_blank" rel="noopener" title="跳到视频 09:13">09:13</a></li>
+<li>手动曝光技巧总结<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=84&t=623" target="_blank" rel="noopener" title="跳到视频 10:23">10:23</a></li>
+<li>感光度与噪点关系<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=84&t=693" target="_blank" rel="noopener" title="跳到视频 11:33">11:33</a></li>
+<li>光圈、快门、感光度对画面的影响<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=84&t=762" target="_blank" rel="noopener" title="跳到视频 12:42">12:42</a></li>
+<li>景深影响因素<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=84&t=913" target="_blank" rel="noopener" title="跳到视频 15:13">15:13</a></li>
+<li>手动曝光适用场景<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=84&t=1011" target="_blank" rel="noopener" title="跳到视频 16:51">16:51</a></li>
+<li>光圈优先模式(A模式)<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=84&t=1044" target="_blank" rel="noopener" title="跳到视频 17:24">17:24</a></li>
+<li>光圈优先应用<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=84&t=1074" target="_blank" rel="noopener" title="跳到视频 17:54">17:54</a></li>
+<li>曝光补偿<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=84&t=1107" target="_blank" rel="noopener" title="跳到视频 18:27">18:27</a></li>
+</ol></nav>
+
+<h3>1. 手动曝光模式介绍<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=84&t=51" target="_blank" rel="noopener" title="跳到视频 00:51">00:51–01:26</a></h3><p>D850最重要的两个功能控件是<strong>主转盘</strong>和<strong>辅转盘</strong>。手动曝光模式(M)是指摄影师主动控制相机的<strong>光圈</strong>、<strong>快门</strong>和<strong>感光度</strong>，相机不干涉曝光结果。照片拍出来的曝光情况是过度、不足还是正常，完全由摄影师决定。</p>
+
+<h3>2. 手动曝光模式设置与界面<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=84&t=86" target="_blank" rel="noopener" title="跳到视频 01:26">01:26–03:08</a></h3><p>通过<strong>MODE</strong>按键选择手动曝光模式。屏幕默认黑屏，需按<strong>INFO键</strong>调出信息。屏幕显示快门、光圈、测光表等信息。光学取景器与屏幕显示有差异，快门在屏幕上显示为分数(如21秒)，在取景器中显示为自然数(如200)。</p>
+
+<h3>3. 转盘控制功能<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=84&t=188" target="_blank" rel="noopener" title="跳到视频 03:08">03:08–04:15</a></h3><p><strong>主转盘</strong>控制<strong>快门速度</strong>，转动主转盘一边是把快门变慢增加进光，一边是把快门变快减少进光。<strong>辅转盘</strong>控制<strong>光圈</strong>，一边是开大光圈(F值越小光圈越大)，一边是缩小光圈(F值越大光圈越小)。信息也可从光学取景器和实时取景中读取。</p>
+
+<h3>4. 手动曝光调节顺序<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=84&t=255" target="_blank" rel="noopener" title="跳到视频 04:15">04:15–04:48</a></h3><p>手动曝光的正确调节顺序是：<strong>感光度→光圈→快门</strong>。先定义感光度值，再确定光圈大小，最后通过调快门来控制曝光。这个顺序很重要，不要随意颠倒。</p>
+
+<h3>5. 感光度调节<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=84&t=288" target="_blank" rel="noopener" title="跳到视频 04:48">04:48–05:52</a></h3><p>按住<strong>ISO键</strong>不动转动主转盘调节ISO。ISO表示相机对光线的敏感程度。ISO调得越低需要的光越多，画面会比较细腻无噪点；ISO调得越高需要的光越少，适合弱光环境。光线强时用低ISO，光线弱时用高ISO。</p>
+
+<h3>6. ISO使用经验值<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=84&t=352" target="_blank" rel="noopener" title="跳到视频 05:52">05:52–06:25</a></h3><p>ISO使用经验值：晴天阳光直射用100-200 ISO；晴天阴影处用400 ISO；室内照明良好用800-1600 ISO；居家环境(照明较差)用1600-3200 ISO。当前录影棚环境光线较好，使用1000多ISO。</p>
+
+<h3>7. 自动感光度设置<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=84&t=385" target="_blank" rel="noopener" title="跳到视频 06:25">06:25–07:34</a></h3><p>ISO旁出现&quot;AUTO&quot;表示<strong>自动感光度</strong>已开启。按住ISO键转动辅转盘可关闭自动ISO，仅显示ISO和数值。自动感光度通常只在快门优先模式拍摄运动物体时使用，请务必关闭自动ISO。</p>
+
+<h3>8. 光圈选择原则<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=84&t=454" target="_blank" rel="noopener" title="跳到视频 07:34">07:34–09:13</a></h3><p>光圈选择原则：小场景用大光圈(小F值)，大场景用小光圈(大F值)。以F4为分界点：F≤4为大光圈，F≥8为小光圈。光圈控制<strong>景深</strong>，大光圈背景虚化，小光圈前后都清晰。拍摄静物用大光圈，拍摄风景用小光圈(F8、F11、F16)。</p>
+
+<h3>9. 快门调节与测光表<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=84&t=553" target="_blank" rel="noopener" title="跳到视频 09:13">09:13–10:23</a></h3><p>通过调节快门使<strong>测光标尺</strong>回到中间。测光标尺在正右边表示曝光过度，会拍出一片白；测光标尺在负左边表示曝光不足，照片会更暗。手动曝光就是调节快门让测光表回到中间，然后按下快门获得亮度正常的照片。</p>
+
+<h3>10. 手动曝光技巧总结<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=84&t=623" target="_blank" rel="noopener" title="跳到视频 10:23">10:23–11:02</a></h3><p>手动曝光技巧总结：根据光线选择感光度(强光用低ISO，弱光用高ISO)；根据场景大小选择光圈(大场景用小光圈，小场景用大光圈)；调节快门使测光表回到中间。测光表显示在光学取景器下方，通过调节快门而非屏幕来调校曝光。</p>
+
+<h3>11. 感光度与噪点关系<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=84&t=693" target="_blank" rel="noopener" title="跳到视频 11:33">11:33–12:05</a></h3><p>低ISO画面细腻，高ISO产生噪点。对于D850，正常拍摄最好不要超过ISO 1600，超过1600后记录意义大于画面质量。感光度越高，噪点越多，画面越粗糙。</p>
+
+<h3>12. 光圈、快门、感光度对画面的影响<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=84&t=762" target="_blank" rel="noopener" title="跳到视频 12:42">12:42–15:13</a></h3><p>光圈大小与景深关系：光圈越大，景深越小，背景越模糊。快门速度与运动物体：快门越高，运动越清晰。拍摄走动的人至少要1/125秒，跑动的人用1/250秒或更高，驶过的汽车需1/400秒或更高。安全快门速度：手持拍摄静止物体不慢于1/30秒。感光度与噪点关系：D850在ISO 1600开始出现噪点。</p>
+
+<h3>13. 景深影响因素<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=84&t=913" target="_blank" rel="noopener" title="跳到视频 15:13">15:13–16:18</a></h3><p>景深不仅受光圈大小影响，还受<strong>焦距</strong>和<strong>距离</strong>影响。焦距越长，景深越小，背景越虚化；靠得越近，景深越小，背景越虚化。若背景不够虚化，可拉长焦距至70mm并靠近被摄物体。注意镜头最近对焦距离限制，以24-70mm镜头为例，最近工作距离是38cm，从相机焦平面位置算起。</p>
+
+<h3>14. 手动曝光适用场景<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=84&t=1011" target="_blank" rel="noopener" title="跳到视频 16:51">16:51–17:24</a></h3><p>手动曝光主要适用于：极弱光摄影、星空摄影、烟花摄影以及摄影棚中的静物摄影。日常生活旅行记录主要使用光圈优先模式，效率更高。</p>
+
+<h3>15. 光圈优先模式(A模式)<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=84&t=1044" target="_blank" rel="noopener" title="跳到视频 17:24">17:24–17:54</a></h3><p>光圈优先模式(A模式)下，摄影师手动控制光圈，相机自动计算快门速度。按下MODE按键转动主转盘调节到A模式。转动辅转盘控制光圈，主转盘在光圈优先模式下无反应。相机计算快门的标准与手动模式让测光表回到中间一致。</p>
+
+<h3>16. 光圈优先应用<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=84&t=1074" target="_blank" rel="noopener" title="跳到视频 17:54">17:54–18:27</a></h3><p>光圈优先应用：选择大光圈拍摄人像或静物，获得背景虚化效果；选择小光圈(F8左右)拍摄风景，实现大景深，使从近处到远处都清晰。</p>
+
+<h3>17. 曝光补偿<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=84&t=1107" target="_blank" rel="noopener" title="跳到视频 18:27">18:27–19:05</a></h3><p>光圈优先模式下可能出现曝光问题，需使用<strong>曝光补偿</strong>矫正。按住加减号键转动主转盘调节曝光补偿值。正补偿增加曝光，画面更亮；负补偿减少曝光，画面更暗。可通过降低曝光补偿拍摄剪影，或增加曝光补偿拍摄逆光人像。</p>
+
+<div class="box a7c2"><h3>📷 换成 A7C II 怎么做</h3><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>课程里的概念/操作</th>
+<th>A7C II 上的名称</th>
+<th>怎么操作</th>
+<th>说明（出处）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M 手动曝光</td>
+<td>M（手动曝光）</td>
+<td>模式旋钮转 M；前转盘=光圈，后转盘L=快门</td>
+<td>看 M.M. 指示；ISO 可设 ISO AUTO（0302C_manual_exposure.html）</td>
+</tr>
+<tr>
+<td>ISO 感光度（课程称“相对感光度”）</td>
+<td>ISO</td>
+<td>按控制拨轮右（ISO）选值；或 MENU →（曝光/颜色）→［曝光］→［ISO］</td>
+<td>出厂 ISO AUTO；照片 100～51200，扩展 50～204800（0408C_iso.html；231h_specifications_ilc2360.html）</td>
+</tr>
+<tr>
+<td>曝光补偿</td>
+<td>曝光补偿</td>
+<td>转后转盘R；或 MENU →（曝光/颜色）→［曝光补偿］→［曝光补偿］</td>
+<td>±5.0 EV；M 模式仅 ISO AUTO 时有效；智能自动/场景选择不可用（0406B_exposure_compensation.html）</td>
+</tr>
+<tr>
+<td>AE 锁（佳能 ✱ 键／尼康 AE-L）</td>
+<td>AE锁定保持 ／ AE锁定切换</td>
+<td><strong>无专用键</strong>：MENU →（设置）→［操作自定义］→［〈静〉自定键/转盘设置］→ 选键 → 分配</td>
+<td>也可用［快门AEL］让半按锁曝光；锁定图标为“✱”（0406_ae_lock.html；0406_shutter_button_ael.html）</td>
+</tr>
+<tr>
+<td>评价测光／矩阵测光</td>
+<td>多重</td>
+<td>MENU →（曝光/颜色）→［测光］→［测光模式］→［多重］</td>
+<td>出厂即多重；1200 区域；人脸优先可开关（0406_metering_mode.html；231h_specifications_ilc2360.html）</td>
+</tr>
+<tr>
+<td>局部测光（佳能）</td>
+<td><strong>无同名模式</strong></td>
+<td>替代：［点测光］→［点测光: 大］，或［中心］（推论）</td>
+<td>测光圆占画面的比例帮助指南未载明（0406_metering_mode.html）</td>
+</tr>
+<tr>
+<td>AWB 自动白平衡</td>
+<td>自动（白平衡模式）</td>
+<td>按 C1（出厂=白平衡模式）→［自动］</td>
+<td>偏暖/偏白取向用［AWB优先级设置］（0410C_white_balance.html；0410L_auto_white_balance_priority.html）</td>
+</tr>
+<tr>
+<td>自定义白平衡（佳能）／预设手动 PRE（尼康）</td>
+<td>自定义 1～3</td>
+<td>白平衡模式选［自定义 N］→ 按右 → 选设置图标 → 白色填满捕捉框按中央 → 再按中央注册</td>
+<td>用闪光捕获的要配闪光使用（0410B_custom_white_balance.html）</td>
+</tr>
+<tr>
+<td>色温 K</td>
+<td>色温/滤光片</td>
+<td>白平衡模式选［色温/滤光片］→ 转后转盘L 或 R 改 K 值</td>
+<td>K 值范围帮助指南未载明（0410C_white_balance.html）</td>
+</tr>
+<tr>
+<td>单次自动对焦 ONE SHOT／AF-S</td>
+<td>单次AF（AF-S）</td>
+<td>MENU →（对焦）→［AF/MF］→［对焦模式］→［单次AF］</td>
+<td>合焦锁定（0405C_focus_mode.html）</td>
+</tr>
+<tr>
+<td>人工智能伺服 AI SERVO／AF-C</td>
+<td>连续AF（AF-C）</td>
+<td>同上 →［连续AF］</td>
+<td>“跟踪”类对焦区域只在连续AF有效（0405C_focus_mode.html；0405C_autofocus_area.html）</td>
+</tr>
+<tr>
+<td>景深预览</td>
+<td>光圈预览</td>
+<td><strong>无专用键</strong>：给自定义键分配［光圈预览］，按住预览</td>
+<td>另有［拍摄结果预览］（0414_aperture_preview.html；0414_shooting_result_preview.html）</td>
+</tr>
+<tr>
+<td>自拍 2 秒/10 秒</td>
+<td>自拍定时(单张)</td>
+<td>拍摄模式→［自拍定时(单张)］→ 10/5/2 秒</td>
+<td>2 秒用于减少按快门抖动（0407_drivemode_selftimer.html）</td>
+</tr>
+<tr>
+<td>直方图</td>
+<td>柱状图</td>
+<td>拍摄或播放时按 DISP 切换</td>
+<td>用闪光灯时拍摄画面与回放直方图差异很大（201h_histogram.html）</td>
+</tr>
+<tr>
+<td>高光警告（佳能）／高光显示（尼康）</td>
+<td>曝光过度/曝光不足警告</td>
+<td>播放时 DISP 切到柱状图显示，过曝/欠曝区域闪烁</td>
+<td>（201h_using_DISP_button.html）</td>
+</tr>
+<tr>
+<td>M 档曝光量标尺</td>
+<td>M.M.（手动测光）</td>
+<td>M 档且 ISO 非 AUTO 时显示</td>
+<td>ISO AUTO 时不显示（0302C_manual_exposure.html）</td>
+</tr>
+</tbody>
+</table></div>
+<p>（表中名称与路径摘自《A7C II 操作手册》，均与索尼官方帮助指南逐条核对；本集未列出的操作见手册。）</p>
+</div>
+<div class="box errata"><h3>🕰️ 时代差异与勘误</h3><ul>
+<li>感光度：课程年代的单反高 ISO 噪点明显 → A7C II 照片 ISO 100～51200（扩展 50～204800），高 ISO 画质好得多，但「光线允许就用低 ISO」的原则不变。</li>
+<li>测光表：佳能取景器测光标尺左负右正、尼康相反 → A7C II 在 M 档显示 M.M.（手动测光）指示，ISO 为 ISO AUTO 时不显示。</li>
+<li>闪光同步：课程里的机型同步速度多在 1/180～1/250 秒 → A7C II 为 1/160 秒（全画幅，使用 Sony 闪光灯时）；电子快门或静音模式下不能闪光。</li>
+<li>对焦系统：单反用独立的相位对焦模块，对焦点数量有限 → A7C II 用相位检测/对比度检测，支持被摄体识别（人、动物/鸟类、昆虫、汽车/火车、飞机）和跟踪。</li>
+<li>画幅：课程里不少机型是 APS-C（佳能约 1.6 倍、尼康/索尼约 1.5 倍裁切）→ A7C II 是 35 mm 全画幅（35.9×23.9 mm），装 APS-C 镜头时可用［APS-C S35拍摄］。</li>
+<li>检查曝光：单反主要靠拍后回放检查 → A7C II 拍摄前就能看柱状图、斑马线等辅助显示；回放时按 DISP 看柱状图和过曝/欠曝警告。</li>
+</ul>
+</div>
+<div class="box terms"><h3>🔖 本集术语</h3><ul>
+<li><strong>手动曝光模式(M)</strong>：摄影师主动控制光圈、快门和感光度的曝光模式</li>
+<li><strong>主转盘</strong>：控制快门速度的转盘</li>
+<li><strong>辅转盘</strong>：控制光圈大小的转盘</li>
+<li><strong>感光度(ISO)</strong>：相机对光线的敏感程度</li>
+<li><strong>景深</strong>：镜头方向上前后的清晰范围</li>
+<li><strong>光圈优先模式(A模式)</strong>：摄影师手动控制光圈，相机自动计算快门速度的模式</li>
+<li><strong>曝光补偿</strong>：在相机自动测光基础上增加或减少曝光量的功能</li>
+<li><strong>测光表</strong>：显示曝光情况的指示器，从负到正</li>
+</ul>
+</div>
+<p class="ep-nav"><a href="#top">↑ 回到本页顶部</a></p></section>
+<section id="p85" class="episode" aria-labelledby="p85-t"><h2 id="p85-t"><span class="ep-no">P85</span> 尼康D850关键功能</h2>
+<p class="ep-meta">原标题：086尼康D850口袋摄影课-III 关键功能 · 时长 14:48 · <a href="https://www.bilibili.com/video/BV1Vt411E7nT?p=85" target="_blank" rel="noopener">▶ 在 B 站观看本集</a></p>
+<blockquote class="oneliner">
+<p><strong>一句话</strong>：尼康D850通过主转盘和辅转盘结合机身控件实现关键功能的快捷操作，包括照片格式、分辨率、白平衡、测光模式、曝光模式、ISO、曝光补偿、对焦模式和释放模式等。</p>
+</blockquote>
+<nav class="outline" aria-label="本集大纲"><p class="outline-t">本集大纲</p><ol>
+<li>相机顶部按键概览<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=85&t=51" target="_blank" rel="noopener" title="跳到视频 00:51">00:51</a></li>
+<li>QUAL按键功能<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=85&t=83" target="_blank" rel="noopener" title="跳到视频 01:23">01:23</a></li>
+<li>WB按键功能<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=85&t=150" target="_blank" rel="noopener" title="跳到视频 02:30">02:30</a></li>
+<li>测光模式<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=85&t=216" target="_blank" rel="noopener" title="跳到视频 03:36">03:36</a></li>
+<li>MOD曝光模式<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=85&t=413" target="_blank" rel="noopener" title="跳到视频 06:53">06:53</a></li>
+<li>ISO感光度控制<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=85&t=445" target="_blank" rel="noopener" title="跳到视频 07:25">07:25</a></li>
+<li>曝光补偿调节<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=85&t=552" target="_blank" rel="noopener" title="跳到视频 09:12">09:12</a></li>
+<li>对焦模式切换<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=85&t=587" target="_blank" rel="noopener" title="跳到视频 09:47">09:47</a></li>
+<li>单次对焦与连续对焦区别<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=85&t=631" target="_blank" rel="noopener" title="跳到视频 10:31">10:31</a></li>
+<li>焦点选择方式<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=85&t=746" target="_blank" rel="noopener" title="跳到视频 12:26">12:26</a></li>
+<li>释放模式选择<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=85&t=813" target="_blank" rel="noopener" title="跳到视频 13:33">13:33</a></li>
+<li>其他关键控件<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=85&t=844" target="_blank" rel="noopener" title="跳到视频 14:04">14:04</a></li>
+</ol></nav>
+
+<h3>1. 相机顶部按键概览<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=85&t=51" target="_blank" rel="noopener" title="跳到视频 00:51">00:51–01:23</a></h3><p>尼康D850的关键功能通过主转盘和辅转盘结合机身控件实现快捷操作。相机顶部有四个主要按键，从左至右依次是QUAL、WB、测光模式按键和MOD。这些按键在手动模式下分别控制快门和光圈，同时还能结合其他控件实现关键功能的快捷操作。</p>
+
+<h3>2. QUAL按键功能<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=85&t=83" target="_blank" rel="noopener" title="跳到视频 01:23">01:23–02:30</a></h3><p>按下QUAL键，转动主转盘可选择照片的记录格式，包括精细JPEG、普通JPEG、一般JPEG、RAW格式、RAW+JPEG格式。按住QUAL键不动，转动辅转盘可切换照片分辨率：L使用所有像素，M使用一半像素，S使用更少像素。低分辨率适合用于手机朋友圈、微博等分享，无需印刷的照片。</p>
+
+<h3>3. WB按键功能<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=85&t=150" target="_blank" rel="noopener" title="跳到视频 02:30">02:30–03:36</a></h3><p>按住WB按键不动，转动主转盘可更改白平衡模式，包括自动白平衡、阳光白平衡、灯光白平衡等及自定义K值选项。转动辅转盘可对白平衡进行漂移，漂移的意思是在当前白平衡基础上让它偏冷或偏暖。白平衡作用是控制照片颜色还原，一般情况下使用自动白平衡即可。特殊环境下如钨丝灯环境，自动白平衡偏黄，可调校为钨丝灯白平衡；夜景若希望冷调可使用钨丝灯白平衡，希望暖调可使用阴影或阴天白平衡。</p>
+
+<h3>4. 测光模式<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=85&t=216" target="_blank" rel="noopener" title="跳到视频 03:36">03:36–06:53</a></h3><p>测光模式按键图标较小，需结合讲义图案理解。矩阵测光是默认方式，将画面分成多个区域同时测光并做平均，偏重于焦点位置光线，是使用最多的测光模式。点测光只测量焦点位置光线，适合复杂光线场景如逆光、点光源照明。中央重点测光类似于矩阵测光但偏重于中心还原。主要使用矩阵测光，光线极端且需快速拍摄时使用点测光。逆光拍人有足够时间时，可用矩阵测光加曝光补偿让人脸曝光准确，效果与点测光点测人脸相同。</p>
+
+<h3>5. MOD曝光模式<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=85&t=413" target="_blank" rel="noopener" title="跳到视频 06:53">06:53–07:25</a></h3><p>按住MOD按键不动，转动主转盘可选择曝光模式：M手动曝光、A光圈优先曝光、S快门优先曝光和P程序全自动曝光。程序全自动曝光模式下，光圈和快门不由摄影师控制，但其他关键控件主动权仍然在摄影师手中。</p>
+
+<h3>6. ISO感光度控制<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=85&t=445" target="_blank" rel="noopener" title="跳到视频 07:25">07:25–08:41</a></h3><p>按住ISO键不动，转动主转盘选择对应的ISO，原则是强光用低ISO，弱光用高ISO。按住ISO键不动，转动辅转盘可选择是否开启自动ISO。快门优先追拍运动时使用自动ISO，其他情况使用手动ISO。感光度是对光线的敏感程度，可理解为快门的加速度，感光度越高快门可越快，便于抓拍运动物体和弱光手持拍摄。消极效应是感光度越高画面噪点越多。</p>
+
+<h3>7. 曝光补偿调节<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=85&t=552" target="_blank" rel="noopener" title="跳到视频 09:12">09:12–09:12</a></h3><p>加减符号按键按住不动，转动主转盘可调节曝光补偿。当你发现拍出来的照片曝光不足，我们可以通过增加一点曝光补偿来让画面亮起来。你发现拍出照片曝光过度，我们可以通过减一点曝光补偿的方式，让照片的亮度合乎你的需要。</p>
+
+<h3>8. 对焦模式切换<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=85&t=587" target="_blank" rel="noopener" title="跳到视频 09:47">09:47–11:03</a></h3><p>机身卡口处有自动对焦和手动对焦切换的扳扣，自动对焦一定要把它拨到AF上，才能够实现自动对焦。同时要记得镜头也要拨到自动对焦上，二者缺一不可。中间复合型按钮按下不动，转动主转盘可切换AFS（单次对焦）和AFC（连续对焦）。单次对焦适合拍摄静止物体、摆拍物体、运动幅度不大的物体；连续对焦适合抓拍运动速度快的物体。单次对焦时按下快门，相机自动对焦后发出“滴滴”声表示对焦就绪。</p>
+
+<h3>9. 单次对焦与连续对焦区别<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=85&t=631" target="_blank" rel="noopener" title="跳到视频 10:31">10:31–11:52</a></h3><p>单次对焦是对一次就停下来，适合拍摄静止或运动幅度不大的物体。若被摄物体朝相机方向快速移动，使用单次对焦可能导致实际拍摄时焦点错误，此时应选择连续对焦(AFC)模式，保持半按快门时相机持续转动镜片保持焦点清晰。简单来说，拍摄静止或运动幅度不大的物体用单次对焦，拍摄连续运动追踪运动的用连续对焦。</p>
+
+<h3>10. 焦点选择方式<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=85&t=746" target="_blank" rel="noopener" title="跳到视频 12:26">12:26–12:57</a></h3><p>焦点是景深的中心点，即画面中最清晰的点，主体在哪焦点就应放在哪。拍摄人时焦点在脸上，特写时在眼睛上，风景时在中景上。拍摄运动物体需追踪时，可选择扩展焦点(一次选中多个焦点)或自动焦点(让相机自行侦测焦点位置)。操作方式是按住复合按钮不动，转动主转盘选择单次还是连续，转动辅转盘选择焦点区域。在单点对焦或扩展焦点情况下，轻点一下快门，用手去摇动摇杆，能够快速更改对焦点的位置到构图主体上。</p>
+
+<h3>11. 释放模式选择<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=85&t=813" target="_blank" rel="noopener" title="跳到视频 13:33">13:33–14:04</a></h3><p>按下小插销不动，转动相机转盘可选择释放模式：S是单张拍摄，CL是低速连拍，CH是高速连拍，还有定时拍摄。释放模式决定按下快门是马上拍摄一张、按住拍摄多张，还是有计时过程的定时拍摄。</p>
+
+<h3>12. 其他关键控件<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=85&t=844" target="_blank" rel="noopener" title="跳到视频 14:04">14:04–14:48</a></h3><p>D850这款相机还有其他相对不那么关键的控件，在“I”菜单中按下“I”键可以选择。在单点对焦或扩展焦点情况下，轻点快门后用手摇动摇杆可快速更改对焦点位置到构图主体上。</p>
+
+<div class="box a7c2"><h3>📷 换成 A7C II 怎么做</h3><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>课程里的概念/操作</th>
+<th>A7C II 上的名称</th>
+<th>怎么操作</th>
+<th>说明（出处）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M 手动曝光</td>
+<td>M（手动曝光）</td>
+<td>模式旋钮转 M；前转盘=光圈，后转盘L=快门</td>
+<td>看 M.M. 指示；ISO 可设 ISO AUTO（0302C_manual_exposure.html）</td>
+</tr>
+<tr>
+<td>ISO 感光度（课程称“相对感光度”）</td>
+<td>ISO</td>
+<td>按控制拨轮右（ISO）选值；或 MENU →（曝光/颜色）→［曝光］→［ISO］</td>
+<td>出厂 ISO AUTO；照片 100～51200，扩展 50～204800（0408C_iso.html；231h_specifications_ilc2360.html）</td>
+</tr>
+<tr>
+<td>曝光补偿</td>
+<td>曝光补偿</td>
+<td>转后转盘R；或 MENU →（曝光/颜色）→［曝光补偿］→［曝光补偿］</td>
+<td>±5.0 EV；M 模式仅 ISO AUTO 时有效；智能自动/场景选择不可用（0406B_exposure_compensation.html）</td>
+</tr>
+<tr>
+<td>评价测光／矩阵测光</td>
+<td>多重</td>
+<td>MENU →（曝光/颜色）→［测光］→［测光模式］→［多重］</td>
+<td>出厂即多重；1200 区域；人脸优先可开关（0406_metering_mode.html；231h_specifications_ilc2360.html）</td>
+</tr>
+<tr>
+<td>中央重点平均测光</td>
+<td>中心</td>
+<td>同上 →［中心］</td>
+<td>偏重中央（0406_metering_mode.html）</td>
+</tr>
+<tr>
+<td>点测光</td>
+<td>点测光（点测光: 标准）</td>
+<td>同上 →［点测光］→［点测光: 标准］；位置用 MENU →（曝光/颜色）→［测光］→［点测光点］设［中间］或［对焦点联动］</td>
+<td>联动只对点/扩展点类对焦区域有效（0406_metering_mode.html；0406L_spotmetering_link_focus_point.html）</td>
+</tr>
+<tr>
+<td>单次自动对焦 ONE SHOT／AF-S</td>
+<td>单次AF（AF-S）</td>
+<td>MENU →（对焦）→［AF/MF］→［对焦模式］→［单次AF］</td>
+<td>合焦锁定（0405C_focus_mode.html）</td>
+</tr>
+<tr>
+<td>人工智能伺服 AI SERVO／AF-C</td>
+<td>连续AF（AF-C）</td>
+<td>同上 →［连续AF］</td>
+<td>“跟踪”类对焦区域只在连续AF有效（0405C_focus_mode.html；0405C_autofocus_area.html）</td>
+</tr>
+<tr>
+<td>对焦点选择</td>
+<td>对焦区域 + 对焦标准键</td>
+<td>对焦区域选［点: L/M/S］［扩展点］［区］等；按控制拨轮中央（对焦标准）后上/下/左/右移框，（删除）键回中央；也可触摸拖动</td>
+<td>出厂对焦区域为广域（0405C_autofocus_area.html；0405L_focus_standard.html）</td>
+</tr>
+<tr>
+<td>驱动模式（单拍/连拍/自拍）</td>
+<td>拍摄模式</td>
+<td>按控制拨轮左</td>
+<td>索尼“拍摄模式”=驱动模式（0407C_drive_mode.html）</td>
+</tr>
+<tr>
+<td>画质 L/M/S、精细/标准</td>
+<td>JPEG影像尺寸 ／ JPEG影像质量</td>
+<td>MENU →（拍摄）→［影像质量/记录］</td>
+<td>L=33M（3:2）（0404M_jpeg_image_size.html；0404M_jpeg_image_quality.html）</td>
+</tr>
+<tr>
+<td>RAW+JPEG</td>
+<td>RAW&amp;JPEG</td>
+<td>MENU →（拍摄）→［影像质量/记录］→［〈静〉文件格式］→［RAW&amp;JPEG］</td>
+<td>［JPEG/HEIF切换］为 HEIF 时变成 RAW&amp;HEIF；RAW 压缩方式在［RAW文件类型］（0404M_file_format.html；201h_jpeg_heif_switch.html）</td>
+</tr>
+</tbody>
+</table></div>
+<p>（表中名称与路径摘自《A7C II 操作手册》，均与索尼官方帮助指南逐条核对；本集未列出的操作见手册。）</p>
+</div>
+<div class="box errata"><h3>🕰️ 时代差异与勘误</h3><ul>
+<li>肩屏与专用键：单反顶部有肩屏和 ISO/WB/驱动等专用键 → A7C II 没有肩屏；ISO 在控制拨轮右、拍摄模式（单拍/连拍/自拍）在控制拨轮左、白平衡模式出厂在 C1，其余靠 Fn 菜单和自定义键。</li>
+<li>测光表：佳能取景器测光标尺左负右正、尼康相反 → A7C II 在 M 档显示 M.M.（手动测光）指示，ISO 为 ISO AUTO 时不显示。</li>
+<li>对焦系统：单反用独立的相位对焦模块，对焦点数量有限 → A7C II 用相位检测/对比度检测，支持被摄体识别（人、动物/鸟类、昆虫、汽车/火车、飞机）和跟踪。</li>
+<li>场景模式：单反模式转盘上有人像、风景、运动等场景图标 → A7C II 在模式旋钮 AUTO 档里选［智能自动］或［场景选择］（肖像、运动、微距、风景、黄昏、夜景、夜景肖像）。</li>
+<li>自定义拍摄模式：佳能 C1～C3、尼康 U1/U2 → A7C II 模式旋钮的 1/2/3（调出用［MR拍摄设置存储］存下的设置）。</li>
+<li>叫法：单拍/连拍/自拍在 A7C II 上叫「拍摄模式」（按控制拨轮左），包围曝光叫「阶段曝光」。</li>
+</ul>
+</div>
+<div class="box terms"><h3>🔖 本集术语</h3><ul>
+<li><strong>QUAL</strong>：照片格式和分辨率选择按键</li>
+<li><strong>WB</strong>：白平衡调节按键</li>
+<li><strong>矩阵测光</strong>：将画面分成多个区域同时测光并做平均，偏重于焦点位置光线的测光方式</li>
+<li><strong>点测光</strong>：只测量焦点位置光线的测光方式，适合复杂光线场景</li>
+<li><strong>中央重点测光</strong>：类似于矩阵测光但偏重于中心还原的测光方式</li>
+<li><strong>漂移</strong>：在当前白平衡基础上通过转动辅转盘偏冷或偏暖</li>
+<li><strong>AFS</strong>：单次对焦模式，适合拍摄静止物体</li>
+<li><strong>AFC</strong>：连续对焦模式，适合拍摄运动物体</li>
+<li><strong>GROUP</strong>：群体对焦模式，一次选择多个焦点</li>
+<li><strong>AUTO</strong>：自动焦点选择，让相机自行侦测焦点位置</li>
+<li><strong>摇杆</strong>：用于快速移动对焦点位置的控件</li>
+<li><strong>释放模式</strong>：控制拍摄方式，包括单张拍摄、低速连拍、高速连拍和定时拍摄</li>
+</ul>
+</div>
+<p class="ep-nav"><a href="#top">↑ 回到本页顶部</a></p></section>
+<section id="p86" class="episode" aria-labelledby="p86-t"><h2 id="p86-t"><span class="ep-no">P86</span> 尼康D850口袋摄影课-IV 样片技巧</h2>
+<p class="ep-meta">原标题：087尼康D850口袋摄影课-IV 样片技巧 · 时长 15:04 · <a href="https://www.bilibili.com/video/BV1Vt411E7nT?p=86" target="_blank" rel="noopener">▶ 在 B 站观看本集</a></p>
+<blockquote class="oneliner">
+<p><strong>一句话</strong>：通过人像、抓拍、风光、星空等不同题材的样片分析，详解尼康D850在实际拍摄中的操控方法和参数设置。</p>
+</blockquote>
+<nav class="outline" aria-label="本集大纲"><p class="outline-t">本集大纲</p><ol>
+<li>户外人像拍摄技巧<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=86&t=47" target="_blank" rel="noopener" title="跳到视频 00:47">00:47</a></li>
+<li>弱光室内人像拍摄<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=86&t=210" target="_blank" rel="noopener" title="跳到视频 03:30">03:30</a></li>
+<li>抓拍运动瞬间<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=86&t=366" target="_blank" rel="noopener" title="跳到视频 06:06">06:06</a></li>
+<li>普通风光摄影<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=86&t=508" target="_blank" rel="noopener" title="跳到视频 08:28">08:28</a></li>
+<li>慢门风光摄影<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=86&t=577" target="_blank" rel="noopener" title="跳到视频 09:37">09:37</a></li>
+<li>星空摄影<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=86&t=687" target="_blank" rel="noopener" title="跳到视频 11:27">11:27</a></li>
+<li>静物摄影简介<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=86&t=863" target="_blank" rel="noopener" title="跳到视频 14:23">14:23</a></li>
+</ol></nav>
+
+<h3>1. 户外人像拍摄技巧<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=86&t=47" target="_blank" rel="noopener" title="跳到视频 00:47">00:47–02:51</a></h3><p>使用光圈优先模式（A模式）进行拍摄。按下MODE调节主转盘至A模式，根据现场光线设定感光度，户外晴天阳光照到的地方使用100-200的感光度以保持画质。大多数情况下使用AWB自动白平衡，测光方式推荐矩阵测光。对焦模式选择单次对焦（AF-S），使用单点对焦，将焦点对在人的脸上。人像拍摄分为两种：单纯性人像需要完全虚化背景，光圈开到最大（如f/1.4左右，但建议稍微收缩以加强锐度）；环境人像要求背景有一定模糊但非完全模糊，光圈控制在f/5.6左右。完成设置后，通过摇杆将焦点拨到人的脸上，按下快门后检查曝光，必要时调整曝光补偿。</p>
+
+<h3>2. 弱光室内人像拍摄<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=86&t=210" target="_blank" rel="noopener" title="跳到视频 03:30">03:30–05:27</a></h3><p>弱光下室内人像拍摄与户外类似，光圈需开大，对焦模式用单次对焦，焦点用单点。关键在于感光度的调整，可先保守设定为1600-3200。根据镜头情况进行测光，查看快门速度。如果快门速度已达到1/100秒以上（摆拍人像1/30秒即可清晰），可降低感光度以提高画质；如果快门速度太慢（如1/10秒），则需开大光圈或提高感光度。D850取消了内置闪光灯设计，若需补光需加外置闪光灯。</p>
+
+<h3>3. 抓拍运动瞬间<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=86&t=366" target="_blank" rel="noopener" title="跳到视频 06:06">06:06–07:57</a></h3><p>抓拍运动物体（如扣篮）时，将曝光模式设定为快门优先（S模式），感光度设为自动（ISO Auto）。打开连拍功能，高速运动使用高速连拍（CH）。对焦模式设为连续对焦（AF-C），焦点模式可设为扩展焦点或3D对焦点。对于人物运动，可选择25个对焦点并放在画面中间偏右位置。评估场景所需快门速度（如1/1000秒），快门速度改变时感光度会自动调整。保持半按快门追踪对象，追踪过程中按住快门拍摄高速运动瞬间。拍完后检查曝光，如有问题通过曝光补偿纠正。</p>
+
+<h3>4. 普通风光摄影<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=86&t=508" target="_blank" rel="noopener" title="跳到视频 08:28">08:28–09:37</a></h3><p>风光摄影使用光圈优先（A模式），感光度使用原生感光度（通常为100）。需要足够大的景深，光圈调校到f/11左右。构图后拍摄样片，分析曝光情况并必要时使用曝光补偿。风光摄影常面临大角度光线和逆光测光问题，导致天空和地面反差大。解决方法是使用卡色磁吸渐变镜来平衡天空和地面的光比。在装载渐变镜后，光圈优先模式下不需要额外进行曝光补偿，因为相机的TTL测光表已将滤镜因素计入。</p>
+
+<h3>5. 慢门风光摄影<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=86&t=577" target="_blank" rel="noopener" title="跳到视频 09:37">09:37–10:55</a></h3><p>慢门风光摄影使用低感光度和小光圈，但在强光下实现慢门较困难。需要在镜头前端加装卡色磁吸减光镜来减弱光线。操作方法：在脚架上取景构图并准确对焦，然后将对焦拨到手动对焦锁定焦点，装上减光镜后直接按快门。拍完后进行曝光分析，利用曝光补偿纠正画面亮度。磁吸滤镜系统还可以叠加渐变镜，既实现慢门又平衡天空和地面反差。</p>
+
+<h3>6. 星空摄影<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=86&t=687" target="_blank" rel="noopener" title="跳到视频 11:27">11:27–13:51</a></h3><p>星空摄影必须使用手动曝光（M模式）。根据镜头最大光圈设定感光度：f/1.4镜头用400-800感光度；f/2.8镜头用1600；f/4镜头用3200。光圈开到最大，用广角端最短焦距取景。固定相机在脚架上构图后锁死云台，采用手动对焦并将对焦拨到手动，转动手动对焦环让刻度对准无穷远。快门速度计算公式：500÷焦距（如24mm镜头约20秒）。星空拍摄前提是找到没有光污染的地方。若拍出的星空偏黄，是光污染所致，可加抗光害滤镜解决。</p>
+
+<h3>7. 静物摄影简介<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=86&t=863" target="_blank" rel="noopener" title="跳到视频 14:23">14:23–14:59</a></h3><p>尼康D850拍摄影棚中的静物，操作方法非常公式化，将在“无视自通”旗下的顶尖商业摄影教程中详细讨论。</p>
+
+<div class="box a7c2"><h3>📷 换成 A7C II 怎么做</h3><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>课程里的概念/操作</th>
+<th>A7C II 上的名称</th>
+<th>怎么操作</th>
+<th>说明（出处）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Av 光圈优先（佳能 Av／尼康 A）</td>
+<td>A（光圈优先）</td>
+<td>模式旋钮转 A；前转盘或后转盘L 调光圈</td>
+<td>快门自动；快门数字闪烁=无法正确曝光（0302B_aperture_priority.html）</td>
+</tr>
+<tr>
+<td>Tv 快门优先（佳能 Tv／尼康 S）</td>
+<td>S（快门优先）</td>
+<td>模式旋钮转 S；前转盘或后转盘L 调快门</td>
+<td>光圈自动；光圈值闪烁=无法正确曝光（0302_shutter_priority.html）</td>
+</tr>
+<tr>
+<td>ISO 感光度（课程称“相对感光度”）</td>
+<td>ISO</td>
+<td>按控制拨轮右（ISO）选值；或 MENU →（曝光/颜色）→［曝光］→［ISO］</td>
+<td>出厂 ISO AUTO；照片 100～51200，扩展 50～204800（0408C_iso.html；231h_specifications_ilc2360.html）</td>
+</tr>
+<tr>
+<td>曝光补偿</td>
+<td>曝光补偿</td>
+<td>转后转盘R；或 MENU →（曝光/颜色）→［曝光补偿］→［曝光补偿］</td>
+<td>±5.0 EV；M 模式仅 ISO AUTO 时有效；智能自动/场景选择不可用（0406B_exposure_compensation.html）</td>
+</tr>
+<tr>
+<td>评价测光／矩阵测光</td>
+<td>多重</td>
+<td>MENU →（曝光/颜色）→［测光］→［测光模式］→［多重］</td>
+<td>出厂即多重；1200 区域；人脸优先可开关（0406_metering_mode.html；231h_specifications_ilc2360.html）</td>
+</tr>
+<tr>
+<td>AWB 自动白平衡</td>
+<td>自动（白平衡模式）</td>
+<td>按 C1（出厂=白平衡模式）→［自动］</td>
+<td>偏暖/偏白取向用［AWB优先级设置］（0410C_white_balance.html；0410L_auto_white_balance_priority.html）</td>
+</tr>
+<tr>
+<td>单次自动对焦 ONE SHOT／AF-S</td>
+<td>单次AF（AF-S）</td>
+<td>MENU →（对焦）→［AF/MF］→［对焦模式］→［单次AF］</td>
+<td>合焦锁定（0405C_focus_mode.html）</td>
+</tr>
+<tr>
+<td>人工智能伺服 AI SERVO／AF-C</td>
+<td>连续AF（AF-C）</td>
+<td>同上 →［连续AF］</td>
+<td>“跟踪”类对焦区域只在连续AF有效（0405C_focus_mode.html；0405C_autofocus_area.html）</td>
+</tr>
+<tr>
+<td>对焦点选择</td>
+<td>对焦区域 + 对焦标准键</td>
+<td>对焦区域选［点: L/M/S］［扩展点］［区］等；按控制拨轮中央（对焦标准）后上/下/左/右移框，（删除）键回中央；也可触摸拖动</td>
+<td>出厂对焦区域为广域（0405C_autofocus_area.html；0405L_focus_standard.html）</td>
+</tr>
+<tr>
+<td>驱动模式（单拍/连拍/自拍）</td>
+<td>拍摄模式</td>
+<td>按控制拨轮左</td>
+<td>索尼“拍摄模式”=驱动模式（0407C_drive_mode.html）</td>
+</tr>
+<tr>
+<td>连拍高速/低速</td>
+<td>连拍：Hi+／Hi／Mid／Lo</td>
+<td>拍摄模式→［连拍］→ 控制拨轮左右选</td>
+<td>约 10/8.0/6.0/3.0 张/秒（231h_specifications_ilc2360.html）</td>
+</tr>
+<tr>
+<td>直方图</td>
+<td>柱状图</td>
+<td>拍摄或播放时按 DISP 切换</td>
+<td>用闪光灯时拍摄画面与回放直方图差异很大（201h_histogram.html）</td>
+</tr>
+<tr>
+<td>高光警告（佳能）／高光显示（尼康）</td>
+<td>曝光过度/曝光不足警告</td>
+<td>播放时 DISP 切到柱状图显示，过曝/欠曝区域闪烁</td>
+<td>（201h_using_DISP_button.html）</td>
+</tr>
+<tr>
+<td>电子水平仪</td>
+<td>数字水平量规</td>
+<td>按 DISP 切换</td>
+<td>误差约 ±1°（0403B_disp_set.html）</td>
+</tr>
+<tr>
+<td>回放放大检查清晰度</td>
+<td>放大</td>
+<td>播放时按 AF-ON（放大按钮），转控制拨轮调倍率</td>
+<td>默认从对焦位置放大（0501C_playback_zoom.html）</td>
+</tr>
+<tr>
+<td>删除 / 保护</td>
+<td>删除 ／ 保护</td>
+<td>播放时按 C2（删除）；MENU →（播放）→［选择/备忘录］→［保护］</td>
+<td>（0502_using_delete_button.html；0506_protect.html）</td>
+</tr>
+<tr>
+<td>快门线/遥控器</td>
+<td>Bluetooth遥控 ／ 智能手机 ／ 电脑遥控</td>
+<td>见 6.7</td>
+<td>（0706_bluetooth_remote.html；202h_register_smartphone.html；0903_pc_remote_function.html）</td>
+</tr>
+<tr>
+<td>自动 ISO 的最低快门速度</td>
+<td>ISO AUTO最小速度</td>
+<td>MENU →（曝光/颜色）→［曝光］→［ISO AUTO最小速度］</td>
+<td>仅 P、A 有效（0408H_ISO_auto_minimun_SS.html）</td>
+</tr>
+</tbody>
+</table></div>
+<p>（表中名称与路径摘自《A7C II 操作手册》，均与索尼官方帮助指南逐条核对；本集未列出的操作见手册。）</p>
+</div>
+<div class="box errata"><h3>🕰️ 时代差异与勘误</h3><ul>
+<li>反光镜：单反按快门时反光镜抬起、回落会带来震动，要用反光镜预升等办法 → A7C II 没有反光镜；三脚架上防抖动可用 2 秒自拍、Bluetooth 遥控器或手机遥控，并关闭 SteadyShot。</li>
+<li>内置闪光灯：课程里的入门/中端单反大多有内置闪光灯 → A7C II 没有内置闪光灯，闪光一律在多接口热靴上外接闪光灯（另售）。</li>
+<li>防抖：课程年代防抖做在镜头里（佳能 IS、尼康 VR）→ A7C II 机身内置影像传感器位移防抖（SteadyShot），镜头带防抖开关时以镜头开关为准；上三脚架建议关闭。</li>
+<li>感光度：课程年代的单反高 ISO 噪点明显 → A7C II 照片 ISO 100～51200（扩展 50～204800），高 ISO 画质好得多，但「光线允许就用低 ISO」的原则不变。</li>
+<li>肩屏与专用键：单反顶部有肩屏和 ISO/WB/驱动等专用键 → A7C II 没有肩屏；ISO 在控制拨轮右、拍摄模式（单拍/连拍/自拍）在控制拨轮左、白平衡模式出厂在 C1，其余靠 Fn 菜单和自定义键。</li>
+<li>检查曝光：单反主要靠拍后回放检查 → A7C II 拍摄前就能看柱状图、斑马线等辅助显示；回放时按 DISP 看柱状图和过曝/欠曝警告。</li>
+</ul>
+</div>
+<div class="box terms"><h3>🔖 本集术语</h3><ul>
+<li><strong>光圈优先模式（A模式）</strong>：相机自动调整快门速度，用户只需设置光圈值的曝光模式。</li>
+<li><strong>矩阵测光</strong>：相机将画面分成多个区域分别测光后综合计算得出曝光值的测光方式。</li>
+<li><strong>单次对焦（AF-S）</strong>：半按快门时对焦一次，焦点锁定后不再改变的对焦模式。</li>
+<li><strong>快门优先模式（S模式）</strong>：相机自动调整光圈值，用户只需设置快门速度的曝光模式。</li>
+<li><strong>连续对焦（AF-C）</strong>：持续追踪移动主体并不断调整焦点的对焦模式。</li>
+<li><strong>ISO Auto</strong>：自动感光度，相机根据环境光线自动调整ISO数值。</li>
+<li><strong>TTL测光</strong>：Through The Lens，镜头测光，相机通过镜头测量进入的光线来计算曝光值。</li>
+<li><strong>磁吸滤镜系统</strong>：一种通过磁力吸附在镜头前方的滤镜系统，方便快速更换不同类型的滤镜。</li>
+<li><strong>抗光害滤镜</strong>：用于减少城市光污染对星空摄影影响的滤镜。</li>
+<li><strong>3D对焦点</strong>：利用深度信息追踪移动主体的对焦模式。</li>
+</ul>
+</div>
+<p class="ep-nav"><a href="#top">↑ 回到本页顶部</a></p></section>
+  </article></main>
+</div>
+<footer class="site">
+  <p>江楠的学习日志 · 吴师自通摄影教程（索尼 A7C II 对照学习笔记）</p>
+  <p>课程视频：<a href="https://www.bilibili.com/video/BV1Vt411E7nT/" target="_blank" rel="noopener">bilibili.com/video/BV1Vt411E7nT</a>（吴玮老师主讲，UP 主搬运）· A7C II 资料：<a href="https://helpguide.sony.net/ilc/2360/v1/zh-cn/index.html" target="_blank" rel="noopener">索尼官方帮助指南</a></p>
+  <p>所有插图均为本页自绘 SVG，不含视频截图或第三方图片；笔记仅供个人学习。</p>
+</footer>
+<a class="backtop" href="#top" aria-label="回到顶部">↑</a>
+</body>
+</html>

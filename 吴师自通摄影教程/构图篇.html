@@ -1,0 +1,1819 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="江楠">
+<meta name="description" content="吴师自通摄影教程构图篇逐集细化笔记（P13–P17），附索尼 A7C II 对照操作与自绘示意图。">
+<meta name="keywords" content="摄影教程,吴玮,吴师自通,构图篇,索尼A7C II,A7C2,摄影笔记">
+<title>构图篇 · 吴师自通摄影教程 — 江楠的学习日志</title>
+<style>
+:root{--accent:#2563eb;--accent-dark:#1d4ed8;--bg:#f7f8fa;--card:#fff;--border:#e2e5ea;--text:#1f2329;--muted:#64748b;
+  --sony:#c2410c;--sony-bg:#fff7ed;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:-apple-system,"Segoe UI","Microsoft YaHei","PingFang SC",sans-serif;line-height:1.75;color:var(--text);background:var(--bg);}
+.skip-link{position:absolute;left:-999px;top:0;background:#fff;color:var(--accent);padding:.5rem 1rem;z-index:100;}
+.skip-link:focus{left:0;}
+header.site{background:linear-gradient(135deg,#3b82f6 0%,var(--accent) 45%,var(--accent-dark) 100%);color:#fff;padding:2.6rem 1.5rem 2rem;text-align:center;box-shadow:0 6px 24px rgba(37,99,235,.18);}
+header.site h1{margin:0 0 .4rem;font-size:2rem;line-height:1.35;}
+header.site p{margin:.2rem 0;opacity:.93;}
+.meta-list{list-style:none;padding:0;margin:.8rem 0 0;display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;}
+.meta-list li{background:rgba(255,255,255,.18);padding:.22rem .7rem;border-radius:999px;font-size:.85rem;}
+nav.modnav{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:20;}
+nav.modnav ul{list-style:none;margin:0 auto;padding:.45rem 1rem;max-width:1180px;display:flex;flex-wrap:wrap;gap:.35rem;justify-content:center;}
+nav.modnav a{display:block;text-decoration:none;color:var(--text);font-size:.86rem;padding:.25rem .65rem;border-radius:999px;border:1px solid var(--border);}
+nav.modnav a:hover{border-color:var(--accent);color:var(--accent-dark);}
+nav.modnav a[aria-current=page]{background:var(--accent);color:#fff;border-color:var(--accent);}
+.layout{max-width:1180px;margin:0 auto;padding:1.6rem 1.5rem;display:grid;grid-template-columns:250px 1fr;gap:1.9rem;align-items:start;}
+.sidebar{position:sticky;top:3.6rem;max-height:calc(100vh - 4.6rem);overflow-y:auto;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1rem .9rem;box-shadow:0 4px 18px rgba(15,23,42,.06);}
+.sidebar .home-link{display:flex;align-items:center;gap:.45rem;font-weight:600;color:#fff;text-decoration:none;padding:.55rem .8rem;border-radius:11px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));box-shadow:0 4px 12px rgba(37,99,235,.28);margin-bottom:.9rem;}
+.sidebar .toc-title{font-size:.74rem;letter-spacing:.1em;color:var(--muted);margin:.2rem .35rem .5rem;font-weight:700;}
+.sidebar nav ul{list-style:none;margin:0;padding:0;}
+.sidebar nav li{margin:.08rem 0;}
+.sidebar a.toc-link{display:block;color:var(--text);text-decoration:none;font-size:.88rem;line-height:1.45;padding:.38rem .6rem;border-radius:9px;border-left:3px solid transparent;}
+.sidebar a.toc-link:hover{background:#eef4ff;color:var(--accent-dark);border-left-color:var(--accent);}
+.sidebar a.toc-link b{color:var(--accent-dark);font-weight:700;margin-right:.3rem;}
+main{min-width:0;}
+article>section{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem 1.8rem;margin-bottom:1.6rem;scroll-margin-top:64px;}
+h2{color:var(--accent-dark);border-bottom:2px solid var(--border);padding-bottom:.45rem;margin-top:.2rem;line-height:1.45;}
+h2 .ep-no{display:inline-block;background:var(--accent);color:#fff;border-radius:8px;font-size:.8em;padding:0 .45rem;margin-right:.35rem;vertical-align:.08em;}
+h3{margin-top:1.6rem;color:var(--text);}
+h4{margin-top:1rem;color:var(--muted);}
+p{margin:.7rem 0;}
+.ep-meta{color:var(--muted);font-size:.88rem;margin-top:-.3rem;}
+.ep-meta a{color:var(--accent);}
+blockquote.oneliner,blockquote{margin:1rem 0;padding:.75rem 1rem;background:#eef4ff;border-left:4px solid var(--accent);border-radius:8px;}
+blockquote p{margin:.2rem 0;}
+nav.outline{background:#f8fafc;border:1px dashed #cbd5e1;border-radius:10px;padding:.6rem 1rem .6rem .8rem;margin:1rem 0;}
+nav.outline .outline-t{margin:.1rem 0 .3rem;font-weight:700;color:var(--accent-dark);}
+nav.outline ol{margin:.2rem 0;}
+a.ts{font-family:Consolas,"SFMono-Regular",monospace;font-size:.82em;color:var(--accent-dark);background:#e8efff;border-radius:5px;padding:0 .3rem;text-decoration:none;white-space:nowrap;}
+a.ts:hover{background:var(--accent);color:#fff;}
+.box{border-radius:12px;padding:.4rem 1.1rem .8rem;margin:1.3rem 0;}
+.box h3{margin-top:.7rem;}
+.box.a7c2{background:var(--sony-bg);border:1px solid #fed7aa;border-left:5px solid var(--sony);}
+.box.a7c2 h3{color:var(--sony);}
+.box.errata{background:#f8fafc;border:1px solid var(--border);border-left:5px solid #64748b;}
+.box.terms{background:#f0fdf4;border:1px solid #bbf7d0;border-left:5px solid #16a34a;}
+.box.terms h3{color:#15803d;}
+.table-wrap{overflow-x:auto;margin:1rem 0;-webkit-overflow-scrolling:touch;}
+table{border-collapse:collapse;width:100%;font-size:.92rem;}
+.table-wrap table{margin:0;}
+th,td{border:1px solid var(--border);padding:.5rem .65rem;text-align:left;vertical-align:top;}
+thead{background:#eef2ff;}
+.box.a7c2 thead{background:#ffedd5;}
+tbody tr:nth-child(even){background:#fafbfc;}
+.box.a7c2 tbody tr:nth-child(even){background:#fffaf3;}
+figure{margin:1.4rem 0;text-align:center;}
+figure svg{max-width:100%;height:auto;display:block;margin:0 auto;}
+figcaption{color:var(--muted);font-size:.88rem;margin-top:.5rem;line-height:1.6;}
+.fig-todo{border:1px dashed #cbd5e1;border-radius:10px;padding:1.2rem;color:var(--muted);}
+code{background:#eef0f3;padding:.1rem .35rem;border-radius:4px;font-size:.9em;}
+details{border:1px solid var(--border);border-radius:8px;padding:.5rem .9rem;margin:.5rem 0;background:#fcfcfd;}
+summary{cursor:pointer;font-weight:600;}
+details[open] summary{margin-bottom:.3rem;}
+details summary .ep-no-s{display:inline-block;min-width:2.6em;color:var(--accent-dark);font-family:Consolas,monospace;}
+details summary a{color:var(--text);text-decoration:none;}
+details summary a:hover{color:var(--accent-dark);text-decoration:underline;}
+.ep-nav{text-align:right;font-size:.85rem;margin-bottom:0;}
+.ep-nav a{color:var(--muted);text-decoration:none;}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.9rem;margin:1rem 0;}
+.cards a.card{display:block;text-decoration:none;color:var(--text);border:1px solid var(--border);border-radius:12px;padding:.8rem 1rem;background:#fff;transition:all .15s;}
+.cards a.card:hover{border-color:var(--accent);box-shadow:0 4px 14px rgba(37,99,235,.15);transform:translateY(-1px);}
+.cards a.card b{display:block;color:var(--accent-dark);font-size:1.02rem;}
+.cards a.card span{display:block;color:var(--muted);font-size:.85rem;line-height:1.55;margin-top:.2rem;}
+.cards a.card.sony b{color:var(--sony);}
+.todo{color:var(--muted);}
+a.src{font-size:.75em;color:#94a3b8;text-decoration:none;border-bottom:1px dotted #cbd5e1;white-space:nowrap;}
+a.src:hover{color:var(--accent);}
+mark{background:#fde68a;}
+ul,ol{padding-left:1.4rem;}
+footer.site{text-align:center;color:var(--muted);padding:2rem 1rem;font-size:.9rem;}
+footer.site a{color:var(--accent);}
+.backtop{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;text-decoration:none;width:42px;height:42px;line-height:42px;text-align:center;border-radius:50%;box-shadow:0 4px 12px rgba(37,99,235,.4);font-size:1.1rem;}
+@media(max-width:860px){
+  .layout{grid-template-columns:1fr;gap:1rem;padding:1rem;}
+  .sidebar{position:static;max-height:none;}
+  .sidebar nav ul{display:flex;flex-wrap:wrap;gap:.35rem;}
+  .sidebar a.toc-link{border-left:none;border:1px solid var(--border);font-size:.82rem;padding:.3rem .6rem;}
+  nav.modnav{position:static;}
+}
+@media(max-width:600px){header.site h1{font-size:1.6rem;}article>section{padding:1.1rem .95rem;}th,td{padding:.4rem .5rem;}}
+@media print{nav.modnav,.sidebar,.backtop{display:none;}.layout{display:block;}article>section{break-inside:auto;}}
+</style>
+</head>
+<body id="top">
+<a class="skip-link" href="#main">跳到主要内容</a>
+<header class="site">
+  <h1>构图篇</h1>
+  <p>吴师自通摄影教程 · 构图篇（P13–P17，5 集，约 1.7 小时）· 逐集细化笔记 + A7C II 对照</p>
+  <ul class="meta-list"><li>#吴师自通摄影教程</li><li>#构图篇</li><li>#索尼A7C II</li><li>#摄影入门</li></ul>
+</header>
+<nav class="modnav" aria-label="课程篇章"><ul><li><a href="index.html">总览与大纲</a></li><li><a href="基础篇.html">基础篇</a></li><li><a href="构图篇.html" aria-current="page">构图篇</a></li><li><a href="器材维护篇.html">器材维护篇</a></li><li><a href="影棚静物篇.html">影棚静物篇</a></li><li><a href="机型速成篇.html">机型速成篇</a></li><li><a href="用光与影棚篇.html">用光与影棚篇</a></li><li><a href="广告拍摄案例.html">广告拍摄案例</a></li><li><a href="口袋摄影课.html">口袋摄影课</a></li><li><a href="A7C2操作手册.html">A7C II 操作手册</a></li><li><a href="知识总结.html">知识总结</a></li></ul></nav>
+<div class="layout">
+  <aside class="sidebar">
+    <a class="home-link" href="../index.html">&larr; 返回学习日志首页</a>
+    <p class="toc-title">本页目录</p>
+    <nav aria-label="本页目录"><ul><li><a class="toc-link" href="#intro">本篇导读</a></li><li><a class="toc-link" href="#p13"><b>P13</b>五分钟掌握构图技巧</a></li><li><a class="toc-link" href="#p14"><b>P14</b>构图的含义与评片</a></li><li><a class="toc-link" href="#p15"><b>P15</b>构图的实现手段</a></li><li><a class="toc-link" href="#p16"><b>P16</b>取景构图的原则</a></li><li><a class="toc-link" href="#p17"><b>P17</b>构图元素解析</a></li></ul></nav>
+  </aside>
+  <main id="main" tabindex="-1"><article>
+<section id="intro" aria-label="本篇导读"><p><strong>本篇导读</strong>：5 集构图课由浅入深：先给出「主题明确、主体突出、画面简洁」三条标准（P13），再用大量样片讲评片的四个要点（P14），然后是可操作的实现手段（P15）、四项原则（P16）和构图元素（P17）。笔记把老师点评的每张样片都写成「拍了什么 → 问题在哪 → 怎么改」，并配了构图示意图。A7C II 的网格线、数字水平量规和翻转屏能帮你把这些原则落到取景器里。</p>
+</section>
+<section id="p13" class="episode" aria-labelledby="p13-t"><h2 id="p13-t"><span class="ep-no">P13</span> 五分钟掌握构图技巧</h2>
+<p class="ep-meta">原标题：013构图01 五分钟掌握构图技巧 · 时长 9:41 · <a href="https://www.bilibili.com/video/BV1Vt411E7nT?p=13" target="_blank" rel="noopener">▶ 在 B 站观看本集</a></p>
+<blockquote class="oneliner">
+<p><strong>一句话</strong>：好照片=主题明确+主体突出+画面简洁，构图就是做减法；只记三条还不够。</p>
+</blockquote>
+<nav class="outline" aria-label="本集大纲"><p class="outline-t">本集大纲</p><ol>
+<li>技术之外的标准<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=13&t=10" target="_blank" rel="noopener" title="跳到视频 00:10">00:10</a></li>
+<li>三条标准与减法<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=13&t=81" target="_blank" rel="noopener" title="跳到视频 01:21">01:21</a></li>
+<li>提炼三条与正例<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=13&t=192" target="_blank" rel="noopener" title="跳到视频 03:12">03:12</a></li>
+<li>反例改正<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=13&t=326" target="_blank" rel="noopener" title="跳到视频 05:26">05:26</a></li>
+<li>虚化与靠近的范例<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=13&t=393" target="_blank" rel="noopener" title="跳到视频 06:33">06:33</a></li>
+<li>只记三条够吗<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=13&t=520" target="_blank" rel="noopener" title="跳到视频 08:40">08:40</a></li>
+</ol></nav>
+
+<h3>1. 技术之外的标准<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=13&t=10" target="_blank" rel="noopener" title="跳到视频 00:10">00:10–01:21</a></h3><p>上季讲了操作、原理与曝光；技术都会，照片仍不一定好，构图是「好照片的标准」。「十分钟」是标题党。</p>
+
+<h3>2. 三条标准与减法<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=13&t=81" target="_blank" rel="noopener" title="跳到视频 01:21">01:21–03:12</a></h3><p>纽约摄影学院：①鲜明<strong>主题</strong>（一个人、一件事或故事一环节），一眼看懂；②目光一下投向<strong>主体</strong>；③<strong>简洁</strong>：只留有利于主体的，排除分散注意力的。摄影是<strong>减法</strong>（截取局部与瞬间），绘画是加法。</p>
+
+<h3>3. 提炼三条与正例<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=13&t=192" target="_blank" rel="noopener" title="跳到视频 03:12">03:12–05:26</a></h3><p>主题=在说明什么；主体=承载主题的载体，须突出；简洁=无关的摘除。三点用到所有拍摄，大部分都是好照片。</p>
+<ul>
+<li>后院奶奶：背后的树不完整，目光落在完整的前景人物；人动背景静，更吸引注意。</li>
+<li>山与水中倒影：主题=自然之美，整幅山与倒影都是主体。</li>
+</ul>
+
+<h3>4. 反例改正<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=13&t=326" target="_blank" rel="noopener" title="跳到视频 05:26">05:26–06:33</a></h3><ul>
+<li>仙人掌+稻草堆：地位相当，下方另有抢眼物（录音不清）→ 拉长焦距或走近、镜头更仰、以天空为背景。</li>
+<li>树丛里的鸟：杂乱 → 镜头推进或人走近、以天空为背景；成图「不算很好，但起码不坏」。</li>
+</ul>
+<figure id="fig-P13-1"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 372" role="img" aria-label="主体突出前后对比：左图仙人掌在画面左三分之一、高约70%，右三分之一的稻草堆高约50%，两者争主角，底部还有一块杂物；经走近、拉长焦距、仰拍并以天空为背景后，右图仙人掌居中偏右、高约85%，背景只有纯蓝天，主体一眼突出（比例为示意）">
+  <title>主体突出：改前与改后（示意）</title>
+  <defs>
+    <linearGradient id="p13-1-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4b8ff0"/>
+      <stop offset="1" stop-color="#cfe2fb"/>
+    </linearGradient>
+    <clipPath id="p13-1-clip"><rect width="288" height="192"/></clipPath>
+    <marker id="p13-1-arr" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b03a3a"/></marker>
+  </defs>
+
+  <text x="360" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#1e3a8a">主体突出：改前与改后（示意）</text>
+
+  <!-- 列标题 -->
+  <rect x="16" y="44" width="288" height="24" rx="12" fill="#fef2f2" stroke="#b03a3a"/>
+  <text x="160" y="61" text-anchor="middle" font-size="14" font-weight="bold" fill="#b03a3a">改前：主体不突出</text>
+  <rect x="416" y="44" width="288" height="24" rx="12" fill="#f0fdf4" stroke="#16a34a"/>
+  <text x="560" y="61" text-anchor="middle" font-size="14" font-weight="bold" fill="#15803d">改后：主体突出</text>
+
+  <!-- 左：改前 -->
+  <g transform="translate(16,80)">
+    <g clip-path="url(#p13-1-clip)">
+      <rect width="288" height="192" fill="#e6edf5"/>
+      <path d="M0,108 L0,100 Q30,90 66,97 T132,95 T204,98 T288,94 L288,108 Z" fill="#bfb391"/>
+      <rect y="106" width="288" height="86" fill="#dcc9a0"/>
+      <!-- 稻草堆（高约 50%） -->
+      <ellipse cx="225" cy="168" rx="38" ry="5" fill="#000" opacity=".12"/>
+      <path d="M191,168 C191,120 205,72 225,72 C245,72 259,120 259,168 Z" fill="#e9c46a" stroke="#b8892b" stroke-width="1.5"/>
+      <path d="M206,112 L212,152 M225,90 L225,160 M244,112 L238,152" stroke="#b8892b" stroke-width="1.3" opacity=".6" fill="none"/>
+      <path d="M194,136 Q225,144 256,136" stroke="#8a5a14" stroke-width="1.6" fill="none"/>
+      <!-- 仙人掌（高约 70%） -->
+      <ellipse cx="62" cy="176" rx="22" ry="4" fill="#000" opacity=".12"/>
+      <g stroke="#2f6b3a" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <path d="M62,53 V165" stroke-width="25"/>
+        <path d="M62,126 H41 V93" stroke-width="17"/>
+        <path d="M62,108 H83 V80" stroke-width="17"/>
+      </g>
+      <g stroke="#4aa35c" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <path d="M62,53 V165" stroke-width="22"/>
+        <path d="M62,126 H41 V93" stroke-width="14"/>
+        <path d="M62,108 H83 V80" stroke-width="14"/>
+      </g>
+      <path d="M62,50 V162 M41,120 V90 M83,102 V78" stroke="#86cf94" stroke-width="1.6" stroke-linecap="round" fill="none" opacity=".9"/>
+      <!-- 底部杂物 -->
+      <path d="M112,192 L117,177 L132,169 L148,173 L159,184 L163,192 Z" fill="#9aa0a8" stroke="#555b63" stroke-width="1.3" stroke-linejoin="round"/>
+      <path d="M146,184 L184,177 L186,185 L148,192 Z" fill="#8b6f4e" stroke="#5c4630" stroke-width="1.2" stroke-linejoin="round"/>
+      <!-- 争主角 -->
+      <line x1="100" y1="124" x2="184" y2="124" stroke="#b03a3a" stroke-width="2" marker-start="url(#p13-1-arr)" marker-end="url(#p13-1-arr)"/>
+      <text x="142" y="117" text-anchor="middle" font-size="13" font-weight="bold" fill="#b03a3a" stroke="#fff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">争主角</text>
+    </g>
+    <rect width="288" height="192" fill="none" stroke="#b03a3a" stroke-width="2.5"/>
+    <circle cx="86" cy="44" r="9" fill="#b03a3a" stroke="#fff" stroke-width="1.5"/>
+    <text x="86" y="48.5" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">1</text>
+    <circle cx="256" cy="64" r="9" fill="#b03a3a" stroke="#fff" stroke-width="1.5"/>
+    <text x="256" y="68.5" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">2</text>
+    <circle cx="102" cy="176" r="9" fill="#b03a3a" stroke="#fff" stroke-width="1.5"/>
+    <text x="102" y="180.5" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">3</text>
+  </g>
+
+  <!-- 中：怎么改 -->
+  <g font-size="13" font-weight="bold" fill="#1e3a8a" text-anchor="middle">
+    <rect x="318" y="116" width="84" height="22" rx="11" fill="#eff6ff" stroke="#2563eb"/>
+    <text x="360" y="132">走近</text>
+    <rect x="318" y="143" width="84" height="22" rx="11" fill="#eff6ff" stroke="#2563eb"/>
+    <text x="360" y="159">拉长焦距</text>
+    <rect x="318" y="170" width="84" height="22" rx="11" fill="#eff6ff" stroke="#2563eb"/>
+    <text x="360" y="186">仰拍</text>
+  </g>
+  <polygon points="318,206 384,206 384,198 402,210 384,222 384,214 318,214" fill="#2563eb"/>
+  <text x="360" y="238" text-anchor="middle" font-size="12" fill="#475569">以天空为背景</text>
+
+  <!-- 右：改后 -->
+  <g transform="translate(416,80)">
+    <g clip-path="url(#p13-1-clip)">
+      <rect width="288" height="192" fill="url(#p13-1-sky)"/>
+      <g stroke="#2f6b3a" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <path d="M167,33 V190" stroke-width="29"/>
+        <path d="M167,136 H138 V99" stroke-width="19"/>
+        <path d="M167,112 H196 V79" stroke-width="19"/>
+      </g>
+      <g stroke="#4aa35c" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <path d="M167,33 V190" stroke-width="26"/>
+        <path d="M167,136 H138 V99" stroke-width="16"/>
+        <path d="M167,112 H196 V79" stroke-width="16"/>
+      </g>
+      <path d="M167,30 V172 M138,130 V96 M196,106 V76" stroke="#86cf94" stroke-width="1.8" stroke-linecap="round" fill="none" opacity=".9"/>
+      <path d="M0,186 Q60,180 130,184 T288,181 V192 H0 Z" fill="#cdb98a"/>
+    </g>
+    <rect width="288" height="192" fill="none" stroke="#16a34a" stroke-width="2.5"/>
+    <circle cx="190" cy="28" r="9" fill="#16a34a" stroke="#fff" stroke-width="1.5"/>
+    <text x="190" y="32.5" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">1</text>
+    <circle cx="46" cy="40" r="9" fill="#16a34a" stroke="#fff" stroke-width="1.5"/>
+    <text x="46" y="44.5" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">2</text>
+  </g>
+
+  <!-- 左下说明 -->
+  <g font-size="13" fill="#1f2329">
+    <circle cx="26" cy="291" r="8" fill="#b03a3a"/><text x="26" y="295" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">1</text>
+    <text x="40" y="296">仙人掌：偏左，高约 70%</text>
+    <circle cx="26" cy="311" r="8" fill="#b03a3a"/><text x="26" y="315" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">2</text>
+    <text x="40" y="316">稻草堆：偏右，高约 50%，争主角</text>
+    <circle cx="26" cy="331" r="8" fill="#b03a3a"/><text x="26" y="335" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">3</text>
+    <text x="40" y="336">底部杂物：又一处抢眼点</text>
+  </g>
+
+  <!-- 右下说明 -->
+  <g font-size="13" fill="#1f2329">
+    <circle cx="426" cy="291" r="8" fill="#16a34a"/><text x="426" y="295" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">1</text>
+    <text x="440" y="296">仙人掌：居中偏右，高约 85%</text>
+    <circle cx="426" cy="311" r="8" fill="#16a34a"/><text x="426" y="315" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">2</text>
+    <text x="440" y="316">背景只有纯蓝天，没有杂物</text>
+    <path d="M419,331 L424,336 L433,325" stroke="#16a34a" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <text x="440" y="336" font-weight="bold" fill="#15803d">一眼就看到主体</text>
+  </g>
+
+  <text x="360" y="360" text-anchor="middle" font-size="11" fill="#94a3b8">画面与物体比例为示意，不按实景尺寸。</text>
+</svg><figcaption><strong>图 13-1</strong>　主体突出前后对比——左图仙人掌（约占画面高度 70%）与右侧稻草堆（约 50%）地位相当、底部还有杂物，主体不突出；右图走近或拉长焦距、镜头更仰、以纯蓝天为背景，仙人掌居中偏右、约占 85%，一眼就是主体（比例为示意）。</figcaption></figure>
+
+<h3>5. 虚化与靠近的范例<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=13&t=393" target="_blank" rel="noopener" title="跳到视频 06:33">06:33–08:40</a></h3><ul>
+<li>大猩猩探脸：长焦+大光圈虚掉环境，虚实对比；虚了仍认得出是树叶。</li>
+<li>埃菲尔铁塔：主题=假日巴黎，主体=前景情侣；拍得近，大小、虚实对比使主体突出。</li>
+<li>红马鞍的马头+金字塔：走近拍，蓝天黄沙红鞍的颜色对比使画面生动。</li>
+<li>消防员：浅景深虚化背景；另有长焦远摄、靠近拍的例图。</li>
+</ul>
+
+<h3>6. 只记三条够吗<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=13&t=520" target="_blank" rel="noopener" title="跳到视频 08:40">08:40–09:41</a></h3><p>「It's that all?!」：不够。三条难变成条件反射，要理解构图手段与原则、多看多想；后续章节详讲。</p>
+
+<div class="box a7c2"><h3>📷 换成 A7C II 怎么做</h3><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>课程里的做法（原机型叫法）</th>
+<th>A7C II 上的对应</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>走近、拉长焦距</td>
+<td>走近或变焦；MENU →（拍摄）→［影像质量/记录］→［APS-C S35拍摄］→［开］</td>
+<td>视角约为镜头标注焦距的 1.5 倍</td>
+</tr>
+<tr>
+<td>大光圈浅景深</td>
+<td>模式旋钮 A，转前转盘调光圈</td>
+<td>预览虚化：MENU →（设置）→［操作自定义］→［〈静〉自定键/转盘设置］→选键→［光圈预览］</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="box errata"><h3>🕰️ 时代差异与勘误</h3><ul>
+<li>转写稿「紧身/紧慎」=浅景深，「新泥」=猩猩（据画面推断）。</li>
+</ul>
+</div>
+<div class="box terms"><h3>🔖 本集术语</h3><ul>
+<li><strong>主题</strong>：照片要说明的内容。</li>
+<li><strong>主体</strong>：承载主题的载体，须一眼可见。</li>
+<li><strong>减法</strong>：截取局部与瞬间，去掉无关内容。</li>
+</ul>
+</div>
+<p class="ep-nav"><a href="#top">↑ 回到本页顶部</a></p></section>
+<section id="p14" class="episode" aria-labelledby="p14-t"><h2 id="p14-t"><span class="ep-no">P14</span> 构图的含义与评片</h2>
+<p class="ep-meta">原标题：014构图02 构图的含义与评片 · 时长 26:41 · <a href="https://www.bilibili.com/video/BV1Vt411E7nT?p=14" target="_blank" rel="noopener">▶ 在 B 站观看本集</a></p>
+<blockquote class="oneliner">
+<p><strong>一句话</strong>：构图=画面元素的最佳布局（表现形式）；评片抓四点：主体突出、不单调、稳定、完整；用取景器要放松扫视。</p>
+</blockquote>
+<nav class="outline" aria-label="本集大纲"><p class="outline-t">本集大纲</p><ol>
+<li>开场：构图的目的<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=14&t=10" target="_blank" rel="noopener" title="跳到视频 00:10">00:10</a></li>
+<li>好照片标准与何为构图<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=14&t=113" target="_blank" rel="noopener" title="跳到视频 01:53">01:53</a></li>
+<li>错误一：主体不突出<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=14&t=255" target="_blank" rel="noopener" title="跳到视频 04:15">04:15</a></li>
+<li>错误二：单调<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=14&t=389" target="_blank" rel="noopener" title="跳到视频 06:29">06:29</a></li>
+<li>取景器下的「视而不见」<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=14&t=457" target="_blank" rel="noopener" title="跳到视频 07:37">07:37</a></li>
+<li>错误三：画面不稳定<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=14&t=707" target="_blank" rel="noopener" title="跳到视频 11:47">11:47</a></li>
+<li>错误四：缺乏完整性<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=14&t=873" target="_blank" rel="noopener" title="跳到视频 14:33">14:33</a></li>
+<li>好片的元素布局<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=14&t=1040" target="_blank" rel="noopener" title="跳到视频 17:20">17:20</a></li>
+<li>小结与预告<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=14&t=1538" target="_blank" rel="noopener" title="跳到视频 25:38">25:38</a></li>
+</ol></nav>
+
+<h3>1. 开场：构图的目的<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=14&t=10" target="_blank" rel="noopener" title="跳到视频 00:10">00:10–01:53</a></h3><p>技术达标≠优秀照片：曝光、色彩还原都准，也可能因构图失败而毫无留存价值。本节：定义构图→常见错误→结合好作品谈做法；入门多靠模仿。</p>
+
+<h3>2. 好照片标准与何为构图<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=14&t=113" target="_blank" rel="noopener" title="跳到视频 01:53">01:53–04:15</a></h3><ul>
+<li>幻灯片「假大空」标准：正确思想、深刻内容、众多信息量，且有与内容统一的完美<strong>表现形式</strong>；作品离不开形式与内容。</li>
+<li>拍不好=画面元素没找到最佳<strong>布局</strong>，主题与主体就不明确；元素布局=表现形式=<strong>构图</strong>。</li>
+<li>类比画水墨山水：落笔前先定松树、山、渔翁（作前景还是背景）放哪、多大，即构图。画师可主观安排，摄影师面对客观，但也有许多改变布局的手段（后续逐个讲）。</li>
+</ul>
+
+<h3>3. 错误一：主体不突出<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=14&t=255" target="_blank" rel="noopener" title="跳到视频 04:15">04:15–06:29</a></h3><ul>
+<li>古建筑+前景杂草：分不清拍草还是拍建筑 → 走近只拍建筑，或虚化前景（此图前景难虚）。</li>
+<li>仙人掌+右侧稻草堆：争主角 → 靠近、拉长焦距、仰拍以天空为背景（P13）。</li>
+<li>树丛中的鸟：主体尚可认出，但杂乱 → 同上。</li>
+<li>情侣：主体突出，但环境多，右侧一条横贯线把画面劈成两半，目光先看一边再看另一边 → 换角度：靠近/长焦、仰拍以天空为背景；或竖构图+走近（3:2 可横可竖），更精炼。</li>
+</ul>
+
+<h3>4. 错误二：单调<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=14&t=389" target="_blank" rel="noopener" title="跳到视频 06:29">06:29–07:37</a></h3><ul>
+<li>荷花（含苞待放）：技术无误（细节分明、色彩还原准），但像在摄影棚浅蓝底前拍的，无环境无对比，如「证件照」→ 红花要绿叶配：加不抢戏的陪体（荷叶）形成对比，格局大改观。</li>
+</ul>
+
+<h3>5. 取景器下的「视而不见」<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=14&t=457" target="_blank" rel="noopener" title="跳到视频 07:37">07:37–11:47</a></h3><ul>
+<li>现象：这类照片多是随手一拍，不是创作意图；用背屏取景（含卡片机）的人构图反而更干净。</li>
+<li>原因：背屏取景离屏幕有距离、心态放松，从上框到下框、左框到右框看各元素；光学取景器让精神过度集中、注意力钉在主体上（拍仙人掌只看仙人掌），<strong>视而不见</strong>：看见了没看到。</li>
+<li>对策：用取景器也要放松理性，眼球多转，上→下、左→右<strong>扫描</strong>，排查并避开多余、不和谐元素，再想怎样让主体更美。</li>
+</ul>
+
+<h3>6. 错误三：画面不稳定<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=14&t=707" target="_blank" rel="noopener" title="跳到视频 11:47">11:47–14:33</a></h3><ul>
+<li>山景：左亮右暗，左山少右山多，右下一堆暗前景 → 右边像要压下来，心理不舒服（未给改法）。</li>
+<li>斜着拍：画面像往一侧倒；少数生动，多数让人失望。</li>
+<li>另一张：左重右轻，总觉得左边被压下去。</li>
+<li>上重下轻：头重脚轻。集体照上方总留天空或浅色建筑，顶轻底重才合视觉心理。</li>
+<li>人像上框擦着脑门：像顶着天花板 → 上方多留空间。</li>
+</ul>
+<figure id="fig-P14-1"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 412" role="img" aria-label="稳定性对照：左图左三分之一是浅灰小山、右三分之二是深灰大山，右下角还有深色前景，视觉重心偏到右下，偏离画框下方的支点，画面像要往右压下来；右图保留深色前景并在左上补一块中灰元素，重心回到支点正上方，画面稳定（右图为示意）">
+  <title>稳定性对照</title>
+  <defs>
+    <g id="p14-1-scene">
+      <rect width="324" height="216" fill="#f1f5f9"/>
+      <rect y="176" width="324" height="40" fill="#e2e8f0"/>
+      <path d="M0,176 L52,112 L108,176 Z" fill="#cbd5e1" stroke="#94a3b8"/>
+      <path d="M104,176 L200,44 L238,92 L262,70 L324,150 V176 Z" fill="#64748b"/>
+      <path d="M216,216 L228,186 L252,170 L278,178 L300,164 L324,170 V216 Z" fill="#1f2937"/>
+    </g>
+    <clipPath id="p14-1-clip"><rect width="324" height="216"/></clipPath>
+  </defs>
+
+  <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="bold" fill="#1e3a8a">稳定性对照：视觉重心与支点</text>
+
+  <!-- 列标题 -->
+  <rect x="12" y="40" width="324" height="24" rx="12" fill="#fef2f2" stroke="#b03a3a"/>
+  <text x="174" y="57" text-anchor="middle" font-size="14" font-weight="bold" fill="#b03a3a">失衡：重心偏到右下</text>
+  <rect x="384" y="40" width="324" height="24" rx="12" fill="#f0fdf4" stroke="#16a34a"/>
+  <text x="546" y="57" text-anchor="middle" font-size="14" font-weight="bold" fill="#15803d">平衡（示意）：左上补一块中灰元素</text>
+
+  <!-- 左：失衡 -->
+  <g transform="translate(12,76)">
+    <g clip-path="url(#p14-1-clip)">
+      <use href="#p14-1-scene"/>
+      <line x1="162" y1="0" x2="162" y2="216" stroke="#fff" stroke-width="3.4" opacity=".75"/>
+      <line x1="162" y1="0" x2="162" y2="216" stroke="#2563eb" stroke-width="1.4" stroke-dasharray="6 4"/>
+      <text x="53" y="158" text-anchor="middle" font-size="12" fill="#475569">浅灰小山</text>
+      <text x="232" y="104" text-anchor="middle" font-size="13" fill="#fff">深灰大山</text>
+      <text x="274" y="204" text-anchor="middle" font-size="11" fill="#fff">深色前景</text>
+      <g transform="translate(216,132) rotate(35)">
+        <polygon points="12,-3.2 44,-3.2 44,-8.5 62,0 44,8.5 44,3.2 12,3.2" fill="#b03a3a" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/>
+      </g>
+      <circle cx="216" cy="132" r="9" fill="#fff" stroke="#b03a3a" stroke-width="3"/>
+      <circle cx="216" cy="132" r="3.2" fill="#b03a3a"/>
+      <text x="204" y="136" text-anchor="end" font-size="12" font-weight="bold" fill="#fff">重心</text>
+    </g>
+    <rect width="324" height="216" fill="none" stroke="#b03a3a" stroke-width="2.5"/>
+  </g>
+
+  <!-- 中间箭头 -->
+  <polygon points="341,180 366,180 366,174 380,184 366,194 366,188 341,188" fill="#2563eb"/>
+
+  <!-- 右：平衡 -->
+  <g transform="translate(384,76)">
+    <g clip-path="url(#p14-1-clip)">
+      <use href="#p14-1-scene"/>
+      <g fill="#94a3b8">
+        <rect x="24" y="46" width="80" height="16" rx="8"/>
+        <circle cx="46" cy="46" r="14"/>
+        <circle cx="68" cy="38" r="18"/>
+        <circle cx="90" cy="47" r="12"/>
+      </g>
+      <text x="64" y="58.5" text-anchor="middle" font-size="12" font-weight="bold" fill="#1f2937">＋中灰云块</text>
+      <line x1="162" y1="0" x2="162" y2="216" stroke="#fff" stroke-width="3.4" opacity=".75"/>
+      <line x1="162" y1="0" x2="162" y2="216" stroke="#2563eb" stroke-width="1.4" stroke-dasharray="6 4"/>
+      <circle cx="162" cy="118" r="9" fill="#fff" stroke="#16a34a" stroke-width="3"/>
+      <circle cx="162" cy="118" r="3.2" fill="#16a34a"/>
+      <text x="177" y="122" font-size="12" font-weight="bold" fill="#fff">重心</text>
+    </g>
+    <rect width="324" height="216" fill="none" stroke="#16a34a" stroke-width="2.5"/>
+  </g>
+
+  <!-- 支点（框下三角） -->
+  <path d="M174,292 L154,316 H194 Z" fill="#94a3b8" stroke="#444" stroke-width="1.5" stroke-linejoin="round"/>
+  <line x1="136" y1="317" x2="212" y2="317" stroke="#444" stroke-width="2"/>
+  <text x="204" y="311" font-size="11" fill="#475569">支点</text>
+  <path d="M546,292 L526,316 H566 Z" fill="#94a3b8" stroke="#444" stroke-width="1.5" stroke-linejoin="round"/>
+  <line x1="508" y1="317" x2="584" y2="317" stroke="#444" stroke-width="2"/>
+  <text x="576" y="311" font-size="11" fill="#475569">支点</text>
+
+  <!-- 结论 -->
+  <text x="174" y="348" text-anchor="middle" font-size="16" font-weight="bold" fill="#b03a3a">右重，像要压下来</text>
+  <text x="174" y="368" text-anchor="middle" font-size="12" fill="#475569">重心偏离支点，落在画面右 2/3 处</text>
+  <text x="546" y="351" text-anchor="middle" font-size="22" font-weight="bold" fill="#15803d">稳</text>
+  <text x="546" y="368" text-anchor="middle" font-size="12" fill="#475569">重心落在支点正上方，左右相抵</text>
+
+  <!-- 图例 -->
+  <circle cx="208" cy="392" r="6" fill="#fff" stroke="#475569" stroke-width="2.2"/>
+  <circle cx="208" cy="392" r="2" fill="#475569"/>
+  <text x="220" y="396" font-size="12" fill="#475569">视觉重心</text>
+  <path d="M302,386 L296,398 H308 Z" fill="#94a3b8" stroke="#444" stroke-width="1.2" stroke-linejoin="round"/>
+  <text x="314" y="396" font-size="12" fill="#475569">支点（画面水平中点）</text>
+  <line x1="458" y1="392" x2="482" y2="392" stroke="#2563eb" stroke-width="1.4" stroke-dasharray="6 4"/>
+  <text x="488" y="396" font-size="12" fill="#475569">中轴线</text>
+</svg><figcaption><strong>图 14-1</strong>　稳定性对照——左图左 1/3 是浅灰小山、右 2/3 是深灰大山，右下角还压着深色前景，视觉重心落在右 2/3 处、偏离支点，画面像要往右下压下来；右图保留深色前景并在左上补一块中灰元素，重心回到支点正上方，画面就稳了（右图为示意）。</figcaption></figure>
+
+<h3>7. 错误四：缺乏完整性<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=14&t=873" target="_blank" rel="noopener" title="跳到视频 14:33">14:33–17:20</a></h3><ul>
+<li>石阶小巷挑水人物（黑白，左右两张）：右张更舒服。强调的主体要尽量完整，不必头到脚全拍，而是情节完整、看得出在表达什么。</li>
+<li>蓝天白云+地面：地平线横贯、上下分两半，目光分两次看、上下无联系；有树穿透地平线的好片则上下相连，完整。</li>
+<li>深色外套的女孩站在矮墙前，身后田野的地平线正横在脖子处：幻灯片注「忌用人的脖子去突破直线」→ 机位放低、往上拍，线条压到脖子以下。</li>
+</ul>
+<figure id="fig-P14-2"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 424" role="img" aria-label="横贯线与完整性：四个小画框。a 地平线在50%高度贯穿全幅，把画面一分为二；b 同样的地平线，一棵树从下方穿出直达上半部分，上下相连；c 半身人像头在上三分之一、脖子在45%高度，地平线正好穿过脖子，不好；d 机位放低，地平线落到约62%高度的胸口，脖子完整，较好">
+  <title>横贯线与完整性</title>
+  <defs>
+    <clipPath id="p14-2-clip"><rect width="204" height="136"/></clipPath>
+    <g id="p14-2-person">
+      <path d="M48,136 C48,100 66,79 92,75 L112,75 C138,79 156,100 156,136 Z" fill="#334155"/>
+      <rect x="95" y="44" width="14" height="32" rx="3" fill="#e8b996"/>
+      <path d="M96,76 L102,88 L108,76 Z" fill="#e8b996"/>
+      <ellipse cx="102" cy="25" rx="19.5" ry="22.5" fill="#2b2b2b"/>
+      <ellipse cx="102" cy="29" rx="16" ry="18.5" fill="#f2c9a5"/>
+      <path d="M86,29 C84,3 120,3 118,29 C112,19 92,19 86,29 Z" fill="#2b2b2b"/>
+      <circle cx="95.5" cy="32" r="1.7" fill="#2b2b2b"/>
+      <circle cx="108.5" cy="32" r="1.7" fill="#2b2b2b"/>
+    </g>
+    <g id="p14-2-x" fill="none" stroke="#b03a3a" stroke-width="2.6" stroke-linecap="round"><path d="M0,0 L11,11 M11,0 L0,11"/></g>
+    <g id="p14-2-ok" fill="none" stroke="#16a34a" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M0,6 L4.5,11 L12,0"/></g>
+  </defs>
+
+  <text x="360" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#1e3a8a">横贯线与完整性：地平线的位置</text>
+
+  <!-- 四张卡片底 -->
+  <g fill="#f8fafc" stroke="#e2e8f0">
+    <rect x="12" y="44" width="342" height="168" rx="8"/>
+    <rect x="366" y="44" width="342" height="168" rx="8"/>
+    <rect x="12" y="224" width="342" height="168" rx="8"/>
+    <rect x="366" y="224" width="342" height="168" rx="8"/>
+  </g>
+
+  <!-- a：地平线居中 -->
+  <g transform="translate(22,60)">
+    <g clip-path="url(#p14-2-clip)">
+      <rect width="204" height="136" fill="#dbeafe"/>
+      <rect y="68" width="204" height="68" fill="#cfe3b5"/>
+      <line x1="0" y1="68" x2="204" y2="68" stroke="#475569" stroke-width="1.6"/>
+      <text x="6" y="63" font-size="11" fill="#475569" stroke="#fff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">50%</text>
+    </g>
+    <rect width="204" height="136" fill="none" stroke="#444" stroke-width="1.5"/>
+  </g>
+  <circle cx="247" cy="78" r="9" fill="#2563eb"/>
+  <text x="247" y="82.5" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">a</text>
+  <text x="262" y="83" font-size="13" font-weight="bold" fill="#1f2329">地平线居中</text>
+  <use href="#p14-2-x" x="238" y="106"/>
+  <text x="256" y="117" font-size="15" font-weight="bold" fill="#b03a3a">一分为二</text>
+  <g font-size="12" fill="#475569">
+    <text x="238" y="144">地平线在 50% 高</text>
+    <text x="238" y="160">贯穿全幅，上下</text>
+    <text x="238" y="176">各半、互不相连</text>
+  </g>
+
+  <!-- b：一棵树穿出地平线 -->
+  <g transform="translate(376,60)">
+    <g clip-path="url(#p14-2-clip)">
+      <rect width="204" height="136" fill="#dbeafe"/>
+      <rect y="68" width="204" height="68" fill="#cfe3b5"/>
+      <line x1="0" y1="68" x2="204" y2="68" stroke="#475569" stroke-width="1.6"/>
+      <ellipse cx="140" cy="128" rx="20" ry="3.5" fill="#000" opacity=".12"/>
+      <rect x="135" y="46" width="10" height="82" fill="#8b5e3c"/>
+      <g fill="#2f6b3a">
+        <circle cx="124" cy="40" r="13.6"/>
+        <circle cx="156" cy="40" r="13.6"/>
+        <circle cx="140" cy="28" r="18.6"/>
+        <circle cx="140" cy="42" r="14.6"/>
+      </g>
+      <g fill="#4aa35c">
+        <circle cx="124" cy="40" r="12"/>
+        <circle cx="156" cy="40" r="12"/>
+        <circle cx="140" cy="28" r="17"/>
+        <circle cx="140" cy="42" r="13"/>
+      </g>
+      <text x="6" y="63" font-size="11" fill="#475569" stroke="#fff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">50%</text>
+    </g>
+    <rect width="204" height="136" fill="none" stroke="#444" stroke-width="1.5"/>
+  </g>
+  <circle cx="601" cy="78" r="9" fill="#2563eb"/>
+  <text x="601" y="82.5" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">b</text>
+  <text x="616" y="83" font-size="13" font-weight="bold" fill="#1f2329">加一棵树</text>
+  <use href="#p14-2-ok" x="592" y="106"/>
+  <text x="610" y="117" font-size="15" font-weight="bold" fill="#15803d">上下相连</text>
+  <g font-size="12" fill="#475569">
+    <text x="592" y="144">同样的地平线，</text>
+    <text x="592" y="160">树从下方穿出，</text>
+    <text x="592" y="176">直达上半部分</text>
+  </g>
+
+  <!-- c：地平线穿脖子 -->
+  <g transform="translate(22,240)">
+    <g clip-path="url(#p14-2-clip)">
+      <rect width="204" height="136" fill="#dbeafe"/>
+      <rect y="61.2" width="204" height="74.8" fill="#cfe3b5"/>
+      <line x1="0" y1="61.2" x2="204" y2="61.2" stroke="#475569" stroke-width="1.6"/>
+      <use href="#p14-2-person"/>
+      <ellipse cx="102" cy="61.2" rx="21" ry="7" fill="none" stroke="#b03a3a" stroke-width="1.8" stroke-dasharray="3 2"/>
+      <text x="6" y="56" font-size="11" fill="#475569" stroke="#fff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">45%</text>
+    </g>
+    <rect width="204" height="136" fill="none" stroke="#444" stroke-width="1.5"/>
+  </g>
+  <circle cx="247" cy="258" r="9" fill="#2563eb"/>
+  <text x="247" y="262.5" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">c</text>
+  <text x="262" y="263" font-size="13" font-weight="bold" fill="#1f2329">半身人像</text>
+  <use href="#p14-2-x" x="238" y="286"/>
+  <text x="256" y="297" font-size="15" font-weight="bold" fill="#b03a3a">线穿脖子</text>
+  <g font-size="12" fill="#475569">
+    <text x="238" y="324">线在 45% 高，</text>
+    <text x="238" y="340">正好横在脖子上，</text>
+    <text x="238" y="356">像把头切下来</text>
+  </g>
+
+  <!-- d：机位放低 -->
+  <g transform="translate(376,240)">
+    <g clip-path="url(#p14-2-clip)">
+      <rect width="204" height="136" fill="#dbeafe"/>
+      <rect y="84.3" width="204" height="51.7" fill="#cfe3b5"/>
+      <line x1="0" y1="84.3" x2="204" y2="84.3" stroke="#475569" stroke-width="1.6"/>
+      <use href="#p14-2-person"/>
+      <text x="6" y="79" font-size="11" fill="#475569" stroke="#fff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">62%</text>
+    </g>
+    <rect width="204" height="136" fill="none" stroke="#444" stroke-width="1.5"/>
+  </g>
+  <circle cx="601" cy="258" r="9" fill="#2563eb"/>
+  <text x="601" y="262.5" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">d</text>
+  <text x="616" y="263" font-size="13" font-weight="bold" fill="#1f2329">机位放低</text>
+  <use href="#p14-2-ok" x="592" y="286"/>
+  <text x="610" y="297" font-size="15" font-weight="bold" fill="#15803d">线落胸口</text>
+  <g font-size="12" fill="#475569">
+    <text x="592" y="324">机位放低，线</text>
+    <text x="592" y="340">落到约 62% 高</text>
+    <text x="592" y="356">的胸口，脖子完整</text>
+  </g>
+
+  <text x="360" y="414" text-anchor="middle" font-size="11" fill="#94a3b8">百分数自画面上缘向下量；画面为示意。</text>
+</svg><figcaption><strong>图 14-2</strong>　横贯线与完整性——地平线在 50% 高处贯穿全幅会把画面一分为二（a），有树从下方穿出直达上半则上下相连（b）；地平线正穿过 45% 高处的脖子像把头切断（c），机位放低让线落到约 62% 高的胸口就好多了（d）；百分数自画面上缘向下量，画面为示意。</figcaption></figure>
+
+<h3>8. 好片的元素布局<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=14&t=1040" target="_blank" rel="noopener" title="跳到视频 17:20">17:20–25:38</a></h3><ul>
+<li>渔夫与渔网：主体在前景，近大远小；渔网线条牵引视线；天气与曝光把杂细节糊成一片；船只只露一半，完整是相对的，借另一条船联想画外，更耐看。</li>
+<li>牧羊人与羊群：近大远小+颜色对比；手中木棍牵引视线；环境成气氛烘托；乌云重，稍压抑，稳定性一般。</li>
+<li>夕阳剪影：主体居中；太阳与女主角重合成趣味中心；剪影曝光去掉多余细节；人物打破地平线；影子引导视线、增强纵深。</li>
+<li>暗调画面（玻璃上有太阳反光）：为何等人走到这个位置才拍（留待后面规则）；反光成趣味中心，四周压暗（暗房或 PS），更简洁。</li>
+<li>暗红调人物：线条与节奏好、虚实对比；主体欠曝仍吸睛、占比大；前景人头发顶上框却不压抑——后方人物头上有空间，前景人又没正面朝向我们。</li>
+<li>狮身人面像：远处低角度，天空过曝留白，开阔大气，衬出宏伟；像头停一只鸟（转写作「烈焰」，录音不清），成趣味中心。</li>
+<li>直升机：位置是亮点——近了显大，太靠左会担心撞出画面；现为运动物体留足运动空间。</li>
+</ul>
+<figure id="fig-P14-3"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540" role="img" aria-label="运动留白：上下两个画框，直升机都机头朝左。上图直升机在右三分之一，机头前方（左侧）留出约 60% 画面宽的空天，前方留足空间，画面舒展；下图直升机挤在左六分之一处，机头前方空间很小，让人担心它撞出画面">
+  <title>运动留白</title>
+  <defs>
+    <linearGradient id="p14-3-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#bcd8fb"/>
+      <stop offset="1" stop-color="#eef6ff"/>
+    </linearGradient>
+    <clipPath id="p14-3-clip"><rect width="300" height="200"/></clipPath>
+    <g id="p14-3-thirds" fill="none" stroke="#2563eb" stroke-opacity=".4" stroke-width="1" stroke-dasharray="5 4">
+      <path d="M100,0 V200 M200,0 V200 M0,66.7 H300 M0,133.3 H300"/>
+    </g>
+    <!-- 直升机剪影：机头朝左，机头尖在 (0,32)，全长约 112 -->
+    <g id="p14-3-heli" fill="#1f2937">
+      <rect x="2" y="2.6" width="76" height="3.4" rx="1.7"/>
+      <rect x="35.5" y="5" width="5" height="9"/>
+      <path d="M0,32 C0,22 8,14 22,13 L50,13 C58,13 64,17 66,24 L66,32 C66,39 58,42 48,42 L14,42 C5,42 0,38 0,32 Z"/>
+      <polygon points="60,18 108,23.5 108,28 60,33"/>
+      <polygon points="92,22 102,8 109,8 108,25"/>
+      <ellipse cx="109" cy="26.5" rx="2.4" ry="8.5"/>
+      <path d="M17,41 L15,49 M50,41 L52,49" fill="none" stroke="#1f2937" stroke-width="2.4" stroke-linecap="round"/>
+      <path d="M3,46.5 Q4,49.5 9,49.5 L62,49.5" fill="none" stroke="#1f2937" stroke-width="2.6" stroke-linecap="round"/>
+      <path d="M3.5,31 C3.5,23.5 10,17.5 21,16.5 L28,16.5 L28,31 Z" fill="#94a3b8" opacity=".6"/>
+    </g>
+    <g id="p14-3-x" fill="none" stroke="#b03a3a" stroke-width="2.6" stroke-linecap="round"><path d="M0,0 L11,11 M11,0 L0,11"/></g>
+    <g id="p14-3-ok" fill="none" stroke="#16a34a" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M0,6 L4.5,11 L12,0"/></g>
+  </defs>
+
+  <text x="360" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#1e3a8a">运动留白：机头前方要留足空间</text>
+
+  <!-- 两张卡片底 -->
+  <g fill="#f8fafc" stroke="#e2e8f0">
+    <rect x="12" y="44" width="696" height="224" rx="8"/>
+    <rect x="12" y="280" width="696" height="224" rx="8"/>
+  </g>
+
+  <!-- a：直升机在右 1/3，前方留足空间 -->
+  <g transform="translate(24,56)">
+    <g clip-path="url(#p14-3-clip)">
+      <rect width="300" height="200" fill="url(#p14-3-sky)"/>
+      <use href="#p14-3-thirds"/>
+      <use href="#p14-3-heli" transform="translate(183,55.2) scale(.9)"/>
+      <!-- 飞行方向 -->
+      <line x1="176" y1="84" x2="130" y2="84" stroke="#2563eb" stroke-width="2.2" stroke-dasharray="6 4"/>
+      <polygon points="116,84 130,77 130,91" fill="#2563eb"/>
+      <!-- 机头前方空间 -->
+      <line x1="183" y1="104" x2="183" y2="177" stroke="#16a34a" stroke-width="1.2" stroke-dasharray="2 3"/>
+      <line x1="13" y1="170" x2="174" y2="170" stroke="#16a34a" stroke-width="1.8"/>
+      <polygon points="4,170 14,165.5 14,174.5" fill="#16a34a"/>
+      <polygon points="183,170 173,165.5 173,174.5" fill="#16a34a"/>
+      <rect x="40" y="178" width="106" height="19" rx="3" fill="#edf5ff" fill-opacity=".95"/>
+      <text x="93" y="191" text-anchor="middle" font-size="13" font-weight="bold" fill="#15803d">前方空间 ≈ 60%</text>
+    </g>
+    <rect width="300" height="200" fill="none" stroke="#444" stroke-width="1.5"/>
+  </g>
+  <circle cx="360" cy="116" r="9" fill="#2563eb"/>
+  <text x="360" y="120.5" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">a</text>
+  <text x="375" y="121" font-size="13" font-weight="bold" fill="#1f2329">直升机在右 1/3，机头朝左</text>
+  <use href="#p14-3-ok" x="350" y="144"/>
+  <text x="368" y="155" font-size="16" font-weight="bold" fill="#15803d">前方留足空间</text>
+  <g font-size="12" fill="#475569">
+    <text x="350" y="184">左侧留出约 60% 画面宽的空天，</text>
+    <text x="350" y="200">飞行方向有去处，画面舒展。</text>
+  </g>
+
+  <!-- b：直升机在左 1/6，前方空间很小 -->
+  <g transform="translate(24,292)">
+    <g clip-path="url(#p14-3-clip)">
+      <rect width="300" height="200" fill="url(#p14-3-sky)"/>
+      <use href="#p14-3-thirds"/>
+      <use href="#p14-3-heli" transform="translate(50,55.2) scale(.9)"/>
+      <!-- 飞行方向 -->
+      <line x1="44" y1="84" x2="32" y2="84" stroke="#2563eb" stroke-width="2.2"/>
+      <polygon points="18,84 32,77 32,91" fill="#2563eb"/>
+      <!-- 机头前方空间 -->
+      <line x1="50" y1="104" x2="50" y2="177" stroke="#b03a3a" stroke-width="1.2" stroke-dasharray="2 3"/>
+      <line x1="13" y1="170" x2="41" y2="170" stroke="#b03a3a" stroke-width="1.8"/>
+      <polygon points="4,170 14,165.5 14,174.5" fill="#b03a3a"/>
+      <polygon points="50,170 40,165.5 40,174.5" fill="#b03a3a"/>
+      <rect x="1" y="178" width="112" height="19" rx="3" fill="#edf5ff" fill-opacity=".95"/>
+      <text x="4" y="191" font-size="13" font-weight="bold" fill="#b03a3a">前方空间仅 ≈ 1/6</text>
+    </g>
+    <rect width="300" height="200" fill="none" stroke="#444" stroke-width="1.5"/>
+  </g>
+  <circle cx="360" cy="352" r="9" fill="#2563eb"/>
+  <text x="360" y="356.5" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">b</text>
+  <text x="375" y="357" font-size="13" font-weight="bold" fill="#1f2329">直升机在左 1/6，机头朝左</text>
+  <use href="#p14-3-x" x="350" y="380"/>
+  <text x="368" y="391" font-size="16" font-weight="bold" fill="#b03a3a">担心撞出画面</text>
+  <g font-size="12" fill="#475569">
+    <text x="350" y="420">机头离左框只有约 1/6 画面宽，</text>
+    <text x="350" y="436">前方空间很小，像马上要飞出画面。</text>
+  </g>
+
+  <text x="360" y="526" text-anchor="middle" font-size="11" fill="#94a3b8">蓝色虚线箭头为飞行方向，浅蓝虚线为三分线，绿/红双箭头量出机头前方的空间；画面与直升机为示意。</text>
+</svg><figcaption><strong>图 14-3</strong>　运动留白——同一架机头朝左的直升机，放在右 1/3、机头前方留出约 60% 画面宽的空天，飞行有去处、画面舒展（上）；挤在左 1/6、前方空间很小，会让人担心它马上撞出画面（下）——运动的主体，前方要留足空间（位置为示意）。</figcaption></figure>
+<ul>
+<li>蓝调街景：主体与陪体对比鲜明；环境与主体颜色对比反增空间感；一侧很重，下方房子与一群游客起平衡；对比使画面生动。</li>
+<li>最后一张（石质古建筑+游客）：多数人只拍右边那块、少了左边元素；蒙住左边看右边，必然单调平淡。</li>
+</ul>
+
+<h3>9. 小结与预告<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=14&t=1538" target="_blank" rel="noopener" title="跳到视频 25:38">25:38–26:41</a></h3><p>以上是构图原则：主体突出、主题生动、完整、稳定（下下节详讲）。开篇问题照片如何修正？→ 下一章「取景构图」：摄影师靠怎样的操作与设置实现。</p>
+
+<div class="box a7c2"><h3>📷 换成 A7C II 怎么做</h3><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>课程里的做法（原机型叫法）</th>
+<th>A7C II 上的对应</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>光学取景器易过度集中，背屏取景更放松</td>
+<td>MENU →（设置）→［取景器/显示屏］→［选择取景器/显示屏］→［自动］（出厂）／［取景器（手动）］／［显示屏（手动）］</td>
+<td>取景器是电子取景器（覆盖率 100%）；显示屏侧翻式，向左翻开约 176°、可旋转约 270°</td>
+</tr>
+<tr>
+<td>检查横贯线与主体位置</td>
+<td>MENU →（拍摄）→［拍摄显示］→［网格线显示］→［开］；［网格线类型］→［三等分线网格］（出厂）／［黄金分割］（固件2.00+）／［方形网格］／［对角 + 方形网格］</td>
+<td>网格线出厂为关</td>
+</tr>
+<tr>
+<td>防止画面倾斜</td>
+<td>按控制拨轮上（DISP）切到［数字水平量规］</td>
+<td>水平时变绿，误差约 ±1°</td>
+</tr>
+<tr>
+<td>横/竖构图（3:2）</td>
+<td>竖握机身；MENU →（拍摄）→［影像质量/记录］→［纵横比］→3:2（出厂）／4:3／16:9／1:1</td>
+<td>MENU →（拍摄）→［标记显示］→［〈静〉纵横标记］可叠加比例框</td>
+</tr>
+<tr>
+<td>主体偏离中央时对焦</td>
+<td>触摸点按：［触摸操作］设［开］，［触摸面板设置］→［拍摄画面］→［拍摄期间的触摸功能］=［触碰对焦］；或对焦区域选［点: M］，按控制拨轮中央（对焦标准）后移框</td>
+<td>触碰对焦出厂即是</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="box errata"><h3>🕰️ 时代差异与勘误</h3><ul>
+<li>课程用单反光学取景器，易「视而不见」→ A7C II 是电子取景器，另可用翻转屏放松取景；扫描式观察仍适用。</li>
+<li>转写稿同音字已改：平片=评片，进化=净化，以数=竖，严肃还原=色彩还原，引子=影子，队张/队长=下一张。</li>
+</ul>
+</div>
+<div class="box terms"><h3>🔖 本集术语</h3><ul>
+<li><strong>构图</strong>：画面元素的布局，即作品的表现形式。</li>
+<li><strong>陪体</strong>：陪衬主体、与之对比却不抢戏的元素。</li>
+<li><strong>视而不见</strong>：注意力过度集中时，看见却忽略其余元素。</li>
+<li><strong>趣味中心</strong>：画面最吸引目光的点（如玻璃上的太阳反光）。</li>
+</ul>
+</div>
+<p class="ep-nav"><a href="#top">↑ 回到本页顶部</a></p></section>
+<section id="p15" class="episode" aria-labelledby="p15-t"><h2 id="p15-t"><span class="ep-no">P15</span> 构图的实现手段</h2>
+<p class="ep-meta">原标题：015构图03 构图的实现手段 · 时长 26:59 · <a href="https://www.bilibili.com/video/BV1Vt411E7nT?p=15" target="_blank" rel="noopener">▶ 在 B 站观看本集</a></p>
+<blockquote class="oneliner">
+<p><strong>一句话</strong>：构图靠一套可操作的手段实现：横竖、景别、水平角度与垂直高度、前后景、透视、主体位置；黄金分割只是参考，不必迷信。</p>
+</blockquote>
+<nav class="outline" aria-label="本集大纲"><p class="outline-t">本集大纲</p><ol>
+<li>构图参考线与黄金分割法<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=15" target="_blank" rel="noopener" title="跳到视频 00:00">00:00</a></li>
+<li>横竖画面的选择<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=15&t=190" target="_blank" rel="noopener" title="跳到视频 03:10">03:10</a></li>
+<li>焦距、距离与景别<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=15&t=454" target="_blank" rel="noopener" title="跳到视频 07:34">07:34</a></li>
+<li>水平角度<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=15&t=600" target="_blank" rel="noopener" title="跳到视频 10:00">10:00</a></li>
+<li>垂直高度<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=15&t=840" target="_blank" rel="noopener" title="跳到视频 14:00">14:00</a></li>
+<li>前景的设置与背景的处理<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=15&t=1055" target="_blank" rel="noopener" title="跳到视频 17:35">17:35</a></li>
+<li>透视规律的运用<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=15&t=1255" target="_blank" rel="noopener" title="跳到视频 20:55">20:55</a></li>
+<li>视觉中心点（主体位置）的处理<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=15&t=1438" target="_blank" rel="noopener" title="跳到视频 23:58">23:58</a></li>
+</ol></nav>
+
+<h3>1. 构图参考线与黄金分割法<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=15" target="_blank" rel="noopener" title="跳到视频 00:00">00:00–03:10</a></h3><ul>
+<li>用相机的<strong>构图参考线</strong>（九宫格）构图，老师称为<strong>黄金分割法</strong>：四边三等分，线为黄金分割线，四个交点为黄金分割点（视觉中心）；只适用 3:2、4:3 画幅，120 方形画幅的分割线不在九宫格上。</li>
+<li>做法：地平线放分割线、主体放分割点，得「中规中矩」的照片，教程讲得最多，但易千篇一律。本集要答：构图靠哪些手段？水平线、主体必须放分割线/点吗？</li>
+</ul>
+<figure id="fig-P15-1"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 384" role="img" aria-label="九宫格与黄金分割点：3:2 画框用蓝色虚线三等分（竖线在宽的1/3、2/3，横线在高的1/3、2/3），四个交点是老师所称的黄金分割点，示例把地平线放在下三分线、小船放在左下交点；橙色实线是严格黄金分割线（0.382、0.618），与三分线只差约5%边长；右侧附1:1方形画幅，老师说它的分割线不在九宫格上">
+  <title>九宫格与黄金分割点</title>
+  <defs>
+    <clipPath id="p15-1-clip"><rect width="300" height="200"/></clipPath>
+    <marker id="p15-1-arr" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1e3a8a"/></marker>
+  </defs>
+
+  <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="bold" fill="#1e3a8a">九宫格与黄金分割点</text>
+
+  <!-- 列标题 -->
+  <rect x="70" y="38" width="300" height="22" rx="11" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="220" y="54" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e3a8a">3:2 画幅：三等分线（九宫格）</text>
+  <rect x="470" y="38" width="200" height="22" rx="11" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="570" y="54" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e3a8a">1:1 方形画幅</text>
+
+  <!-- 左：3:2 画框 300×200 -->
+  <g transform="translate(70,86)">
+    <g clip-path="url(#p15-1-clip)">
+      <rect width="300" height="133.33" fill="#e8f1fb"/>
+      <rect y="133.33" width="300" height="66.67" fill="#c9def5"/>
+      <line x1="0" y1="133.33" x2="300" y2="133.33" stroke="#7aa7d6" stroke-width="1"/>
+      <!-- 严格黄金分割线 0.382 / 0.618 -->
+      <g stroke="#f59e0b" stroke-width="1.2">
+        <line x1="114.59" y1="0" x2="114.59" y2="200"/>
+        <line x1="185.41" y1="0" x2="185.41" y2="200"/>
+        <line x1="0" y1="76.39" x2="300" y2="76.39"/>
+        <line x1="0" y1="123.61" x2="300" y2="123.61"/>
+      </g>
+      <!-- 三等分线 1/3、2/3 -->
+      <g stroke="#2563eb" stroke-width="1.4" stroke-dasharray="6 4">
+        <line x1="100" y1="0" x2="100" y2="200"/>
+        <line x1="200" y1="0" x2="200" y2="200"/>
+        <line x1="0" y1="66.67" x2="300" y2="66.67"/>
+        <line x1="0" y1="133.33" x2="300" y2="133.33"/>
+      </g>
+      <!-- 小船：放在左下交点 (100,133.33) -->
+      <path d="M86,127 H112 L107,136 H91 Z" fill="#b03a3a" stroke="#444" stroke-width="1" stroke-linejoin="round"/>
+      <line x1="99" y1="100" x2="99" y2="127" stroke="#444" stroke-width="1.4"/>
+      <path d="M98,102 V124 H84 Z" fill="#fff" stroke="#444" stroke-width="1" stroke-linejoin="round"/>
+      <path d="M101,108 V124 H110 Z" fill="#fff" stroke="#444" stroke-width="1" stroke-linejoin="round"/>
+      <!-- 交点圈：蓝=三分点，橙=严格黄金分割点 -->
+      <g fill="none" stroke="#2563eb" stroke-width="2.4">
+        <circle cx="100" cy="66.67" r="6.5"/>
+        <circle cx="200" cy="66.67" r="6.5"/>
+        <circle cx="100" cy="133.33" r="6.5"/>
+        <circle cx="200" cy="133.33" r="6.5"/>
+      </g>
+      <g fill="#fff" stroke="#f59e0b" stroke-width="1.8">
+        <circle cx="114.59" cy="76.39" r="3.2"/>
+        <circle cx="185.41" cy="76.39" r="3.2"/>
+        <circle cx="114.59" cy="123.61" r="3.2"/>
+        <circle cx="185.41" cy="123.61" r="3.2"/>
+      </g>
+      <!-- 画面内标注 -->
+      <text x="50" y="30" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e3a8a">黄金分割点</text>
+      <text x="50" y="46" text-anchor="middle" font-size="11" fill="#475569">（四个交点）</text>
+      <path d="M76,51 L93,62" stroke="#1e3a8a" stroke-width="1.3" fill="none" marker-end="url(#p15-1-arr)"/>
+      <g font-size="12" fill="#1e3a8a" text-anchor="middle">
+        <text x="50" y="158">小船放在</text>
+        <text x="50" y="174">左下交点</text>
+        <text x="250" y="158">地平线放在</text>
+        <text x="250" y="174">下三分线上</text>
+      </g>
+    </g>
+    <rect width="300" height="200" fill="none" stroke="#444" stroke-width="1.5"/>
+    <!-- 刻度：蓝 = 三分，橙 = 黄金分割 -->
+    <path d="M100,-7 V0 M200,-7 V0 M-7,66.67 H0 M-7,133.33 H0" stroke="#2563eb" stroke-width="1.8" fill="none"/>
+    <path d="M114.59,200 V207 M185.41,200 V207 M300,76.39 H307 M300,123.61 H307" stroke="#f59e0b" stroke-width="1.8" fill="none"/>
+    <g font-size="11" fill="#1d4ed8" text-anchor="middle">
+      <text x="100" y="-10">0.333</text>
+      <text x="200" y="-10">0.667</text>
+    </g>
+    <g font-size="11" fill="#1d4ed8" text-anchor="end">
+      <text x="-10" y="70.67">0.333</text>
+      <text x="-10" y="137.33">0.667</text>
+    </g>
+    <g font-size="11" fill="#b45309" text-anchor="middle">
+      <text x="114.59" y="220">0.382</text>
+      <text x="185.41" y="220">0.618</text>
+    </g>
+    <g font-size="11" fill="#b45309">
+      <text x="311" y="80.39">0.382</text>
+      <text x="311" y="127.61">0.618</text>
+    </g>
+  </g>
+
+  <!-- 右：1:1 方框 200×200 -->
+  <g transform="translate(470,86)">
+    <rect width="200" height="200" fill="#f1f5f9"/>
+    <g stroke="#f59e0b" stroke-width="1.2">
+      <line x1="76.39" y1="0" x2="76.39" y2="200"/>
+      <line x1="123.61" y1="0" x2="123.61" y2="200"/>
+      <line x1="0" y1="76.39" x2="200" y2="76.39"/>
+      <line x1="0" y1="123.61" x2="200" y2="123.61"/>
+    </g>
+    <g stroke="#2563eb" stroke-width="1.4" stroke-dasharray="6 4">
+      <line x1="66.67" y1="0" x2="66.67" y2="200"/>
+      <line x1="133.33" y1="0" x2="133.33" y2="200"/>
+      <line x1="0" y1="66.67" x2="200" y2="66.67"/>
+      <line x1="0" y1="133.33" x2="200" y2="133.33"/>
+    </g>
+    <g fill="none" stroke="#2563eb" stroke-width="2.2">
+      <circle cx="66.67" cy="66.67" r="5.5"/>
+      <circle cx="133.33" cy="66.67" r="5.5"/>
+      <circle cx="66.67" cy="133.33" r="5.5"/>
+      <circle cx="133.33" cy="133.33" r="5.5"/>
+    </g>
+    <g fill="#fff" stroke="#f59e0b" stroke-width="1.8">
+      <circle cx="76.39" cy="76.39" r="2.8"/>
+      <circle cx="123.61" cy="76.39" r="2.8"/>
+      <circle cx="76.39" cy="123.61" r="2.8"/>
+      <circle cx="123.61" cy="123.61" r="2.8"/>
+    </g>
+    <rect width="200" height="200" fill="none" stroke="#444" stroke-width="1.5"/>
+  </g>
+  <path d="M484,300 L495,311 M495,300 L484,311" stroke="#b03a3a" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+  <text x="502" y="311" font-size="14" font-weight="bold" fill="#b03a3a">分割线不在九宫格上</text>
+  <text x="570" y="330" text-anchor="middle" font-size="12" fill="#475569">（老师：只适用于 3:2、4:3 画幅）</text>
+
+  <!-- 图例 -->
+  <line x1="40" y1="342" x2="70" y2="342" stroke="#2563eb" stroke-width="1.4" stroke-dasharray="6 4"/>
+  <circle cx="55" cy="342" r="5.5" fill="none" stroke="#2563eb" stroke-width="2.2"/>
+  <text x="80" y="346" font-size="12" fill="#1f2329">三等分线（0.333、0.667）：四个交点＝老师所称「黄金分割点」</text>
+  <line x1="40" y1="362" x2="70" y2="362" stroke="#f59e0b" stroke-width="1.2"/>
+  <circle cx="55" cy="362" r="3.2" fill="#fff" stroke="#f59e0b" stroke-width="1.8"/>
+  <text x="80" y="366" font-size="12" fill="#1f2329">严格黄金分割线（0.382、0.618）：与三分线接近但不重合，只差约 5% 边长</text>
+</svg><figcaption><strong>图 15-1</strong>　九宫格与黄金分割点——老师把三等分的九宫格线叫「黄金分割线」、四个交点叫「黄金分割点」，做法是把地平线放在分割线上、主体放在交点上（图中小船在左下交点）；严格的黄金分割线在 0.382、0.618 处，与三分线（0.333、0.667）只差约 5% 边长，老师还提醒这套做法只适用于 3:2、4:3 画幅，1:1 方形画幅的分割线不在九宫格上。</figcaption></figure>
+
+<h3>2. 横竖画面的选择<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=15&t=190" target="_blank" rel="noopener" title="跳到视频 03:10">03:10–07:34</a></h3><ul>
+<li>3:2 画面横拍、竖拍截然不同。样片：伦敦桥横拍才宽阔，纪念碑竖拍才高耸；前面「构图常见问题」用过的样片，横拍时中间线条把画面一分为二、车轮太完整抢注意力，改竖拍后「净化」画面、主体更突出；竖拍让悬崖更险峻；躺着的人横拍更紧凑。</li>
+<li>三条参考：①主体形状——三人排成一线横拍，两人上下站竖拍；②运动方向——左→右横向运动横拍，跳跃竖拍；③主体与环境——大海为背景的环境人像横拍（竖拍像水塘），参天大树为背景竖拍。只是参考：<strong>横竖都看一遍再定</strong>。</li>
+</ul>
+
+<h3>3. 焦距、距离与景别<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=15&t=454" target="_blank" rel="noopener" title="跳到视频 07:34">07:34–10:00</a></h3><ul>
+<li>焦距与拍摄距离决定<strong>景别</strong>：远景、全景、中景、近景、特写；<strong>焦距越短、距离越远，景别越大</strong>，选哪个看表达意图。</li>
+<li>远景：人成一点，重表意不写实，引人联想心境；全景：囊括主体完整形态；中景：人物重手部、上半身动作；近景：开始刻画神态；特写：取极小局部，画外联想强，拍脸时焦点是眼睛。典范：大人和小孩都没露脸，不觉不完整、很耐看——越不给看，越引人联想。</li>
+</ul>
+
+<h3>4. 水平角度<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=15&t=600" target="_blank" rel="noopener" title="跳到视频 10:00">10:00–14:00</a></h3><ul>
+<li>钟点比喻：摄影师在 6 点、被摄者在 12 点；移到 9 点或 3 点为<strong>侧面</strong>，绕到身后为<strong>背面</strong>，之间是<strong>前侧面</strong>、<strong>背侧面</strong>。没有哪面绝对好，但造型效应各异。</li>
+<li><strong>正面</strong>（人、动物样片）：面部眼神完全面向观众，最客观、最亲切。<strong>前侧面</strong>：环境变多、更立体，近大远小使面部略不对称；风光透视更明显、信息量大；样片用虚实对比强化主陪体；山峦由常见的正面改前侧面，空间感、线条走势更生动。</li>
+<li><strong>侧面</strong>：运动感最强，交代人物轮廓、突出鼻梁线。<strong>背面</strong>：像特写，给画外遐想、有跟踪意味；<strong>背侧面</strong>仍给正面信息，联想弱些、信息量更大。无最合适的角度，随场景与被摄物，靠不断选点。</li>
+</ul>
+<figure id="fig-P15-2"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 500" role="img" aria-label="水平角度钟点图：俯视，圆心为被摄者且面朝6点；相机在圆周上绕一圈、镜头都朝向圆心：6点是正面，4:30与7:30是前侧面，3点与9点是侧面，1:30与10:30是背侧面，12点是背面；与正面夹角依次为0°、45°、90°、135°、180°，并标注各角度的画面特点">
+  <title>水平角度钟点图：相机绕被摄者一圈</title>
+  <defs>
+    <g id="p15-2-cam" stroke="#444" stroke-width="1.4" stroke-linejoin="round">
+      <rect x="-13" y="-4" width="26" height="15" rx="3" fill="#fff"/>
+      <rect x="-5" y="11" width="10" height="3.5" rx="1" fill="#fff"/>
+      <rect x="-6" y="-12" width="12" height="8" rx="1.5"/>
+    </g>
+    <marker id="p15-2-arr" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="9" markerHeight="9" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker>
+  </defs>
+
+  <text x="360" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#1e3a8a">水平角度钟点图：相机绕被摄者一圈</text>
+
+  <!-- 钟点环：八个 45° 扇区，颜色按与正面的夹角分组 -->
+  <g stroke="#fff" stroke-width="1.5" fill-opacity=".24">
+    <path d="M306.4,132.7 A140,140 0 0 1 413.6,132.7 L396.7,173.3 A96,96 0 0 0 323.3,173.3 Z" fill="#64748b"/>
+    <path d="M413.6,132.7 A140,140 0 0 1 489.3,208.4 L448.7,225.3 A96,96 0 0 0 396.7,173.3 Z" fill="#7c3aed"/>
+    <path d="M489.3,208.4 A140,140 0 0 1 489.3,315.6 L448.7,298.7 A96,96 0 0 0 448.7,225.3 Z" fill="#f59e0b"/>
+    <path d="M489.3,315.6 A140,140 0 0 1 413.6,391.3 L396.7,350.7 A96,96 0 0 0 448.7,298.7 Z" fill="#16a34a"/>
+    <path d="M413.6,391.3 A140,140 0 0 1 306.4,391.3 L323.3,350.7 A96,96 0 0 0 396.7,350.7 Z" fill="#2563eb"/>
+    <path d="M306.4,391.3 A140,140 0 0 1 230.7,315.6 L271.3,298.7 A96,96 0 0 0 323.3,350.7 Z" fill="#16a34a"/>
+    <path d="M230.7,315.6 A140,140 0 0 1 230.7,208.4 L271.3,225.3 A96,96 0 0 0 271.3,298.7 Z" fill="#f59e0b"/>
+    <path d="M230.7,208.4 A140,140 0 0 1 306.4,132.7 L323.3,173.3 A96,96 0 0 0 271.3,225.3 Z" fill="#7c3aed"/>
+  </g>
+  <circle cx="360" cy="262" r="140" fill="none" stroke="#cbd5e1"/>
+  <circle cx="360" cy="262" r="96" fill="none" stroke="#cbd5e1"/>
+  <!-- 12 个钟点刻度与数字 -->
+  <path d="M360,175 V168 M403.5,186.7 L407,180.6 M435.3,218.5 L441.4,215 M447,262 H454 M435.3,305.5 L441.4,309 M403.5,337.3 L407,343.4 M360,349 V356 M316.5,337.3 L313,343.4 M284.7,305.5 L278.6,309 M273,262 H266 M284.7,218.5 L278.6,215 M316.5,186.7 L313,180.6" stroke="#94a3b8" stroke-width="1.2" fill="none"/>
+  <g font-size="13" font-weight="bold" fill="#94a3b8" text-anchor="middle">
+    <text x="360" y="194.5">12</text>
+    <text x="432" y="266.5">3</text>
+    <text x="360" y="338.5">6</text>
+    <text x="288" y="266.5">9</text>
+  </g>
+
+  <!-- 被摄者（俯视），面朝 6 点 -->
+  <ellipse cx="360" cy="262" rx="22" ry="9" fill="#cbd5e1" stroke="#444" stroke-width="1.4"/>
+  <circle cx="360" cy="262" r="10" fill="#f1f5f9" stroke="#444" stroke-width="1.4"/>
+  <path d="M355.5,270.5 L364.5,270.5 L360,278 Z" fill="#444"/>
+  <text x="360" y="236" text-anchor="middle" font-size="12" fill="#1f2329">被摄者</text>
+  <line x1="360" y1="286" x2="360" y2="314" stroke="#2563eb" stroke-width="2.4" marker-end="url(#p15-2-arr)"/>
+  <text x="368" y="304" font-size="12" font-weight="bold" fill="#1d4ed8">面朝 6 点</text>
+
+  <!-- 八台相机，镜头朝向圆心 -->
+  <use href="#p15-2-cam" transform="translate(360,144) rotate(180)" fill="#64748b"/>
+  <use href="#p15-2-cam" transform="translate(443.4,178.6) rotate(225)" fill="#7c3aed"/>
+  <use href="#p15-2-cam" transform="translate(478,262) rotate(270)" fill="#f59e0b"/>
+  <use href="#p15-2-cam" transform="translate(443.4,345.4) rotate(315)" fill="#16a34a"/>
+  <use href="#p15-2-cam" transform="translate(360,380) rotate(0)" fill="#2563eb"/>
+  <use href="#p15-2-cam" transform="translate(276.6,345.4) rotate(45)" fill="#16a34a"/>
+  <use href="#p15-2-cam" transform="translate(242,262) rotate(90)" fill="#f59e0b"/>
+  <use href="#p15-2-cam" transform="translate(276.6,178.6) rotate(135)" fill="#7c3aed"/>
+
+  <!-- 引线 -->
+  <g stroke="#94a3b8" stroke-width="1" fill="none">
+    <path d="M459,163 H512 M500,262 H512 M459,361 H512"/>
+    <path d="M261,163 H208 M220,262 H208 M261,361 H208"/>
+    <path d="M360,122 V110 M360,402 V414"/>
+  </g>
+
+  <!-- 12 点：背面 -->
+  <text x="360" y="62" text-anchor="middle" font-size="15" font-weight="bold" fill="#475569">背面</text>
+  <text x="360" y="80" text-anchor="middle" font-size="12" fill="#475569">12 点 · 与正面夹角 180°</text>
+  <text x="360" y="98" text-anchor="middle" font-size="13" fill="#1f2329">像特写，给画外遐想，有跟踪意味</text>
+
+  <!-- 1:30：背侧面 -->
+  <text x="518" y="168" font-size="15" font-weight="bold" fill="#6d28d9">背侧面</text>
+  <text x="518" y="186" font-size="12" fill="#475569">1:30 · 与正面夹角 135°</text>
+  <text x="518" y="204" font-size="13" fill="#1f2329">仍有正面信息</text>
+  <text x="518" y="221" font-size="13" fill="#1f2329">联想弱些，信息量更大</text>
+
+  <!-- 3 点：侧面 -->
+  <text x="518" y="267" font-size="15" font-weight="bold" fill="#b45309">侧面</text>
+  <text x="518" y="285" font-size="12" fill="#475569">3 点 · 与正面夹角 90°</text>
+  <text x="518" y="303" font-size="13" fill="#1f2329">运动感最强</text>
+  <text x="518" y="320" font-size="13" fill="#1f2329">交代轮廓，突出鼻梁线</text>
+
+  <!-- 4:30：前侧面 -->
+  <text x="518" y="366" font-size="15" font-weight="bold" fill="#15803d">前侧面</text>
+  <text x="518" y="384" font-size="12" fill="#475569">4:30 · 与正面夹角 45°</text>
+  <text x="518" y="402" font-size="13" fill="#1f2329">环境变多，更立体</text>
+  <text x="518" y="419" font-size="13" fill="#1f2329">近大远小，面部略不对称</text>
+
+  <!-- 10:30：背侧面 -->
+  <g text-anchor="end">
+    <text x="202" y="168" font-size="15" font-weight="bold" fill="#6d28d9">背侧面</text>
+    <text x="202" y="186" font-size="12" fill="#475569">10:30 · 与正面夹角 135°</text>
+    <text x="202" y="204" font-size="13" fill="#1f2329">仍有正面信息</text>
+    <text x="202" y="221" font-size="13" fill="#1f2329">联想弱些，信息量更大</text>
+
+    <text x="202" y="267" font-size="15" font-weight="bold" fill="#b45309">侧面</text>
+    <text x="202" y="285" font-size="12" fill="#475569">9 点 · 与正面夹角 90°</text>
+    <text x="202" y="303" font-size="13" fill="#1f2329">运动感最强</text>
+    <text x="202" y="320" font-size="13" fill="#1f2329">交代轮廓，突出鼻梁线</text>
+
+    <text x="202" y="366" font-size="15" font-weight="bold" fill="#15803d">前侧面</text>
+    <text x="202" y="384" font-size="12" fill="#475569">7:30 · 与正面夹角 45°</text>
+    <text x="202" y="402" font-size="13" fill="#1f2329">环境变多，更立体</text>
+    <text x="202" y="419" font-size="13" fill="#1f2329">近大远小，面部略不对称</text>
+  </g>
+
+  <!-- 6 点：正面 -->
+  <text x="360" y="430" text-anchor="middle" font-size="15" font-weight="bold" fill="#1d4ed8">正面</text>
+  <text x="360" y="448" text-anchor="middle" font-size="12" fill="#475569">6 点 · 夹角 0°（被摄者面朝的方向）</text>
+  <text x="360" y="466" text-anchor="middle" font-size="13" fill="#1f2329">最客观、最亲切：面部、眼神完全面向观众</text>
+
+  <text x="360" y="490" text-anchor="middle" font-size="11" fill="#94a3b8">示意：相机绕被摄者一圈，镜头都朝向圆心；钟点每小时 30°，夹角指偏离被摄者面朝方向（6 点）的角度。</text>
+</svg><figcaption><strong>图 15-2</strong>　水平角度钟点图——以被摄者为圆心、面朝 6 点，相机绕一圈：6 点正面最客观亲切，4:30 与 7:30 前侧面更立体，3 点与 9 点侧面运动感最强，1:30 与 10:30 背侧面仍有正面信息但联想弱些，12 点背面像特写、给画外遐想。</figcaption></figure>
+
+<h3>5. 垂直高度<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=15&t=840" target="_blank" rel="noopener" title="跳到视频 14:00">14:00–17:35</a></h3><ul>
+<li>分<strong>平视（平拍）、俯视、仰视</strong>。风光样片（日落海上帆船三张）：平视水平线居中，「四平八稳、宁静」；水平线较低的「天高云淡」，较高的「略带压抑」（老师把俯/仰与水平线高低说反了，见勘误）。俯拍→水平线被拉高、天空缩小；仰拍→水平线被压得很低、天空更多；无优劣，韵味不同。</li>
+<li>人像：俯拍脸显瘦、仰拍显丰腴（近大远小）；有修饰作用但不绝对，脸型靠光线，过度会变形，对人文、新闻、风光意义不大。</li>
+<li>心理效应：1966—1976 年电影拍摄方针「敌俯我仰」，仰拍显高大。</li>
+</ul>
+<figure id="fig-P15-3"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 414" role="img" aria-label="垂直高度与水平线：三幅 3:2 画框各有一条海平线和一艘小帆船。俯视（机位高、镜头朝下）海平线升到约 75% 高（自下量）、天空只剩上四分之一，略带压抑；平视海平线在 50% 高，四平八稳；仰视（机位低、镜头朝上）海平线降到约 25% 高、天空占四分之三，天高云淡。每幅画框下方有机位侧视小图，视平线以上的视野对应画面里的天空，以下对应海面">
+  <title>垂直高度与水平线</title>
+  <defs>
+    <linearGradient id="p15-3-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b9d6fa"/>
+      <stop offset="1" stop-color="#eaf3ff"/>
+    </linearGradient>
+    <linearGradient id="p15-3-sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8dbbe9"/>
+      <stop offset="1" stop-color="#4f8fd0"/>
+    </linearGradient>
+    <clipPath id="p15-3-fclip"><rect width="198" height="132"/></clipPath>
+    <clipPath id="p15-3-pclip"><rect width="198" height="76"/></clipPath>
+    <!-- 小帆船：原点在船底中心 -->
+    <g id="p15-3-boat">
+      <path d="M-12,-5 L12,-5 L8.5,0 L-8.5,0 Z" fill="#7c4a2a"/>
+      <rect x="-.7" y="-35" width="1.4" height="31" fill="#475569"/>
+      <path d="M1.8,-34 L1.8,-7 L15,-7 Z" fill="#fff" stroke="#94a3b8" stroke-width=".8" stroke-linejoin="round"/>
+      <path d="M-1.8,-31 L-1.8,-7 L-11,-7 Z" fill="#f1f5f9" stroke="#94a3b8" stroke-width=".8" stroke-linejoin="round"/>
+    </g>
+    <g id="p15-3-cloud" fill="#fff" opacity=".9">
+      <ellipse cx="0" cy="0" rx="14" ry="4.5"/>
+      <ellipse cx="-6" cy="-3.5" rx="8" ry="5"/>
+      <ellipse cx="5" cy="-4.5" rx="9" ry="6"/>
+    </g>
+    <!-- 相机简笔：镜头朝 +x -->
+    <g id="p15-3-cam">
+      <rect x="-11" y="-9.5" width="7" height="3.5" rx="1" fill="#475569"/>
+      <rect x="-11" y="-6" width="19" height="12" rx="2" fill="#475569"/>
+      <rect x="8" y="-3.6" width="5.5" height="7.2" rx="1" fill="#1f2937"/>
+    </g>
+  </defs>
+
+  <text x="360" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#1e3a8a">垂直高度与水平线：俯视、平视、仰视</text>
+
+  <!-- 三张卡片底 -->
+  <g fill="#f8fafc" stroke="#e2e8f0">
+    <rect x="12" y="44" width="224" height="338" rx="8"/>
+    <rect x="248" y="44" width="224" height="338" rx="8"/>
+    <rect x="484" y="44" width="224" height="338" rx="8"/>
+  </g>
+
+  <!-- a：俯视 -->
+  <circle cx="34" cy="63" r="9" fill="#2563eb"/>
+  <text x="34" y="67.5" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">a</text>
+  <text x="48" y="68" font-size="14" font-weight="bold" fill="#1f2329">俯视</text>
+  <text x="84" y="68" font-size="12" fill="#475569">机位高，镜头朝下</text>
+  <g transform="translate(25,80)">
+    <g clip-path="url(#p15-3-fclip)">
+      <rect width="198" height="33" fill="url(#p15-3-sky)"/>
+      <rect y="33" width="198" height="99" fill="url(#p15-3-sea)"/>
+      <line x1="0" y1="33" x2="198" y2="33" stroke="#475569" stroke-width="1.4"/>
+      <use href="#p15-3-cloud" transform="translate(52,17) scale(.8)"/>
+      <use href="#p15-3-boat" transform="translate(128,49) scale(.85)"/>
+      <text x="6" y="28" font-size="11" fill="#475569" stroke="#fff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">75%</text>
+    </g>
+    <rect width="198" height="132" fill="none" stroke="#444" stroke-width="1.5"/>
+  </g>
+  <g transform="translate(25,222)">
+    <rect width="198" height="90" rx="6" fill="#fff" stroke="#e2e8f0"/>
+    <g clip-path="url(#p15-3-pclip)">
+      <polygon points="30,24 134,7.5 134,24" fill="#cfe2fb"/>
+      <polygon points="30,24 134,24 134,77" fill="#6aa6e3" fill-opacity=".55"/>
+    </g>
+    <rect x="2" y="76" width="194" height="12" fill="#e2e8f0"/>
+    <line x1="2" y1="76" x2="196" y2="76" stroke="#94a3b8" stroke-width="1.4"/>
+    <line x1="30" y1="24" x2="188" y2="24" stroke="#475569" stroke-width="1.1" stroke-dasharray="4 3"/>
+    <text x="139" y="20" font-size="11" fill="#475569">视平线</text>
+    <text x="160" y="85.5" font-size="11" fill="#475569">水面</text>
+    <line x1="30" y1="28" x2="30" y2="76" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/>
+    <line x1="30" y1="24" x2="124.8" y2="39" stroke="#1e3a8a" stroke-width="1.6"/>
+    <polygon points="0,0 -9,-3.6 -9,3.6" fill="#1e3a8a" transform="translate(124.8,39) rotate(9)"/>
+    <use href="#p15-3-cam" transform="translate(30,24) rotate(9)"/>
+  </g>
+  <text x="124" y="336" text-anchor="middle" font-size="15" font-weight="bold" fill="#b45309">略带压抑</text>
+  <g font-size="12" fill="#475569" text-anchor="middle">
+    <text x="124" y="356">地平线升到约 75% 处，</text>
+    <text x="124" y="372">天空只剩上 1/4</text>
+  </g>
+
+  <!-- b：平视 -->
+  <circle cx="270" cy="63" r="9" fill="#2563eb"/>
+  <text x="270" y="67.5" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">b</text>
+  <text x="284" y="68" font-size="14" font-weight="bold" fill="#1f2329">平视</text>
+  <text x="320" y="68" font-size="12" fill="#475569">机位适中，镜头水平</text>
+  <g transform="translate(261,80)">
+    <g clip-path="url(#p15-3-fclip)">
+      <rect width="198" height="66" fill="url(#p15-3-sky)"/>
+      <rect y="66" width="198" height="66" fill="url(#p15-3-sea)"/>
+      <line x1="0" y1="66" x2="198" y2="66" stroke="#475569" stroke-width="1.4"/>
+      <use href="#p15-3-cloud" transform="translate(48,34)"/>
+      <use href="#p15-3-cloud" transform="translate(150,22) scale(.7)"/>
+      <use href="#p15-3-boat" transform="translate(128,82) scale(.85)"/>
+      <text x="6" y="61" font-size="11" fill="#475569" stroke="#fff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">50%</text>
+    </g>
+    <rect width="198" height="132" fill="none" stroke="#444" stroke-width="1.5"/>
+  </g>
+  <g transform="translate(261,222)">
+    <rect width="198" height="90" rx="6" fill="#fff" stroke="#e2e8f0"/>
+    <g clip-path="url(#p15-3-pclip)">
+      <polygon points="30,46 134,12.2 134,46" fill="#cfe2fb"/>
+      <polygon points="30,46 134,46 134,79.8" fill="#6aa6e3" fill-opacity=".55"/>
+    </g>
+    <rect x="2" y="76" width="194" height="12" fill="#e2e8f0"/>
+    <line x1="2" y1="76" x2="196" y2="76" stroke="#94a3b8" stroke-width="1.4"/>
+    <line x1="30" y1="46" x2="188" y2="46" stroke="#475569" stroke-width="1.1" stroke-dasharray="4 3"/>
+    <text x="139" y="42" font-size="11" fill="#475569">视平线</text>
+    <text x="160" y="85.5" font-size="11" fill="#475569">水面</text>
+    <line x1="30" y1="50" x2="30" y2="76" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/>
+    <line x1="30" y1="46" x2="126" y2="46" stroke="#1e3a8a" stroke-width="1.6"/>
+    <polygon points="0,0 -9,-3.6 -9,3.6" fill="#1e3a8a" transform="translate(126,46)"/>
+    <use href="#p15-3-cam" transform="translate(30,46)"/>
+  </g>
+  <text x="360" y="336" text-anchor="middle" font-size="15" font-weight="bold" fill="#334155">四平八稳</text>
+  <g font-size="12" fill="#475569" text-anchor="middle">
+    <text x="360" y="356">地平线在 50% 处，</text>
+    <text x="360" y="372">天空与海面各占一半</text>
+  </g>
+
+  <!-- c：仰视 -->
+  <circle cx="506" cy="63" r="9" fill="#2563eb"/>
+  <text x="506" y="67.5" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">c</text>
+  <text x="520" y="68" font-size="14" font-weight="bold" fill="#1f2329">仰视</text>
+  <text x="556" y="68" font-size="12" fill="#475569">机位低，镜头朝上</text>
+  <g transform="translate(497,80)">
+    <g clip-path="url(#p15-3-fclip)">
+      <rect width="198" height="99" fill="url(#p15-3-sky)"/>
+      <rect y="99" width="198" height="33" fill="url(#p15-3-sea)"/>
+      <line x1="0" y1="99" x2="198" y2="99" stroke="#475569" stroke-width="1.4"/>
+      <use href="#p15-3-cloud" transform="translate(40,32) scale(1.1)"/>
+      <use href="#p15-3-cloud" transform="translate(152,52) scale(.9)"/>
+      <use href="#p15-3-cloud" transform="translate(88,74) scale(.75)"/>
+      <use href="#p15-3-boat" transform="translate(128,115) scale(.85)"/>
+      <text x="6" y="94" font-size="11" fill="#475569" stroke="#fff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">25%</text>
+    </g>
+    <rect width="198" height="132" fill="none" stroke="#444" stroke-width="1.5"/>
+  </g>
+  <g transform="translate(497,222)">
+    <rect width="198" height="90" rx="6" fill="#fff" stroke="#e2e8f0"/>
+    <g clip-path="url(#p15-3-pclip)">
+      <polygon points="30,64 134,11 134,64" fill="#cfe2fb"/>
+      <polygon points="30,64 134,64 134,80.5" fill="#6aa6e3" fill-opacity=".55"/>
+    </g>
+    <rect x="2" y="76" width="194" height="12" fill="#e2e8f0"/>
+    <line x1="2" y1="76" x2="196" y2="76" stroke="#94a3b8" stroke-width="1.4"/>
+    <line x1="30" y1="64" x2="188" y2="64" stroke="#475569" stroke-width="1.1" stroke-dasharray="4 3"/>
+    <text x="139" y="60" font-size="11" fill="#475569">视平线</text>
+    <text x="160" y="85.5" font-size="11" fill="#475569">水面</text>
+    <line x1="30" y1="68" x2="30" y2="76" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/>
+    <line x1="30" y1="64" x2="124.8" y2="49" stroke="#1e3a8a" stroke-width="1.6"/>
+    <polygon points="0,0 -9,-3.6 -9,3.6" fill="#1e3a8a" transform="translate(124.8,49) rotate(-9)"/>
+    <use href="#p15-3-cam" transform="translate(30,64) rotate(-9)"/>
+  </g>
+  <text x="596" y="336" text-anchor="middle" font-size="15" font-weight="bold" fill="#2563eb">天高云淡</text>
+  <g font-size="12" fill="#475569" text-anchor="middle">
+    <text x="596" y="356">地平线降到约 25% 处，</text>
+    <text x="596" y="372">天空占 3/4</text>
+  </g>
+
+  <text x="360" y="402" text-anchor="middle" font-size="11" fill="#94a3b8">百分数自画面下缘向上量；侧视图里视平线以上的视野＝画面中的天空，以下＝海面；画面与帆船位置为示意。</text>
+</svg><figcaption><strong>图 15-3</strong>　垂直高度与水平线——同一片海与帆船，机位高、镜头朝下（俯视）时海平线升到约 75% 高、天空只剩上 1/4，略带压抑；平视时海平线在 50%，四平八稳；机位低、镜头朝上（仰视）时海平线降到约 25%、天空占 3/4，天高云淡。画框下方的侧视小图里，视平线以上的视野对应画面中的天空，以下对应海面；百分数自画面下缘向上量，位置为示意。</figcaption></figure>
+
+<h3>6. 前景的设置与背景的处理<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=15&t=1055" target="_blank" rel="noopener" title="跳到视频 17:35">17:35–20:55</a></h3><ul>
+<li>前景样片：只拍主体已够突出（转写作「海豚」，疑为误识别），但人物手上抓了只小狗当前景，既作<strong>陪体</strong>，又丰富空间、更立体。前景可是主体本身，或主体居中景、前面再加前景；作用：交代环境、深化空间、美化构图（上方偏黑时用暗色前景压下方，免头重脚轻）。忌为前景而前景；无前景无背景也可生动（人物跳墙）。</li>
+<li>水面、路面是大景别的好前景，须<strong>压低机位</strong>；海景走进海里，以岩石、水面作前景，有「从近处泼到远处」之感（特意设前景的典范，前景作陪体）。</li>
+<li>背景：规律的线条、点状本身是亮点；杂乱则靠角度避开或<strong>虚化</strong>。样片：背景未全虚化，但与中景人物有虚实对比，不抢眼；前中景人物大、远景人物小，有主有陪。</li>
+</ul>
+
+<h3>7. 透视规律的运用<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=15&t=1255" target="_blank" rel="noopener" title="跳到视频 20:55">20:55–23:58</a></h3><ul>
+<li>透视=二维画面里读出三维空间，靠视觉错觉；是「规则上的手段」（前面几条是操作上的）。两种：<strong>线条透视</strong>（近大远小）、<strong>大气透视</strong>（近暗远亮、近清晰远模糊）。</li>
+<li>样片：近处平行线张开、远处收紧，近处人物大、远处渐小——线条透视；远处骆驼队极小、读不出近大远小，但近暗清晰、远亮模糊，仍显深远——大气透视（逆光下表现）。</li>
+<li>强化立体：设前景（近大远小才明显）；选角度大的光（逆光、侧逆光）；利用平行线条——铁轨收缩成一点，越靠近、角度选得越好越明显；电线、路基同理。</li>
+</ul>
+
+<h3>8. 视觉中心点（主体位置）的处理<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=15&t=1438" target="_blank" rel="noopener" title="跳到视频 23:58">23:58–26:59</a></h3><ul>
+<li>视觉中心点=画面最吸引人处，有明确主体时就是主体（风光常整幅即主体）。九宫格典范：海平面在下三分之一线、船在左下黄金分割点，吸引人又不因线条居中而呆板，所以被大量复制。</li>
+<li>但<strong>不要迷信黄金分割</strong>：任何点、甚至边角都能当视觉中心，并无「必须在三分线交点」的规定。样片：主体几乎居中也不呆板；主体比黄金分割线更靠下也不难看，上方水流更显现场紧张。</li>
+<li>并非随意摆，角度、高度、透视也都须遵循共同原则——下节预告：<strong>简洁、完整、稳定、生动</strong>。</li>
+</ul>
+
+<div class="box a7c2"><h3>📷 换成 A7C II 怎么做</h3><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>课程里的做法（原机型叫法）</th>
+<th>A7C II 上的对应</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>构图参考线（九宫格）</td>
+<td>MENU →（拍摄）→［拍摄显示］→［网格线显示］→［开］；［网格线类型］选［三等分线网格］（九宫格）或［黄金分割］（固件 2.00+）</td>
+<td>出厂关；可分配［网格线显示选择］键</td>
+</tr>
+<tr>
+<td>画幅 3:2、4:3、方形</td>
+<td>MENU →（拍摄）→［影像质量/记录］→［纵横比］→ 3:2（出厂）／4:3／16:9／1:1</td>
+<td>RAW 恒为 3:2，仅 JPEG/HEIF 按此记录</td>
+</tr>
+<tr>
+<td>靠焦距调景别</td>
+<td>MENU →（拍摄）→［影像质量/记录］→［APS-C S35拍摄］→［开］（视角约为镜头标注焦距的 1.5 倍）／［自动］（出厂）／［关］</td>
+<td>不换镜头即可收紧景别</td>
+</tr>
+<tr>
+<td>地平线放平</td>
+<td>按 DISP 切到［数字水平量规］</td>
+<td>前后、左右都水平时指示变绿；误差约 ±1°</td>
+</tr>
+<tr>
+<td>低机位、高机位</td>
+<td>显示屏侧翻式：向左翻开约 176°、可旋转约 270°（部件表）</td>
+<td>贴地或举高时用屏幕取景（补充）</td>
+</tr>
+<tr>
+<td>主体偏离中央时对焦</td>
+<td>MENU →（设置）→［触摸操作］→［触摸面板设置］→［拍摄画面］→［拍摄期间的触摸功能］→［触碰对焦］（出厂）</td>
+<td>触摸屏上拖动对焦框；对焦区域为［点］等时也可按控制拨轮中央（［对焦标准］）再移框</td>
+</tr>
+<tr>
+<td>景深预览</td>
+<td>无专用键：MENU →（设置）→［操作自定义］→［〈静〉自定键/转盘设置］→ 选键 → 分配［光圈预览］</td>
+<td>按住预览；虚化靠 A（光圈优先）调光圈</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="box errata"><h3>🕰️ 时代差异与勘误</h3><ul>
+<li>老师把三等分井字格叫「黄金分割法」；严格的黄金分割线在约 0.382/0.618 处，三分线（1/3、2/3）只是近似；A7C II 的［三等分线网格］与［黄金分割］是两种网格。</li>
+<li>14:32 处「俯视水平线被压低、仰视被升高」说反了（与 15:14、15:55 自己的说法相反）：机位高、镜头朝下→水平线升高、天空占比小；机位低、镜头朝上→水平线降低、天空占比大。</li>
+</ul>
+</div>
+<div class="box terms"><h3>🔖 本集术语</h3><ul>
+<li><strong>景别</strong>：取景大小，分远景、全景、中景、近景、特写。</li>
+<li><strong>线条透视 / 大气透视</strong>：近大远小；近暗远亮、近清晰远模糊。</li>
+<li><strong>视觉中心点</strong>：画面最吸引人处，有主体时即主体。</li>
+<li><strong>陪体</strong>：陪衬主体、丰富画面的对象。</li>
+</ul>
+</div>
+<p class="ep-nav"><a href="#top">↑ 回到本页顶部</a></p></section>
+<section id="p16" class="episode" aria-labelledby="p16-t"><h2 id="p16-t"><span class="ep-no">P16</span> 取景构图的原则</h2>
+<p class="ep-meta">原标题：016构图04 取景构图的原则 · 时长 13:53 · <a href="https://www.bilibili.com/video/BV1Vt411E7nT?p=16" target="_blank" rel="noopener">▶ 在 B 站观看本集</a></p>
+<blockquote class="oneliner">
+<p><strong>一句话</strong>：构图要遵循四项原则——简洁、完整、稳定、生动；本集用成败样片逐条演示。</p>
+</blockquote>
+<nav class="outline" aria-label="本集大纲"><p class="outline-t">本集大纲</p><ol>
+<li>回顾与简洁<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=16" target="_blank" rel="noopener" title="跳到视频 00:00">00:00</a></li>
+<li>完整<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=16&t=120" target="_blank" rel="noopener" title="跳到视频 02:00">02:00</a></li>
+<li>稳定<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=16&t=300" target="_blank" rel="noopener" title="跳到视频 05:00">05:00</a></li>
+<li>生动<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=16&t=497" target="_blank" rel="noopener" title="跳到视频 08:17">08:17</a></li>
+<li>例图综合与小结<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=16&t=590" target="_blank" rel="noopener" title="跳到视频 09:50">09:50</a></li>
+</ol></nav>
+
+<h3>1. 回顾与简洁<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=16" target="_blank" rel="noopener" title="跳到视频 00:00">00:00–02:00</a></h3><ul>
+<li>主体位置可任意放；手段无铁律，但须遵循四项原则：<strong>简洁、完整、稳定、生动</strong>。</li>
+<li>简洁：杂乱样片（第四次出现）改变焦距与角度，由略仰视改为更大仰视、以天空为背景；另一张既杂乱又不完整，由横拍改竖拍（课件「以竖幅构图净化画面」）。简洁才能突出主体。</li>
+</ul>
+
+<h3>2. 完整<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=16&t=120" target="_blank" rel="noopener" title="跳到视频 02:00">02:00–05:00</a></h3><ul>
+<li>该交代的物体要拍全。样片：挑担人只露一桶水，让人担心倾倒；补全主体才完整。画面忌线条横贯（把画面一分为二）：要在线上找突破它的元素，如参天大树。</li>
+<li>完整是<strong>相对的</strong>：脸部特写切掉脑门不别扭（有画外联想空间）；脑门顶着上框则头重，要留头顶空间。半身像不拦腰切、七分身（膝以上）不切膝关节——<strong>永远不要拦着关节处构图</strong>。</li>
+</ul>
+<figure id="fig-P16-1"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 436" role="img" aria-label="人像裁切位置：左图是一幅竖画框里的全身人像，头顶离上框留一段空白（透气）；红线标出腰和膝关节处，标不要切；绿线标出可以切的位置，腰上（半身像）和膝上（七分身）。右图是对照：头顶紧贴上框，画面头重">
+  <title>人像裁切位置</title>
+  <defs>
+    <clipPath id="p16-1-clip"><rect width="180" height="270"/></clipPath>
+    <!-- 全身人像：头顶 y=26，腰（皮带）y≈111.5，膝 y≈186，脚底 y≈250 -->
+    <g id="p16-1-person">
+      <rect x="0" y="247" width="180" height="230" fill="#d9e0ea"/>
+      <line x1="0" y1="247" x2="180" y2="247" stroke="#c3ccd8" stroke-width="1"/>
+      <ellipse cx="90" cy="248" rx="32" ry="4" fill="#000" opacity=".12"/>
+      <polygon points="71,111 89.5,111 89,186 88,244 76.5,244 74,186" fill="#475569"/>
+      <polygon points="109,111 90.5,111 91,186 92,244 103.5,244 106,186" fill="#475569"/>
+      <ellipse cx="81" cy="246.5" rx="10.5" ry="4" fill="#1f2937"/>
+      <ellipse cx="99" cy="246.5" rx="10.5" ry="4" fill="#1f2937"/>
+      <g fill="#5b8fd9">
+        <rect x="-4.5" y="0" width="9" height="62" rx="4.5" transform="translate(59,66) rotate(5)"/>
+        <rect x="-4.5" y="0" width="9" height="62" rx="4.5" transform="translate(121,66) rotate(-5)"/>
+      </g>
+      <circle cx="53.6" cy="129" r="4.8" fill="#f2c9a5"/>
+      <circle cx="126.4" cy="129" r="4.8" fill="#f2c9a5"/>
+      <path d="M64,74 C64,66 70,62 80,62 L100,62 C110,62 116,66 116,74 L113,92 L109,111 L71,111 L67,92 Z" fill="#5b8fd9"/>
+      <rect x="71" y="108.5" width="38" height="5" fill="#1f2937"/>
+      <rect x="85.5" y="52" width="9" height="13" fill="#e8b996"/>
+      <ellipse cx="90" cy="40" rx="12" ry="14" fill="#2b2b2b"/>
+      <ellipse cx="90" cy="43" rx="10" ry="12" fill="#f2c9a5"/>
+      <path d="M79,42 C78.5,29 101.5,29 101,42 C97,35 83,35 79,42 Z" fill="#2b2b2b"/>
+      <circle cx="86" cy="45" r="1.3" fill="#2b2b2b"/>
+      <circle cx="94" cy="45" r="1.3" fill="#2b2b2b"/>
+    </g>
+    <g id="p16-1-x" fill="none" stroke="#b03a3a" stroke-width="2.6" stroke-linecap="round"><path d="M0,0 L11,11 M11,0 L0,11"/></g>
+    <g id="p16-1-ok" fill="none" stroke="#16a34a" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M0,6 L4.5,11 L12,0"/></g>
+  </defs>
+
+  <text x="360" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#1e3a8a">人像裁切位置：别拦着关节切，头顶要透气</text>
+
+  <!-- 两张卡片底 -->
+  <g fill="#f8fafc" stroke="#e2e8f0">
+    <rect x="12" y="44" width="428" height="360" rx="8"/>
+    <rect x="452" y="44" width="256" height="360" rx="8"/>
+  </g>
+
+  <!-- a：同一幅全身人像 -->
+  <circle cx="36" cy="64" r="9" fill="#2563eb"/>
+  <text x="36" y="68.5" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">a</text>
+  <text x="51" y="69" font-size="14" font-weight="bold" fill="#1f2329">同一幅全身人像：切在哪里</text>
+  <g transform="translate(140,80)">
+    <g clip-path="url(#p16-1-clip)">
+      <rect width="180" height="270" fill="#eef2f7"/>
+      <use href="#p16-1-person"/>
+    </g>
+    <rect width="180" height="270" fill="none" stroke="#444" stroke-width="1.5"/>
+  </g>
+
+  <!-- 头顶透气 -->
+  <line x1="244" y1="106" x2="262" y2="106" stroke="#16a34a" stroke-width="1" stroke-dasharray="2 2"/>
+  <line x1="256" y1="89" x2="256" y2="98" stroke="#16a34a" stroke-width="1.8"/>
+  <polygon points="256,81.5 252,89.5 260,89.5" fill="#16a34a"/>
+  <polygon points="256,105.5 252,97.5 260,97.5" fill="#16a34a"/>
+  <text x="264" y="98" font-size="13" font-weight="bold" fill="#15803d">透气</text>
+
+  <!-- 绿线：可以切（左侧标注） -->
+  <g stroke-linecap="round">
+    <line x1="130" y1="172" x2="320" y2="172" stroke="#fff" stroke-width="5" opacity=".85"/>
+    <line x1="130" y1="172" x2="320" y2="172" stroke="#16a34a" stroke-width="2"/>
+    <line x1="130" y1="246" x2="320" y2="246" stroke="#fff" stroke-width="5" opacity=".85"/>
+    <line x1="130" y1="246" x2="320" y2="246" stroke="#16a34a" stroke-width="2"/>
+  </g>
+  <use href="#p16-1-ok" x="80" y="166"/>
+  <text x="124" y="177" text-anchor="end" font-size="14" font-weight="bold" fill="#15803d">腰上</text>
+  <text x="124" y="193" text-anchor="end" font-size="11" fill="#475569">半身像切在这里</text>
+  <use href="#p16-1-ok" x="80" y="240"/>
+  <text x="124" y="251" text-anchor="end" font-size="14" font-weight="bold" fill="#15803d">膝上</text>
+  <text x="124" y="267" text-anchor="end" font-size="11" fill="#475569">七分身切在这里</text>
+
+  <!-- 红线：不要切（右侧标注） -->
+  <g stroke-linecap="round">
+    <line x1="140" y1="191.5" x2="330" y2="191.5" stroke="#fff" stroke-width="5" opacity=".85"/>
+    <line x1="140" y1="191.5" x2="330" y2="191.5" stroke="#b03a3a" stroke-width="2"/>
+    <line x1="140" y1="266" x2="330" y2="266" stroke="#fff" stroke-width="5" opacity=".85"/>
+    <line x1="140" y1="266" x2="330" y2="266" stroke="#b03a3a" stroke-width="2"/>
+  </g>
+  <use href="#p16-1-x" x="336" y="186"/>
+  <text x="352" y="197" font-size="14" font-weight="bold" fill="#b03a3a">不要切</text>
+  <text x="352" y="213" font-size="11" fill="#475569">（腰）</text>
+  <use href="#p16-1-x" x="336" y="260.5"/>
+  <text x="352" y="271.5" font-size="14" font-weight="bold" fill="#b03a3a">不要切</text>
+  <text x="352" y="287.5" font-size="11" fill="#475569">（膝关节）</text>
+
+  <g font-size="12" fill="#475569">
+    <text x="24" y="372">半身像不拦腰切，七分身（膝以上）不切膝关节：</text>
+    <text x="24" y="390">永远不要拦着关节处构图。</text>
+  </g>
+
+  <!-- b：对照，头顶贴上框 -->
+  <circle cx="476" cy="64" r="9" fill="#2563eb"/>
+  <text x="476" y="68.5" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">b</text>
+  <text x="491" y="69" font-size="14" font-weight="bold" fill="#1f2329">对照：头顶贴上框</text>
+  <g transform="translate(464,80)">
+    <g clip-path="url(#p16-1-clip)">
+      <rect width="180" height="270" fill="#eef2f7"/>
+      <use href="#p16-1-person" transform="translate(0,-26)"/>
+    </g>
+    <rect width="180" height="270" fill="none" stroke="#444" stroke-width="1.5"/>
+  </g>
+  <ellipse cx="554" cy="83" rx="17" ry="7" fill="none" stroke="#b03a3a" stroke-width="1.8" stroke-dasharray="3 2"/>
+  <line x1="581" y1="94" x2="590" y2="94" stroke="#b03a3a" stroke-width="1.8"/>
+  <polygon points="572,94 581,89.5 581,98.5" fill="#b03a3a"/>
+  <text x="594" y="99" font-size="15" font-weight="bold" fill="#b03a3a">头重</text>
+  <g font-size="12" fill="#475569">
+    <text x="464" y="372">头顶紧贴上框，上重下轻，</text>
+    <text x="464" y="390">像顶着天花板；要留头顶空间。</text>
+  </g>
+
+  <text x="360" y="424" text-anchor="middle" font-size="11" fill="#94a3b8">红线＝画框下缘切在这里不好，绿线＝可以切在这里；人物与比例为示意。</text>
+</svg><figcaption><strong>图 16-1</strong>　人像裁切位置——全身人像头顶离上框要留一段空白（透气）；画框下缘不要正好切在腰和膝关节上（红线），半身像切在腰上、七分身切在膝上（绿线），永远不要拦着关节处构图；头顶紧贴上框则上重下轻、显得头重（人物与比例为示意）。</figcaption></figure>
+
+<h3>3. 稳定<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=16&t=300" target="_blank" rel="noopener" title="跳到视频 05:00">05:00–08:17</a></h3><ul>
+<li>稳定取决于左右<strong>视觉重量</strong>。样片：左轻右重（左偏亮、元素少，右偏暗、元素多），画面像向一边倾倒；另一张则左边偏重。视觉重量≠实际重量（大石头对几棵树，位置、比例适中仍稳）。规律：深色重于浅色、运动重于静止、人重于景物——风光师常在空处放个人稳住画面。</li>
+<li>忌头重脚轻（尤其竖拍）：上重下轻像要砸下来，画框贴头顶同理；样片头部偏重，观感压抑。稳定构图：左右大致相等、上轻下重。</li>
+<li>人物在左、视线朝右，右边可轻些仍稳；运动与视线方向给另一边添稳定因素，留空太少则压抑、像要撞墙。</li>
+</ul>
+<figure id="fig-P16-2"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 436" role="img" aria-label="视觉重量与左右平衡：两幅 3:2 横画框，框下竖直中线处各有一个三角支点和一根天平横梁。左图左半只有一小块浅色元素（轻）、右半有一大块深色元素（重），天平向右倾，画面失衡；右图左侧人物面朝右、右侧留空，视线给右侧添了稳定因素，天平持平，画面平衡">
+  <title>视觉重量与左右平衡</title>
+  <defs>
+    <clipPath id="p16-2-clip"><rect width="270" height="180"/></clipPath>
+    <g id="p16-2-x" fill="none" stroke="#b03a3a" stroke-width="2.6" stroke-linecap="round"><path d="M0,0 L11,11 M11,0 L0,11"/></g>
+    <g id="p16-2-ok" fill="none" stroke="#16a34a" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M0,6 L4.5,11 L12,0"/></g>
+  </defs>
+
+  <text x="360" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#1e3a8a">视觉重量与左右平衡</text>
+
+  <!-- 两张卡片底 -->
+  <g fill="#f8fafc" stroke="#e2e8f0">
+    <rect x="12" y="44" width="342" height="360" rx="8"/>
+    <rect x="366" y="44" width="342" height="360" rx="8"/>
+  </g>
+
+  <!-- a：左轻右重 -->
+  <circle cx="34" cy="64" r="9" fill="#2563eb"/>
+  <text x="34" y="68.5" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">a</text>
+  <text x="48" y="69" font-size="14" font-weight="bold" fill="#1f2329">左轻右重</text>
+  <g transform="translate(48,80)">
+    <g clip-path="url(#p16-2-clip)">
+      <rect width="270" height="180" fill="#dde6f0"/>
+      <circle cx="62" cy="86" r="15" fill="#fff" stroke="#aebccd" stroke-width="1.2"/>
+      <text x="62" y="118" text-anchor="middle" font-size="12" fill="#475569">浅色 · 小</text>
+      <path d="M142,180 L154,96 C160,62 196,38 232,50 C256,58 270,84 270,110 L270,180 Z" fill="#1f2937"/>
+      <text x="212" y="124" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">深色 · 大</text>
+      <line x1="135" y1="0" x2="135" y2="180" stroke="#fff" stroke-width="3.4" opacity=".75"/>
+      <line x1="135" y1="0" x2="135" y2="180" stroke="#2563eb" stroke-width="1.4" stroke-dasharray="6 4"/>
+    </g>
+    <rect width="270" height="180" fill="none" stroke="#b03a3a" stroke-width="2.5"/>
+  </g>
+  <line x1="183" y1="262" x2="183" y2="305" stroke="#2563eb" stroke-width="1.4" stroke-dasharray="6 4"/>
+  <path d="M183,307 L169,333 H197 Z" fill="#94a3b8" stroke="#444" stroke-width="1.5" stroke-linejoin="round"/>
+  <line x1="145" y1="334" x2="221" y2="334" stroke="#444" stroke-width="2"/>
+  <text x="204" y="328" font-size="11" fill="#475569">支点</text>
+  <g transform="translate(183,304) rotate(6)">
+    <rect x="-120" y="-3" width="240" height="6" rx="3" fill="#475569"/>
+    <rect x="-112" y="-17" width="14" height="14" rx="2" fill="#fff" stroke="#94a3b8" stroke-width="1.4"/>
+    <rect x="82" y="-33" width="30" height="30" rx="3" fill="#1f2937"/>
+  </g>
+  <g font-size="13" font-weight="bold" fill="#475569" text-anchor="middle">
+    <text x="79" y="311">轻</text>
+    <text x="280" y="332">重</text>
+  </g>
+  <use href="#p16-2-x" x="110" y="347"/>
+  <text x="128" y="358" font-size="16" font-weight="bold" fill="#b03a3a">失衡：天平向右倾</text>
+  <g font-size="12" fill="#475569" text-anchor="middle">
+    <text x="183" y="380">浅色小块太轻、深色大块太重，</text>
+    <text x="183" y="396">重心偏右，画面像要向右倾倒</text>
+  </g>
+
+  <!-- b：人物面朝右，右侧留空 -->
+  <circle cx="388" cy="64" r="9" fill="#2563eb"/>
+  <text x="388" y="68.5" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">b</text>
+  <text x="402" y="69" font-size="14" font-weight="bold" fill="#1f2329">人物面朝右，右侧留空</text>
+  <g transform="translate(402,80)">
+    <g clip-path="url(#p16-2-clip)">
+      <rect width="270" height="180" fill="#dde6f0"/>
+      <path d="M34,180 C34,138 52,118 80,118 C108,118 126,138 126,180 Z" fill="#334155"/>
+      <rect x="73" y="100" width="13" height="22" fill="#e8b996"/>
+      <ellipse cx="78" cy="82" rx="16" ry="20" fill="#2b2b2b"/>
+      <ellipse cx="84" cy="86" rx="12.5" ry="16.5" fill="#f2c9a5"/>
+      <path d="M95,83 L103,90 L95,93 Z" fill="#f2c9a5"/>
+      <path d="M70,78 C72,62 95,60 97,78 C91,71 79,70 70,78 Z" fill="#2b2b2b"/>
+      <circle cx="91" cy="82" r="1.7" fill="#2b2b2b"/>
+      <line x1="135" y1="0" x2="135" y2="180" stroke="#fff" stroke-width="3.4" opacity=".75"/>
+      <line x1="135" y1="0" x2="135" y2="180" stroke="#2563eb" stroke-width="1.4" stroke-dasharray="6 4"/>
+      <line x1="112" y1="84" x2="199" y2="84" stroke="#2563eb" stroke-width="2.2" stroke-dasharray="6 4"/>
+      <polygon points="213,84 199,77 199,91" fill="#2563eb"/>
+      <text x="168" y="74" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e3a8a">视线朝右</text>
+      <text x="214" y="152" text-anchor="middle" font-size="12" fill="#64748b">右侧留空</text>
+    </g>
+    <rect width="270" height="180" fill="none" stroke="#16a34a" stroke-width="2.5"/>
+  </g>
+  <line x1="537" y1="262" x2="537" y2="305" stroke="#2563eb" stroke-width="1.4" stroke-dasharray="6 4"/>
+  <path d="M537,307 L523,333 H551 Z" fill="#94a3b8" stroke="#444" stroke-width="1.5" stroke-linejoin="round"/>
+  <line x1="499" y1="334" x2="575" y2="334" stroke="#444" stroke-width="2"/>
+  <text x="558" y="328" font-size="11" fill="#475569">支点</text>
+  <g transform="translate(537,304)">
+    <rect x="-120" y="-3" width="240" height="6" rx="3" fill="#475569"/>
+    <circle cx="-105" cy="-25" r="5.5" fill="#f2c9a5"/>
+    <path d="M-113,-3 C-113,-14 -110,-19 -105,-19 C-100,-19 -97,-14 -97,-3 Z" fill="#334155"/>
+    <rect x="93" y="-27" width="24" height="24" rx="3" fill="none" stroke="#475569" stroke-width="1.4" stroke-dasharray="3 2.5"/>
+    <polygon points="99,-18 108,-18 108,-22 114,-15 108,-8 108,-12 99,-12" fill="#2563eb"/>
+  </g>
+  <g font-size="13" font-weight="bold" fill="#475569" text-anchor="middle">
+    <text x="432" y="322">人物</text>
+    <text x="642" y="322">视线</text>
+  </g>
+  <use href="#p16-2-ok" x="472" y="347"/>
+  <text x="490" y="358" font-size="16" font-weight="bold" fill="#15803d">平衡：天平持平</text>
+  <g font-size="12" fill="#475569" text-anchor="middle">
+    <text x="537" y="380">人物在左、面朝右，视线给右侧</text>
+    <text x="537" y="396">添了稳定因素，右边留空也不倒</text>
+  </g>
+
+  <text x="360" y="424" text-anchor="middle" font-size="11" fill="#94a3b8">视觉重量：深色重于浅色、运动重于静止、人重于景物；画面与天平为示意。</text>
+</svg><figcaption><strong>图 16-2</strong>　视觉重量与左右平衡——视觉重量深色重于浅色、运动重于静止、人重于景物：左半一小块浅色、右半一大块深色时重心偏右，像天平向右倾、画面要倒（左）；人物在左、面朝右时，视线给右侧添了稳定因素，右边留空天平也持平（右，示意）。</figcaption></figure>
+
+<h3>4. 生动<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=16&t=497" target="_blank" rel="noopener" title="跳到视频 08:17">08:17–09:50</a></h3><ul>
+<li>简洁而不简单。样片：只有主体、像背景布前拍的，没衬托没环境；加上绿叶红花立刻生动。生动=对比：主体与环境、陪体（少了右边的小孩就失色）、颜色、虚实、动静；取决于对比程度。人物居中易呆板，可靠姿势表情平衡。</li>
+</ul>
+
+<h3>5. 例图综合与小结<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=16&t=590" target="_blank" rel="noopener" title="跳到视频 09:50">09:50–13:53</a></h3><ul>
+<li>雪景：有层次与云层太阳，简洁而不简单；白雪中的黑色主体明暗对比（生动）；主体线条横贯画面却不割裂，上白下深不头重脚轻。</li>
+<li>人物样片：陪体与主体虚实对比（故「不简单」），主体仍突出；右侧朝内的人稳住画面。黑白：色彩纷杂时设黑白记录更简洁，前景与中景陪体对比、陪体平衡画面。黄帐篷：蓝天、戈壁与黄帐篷色彩对比，白帐篷平衡左侧滩涂（此处录音不清）。</li>
+<li>小结：主体、陪体、环境、前景、中景、远景是画面元素，下部分讲如何认识它们。</li>
+</ul>
+
+<div class="box a7c2"><h3>📷 换成 A7C II 怎么做</h3><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>课程里的做法（原机型叫法）</th>
+<th>A7C II 上的对应</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>查头顶留空、左右平衡、横贯线条</td>
+<td>开［网格线显示］；地平线用［数字水平量规］（按 DISP 切换）</td>
+<td>设置路径同 P15</td>
+</tr>
+<tr>
+<td>数码相机直接设黑白记录模式</td>
+<td>MENU →（曝光/颜色）→［颜色/色调］→［创意外观］→［BW］；也在 Fn 菜单里</td>
+<td>［BW］即黑白风格</td>
+</tr>
+<tr>
+<td>虚化陪体、拉开虚实对比</td>
+<td>模式旋钮转 A，前转盘或后转盘L 调光圈；要预览就分配［光圈预览］键</td>
+<td>路径同 P15</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="box errata"><h3>🕰️ 时代差异与勘误</h3><ul>
+<li>转写稿把第四项原则说成「深度」，按前文四项应为「生动」。</li>
+<li>「横贯画面的线条」老师归在完整性下讲，课件标题却是「横贯画面的线条会影响稳定性」，两项都沾边。</li>
+</ul>
+</div>
+<div class="box terms"><h3>🔖 本集术语</h3><ul>
+<li><strong>视觉重量</strong>：观感上的轻重，深色、运动物体、人更重。</li>
+<li><strong>头重脚轻</strong>：画面上重下轻，如头顶紧贴上框。</li>
+<li><strong>画外联想空间</strong>：画面没拍到但观者能联想的部分。</li>
+</ul>
+</div>
+<p class="ep-nav"><a href="#top">↑ 回到本页顶部</a></p></section>
+<section id="p17" class="episode" aria-labelledby="p17-t"><h2 id="p17-t"><span class="ep-no">P17</span> 构图元素解析</h2>
+<p class="ep-meta">原标题：017构图05 构图的元素解析 · 时长 23:49 · <a href="https://www.bilibili.com/video/BV1Vt411E7nT?p=17" target="_blank" rel="noopener">▶ 在 B 站观看本集</a></p>
+<blockquote class="oneliner">
+<p><strong>一句话</strong>：系统解析构图的四大元素（主体/陪体/环境、前景/中景/远景、色彩、虚实），并总结张玉雷老师的构图口诀。</p>
+</blockquote>
+<nav class="outline" aria-label="本集大纲"><p class="outline-t">本集大纲</p><ol>
+<li>主体、陪体、环境的划分与作用<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=17&t=10" target="_blank" rel="noopener" title="跳到视频 00:10">00:10</a></li>
+<li>前景、中景、远景的划分与空间感<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=17&t=493" target="_blank" rel="noopener" title="跳到视频 08:13">08:13</a></li>
+<li>前景运用的注意事项<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=17&t=629" target="_blank" rel="noopener" title="跳到视频 10:29">10:29</a></li>
+<li>色彩的分类与搭配原则<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=17&t=731" target="_blank" rel="noopener" title="跳到视频 12:11">12:11</a></li>
+<li>视觉重量与疏密关系<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=17&t=916" target="_blank" rel="noopener" title="跳到视频 15:16">15:16</a></li>
+<li>清晰度（虚实）的划分与运用<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=17&t=1050" target="_blank" rel="noopener" title="跳到视频 17:30">17:30</a></li>
+<li>避免过度依赖小景深构图<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=17&t=1121" target="_blank" rel="noopener" title="跳到视频 18:41">18:41</a></li>
+<li>构图口诀总结<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=17&t=1225" target="_blank" rel="noopener" title="跳到视频 20:25">20:25</a></li>
+</ol></nav>
+
+<h3>1. 主体、陪体、环境的划分与作用<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=17&t=10" target="_blank" rel="noopener" title="跳到视频 00:10">00:10–07:33</a></h3><ul>
+<li><strong>划分方式</strong>：按画面中各被摄物在画面中的地位划分。</li>
+<li><strong>主体</strong>：画面中最重要的被摄物。</li>
+<li><strong>陪体</strong>：辅助主体，平衡画面构图，与主体形成虚实、大小对比，增加生动性。</li>
+<li><strong>环境</strong>：交代故事发生的地点。</li>
+<li><strong>案例</strong>：
+<ul>
+<li>枯草场景：主体（弯腰长发人），陪体（后方小孩，平衡画面），环境（枯草地）。</li>
+<li>芭蕾舞演员：陪体（残缺的脚，平衡画面，完整与残缺对比）。</li>
+<li>穆斯林妇女：陪体（模糊的人群，平衡画面，开放式构图）。</li>
+<li>三个人：陪体（虚化的三人，大小对比，烘托主体）。</li>
+</ul>
+</li>
+</ul>
+
+<h3>2. 前景、中景、远景的划分与空间感<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=17&t=493" target="_blank" rel="noopener" title="跳到视频 08:13">08:13–09:20</a></h3><ul>
+<li><strong>划分方式</strong>：按镜头光轴方向上的距离划分。</li>
+<li><strong>作用</strong>：形成<strong>近大远小</strong>的透视规律，强化画面的立体空间感。</li>
+<li><strong>案例</strong>：风景照片，前景、中景、远景清晰度渐变，形成大中小对比。</li>
+</ul>
+
+<h3>3. 前景运用的注意事项<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=17&t=629" target="_blank" rel="noopener" title="跳到视频 10:29">10:29–11:32</a></h3><ul>
+<li><strong>主体位置</strong>：
+<ul>
+<li>放在<strong>前景</strong>：主体大，与中景、背景形成大小对比。</li>
+<li>放在<strong>中景</strong>：前景作为环境，需<strong>虚化</strong>处理，起到铺垫空间的作用。</li>
+</ul>
+</li>
+<li><strong>注意事项</strong>：
+<ul>
+<li>虚化前景<strong>比例不可太多</strong>，否则画面显得脏、乱。</li>
+<li>视觉重量：下方应比上方重；<strong>实比虚重</strong>。</li>
+<li>避免头重脚轻。</li>
+</ul>
+</li>
+</ul>
+
+<h3>4. 色彩的分类与搭配原则<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=17&t=731" target="_blank" rel="noopener" title="跳到视频 12:11">12:11–14:33</a></h3><ul>
+<li><strong>分类</strong>：
+<ul>
+<li><strong>冷色</strong>：偏蓝。</li>
+<li><strong>暖色</strong>：偏黄、偏红。</li>
+<li><strong>中性色</strong>：偏绿、偏紫。</li>
+<li><strong>萧瑟</strong>：黑白灰。</li>
+</ul>
+</li>
+<li><strong>搭配原则</strong>：
+<ul>
+<li>一个画面中<strong>最好不要同时出现</strong>这四类颜色。</li>
+<li><strong>对比色</strong>（冷+暖）：视觉冲击力强，画面抢眼。</li>
+<li><strong>暖+中性+萧瑟</strong>：素朴、怀旧。</li>
+<li>色彩分布要避免凌乱。</li>
+</ul>
+</li>
+</ul>
+
+<h3>5. 视觉重量与疏密关系<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=17&t=916" target="_blank" rel="noopener" title="跳到视频 15:16">15:16–16:25</a></h3><ul>
+<li><strong>疏密</strong>：密与疏。<strong>密不透风，疏可通马</strong>。</li>
+<li><strong>留白</strong>：画面中视觉重量轻的地方（疏），如同国画中的留白，让画面透气。</li>
+<li><strong>案例</strong>：水流（疏）与岩石（密）的结合，通过局部曝光过度营造疏的元素。</li>
+</ul>
+
+<h3>6. 清晰度（虚实）的划分与运用<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=17&t=1050" target="_blank" rel="noopener" title="跳到视频 17:30">17:30–18:05</a></h3><ul>
+<li><strong>交外景</strong>：模糊的。</li>
+<li><strong>交内景</strong>：清晰的。</li>
+<li><strong>作用</strong>：虚实对比加强画面的生动性。</li>
+</ul>
+
+<h3>7. 避免过度依赖小景深构图<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=17&t=1121" target="_blank" rel="noopener" title="跳到视频 18:41">18:41–19:12</a></h3><ul>
+<li><strong>问题</strong>：小景深构图容易把主体突出、环境弄干净，但画面可能失去陪体，显得单调。</li>
+<li><strong>建议</strong>：不要过度迷恋大光圈、长焦距。应多尝试<strong>角度</strong>、<strong>高度</strong>的选择。</li>
+</ul>
+
+<h3>8. 构图口诀总结<a class="ts" href="https://www.bilibili.com/video/BV1Vt411E7nT?p=17&t=1225" target="_blank" rel="noopener" title="跳到视频 20:25">20:25–22:13</a></h3><ul>
+<li><strong>口诀</strong>（张玉雷老师总结）：
+<ol>
+<li><strong>明确思想确定主景</strong></li>
+<li><strong>重视陪景恰当安排</strong></li>
+<li><strong>多用对比注意衬托</strong></li>
+<li><strong>注意稳定追求均衡</strong></li>
+<li><strong>多样变化矛盾统一</strong></li>
+<li><strong>巧用点线美化画面</strong>（点太多会乱，线多了会分割画面）</li>
+<li><strong>易到比不到</strong>（开放式构图）</li>
+<li><strong>紧近意味镜</strong>（画外联想）</li>
+<li><strong>有俭有繁一疏一密有藏有漏</strong></li>
+<li><strong>半隐半现</strong></li>
+<li><strong>左右联系前后呼应</strong></li>
+<li><strong>空白空间巧妙安排</strong>（留白）</li>
+<li><strong>构图格式随景而定</strong>（横竖选择，二次构图/裁剪）</li>
+</ol>
+</li>
+</ul>
+<p><strong>本集术语</strong></p>
+<ul>
+<li><strong>主体</strong>：画面中最重要的被摄物。</li>
+<li><strong>陪体</strong>：辅助主体，平衡画面，形成对比。</li>
+<li><strong>环境</strong>：交代故事发生地点。</li>
+<li><strong>前景</strong>：镜头光轴方向上距离镜头最近的元素。</li>
+<li><strong>中景</strong>：位于前景和远景之间。</li>
+<li><strong>远景</strong>：镜头光轴方向上距离镜头最远的元素。</li>
+<li><strong>萧瑟</strong>：指黑白灰等中性色。</li>
+<li><strong>视觉重量</strong>：画面元素给人的心理重量感。</li>
+<li><strong>疏密</strong>：画面中元素分布的稀疏程度。</li>
+</ul>
+
+<div class="box a7c2"><h3>📷 换成 A7C II 怎么做</h3><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>课程里的概念/操作</th>
+<th>A7C II 上的名称</th>
+<th>怎么操作</th>
+<th>说明（出处）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RAW+JPEG</td>
+<td>RAW&amp;JPEG</td>
+<td>MENU →（拍摄）→［影像质量/记录］→［〈静〉文件格式］→［RAW&amp;JPEG］</td>
+<td>［JPEG/HEIF切换］为 HEIF 时变成 RAW&amp;HEIF；RAW 压缩方式在［RAW文件类型］（0404M_file_format.html；201h_jpeg_heif_switch.html）</td>
+</tr>
+<tr>
+<td>色彩空间 sRGB/Adobe RGB</td>
+<td>色彩空间</td>
+<td>MENU →（拍摄）→［影像质量/记录］→［色彩空间］</td>
+<td>HEIF 格式下此设置无效（0414_color_space.html）</td>
+</tr>
+<tr>
+<td>实时取景（Live View）</td>
+<td>始终实时取景；［实时取景显示设置］</td>
+<td>取景器和显示屏一直显示传感器画面；［实时取景显示］设置效果开=模拟曝光/白平衡等，关=始终适当亮度（影棚闪光用关）</td>
+<td>与单反的区别：不用切换“实时取景模式”、取景器里也能看到曝光模拟（推论）；暗处用［亮屏显示］（0414_live_view_disp_set.html；0414H_bright_monitoring.html）</td>
+</tr>
+<tr>
+<td>驱动模式（单拍/连拍/自拍）</td>
+<td>拍摄模式</td>
+<td>按控制拨轮左</td>
+<td>索尼“拍摄模式”=驱动模式（0407C_drive_mode.html）</td>
+</tr>
+<tr>
+<td>自拍 2 秒/10 秒</td>
+<td>自拍定时(单张)</td>
+<td>拍摄模式→［自拍定时(单张)］→ 10/5/2 秒</td>
+<td>2 秒用于减少按快门抖动（0407_drivemode_selftimer.html）</td>
+</tr>
+<tr>
+<td>网格线</td>
+<td>网格线显示 ／ 网格线类型</td>
+<td>MENU →（拍摄）→［拍摄显示］→［网格线显示］／［网格线类型］</td>
+<td>三等分/黄金分割/方形/对角（0414B_grid_line.html；201h_grid_line_type.html）</td>
+</tr>
+<tr>
+<td>电子水平仪</td>
+<td>数字水平量规</td>
+<td>按 DISP 切换</td>
+<td>误差约 ±1°（0403B_disp_set.html）</td>
+</tr>
+<tr>
+<td>回放放大检查清晰度</td>
+<td>放大</td>
+<td>播放时按 AF-ON（放大按钮），转控制拨轮调倍率</td>
+<td>默认从对焦位置放大（0501C_playback_zoom.html）</td>
+</tr>
+<tr>
+<td>删除 / 保护</td>
+<td>删除 ／ 保护</td>
+<td>播放时按 C2（删除）；MENU →（播放）→［选择/备忘录］→［保护］</td>
+<td>（0502_using_delete_button.html；0506_protect.html）</td>
+</tr>
+<tr>
+<td>后按对焦（AF-ON）</td>
+<td>AF开启 ＋ 半按快门AF 关</td>
+<td>MENU →（对焦）→［AF/MF］→［半按快门AF］→［关］，用 AF-ON 键对焦</td>
+<td>AF-ON 出厂是［跟踪开启+AF开启］（0405_shutter_button_af.html；201h_using_AF_ON_button.html）</td>
+</tr>
+<tr>
+<td>实时取景放大手动对焦（佳能 5×/10×）</td>
+<td>对焦放大 ／ MF中自动放大对焦 ／ 峰值显示</td>
+<td>MENU →（对焦）→［对焦辅助］→［对焦放大］；MF 转对焦环自动放大；峰值在［峰值显示］分组</td>
+<td>（0405_focus_magni.html；0405C_auto_magni_mf.html；0405M_peaking_display.html）</td>
+</tr>
+<tr>
+<td>人脸/眼部对焦</td>
+<td>AF中的被摄体识别（识别目标：人）</td>
+<td>出厂已开；MENU →（对焦）→［被摄体识别］</td>
+<td>（211h_subject_recognition_af.html；0301B_shooting_still_images.html）</td>
+</tr>
+<tr>
+<td>用户自定义模式（佳能 C1～C3／尼康 U1、U2）</td>
+<td>MR拍摄设置存储 ／ MR调出拍摄设置</td>
+<td>存：MENU →（拍摄）→［照相模式］→［MR拍摄设置存储］；取：模式旋钮 1/2/3</td>
+<td>卡上另存 M1～M4（0413_setting_memory.html；0302_memory_recall.html）</td>
+</tr>
+<tr>
+<td>速控屏 Q 键（佳能）／i 键（尼康）</td>
+<td>Fn（功能）按钮</td>
+<td>按 Fn，控制拨轮选项目，转前转盘改值</td>
+<td>照片、视频各 12 项（0413_using_function_menu.html；201h_fn_menu_setting.html）</td>
+</tr>
+<tr>
+<td>我的菜单</td>
+<td>我的菜单</td>
+<td>MENU →（我的菜单）→［我的菜单设置］→［添加项目］</td>
+<td>最多 42 项（0414L_add_mymenu_item.html）</td>
+</tr>
+<tr>
+<td>画质 L/M/S、精细/标准</td>
+<td>JPEG影像尺寸 ／ JPEG影像质量</td>
+<td>MENU →（拍摄）→［影像质量/记录］</td>
+<td>L=33M（3:2）（0404M_jpeg_image_size.html；0404M_jpeg_image_quality.html）</td>
+</tr>
+<tr>
+<td>镜头防抖 IS/VR 开关</td>
+<td>SteadyShot（机身）</td>
+<td>MENU →（拍摄）→［影像稳定］→［〈静〉SteadyShot］</td>
+<td>三脚架上关；镜头有防抖开关时只能用镜头开关（0414_still_image_steadyshot.html）</td>
+</tr>
+<tr>
+<td>快门线/遥控器</td>
+<td>Bluetooth遥控 ／ 智能手机 ／ 电脑遥控</td>
+<td>见 6.7</td>
+<td>（0706_bluetooth_remote.html；202h_register_smartphone.html；0903_pc_remote_function.html）</td>
+</tr>
+</tbody>
+</table></div>
+<p>（表中名称与路径摘自《A7C II 操作手册》，均与索尼官方帮助指南逐条核对；本集未列出的操作见手册。）</p>
+</div>
+<div class="box errata"><h3>🕰️ 时代差异与勘误</h3><ul>
+<li>取景：课程里的单反用光学取景器（反光镜＋五棱镜/五面镜）→ A7C II 是电子取景器（1.0 cm，约 236 万点），取景画面就是传感器的实时画面；［实时取景显示］为「设置效果开」时可直接预览曝光和白平衡效果。</li>
+<li>反光镜：单反按快门时反光镜抬起、回落会带来震动，要用反光镜预升等办法 → A7C II 没有反光镜；三脚架上防抖动可用 2 秒自拍、Bluetooth 遥控器或手机遥控，并关闭 SteadyShot。</li>
+<li>实时取景：单反要切到 LV（实时显示）才能用屏幕取景 → A7C II 的取景器和显示屏始终是实时取景，不用切换。</li>
+<li>内置闪光灯：课程里的入门/中端单反大多有内置闪光灯 → A7C II 没有内置闪光灯，闪光一律在多接口热靴上外接闪光灯（另售）。</li>
+<li>防抖：课程年代防抖做在镜头里（佳能 IS、尼康 VR）→ A7C II 机身内置影像传感器位移防抖（SteadyShot），镜头带防抖开关时以镜头开关为准；上三脚架建议关闭。</li>
+<li>感光度：课程年代的单反高 ISO 噪点明显 → A7C II 照片 ISO 100～51200（扩展 50～204800），高 ISO 画质好得多，但「光线允许就用低 ISO」的原则不变。</li>
+</ul>
+</div>
+<div class="box terms"><h3>🔖 本集术语</h3><ul>
+<li>无</li>
+</ul>
+</div>
+<p class="ep-nav"><a href="#top">↑ 回到本页顶部</a></p></section>
+  </article></main>
+</div>
+<footer class="site">
+  <p>江楠的学习日志 · 吴师自通摄影教程（索尼 A7C II 对照学习笔记）</p>
+  <p>课程视频：<a href="https://www.bilibili.com/video/BV1Vt411E7nT/" target="_blank" rel="noopener">bilibili.com/video/BV1Vt411E7nT</a>（吴玮老师主讲，UP 主搬运）· A7C II 资料：<a href="https://helpguide.sony.net/ilc/2360/v1/zh-cn/index.html" target="_blank" rel="noopener">索尼官方帮助指南</a></p>
+  <p>所有插图均为本页自绘 SVG，不含视频截图或第三方图片；笔记仅供个人学习。</p>
+</footer>
+<a class="backtop" href="#top" aria-label="回到顶部">↑</a>
+</body>
+</html>
